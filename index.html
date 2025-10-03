@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đồng Hùng nikken – Quiz</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mono">
+<header class="header">
+  <div class="brand">
+    <img src="icon-192.png" alt="H" class="logo">
+    <div class="titles">
+      <div class="brand-name">Đồng Hùng nikken</div>
+      <div class="subtitle">đề lý thuyết nhóm 2</div>
+      <div class="demoline">(Bản demo)</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Chọn đề thi</h2>
+    <ul class="exam-list">
+      <li><a href="exam.html?set=1">Lý thuyết nhóm 2 – Đề 1</a></li>
+      <li><a href="exam.html?set=2">Lý thuyết nhóm 2 – Đề 2</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="footer">© 2025 Đồng Hùng nikken • PWA Quiz</footer>
+<script>
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('./service-worker.js'); }
+</script>
+</body>
+</html>

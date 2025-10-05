@@ -29,14 +29,31 @@
     return arr;
   }
 
-  // Randomize question order + choice order; keep track of correct index after shuffle
-  const questions = DATA.map((q,i)=>{
-    const idx = q.answer;
-    const opts = q.options.map((t,oi)=>({text:t, correct:(oi===idx)}));
-    shuffle(opts);
-    return { ...q, options: opts };
-  });
-  shuffle(questions);
+ // Randomize question order + choice order; hỗ trợ nhiều kiểu key khác nhau (question, answers, correctAnswer, explanation,...)
+const questions = DATA.map((q,i)=>{
+  // Lấy chỉ số đáp án đúng (ưu tiên answer, fallback correctAnswer)
+  const idx = q.answer !== undefined ? q.answer : q.correctAnswer;
+
+  // Lấy mảng đáp án (ưu tiên options, fallback answers)
+  const opts = (q.options || q.answers || []).map((t,oi)=>({
+    text: t,
+    correct: (oi === idx)
+  }));
+
+  // Shuffle đáp án để ngẫu nhiên
+  shuffle(opts);
+
+  // Chuẩn hoá dữ liệu câu hỏi
+  return { 
+    q: q.q || q.question || "",               // câu hỏi (Kanji + Furigana)
+    hira: q.hira || "",                       // furigana nếu có
+    vi: q.vi || q.translation || "",           // bản dịch tiếng Việt
+    explain: q.explain || q.explanation || "", // giải thích ngắn gọn
+    options: opts
+  };
+});
+
+shuffle(questions);
 
   let cur = 0;
   const user = new Array(questions.length).fill(null);

@@ -522,6 +522,4 @@ window.QUESTION_SETS = {
       "vi": "Người chỉ huy công nhân cho các công việc theo quy định của Luật an toàn vệ sinh lao động.",
       "explain": "『作業主任者』 phải được bố trí tại hiện trường."
     }
-  ],
-  "2": []
-}
+  ];

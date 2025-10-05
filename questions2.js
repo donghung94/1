@@ -507,3 +507,7 @@ window.QUESTION_SETS["2"] = [
     explain: "Công trình lắp đặt hệ thống cấp và thoát nước để đảm bảo vệ sinh sinh hoạt hàng ngày."
   }
 ];
+if (typeof window !== "undefined") {
+  window.questions = questions2;   // alias để nút Nộp bài hiểu đúng biến
+  window.questions2 = questions2;  // vẫn giữ tên cũ
+}

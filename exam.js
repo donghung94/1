@@ -29,14 +29,15 @@
     return arr;
   }
 
-// Randomize question order + choice order; keep track of correct index after shuffle
-const questions = DATA.map((q,i)=>{
-  const idx = q.answer;
-  const opts = q.options.map((t,oi)=>({text:t, correct:(oi===idx)}));
-  shuffle(opts);
-  return { ...q, options: opts };
-});
-shuffle(questions);
+  // Randomize question order + choice order; keep track of correct index after shuffle
+  const questions = DATA.map((q,i)=>{
+    const idx = q.answer;
+    const opts = q.options.map((t,oi)=>({text:t, correct:(oi===idx)}));
+    shuffle(opts);
+    return { ...q, options: opts };
+  });
+  shuffle(questions);
+
   let cur = 0;
   const user = new Array(questions.length).fill(null);
 

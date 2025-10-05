@@ -508,6 +508,5 @@ window.QUESTION_SETS["2"] = [
   }
 ];
 if (typeof window !== "undefined") {
-  window.questions = questions2;   // alias để nút Nộp bài hiểu đúng biến
-  window.questions2 = questions2;  // vẫn giữ tên cũ
+  window.questions = window.QUESTION_SETS["2"];
 }

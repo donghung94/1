@@ -352,9 +352,7 @@ window.QUESTION_SETS["2"] = [
     answer: 0,
     vi: "Khả năng nhận biết nguy hiểm tiềm ẩn tại nơi làm việc và đưa ra biện pháp an toàn được gọi là gì?",
     explain: "Đáp án đúng là 1. 危険性・有害性の認識能力 — Khả năng nhận biết mối nguy hại và đánh giá rủi ro."
-  }
-window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["2"] = [
+  },
   {
     q: "問80. 作業員(さぎょういん)が作業(さぎょう)する場所(ばしょ)や作業(さぎょう)のやり方(かた)に潜(ひそ)む危険(きけん)を事前(じぜん)に認識(にんしき)し、安全(あんぜん)対策(たいさく)を考(かんが)える能力(のうりょく)を何(なん)というか。",
     options: [

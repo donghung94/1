@@ -81,7 +81,7 @@ window.QUESTION_SETS["2"] = [
       "3. ムダ",
       "4. ムラ"
     ],
-    answer: 4,
+    answer: 3,
     vi: "Từ chỉ công việc không ổn định, chất lượng không đồng đều là gì?",
     explain: "Đáp án đúng là ④ ムラ — nghĩa là 'không đồng đều', 'thiếu nhất quán'."
   },
@@ -129,7 +129,7 @@ window.QUESTION_SETS["2"] = [
       "3. 電気（でんき）工事（こうじ）",
       "4. 防波堤（ぼうはてい）工事（こうじ）"
     ],
-    answer: 4,
+    answer: 3,
     vi: "Công trình nào thuộc nhóm công trình đất (土木工事)?",
     explain: "Đáp án đúng là ④ 防波堤工事 — nghĩa là 'xây đê chắn sóng', thuộc công trình dân dụng (đất)."
   },
@@ -178,7 +178,7 @@ window.QUESTION_SETS["2"] = [
       "3. アプリの利用（りよう）",
       "4. 暑さ指数（あつさしすう）の増加（ぞうか）"
     ],
-    answer: "4. 暑さ指数（あつさしすう）の増加（ぞうか）",
+    answer: "3. 暑さ指数（あつさしすう）の増加（ぞうか）",
     vi: "Tăng chỉ số nóng bức là sai.",
     explain: "Biện pháp đúng là giảm, không phải tăng chỉ số WBGT (mức nóng)."
   },
@@ -226,7 +226,7 @@ window.QUESTION_SETS["2"] = [
       "3. 汚（きたな）くない",
       "4. 希望（きぼう）が持（も）つ"
     ],
-    answer: "4. 希望（きぼう）が持（も）つ",
+    answer: "3. 希望（きぼう）が持（も）つ",
     vi: "Câu sai vì 'có hy vọng' là tích cực.",
     explain: "Trong 4K mới, ‘có hy vọng’ là đúng, không phải sai."
   },
@@ -298,7 +298,7 @@ window.QUESTION_SETS["2"] = [
       "3. リスク低減（ていげん）のための優先度（ゆうせんど）の設定（せってい）。",
       "4. リスクの見積（みつも）り。"
     ],
-    answer: "4. リスクの見積（みつも）り。",
+    answer: "3. リスクの見積（みつも）り。",
     vi: "Bước thứ hai là ước lượng rủi ro.",
     explain: "Sau khi xác định nguy cơ là đến giai đoạn đánh giá mức độ rủi ro."
   },
@@ -347,7 +347,7 @@ window.QUESTION_SETS["2"] = [
       "3. 職長（しょくちょう）",
       "4. 施工（せこう）管理者（かんりしゃ）"
     ],
-    answer: "4. 施工（せこう）管理者（かんりしゃ）",
+    answer: "3. 施工（せこう）管理者（かんりしゃ）",
     vi: "Người chịu trách nhiệm quản lý, giám sát thi công.",
     explain: "施工管理者 là người lập kế hoạch, giám sát tiến độ, chất lượng và an toàn trong quá trình thi công."
   },
@@ -359,7 +359,7 @@ window.QUESTION_SETS["2"] = [
       "3. 鉄骨（てっこつ）造（ぞう）",
       "4. 鉄筋（てっきん）コンクリート造（ぞう）"
     ],
-    answer: "4. 鉄筋（てっきん）コンクリート造（ぞう）",
+    answer: "3. 鉄筋（てっきん）コンクリート造（ぞう）",
     vi: "Cấu trúc bê tông cốt thép.",
     explain: "Đây là kết cấu dùng cốt thép (鉄筋) bên trong bê tông để tăng độ bền — gọi là kết cấu bê tông cốt thép."
   },
@@ -502,7 +502,7 @@ window.QUESTION_SETS["2"] = [
       "3. 上下（じょうげ）水道（すいどう）工事（こうじ）",
       "4. 給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ）"
     ],
-    answer: "4. 給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ）",
+    answer: "3. 給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ）",
     vi: "Công trình cấp thoát nước vệ sinh.",
     explain: "Công trình lắp đặt hệ thống cấp và thoát nước để đảm bảo vệ sinh sinh hoạt hàng ngày."
   }

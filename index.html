@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="vi">
 <head>
@@ -25,17 +24,31 @@
 <main class="container">
   <div class="card">
     <h2>Chọn đề thi</h2>
-    <ul class="exam-list">
-      <li><a href="exam.html?set=1">Lý thuyết nhóm 2 – Đề 1</a></li>
-      <li><a href="exam.html?set=2">Lý thuyết nhóm 2 – Đề 2</a></li>
-      <li><a href="exam.html?set=3">Lý thuyết nhóm 2 – Đề 3</a></li>
-    </ul>
+    <!-- ✅ Danh sách đề sẽ tự sinh ở đây -->
+    <ul id="exam-list" class="exam-list"></ul>
   </div>
 </main>
 
 <footer class="footer">© 2025 Đồng Hùng nikken • PWA Quiz</footer>
+
 <script>
-if('serviceWorker' in navigator){ navigator.serviceWorker.register('./service-worker.js'); }
+  // 🧩 Tự động tạo danh sách đề dựa theo số lượng TOTAL_SETS
+  const examList = document.getElementById('exam-list');
+  const TOTAL_SETS = 3; // ← cập nhật số lượng đề ở đây khi thêm đề mới
+
+  for (let i = 1; i <= TOTAL_SETS; i++) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `exam.html?set=${i}`;
+    a.textContent = `Lý thuyết nhóm 2 – Đề ${i}`;
+    li.appendChild(a);
+    examList.appendChild(li);
+  }
+
+  // 🧱 Đăng ký service worker để chạy PWA offline
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js');
+  }
 </script>
 </body>
 </html>

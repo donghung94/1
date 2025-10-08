@@ -4,6 +4,7 @@
   const params = new URLSearchParams(location.search);
   const setId = params.get('set') || '1';
   const DATA = (window.QUESTION_SETS && window.QUESTION_SETS[setId]) ? JSON.parse(JSON.stringify(window.QUESTION_SETS[setId])) : [];
+  window.questions = window.QUESTION_SETS[setId];
   const quizEl = $('#quiz');
   const resEl = $('#result');
   const submitBtn = $('#submitBtn');

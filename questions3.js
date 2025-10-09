@@ -142,5 +142,19 @@ window.QUESTION_SETS["3"] = [
     answer: 0,
     vi: "Trong 4 bước KYT, câu nào không đúng?",
     explain: "‘不要な物を廃棄する’ không thuộc 4 bước KYT (xác định, phân tích, đối sách, hành động)."
-  }
+  },
+  {
+  q: "問145　2022年（ねん）の日本（にほん）の年代別（ねんだいべつ）労働力（ろうどうりょく）人口（じんこう）で、最（もっと）も人口（じんこう）の多（おお）いのは何歳（なんさい）からか。【89】",
+  hira: "もん145　2022ねん の にほん の ねんだいべつ ろうどうりょく じんこう で、もっとも じんこう の おおい の は なんさい から か。",
+  img: "images/IMG_3386.jpg", // 🖼️ ảnh biểu đồ trong câu hỏi
+  options: [
+    "65歳（さい）以上（いじょう）",
+    "15〜24歳（さい）",
+    "45〜54歳（さい）",
+    "35〜44歳（さい）"
+  ],
+  answer: 2, // ✅ Đáp án đúng: 45〜54歳
+  vi: "Theo biểu đồ lao động Nhật Bản năm 2022, nhóm tuổi nào có dân số lao động cao nhất?",
+  explain: "Biểu đồ cho thấy nhóm tuổi 45〜54 có số lượng lao động cao nhất (1671万人) → đáp án đúng là 3番。"
+}
 ];

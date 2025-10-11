@@ -51,7 +51,8 @@
     const header = `<div class="q-head"><div class="q-index">Câu ${cur+1}/${questions.length}</div><div></div></div>`;
     const body = `
       <div class="q-text">${q.q}</div>
-      ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
+  ${q.img ? `<div class="q-img"><img src="${q.img}" alt="question image" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
+  ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
       <div class="options">
         ${q.options.map((op, i)=>`
           <label class="opt">

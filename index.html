@@ -9,11 +9,19 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css">
 
-  <!-- ⚡ Prefetch: tải sẵn dữ liệu đề để khi người dùng bấm sẽ mở ngay lập tức -->
-  <link rel="prefetch" href="questions.js">
-  <link rel="prefetch" href="questions2.js">
-  <link rel="prefetch" href="questions3.js">
-  <link rel="prefetch" href="questions4.js">
+  <!-- 🚀 Preload mạnh để ép tải luôn 4 file đề -->
+  <link rel="preload" href="questions.js" as="script">
+  <link rel="preload" href="questions2.js" as="script">
+  <link rel="preload" href="questions3.js" as="script">
+  <link rel="preload" href="questions4.js" as="script">
+
+  <script>
+    // ⚙️ Ép trình duyệt tải luôn các file đề vào cache
+    const quizFiles = ["questions.js","questions2.js","questions3.js","questions4.js"];
+    quizFiles.forEach(f => {
+      fetch(f).then(()=>console.log("Cached:", f)).catch(()=>{});
+    });
+  </script>
 </head>
 
 <body class="mono">

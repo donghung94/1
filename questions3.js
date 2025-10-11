@@ -444,5 +444,41 @@ window.QUESTION_SETS["3"] = [
     "answer": 3,
     "vi": "Khi người lao động bị thương trong lúc làm việc, ai trả tiền bảo hiểm?",
     "explain": "Trong trường hợp tai nạn lao động, toàn bộ chi phí bảo hiểm do doanh nghiệp (事業主) chi trả."
-  }
+  },
+  {
+  q: "問138　職業（しょくぎょう）能力（のうりょく）開発（かいはつ）促進（そくしん）法（ほう）は、職業（しょくぎょう）訓練（くんれん）や（　　　）の内容（ないよう）を充実（じゅうじつ）させることなどにより、労働者（ろうどうしゃ）の職業（しょくぎょう）能力（のうりょく）を高（たか）めることを目的（もくてき）とした法律（ほうりつ）です。【17】",
+  options: [
+    "CCUS",
+    "技能（ぎのう）検定（けんてい）",
+    "技能（ぎのう）講習（こうしゅう）",
+    "特別（とくべつ）教育（きょういく）"
+  ],
+  answer: 1,
+  vi: "Luật xúc tiến phát triển năng lực nghề nghiệp là luật nhằm nâng cao kỹ năng nghề của người lao động thông qua việc củng cố đào tạo nghề và kỳ thi đánh giá kỹ năng.",
+  explain: "『職業能力開発促進法』 quy định việc đào tạo và đánh giá kỹ năng nghề (技能検定) để nâng cao năng lực của người lao động. Do đó đáp án đúng là 技能検定（ぎのうけんてい）."
+},
+{
+  q: "問139　万（まん）が一（いち）、事故（じこ）が発生（はっせい）した場合（ばあい）の対応（たいおう）について正（ただ）しいものはどれか。【13】",
+  options: [
+    "手遅（ておく）れにならないようにそのままにする",
+    "安全（あんぜん）を確認（かくにん）の上（うえ）、被災者（ひさいしゃ）の救助（きゅうじょ）が優先（ゆうせん）される",
+    "非常（ひじょう）停止（ていし）をさせるために慌（あわ）てて機械（きかい）を操作（そうさ）する",
+    "自分（じぶん）の命（いのち）を守（まも）るために逃（に）げる"
+  ],
+  answer: 1,
+  vi: "Trong trường hợp xảy ra tai nạn, điều quan trọng là xác nhận an toàn và ưu tiên cứu giúp người bị nạn.",
+  explain: "Khi có tai nạn lao động, nguyên tắc xử lý đầu tiên là đảm bảo an toàn hiện trường và ưu tiên cứu nạn người bị thương. Vì vậy đáp án đúng là số 2."
+},
+{
+  q: "問140　最低（さいてい）の労働（ろうどう）条件（じょうけん）が定（さだ）められた法律（ほうりつ）は、次（つぎ）のうちどれか。【9】",
+  options: [
+    "労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）",
+    "労働（ろうどう）災害（さいがい）補償（ほしょう）保険（ほけん）法（ほう）",
+    "労働（ろうどう）基準（きじゅん）法（ほう）",
+    "雇用（こよう）保険（ほけん）法（ほう）"
+  ],
+  answer: 2,
+  vi: "Luật quy định điều kiện lao động tối thiểu là Luật Tiêu chuẩn Lao động (労働基準法).",
+  explain: "労働基準法（ろうどうきじゅんほう） quy định các tiêu chuẩn cơ bản về điều kiện làm việc như lương, giờ làm, nghỉ phép... Đây là luật cơ bản bảo vệ quyền lợi người lao động."
+}
 ];

@@ -153,7 +153,7 @@ window.QUESTION_SETS["3"] = [
     "自分（じぶん）でフィードバックを積極的（せっきょくてき）に求（もと）める",
     "他者（たしゃ）からのフィードバックを積極的（せっきょくてき）に求（もと）める"
   ],
-  answer: 4,
+  answer: 3,
   vi: "Phản hồi từ người khác giúp đánh giá chính xác hơn về mức độ phát triển kỹ năng.",
   explain: "Tự đánh giá dễ chủ quan, nên việc lắng nghe ý kiến từ người khác giúp nhìn nhận chính xác hơn."
 },
@@ -165,9 +165,9 @@ window.QUESTION_SETS["3"] = [
     "管理（かんり）技術者（ぎじゅつしゃ）",
     "主任（しゅにん）技術者（ぎじゅつしゃ）"
   ],
-  answer: 2,
-  vi: "職長 là người chỉ huy trực tiếp công nhân (作業員) tại hiện trường.",
-  explain: "職長 chịu trách nhiệm chỉ đạo công nhân, đảm bảo an toàn và tiến độ tại công trường."
+  answer: 1,
+  vi: "職長 là người chỉ huy trực tiếp công nhân (作業員) （さぎょういん）tại hiện trường.",
+  explain: "職長 chịu trách nhiệm chỉ đạo công nhân　作業員（さぎょういん）, đảm bảo an toàn và tiến độ tại công trường."
 },
 {
   q: "問114　建築物（けんちくぶつ）の安全性（あんぜんせい）に関（かん）わる柱（はしら）や梁（はり）などがわかるように書（か）かれた実施（じっし）計画図（けいかくず）は何（なに）というか【79】",
@@ -177,7 +177,7 @@ window.QUESTION_SETS["3"] = [
     "意匠図（いしょうず）",
     "設備図（せつびず）"
   ],
-  answer: 2,
+  answer: 1,
   vi: "‘構造図’ là bản vẽ kết cấu thể hiện phần cột và dầm của công trình.",
   explain: "構造図 biểu thị phần chịu lực (柱・梁) để đảm bảo độ bền vững và an toàn."
 },
@@ -189,7 +189,7 @@ window.QUESTION_SETS["3"] = [
     "地球（ちきゅう）温暖化（おんだんか）",
     "地盤（じばん）沈下（ちんか）"
   ],
-  answer: 1,
+  answer: 0,
   vi: "Hiện tượng đô thị nóng hơn vùng xung quanh gọi là ‘ヒートアイランド’ (hiệu ứng đảo nhiệt).",
   explain: "Do bê tông và nhựa đường hấp thụ nhiệt, ít cây xanh nên thành phố nóng hơn khu ngoại ô."
 },
@@ -201,7 +201,7 @@ window.QUESTION_SETS["3"] = [
     "給排水衛生設備工事（きゅうはいすいえいせいせつびこうじ）",
     "鉄骨（てっこつ）を使（つか）って、骨組（ほねぐ）みを作（つく）る工事（こうじ）"
   ],
-  answer: 4,
+  answer: 3,
   vi: "Công việc dùng thép để làm khung là công việc kết cấu, không phải thiết bị.",
   explain: "設備工事 bao gồm điện, nước, thông gió... Còn khung thép (鉄骨工事) là phần kết cấu."
 },
@@ -213,21 +213,9 @@ window.QUESTION_SETS["3"] = [
     "手戻（てもど）り",
     "手直（てなお）し"
   ],
-  answer: 3,
+  answer: 2,
   vi: "‘手戻り’ nghĩa là phải quay lại công đoạn trước để làm lại do sai sót.",
   explain: "Khi một phần đã làm xong nhưng phải sửa hoặc làm lại do lỗi, đó là 手戻り."
-},
-{
-  q: "問118　次（つぎ）のうち、作業（さぎょう）手順（てじゅん）に関（かん）するものはどれか？",
-  options: [
-    "作業（さぎょう）の安全（あんぜん）確認（かくにん）",
-    "作業員（さぎょういん）の教育（きょういく）",
-    "機械（きかい）の点検（てんけん）",
-    "計画（けいかく）図（ず）の作成（さくせい）"
-  ],
-  answer: 1,
-  vi: "Kiểm tra an toàn trong quá trình làm việc là một phần của quy trình thao tác.",
-  explain: "作業手順（さぎょうてじゅん） bao gồm các bước đảm bảo an toàn và đúng trình tự công việc."
 },
   {
   q: "問120　電気（でんき）工事（こうじ）のうち、外線（がいせん）工事（こうじ）と言（い）われている工事（こうじ）は次（つぎ）のうちどれか【62】【92】",
@@ -237,7 +225,7 @@ window.QUESTION_SETS["3"] = [
     "電柱（でんちゅう）で電線（でんせん）をつなぎ、建物内（たてものない）に電気（でんき）を供給（きょうきゅう）するための工事（こうじ）",
     "スイッチやコンセントなどの配線（はいせん）・取（と）り付（つ）け工事（こうじ）"
   ],
-  answer: 3,
+  answer: 2,
   vi: "Trong các loại công trình điện, công trình được gọi là ‘ngoại tuyến’ là gì?",
   explain: "‘外線工事’ là công việc nối dây điện trên cột điện và dẫn điện từ bên ngoài vào tòa nhà."
 },
@@ -249,7 +237,7 @@ window.QUESTION_SETS["3"] = [
     "作業（さぎょう）手順（てじゅん）の不徹底（ふてってい）",
     "前工程（ぜんこうてい）の遅（おく）れ"
   ],
-  answer: 3,
+  answer: 2,
   vi: "Hãy chọn nguyên nhân không đúng gây ra việc ‘chờ việc’.",
   explain: "手待ち là thời gian chờ do vật tư, máy móc hoặc tiến độ trước bị chậm; ‘作業手順の不徹底’ không phải là nguyên nhân trực tiếp."
 },
@@ -261,7 +249,7 @@ window.QUESTION_SETS["3"] = [
     "現場情報（げんばじょうほう）",
     "発注者（はっちゅうしゃ）"
   ],
-  answer: 4,
+  answer: 3,
   vi: "Trong 4 yếu tố cấu thành công việc, hãy chọn yếu tố không thuộc nhóm này.",
   explain: "発注者 (người đặt hàng) không thuộc yếu tố cấu thành công việc mà là bên liên quan."
 },
@@ -273,7 +261,7 @@ window.QUESTION_SETS["3"] = [
     "居室（きょしつ）の採光（さいこう）や換気（かんき）",
     "建ぺい率（けんぺいりつ）、容積率（ようせきりつ）"
   ],
-  answer: 2,
+  answer: 1,
   vi: "Trong các quy định của Luật tiêu chuẩn xây dựng, hãy chọn nội dung không phù hợp.",
   explain: "‘インターネットの接続品質’ không thuộc quy định của Luật Xây dựng."
 },
@@ -285,7 +273,7 @@ window.QUESTION_SETS["3"] = [
     "労働者（ろうどうしゃ）",
     "事業主（じぎょうぬし）"
   ],
-  answer: 2,
+  answer: 1,
   vi: "Theo Luật bảo hiểm tai nạn lao động, chi phí điều trị được chi trả bởi ai?",
   explain: "Toàn bộ chi phí điều trị do ‘労災保険’ (bảo hiểm tai nạn lao động) chi trả, không do người lao động."
 },
@@ -297,7 +285,7 @@ window.QUESTION_SETS["3"] = [
     "土砂（どしゃ）を集（あつ）めて新（あたら）しい土地（とち）を作（つく）る工事（こうじ）",
     "港（みなと）で船（ふね）から荷物（にもつ）を積（つ）んだり降（お）ろしたりするための工事（こうじ）"
   ],
-  answer: 1,
+  answer: 0,
   vi: "Công trình đê chắn sóng (防波堤工事) là loại công trình nào?",
   explain: "防波堤工事 nhằm ngăn sóng biển tràn vào cảng để tàu thuyền cập bến an toàn."
 },

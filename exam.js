@@ -95,6 +95,7 @@
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
+          ${q.img ? `<div class="q-img"><img src="${q.img}" alt="question image" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
           ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
           <div class="answer-line">Bạn chọn: ${pickedHtml}</div>
           <div class="answer-line">Đáp án đúng: <strong>${ansText}</strong></div>

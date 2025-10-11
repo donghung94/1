@@ -1,4 +1,3 @@
-
 (function(){
   const $ = (sel)=>document.querySelector(sel);
   const params = new URLSearchParams(location.search);
@@ -51,8 +50,8 @@
     const header = `<div class="q-head"><div class="q-index">Câu ${cur+1}/${questions.length}</div><div></div></div>`;
     const body = `
       <div class="q-text">${q.q}</div>
-  ${q.img ? `<div class="q-img"><img src="${q.img}" alt="question image" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
-  ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
+      ${(q.img && q.img.trim() !== '') ? `<div class="q-img"><img src="${q.img}" alt="question image" onerror="this.style.display='none';" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
+      ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
       <div class="options">
         ${q.options.map((op, i)=>`
           <label class="opt">
@@ -91,11 +90,11 @@
       if(isCorrect) correct++; else wrongs.push(i);
       const pickedHtml = picked===null ? '<em>(chưa chọn)</em>' :
         `<span class="selected ${isCorrect?'correct':'incorrect'}">${q.options[picked].text}</span>`;
-      // keep original question & options (they are shown above), add VI & explanation below
+      
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
-          ${q.img ? `<div class="q-img"><img src="${q.img}" alt="question image" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
+          ${(q.img && q.img.trim() !== '') ? `<div class="q-img"><img src="${q.img}" alt="question image" onerror="this.style.display='none';" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
           ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
           <div class="answer-line">Bạn chọn: ${pickedHtml}</div>
           <div class="answer-line">Đáp án đúng: <strong>${ansText}</strong></div>
@@ -122,7 +121,6 @@
       const subset = wrongs.map(i=>questions[i]);
       // reset state with wrong subset
       questions.length = 0; subset.forEach(q=>questions.push(q));
-      let newUser = new Array(questions.length).fill(null);
       for(let i=0;i<user.length;i++) user[i]=null;
       cur = 0;
       quizEl.style.display = 'block'; resEl.style.display = 'none';

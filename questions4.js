@@ -216,9 +216,9 @@ window.QUESTION_SETS["4"] = [
   vi: "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
   explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
 },
-  {
-  q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】
-img:  "images/IMG_3414.jpeg",
+ {
+  q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
+  img: "images/IMG_3414.jpeg",
   options: [
     "施主（せしゅ）",
     "施工（せこう）管理者（かんりしゃ）",
@@ -228,6 +228,6 @@ img:  "images/IMG_3414.jpeg",
   answer: 2,
   vi: "Người đọc bản vẽ thi công là người trực tiếp làm việc tại công trường — tức là kỹ năng viên (技能者).",
   explain: "施工者（せこうしゃ） hay 技能者（ぎのうしゃ） là người trực tiếp đọc bản vẽ để thi công theo đúng thiết kế. Các bên khác như 施主 hay 発注者 chỉ xem xét tổng thể, không trực tiếp đọc để làm."
-}
+},
 ];
   

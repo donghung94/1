@@ -525,7 +525,7 @@ window.QUESTION_SETS["1"] = [
       "3. ノンプラケット工法（こうほう）",
       "4. 水平（すいへい）積（つ）み上（あ）げ方法（ほうしき）"
     ],
-    answer: "3. 水平（すいへい）積（つ）み上（あ）げ方法（ほうしき）",
+    answer: 3, 水平（すいへい）積（つ）み上（あ）げ方法（ほうしき）",
     vi: "Phương pháp sử dụng cần trục tháp để lắp từng tầng một, gọi là ‘phương pháp lắp theo chiều ngang từng tầng’.",
     explain: "Đáp án đúng là ④ 水平積み上げ方法 — nghĩa là phương pháp lắp ghép theo tầng, sử dụng cần trục tháp để nâng dần từng tầng khi xây dựng."
   },
@@ -537,7 +537,7 @@ window.QUESTION_SETS["1"] = [
       "3. 一般（いっぱん）廃棄物（はいきぶつ）と家庭（かてい）廃棄物（はいきぶつ）",
       "4. 産業（さんぎょう）廃棄物（はいきぶつ）と家庭（かてい）廃棄物（はいきぶつ）"
     ],
-    answer: "1. 産業（さんぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）廃棄物（はいきぶつ）",
+    answer: 1, 産業（さんぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）廃棄物（はいきぶつ）",
     vi: "Rác thải phát sinh từ hoạt động kinh doanh được chia thành hai loại: rác thải công nghiệp và rác thải kinh doanh.",
     explain: "Đáp án đúng là ② 産業廃棄物と事業系廃棄物 — phân loại theo nguồn phát sinh, gồm rác công nghiệp và rác kinh doanh."
   },
@@ -549,7 +549,7 @@ window.QUESTION_SETS["1"] = [
       "3. 休憩（きゅうけい）の時（とき）にいいます。",
       "4. すべて正解（せいかい）です。"
     ],
-    answer: "3. すべて正解（せいかい）です。",
+    answer: 3, すべて正解（せいかい）です。",
     vi: "Câu chào được dùng khi công việc kết thúc, nghỉ giải lao hoặc thể hiện sự cảm thông với người khác — tất cả đều đúng.",
     explain: "Đáp án đúng là ④ すべて正解です — vì ‘おつかれさまです’ được dùng trong nhiều tình huống để thể hiện sự tôn trọng, cảm ơn hoặc chào khi xong việc."
   }

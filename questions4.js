@@ -1,5 +1,5 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["4"] = (window.QUESTION_SETS["4"] || []).concat([
+window.QUESTION_SETS["4"] = (window.QUESTION_SETS["4"] || []).concat[
   {
     q: "問141　雇用（こよう）保険法（ほけんほう）は誰（だれ）を払（はら）うか。【15】",
     options: [

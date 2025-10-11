@@ -517,40 +517,4 @@ window.QUESTION_SETS["1"] = [
   vi: "Trong trường hợp có tai nạn do máy móc, không được cứu nạn nhân trước khi dừng máy để tránh tai nạn thứ cấp.",
   explain: "Đáp án đúng: 機械（きかい）を停止（ていし）させる前（まえ）に、被災者（ひさいしゃ）を救出（きゅうしゅつ）する — Là hành động không đúng quy trình an toàn."
 },
-  {
-    q: "問30　タワークレーンを使（つか）って、1階（いっかい）ずつ組（く）み上（あ）げていく方法（ほうしき）は何（なん）というか。【46】",
-    options: [
-      "1. チケット工法（こうほう）",
-      "2. 建（た）て越（こ）しげ方（ほう）",
-      "3. ノンプラケット工法（こうほう）",
-      "4. 水平（すいへい）積（つ）み上（あ）げ方法（ほうしき）"
-    ],
-    answer: 3, "水平（すいへい）積（つ）み上（あ）げ方法（ほうしき）",
-    vi: "Phương pháp sử dụng cần trục tháp để lắp từng tầng một, gọi là ‘phương pháp lắp theo chiều ngang từng tầng’.",
-    explain: "Đáp án đúng là ④ 水平積み上げ方法 — nghĩa là phương pháp lắp ghép theo tầng, sử dụng cần trục tháp để nâng dần từng tầng khi xây dựng."
-  },
-  {
-    q: "問32　事業（じぎょう）活動（かつどう）で生（しょう）じたごみは2つに分（わ）けられるが、次（つぎ）の種類（しゅるい）として正（ただ）しいものを選（えら）べ。【19】",
-    options: [
-      "1. 家庭（かてい）廃棄物（はいきぶつ）と事業系（じぎょうけい）廃棄物（はいきぶつ）",
-      "2. 産業（さんぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）廃棄物（はいきぶつ）",
-      "3. 一般（いっぱん）廃棄物（はいきぶつ）と家庭（かてい）廃棄物（はいきぶつ）",
-      "4. 産業（さんぎょう）廃棄物（はいきぶつ）と家庭（かてい）廃棄物（はいきぶつ）"
-    ],
-    answer: 1, "産業（さんぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）廃棄物（はいきぶつ）",
-    vi: "Rác thải phát sinh từ hoạt động kinh doanh được chia thành hai loại: rác thải công nghiệp và rác thải kinh doanh.",
-    explain: "Đáp án đúng là ② 産業廃棄物と事業系廃棄物 — phân loại theo nguồn phát sinh, gồm rác công nghiệp và rác kinh doanh."
-  },
-  {
-    q: "問7　「おつかれさまです」はどんな時（とき）に挨拶（あいさつ）するか。【79】",
-    options: [
-      "1. 他（ほか）の人（ひと）は大変（たいへん）そうだと思（おも）えます。",
-      "2. 仕事（しごと）が終（お）わるときにいいます。",
-      "3. 休憩（きゅうけい）の時（とき）にいいます。",
-      "4. すべて正解（せいかい）です。"
-    ],
-    answer: 3, "すべて正解（せいかい）です。",
-    vi: "Câu chào được dùng khi công việc kết thúc, nghỉ giải lao hoặc thể hiện sự cảm thông với người khác — tất cả đều đúng.",
-    explain: "Đáp án đúng là ④ すべて正解です — vì ‘おつかれさまです’ được dùng trong nhiều tình huống để thể hiện sự tôn trọng, cảm ơn hoặc chào khi xong việc."
-  }
 ];

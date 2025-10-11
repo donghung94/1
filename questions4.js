@@ -203,6 +203,18 @@ window.QUESTION_SETS["4"] = [
     answer: 0,
     vi: "Sai là chỉ thực hiện tuần tra an toàn vào ngày kiểm tra mà không duy trì thường xuyên.",
     explain: "安全衛生活動 phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
-  }
+  },
+  {
+  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<br><img src='images/IMG_3386.jpeg' alt='問118グラフ' class='q-img'>",
+  options: [
+    "災害（さいがい）や事故（じこ）で死亡（しぼう）",
+    "労働力（ろうどうりょく）人口（じんこう）",
+    "在日外国人（ざいにちがいこくじん）",
+    "特定技能実習生（とくていぎのうじっしゅうせい）"
+  ],
+  answer: 1,
+  vi: "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
+  explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
+},
 ];
   

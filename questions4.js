@@ -205,7 +205,7 @@ window.QUESTION_SETS["4"] = [
     explain: "安全衛生活動 phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
   },
   {
-  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<br><img src='images/IMG_3386.jpeg' alt='問118グラフ' class='q-img'>",
+  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<img src='images/IMG_3386.jpeg'>",
   options: [
     "災害（さいがい）や事故（じこ）で死亡（しぼう）",
     "労働力（ろうどうりょく）人口（じんこう）",

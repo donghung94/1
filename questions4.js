@@ -1,5 +1,5 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["4"] = (window.QUESTION_SETS["4"] || []).concat([
+window.QUESTION_SETS["4"] = [
   {
     q: "問141　雇用（こよう）保険法（ほけんほう）は誰（だれ）を払（はら）うか。【15】",
     options: [
@@ -204,5 +204,5 @@ window.QUESTION_SETS["4"] = (window.QUESTION_SETS["4"] || []).concat([
     vi: "Sai là chỉ thực hiện tuần tra an toàn vào ngày kiểm tra mà không duy trì thường xuyên.",
     explain: "安全衛生活動 phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
   }
-]);
+];
   

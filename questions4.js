@@ -218,7 +218,7 @@ window.QUESTION_SETS["4"] = [
 },
 {
   q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
-  img: "images/q153.jpg",
+  img: "images/IMG_3414.jpeg",
   options: [
     "施主（せしゅ）",
     "施工（せこう）管理者（かんりしゃ）",

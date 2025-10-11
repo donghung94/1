@@ -35,18 +35,10 @@
 <button id="redoWrong" class="floating">Làm lại những câu sai</button>
 
 <footer class="footer">© 2025 Đồng Hùng nikken • PWA Quiz</footer>
-<script>
-(function(){
-  // tự động nạp các file questions từ questions.js đến questions20.js
-  for (let i = 1; i <= 20; i++) {
-    const f = (i === 1) ? 'questions.js' : `questions${i}.js`;
-    const s = document.createElement('script');
-    s.src = f;
-    s.defer = true;
-    document.head.appendChild(s);
-  }
-})();
-</script>
+<script src="questions.js"></script>
+<script src="questions2.js"></script>
+<script src="questions3.js"></script>
+<script src="questions4.js"></script>
 <script src="exam.js"></script>
 <script>
 if('serviceWorker' in navigator){ navigator.serviceWorker.register('./service-worker.js'); }

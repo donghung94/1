@@ -16,7 +16,7 @@
   <link rel="preload" href="questions4.js" as="script">
 
   <script>
-    // ⚙️ Ép trình duyệt tải luôn các file đề vào cache
+    // ⚙️ Ép trình duyệt tải sẵn 4 file đề để không bị trễ khi mở
     const quizFiles = ["questions.js","questions2.js","questions3.js","questions4.js"];
     quizFiles.forEach(f => {
       fetch(f).then(()=>console.log("Cached:", f)).catch(()=>{});
@@ -39,27 +39,22 @@
 <main class="container">
   <div class="card">
     <h2>Chọn đề thi</h2>
-    <!-- ✅ Danh sách đề sẽ tự sinh ở đây -->
-    <ul id="exam-list" class="exam-list"></ul>
+    <!-- ✅ Danh sách đề thủ công -->
+    <ul id="exam-list" class="exam-list">
+      <li><a href="exam.html?set=1">Lý thuyết nhóm 2 – Đề 1</a></li>
+      <li><a href="exam.html?set=2">Lý thuyết nhóm 2 – Đề 2</a></li>
+      <li><a href="exam.html?set=3">Lý thuyết nhóm 2 – Đề 3</a></li>
+      <li><a href="exam.html?set=4">Lý thuyết nhóm 2 – Đề 4</a></li>
+      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#1e40af;">
+        🎲 Đề thi thử – Câu hỏi đảo ngẫu nhiên
+      </a></li>
+    </ul>
   </div>
 </main>
 
 <footer class="footer">© 2025 Đồng Hùng nikken • PWA Quiz</footer>
 
 <script>
-  // 🧩 Tự động tạo danh sách đề dựa theo số lượng TOTAL_SETS
-  const examList = document.getElementById('exam-list');
-  const TOTAL_SETS = 4; // ← cập nhật số lượng đề ở đây khi thêm đề mới
-
-  for (let i = 1; i <= TOTAL_SETS; i++) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = `exam.html?set=${i}`;
-    a.textContent = `Lý thuyết nhóm 2 – Đề ${i}`;
-    li.appendChild(a);
-    examList.appendChild(li);
-  }
-
   // 🧱 Đăng ký service worker để chạy PWA offline
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js');

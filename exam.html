@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="mono">
 <header class="header">
   <div class="brand small">
@@ -35,44 +36,17 @@
 
 <footer class="footer">© 2025 Đồng Hùng nikken • PWA Quiz</footer>
 
-<!-- 🟢 GIỮ NGUYÊN 4 FILE ĐỀ CŨ -->
+<!-- 🟢 Nạp trực tiếp các file đề cần thiết -->
 <script src="questions.js"></script>
 <script src="questions2.js"></script>
 <script src="questions3.js"></script>
 <script src="questions4.js"></script>
+<script src="exam_random.js"></script>
 
-<!-- 🟢 THÊM PHẦN FIX TỰ ĐỘNG & CHỐNG LỖI -->
-<script>
-(async () => {
-  // Tự động nạp thêm các file đề mới (nếu có) + đảm bảo chạy đúng thứ tự
-  const scripts = [];
-  for (let i = 1; i <= 20; i++) {
-    const file = (i === 1) ? 'questions.js' : `questions${i}.js`;
-    try {
-      const res = await fetch(file, { method: 'HEAD' });
-      if (res.ok) scripts.push(file);
-    } catch (e) {}
-  }
+<!-- 🚀 Nạp ngay exam.js sau khi các đề đã preload -->
+<script src="exam.js"></script>
 
-  // Nạp tuần tự các file đề
-  for (const src of scripts) {
-    await new Promise((resolve, reject) => {
-      const s = document.createElement('script');
-      s.src = src;
-      s.onload = resolve;
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-
-  // Đảm bảo exam.js chỉ chạy sau khi các đề đã load xong
-  const examScript = document.createElement('script');
-  examScript.src = 'exam.js';
-  document.head.appendChild(examScript);
-})();
-</script>
-
-<!-- 🟢 Service Worker giữ nguyên -->
+<!-- 🧱 Service Worker -->
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./service-worker.js');

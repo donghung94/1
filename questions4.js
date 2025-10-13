@@ -229,5 +229,233 @@ window.QUESTION_SETS["4"] = [
   vi: "Người đọc bản vẽ này là **施主（せしゅ） – chủ công trình**.",
   explain: "施主（せしゅ） là người sở hữu hoặc đặt hàng công trình xây dựng. Họ xem bản vẽ để xác nhận nội dung thiết kế trước khi thi công, trong khi những người khác như 施工管理者 hay 技能者 là người thực hiện hoặc giám sát thi công."
 },
+  {
+    q: "問162　設計図書（せっけいとしょ）の中（なか）に含（ふく）まない書類（しょるい）を選（えら）べ。【19】",
+    options: [
+      "設計図（せっけいず）",
+      "仕様書（しようしょ）",
+      "契約書（けいやくしょ）",
+      "質疑応答書（しつぎおうとうしょ）"
+    ],
+    answer: 2,
+    vi: "Chọn tài liệu không nằm trong bộ hồ sơ thiết kế.",
+    explain: "設計図書 (bộ hồ sơ thiết kế) bao gồm các bản vẽ thiết kế, chỉ dẫn kỹ thuật và tài liệu hỏi–đáp kỹ thuật (質疑応答書). Tuy nhiên, 契約書 (hợp đồng) là tài liệu pháp lý riêng, không thuộc thiết kế."
+  },
+  {
+    q: "問163　国家（こっか）免許（めんきょ）が必要（ひつよう）な職種（しょくしゅ）はどれか。【68】",
+    options: [
+      "発破（はっぱ）の業務（ぎょうむ）",
+      "酸素（さんそ）欠乏（けつぼう）危険（きけん）作業（さぎょう）に係（かか）る業務（ぎょうむ）",
+      "ボーリングマシンの運転（うんてん）業務（ぎょうむ）",
+      "ゴンドラの操作（そうさ）"
+    ],
+    answer: 0,
+    vi: "Ngành nghề nào cần có giấy phép quốc gia.",
+    explain: "Công việc 発破 (nổ mìn) là hoạt động đặc biệt nguy hiểm, bắt buộc phải có 国家免許 (giấy phép quốc gia). Các công việc khác chỉ cần chứng chỉ an toàn hoặc huấn luyện đặc biệt."
+  },
+  {
+    q: "問164　原価（げんか）管理（かんり）について完成（かんせい）工事（こうじ）原価（げんか）の外注費（がいちゅうひ）は何（なに）か。【35】",
+    options: [
+      "工事（こうじ）施工（せこう）を行（おこな）う作業員（さぎょういん）の人件費（じんけんひ）",
+      "工事（こうじ）の施工（せこう）のために直接（ちょくせつ）購入（こうにゅう）された素材（そざい）などの物品（ぶっぴん）",
+      "工事（こうじ）を施工（せこう）するときにその工程（こうてい）の一部（いちぶ）を他（ほか）の業者（ぎょうしゃ）などに発注（はっちゅう）する費用（ひよう）",
+      "材料費（ざいりょうひ）、労務費（ろうむひ）、外注費（がいちゅうひ）以外（いがい）の費用（ひよう）"
+    ],
+    answer: 2,
+    vi: "Trong quản lý giá thành, chi phí thuê ngoài (外注費) là gì?",
+    explain: "外注費 là chi phí khi một phần công đoạn thi công được giao cho nhà thầu phụ khác thực hiện. Không bao gồm nhân công nội bộ hay vật liệu chính."
+  },
+  {
+    q: "問165　標準（ひょうじゅん）仕様書（しようしょ）より、さらに具体的（ぐたいてき）な内容（ないよう）が特記（とっき）事項（じこう）として書（か）かれた書類（しょるい）は何（なに）というか。【80】",
+    options: [
+      "標準（ひょうじゅん）仕様書（しようしょ）",
+      "設計（せっけい）図書（ずしょ）",
+      "特記（とっき）仕様書（しようしょ）",
+      "設計図（せっけいず）"
+    ],
+    answer: 2,
+    vi: "Tài liệu ghi chi tiết các điều khoản đặc biệt cụ thể hơn so với bản tiêu chuẩn là gì?",
+    explain: "特記仕様書 là tài liệu ghi rõ các yêu cầu kỹ thuật đặc biệt (ví dụ vật liệu, phương pháp, điều kiện thi công) bổ sung cho 標準仕様書 (bản tiêu chuẩn)."
+  },
+  {
+    q: "問166　地震（じしん）のエネルギーを建物（たてもの）に伝（つた）えにくくするために、基礎（きそ）部分（ぶぶん）にアイソレータやダンパーなどの装置（そうち）を取（と）り付（つ）ける工事（こうじ）は何（なに）か。【19】",
+    options: [
+      "免震工事（めんしんこうじ）",
+      "耐震工事（たいしんこうじ）",
+      "制振工事（せいしんこうじ）",
+      "改修工事（かいしゅうこうじ）"
+    ],
+    answer: 0,
+    vi: "Loại công trình lắp đặt thiết bị để giảm truyền năng lượng động đất vào tòa nhà gọi là gì?",
+    explain: "免震工事 là công trình lắp đặt hệ thống cách ly nền (base isolation) bằng アイソレータ (isolator) hay ダンパー (damper), giúp tòa nhà không rung mạnh khi có động đất."
+  },
+  {
+    q: "問167　建設業（けんせつぎょう）の社会的（しゃかいてき）役割（やくわり）について、正（ただ）しくないものを選（えら）べ。【87】",
+    options: [
+      "高層（こうそう）ビルや大規模（だいきぼ）ショッピングモールの開発（かいはつ）で都市（とし）を発展（はってん）させる役割（やくわり）",
+      "住宅（じゅうたく）建設（けんせつ）によって、快適（かいてき）な生活（せいかつ）環境（かんきょう）と社会（しゃかい）福祉（ふくし）の向上（こうじょう）に貢献（こうけん）する役割（やくわり）",
+      "建設（けんせつ）工事（こうじ）によって自然（しぜん）環境（かんきょう）を破壊（はかい）する役割（やくわり）",
+      "災害時（さいがいじ）には、被災（ひさい）施設（しせつ）の修復（しゅうふく）や再建（さいけん）を行（おこな）う役割（やくわり）"
+    ],
+    answer: 2,
+    vi: "Trong các vai trò xã hội của ngành xây dựng, điều nào sau đây là sai?",
+    explain: "Ngành xây dựng có vai trò phát triển hạ tầng, cải thiện đời sống, tái thiết sau thiên tai. Việc ‘phá hoại môi trường tự nhiên’ không phải là vai trò mà là hậu quả cần tránh."
+  },
+  {
+    q: "問168　主任技術者（しゅにんぎじゅつしゃ）にない作業（さぎょう）を選（えら）べ。",
+    options: [
+      "賃金（ちんぎん）計算（けいさん）を行（おこな）う",
+      "施工（せこう）計画（けいかく）を作成（さくせい）",
+      "安全（あんぜん）管理（かんり）",
+      "品質（ひんしつ）管理（かんり）"
+    ],
+    answer: 0,
+    vi: "Hãy chọn công việc không thuộc phạm vi của kỹ thuật viên phụ trách chính (主任技術者).",
+    explain: "主任技術者 phụ trách kế hoạch thi công, quản lý an toàn và chất lượng — không thực hiện việc tính lương, nên đáp án đúng là ①."
+  },
+  {
+    q: "問169　免許（めんきょ）が必要（ひつよう）なトランシーバーを無免許（むめんきょ）で使用（しよう）すると違反（いはん）になる法（ほう）は何（なん）というか。【24】",
+    options: [
+      "電波法（でんぱほう）",
+      "電気（でんき）事業法（じぎょうほう）",
+      "電気（でんき）通信（つうしん）事業法（じぎょうほう）",
+      "航空法（こうくうほう）"
+    ],
+    answer: 0,
+    vi: "Khi sử dụng bộ đàm (transeiver) mà không có giấy phép thì vi phạm luật nào?",
+    explain: "Việc sử dụng thiết bị phát sóng không phép vi phạm 電波法 (Luật Sóng Điện). Đáp án đúng là ①."
+  },
+  {
+    q: "問170　上下（じょうげ）水道（すいどう）施設（しせつ）でないものを選（えら）べ。【35】",
+    options: [
+      "下水道（げすいどう）本管（ほんかん）",
+      "貯水場（ちょすいじょう）",
+      "配水管（はいすいかん）",
+      "配電盤（はいでんばん）"
+    ],
+    answer: 3,
+    vi: "Hãy chọn hạng mục không thuộc hệ thống cấp thoát nước.",
+    explain: "配電盤 là bảng điện, không thuộc hệ thống nước. Đáp án đúng là ④."
+  },
+  {
+    q: "問171　朝礼（ちょうれい）の一番（いちばん）の目的（もくてき）は何（なん）ですか。",
+    options: [
+      "作業員（さぎょういん）の出席（しゅっせき）",
+      "作業員（さぎょういん）の人数（にんずう）を確認（かくにん）する",
+      "建設（けんせつ）現場（げんば）での事故（じこ）を防（ふせ）ぐこと",
+      "ラジオ体操（たいそう）"
+    ],
+    answer: 2,
+    vi: "Mục đích chính của buổi chào sáng (朝礼) là gì?",
+    explain: "朝礼 được tổ chức để chia sẻ thông tin an toàn và ngăn ngừa tai nạn tại công trường. Đáp án đúng là ③."
+  },
+  {
+    q: "問172　作業（さぎょう）開始前（かいしまえ）にKY活動（かつどう）を行（おこな）う手順（てじゅん）として、最初（さいしょ）に行（おこな）われるものを選（えら）べ。",
+    options: [
+      "かけ声（ごえ）をかける",
+      "対策（たいさく）の検討（けんとう）",
+      "行動（こうどう）目標（もくひょう）の決定（けってい）",
+      "危険（きけん）の発見（はっけん）"
+    ],
+    answer: 3,
+    vi: "Trong trình tự thực hiện hoạt động KY trước khi bắt đầu công việc, bước đầu tiên là gì?",
+    explain: "Trước tiên cần phát hiện mối nguy hiểm (危険の発見) rồi mới đưa ra biện pháp. Đáp án đúng là ④."
+  },
+  {
+    q: "問173　労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）の目的（もくてき）は何（なん）か。【11】",
+    options: [
+      "職長（しょくちょう）を保護（ほご）する",
+      "作業員（さぎょういん）の技能（ぎのう）を高（たか）める",
+      "作業員（さぎょういん）を保護（ほご）する",
+      "労働者（ろうどうしゃ）の安全（あんぜん）と健康（けんこう）を保護（ほご）する"
+    ],
+    answer: 3,
+    vi: "Mục đích của Luật An toàn và Vệ sinh Lao động là gì?",
+    explain: "Luật này nhằm bảo vệ an toàn và sức khỏe của người lao động (労働者). Đáp án đúng là ④."
+  },
+  {
+    q: "問174　次（つぎ）の段階（だんかい）の作業（さぎょう）に取（と）り掛（か）かれず、作業員（さぎょういん）の動作（どうさ）がストップしている状態（じょうたい）は何（なに）か。【19】",
+    options: [
+      "手戻（てもど）し",
+      "手待（てま）ち",
+      "手遅（ておく）れ",
+      "手違（てちが）い"
+    ],
+    answer: 1,
+    vi: "Tình trạng khi công nhân không thể tiếp tục sang giai đoạn tiếp theo và đang dừng lại được gọi là gì?",
+    explain: "‘手待ち’ nghĩa là “chờ việc” – công nhân không thể tiếp tục công việc do chờ vật liệu, thiết bị,... Đáp án đúng là ②."
+  },
+  {
+    q: "問175　コンセントや照明（しょうめい）などの電気系（でんきけい）の配線（はいせん）やガス管（かん）・水道管（すいどうかん）・空調（くうちょう）などの配管（はいかん）がわかるようにしたのはどれか。【79】",
+    options: [
+      "配線図（はいせんず）",
+      "設備図（せつびず）",
+      "意匠図（いしょうず）",
+      "構造図（こうぞうず）"
+    ],
+    answer: 1,
+    vi: "Bản vẽ nào thể hiện cách bố trí đường dây điện, ống ga, ống nước, ống điều hòa?",
+    explain: "設備図 thể hiện bố trí toàn bộ hệ thống điện, nước, ga, điều hòa. Đáp án đúng là ②."
+  },
+  {
+    q: "問176　職場環境（しょくばかんきょう）について、不適切（ふてきせつ）なものを選（えら）べ。【135】",
+    options: [
+      "週休（しゅうきゅう）2日（ふつか）を確保（かくほ）する",
+      "技術者（ぎじゅつしゃ）・技能者（ぎのうしゃ）の教育（きょういく）は、職長（しょくちょう）の能力（のうりょく）育成（いくせい）を発揮（はっき）できる",
+      "職長（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）ることが大切（たいせつ）",
+      "働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）む"
+    ],
+    answer: 2,
+    vi: "Về môi trường làm việc, hãy chọn điều **không phù hợp (不適切)**.",
+    explain: "職長 nên tạo môi trường dễ trao đổi và thoải mái. Việc tạo môi trường ‘khó nói xin nghỉ phép’ là sai. Đáp án đúng là lựa chọn thứ 3 ."
+  },
+  {
+    q: "問177　職場環境（しょくばかんきょう）について、適切（てきせつ）なものを選（えら）べ。",
+    options: [
+      "週休（しゅうきゅう）1日（いちにち）を確保（かくほ）する",
+      "職長（しょくちょう）だけは育成（いくせい）と確保（かくほ）をする必要（ひつよう）がある",
+      "意識（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）らないことが大切（たいせつ）",
+      "働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）まない"
+    ],
+    answer: 2,
+    vi: "Về môi trường làm việc, hãy chọn điều **phù hợp (適切)**.",
+    explain: "職長 nên tạo môi trường nơi nhân viên có thể dễ dàng nói ra ý kiến hoặc xin nghỉ phép. Đáp án đúng là lựa chọn thứ 3 ."
+  },
+  {
+    q: "問178　杭工事（くいこうじ）とはどんな工事（こうじ）か。",
+    options: [
+      "土地（とち）の壁（かべ）が崩（くず）れないようにする",
+      "建物（たてもの）を建（た）てる敷地内（しきちない）の周（まわ）りに囲（かこ）いを立（た）てる",
+      "建物（たてもの）を支（ささ）えるための杭（くい）を地中（ちちゅう）に埋（う）め込（こ）むこと",
+      "地面（じめん）より下（した）の構造物（こうぞうぶつ）を作（つく）るために、地面（じめん）を掘削（くっさく）する"
+    ],
+    answer: 2,
+    vi: "Cọc (杭) công trình là loại công việc như thế nào?",
+    explain: "杭工事 là công việc đóng hoặc khoan cọc xuống lòng đất để đỡ công trình phía trên. Đáp án đúng là lựa chọn thứ 3 ."
+  },
+  {
+    q: "問179　清掃（せいそう）とは何（なに）か。",
+    options: [
+      "決（き）められたことやルールをいつも正（ただ）しく守（まも）る",
+      "要（い）るものと要（い）らないものを分（わ）けて、要（い）らないものを捨（す）てる",
+      "使（つか）いやすいようにきちんと置（お）き、表示（ひょうじ）する",
+      "建設中（けんせつちゅう）に生（しょう）じた汚（よご）れや塵（ちり）、建材（けんざい）の切（き）りくずなどをなくし、きれいな状態（じょうたい）にする"
+    ],
+    answer: 3,
+    vi: "‘Lau dọn (清掃)’ là gì?",
+    explain: "清掃 là dọn sạch bụi, rác, vật liệu thừa để công trường luôn sạch sẽ, gọn gàng. Đáp án đúng là lựa chọn thứ 4 ."
+  },
+  {
+    q: "問180　流（なが）れよく工事（こうじ）を進（すす）めるには、専門（せんもん）工事（こうじ）業者間（ぎょうしゃかん）の＿＿＿＿が大切（たいせつ）である。",
+    options: [
+      "レベル",
+      "チームワーク",
+      "アドバイス",
+      "フィードバック"
+    ],
+    answer: 1,
+    vi: "Để tiến hành thi công một cách trôi chảy, điều gì giữa các nhà thầu chuyên môn là quan trọng?",
+    explain: "Để tiến hành thi công suôn sẻ, sự hợp tác và phối hợp nhóm (チームワーク) giữa các nhà thầu là điều quan trọng. Đáp án đúng là lựa chọn thứ 2 ."
+  }
 ];
   

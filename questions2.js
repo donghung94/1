@@ -453,7 +453,7 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 3,
   vi: "Trong các loại công trình đào hầm sau đây
-hãy chọn loại không tồn tại không phải là loại hầm thực tế'.",
+hãy chọn loại không tồn tại không phải là loại hầm thực tế.",
   explain: "海底トンネル (hầm dưới đáy biển) chỉ là vị trí." 
 },
 {

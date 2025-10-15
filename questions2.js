@@ -356,9 +356,9 @@ window.QUESTION_SETS["2"] = [
     "職長（しょくちょう）",
     "施工（せこう）管理者（かんりしゃ）"
   ],
-  answer: 3,
+  answer: 2,
   vi: "Người chịu trách nhiệm quản lý, giám sát thi công.",
-  explain: "施工管理者 là người lập kế hoạch, giám sát tiến độ, chất lượng và an toàn trong quá trình thi công."
+  explain: "主任（しゅにん）技術者（ぎじゅつしゃ）là người lập kế hoạch, kỹ thuật, giám sát tiến độ, chất lượng và an toàn trong quá trình thi công."
 },
   {
   q: "問88　鉄筋（てっきん）を組（く）んだ型枠（かたわく）にコンクリートを流（なが）し込（こ）んで固（かた）めた構造（こうぞう）をしている工事（こうじ）は何（なん）というか【31】",
@@ -451,9 +451,10 @@ window.QUESTION_SETS["2"] = [
     "開削（かいさく）トンネル",
     "海底（かいてい）トンネル"
   ],
-  answer: 0,
-  vi: "Không tồn tại loại tunnel 'thúc tiến'.",
-  explain: "Các loại tunnel chính gồm 山岳, 開削, 海底 — không có loại 推進トンネル."
+  answer: 3,
+  vi: "Trong các loại công trình đào hầm sau đây
+hãy chọn loại không tồn tại không phải là loại hầm thực tế'.",
+  explain: "海底トンネル (hầm dưới đáy biển) chỉ là vị trí." 
 },
 {
   q: "問96　舗装（ほそう）工事（こうじ）について、一番（いちばん）下（した）の層（そう）で作業（さぎょう）するのはどれか【42】",

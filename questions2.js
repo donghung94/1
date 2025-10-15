@@ -356,7 +356,7 @@ window.QUESTION_SETS["2"] = [
     "職長（しょくちょう）",
     "施工（せこう）管理者（かんりしゃ）"
   ],
-  answer: 2,
+  answer: 1,
   vi: "Người chịu trách nhiệm quản lý, giám sát thi công.",
   explain: "主任（しゅにん）技術者（ぎじゅつしゃ）là người lập kế hoạch, kỹ thuật, giám sát tiến độ, chất lượng và an toàn trong quá trình thi công."
 },

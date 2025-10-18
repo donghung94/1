@@ -7,7 +7,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.1/firebase
 
 // ⚙️ Cấu hình Firebase của bạn
 const firebaseConfig = {
-  apiKey: "AIza...ghi_api_key_vào_đây...",
+  apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
   authDomain: "donghung-3208d.firebaseapp.com",
   projectId: "donghung-3208d",
   storageBucket: "donghung-3208d.firebasestorage.app",

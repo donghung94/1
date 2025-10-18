@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng nhập - Đồng Hùng nikken</title>
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+
+<body class="mono">
+<header class="header">
+  <div class="brand small">
+    <img src="icon-192.png" alt="H" class="logo">
+    <div class="titles">
+      <div class="brand-name">Đồng Hùng nikken</div>
+      <div class="subtitle">Tài khoản truy cập</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>Đăng nhập / Đăng ký</h2>
+    <input type="email" id="email" placeholder="Nhập email của bạn">
+    <input type="password" id="password" placeholder="Nhập mật khẩu">
+    <button id="loginBtn" class="btn">Đăng nhập</button>
+    <button id="registerBtn" class="btn ghost">Đăng ký</button>
+    <p id="status" style="margin-top:10px;color:#1e40af"></p>
+  </div>
+</main>
+
+<footer class="footer">© 2025 Đồng Hùng nikken</footer>
+
+<script type="module">
+  import { auth, db } from "./firebase.js";
+  import { 
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+  import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+  const emailEl = document.getElementById("email");
+  const passEl = document.getElementById("password");
+  const statusEl = document.getElementById("status");
+
+  // Đăng ký tài khoản
+  document.getElementById("registerBtn").onclick = async ()=>{
+    try {
+      const userCred = await createUserWithEmailAndPassword(auth, emailEl.value, passEl.value);
+      const uid = userCred.user.uid;
+      // Lưu thiết bị hiện tại vào Firestore
+      await setDoc(doc(db, "users", uid), {
+        email: emailEl.value,
+        device: navigator.userAgent
+      });
+      alert("Đăng ký thành công!");
+      location.href = "index.html";
+    } catch (err) {
+      statusEl.textContent = "❌ Lỗi: " + err.message;
+    }
+  };
+
+  // Đăng nhập
+  document.getElementById("loginBtn").onclick = async ()=>{
+    try {
+      const userCred = await signInWithEmailAndPassword(auth, emailEl.value, passEl.value);
+      const uid = userCred.user.uid;
+
+      // Kiểm tra thiết bị
+      const userDoc = await getDoc(doc(db, "users", uid));
+      const savedDevice = userDoc.data()?.device;
+      const currentDevice = navigator.userAgent;
+
+      if (savedDevice && savedDevice !== currentDevice) {
+        alert("Tài khoản này đang được sử dụng trên thiết bị khác!");
+        await signOut(auth);
+        return;
+      }
+
+      // Cập nhật thiết bị hiện tại
+      await setDoc(doc(db, "users", uid), {
+        email: emailEl.value,
+        device: currentDevice
+      });
+
+      statusEl.textContent = "✅ Đăng nhập thành công!";
+      setTimeout(()=>location.href="index.html", 1000);
+    } catch (err) {
+      statusEl.textContent = "❌ Lỗi: " + err.message;
+    }
+  };
+
+  // Tự động chuyển hướng nếu đã đăng nhập
+  onAuthStateChanged(auth, (user)=>{
+    if(user){
+      location.href = "index.html";
+    }
+  });
+</script>
+</body>
+</html>

@@ -26,6 +26,19 @@
 </head>
 
 <body class="mono">
+  <script type="module">
+  import { auth } from "./firebase.js";
+  import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+  onAuthStateChanged(auth, (user)=>{
+    if(!user){
+      // Nếu chưa đăng nhập → chuyển về trang đăng nhập
+      location.href = "login.html";
+    } else {
+      console.log("✅ Đã đăng nhập:", user.email);
+    }
+  });
+</script>
 <header class="header">
   <div class="brand">
     <img src="icon-192.png" alt="H" class="logo">

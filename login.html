@@ -26,6 +26,7 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
       animation: fadeIn 0.8s ease;
+      position: relative;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -41,6 +42,7 @@
       align-items: center;
       margin: 0 auto 15px;
       overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     .logo img {
       width: 70%;
@@ -86,6 +88,30 @@
       font-size: 13px;
       color: rgba(255, 255, 255, 0.7);
     }
+
+    /* 🔄 Hiệu ứng loading */
+    .loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      display: none;
+    }
+    .spinner {
+      width: 45px;
+      height: 45px;
+      border: 4px solid rgba(255,255,255,0.3);
+      border-top: 4px solid #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 
@@ -101,6 +127,11 @@
     <button id="loginBtn" class="btn">Đăng nhập</button>
 
     <div class="footer">© 2025 Đồng Hùng Nikken</div>
+
+    <!-- 🔄 overlay loading -->
+    <div class="loading-overlay" id="loading">
+      <div class="spinner"></div>
+    </div>
   </div>
 
   <script type="module">
@@ -110,6 +141,7 @@
     const emailInput = document.getElementById("email");
     const passInput = document.getElementById("password");
     const loginBtn = document.getElementById("loginBtn");
+    const loading = document.getElementById("loading");
 
     loginBtn.addEventListener("click", async () => {
       const email = emailInput.value.trim();
@@ -120,6 +152,8 @@
         return;
       }
 
+      loading.style.display = "flex"; // hiện loading
+
       try {
         await signInWithEmailAndPassword(auth, email, password);
         alert("Đăng nhập thành công!");
@@ -127,6 +161,8 @@
       } catch (error) {
         console.error(error);
         alert("Sai tài khoản hoặc mật khẩu.\nVui lòng liên hệ admin để được cấp quyền!");
+      } finally {
+        loading.style.display = "none"; // tắt loading
       }
     });
   </script>

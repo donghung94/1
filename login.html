@@ -4,25 +4,104 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Đăng nhập – Đồng Hùng Nikken</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon-192.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px 30px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.8s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 15px;
+      overflow: hidden;
+    }
+    .logo img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    input:focus {
+      box-shadow: 0 0 5px #6bb0ff;
+    }
+    .btn {
+      width: 100%;
+      background: #2563eb;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #1e40af;
+      transform: scale(1.02);
+    }
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
 </head>
 
-<body class="mono">
-  <main class="container">
-    <div class="card">
-      <h2>Đăng nhập vào hệ thống</h2>
-
-      <label>Email:</label>
-      <input type="email" id="email" placeholder="Nhập email" required>
-
-      <label>Mật khẩu:</label>
-      <input type="password" id="password" placeholder="Nhập mật khẩu" required>
-
-      <button id="loginBtn" class="btn">Đăng nhập</button>
+<body>
+  <div class="card">
+    <div class="logo">
+      <img src="icon-192.png" alt="Logo">
     </div>
-  </main>
+    <h2>Đăng nhập hệ thống<br>Đồng Hùng Nikken</h2>
 
-  <footer class="footer">© 2025 Đồng Hùng Nikken</footer>
+    <input type="email" id="email" placeholder="Nhập email">
+    <input type="password" id="password" placeholder="Nhập mật khẩu">
+    <button id="loginBtn" class="btn">Đăng nhập</button>
+
+    <div class="footer">© 2025 Đồng Hùng Nikken</div>
+  </div>
 
   <script type="module">
     import { auth } from "./firebase.js";
@@ -44,7 +123,7 @@
       try {
         await signInWithEmailAndPassword(auth, email, password);
         alert("Đăng nhập thành công!");
-        location.href = "index.html"; // chuyển về trang chính
+        location.href = "index.html";
       } catch (error) {
         console.error(error);
         alert("Sai tài khoản hoặc mật khẩu.\nVui lòng liên hệ admin để được cấp quyền!");

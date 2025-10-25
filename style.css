@@ -1,0 +1,152 @@
+
+:root{
+  --bg:#ffffff; --fg:#000000; --muted:#666; --border:#e5e5e5;
+  --ok:#0a7f2e; --bad:#c62828; --blue:#007BFF;
+}
+*{box-sizing:border-box}
+body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px}
+.brand.small .brand-name{font-size:16px}
+.logo{width:36px;height:36px;border-radius:8px}
+.titles .brand-name{font-weight:700}
+.titles .subtitle{font-size:14px;color:var(--muted)}
+.titles .demoline{font-size:12px;color:var(--muted)}
+
+.container{max-width:960px;margin:18px auto;padding:0 16px}
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+
+.exam-list{list-style:none;padding:0;margin:0}
+.exam-list li{margin:10px 0}
+.exam-list a{color:var(--fg);text-decoration:underline}
+
+.hud{display:flex;align-items:center;gap:10px}
+.timer{font-variant-numeric:tabular-nums;font-weight:700}
+
+.btn{border:1px solid var(--fg);background:#fff;color:var(--fg);padding:8px 14px;border-radius:10px;cursor:pointer}
+.btn.ghost{background:transparent}
+.btn:active{transform:translateY(1px)}
+
+.q-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.q-index{font-weight:700}
+.q-text{font-weight:600;margin:10px 0;white-space:pre-wrap}
+.hira{font-size:14px;color:var(--muted);margin:4px 0 8px;white-space:pre-wrap}
+
+.options{display:grid;gap:8px;margin:10px 0}
+.opt{display:flex;align-items:center;gap:10px;border:1px solid var(--border);padding:10px;border-radius:10px}
+.opt input[type="radio"]{transform:scale(1.2)}
+
+.nav{display:flex;gap:8px;margin-top:8px}
+.footer{text-align:center;color:var(--muted);padding:24px 0;border-top:1px solid var(--border)}
+
+.result-title{font-weight:700;margin-bottom:8px}
+.result-item{border-top:1px dashed var(--border);padding-top:10px;margin-top:10px}
+.answer-line{margin:6px 0}
+.selected.correct{color:var(--ok);font-weight:700}
+.selected.incorrect{color:var(--bad);font-weight:700}
+.explain{color:#111;margin-top:6px}
+
+.floating{position:fixed;right:16px;bottom:16px;background:var(--blue);color:#fff;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;display:none}
+/* 💬 Khung hiển thị TỪ VỰNG / DỊCH NGHĨA / GIẢI THÍCH */
+.meaning-box {
+  background: #eaf7e6;              /* nền xanh nhạt */
+  border-left: 4px solid #4CAF50;   /* viền xanh lá bên trái */
+  padding: 10px 14px;
+  margin-top: 12px;
+  border-radius: 6px;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #222;
+  white-space: pre-line;            /* giữ nguyên xuống dòng trong vocab */
+}
+
+.meaning-box strong {
+  color: #1b5e20;                   /* chữ “TỪ VỰNG”, “DỊCH NGHĨA” đậm xanh đậm */
+  font-weight: 600;
+}
+
+.meaning-box + .meaning-box {
+  margin-top: 8px;                  /* tạo khoảng cách giữa các khung (nếu có nhiều phần) */
+}
+
+/* ✅ Làm đẹp phần lựa chọn */
+.opt {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 6px 0;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.opt:hover {
+  background-color: #f5faff;
+}
+
+.opt input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #2196f3;            /* màu xanh của nút chọn */
+}
+
+.opt input[type="radio"]:checked + div {
+  background-color: #d0e8ff;        /* nền xanh khi chọn */
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: 0.2s;
+}
+
+/* 🧩 Hình ảnh câu hỏi */
+.q-img img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* 🕓 Thanh thời gian */
+.timer {
+  font-weight: 700;
+  color: #1e88e5;
+}
+.video-section {
+  margin-top: 30px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.video-section h3 {
+  color: #1e3a8a;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: #000;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}

@@ -1,11 +1,15 @@
+// ===========================
+// 🔥 Firebase cấu hình cơ bản
+// ===========================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { 
-  getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged 
+  getAuth, signInWithEmailAndPassword, signOut
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import { 
-  getFirestore, doc, getDoc, setDoc, updateDoc 
+  getFirestore, doc, getDoc, setDoc
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
+// ⚙️ Cấu hình Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
   authDomain: "donghung-3208d.firebaseapp.com",
@@ -16,10 +20,14 @@ const firebaseConfig = {
   measurementId: "G-06PF7MH1P0"
 };
 
+// 🚀 Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
+// =======================================================
+// 🔐 LOGIN — chỉ cho phép 1 thiết bị duy nhất online
+// =======================================================
 export async function loginUser(email, password) {
   try {
     console.log("🚀 Đang đăng nhập...");
@@ -29,39 +37,56 @@ export async function loginUser(email, password) {
 
     const userRef = doc(db, "users", user.uid);
     const snap = await getDoc(userRef);
-    const currentDevice = navigator.userAgent + "_" + Math.random().toString(36).slice(2);
+    const currentDevice = navigator.userAgent; // định danh thiết bị
 
+    // 🔍 Kiểm tra Firestore trước khi redirect
     if (snap.exists()) {
       const data = snap.data();
-      console.log("📄 Data hiện tại:", data);
+      console.log("📄 Dữ liệu hiện tại:", data);
+
+      // ⚠️ Nếu phát hiện thiết bị khác đang login
       if (data.activeDevice && data.activeDevice !== currentDevice) {
-        alert("⚠️ Tài khoản này đang đăng nhập ở thiết bị khác.");
         await signOut(auth);
-        throw new Error("Device conflict");
-      } else {
-        await updateDoc(userRef, { activeDevice: currentDevice, lastLogin: Date.now() });
-        console.log("📡 Đã cập nhật activeDevice:", currentDevice);
+        alert("⚠️ Tài khoản này đang đăng nhập ở thiết bị khác.\nVui lòng đăng xuất thiết bị kia trước!");
+        return; // ❌ Không vào index
       }
+
+      // ✅ Nếu cùng thiết bị → cập nhật lại thời gian
+      await setDoc(userRef, {
+        email: user.email,
+        activeDevice: currentDevice,
+        lastLogin: new Date().toISOString()
+      }, { merge: true });
+
     } else {
-      await setDoc(userRef, { activeDevice: currentDevice, lastLogin: Date.now() });
-      console.log("🆕 Tạo document mới cho user:", user.uid);
+      // 🆕 Tạo mới user document
+      await setDoc(userRef, {
+        email: user.email,
+        activeDevice: currentDevice,
+        lastLogin: new Date().toISOString()
+      });
     }
 
-    location.href = "index.html";
+    console.log("📡 Đã cập nhật activeDevice:", currentDevice);
+    location.href = "index.html"; // ✅ chỉ chuyển khi hợp lệ
+
   } catch (err) {
     console.error("❌ Lỗi đăng nhập:", err);
-    alert("Lỗi: " + err.message);
-    throw err;
+    alert("Đăng nhập thất bại: " + err.message);
   }
 }
 
+// =======================================================
+// 🚪 LOGOUT — xoá activeDevice khi đăng xuất
+// =======================================================
 export async function logout() {
   const user = auth.currentUser;
   if (!user) return;
   try {
     const userRef = doc(db, "users", user.uid);
-    await updateDoc(userRef, { activeDevice: null });
+    await setDoc(userRef, { activeDevice: null }, { merge: true });
     await signOut(auth);
+    console.log("👋 Đã đăng xuất, xoá activeDevice thành công");
     location.href = "login.html";
   } catch (err) {
     console.error("🚨 Lỗi khi đăng xuất:", err);

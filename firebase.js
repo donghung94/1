@@ -1,15 +1,12 @@
-// ===========================
-// 🔥 Firebase cấu hình cơ bản
-// ===========================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { 
-  getAuth, signInWithEmailAndPassword, signOut
+  getAuth, signInWithEmailAndPassword, signOut 
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import { 
-  getFirestore, doc, getDoc, setDoc
+  getFirestore, doc, getDoc, setDoc, updateDoc, onSnapshot, collection, getDocs 
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-// ⚙️ Cấu hình Firebase
+// ✅ Cấu hình Firebase (giữ nguyên của bạn)
 const firebaseConfig = {
   apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
   authDomain: "donghung-3208d.firebaseapp.com",
@@ -20,55 +17,40 @@ const firebaseConfig = {
   measurementId: "G-06PF7MH1P0"
 };
 
-// 🚀 Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-// =======================================================
-// 🔐 LOGIN — chỉ cho phép 1 thiết bị duy nhất online
-// =======================================================
+// 🔐 Xử lý đăng nhập người dùng
 export async function loginUser(email, password) {
   try {
-    console.log("🚀 Đang đăng nhập...");
     const cred = await signInWithEmailAndPassword(auth, email, password);
     const user = cred.user;
-    console.log("✅ Firebase Auth thành công:", user.email);
-
-    const userRef = doc(db, "users", user.uid);
+    const userRef = doc(db, "login_requests", user.uid);
     const snap = await getDoc(userRef);
-    const currentDevice = navigator.userAgent; // định danh thiết bị
 
-    // 🔍 Kiểm tra Firestore trước khi redirect
-    if (snap.exists()) {
-      const data = snap.data();
-      console.log("📄 Dữ liệu hiện tại:", data);
-
-      // ⚠️ Nếu phát hiện thiết bị khác đang login
-      if (data.activeDevice && data.activeDevice !== currentDevice) {
-        await signOut(auth);
-        alert("⚠️ Tài khoản này đang đăng nhập ở thiết bị khác.\nVui lòng đăng xuất thiết bị kia trước!");
-        return; // ❌ Không vào index
-      }
-
-      // ✅ Nếu cùng thiết bị → cập nhật lại thời gian
+    if (!snap.exists() || snap.data().status !== "approved") {
       await setDoc(userRef, {
         email: user.email,
-        activeDevice: currentDevice,
-        lastLogin: new Date().toISOString()
-      }, { merge: true });
-
-    } else {
-      // 🆕 Tạo mới user document
-      await setDoc(userRef, {
-        email: user.email,
-        activeDevice: currentDevice,
-        lastLogin: new Date().toISOString()
+        device: navigator.userAgent,
+        status: "pending",
+        requestTime: new Date().toISOString()
       });
+      alert("⏳ Đang chờ admin duyệt đăng nhập...");
     }
 
-    console.log("📡 Đã cập nhật activeDevice:", currentDevice);
-    location.href = "index.html"; // ✅ chỉ chuyển khi hợp lệ
+    // Lắng nghe realtime khi admin duyệt
+    onSnapshot(userRef, (docSnap) => {
+      const data = docSnap.data();
+      if (!data) return;
+      if (data.status === "approved") {
+        alert("✅ Admin đã duyệt, bạn được phép vào hệ thống!");
+        location.href = "index.html";
+      } else if (data.status === "rejected") {
+        alert("❌ Yêu cầu bị từ chối. Liên hệ admin.");
+        signOut(auth);
+      }
+    });
 
   } catch (err) {
     console.error("❌ Lỗi đăng nhập:", err);
@@ -76,19 +58,10 @@ export async function loginUser(email, password) {
   }
 }
 
-// =======================================================
-// 🚪 LOGOUT — xoá activeDevice khi đăng xuất
-// =======================================================
+// 🚪 Đăng xuất
 export async function logout() {
   const user = auth.currentUser;
   if (!user) return;
-  try {
-    const userRef = doc(db, "users", user.uid);
-    await setDoc(userRef, { activeDevice: null }, { merge: true });
-    await signOut(auth);
-    console.log("👋 Đã đăng xuất, xoá activeDevice thành công");
-    location.href = "login.html";
-  } catch (err) {
-    console.error("🚨 Lỗi khi đăng xuất:", err);
-  }
+  await signOut(auth);
+  location.href = "login.html";
 }

@@ -66,6 +66,31 @@ window.QUESTION_SETS["1"] = [
   vi: "Trong các loại sơ đồ tiến độ, loại nào thể hiện rõ 4 yếu tố: trình tự, ngày, tiến độ và ảnh hưởng tiến độ?",
   explain: "Đáp án đúng: 4 — Sơ đồ tiến độ kiểu mạng (ネットワーク式工程表) thể hiện đầy đủ 4 yếu tố."
 },
+  {
+  q: "問6　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【64】",
+  img: "images/IMG_3607.jpeg",
+  options: [
+    "給排水（きゅうはいすい）設備（せつび）工事（こうじ）",
+    "ガス設備（せつび）工事（こうじ）",
+    "衛生（えいせい）器具（きぐ）設備（せつび）工事（こうじ）",
+    "給湯（きゅうとう）設備（せつび）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Công trình trong hình là loại nào?",
+  explain: "Hình cho thấy hệ thống ống nước thải và cấp nước — đây là công trình **給排水設備工事 (cấp thoát nước)**."
+},
+  {
+  q: "問7　「おつかれさまです」はどんな時（とき）に挨拶（あいさつ）するか。【79】",
+  options: [
+    "他（ほか）の人（ひと）は来（たいへん）そうだと思（おも）えま",
+    "仕事（しごと）が終（お）わるときにあいさつします",
+    "休憩（きゅうけい）の時（とき）にあいさつします",
+    "すべて正解（せいかい）です"
+  ],
+  answer: 3,
+  vi: "Cụm 'おつかれさまです' được dùng khi nào?",
+  explain: "‘おつかれさまです’ là câu chào phổ biến dùng khi công việc kết thúc, lúc nghỉ giải lao, hoặc khi gặp đồng nghiệp — nên tất cả đều đúng."
+},
 {
   id: 8,
   q: "問8 作業（さぎょう）終了後（しゅうりょうご）、火（ひ）を使（つか）う場合（ばあい）は、何（なに）をする？",

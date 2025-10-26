@@ -156,6 +156,32 @@ window.QUESTION_SETS["1"] = [
   vi: "Người thi công nhà gỗ được gọi là gì?",
   explain: "Đáp án đúng: 1 — 大工（だいく） nghĩa là thợ mộc, người làm công trình nhà gỗ."
 },
+  {
+  q: "問13　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【56】",
+  img: "images/0156.png",
+  options: [
+    "鋼製（こうせい）下地（したじ）工事（こうじ）",
+    "ボード貼（は）り工事（こうじ）",
+    "床（ゆか）仕上（しあ）げ工事（こうじ）",
+    "カーテン工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Hình dưới đây là công trình gì?",
+  explain: "Hình cho thấy khung xương thép được lắp đặt — đây là **鋼製下地工事（こうせいしたじこうじ）**, tức là công trình lắp đặt khung xương kim loại để làm tường hoặc trần."
+},
+  {
+  q: "問14　イラストによると、どんな工事（こうじ）か。【62】",
+  img: "images/IMG_3608.jpeg",
+  options: [
+    "地中（ちちゅう）配線（はいせん）工事（こうじ）",
+    "架空（かくう）配線（はいせん）工事（こうじ）",
+    "電灯（でんとう）設備（せつび）工事（こうじ）",
+    "配線（はいせん）工事（こうじ）"
+  ],
+  answer: 1,
+  vi: "Theo hình minh họa, đây là loại công trình nào?",
+  explain: "Công nhân đang làm việc trên xe nâng, xử lý dây điện phía trên không trung. Đây là **架空配線工事（かくうはいせんこうじ）**, tức là công trình lắp đặt đường dây điện trên không."
+},
 {
   id: 15,
   q: "問15 鉄骨（てっこつ）で作（つく）られる構造（こうぞう）について、違（ちが）うものを選（えら）べ。",
@@ -206,6 +232,19 @@ window.QUESTION_SETS["1"] = [
     vi: "Để làm công việc nổ mìn (phát phá), cần gì?",
     explain: "Đáp án đúng: 発破技師免許 – Phải có giấy phép kỹ sư nổ mìn."
   },
+  {
+  q: "問19　鉄筋（てっきん）と鉄筋（てっきん）のつなぐ部分（ぶぶん）を加熱（かねつ）して、軸方向（じくほうこう）に圧力（あつりょく）をかけて接合（せつごう）する工法（こうほう）は何（なん）と言（い）うか。【47】",
+  img: "images/IMG_3609.jpeg",
+  options: [
+    "溶接（ようせつ）継手（つぎて）",
+    "ガス圧接（あっせつ）継手（つぎて）",
+    "アーク溶接（ようせつ）",
+    "ろう接（せつ）"
+  ],
+  answer: 1,
+  vi: "Phương pháp nung nóng phần nối giữa hai thanh thép và ép lại theo trục gọi là gì?",
+  explain: "Đây là **ガス圧接継手（がすあっせつつぎて）**, tức là phương pháp nối thép bằng hàn ép khí gas — sử dụng nhiệt và áp lực dọc trục để nối chặt hai đầu thép."
+},
   {
     q: "問20　コンクリート強度（きょうど）の低下（ていか）防止（ぼうし）対策（たいさく）のため、コンクリートに振動（しんどう）を与（あた）えて型枠（かたわく）を隅々（すみずみ）までいきわたらせ、不要（ふよう）な空気（くうき）を除去（じょきょ）するための機械（きかい）は何（なん）というか【50】",
     options: [
@@ -302,6 +341,19 @@ window.QUESTION_SETS["1"] = [
     vi: "Về vai trò của đập, phương án nào KHÔNG phù hợp?",
     explain: "Đáp án đúng: 2 – “Bảo an môi trường tự nhiên” là diễn đạt không đúng vai trò đặc trưng của đập."
   },
+  {
+  q: "問28　地下水（ちかすい）を排水（はいすい）するための工法（こうほう）は何（なん）の工事（こうじ）か。【41】",
+  img: "images/IMG_3610.jpeg",
+  options: [
+    "ウォルポイント工事（こうじ）",
+    "推進（すいしん）トンネル工事（こうじ）",
+    "さく井（せい）工事（こうじ）",
+    "海洋（かいよう）土木（どぼく）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Phương pháp thi công nào dùng để hút và thoát nước ngầm ra khỏi lòng đất?",
+  explain: "Hình vẽ mô tả hệ thống ống hút nước ngầm với bể và bơm trung gian — đây là **ウォルポイント工事（Well Point 工事）**, dùng để hạ mực nước ngầm trước khi thi công móng hoặc tầng hầm."
+},
   {
   q: "問29　鉄筋（てっきん）の長（なが）さが足（た）りない場合（ばあい）、２本（にほん）の鉄筋（てっきん）をつなぎ合わせて、長（なが）い１本（いっぽん）の鉄筋（てっきん）にする工事（こうじ）は何（なん）と言（い）うか。",
   options: [

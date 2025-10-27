@@ -3,27 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Đăng nhập – Quiz APP</title>
-  <link rel="icon" href="icon-192.png">
-  <script type="module">
-    import { loginUser } from "./firebase.js";
-    window.doLogin = async function(){
-      const email = document.getElementById("email").value.trim();
-      const pass = document.getElementById("password").value.trim();
-      if (!email || !pass) return alert("⚠️ Nhập đủ email và mật khẩu!");
-      await loginUser(email, pass);
-    }
-  </script>
+  <title>Đăng nhập – Đồng Hùng nikken</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="mono">
 
-<body style="font-family:sans-serif;background:#f9fafb;display:flex;align-items:center;justify-content:center;height:100vh;">
-  <div style="background:white;padding:30px;border-radius:10px;box-shadow:0 4px 20px rgba(0,0,0,0.1);width:300px;text-align:center;">
-    <img src="icon-192.png" width="80"><br>
-    <h3>🔐 Đăng nhập hệ thống</h3>
-    <input id="email" type="email" placeholder="Email" style="width:90%;margin:6px;padding:8px;"><br>
-    <input id="password" type="password" placeholder="Mật khẩu" style="width:90%;margin:6px;padding:8px;"><br>
-    <button onclick="doLogin()" style="padding:10px 20px;background:#1e40af;color:white;border:none;border-radius:5px;">Đăng nhập</button>
-    <p style="font-size:12px;margin-top:10px;color:gray;">Nếu bị chặn, liên hệ admin để duyệt truy cập.</p>
+<header class="header">
+  <div class="brand">
+    <img src="icon-192.png" alt="H" class="logo">
+    <div class="titles">
+      <div class="brand-name">Quiz app</div>
+      <div class="subtitle">Hệ thống luyện thi Tokutei Gino 2</div>
+    </div>
   </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    <h2>🔐 Đăng nhập </h2>
+
+    <label for="username">Tài khoản:</label>
+    <input type="text" id="username" placeholder="Nhập tên đăng nhập...">
+
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" placeholder="Nhập mật khẩu...">
+
+    <button class="btn" onclick="handleLogin()">Đăng nhập</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+</main>
+
+<footer class="footer">© 2025 • Quiz App</footer>
+<script src="login.js"></script>
 </body>
 </html>

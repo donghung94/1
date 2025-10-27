@@ -366,4 +366,17 @@ window.QUESTION_SETS["1"] = [
   vi: "Khi thanh thép không đủ dài, nối 2 thanh lại thành 1 thanh dài gọi là công việc nối thép.",
   explain: "Đáp án đúng: 鉄筋継手工事（てっきんつぎてこうじ） — Công việc nối thép để kéo dài thanh."
 },
+  {
+  q: "問30　タワークレーンを使（つか）って、１階（いっかい）ずつ組（く）み上（あ）げていく方法（ほうほう）は何（なん）というか。【46】",
+  img: "images/0E86ABF3-28D9-4B08-91AF-603BF4ED1D38.jpeg",
+  options: [
+    "1．ブラケット工法（こうほう）",
+    "2．建（た）て逃（に）げ方式（ほうしき）",
+    "3．ノンブラケット工法（こうほう）",
+    "4．水平（すいへい）積（つ）み上（あ）げ方式（ほうしき）"
+  ],
+  answer: 0,
+  vi: "Khi sử dụng cần trục tháp (tower crane) để lắp dựng từng tầng một, phương pháp này được gọi là gì?",
+  explain: "Phương pháp này gọi là **ブラケット工法 (Bracket Kōhō)** — là cách lắp dựng dần từng tầng, dùng giá đỡ (bracket) cố định cần trục theo từng tầng khi công trình cao dần lên."
+}
 ];

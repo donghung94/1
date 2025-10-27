@@ -13,6 +13,18 @@ window.QUESTION_SETS["2"] = [
   vi: "Chọn lý do không phù hợp khi không được xả nước thải xuống cống.",
   explain: "Đáp án đúng: 中性（ちゅうせい）の排水（はいすい）だから — Đây là lý do không hợp lý (nước trung tính không gây cấm)."
 },
+  {
+  q: "問32　事業（じぎょう）活動（かつどう）で生（しょう）じたごみは２つに分（わ）けられる。以下（いか）の種類（しゅるい）で正（ただ）しいものを選（えら）べ。【19】",
+  options: [
+    "1．家庭（かてい）廃棄物（はいきぶつ）と農業（のうぎょう）廃棄物（はいきぶつ）",
+    "2．産業（さんぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）",
+    "3．農業（のうぎょう）廃棄物（はいきぶつ）と事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）",
+    "4．産業（さんぎょう）廃棄物（はいきぶつ）と家庭（かてい）廃棄物（はいきぶつ）"
+  ],
+  answer: 1,
+  vi: "Rác thải phát sinh từ hoạt động kinh doanh được chia thành hai loại. Hãy chọn loại phân chia đúng.",
+  explain: "Rác thải trong hoạt động kinh doanh được chia thành hai loại: **産業廃棄物 (rác thải công nghiệp)** và **事業系一般廃棄物 (rác thải sinh hoạt từ hoạt động kinh doanh)**."
+},
 {
   q: "問33　ライフライン・設備（せつび）工事（こうじ）で、部屋（へや）の温度（おんど）、湿度（しつど）などを調整（ちょうせい）するという意味（いみ）の言葉（ことば）はどれか。",
   options: [

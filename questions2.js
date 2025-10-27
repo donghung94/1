@@ -37,6 +37,19 @@ window.QUESTION_SETS["2"] = [
   vi: "Điều chỉnh nhiệt độ và độ ẩm trong phòng gọi là điều hòa không khí.",
   explain: "Đáp án đúng: 空調（くうちょう） — Hệ thống điều hòa không khí."
 },
+  {
+  q: "問34　イラストによると、どんな工事（こうじ）ですか。正（せい）しいものを一つ選（えら）べ。【39】",
+  img: "images/IMG_3611.jpeg",
+  options: [
+    "1．防波堤（ぼうはてい）工事（こうじ）",
+    "2．潜水（せんすい）工事（こうじ）",
+    "3．橋梁（きょうりょう）工事（こうじ）",
+    "4．防潮堤（ぼうちょうてい）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Dựa theo hình minh họa, đây là loại công trình nào?",
+  explain: "Đây là **防波堤（ぼうはてい）工事 – công trình đê chắn sóng**, được xây dựng để ngăn sóng biển và bảo vệ cảng hoặc khu vực ven biển khỏi tác động của sóng lớn."
+},
 {
   q: "問35　５Ｓ活動（かつどう）における職長（しょくちょう）の役割（やくわり）について、不適切（ふてきせつ）なものを選（えら）べ。",
   options: [
@@ -60,6 +73,58 @@ window.QUESTION_SETS["2"] = [
   answer: 1,
   vi: "Công trình không thuộc loại công trình hải dương là 造園工事 (làm vườn).",
   explain: "Đáp án đúng: 造園工事（ぞうえんこうじ） — Công trình làm vườn, không thuộc nhóm công trình hải dương."
+},
+  {
+  q: "問37　イラストによると、どんな工事（こうじ）か。【32】",
+  img: "images/IMG_3314.jpeg",
+  options: [
+    "1．地上（ちじょう）躯体（くたい）工事（こうじ）",
+    "2．基礎（きそ）工事（こうじ）",
+    "3．地下（ちか）躯体（くたい）工事（こうじ）",
+    "4．岸壁（がんぺき）工事（こうじ）／解体（かいたい）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Dựa theo hình minh họa, đây là loại công trình gì?",
+  explain: "Hình cho thấy phần khung thép của tòa nhà đang được lắp dựng phía trên mặt đất. Đây là **地上躯体工事（ちじょうくたいこうじ）– công trình kết cấu phần thân trên mặt đất**. Công đoạn này bao gồm lắp khung thép, cột, dầm, sàn… sau khi phần móng đã hoàn thành."
+},
+  {
+  q: "問38　写真（しゃしん）の装置（そうち）は、次（つぎ）のうちどれか。【33】",
+  img: "images/IMG_3315.jpeg",
+  options: [
+    "1．防水（ぼうすい）装置（そうち）",
+    "2．免震（めんしん）装置（そうち）",
+    "3．空調（くうちょう）装置（そうち）",
+    "4．自動（じどう）加圧（かあつ）装置（そうち）"
+  ],
+  answer: 1,
+  vi: "Thiết bị trong hình là loại nào sau đây?",
+  explain: "Đây là **免震装置（めんしんそうち） – thiết bị chống rung, chống động đất**, được lắp giữa phần móng và kết cấu tòa nhà để hấp thụ chấn động khi xảy ra động đất, giúp giảm rung lắc."
+},
+{
+  q: "問40　どんな作業（さぎょう）か。正（ただ）しいものを一つ選（えら）べ。【47】",
+  img: "images/IMG_3609.jpeg",
+  options: [
+    "1．ガス圧接（あっせつ）継手（つぎて）",
+    "2．溶接（ようせつ）継手（つぎて）",
+    "3．鉄筋（てっきん）工事（こうじ）",
+    "4．配筋（はいきん）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Đây là công việc gì? Hãy chọn đáp án đúng.",
+  explain: "Ảnh cho thấy hai thanh thép được nối bằng phương pháp **ガス圧接（gasu asse tsugite）– nối thép bằng áp lực khí gas nóng**, thường dùng trong thi công kết cấu bê tông cốt thép để nối các thanh thép lại với nhau."
+},
+{
+  q: "問41　写真（しゃしん）はどのような工事（こうじ）を行（おこな）っているか。【50】",
+  img: "images/IMG_3317.jpeg",
+  options: [
+    "1．コンクリート打設（だせつ）工事（こうじ）",
+    "2．機械（きかい）土工事（どこうじ）",
+    "3．サッシ工事（こうじ）",
+    "4．屋根（やね）工事（こうじ）"
+  ],
+  answer: 0,
+  vi: "Bức ảnh thể hiện công trình nào đang được thực hiện?",
+  explain: "Công nhân đang đổ bê tông xuống khuôn – đây là **コンクリート打設工事（だせつこうじ）– công trình đổ bê tông**, nhằm tạo mặt sàn hoặc nền bê tông vững chắc."
 },
 {
   q: "問42　鉄骨（てっこつ）とびはどんな作業（さぎょう）をするか。",

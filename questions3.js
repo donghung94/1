@@ -301,7 +301,7 @@ window.QUESTION_SETS["3"] = [
   answer: 1,
   vi: "Dựa vào hình minh họa, đây là loại máy nào?",
   explain: "Đây là **コンクリートポンプ車 – xe bơm bê tông**. Xe dùng cần vươn dài để bơm bê tông từ máy trộn đến vị trí cần thi công, thường dùng trong xây dựng nhà cao tầng và cầu đường."
-}
+},
 {
   q: "問86　橋梁（きょうりょう）工事（こうじ）の工程（こうてい）で「下部工（かぶこう）」で行（おこな）われる工事（こうじ）は、次（つぎ）のうちどれか【29】",
   options: [

@@ -99,7 +99,13 @@
           <div class="answer-line">Bạn chọn: ${pickedHtml}</div>
           <div class="answer-line">Đáp án đúng: <strong>${ansText}</strong></div>
           ${q.vi ? `<div class="answer-line">Dịch: ${q.vi}</div>`:''}
-          ${q.explain ? `<div class="explain">Giải thích: ${q.explain}</div>`:''}
+        ${q.explain || q.tip ? `
+  <div class="result-explain-box">
+    ${q.explain ? `<div class="explain-title">📘 Giải thích:</div><div>${q.explain}</div>` : ''} 
+    ${q.tip ? `<div class="tip">${q.tip}</div>` : ''}
+  </div>
+`: '' }
+
         </div>
       `;
     }).join('');

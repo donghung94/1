@@ -45,7 +45,18 @@
 
   <main class="container">
     <div id="quiz" class="card"></div>
-    <div id="result" class="card" style="display:none"></div>
+   <div id="result" class="card" style="display:none">
+  <div id="score"></div>
+  <div id="answers"></div>
+
+  <!-- 📘 Box giải thích + tip -->
+  <div class="result-explain-box" id="explainBox" style="display:none; margin-top:16px;">
+    <div class="explain-title">📘 Giải thích:</div>
+    <div id="explainText"></div>
+    <div id="tipBox" class="tip" style="display:none;"></div>
+  </div>
+</div>
+
   </main>
 
   <button id="redoWrong" class="floating">Làm lại những câu sai</button>

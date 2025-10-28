@@ -150,3 +150,25 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
   font-size: 0.9rem;
   color: #555;
 }
+.result-explain-box {
+  background: #f5faff;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 14px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.result-explain-box .explain-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1e3a8a;
+}
+
+.result-explain-box .tip {
+  margin-top: 8px;
+  background: #fffbe6;
+  border-left: 4px solid #facc15;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}

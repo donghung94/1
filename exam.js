@@ -1,9 +1,28 @@
 (function(){
   const $ = (sel)=>document.querySelector(sel);
   const params = new URLSearchParams(location.search);
-  const setId = params.get('set') || '1';
-  const DATA = (window.QUESTION_SETS && window.QUESTION_SETS[setId]) ? JSON.parse(JSON.stringify(window.QUESTION_SETS[setId])) : [];
-  window.questions = window.QUESTION_SETS[setId];
+
+  const setId = params.get('set');
+  const practiceId = params.get('practice');
+
+  let DATA = [];
+
+  // ✅ Ưu tiên lấy bộ thực hành nếu có ?practice=
+  if (practiceId && window.PRACTICE_SETS && window.PRACTICE_SETS[practiceId]) {
+    DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[practiceId]));
+    window.questions = window.PRACTICE_SETS[practiceId];
+  } 
+  // → nếu không thì dùng bộ lý thuyết ?set=
+  else if (setId && window.QUESTION_SETS && window.QUESTION_SETS[setId]) {
+    DATA = JSON.parse(JSON.stringify(window.QUESTION_SETS[setId]));
+    window.questions = window.QUESTION_SETS[setId];
+  } 
+  // → fallback cho trường hợp không truyền gì
+  else {
+    DATA = [];
+    window.questions = [];
+  }
+
   const quizEl = $('#quiz');
   const resEl = $('#result');
   const submitBtn = $('#submitBtn');
@@ -29,7 +48,7 @@
     return arr;
   }
 
-  // Randomize question order + choice order; keep track of correct index after shuffle
+  // Randomize question + answer options
   const questions = DATA.map((q,i)=>{
     const idx = q.answer;
     const opts = q.options.map((t,oi)=>({text:t, correct:(oi===idx)}));
@@ -50,8 +69,12 @@
     const header = `<div class="q-head"><div class="q-index">Câu ${cur+1}/${questions.length}</div><div></div></div>`;
     const body = `
       <div class="q-text">${q.q}</div>
-      ${(q.img && q.img.trim() !== '') ? `<div class="q-img"><img src="${q.img}" alt="question image" onerror="this.style.display='none';" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
+      ${(q.img && q.img.trim() !== '') ? 
+        `<div class="q-img"><img src="${q.img}" alt="question image" onerror="this.style.display='none';" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` 
+        : ''}
+
       ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
+
       <div class="options">
         ${q.options.map((op, i)=>`
           <label class="opt">
@@ -59,12 +82,13 @@
             <div>${op.text}</div>
           </label>`).join('')}
       </div>
+
       <div class="nav">
         <button class="btn" id="backBtn">Quay lại</button>
       </div>
     `;
     quizEl.innerHTML = header+body;
-    // events
+
     quizEl.querySelectorAll(`input[name="q${cur}"]`).forEach(el=>{
       el.addEventListener('change', e=>{
         user[cur] = parseInt(e.target.value);
@@ -72,6 +96,7 @@
         if(cur < questions.length-1){ cur++; render(); }
       });
     });
+
     $('#backBtn').onclick = ()=>{ if(cur>0){ cur--; render(); } };
   }
   render();
@@ -79,39 +104,48 @@
   submitBtn.onclick = submitQuiz;
 
   function submitQuiz(){
-    // compute
     let correct = 0;
     const wrongs = [];
+
     const detailHtml = questions.map((q, i)=>{
       const ansIndex = q.options.findIndex(o=>o.correct);
       const ansText = q.options[ansIndex].text;
       const picked = user[i];
       const isCorrect = (picked!==null && q.options[picked] && q.options[picked].correct);
+
       if(isCorrect) correct++; else wrongs.push(i);
+
       const pickedHtml = picked===null ? '<em>(chưa chọn)</em>' :
         `<span class="selected ${isCorrect?'correct':'incorrect'}">${q.options[picked].text}</span>`;
-      
+
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
-          ${(q.img && q.img.trim() !== '') ? `<div class="q-img"><img src="${q.img}" alt="question image" onerror="this.style.display='none';" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` : ''}
+
+          ${(q.img && q.img.trim() !== '') ? 
+            `<div class="q-img"><img src="${q.img}" alt="question image" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>` 
+            : ''}
+
           ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
           <div class="answer-line">Bạn chọn: ${pickedHtml}</div>
           <div class="answer-line">Đáp án đúng: <strong>${ansText}</strong></div>
-          ${q.vi ? `<div class="answer-line">Dịch: ${q.vi}</div>`:''}
-        ${q.explain || q.tip ? `
-  <div class="result-explain-box">
-    ${q.explain ? `<div class="explain-title">📘 Giải thích:</div><div>${q.explain}</div>` : ''} 
-    ${q.tip ? `<div class="tip">${q.tip}</div>` : ''}
-  </div>
-`: '' }
+          ${q.vi ? `<div class="answer-line"><strong>Dịch:</strong> ${q.vi}</div>` : ''}
 
+          ${
+            q.explain || q.tip ? `
+              <div class="result-explain-box">
+                ${q.explain ? `<div class="explain-title">📘 Giải thích:</div><div>${q.explain}</div>` : ''} 
+                ${q.tip ? `<div class="tip">${q.tip}</div>` : ''}
+              </div>
+            ` : ''
+          }
         </div>
       `;
     }).join('');
 
     quizEl.style.display = 'none';
     resEl.style.display = 'block';
+
     resEl.innerHTML = `
       <div class="result-title">Bạn làm đúng ${correct}/${questions.length}</div>
       ${detailHtml}
@@ -119,13 +153,12 @@
         <a class="btn" href="index.html">Trang Chủ</a>
       </div>
     `;
-    // show redo wrong if any
+
     redoBtn.style.display = wrongs.length ? 'block' : 'none';
-    // attach redo handler
+
     redoBtn.onclick = ()=>{
       if(!wrongs.length) return;
       const subset = wrongs.map(i=>questions[i]);
-      // reset state with wrong subset
       questions.length = 0; subset.forEach(q=>questions.push(q));
       for(let i=0;i<user.length;i++) user[i]=null;
       cur = 0;

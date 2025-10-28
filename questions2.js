@@ -100,6 +100,19 @@ window.QUESTION_SETS["2"] = [
   vi: "Thiết bị trong hình là loại nào sau đây?",
   explain: "Đây là **免震装置（めんしんそうち） – thiết bị chống rung, chống động đất**, được lắp giữa phần móng và kết cấu tòa nhà để hấp thụ chấn động khi xảy ra động đất, giúp giảm rung lắc."
 },
+  {
+  q: "問39　以下（いか）の写真（しゃしん）は何（なん）か。【37】",
+  img: "images/5101.jpeg",
+  options: [
+    "1．スプリンクラー",
+    "2．火災（かさい）受信機（じゅしんき）",
+    "3．消火（しょうか）ポンプ",
+    "4．保温（ほおん）保冷器（ほれいき）"
+  ],
+  answer: 0,
+  vi: "Hình dưới đây là thiết bị gì?",
+  explain: "Đây là **スプリンクラー (sprinkler) – đầu phun nước chữa cháy tự động** được lắp trên trần nhà. Khi nhiệt độ tăng cao do cháy, đầu cảm ứng sẽ kích hoạt và phun nước dập lửa."
+},
 {
   q: "問40　どんな作業（さぎょう）か。正（ただ）しいものを一つ選（えら）べ。【47】",
   img: "images/IMG_3609.jpeg",
@@ -185,6 +198,19 @@ window.QUESTION_SETS["2"] = [
   answer: 0,
   vi: "Máy dùng để nén chặt cát và đá vụn trên mặt đường là xe lu.",
   explain: "Đáp án đúng: ローラー — Xe lu, dùng để đầm nén bề mặt đường hoặc nền móng công trình."
+},
+  {
+  q: "問47　以下（いか）の写真（しゃしん）は、何（なん）の工事（こうじ）を示（しめ）すか。【43】",
+  img: "images/0207.jpeg",
+  options: [
+    "1．法面（のりめん）整形（せいけい）",
+    "2．掘削（くっさく）",
+    "3．積（つ）み込（こ）み",
+    "4．押土（おしど）"
+  ],
+  answer: 1,
+  vi: "Hình dưới đây thể hiện công tác gì?",
+  explain: "Đây là công tác **法面（のりめん）整形（せいけい）– san gọt, tạo hình mái taluy** bằng máy xúc. Mục đích là làm phẳng và chỉnh độ dốc mái đất sau khi đắp hoặc đào."
 },
 {
   q: "問48　既成（きせい）杭（くい）工法（こうほう）とは、次（つぎ）のうちどれか。",

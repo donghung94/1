@@ -290,17 +290,18 @@ window.QUESTION_SETS["3"] = [
   explain: "Phải luôn giữ máy bay trong tầm mắt người điều khiển khi sử dụng drone."
 },
 {
-  q: "問85　建設現場（けんせつげんば）での安全（あんぜん）確保（かくほ）に関（かん）して、正（ただ）しいものを選（えら）べ。",
+  q: "問85　イラストによると、どんな機械（きかい）か。【50】",
+  img: "images/3340.jpeg",
   options: [
-    "保護具（ほごぐ）を着用（ちゃくよう）しないでも作業（さぎょう）できる。",
-    "ヘルメットや安全帯（あんぜんたい）を適切（てきせつ）に使用（しよう）する。",
-    "危険（きけん）を感じたら報告（ほうこく）せずに避（さ）ける。",
-    "指示（しじ）を無視（むし）して作業（さぎょう）する。"
+    "1．タワークレーン",
+    "2．コンクリートポンプ車（しゃ）",
+    "3．エアスプレー塗装（とそう）",
+    "4．一輪車（いちりんしゃ）"
   ],
   answer: 1,
-  vi: "Đeo bảo hộ đúng cách khi làm việc là hành động đúng.",
-  explain: "Tuân thủ quy định bảo hộ cá nhân giúp đảm bảo an toàn tại công trường."
-},
+  vi: "Dựa vào hình minh họa, đây là loại máy nào?",
+  explain: "Đây là **コンクリートポンプ車 – xe bơm bê tông**. Xe dùng cần vươn dài để bơm bê tông từ máy trộn đến vị trí cần thi công, thường dùng trong xây dựng nhà cao tầng và cầu đường."
+}
 {
   q: "問86　橋梁（きょうりょう）工事（こうじ）の工程（こうてい）で「下部工（かぶこう）」で行（おこな）われる工事（こうじ）は、次（つぎ）のうちどれか【29】",
   options: [

@@ -57,6 +57,80 @@ window.PRACTICE_SETS["1"] = [
     vi: "Về công tác đá, hãy chọn đáp án **không đúng**.",
     explain: "乾式工法 ít lỗi sau thi công hơn so với 湿式工法 → câu 3 nói ngược nên sai.",
     tip: "💡 Mẹo nhớ: Khô (乾) = sạch, ít rắc rối → **khô ít lỗi hơn ướt**."
+  },
+  {
+  q: "問5　以下（いか）の写真（しゃしん）の青（あお）いところは何（なん）か。【123】",
+  img: "images/2849.png", 
+  options: [
+    "1．ランナー",
+    "2．野縁（のぶち）受け",
+    "3．クリップ",
+    "4．野縁（のぶち）"
+  ],
+  answer: 0,
+  vi: "Trong ảnh, phần màu xanh là gì?",
+  explain: "Đó là thanh **ランナー (Runner)** – thanh ray nằm ngang ở trần và sàn, dùng để cố định các thanh đứng (スタッド).",
+  tip: "💡 Nhớ: Runner = chạy dọc sàn/trần → giữ Stud thẳng đứng."
+},
+  {
+    q: "問6　コンクリートの表面から鉄筋までの距離は何というか。【153】",
+    options: ["1．かぶり", "2．スタッド", "3．スペーサー", "4．シャックル"],
+    answer: 0,
+    vi: "Khoảng cách từ mặt bê tông đến cốt thép gọi là gì?",
+    explain: "Đó là **かぶり厚さ (độ bảo vệ bê tông)** để chống gỉ thép.",
+    tip: "💡 Nhớ: “かぶる” = che phủ → lớp bê tông bảo vệ thép."
+  },
+  {
+    q: "問7　溶接の時に発生する有害ガスを吸い込むと頭痛や吐き気などを起こす。このガスは何か。【157】",
+    options: [
+      "1．フューム",
+      "2．アセチレン",
+      "3．酸素",
+      "4．排気"
+    ],
+    answer: 0,
+    vi: "Khí độc sinh ra khi hàn gây đau đầu, buồn nôn gọi là gì?",
+    explain: "Khói hàn gọi là **フューム (Fume)** – hạt kim loại cực nhỏ gây hại phổi.",
+    tip: "💡 Nhớ: “fume” = khói, hít vào gây đau đầu."
+  },
+  {
+    q: "問8　ボックスレンチは何に使うか。【138】",
+    options: [
+      "1．ボルトやナットを回すソケットとハンドルが一体になった工具",
+      "2．六角穴のボルトを回す工具",
+      "3．ソケットを交換して色々なサイズに使える工具",
+      "4．ネジを回すための工具"
+    ],
+    answer: 0,
+    vi: "Công dụng của cờ-lê hộp (Box wrench) là gì?",
+    explain: "Là dụng cụ có đầu ổ và tay cầm liền nhau, dùng để siết bu-lông.",
+    tip: "💡 Nhớ: Box = đầu kín tròn bao quanh ốc → lực mạnh, an toàn."
+  },
+  {
+    q: "問9　土台・梁などの水平部材と柱など垂直部材を組み合わせる工法はどれか。【163】",
+    options: [
+      "1．ツーバイフォー",
+      "2．枠組壁工法",
+      "3．軸組工法",
+      "4．圧張り工法"
+    ],
+    answer: 2,
+    vi: "Phương pháp kết hợp cột và dầm gỗ theo kiểu khung trụ gọi là gì?",
+    explain: "軸組工法 (jiku-gumi kouhou) là kết cấu truyền thống bằng gỗ.",
+    tip: "💡 Nhớ: 軸 = trục (cột chính) → khung trụ gỗ kiểu Nhật cổ."
+  },
+  {
+    q: "問10　幅の広い面を効率よく塗る道具はどれか。",
+    options: [
+      "1．スクレーパー",
+      "2．皮スキ",
+      "3．ウールローラー",
+      "4．手ぐわ"
+    ],
+    answer: 2,
+    vi: "Dụng cụ nào dùng để sơn bề mặt rộng nhanh chóng?",
+    explain: "ウールローラー (con lăn sơn) giúp sơn đều trên diện rộng.",
+    tip: "💡 Nhớ: Roller = con lăn → dùng cho mặt phẳng lớn."
   }
 
 ];

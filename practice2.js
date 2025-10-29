@@ -374,6 +374,6 @@ window.PRACTICE_SETS["2"] = [
   vi: "Trong các mô tả sau về công việc thi công cốt thép, điều nào không đúng?",
   explain: "Đáp án sai là **1．コンクリートは圧縮力に弱い**. Thực tế, **bê tông mạnh về lực nén (圧縮)** nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
   tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén (圧縮), yếu khi bị kéo (引張)."
-},
+}
 
 ];

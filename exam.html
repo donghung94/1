@@ -27,7 +27,6 @@
     });
   </script>
 
-  <!-- 🧭 Thanh tiêu đề -->
   <header class="header">
     <div class="brand small">
       <img src="icon-192.png" alt="H" class="logo">
@@ -39,31 +38,10 @@
     </div>
   </header>
 
-  <!-- 📋 Khu hiển thị câu hỏi và kết quả -->
-  <main class="container">
-    <div id="hud" class="hud">
-      <span id="timer">60:00</span>
-      <button id="submitBtn" class="btn ghost">Nộp bài</button>
-      <button id="redoWrong" class="btn ghost" style="display:none">Làm lại câu sai</button>
-    </div>
-
-    <div id="quiz"></div>
-    <div id="result" style="display:none"></div>
-  </main>
-
-  <!-- ✅ Nạp toàn bộ dữ liệu đề -->
-  <script src="questions.js"></script>
-  <script src="questions2.js"></script>
-  <script src="questions3.js"></script>
-  <script src="questions4.js"></script>
-  <script src="questions5.js"></script>
-  <script src="questions6.js"></script>
-
-  <!-- ✅ Nạp đề thực hành -->
-  <script src="practice1.js"></script>
+  <!-- ✅ FIX: đoạn lỗi cú pháp -->
   <script src="practice2.js"></script>
 
-  <!-- 🚀 Logic chính -->
+  <!-- 🚀 Nạp exam.js sau khi preload -->
   <script src="exam.js"></script>
 
   <!-- 💅 Style nhỏ -->
@@ -72,16 +50,12 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 10px;
     }
     .btn.ghost {
       background: #f3f4f6;
       color: #1e40af;
       font-weight: bold;
       border: 1px solid #1e40af;
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
     }
     .btn.ghost:hover { background: #e0e7ff; }
   </style>

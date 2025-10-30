@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đề thi – Đồng Hùng Quiz APP</title>
+  <link rel="icon" href="icon-192.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+
+<body class="mono">
+  <!-- 🔐 Kiểm tra đăng nhập -->
+  <script type="module">
+    import { auth } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+    // Nếu chưa đăng nhập → quay về login
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        console.warn("⚠️ Chưa đăng nhập, quay về login...");
+        location.href = "login.html";
+      } else {
+        console.log("✅ Đã đăng nhập:", user.email);
+      }
+    });
+  </script>
+
+  <header class="header">
+    <div class="brand small">
+      <img src="icon-192.png" alt="H" class="logo">
+      <div class="titles">
+        <div class="brand-name">Đồng Hùng Quiz APP</div>
+        <div class="subtitle">Đề lý thuyết nhóm 2</div>
+        <div class="demoline">(Bản demo)</div>
+      </div>
+    </div>
+    <div class="hud">
+      <span id="timer" class="timer">60:00</span>
+      <button id="submitBtn" class="btn">Nộp bài</button>
+      <a href="index.html" class="btn ghost">Trang chủ</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="quiz" class="card"></div>
+    <div id="result" class="card" style="display:none"></div>
+  </main>
+
+  <button id="redoWrong" class="floating">Làm lại những câu sai</button>
+
+  <footer class="footer">© 2025 Đồng Hùng • Quiz APP</footer>
+
+  <!-- 🟢 Nạp trực tiếp các file đề cần thiết -->
+  <script src="questions.js"></script>
+  <script src="questions2.js"></script>
+  <script src="questions3.js"></script>
+  <script src="questions4.js"></script>
+  <script src="questions5.js"></script>
+  <script src="questions6.js"></script>
+  <script src="exam_random.js"></script>
+
+  <!-- 🚀 Nạp exam.js sau khi preload -->
+  <script src="exam.js"></script>
+
+  <!-- 💅 Style nhỏ -->
+  <style>
+    .hud {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn.ghost {
+      background: #f3f4f6;
+      color: #1e40af;
+      font-weight: bold;
+      border: 1px solid #1e40af;
+    }
+    .btn.ghost:hover { background: #e0e7ff; }
+  </style>
+</body>
+</html>

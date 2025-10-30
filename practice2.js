@@ -1,7 +1,3 @@
-// File: practice2.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["2"] = [
 
 {
   q: "問31　クローラー式の走行装着の前面に、可動式の排土板を装着し、主として掘削・運搬を行う機械は何か。【101】",

@@ -1,4 +1,4 @@
-// File: practice1.js
+// File: practice2.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
 window.PRACTICE_SETS["2"] = [

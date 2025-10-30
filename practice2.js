@@ -233,7 +233,6 @@
   explain: "Đây là **軸組み工法（じくぐみこうほう）**, phương pháp thi công truyền thống của Nhật, dùng **cột, dầm và thanh chéo (筋交い)** để tăng độ vững của khung nhà.",
   tip: "💡 Mẹo nhớ: 軸 = trục → 軸組み = khung trục chính của ngôi nhà."
 },
-
 {
   q: "問50　板金（ばんきん）溶接（ようせつ）で一番（いちばん）使用（しよう）されているのは、どの溶接方法（ようせつほうほう）か。【168】",
   options: [

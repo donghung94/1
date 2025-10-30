@@ -15,15 +15,8 @@
   <script type="module">
     import { auth } from "./firebase.js";
     import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-
-    // Nếu chưa đăng nhập → quay về login
     onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        console.warn("⚠️ Chưa đăng nhập, quay về login...");
-        location.href = "login.html";
-      } else {
-        console.log("✅ Đã đăng nhập:", user.email);
-      }
+      if (!user) { location.href = "login.html"; }
     });
   </script>
 
@@ -38,23 +31,27 @@
     </div>
   </header>
 
-  <!-- 🚀 Nạp exam.js sau khi preload -->
+  <!-- ✅ THÊM TỐI THIỂU CÁC NODE BẮT BUỘC (giữ layout cũ) -->
+  <main class="container">
+    <div id="quiz"></div>
+    <div id="result" style="display:none"></div>
+    <div style="display:none">
+      <button id="submitBtn"></button>
+      <button id="redoWrong"></button>
+      <span id="timer">60:00</span>
+    </div>
+  </main>
+
+  <!-- ✅ Sửa đoạn lỗi cú pháp & nạp practice2 -->
+  <script src="practice2.js"></script>
+
+  <!-- 🚀 Nạp exam.js sau khi đã có dữ liệu & các node -->
   <script src="exam.js"></script>
 
-  <!-- 💅 Style nhỏ -->
   <style>
-    .hud {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .btn.ghost {
-      background: #f3f4f6;
-      color: #1e40af;
-      font-weight: bold;
-      border: 1px solid #1e40af;
-    }
-    .btn.ghost:hover { background: #e0e7ff; }
+    .hud { display:flex; align-items:center; gap:10px; }
+    .btn.ghost { background:#f3f4f6; color:#1e40af; font-weight:bold; border:1px solid #1e40af; }
+    .btn.ghost:hover { background:#e0e7ff; }
   </style>
 </body>
 </html>

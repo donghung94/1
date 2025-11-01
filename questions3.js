@@ -279,7 +279,7 @@ window.QUESTION_SETS["3"] = [
 },
 {
   q: "問85　イラストによると、どんな機械（きかい）か。【50】",
-  img: "images/3340.jpeg",
+  img: "images/3340.png",
   options: [
     "1．タワークレーン",
     "2．コンクリートポンプ車（しゃ）",

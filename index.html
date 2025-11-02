@@ -11,9 +11,13 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css">
 
-  <!-- 🚀 Ép tải sẵn 6 file đề -->
+  <!-- 🚀 Ép tải sẵn 6 file đề + 2 đề thực hành -->
   <script>
-    const quizFiles = ["questions.js","questions2.js","questions3.js","questions4.js","questions5.js","questions6.js"];
+    const quizFiles = [
+      "questions.js","questions2.js","questions3.js",
+      "questions4.js","questions5.js","questions6.js",
+      "practice1.js","practice2.js"
+    ];
     quizFiles.forEach(f => fetch(f).catch(()=>{}));
   </script>
 
@@ -36,7 +40,6 @@
       }
     });
 
-    // ✅ Gắn logout vào global scope để nút hoạt động
     window.logout = logout;
   </script>
 
@@ -52,7 +55,7 @@
 </header>
 
 <!-- ============================
-     🎥 VIDEO GIẢNG DẠY (MỞ LINK NGOÀI)
+     🎥 VIDEO GIẢNG DẠY
 ============================ -->
 <div class="video-section">
   <h3>🎥 Video giải đề 100 câu</h3>
@@ -99,11 +102,22 @@
       </a></li>
     </ul>
   </div>
+
+  <!-- ========================= -->
+  <!-- ✅ KHU ĐỀ THỰC HÀNH -->
+  <!-- ========================= -->
+  <div class="card">
+    <h2>🧰 Đề thực hành</h2>
+    <ul class="exam-list">
+      <li><a href="exam.html?practice=1">Thực hành – (問1〜問30)</a></li>
+      <li><a href="exam.html?practice=2">Thực hành – (問31〜問60)</a></li>
+    </ul>
+  </div>
 </main>
 
 <footer class="footer">© 2025 Đồng Hùng • Quiz APP</footer>
 
-<!-- 💅 Style bổ sung nhỏ -->
+<!-- 💅 Style bổ sung -->
 <style>
 .logout-btn {
   background:#ef4444;
@@ -135,10 +149,20 @@
   text-decoration: none;
   transition: 0.2s;
 }
+.video-btn:hover { background: #2563eb; }
 
-.video-btn:hover {
-  background: #2563eb;
+.exam-list li { list-style:none; margin:8px 0; }
+.exam-list a {
+  display:block;
+  background:#f8fafc;
+  border:1px solid #cbd5e1;
+  padding:10px 14px;
+  border-radius:8px;
+  color:#1e293b;
+  text-decoration:none;
+  transition:.2s;
 }
+.exam-list a:hover { background:#e0e7ff; color:#1e40af; }
 </style>
 
 </body>

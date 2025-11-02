@@ -348,4 +348,72 @@ window.PRACTICE_SETS["g2_1"] = [
   explain: "レシプロソー là **máy cưa điện** có lưỡi dao dài di chuyển **qua lại (前後に動く)** để cắt vật liệu như gỗ, ống, hoặc kim loại.",
   tip: "💡 Nhớ: レシプロ＝reciprocate＝chuyển động qua lại → cưa qua lại để cắt vật liệu."
 },
+  {
+  q: "問56　溶接（ようせつ）の時（とき）に吸（す）い込（こ）むと、頭痛（ずつう）・発熱（はつねつ）・寒気（さむけ）・筋肉痛（きんにくつう）・喉（のど）の渇（かわ）き・疲労（ひろう）などの症状（しょうじょう）が起（お）こる物質（ぶっしつ）は何（なに）か。【167】",
+  options: [
+    "1．酸化（さんか）炭素（たんそ）",
+    "2．ヒューム",
+    "3．ガス",
+    "4．酸素（さんそ）"
+  ],
+  answer: 1,
+  vi: "Khi hít phải trong quá trình hàn, chất nào gây ra các triệu chứng như đau đầu, sốt, ớn lạnh, đau cơ, khát cổ, mệt mỏi?",
+  explain: "Khi hàn, sinh ra **ヒューム (khói hàn – hạt kim loại siêu nhỏ)**. Nếu hít phải nhiều sẽ gây **sốt khói kim loại (Metal Fume Fever)** với các triệu chứng như đau đầu, sốt, mệt mỏi.",
+  tip: "💡 Nhớ: ヒューム＝khói hàn kim loại → gây mệt, sốt, đau đầu."
+},
+{
+  q: "問57　これは何（なに）の機械（きかい）か。【101】",
+  options: [
+    "1．トラクターショベル",
+    "2．スクレーパー",
+    "3．モーターグレーダー",
+    "4．振動（しんどう）ローラー"
+  ],
+  answer: 1,
+  vi: "Đây là loại máy gì?",
+  explain: "Hình minh họa là **スクレーパー (Scraper)** — máy dùng để cào, san, và vận chuyển đất trong công trình san lấp.",
+  tip: "💡 Nhớ: スクレーパー = máy cào đất (scrape = cào, nạo)."
+},
+
+{
+  q: "問58　地表（ちひょう）面（めん）および敷（し）砕（さい）石（せき）などの路盤（ろばん）材（ざい）を平坦（へいたん）に仕上（しあ）げるための機械（きかい）は何（なん）ですか？【101】",
+  options: [
+    "1．トラクターショベル",
+    "2．スクレーパー",
+    "3．振動（しんどう）ローラー",
+    "4．モーターグレーダー"
+  ],
+  answer: 3,
+  vi: "Máy nào được dùng để làm phẳng bề mặt đất hoặc đá nghiền trong thi công mặt đường?",
+  explain: "**モーターグレーダー (Motor Grader)** là máy chuyên dùng để san phẳng, tạo độ dốc và hoàn thiện mặt đường.",
+  tip: "💡 Nhớ: グレーダー → grade = san phẳng."
+},
+
+{
+  q: "問59　イラストのキャラメルはどんな目的（もくてき）として使（つか）われているか。【114】",
+  options: [
+    "1．床筋（ゆかすじ）の下（した）に置（お）くサイコロ状（じょう）のモルタルブロックで、床筋のかぶり厚さを確保（かくほ）するため",
+    "2．柱（はしら）、梁（はり）、壁筋（かべすじ）のかぶり厚さを確保するため",
+    "3．鉄筋（てっきん）のかぶりと型枠（かたわく）のきまを確保するため",
+    "4．怪我（けが）を防止（ぼうし）するため"
+  ],
+  answer: 0,
+  vi: "Khối vuông (caramel block) trong hình được sử dụng với mục đích gì?",
+  explain: "**キャラメルブロック** là khối vữa (mortar block) đặt dưới cốt thép sàn để giữ **độ dày lớp bê tông bảo vệ (かぶり厚さ)** đúng tiêu chuẩn.",
+  tip: "💡 キャラメルブロック = khối đỡ thép, giúp giữ khoảng cách giữa cốt thép và sàn bê tông."
+},
+
+{
+  q: "問60　鉄筋（てっきん）どうしを縛（しば）り固定（こてい）する工具（こうぐ）は何（なに）ですか。適切（てきせつ）なものを選（えら）べ。【114】",
+  options: [
+    "1．結束線（けっそくせん）",
+    "2．ハッカー",
+    "3．折尺（おりじゃく）",
+    "4．スペーサー"
+  ],
+  answer: 1,
+  vi: "Dụng cụ dùng để buộc chặt và cố định các thanh thép là gì?",
+  explain: "**ハッカー (Hacker)** là móc buộc thép, dùng để xoắn và cố định dây buộc (結束線) quanh các thanh thép.",
+  tip: "💡 ハッカー = móc buộc thép (xoắn dây thép)."
+},
 ];

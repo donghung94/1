@@ -1,14 +1,7 @@
+// Tạo nếu chưa có
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-// Gộp tất cả đề nhóm 1
-const all_g1 = [
-  ...(window.PRACTICE_SETS["g1_1"] || []),
-  ...(window.PRACTICE_SETS["g1_2"] || []),
-  ...(window.PRACTICE_SETS["g1_3"] || []),
-  ...(window.PRACTICE_SETS["g1_4"] || []),
-];
-
-// Hàm shuffle
+// Hàm trộn mảng (shuffle)
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -17,8 +10,21 @@ function shuffle(arr) {
   return arr;
 }
 
-// Random 40 câu (hoặc bao nhiêu tùy bạn)
-const random_g1 = shuffle([...all_g1]).slice(0, 40);
+// Hàm chọn ngẫu nhiên n phần tử
+function pickRandom(arr, n) {
+  if (!arr || !arr.length) return [];
+  return shuffle([...arr]).slice(0, n);
+}
 
-// Tạo bộ đề mới
+// Gộp 10 câu từ mỗi đề practice g1_1 → g1_4
+const random_g1 = shuffle([
+  ...pickRandom(window.PRACTICE_SETS["g1_1"], 10),
+  ...pickRandom(window.PRACTICE_SETS["g1_2"], 10),
+  ...pickRandom(window.PRACTICE_SETS["g1_3"], 10),
+  ...pickRandom(window.PRACTICE_SETS["g1_4"], 10),
+]);
+
+// Tạo bộ đề ngẫu nhiên nhóm 1
 window.PRACTICE_SETS["g1_random"] = random_g1;
+
+console.log(`✅ practice_random_g1.js loaded: ${random_g1.length} câu hỏi`);

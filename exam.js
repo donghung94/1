@@ -7,10 +7,17 @@
 
   let DATA = [];
 
+  // ✅ Thêm hỗ trợ load nhóm thực hành đặc biệt "g1_x"
+  // Ví dụ: exam.html?practice=g1_1 → file practice1_g1.js
+  let normalizedPracticeId = practiceId;
+  if (practiceId && practiceId.startsWith("g1_")) {
+    normalizedPracticeId = "1_" + practiceId; // → "1_g1_1"
+  }
+
   // ✅ Ưu tiên lấy bộ thực hành nếu có ?practice=
-  if (practiceId && window.PRACTICE_SETS && window.PRACTICE_SETS[practiceId]) {
-    DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[practiceId]));
-    window.questions = window.PRACTICE_SETS[practiceId];
+  if (normalizedPracticeId && window.PRACTICE_SETS && window.PRACTICE_SETS[normalizedPracticeId]) {
+    DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[normalizedPracticeId]));
+    window.questions = window.PRACTICE_SETS[normalizedPracticeId];
   } 
   // → nếu không thì dùng bộ lý thuyết ?set=
   else if (setId && window.QUESTION_SETS && window.QUESTION_SETS[setId]) {

@@ -108,19 +108,6 @@
   explain: "**集塵機 (しゅうじんき)** là thiết bị dùng để **hút và thu gom bụi (粉塵)** sinh ra trong quá trình cắt, mài, khoan vật liệu.",
   tip: "💡 集 = gom, 塵 = bụi → máy hút bụi công nghiệp."
 },
-{
-  q: "問69　墨（すみ）さしについて正（ただ）しい説明（せつめい）を選（えら）びなさい。",
-  options: [
-    "1．粉（こ）チョークで線（せん）を引（ひ）きます",
-    "2．平（たい）らの部位（ぶい）は線（せん）を引（ひ）くのに用（もち）い、丸（まる）い部位（ぶい）は筆（ふで）と同様（どうよう）に使（つか）う道具（どうぐ）です",
-    "3．建築用（けんちくよう）の油性（ゆせい）ペンです",
-    "4．材料（ざいりょう）の表面（ひょうめん）に長（なが）い直線（ちょくせん）を墨付（すみつ）け"
-  ],
-  answer: 3,
-  vi: "Công cụ '墨さし (sumi sashi)' được dùng để làm gì?",
-  explain: "**墨さし** là dụng cụ dùng để **kẻ đường thẳng bằng mực (墨)** trên bề mặt vật liệu khi đo hoặc đánh dấu trong xây dựng.",
-  tip: "💡 墨 (すみ) = mực, さし = đánh dấu → công cụ vẽ đường thẳng bằng mực."
-},
 
 {
   q: "問70　グリップの両側（りょうがわ）に、直径（ちょっけい）の異（こと）なる口部（こうぶ）がついたレンチは何（なに）か。【112】",
@@ -208,6 +195,33 @@
   tip: "💡 インパクト = va đập → công cụ siết ốc mạnh, nhanh."
 },
 {
+  q: "問76　バランスを崩（くず）して転（ころ）ぶことによって起（お）こる労働災害（ろうどうさいがい）は何（なん）というか。【176】",
+  options: [
+    "1．転倒（てんとう）",
+    "2．墜落（ついらく）",
+    "3．飛来（ひらい）・落下（らっか）",
+    "4．激突（げきとつ）"
+  ],
+  answer: 0,
+  vi: "Tai nạn lao động do mất thăng bằng và ngã được gọi là gì?",
+  explain: "Khi người lao động **mất thăng bằng và ngã** → đó là tai nạn **転倒（てんとう）**.",
+  tip: "💡 Nhớ: 転倒 = ngã do trượt hoặc mất thăng bằng."
+},
+{
+  q: "問77　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく）の実施（じっし）は何（なに）か。不適切（ふてきせつ）なものは何（なに）か。【186】",
+  options: [
+    "1．作業（さぎょう）開始（かいし）時間（じかん）の点検（てんけん）に関（かん）すること",
+    "2．作業順（さぎょうじゅん）に関すること",
+    "3．賃金（ちんぎん）に関すること",
+    "4．整理（せいり）、整頓（せいとん）及（およ）び清潔（せいけつ）の保持（ほじ）に関すること"
+  ],
+  answer: 2,
+  vi: "Trong nội dung huấn luyện cho người mới vào công trường, điều nào dưới đây là **không phù hợp**?",
+  explain: "Huấn luyện cho người mới (新規入場者教育) liên quan đến **an toàn lao động**, **trình tự công việc**, **vệ sinh 5S**,… không bao gồm vấn đề **tiền lương (賃金)**.",
+  tip: "💡 Nhớ: 新規入場者教育 = huấn luyện an toàn → không nói về lương."
+},
+
+{
   q: "問78　台車（だいしゃ）は何（なに）ですか。正（ただ）しいものを選（えら）べ。【139】",
   options: [
     "1．鉄製（てっせい）のバケットに入（い）れた物（もの）を運（はこ）ぶための道具（どうぐ）で、前方（ぜんぽう）にタイヤが１つ付（つ）いている",
@@ -271,10 +285,10 @@
     "3．ブラケット",
     "4．ノンブラケット"
   ],
-  answer: 2,
+  answer: 3,
   vi: "Phương pháp cố định giữa cột và dầm bằng cách nối trực tiếp tại công trường gọi là gì?",
-  explain: "Phương pháp **ブラケット工法 (bracket)** dùng để **liên kết trực tiếp giữa cột và dầm** bằng giá đỡ (bracket).",
-  tip: "💡 Bracket = giá đỡ nối cột và dầm."
+  explain: "**ノンブラケット工法 (Non-bracket)** là phương pháp **nối trực tiếp cột và dầm mà không dùng giá đỡ (bracket)**, nên gọi là 'non-bracket'.",
+  tip: "💡 ノン = không, ブラケット = giá đỡ → nối trực tiếp không cần giá đỡ."
 },
 
 {

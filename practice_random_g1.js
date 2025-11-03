@@ -16,15 +16,18 @@ function pickRandom(arr, n) {
   return shuffle([...arr]).slice(0, n);
 }
 
-// Gộp 10 câu từ mỗi đề practice g1_1 → g1_4
-const random_g1 = shuffle([
-  ...pickRandom(window.PRACTICE_SETS["g1_1"], 10),
-  ...pickRandom(window.PRACTICE_SETS["g1_2"], 10),
-  ...pickRandom(window.PRACTICE_SETS["g1_3"], 10),
-  ...pickRandom(window.PRACTICE_SETS["g1_4"], 10),
-]);
+// ✅ Gộp tất cả câu từ 4 file practice nhóm 1
+const all_g1 = [
+  ...(window.PRACTICE_SETS["g1_1"] || []),
+  ...(window.PRACTICE_SETS["g1_2"] || []),
+  ...(window.PRACTICE_SETS["g1_3"] || []),
+  ...(window.PRACTICE_SETS["g1_4"] || []),
+];
 
-// Tạo bộ đề ngẫu nhiên nhóm 1
+// ✅ Lấy ngẫu nhiên 40 câu bất kỳ trong tất cả
+const random_g1 = pickRandom(all_g1, 40);
+
+// ✅ Tạo bộ đề random nhóm 1
 window.PRACTICE_SETS["g1_random"] = random_g1;
 
 console.log(`✅ practice_random_g1.js loaded: ${random_g1.length} câu hỏi`);

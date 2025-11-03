@@ -16,20 +16,19 @@ window.PRACTICE_SETS["g1_1"] = [
     explain: "浮標 (phao) là thiết bị được đặt xung quanh khu vực thi công trên biển để **báo hiệu cho tàu thuyền khác biết** về khu vực công trường.",
     tip: "💡 Nhớ: ‘浮’ = nổi, ‘標’ = dấu hiệu → vật nổi báo hiệu trên mặt nước."
   },
-
-  {
-    q: "問2　型枠（かたわく）の間隔（かんかく）を一定（いってい）に保（たも）ち、パイプを締（し）めるための部材（ぶざい）は何（なに）か。【117】",
-    options: [
-      "1．コンクリート壁（へき）",
-      "2．パイプサポート",
-      "3．フォームタイ",
-      "4．丸セパレーター"
-    ],
-    answer: 3,
-    vi: "Bộ phận giữ khoảng cách cốp pha cố định và xiết ống là gì?",
-    explain: "**丸セパレーター** dùng để giữ khoảng cách giữa hai mặt ván khuôn (型枠) cố định.",
-    tip: "💡 Nhớ: セパレーター = separator = tạo khoảng cách."
-  },
+{
+  q: "問2　型枠（かたわく）の間隔（かんかく）を一定（いってい）に保（たも）ち、パイプを締（し）めるための部材（ぶざい）は何（なに）か。【117】",
+  options: [
+    "1．コンクリート壁（へき）",
+    "2．パイプサポート",
+    "3．フォームタイ",
+    "4．丸セパレーター"
+  ],
+  answer: 2,
+  vi: "Bộ phận giữ khoảng cách cốp pha cố định và xiết ống là gì?",
+  explain: "**フォームタイ（Form tie）** là bộ phận dùng để cố định khoảng cách giữa hai tấm ván khuôn (型枠) và siết chặt bằng ống (パイプ).",
+  tip: "💡 Nhớ: フォームタイ = form tie = thanh giữ khoảng cách ván khuôn."
+},
 
   {
     q: "問3　この写真（しゃしん）はどんな工事（こうじ）か？正しい答えを選べ。【179】",
@@ -46,33 +45,33 @@ window.PRACTICE_SETS["g1_1"] = [
     tip: "💡 Nhớ: 舗装＝mặt đường; lu xe → trải nhựa."
   },
 
-  {
-    q: "問4　河川工事（かせんこうじ）で起（お）こりやすい事故（じこ）は何（なに）か。正しいものを選べ。【180】",
-    options: [
-      "1．墜落（ついらく）",
-      "2．転倒（てんとう）",
-      "3．飛来（ひらい）・落下（らっか）",
-      "4．崩壊（ほうかい）"
-    ],
-    answer: 3,
-    vi: "Trong công trình sông ngòi (河川工事), loại tai nạn dễ xảy ra nhất là gì?",
-    explain: "Ở công trình sông (河川工事), dễ xảy ra **崩壊（ほうかい）– sạt lở, sụp đất** do nền đất yếu, nước xói.",
-    tip: "💡 Nhớ: 河川 = sông, đất mềm → nguy cơ **崩壊 (sụp đổ)** cao."
-  },
+ {
+  q: "問4　河川工事（かせんこうじ）で起（お）こりやすい事故（じこ）は何（なに）か。正しいものを選べ。【180】",
+  options: [
+    "1．墜落（ついらく）",
+    "2．転倒（てんとう）",
+    "3．飛来（ひらい）・落下（らっか）",
+    "4．崩壊（ほうかい）"
+  ],
+  answer: 1,
+  vi: "Trong công trình sông ngòi (河川工事), loại tai nạn dễ xảy ra nhất là gì?",
+  explain: "Ở công trình sông (河川工事), mặt đất thường trơn trượt do nước, bùn nên dễ xảy ra **転倒（てんとう）– té ngã**.",
+  tip: "💡 Nhớ: Công trình sông nước → bùn trơn → dễ **転倒 (té ngã)**."
+},
+{
+  q: "問5　梁底（はりそこ）型枠（かたわく）の単管（たんかん）パイプを受（う）け、パイプサポートを立（た）てる際（さい）に使用（しよう）する部材（ぶざい）は何（なに）か。【118】",
+  options: [
+    "1．筋交い（すじかい）",
+    "2．端太角（ばたかく）",
+    "3．パイプサポート",
+    "4．トンボ端（ばた）"
+  ],
+  answer: 3,
+  vi: "Khi dựng chống đỡ dầm (梁底型枠), bộ phận gỗ dùng để kê ống đơn là gì?",
+  explain: "**トンボ端（ばた）** là thanh gỗ đặt ngang để đỡ ống đơn (単管パイプ) và giúp cố định vị trí khi dựng chống.",
+  tip: "💡 Nhớ: トンボ端 = thanh đỡ ngang ở chân chống để giữ ống đơn cố định."
+},
 
-  {
-    q: "問5　梁底（はりそこ）型枠（かたわく）の単管（たんかん）パイプを受（う）け、パイプサポートを立（た）てる際（さい）に使用（しよう）する部材（ぶざい）は何（なに）か。【118】",
-    options: [
-      "1．筋交い（すじかい）",
-      "2．端太角（ばたかく）",
-      "3．パイプサポート",
-      "4．トンボ端（ばた）"
-    ],
-    answer: 1,
-    vi: "Khi dựng chống đỡ dầm (梁底型枠), bộ phận gỗ dùng để kê ống đơn là gì?",
-    explain: "Đó là **端太角（ばたかく）**, thanh gỗ ngắn đặt ở chân chống để đỡ ống đơn và giữ ổn định.",
-    tip: "💡 Nhớ: ‘端’ = đầu, ‘角’ = góc → thanh gỗ kê ở đầu chân chống."
-  },
   {
     q: "問6　これは何（なに）か。【106】",
     img: "images/keison.png",
@@ -144,32 +143,32 @@ window.PRACTICE_SETS["g1_1"] = [
     tip: "💡 レベル = Level → dùng đo cao độ mặt đất."
   },
 
-  {
-    q: "問11　ワイヤーブラシは何（なに）をするためか。正しいものを選べ。【135】",
-    options: [
-      "1．金属や木材の表面を研磨（けんま）する",
-      "2．やすりの目づまりを取る",
-      "3．金属や岩石を切削（せっさく）したり磨（みが）いたりする",
-      "4．ワイヤーの両端を加工したものは玉掛け用として使う"
-    ],
-    answer: 0,
-    vi: "Bàn chải sắt (ワイヤーブラシ) dùng để làm gì?",
-    explain: "ワイヤーブラシ dùng để **mài và làm sạch bề mặt kim loại, gỗ** trước khi sơn hoặc hàn.",
-    tip: "💡 Nhớ: Brush = chải → chải sạch rỉ sét, bụi bẩn kim loại."
-  },
-  {
-    q: "問12　コンクリート圧送（あっそう）工事（こうじ）は電圧（でんあつ）の高（たか）い電線（でんせん）の場合、感電（かんでん）することがあります。安全（あんぜん）のためには何をしますか。【110】",
-    options: [
-      "1．安全距離（りかく）を確認（かくにん）する",
-      "2．水平角度（かくど）が3°以内になるように調整する",
-      "3．輸送管（ゆそうかん）を滑（すべ）りやすくする",
-      "4．ゴム手袋（てぶくろ）と長靴（ながぐつ）を着用（ちゃくよう）する"
-    ],
-    answer: 3,
-    vi: "Trong công tác bơm bê tông, để tránh bị điện giật, cần làm gì?",
-    explain: "Khi thi công gần đường điện cao áp, cần **mang găng tay cao su và ủng cách điện** để tránh cảm điện.",
-    tip: "💡 Nhớ: 感電＝bị điện giật → phòng bằng vật cách điện (cao su)."
-  },
+ {
+  q: "問11　ワイヤーブラシは何（なに）をするためか。正しいものを選べ。【135】",
+  options: [
+    "1．金属や木材の表面を研磨（けんま）する",
+    "2．やすりの目づまりを取る",
+    "3．金属や岩石を切削（せっさく）したり磨（みが）いたりする",
+    "4．ワイヤーの両端を加工したものは玉掛け用として使う"
+  ],
+  answer: 1,
+  vi: "Bàn chải sắt (ワイヤーブラシ) dùng để làm gì?",
+  explain: "**ワイヤーブラシ** được dùng để **làm sạch phần bám trong rãnh của dũa (やすりの目)** – tức là loại bỏ bụi kim loại và cặn dính vào lưỡi dũa.",
+  tip: "💡 Nhớ: ワイヤーブラシ = chổi sắt → dùng chải sạch rãnh dũa khi bị tắc bẩn."
+},
+{
+  q: "問12　コンクリート圧送（あっそう）工事（こうじ）は電圧（でんあつ）の高（たか）い電線（でんせん）の場合、感電（かんでん）することがあります。安全（あんぜん）のためには何をしますか。【110】",
+  options: [
+    "1．安全距離（りかく）を確認（かくにん）する",
+    "2．水平角度（かくど）が3°以内になるように調整する",
+    "3．輸送管（ゆそうかん）を滑（すべ）りやすくする",
+    "4．ゴム手袋（てぶくろ）と長靴（ながぐつ）を着用（ちゃくよう）する"
+  ],
+  answer: 0,
+  vi: "Trong công tác bơm bê tông, để tránh bị điện giật, cần làm gì?",
+  explain: "Khi thi công gần đường điện cao áp, điều quan trọng nhất là **xác nhận khoảng cách an toàn (安全距離)** giữa thiết bị bơm và dây điện để tránh cảm điện.",
+  tip: "💡 Nhớ: 感電＝bị điện giật → giữ **khoảng cách an toàn** với dây điện."
+},
 
   {
     q: "問13　長期（ちょうき）にわたって吸（す）い続（つづ）けると肺（はい）の機能障害（きのうしょうがい）を引き起こすために何を着用（ちゃくよう）しますか。【186】",
@@ -255,20 +254,19 @@ window.PRACTICE_SETS["g1_1"] = [
     explain: "Đó là **認知ミス (lỗi nhận thức)** – hiểu sai do chủ quan, nhìn/ nghe nhầm.",
     tip: "💡 Nhớ: 認知＝nhận thức → lỗi do hiểu sai, nhìn sai."
   },
-
-  {
-    q: "問19　丸（まる）セパレーターとは何か？【117】",
-    options: [
-      "1．セパレーターの先端に取付けるプラスチック製の部品",
-      "2．コンクリートの厚みを確保（かくほ）する",
-      "3．型枠（かたわく）の間隔（かんかく）を一定に保つ",
-      "4．型枠用の合板（ごうはん）のこと"
-    ],
-    answer: 0,
-    vi: "丸セパレーター là gì?",
-    explain: "Là **bộ phận nhựa gắn ở đầu thanh セパレーター**, giữ cốp pha và ngăn bê tông rò rỉ.",
-    tip: "💡 Nhớ: 丸セパ＝dạng tròn → đầu chụp nhựa của thanh tie."
-  },
+{
+  q: "問19　丸（まる）セパレーターとは何か？【117】",
+  options: [
+    "1．セパレーターの先端に取付けるプラスチック製の部品",
+    "2．コンクリートの厚みを確保（かくほ）する",
+    "3．型枠（かたわく）の間隔（かんかく）を一定に保つ",
+    "4．型枠用の合板（ごうはん）のこと"
+  ],
+  answer: 1,
+  vi: "丸セパレーター là gì?",
+  explain: "**丸セパレーター** dùng để **đảm bảo độ dày của lớp bê tông (コンクリートの厚みを確保する)**, giúp duy trì khoảng cách cố định giữa cốp pha và cốt thép.",
+  tip: "💡 Nhớ: 丸セパ = ‘round separator’ → giúp giữ độ dày bê tông chuẩn."
+},
 
   {
     q: "問20　窓枠（まどわく）などのコンクリートに溝（みぞ）を作るために型枠に取付ける部材の名前を選べ。",
@@ -311,20 +309,19 @@ window.PRACTICE_SETS["g1_1"] = [
     explain: "**ふるい (rây, sàng)** dùng để phân loại vật liệu như cát, sỏi theo kích thước hạt.",
     tip: "💡 Nhớ: ふるい = sàng lọc, lưới sàng vật liệu."
   },
-
-  {
-    q: "問23　ハンドミキサは何（なに）か【137】",
-    options: [
-      "1．塗料（とりょう）やモルタル、コンクリート用（よう）のかくはん機（き）である",
-      "2．セメント・水（みず）・砂（すな）を混（ま）ぜて、モルタルを作（つく）る機械（きかい）である",
-      "3．１回（かい）ごとに、コンクリート用（よう）の材料（ざいりょう）を混（ま）ぜ合わせるタイプのミキサである",
-      "4．コンクリートやモルタルを作（つく）るための材料（ざいりょう）を入（い）れて練（ね）り混（ま）ぜるための丈夫（じょうぶ）な箱（はこ）である"
-    ],
-    answer: 1,
-    vi: "Máy trộn cầm tay (ハンドミキサ) là gì?",
-    explain: "ハンドミキサ là **máy khuấy cầm tay dùng để trộn sơn, vữa, bê tông nhẹ**, nhỏ gọn, dùng trong công trình nhỏ.",
-    tip: "💡 ハンド = tay, ミキサ = mixer → máy trộn cầm tay."
-  },
+{
+  q: "問23　ハンドミキサは何（なに）か【137】",
+  options: [
+    "1．塗料（とりょう）やモルタル、コンクリート用（よう）のかくはん機（き）である",
+    "2．セメント・水（みず）・砂（すな）を混（ま）ぜて、モルタルを作（つく）る機械（きかい）である",
+    "3．１回（かい）ごとに、コンクリート用（よう）の材料（ざいりょう）を混（ま）ぜ合わせるタイプのミキサである",
+    "4．コンクリートやモルタルを作（つく）るための材料（ざいりょう）を入（い）れて練（ね）り混（ま）ぜるための丈夫（じょうぶ）な箱（はこ）である"
+  ],
+  answer: 0,
+  vi: "Máy trộn cầm tay (ハンドミキサ) là gì?",
+  explain: "**ハンドミキサ** là máy khuấy cầm tay dùng để **trộn sơn, vữa, bê tông nhẹ** – thường dùng trong các công trình nhỏ hoặc khi cần trộn nhanh lượng ít vật liệu.",
+  tip: "💡 ハンド = tay, ミキサ = mixer → máy trộn cầm tay (dạng khuấy)."
+},
 
   {
     q: "問24　床筋（ゆかきん）のかぶり厚（あつ）さを確保（かくほ）するために、床筋（ゆかきん）の下（した）に置（お）くサイコロ状（じょう）のモルタルブロックはなんですか？",

@@ -11,7 +11,6 @@
   explain: "**ハンドガイドローラー（Hand guide roller）** là xe lu nhỏ điều khiển bằng tay, dùng để nén mặt đường hoặc nền đất chặt hơn trong không gian hẹp.",
   tip: "💡 '手押し型' = loại đẩy bằng tay, thường thấy khi làm đường nhỏ hoặc vỉa hè."
 },
-
 {
   q: "問92　この絵（え）について、どんな仕事（しごと）をするか。正（ただ）しいものを選（えら）べ。【152】",
   img: "images/92.png",
@@ -21,10 +20,10 @@
     "3．玉掛（たまかけ）作業（さぎょう）",
     "4．浚渫（しゅんせつ）作業（さぎょう）"
   ],
-  answer: 3,
+  answer: 1,
   vi: "Hình này là công việc gì?",
-  explain: "Đây là **玉掛け作業（たまかけさぎょう）** – công việc móc, buộc dây cáp để nâng vật nặng bằng cần cẩu.",
-  tip: "💡 玉掛け = móc vật vào cẩu, cần kỹ năng được chứng nhận (資格)."
+  explain: "Hình mô tả **クレーン作業（công việc vận hành cần cẩu）**, sử dụng cần trục để nâng và di chuyển vật nặng.",
+  tip: "💡 クレーン = cần cẩu, dùng để nâng – hạ vật nặng."
 },
 
 {
@@ -265,6 +264,61 @@
   tip: "💡 腕木（うでぎ）＝ thanh đỡ ngang giúp cố định板 (ván) trong giàn giáo."
 },
 {
+  q: "問110　鉄筋（てっきん）工事（こうじ）について、不適切（ふてきせつ）なものを選（えら）べ。【163】",
+  options: [
+    "1．コンクリートは、圧縮力（あっしゅくりょく）が弱（よわ）いため、鉄筋（てっきん）をいれて補（おぎな）うことができる",
+    "2．鉄筋（てっきん）は、酸化（さんか）して錆（さび）るという性質（せいしつ）がある",
+    "3．コンクリートはアルカリ性（せいしつ）なので、鉄筋（てっきん）を錆（さび）から守（まも）る",
+    "4．コンクリートの性質（せいしつ）は圧縮（あっしゅく）する力（ちから）には強（つよ）いが、引っ張（ひっぱ）られる力（ちから）には弱（よわ）い"
+  ],
+  answer: 0,
+  vi: "Về công trình bê tông cốt thép, hãy chọn điều **không thích hợp**.",
+  explain: "Câu sai là **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — Thực tế, **bê tông mạnh về nén**, yếu về kéo, nên chèn thép để chịu lực kéo chứ không phải vì yếu nén.",
+  tip: "💡 Bê tông mạnh khi bị nén, yếu khi bị kéo → dùng thép để bù lực kéo, không phải lực nén."
+},
+
+{
+  q: "問111　アーク溶接（ようせつ）作業（さぎょう）はどんな技術（ぎじゅつ）か。【167】",
+  img: "images/111.png",
+  options: [
+    "1．建設工事の様々な場所で必要な技術で電気の力を使って金属同士を溶接する",
+    "2．膨らみの偏りなどを検査する",
+    "3．圧接端面の隙間の大きさを確認する",
+    "4．曲がる、切るなどの加工をする"
+  ],
+  answer: 0,
+  vi: "Công việc hàn hồ quang (アーク溶接) là loại kỹ thuật gì?",
+  explain: "Là kỹ thuật **dùng dòng điện để hàn chảy kim loại**, thường thấy trong xây dựng, cầu, giàn thép.",
+  tip: "💡 溶接 (ようせつ) = hàn kim loại bằng điện."
+},
+{
+  q: "問112　足場作業員（あしばさぎょういん）が高所（こうしょ）から落下（らっか）することを防止（ぼうし）するための器具（きぐ）は何というか。【111】",
+  options: [
+    "1．番線（ばんせん）",
+    "2．壁つなぎ",
+    "3．安全（あんぜん）ブロック",
+    "4．防音（ぼうおん）パネル"
+  ],
+  answer: 2,
+  vi: "Dụng cụ dùng để ngăn công nhân giàn giáo rơi từ trên cao gọi là gì?",
+  explain: "Là **安全ブロック (あんぜんブロック)** – thiết bị an toàn chống rơi, nối với dây an toàn.",
+  tip: "💡 安全ブロック = thiết bị hãm rơi khi làm việc trên cao."
+},
+{
+  q: "問113　モルタルミキサは何（なに）か。【137】",
+  options: [
+    "1．塗料（とりょう）やモルタル、コンクリート用（よう）のかくはん機（き）である",
+    "2．液体（えきたい）および建築（けんちく）資材（しざい）を混（ま）ぜる機械（きかい）である",
+    "3．セメント・水（みず）・砂（すな）を混（ま）ぜて、モルタルを作（つく）る機械（きかい）である",
+    "4．コンクリートやモルタルを作（つく）るための材料（ざいりょう）を入（い）れて練（ね）り混（ま）ぜるための丈夫（じょうぶ）な箱（はこ）である"
+  ],
+  answer: 2,
+  vi: "Máy trộn vữa (モルタルミキサ) là gì?",
+  explain: "モルタルミキサ là **máy trộn xi măng, nước và cát để tạo ra vữa (モルタル)** – được dùng trong xây dựng tường, trát, lát.",
+  tip: "💡 モルタル = vữa, ミキサ = máy trộn → máy trộn vữa."
+},
+
+{
   q: "問114　杭（くい）工事（こうじ）を開始（かいし）する前（まえ）に埋（う）まっている物（もの）の調査（ちょうさ）を行（おこな）うが、事故（じこ）につながる可能性（かのうせい）を避（さ）けるために確認（かくにん）するものを選（えら）べ。",
   options: [
     "1．重要（じゅうよう）な遺跡（いせき）",
@@ -291,7 +345,6 @@
   explain: "地盤調査 nhằm khảo sát **tính chất đất, độ bền, mực nước ngầm**, nhưng **không liên quan đến khảo cổ (遺跡)**.",
   tip: "💡 遺跡調査 là khảo cổ học, không phải địa chất."
 },
-
 {
   q: "問116　建地（たてじ）と梁（はり）の固定（こてい）方法（ほうほう）について、梁（はり）を３分割（ぶんかつ）して、両端（りょうたん）の柱（はしら）と梁（はり）の交差（こうさい）部分（ぶぶん）を工場（こうじょう）で、柱（はしら）に溶接（ようせつ）などで固定（こてい）する工法（こうほう）は何（なん）というか。【162】",
   options: [
@@ -300,10 +353,10 @@
     "3．ブラケット",
     "4．ノンブラケット"
   ],
-  answer: 3,
-  vi: "Phương pháp cố định giữa cột và dầm bằng cách chia dầm thành 3 phần và hàn cố định tại nhà máy gọi là gì?",
-  explain: "Phương pháp này gọi là **ブラケット工法（Bracket Method）**, nghĩa là hàn phần giao nhau của dầm và cột để cố định chắc chắn.",
-  tip: "💡 Dùng nhiều trong kết cấu thép nhà cao tầng."
+  answer: 2,
+  vi: "Phương pháp cố định giữa cột và dầm bằng cách chia dầm thành 3 phần và hàn cố định sẵn tại nhà máy gọi là gì?",
+  explain: "Đây là **ブラケット工法（Bracket method）**, phương pháp hàn cố định phần giao giữa cột và dầm bằng giá đỡ, thường dùng trong kết cấu thép.",
+  tip: "💡 ブラケット = bracket = giá đỡ nối cột và dầm."
 },
 
 {

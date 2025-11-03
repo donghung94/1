@@ -170,20 +170,19 @@ window.PRACTICE_SETS["g2_1"] = [
     explain: "**木づち** là búa gỗ, thường dùng khi đóng cốp pha để tránh làm hỏng vật liệu.",
     tip: "💡 Nhớ: 木 (gỗ) → dùng để đóng nhẹ, không làm trầy vật liệu."
   },
-
-  {
-    q: "問43　一点（いってん）に集中（しゅうちゅう）すると、まわりが見（み）えなくなるヒューマンエラーは何（なに）か。【155】",
-    options: [
-      "1．連絡（れんらく）不足（ぶそく）",
-      "2．近道（ちかみち）行動（こうどう）",
-      "3．場面（ばめん）行動（こうどう）本能（ほんのう）",
-      "4．慣（な）れによる手抜（てぬ）き"
-    ],
-    answer: 1,
-    vi: "Khi quá tập trung vào một điểm mà không để ý xung quanh, lỗi con người đó là gì?",
-    explain: "Đó là lỗi **近道行動（ちかみちこうどう）**, nghĩa là hành động theo đường tắt, bỏ qua bước kiểm tra khác vì quá tập trung.",
-    tip: "💡 Nhớ: tập trung 1 điểm = bỏ qua các bước → gọi là hành động 'đi đường tắt'."
-  },
+{
+  q: "問43　一点（いってん）に集中（しゅうちゅう）すると、まわりが見（み）えなくなるヒューマンエラーは何（なに）か。【155】",
+  options: [
+    "1．連絡（れんらく）不足（ぶそく）",
+    "2．近道（ちかみち）行動（こうどう）",
+    "3．場面（ばめん）行動（こうどう）本能（ほんのう）",
+    "4．慣（な）れによる手抜（てぬ）き"
+  ],
+  answer: 2,
+  vi: "Khi quá tập trung vào một điểm mà không để ý xung quanh, lỗi con người đó là gì?",
+  explain: "Đó là **場面行動本能（ばめんこうどうほんのう）**, tức là khi hành động theo bản năng trong tình huống, quá tập trung vào một việc mà không quan sát toàn cảnh xung quanh.",
+  tip: "💡 Nhớ: tập trung quá mức vào một điểm → hành động bản năng (場面行動本能)."
+},
 
   {
     q: "問44　一つの作業（さぎょう）に集中（しゅうちゅう）すると、周（まわ）りへの注意力（ちゅういりょく）が低下（ていか）して事故（じこ）につながるヒューマンエラーは何（なに）か。【156】",

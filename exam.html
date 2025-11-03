@@ -15,15 +15,8 @@
   <script type="module">
     import { auth } from "./firebase.js";
     import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-
-    // Nếu chưa đăng nhập → quay về login
     onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        console.warn("⚠️ Chưa đăng nhập, quay về login...");
-        location.href = "login.html";
-      } else {
-        console.log("✅ Đã đăng nhập:", user.email);
-      }
+      if (!user) location.href = "login.html";
     });
   </script>
 
@@ -52,7 +45,7 @@
 
   <footer class="footer">© 2025 Đồng Hùng • Quiz APP</footer>
 
-  <!-- 🟢 Nạp trực tiếp các file đề cần thiết -->
+  <!-- 🟢 Nạp file đề lý thuyết nhóm 2 -->
   <script src="questions.js"></script>
   <script src="questions2.js"></script>
   <script src="questions3.js"></script>
@@ -60,10 +53,15 @@
   <script src="questions5.js"></script>
   <script src="questions6.js"></script>
 
-  <!-- 🧰 Thêm 2 file thực hành -->
+  <!-- 🧰 Đề thực hành nhóm 2 -->
   <script src="practice1.js"></script>
   <script src="practice2.js"></script>
 
+  <!-- 🧰 Đề thực hành nhóm 1 (mới thêm) -->
+  <script src="practice1_g1.js"></script>
+  <script src="practice2_g1.js"></script>
+
+  <!-- ⚙️ Code xử lý -->
   <script src="exam_random.js"></script>
   <script src="exam.js"></script>
 

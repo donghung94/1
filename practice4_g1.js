@@ -583,5 +583,5 @@ Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn 
   vi: "WBGT dùng để đo chỉ số gì?",
   explain: "**WBGT** (Wet Bulb Globe Temperature) là **chỉ số đo mức độ nóng bức (暑さ指数)**, giúp đánh giá nguy cơ say nắng và mệt mỏi do nhiệt trên công trường.",
   tip: "💡 WBGT = chỉ số nhiệt kết hợp độ ẩm, nhiệt độ và bức xạ mặt trời."
-},
+}
 ];

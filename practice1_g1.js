@@ -1,4 +1,3 @@
-// File: practice1_g1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
 window.PRACTICE_SETS["g1_1"] = [
@@ -418,6 +417,6 @@ window.PRACTICE_SETS["g1_1"] = [
     vi: "Do muốn làm nhanh, bỏ qua bước cần thiết gây ra lỗi — lỗi con người này gọi là gì?",
     explain: "Đó là **近道行動・省略行動**, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
     tip: "💡 省略＝rút gọn, 近道＝đi đường tắt → bỏ bước = hành vi nguy hiểm."
-  },
+  }
 ];
 

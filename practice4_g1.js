@@ -385,7 +385,7 @@ window.PRACTICE_SETS["g4_1"] = [
   ],
   answer: 2,
   vi: "Trong khái niệm QCDSE của quản lý thi công (施工管理), chữ D biểu thị việc quản lý gì?",
-  explain: "Trong QCDSE: Q = Quality (chất lượng), C = Cost (chi phí), D = Delivery (tiến độ).  Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn công trình (工期内完成)**.",
+  explain: "Trong QCDSE: Q = Quality (chất lượng), C = Cost (chi phí), D = Delivery (tiến độ). Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn công trình (工期内完成)**.",
   tip: "💡 D = Delivery (納期 / 工期)."
 },
 

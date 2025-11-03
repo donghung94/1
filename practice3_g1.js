@@ -1,3 +1,6 @@
+window.PRACTICE_SETS = window.PRACTICE_SETS || {};
+
+window.PRACTICE_SETS["g3_1"] = [
 {
   q: "問61　鉄筋（てっきん）のかぶり（鉄筋と型枠のすきま）を確保（かくほ）する部材（ぶざい）は何（なに）か。【114】",
   options: [
@@ -401,3 +404,4 @@
   explain: "**ウェルポイント** là một **ống cấp nước (水給管)** có gắn **lưới lọc (網)** để hút nước ngầm. Nó được sử dụng trong công trình hạ thấp mực nước ngầm (ウェルポイント工事).",
   tip: "💡 Dùng để hạ mực nước ngầm và làm khô nền đất trong thi công móng."
 },
+  ];

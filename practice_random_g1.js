@@ -1,7 +1,7 @@
-// Tạo nếu chưa có
+// ✅ practice_random_g1.js — tạo đề random 40 câu từ 4 file g1_1 → g1_4
+
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-// Hàm trộn mảng
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -10,23 +10,44 @@ function shuffle(arr) {
   return arr;
 }
 
-// Hàm chọn ngẫu nhiên n phần tử
 function pickRandom(arr, n) {
   if (!arr || !arr.length) return [];
   return shuffle([...arr]).slice(0, n);
 }
 
-// 🕐 Đảm bảo chỉ chạy sau khi 4 file practice g1 đã load
-window.addEventListener("load", () => {
-  const all_g1 = [
-    ...(window.PRACTICE_SETS["g1_1"] || []),
-    ...(window.PRACTICE_SETS["g1_2"] || []),
-    ...(window.PRACTICE_SETS["g1_3"] || []),
-    ...(window.PRACTICE_SETS["g1_4"] || []),
+// 🕐 Hàm chờ cho đến khi dữ liệu 4 đề có sẵn
+function waitForPracticeSets() {
+  return new Promise((resolve) => {
+    const check = () => {
+      if (
+        window.PRACTICE_SETS["g1_1"]?.length &&
+        window.PRACTICE_SETS["g1_2"]?.length &&
+        window.PRACTICE_SETS["g1_3"]?.length &&
+        window.PRACTICE_SETS["g1_4"]?.length
+      ) {
+        resolve();
+      } else {
+        setTimeout(check, 200); // chờ 0.2 giây rồi kiểm tra lại
+      }
+    };
+    check();
+  });
+}
+
+async function createRandomPractice() {
+  await waitForPracticeSets();
+
+  const all = [
+    ...window.PRACTICE_SETS["g1_1"],
+    ...window.PRACTICE_SETS["g1_2"],
+    ...window.PRACTICE_SETS["g1_3"],
+    ...window.PRACTICE_SETS["g1_4"],
   ];
 
-  const random_g1 = pickRandom(all_g1, 40);
-  window.PRACTICE_SETS["g1_random"] = random_g1;
+  const random40 = pickRandom(all, 40);
+  window.PRACTICE_SETS["g1_random"] = random40;
 
-  console.log(`✅ practice_random_g1.js loaded: ${random_g1.length} câu hỏi`);
-});
+  console.log(`✅ practice_random_g1.js loaded thành công: ${random40.length} câu`);
+}
+
+createRandomPractice();

@@ -10,8 +10,9 @@
   // ✅ Thêm hỗ trợ load nhóm thực hành đặc biệt "g1_x"
   // Ví dụ: exam.html?practice=g1_1 → file practice1_g1.js
   let normalizedPracticeId = practiceId;
-  if (practiceId && practiceId.startsWith("g1_")) {
-    normalizedPracticeId = "1_" + practiceId; // → "1_g1_1"
+if (practiceId && practiceId.startsWith("g1_")) {
+  normalizedPracticeId = practiceId; // giữ nguyên, không thêm gì cả
+
   }
 
   // ✅ Ưu tiên lấy bộ thực hành nếu có ?practice=

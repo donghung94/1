@@ -12,20 +12,36 @@
     normalizedPracticeId = practiceId;
   }
 
-  // ✅ Ưu tiên thực hành
+  // ✅ Ưu tiên thực hành (nếu có id cụ thể)
   if (normalizedPracticeId && window.PRACTICE_SETS && window.PRACTICE_SETS[normalizedPracticeId]) {
     DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[normalizedPracticeId]));
     window.questions = window.PRACTICE_SETS[normalizedPracticeId];
   }
-  // ✅ Lý thuyết
+
+  // ✅ Lý thuyết (nếu có id cụ thể)
   else if (setId && window.QUESTION_SETS && window.QUESTION_SETS[setId]) {
     DATA = JSON.parse(JSON.stringify(window.QUESTION_SETS[setId]));
     window.questions = window.QUESTION_SETS[setId];
   }
-  // ❌ Không có đề
+
+  // ✅ Ngẫu nhiên từ tất cả 4 file nếu không có id cụ thể
   else {
-    DATA = [];
-    window.questions = [];
+    let allQs = [];
+    if (window.PRACTICE_SETS) {
+      Object.values(window.PRACTICE_SETS).forEach((arr) => {
+        allQs = allQs.concat(arr);
+      });
+    }
+    if (window.QUESTION_SETS) {
+      Object.values(window.QUESTION_SETS).forEach((arr) => {
+        allQs = allQs.concat(arr);
+      });
+    }
+
+    // 🔁 Trộn toàn bộ và lấy 40 câu
+    allQs = shuffle(allQs);
+    DATA = allQs.slice(0, 40);
+    window.questions = DATA;
   }
 
   const quizEl = $("#quiz");
@@ -49,7 +65,7 @@
   };
   tick();
 
-  // 🔁 Trộn mảng
+  // 🔁 Hàm trộn mảng
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

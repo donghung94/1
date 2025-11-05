@@ -12,9 +12,9 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
   // 🧩 Gộp toàn bộ câu hỏi từ 4 file practice
   const allQuestions = [
     ...(window.PRACTICE_SETS["g1_1"] || []),
-    ...(window.PRACTICE_SETS["g1_2"] || []),
-    ...(window.PRACTICE_SETS["g1_3"] || []),
-    ...(window.PRACTICE_SETS["g1_4"] || [])
+    ...(window.PRACTICE_SETS["g2_1"] || []),
+    ...(window.PRACTICE_SETS["g3_1"] || []),
+    ...(window.PRACTICE_SETS["g4_1"] || [])
   ];
 
   // 🧮 Chọn ngẫu nhiên 40 câu (nếu ít hơn thì lấy hết)

@@ -16,10 +16,10 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
   // 🔹 Gộp ngẫu nhiên 10 câu mỗi đề (tổng 40 câu)
   const random_g1 = shuffle([
-    ...pickRandom(window.PRACTICE_SETS["g1_1"], 10),
-    ...pickRandom(window.PRACTICE_SETS["g1_2"], 10),
-    ...pickRandom(window.PRACTICE_SETS["g1_3"], 10),
-    ...pickRandom(window.PRACTICE_SETS["g1_4"], 10)
+    ...pickRandom(window.PRACTICE_SETS["g1_1"], 40),
+    ...pickRandom(window.PRACTICE_SETS["g1_2"], 40),
+    ...pickRandom(window.PRACTICE_SETS["g1_3"], 40),
+    ...pickRandom(window.PRACTICE_SETS["g1_4"], 40)
   ]);
 
   window.PRACTICE_SETS["g1_random"] = random_g1;

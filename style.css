@@ -1,132 +1,174 @@
-/* 🎯 KHỐI KẾT QUẢ CHUNG */
-#result {
-  background: #fafafa;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
 
-/* ✅ Tiêu đề tổng (số câu đúng / sai) */
-.result-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  margin-bottom: 16px;
-  text-align: center;
-  background: #e8f0fe;
-  padding: 10px;
-  border-radius: 8px;
+:root{
+  --bg:#ffffff; --fg:#000000; --muted:#666; --border:#e5e5e5;
+  --ok:#0a7f2e; --bad:#c62828; --blue:#007BFF;
 }
+*{box-sizing:border-box}
+body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px}
+.brand.small .brand-name{font-size:16px}
+.logo{width:36px;height:36px;border-radius:8px}
+.titles .brand-name{font-weight:700}
+.titles .subtitle{font-size:14px;color:var(--muted)}
+.titles .demoline{font-size:12px;color:var(--muted)}
 
-/* 🧩 Mỗi câu kết quả */
-.result-item {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-}
+.container{max-width:960px;margin:18px auto;padding:0 16px}
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
 
-.result-item:hover {
-  background: #fdfdfd;
-}
+.exam-list{list-style:none;padding:0;margin:0}
+.exam-list li{margin:10px 0}
+.exam-list a{color:var(--fg);text-decoration:underline}
 
-/* 📝 Câu hỏi */
-.result-item .q-text {
-  font-weight: 600;
-  color: #111827;
-  margin-bottom: 6px;
-  line-height: 1.5;
-}
+.hud{display:flex;align-items:center;gap:10px}
+.timer{font-variant-numeric:tabular-nums;font-weight:700}
 
-/* 🇯🇵 Phụ đề hiragana */
-.result-item .hira {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
+.btn{border:1px solid var(--fg);background:#fff;color:var(--fg);padding:8px 14px;border-radius:10px;cursor:pointer}
+.btn.ghost{background:transparent}
+.btn:active{transform:translateY(1px)}
 
-/* 📷 Ảnh minh hoạ */
-.result-item img {
-  display: block;
-  margin: 10px auto;
-  max-width: 100%;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
+.q-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.q-index{font-weight:700}
+.q-text{font-weight:600;margin:10px 0;white-space:pre-wrap}
+.hira{font-size:14px;color:var(--muted);margin:4px 0 8px;white-space:pre-wrap}
 
-/* 💬 Các dòng đáp án */
-.answer-line {
-  margin: 6px 0;
-  font-size: 15px;
-  line-height: 1.4;
-}
+.options{display:grid;gap:8px;margin:10px 0}
+.opt{display:flex;align-items:center;gap:10px;border:1px solid var(--border);padding:10px;border-radius:10px}
+.opt input[type="radio"]{transform:scale(1.2)}
 
-/* Màu đáp án chọn */
-.selected.correct {
-  color: #0a7f2e;
-  font-weight: 700;
-}
+.nav{display:flex;gap:8px;margin-top:8px}
+.footer{text-align:center;color:var(--muted);padding:24px 0;border-top:1px solid var(--border)}
 
-.selected.incorrect {
-  color: #c62828;
-  font-weight: 700;
-}
+.result-title{font-weight:700;margin-bottom:8px}
+.result-item{border-top:1px dashed var(--border);padding-top:10px;margin-top:10px}
+.answer-line{margin:6px 0}
+.selected.correct{color:var(--ok);font-weight:700}
+.selected.incorrect{color:var(--bad);font-weight:700}
+.explain{color:#111;margin-top:6px}
 
-/* 🧠 Khung giải thích và mẹo nhớ */
-.result-explain-box {
-  background: #f0f7ff;
-  border-left: 4px solid #3b82f6;
+.floating{position:fixed;right:16px;bottom:16px;background:var(--blue);color:#fff;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;display:none}
+/* 💬 Khung hiển thị TỪ VỰNG / DỊCH NGHĨA / GIẢI THÍCH */
+.meaning-box {
+  background: #eaf7e6;              /* nền xanh nhạt */
+  border-left: 4px solid #4CAF50;   /* viền xanh lá bên trái */
   padding: 10px 14px;
-  border-radius: 8px;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-.result-explain-box .explain-title {
-  color: #1e3a8a;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.result-explain-box .tip {
-  margin-top: 10px;
-  background: #fff9db;
-  border-left: 4px solid #facc15;
-  padding: 8px 10px;
+  margin-top: 12px;
   border-radius: 6px;
-  color: #4a3b00;
-  font-weight: 500;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #222;
+  white-space: pre-line;            /* giữ nguyên xuống dòng trong vocab */
 }
 
-/* 🔁 Nút “Làm lại những câu sai” và “Trang chủ” */
-#redoWrong, .btn {
+.meaning-box strong {
+  color: #1b5e20;                   /* chữ “TỪ VỰNG”, “DỊCH NGHĨA” đậm xanh đậm */
   font-weight: 600;
-  padding: 10px 18px;
-  border-radius: 10px;
+}
+
+.meaning-box + .meaning-box {
+  margin-top: 8px;                  /* tạo khoảng cách giữa các khung (nếu có nhiều phần) */
+}
+
+/* ✅ Làm đẹp phần lựa chọn */
+.opt {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 6px 0;
+  padding: 8px 10px;
   cursor: pointer;
   transition: 0.2s;
 }
 
-#redoWrong {
-  background: #2563eb;
-  color: #fff;
-  border: none;
+.opt:hover {
+  background-color: #f5faff;
 }
 
-#redoWrong:hover {
-  background: #1e40af;
+.opt input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #2196f3;            /* màu xanh của nút chọn */
 }
 
-.btn {
-  border: 1px solid #1e3a8a;
+.opt input[type="radio"]:checked + div {
+  background-color: #d0e8ff;        /* nền xanh khi chọn */
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: 0.2s;
+}
+
+/* 🧩 Hình ảnh câu hỏi */
+.q-img img {
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* 🕓 Thanh thời gian */
+.timer {
+  font-weight: 700;
+  color: #1e88e5;
+}
+.video-section {
+  margin-top: 30px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.video-section h3 {
   color: #1e3a8a;
-  background: #fff;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
 }
 
-.btn:hover {
-  background: #1e3a8a;
-  color: #fff;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: #000;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.result-explain-box {
+  background: #f5faff;
+  border-left: 4px solid #3b82f6;
+  padding: 12px 14px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.result-explain-box .explain-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1e3a8a;
+}
+
+.result-explain-box .tip {
+  margin-top: 8px;
+  background: #fffbe6;
+  border-left: 4px solid #facc15;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
 }

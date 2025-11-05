@@ -9,19 +9,20 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
     return arr;
   }
 
-  function pickRandom(arr, n) {
-    if (!arr || !arr.length) return [];
-    return shuffle([...arr]).slice(0, n);
-  }
+  // 🧩 Gộp toàn bộ câu hỏi từ 4 file practice
+  const allQuestions = [
+    ...(window.PRACTICE_SETS["g1_1"] || []),
+    ...(window.PRACTICE_SETS["g1_2"] || []),
+    ...(window.PRACTICE_SETS["g1_3"] || []),
+    ...(window.PRACTICE_SETS["g1_4"] || [])
+  ];
 
-  // 🔹 Gộp ngẫu nhiên 10 câu mỗi đề (tổng 40 câu)
-  const random_g1 = shuffle([
-    ...pickRandom(window.PRACTICE_SETS["g1_1"], 40),
-    ...pickRandom(window.PRACTICE_SETS["g1_2"], 40),
-    ...pickRandom(window.PRACTICE_SETS["g1_3"], 40),
-    ...pickRandom(window.PRACTICE_SETS["g1_4"], 40)
-  ]);
+  // 🧮 Chọn ngẫu nhiên 40 câu (nếu ít hơn thì lấy hết)
+  const randomCount = Math.min(40, allQuestions.length);
+  const randomQuestions = shuffle(allQuestions).slice(0, randomCount);
 
-  window.PRACTICE_SETS["g1_random"] = random_g1;
-  console.log("✅ Random practice g1:", random_g1.length, "câu");
+  // 🟢 Gán vào bộ đề thi
+  window.PRACTICE_SETS["g1_random"] = randomQuestions;
+
+  console.log(`✅ Tạo đề ngẫu nhiên nhóm 1: ${randomQuestions.length} câu`);
 })();

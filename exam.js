@@ -12,35 +12,26 @@
     normalizedPracticeId = practiceId;
   }
 
-  // ✅ Ưu tiên thực hành (nếu có id cụ thể)
+  // ✅ Ưu tiên thực hành
   if (normalizedPracticeId && window.PRACTICE_SETS && window.PRACTICE_SETS[normalizedPracticeId]) {
     DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[normalizedPracticeId]));
     window.questions = window.PRACTICE_SETS[normalizedPracticeId];
   }
-
-  // ✅ Lý thuyết (nếu có id cụ thể)
+  // ✅ Lý thuyết
   else if (setId && window.QUESTION_SETS && window.QUESTION_SETS[setId]) {
     DATA = JSON.parse(JSON.stringify(window.QUESTION_SETS[setId]));
     window.questions = window.QUESTION_SETS[setId];
   }
-
-  // ✅ Ngẫu nhiên từ tất cả 4 file nếu không có id cụ thể
+  // ✅ Nếu không có id cụ thể → chọn ngẫu nhiên
   else {
     let allQs = [];
     if (window.PRACTICE_SETS) {
-      Object.values(window.PRACTICE_SETS).forEach((arr) => {
-        allQs = allQs.concat(arr);
-      });
+      Object.values(window.PRACTICE_SETS).forEach((arr) => (allQs = allQs.concat(arr)));
     }
     if (window.QUESTION_SETS) {
-      Object.values(window.QUESTION_SETS).forEach((arr) => {
-        allQs = allQs.concat(arr);
-      });
+      Object.values(window.QUESTION_SETS).forEach((arr) => (allQs = allQs.concat(arr)));
     }
-
-    // 🔁 Trộn toàn bộ và lấy 40 câu
-    allQs = shuffle(allQs);
-    DATA = allQs.slice(0, 40);
+    DATA = shuffle(allQs).slice(0, 40);
     window.questions = DATA;
   }
 
@@ -65,7 +56,6 @@
   };
   tick();
 
-  // 🔁 Hàm trộn mảng
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -74,7 +64,6 @@
     return arr;
   }
 
-  // 🔹 Chuẩn bị dữ liệu câu hỏi
   const questions = DATA.map((q) => {
     const opts = q.options.map((t, i) => ({
       text: t,
@@ -87,6 +76,7 @@
 
   let cur = 0;
   const user = new Array(questions.length).fill(null);
+  let showExplain = false;
 
   function render() {
     if (!questions.length) {
@@ -96,51 +86,83 @@
 
     const q = questions[cur];
     const header = `<div class="q-head"><div class="q-index">Câu ${cur + 1}/${questions.length}</div></div>`;
+    const optionsHtml = q.options
+      .map((op, i) => {
+        const selected = user[cur] === i;
+        let cls = "";
+        if (user[cur] !== null) {
+          if (op.correct) cls = "correct";
+          else if (selected && !op.correct) cls = "incorrect";
+        }
+        return `
+          <label class="opt ${cls}">
+            <input type="radio" name="q${cur}" value="${i}" ${selected ? "checked" : ""}>
+            <div>${op.text}</div>
+          </label>`;
+      })
+      .join("");
+
+    const explainHtml =
+      showExplain && (q.explain || q.tip)
+        ? `<div class="explain-box">
+              ${q.explain ? `<div class="explain-title">📘 Giải thích:</div><div>${q.explain}</div>` : ""}
+              ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
+           </div>`
+        : "";
+
     const body = `
       <div class="q-text">${q.q}</div>
       ${
         q.img
           ? `<div class="q-img">
-              <img src="${q.img}" alt="question image" 
+              <img src="${q.img}" alt="question image"
                    onerror="this.style.display='none';"
                    style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;">
              </div>`
           : ""
       }
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
-      <div class="options">
-        ${q.options
-          .map(
-            (op, i) => `
-          <label class="opt">
-            <input type="radio" name="q${cur}" value="${i}" ${user[cur] === i ? "checked" : ""}>
-            <div>${op.text}</div>
-          </label>`
-          )
-          .join("")}
-      </div>
+      <div class="options">${optionsHtml}</div>
+      ${explainHtml}
       <div class="nav">
-        <button class="btn" id="backBtn">Quay lại</button>
+        <button class="btn" id="backBtn">⬅️ Quay lại</button>
+        <button class="btn" id="explainBtn">📘 Giải thích</button>
+        <button class="btn" id="nextBtn">➡️ Tiếp theo</button>
       </div>
     `;
+
     quizEl.innerHTML = header + body;
 
-    // Lắng nghe chọn đáp án
+    // 🔹 Lắng nghe chọn đáp án
     quizEl.querySelectorAll(`input[name="q${cur}"]`).forEach((el) => {
       el.addEventListener("change", (e) => {
         user[cur] = parseInt(e.target.value);
-        if (cur < questions.length - 1) {
-          cur++;
-          render();
-        }
+        render(); // vẽ lại để hiển thị màu đúng/sai
       });
     });
 
+    // 🔹 Nút điều hướng
     $("#backBtn").onclick = () => {
       if (cur > 0) {
         cur--;
+        showExplain = false;
         render();
       }
+    };
+
+    $("#nextBtn").onclick = () => {
+      if (cur < questions.length - 1) {
+        cur++;
+        showExplain = false;
+        render();
+      } else {
+        submitQuiz();
+      }
+    };
+
+    $("#explainBtn").onclick = () => {
+      showExplain = !showExplain;
+      render();
     };
   }
 
@@ -171,10 +193,7 @@
           <div class="q-text">${q.q}</div>
           ${
             q.img
-              ? `<div class="q-img">
-                  <img src="${q.img}" alt="question image"
-                       style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;">
-                 </div>`
+              ? `<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`
               : ""
           }
           ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
@@ -205,18 +224,5 @@
     `;
 
     redoBtn.style.display = wrongs.length ? "block" : "none";
-
-    redoBtn.onclick = () => {
-      if (!wrongs.length) return;
-      const subset = wrongs.map((i) => questions[i]);
-      questions.length = 0;
-      subset.forEach((q) => questions.push(q));
-      user.fill(null);
-      cur = 0;
-      quizEl.style.display = "block";
-      resEl.style.display = "none";
-      redoBtn.style.display = "none";
-      render();
-    };
   }
 })();

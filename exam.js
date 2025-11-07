@@ -1,12 +1,10 @@
 (function () {
   const $ = (sel) => document.querySelector(sel);
   const params = new URLSearchParams(location.search);
-
   const setId = params.get("set");
   const practiceId = params.get("practice");
   let DATA = [];
 
-  // ✅ Ưu tiên đề thực hành hoặc lý thuyết
   if (practiceId && window.PRACTICE_SETS?.[practiceId]) {
     DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[practiceId]));
   } else if (setId && window.QUESTION_SETS?.[setId]) {
@@ -21,10 +19,9 @@
   const quizEl = $("#quiz");
   const resEl = $("#result");
   const submitBtn = $("#submitBtn");
-  const redoBtn = $("#redoWrong");
   const timerEl = $("#timer");
 
-  // ⏱️ 60 phút đếm ngược
+  // Đồng hồ đếm ngược 60 phút
   let timeLeft = 60 * 60;
   const tick = () => {
     const m = Math.floor(timeLeft / 60),
@@ -68,20 +65,30 @@
       .map((op, i) => {
         const selected = user[cur] === i;
         let cls = "";
+        let icon = "";
         if (user[cur] !== null) {
-          if (op.correct) cls = "correct";
-          else if (selected && !op.correct) cls = "incorrect";
+          if (op.correct && selected) {
+            cls = "correct";
+            icon = "✅";
+          } else if (!op.correct && selected) {
+            cls = "incorrect";
+            icon = "❌";
+          } else if (op.correct && !selected) {
+            // Đáp án đúng vẫn bình thường
+            icon = "";
+          }
         }
         return `
           <label class="opt ${cls}">
             <input type="radio" name="q${cur}" value="${i}" ${selected ? "checked" : ""}>
-            <div>${op.text}</div>
+            <div class="opt-text">${op.text}</div>
+            <span class="opt-icon">${icon}</span>
           </label>`;
       })
       .join("");
 
     const explainHtml =
-      showExplain && (q.explain || q.tip || q.options)
+      showExplain && (q.explain || q.tip)
         ? `
         <div class="explain-box">
           <div><strong>✅ Đáp án đúng:</strong> ${q.options.find((o) => o.correct)?.text || ""}</div>
@@ -97,15 +104,15 @@
       <div class="options">${optionsHtml}</div>
       ${explainHtml}
       <div class="nav">
-        <button class="btn" id="backBtn">⬅️ Quay lại</button>
-        <button class="btn" id="explainBtn">📘 Giải thích</button>
-        <button class="btn" id="nextBtn">➡️ Tiếp theo</button>
+        <button class="btn nav-left" id="backBtn">⬅️ Quay lại</button>
+        <button class="btn nav-center" id="explainBtn">📘 Giải thích</button>
+        <button class="btn nav-right" id="nextBtn">➡️ Tiếp theo</button>
       </div>
     `;
 
     quizEl.innerHTML = header + body;
 
-    // 🔹 chọn đáp án
+    // Khi chọn đáp án
     quizEl.querySelectorAll(`input[name="q${cur}"]`).forEach((el) => {
       el.addEventListener("change", (e) => {
         user[cur] = parseInt(e.target.value);
@@ -113,6 +120,7 @@
       });
     });
 
+    // Nút quay lại
     $("#backBtn").onclick = () => {
       if (cur > 0) {
         cur--;
@@ -121,6 +129,7 @@
       }
     };
 
+    // Nút tiếp theo
     $("#nextBtn").onclick = () => {
       if (cur < questions.length - 1) {
         cur++;
@@ -131,6 +140,7 @@
       }
     };
 
+    // Nút giải thích
     $("#explainBtn").onclick = () => {
       showExplain = !showExplain;
       render();
@@ -140,32 +150,35 @@
   render();
   submitBtn.onclick = submitQuiz;
 
+  // Phần nộp bài (giữ nguyên)
   function submitQuiz() {
     let correct = 0;
-    const wrongs = [];
-
     const detailHtml = questions
       .map((q, i) => {
         const correctOpt = q.options.find((o) => o.correct);
         const picked = user[i];
         const isCorrect = picked !== null && q.options[picked]?.correct;
-
         if (isCorrect) correct++;
-        else wrongs.push(i);
 
         return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
-          ${q.img ? `<img src="${q.img}" style="max-width:100%;border-radius:8px;">` : ""}
-          ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
-          <div>✅ Đáp án đúng: <strong>${correctOpt.text}</strong></div>
+          ${q.img ? `<div class="q-img"><img src="${q.img}" alt=""></div>` : ""}
+          <div class="answer-line">Bạn chọn: ${
+            picked === null
+              ? "<em>(chưa chọn)</em>"
+              : `<span class="${isCorrect ? "correct" : "incorrect"}">${q.options[picked].text}</span>`
+          }</div>
+          <div class="answer-line">Đáp án đúng: <strong>${correctOpt.text}</strong></div>
+          ${q.vi ? `<div class="answer-line"><strong>Dịch:</strong> ${q.vi}</div>` : ""}
           ${
-            picked !== null
-              ? `<div>Bạn chọn: <span class="${isCorrect ? "correct" : "incorrect"}">${q.options[picked].text}</span></div>`
-              : "<div><em>(Chưa chọn)</em></div>"
+            q.explain || q.tip
+              ? `<div class="result-explain-box">
+                   ${q.explain ? `<div class="explain-title">📘 Giải thích:</div><div>${q.explain}</div>` : ""}
+                   ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
+                 </div>`
+              : ""
           }
-          ${q.explain ? `<div><strong>📘 Giải thích:</strong> ${q.explain}</div>` : ""}
-          ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
         </div>`;
       })
       .join("");
@@ -173,9 +186,11 @@
     quizEl.style.display = "none";
     resEl.style.display = "block";
     resEl.innerHTML = `
-      <div class="result-title">Kết quả: ${correct}/${questions.length} câu đúng</div>
+      <div class="result-title">Bạn làm đúng ${correct}/${questions.length}</div>
       ${detailHtml}
-      <div style="margin-top:15px"><a class="btn" href="index.html">🔙 Trang chủ</a></div>
+      <div style="margin-top:12px;">
+        <a class="btn" href="index.html">Trang Chủ</a>
+      </div>
     `;
   }
 })();

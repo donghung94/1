@@ -420,7 +420,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Luật bãi đậu xe (駐車場法) có mục đích gì?",
-    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị. Đáp án đúng là ①."
+    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị.."
   },
   {
     q: "問8　防水（ぼうすい）工事（こうじ）にないものを選（えら）べ。",
@@ -432,7 +432,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Hãy chọn công trình không thuộc hạng mục chống thấm.",
-    explain: "防水工事 là công trình chống thấm. サッシ工事 (công trình khung nhôm/kính) không thuộc nhóm này → đáp án đúng là ① (index 0)."
+    explain: "防水工事 là công trình chống thấm. サッシ工事 (công trình khung nhôm/kính) không thuộc nhóm này."
   },
   {
     q: "問11　路床（ろしょう）の上（うえ）に砕石（さいせき）などを敷（し）いて、２つの層（そう）は次（つぎ）のうちどれか。",
@@ -468,7 +468,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Ai chịu trách nhiệm chi trả Luật Bảo hiểm việc làm?",
-    explain: "Theo luật, người lao động, chủ doanh nghiệp và nhà nước cùng chia sẻ trách nhiệm đóng bảo hiểm → đáp án ① (index 0)."
+    explain: "Theo luật, người lao động, chủ doanh nghiệp và nhà nước cùng chia sẻ trách nhiệm đóng bảo hiểm ."
   },
   {
     q: "問39　雇用（こよう）保険法（ほけんほう）のお支払（しはら）いについて、適切（てきせつ）なものを選（えら）べ。",
@@ -480,7 +480,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 1,
     vi: "Luật bảo hiểm việc làm do ai chi trả?",
-    explain: "Cả doanh nghiệp và người lao động cùng chi trả → đáp án đúng là ② (index 1)."
+    explain: "Cả doanh nghiệp và người lao động cùng chi trả ."
   },
   {
     q: "問7　駐車場（ちゅうしゃじょう）法（ほう）の目的（もくてき）について、適切（てきせつ）なものを選（えら）べ。",
@@ -492,7 +492,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 2,
     vi: "Luật bãi đậu xe (駐車場法) có mục đích gì?",
-    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị → đáp án đúng là ③ (index 2)."
+    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị."
   }
 ];
   

@@ -243,3 +243,114 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
 }
 
 /* --- HẾT PHẦN CSS THÊM VÀO --- */
+/* --- CSS MỚI: DÙNG CHO PHẦN KẾT QUẢ/GIẢI THÍCH (Ví dụ Ảnh 2) --- */
+
+/* 1. Nền vàng nhạt cho toàn bộ câu hỏi trong phần kết quả */
+.result-item-container {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fffbe6; /* Màu vàng nhạt (giống Ảnh 2) */
+    border: 1px solid #fbd38d;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* 2. Style cho đáp án sau khi nộp bài (áp dụng cho từng dòng đáp án) */
+.result-answer-line {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* 3. Khung màu xanh lá cây cho Đáp án ĐÚNG trong phần kết quả (giống lúc chọn đúng) */
+.result-answer-line.correct {
+    background-color: #d4edda; /* Nền xanh nhạt */
+    border: 1px solid #155724; /* Khung xanh đậm */
+}
+
+/* 4. Khung màu đỏ cho Đáp án SAI (của người dùng) trong phần kết quả */
+.result-answer-line.incorrect {
+    background-color: #f8d7da; /* Nền đỏ nhạt */
+    border: 1px solid #721c24; /* Khung đỏ đậm */
+}
+```eof
+
+---
+
+## 2. File **`exam.js`** (Thay thế **toàn bộ** nội dung hàm `submitQuiz` bằng đoạn code này)
+
+Bạn cần mở file `exam.js`, tìm hàm `submitQuiz` (nó bắt đầu bằng `function submitQuiz() { ... }`) và thay thế toàn bộ nội dung của hàm đó bằng đoạn code dưới đây.
+
+**LƯU Ý:** Đoạn code này cũng bao gồm cả logic xử lý nút "Làm lại câu sai" và logic hiển thị kết quả tổng quan.
+
+```{javascript:Hàm submitQuiz đã sửa đổi trong exam.js:exam.js}
+function submitQuiz() {
+    timerRunning = false; // Dừng timer
+    submitBtn.style.display = "none"; // Ẩn nút nộp bài
+    let correct = 0;
+    const wrongQuestions = []; // Lưu trữ các đối tượng câu hỏi sai
+
+    const wrongHtml = questions
+        .map((q, i) => {
+            const picked = user[i];
+            const isCorrect = isCorrectAnswer(i);
+            
+            if (isCorrect) {
+                correct++;
+                return ""; // Không hiển thị câu đúng
+            } else {
+                wrongQuestions.push(q);
+            }
+
+            // Hiển thị chi tiết câu sai (với CSS mới)
+            const pickedText = picked !== null ? q.options[picked].text : "(chưa chọn)";
+            const correctOpt = q.options.find((o) => o.correct);
+
+            return `
+                <div class="result-item-container">
+                    <div class="q-text font-medium text-gray-800 mb-3"><b>Câu ${i + 1}:</b> ${q.q}</div>
+                    ${q.img ? `<img src="${q.img}" onerror="this.src='https://placehold.co/600x200/cccccc/333333?text=Image Placeholder';" style="max-width:100%;border-radius:8px;margin:8px 0;">` : ""}
+                    
+                    <div class="result-answer-line incorrect">
+                        ❌ <b>Đáp án bạn chọn:</b> ${pickedText}
+                    </div>
+
+                    <div class="result-answer-line correct">
+                        ✅ <b>Đáp án đúng:</b> ${correctOpt.text}
+                    </div>
+
+                    ${q.vi ? `<div class="mt-3 text-gray-600"><b>Dịch:</b> ${q.vi}</div>` : ""}
+                    ${q.explain ? `<div class="mt-2 text-blue-700"><b>📘 Giải thích:</b> ${q.explain}</div>` : ""}
+                    ${q.tip ? `<div class="mt-2 tip text-orange-700"><b>💡 Mẹo:</b> ${q.tip}</div>` : ""}
+                </div>
+            `;
+        })
+        .filter(Boolean)
+        .join("");
+
+    quizEl.style.display = "none";
+    resEl.style.display = "block";
+    
+    // Hiển thị nút làm lại câu sai
+    let floatingRedo = $("#floatingRedo");
+    if (floatingRedo) {
+        floatingRedo.style.display = wrongQuestions.length > 0 ? "block" : "none";
+    }
+
+    resEl.innerHTML = `
+        <div class="result-title text-3xl font-extrabold text-center mb-6 p-4 rounded-lg ${correct > questions.length / 2 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}">
+            ${correct > questions.length / 2 ? 'Chúc mừng! ' : 'Cần cố gắng! '} Bạn làm đúng ${correct}/${questions.length}
+        </div>
+        ${wrongQuestions.length ? `<h3 class="text-xl font-semibold mt-6 mb-3 border-b pb-2 text-gray-700">Các Câu Bạn Đã Làm Sai:</h3><div class="space-y-4">${wrongHtml}</div>` : "<div class='text-2xl text-center text-green-600 mt-8'>🎉 Bạn làm đúng tất cả!</div>"}
+    `;
+
+    // Lưu lại danh sách câu sai để làm lại
+    window.lastWrongQuestions = wrongQuestions;
+}
+```eof
+
+**Tóm tắt cuối cùng:**
+
+* **`style.css`**: Thêm 4 đoạn CSS mới (có tiền tố `.result-`).
+* **`exam.js`**: **Thay thế** toàn bộ hàm `submitQuiz` bằng đoạn code JavaScript mới.

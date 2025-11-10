@@ -208,7 +208,7 @@
   submitBtn.onclick = submitQuiz;
 
   // --- HÀM NỘP BÀI (Giữ nguyên) ---
-Z
+
   function submitQuiz() {
     timerRunning = false; // Dừng timer
     let correct = 0;
@@ -236,11 +236,11 @@ Z
             ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
             ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain}</div>` : ""}
             ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
-    _     </div>
+         </div>
         `;
       })
       .filter(Boolean)
-C      .join("");
+     .join("");
 
     quizEl.style.display = "none";
     resEl.style.display = "block";

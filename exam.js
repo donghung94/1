@@ -28,7 +28,7 @@
 
   // ⏱️ Timer
   let timeLeft = 60 * 60;
-  let timerRunning = true; 
+  let timerRunning = true; 
   const tick = () => {
     if (!timerRunning) return;
     const m = Math.floor(timeLeft / 60),
@@ -43,7 +43,7 @@
     timeLeft--;
     setTimeout(tick, 1000);
   };
-  
+  
   if(timerEl) tick();
 
 
@@ -91,11 +91,11 @@
         ${q.options
           .map(
             (op, i) => {
-              let optionClass = "opt";
+              let optionClass = "opt"; // Bắt đầu bằng class 'opt' (từ CSS mới)
               let markText = "";
 
               if (hasAnswered) {
-                // Nếu đã trả lời, áp dụng class tô màu
+                // Nếu đã trả lời, áp dụng class tô màu (logic này vẫn đúng)
                 if (op.correct) {
                   optionClass += " correct-answer"; // Đáp án đúng
                   markText = "✅";
@@ -103,29 +103,26 @@
                   optionClass += " incorrect-picked"; // Đáp án sai người dùng chọn
                   markText = "❌";
                 }
-              } 
+              } 
 
+              // --- SỬA 1 (HTML): Bỏ <input> và thay <label> bằng <div> ---
               return `
-              <label class="${optionClass}" data-idx="${i}">
-                <input type="radio" name="q${cur}" value="${i}" ${user[cur] === i ? "checked" : ""} ${hasAnswered ? "disabled" : ""}>
-                <div>${op.text}</div>
+              <div class="${optionClass}" data-idx="${i}">
+                                <div>${op.text}</div>
                 <span class="mark">${markText}</span>
-              </label>`;
+              </div>`;
             }
           )
           .join("")}
       </div>
 
-      <!-- THAY ĐỔI: Sắp xếp lại Nút điều hướng -->
-      <div class="nav">
+            <div class="nav">
         <button class="btn" id="backBtn" ${cur === 0 ? 'disabled' : ''}>⬅️ Quay lại</button>
-        <!-- Nút Giải thích (vị trí giữa) -->
-        <button class="btn" id="explainBtn">📘 Giải thích</button>
-        <!-- Nút Tiếp theo (vị trí cuối) -->
-        <button class="btn" id="nextBtn" ${cur === questions.length - 1 ? 'disabled' : ''}>➡️ Tiếp theo</button>
+                <button class="btn" id="explainBtn">📘 Giải thích</button>
+                <button class="btn" id="nextBtn" ${cur === questions.length - 1 ? 'disabled' : ''}>➡️ Tiếp theo</button>
       </div>
 
-      <div id="explainBox" class="explain-box" style="display:${hasAnswered ? 'block' : 'none'};">
+            <div id="explainBox" class="explain-box" style="display:${hasAnswered ? 'block' : 'none'};">
         ${
           q.explain || q.tip || q.vi
             ? `
@@ -143,18 +140,20 @@
     const optionEls = quizEl.querySelectorAll(".opt");
     optionEls.forEach((el) => {
       el.addEventListener("click", () => {
-        // Nếu đã trả lời, không làm gì
-        if (user[cur] !== null) return; 
+        // Nếu đã trả lời, không làm gì (Đây là logic "Không thể thay đổi" của bạn)
+        if (user[cur] !== null) return; 
 
         const idx = parseInt(el.dataset.idx);
         user[cur] = idx;
         const op = q.options[idx];
-        const hasAnswered = true;
+        const hasAnswered = true; // (Biến này không còn cần thiết nhưng giữ lại cũng không sao)
 
-        // ✅ Hiển thị đúng/sai, áp dụng màu nền và khoá các input
+        // ✅ Hiển thị đúng/sai, áp dụng màu nền và khoá (Giữ nguyên logic)
         optionEls.forEach((optEl, j) => {
           const mark = optEl.querySelector(".mark");
-          optEl.querySelector("input").disabled = true;
+          
+          // --- SỬA 2 (LOGIC): Bỏ dòng disable input ---
+          // optEl.querySelector("input").disabled = true; // Dòng này bị xóa
 
           if (q.options[j].correct) {
             // Đáp án đúng
@@ -172,20 +171,21 @@
             }
           }
         });
-        
-        // Hiện giải thích sau khi chọn đáp án
-        const explainBox = $("#explainBox");
-        if (explainBox) explainBox.style.display = "block";
+        
+        // Hiện giải thích sau khi chọn đáp án
+        const explainBox = $("#explainBox");
+        if (explainBox) explainBox.style.display = "block";
       })
     });
 
+    // Logic nút Giải thích (Giữ nguyên)
     $("#explainBtn").onclick = () => {
       if (user[cur] !== null) {
         const box = $("#explainBox");
         box.style.display = box.style.display === "none" ? "block" : "none";
       } else {
-        // Thông báo cần chọn đáp án
-        console.log("Hãy chọn đáp án trước khi xem giải thích."); 
+        // Sửa: Dùng alert thay vì console.log để thông báo rõ hơn
+        alert("Hãy chọn đáp án trước khi xem giải thích.");
       }
     };
 
@@ -207,6 +207,8 @@
   render();
   submitBtn.onclick = submitQuiz;
 
+  // --- HÀM NỘP BÀI (Giữ nguyên) ---
+Z
   function submitQuiz() {
     timerRunning = false; // Dừng timer
     let correct = 0;
@@ -234,15 +236,15 @@
             ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
             ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain}</div>` : ""}
             ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
-          </div>
+    _     </div>
         `;
       })
       .filter(Boolean)
-      .join("");
+C      .join("");
 
     quizEl.style.display = "none";
     resEl.style.display = "block";
-    
+    
     // Hiển thị nút làm lại câu sai
     if (floatingRedo) {
       floatingRedo.style.display = wrongQuestions.length > 0 ? "block" : "none";
@@ -257,7 +259,7 @@
     window.lastWrongQuestions = wrongQuestions;
   }
 
-  // --- Nút Làm Lại Câu Sai (fixed) ---
+  // --- Nút Làm Lại Câu Sai (fixed) (Giữ nguyên) ---
   const floatingRedo = document.createElement("button");
   floatingRedo.id = "floatingRedo";
   floatingRedo.textContent = "🔄 Làm lại câu sai";
@@ -265,20 +267,20 @@
 
 
   floatingRedo.onclick = () => {
-    const wrongs = window.lastWrongQuestions || [];
+SI    const wrongs = window.lastWrongQuestions || [];
 
     if (wrongs.length === 0) {
       console.log("Không có câu sai để làm lại!");
       return;
     }
-    
+    
     // Thiết lập lại bộ câu hỏi chỉ gồm các câu sai
-    questions.length = 0; 
+    questions.length = 0; 
     shuffle(wrongs).forEach((q) => questions.push(q)); // Trộn và thêm lại
 
     cur = 0;
     user = new Array(questions.length).fill(null); // Reset đáp án người dùng
-    timeLeft = 60 * 60; // Reset timer
+SI    timeLeft = 60 * 60; // Reset timer
     timerRunning = true; // Bật lại timer
 
     quizEl.style.display = "block";

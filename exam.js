@@ -96,7 +96,7 @@
 
               if (hasAnswered) {
                 // Nếu đã trả lời, áp dụng class tô màu (logic này vẫn đúng)
-                if (op.correct) {
+Â               if (op.correct) {
                   optionClass += " correct-answer"; // Đáp án đúng
                   markText = "✅";
                 } else if (user[cur] === i) {
@@ -108,7 +108,7 @@
               // --- SỬA 1 (HTML): Bỏ <input> và thay <label> bằng <div> ---
               return `
               <div class="${optionClass}" data-idx="${i}">
-                                <div>${op.text}</div>
+                <div>${op.text}</div>
                 <span class="mark">${markText}</span>
               </div>`;
             }
@@ -116,13 +116,13 @@
           .join("")}
       </div>
 
-            <div class="nav">
+      <div class="nav">
         <button class="btn" id="backBtn" ${cur === 0 ? 'disabled' : ''}>⬅️ Quay lại</button>
-                <button class="btn" id="explainBtn">📘 Giải thích</button>
-                <button class="btn" id="nextBtn" ${cur === questions.length - 1 ? 'disabled' : ''}>➡️ Tiếp theo</button>
+        <button class="btn" id="explainBtn">📘 Giải thích</button>
+        <button class="btn" id="nextBtn" ${cur === questions.length - 1 ? 'disabled' : ''}>➡️ Tiếp theo</button>
       </div>
 
-            <div id="explainBox" class="explain-box" style="display:${hasAnswered ? 'block' : 'none'};">
+      <div id="explainBox" class="explain-box" style="display:${hasAnswered ? 'block' : 'none'};">
         ${
           q.explain || q.tip || q.vi
             ? `
@@ -146,14 +146,13 @@
         const idx = parseInt(el.dataset.idx);
         user[cur] = idx;
         const op = q.options[idx];
-        const hasAnswered = true; // (Biến này không còn cần thiết nhưng giữ lại cũng không sao)
 
         // ✅ Hiển thị đúng/sai, áp dụng màu nền và khoá (Giữ nguyên logic)
         optionEls.forEach((optEl, j) => {
           const mark = optEl.querySelector(".mark");
-          
-          // --- SỬA 2 (LOGIC): Bỏ dòng disable input ---
-          // optEl.querySelector("input").disabled = true; // Dòng này bị xóa
+          
+          // --- SỬA 2 (LOGIC): Bỏ dòng disable input ---
+          // optEl.querySelector("input").disabled = true; // Dòng này đã bị xóa trong code gốc
 
           if (q.options[j].correct) {
             // Đáp án đúng
@@ -169,7 +168,7 @@
               optEl.classList.add("correct-answer");
               mark.textContent = "✅";
             }
-          }
+        _ }
         });
         
         // Hiện giải thích sau khi chọn đáp án
@@ -178,7 +177,7 @@
       })
     });
 
-    // Logic nút Giải thích (Giữ nguyên)
+    // Logic nút Giải thích (Giữ nguyên)
     $("#explainBtn").onclick = () => {
       if (user[cur] !== null) {
         const box = $("#explainBox");
@@ -207,8 +206,7 @@
   render();
   submitBtn.onclick = submitQuiz;
 
-  // --- HÀM NỘP BÀI (Giữ nguyên) ---
-
+  // --- HÀM NỘP BÀI (Giữ nguyên) ---
   function submitQuiz() {
     timerRunning = false; // Dừng timer
     let correct = 0;
@@ -233,14 +231,14 @@
             ${q.img ? `<img src="${q.img}" style="max-width:100%;border-radius:8px;margin:8px 0;">` : ""}
             <div class="answer-line">❌ <b>Đáp án bạn chọn:</b> ${picked !== null ? q.options[picked].text : "(chưa chọn)"}</div>
             <div class="answer-line">✅ <b>Đáp án đúng:</b> ${correctOpt.text}</div>
-            ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
+          _ ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
             ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain}</div>` : ""}
-            ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
-         </div>
+      Â       ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
+          </div>
         `;
       })
       .filter(Boolean)
-     .join("");
+      .join("");
 
     quizEl.style.display = "none";
     resEl.style.display = "block";
@@ -260,14 +258,14 @@
   }
 
   // --- Nút Làm Lại Câu Sai (fixed) (Giữ nguyên) ---
-  const floatingRedo = document.createElement("button");
+s  const floatingRedo = document.createElement("button");
   floatingRedo.id = "floatingRedo";
   floatingRedo.textContent = "🔄 Làm lại câu sai";
   document.body.appendChild(floatingRedo);
 
 
   floatingRedo.onclick = () => {
-SI    const wrongs = window.lastWrongQuestions || [];
+    const wrongs = window.lastWrongQuestions || [];
 
     if (wrongs.length === 0) {
       console.log("Không có câu sai để làm lại!");
@@ -280,7 +278,7 @@ SI    const wrongs = window.lastWrongQuestions || [];
 
     cur = 0;
     user = new Array(questions.length).fill(null); // Reset đáp án người dùng
-SI    timeLeft = 60 * 60; // Reset timer
+    timeLeft = 60 * 60; // Reset timer
     timerRunning = true; // Bật lại timer
 
     quizEl.style.display = "block";

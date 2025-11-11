@@ -11,7 +11,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 1,
   vi: "Công việc ghép nối, dán tấm kim loại.",
-  explain: "Trong ngành板金, việc ghép, dán, nối các tấm kim loại (張り合わせ) là kỹ thuật cơ bản phù hợp."
+  explain: "Trong ngành 　板金（ばんきん）, việc ghép, dán, nối các tấm kim loại 張（は）り合（あ）わせな工事（こうじ） là kỹ thuật cơ bản phù hợp."
 },
 {
   q: "問92　地下（ちか）躯体（くたい）工事（こうじ）について、ない工事（こうじ）を選（えら）べ",
@@ -38,7 +38,7 @@ window.QUESTION_SETS["4"] = [
   explain: "Việc thực hiện công trình yêu cầu phối hợp, không chỉ do người thợ, mà職長 cũng chịu trách nhiệm chỉ đạo."
 },
 {
-  q: "問94　労働安全衛生法（ろうどうあんぜんえいせいほう）について、不適切（ふてきせつ）なものを選（えら）べ。【学科11】",
+  q: "問94　労働安全衛生法（あんぜんえいせいほう）について、不適切（ふてきせつ）なものを選（えら）べ。【学科11】",
   options: [
     "職場（しょくば）における労働者（ろうどうしゃ）の安全（あんぜん）と健康（けんこう）を確保（かくほ）すること。",
     "定（さだ）められている内容（ないよう）を知（し）っておくことで、職長（しょくちょう）として、会社（かいしゃ）や上司（じょうし）に報告（ほうこく）すべき内容（ないよう）や改善提案（かいぜんていあん）をするための視点（してん）を持（も）つことができます。",
@@ -58,7 +58,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 3,
   vi: "Trong các loại công trình đào hầm sau đây hãy chọn loại không tồn tại không phải là loại hầm thực tế.",
-  explain: "海底トンネル (hầm dưới đáy biển) chỉ là vị trí." 
+  explain: "海底（かいてい）トンネル (hầm dưới đáy biển) chỉ là vị trí." 
 },
 {
   q: "問96　舗装（ほそう）工事（こうじ）について、一番（いちばん）下（した）の層（そう）で作業（さぎょう）するのはどれか【42】",
@@ -70,7 +70,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 0,
   vi: "Lớp thấp nhất trong kết cấu mặt đường.",
-  explain: "Lớp nền tự nhiên (路床) là phần thấp nhất chịu toàn bộ tải trọng phía trên."
+  explain: "Lớp nền tự nhiên 路床（ろしょう） là phần thấp nhất chịu toàn bộ tải trọng phía trên."
 },
 {
   q: "問97　斜面（しゃめん）や平坦（へいたん）でない土地（とち）、低（ひく）い土地（とち）に土砂（どしゃ）を盛（も）り上（あ）げて、平（たい）らな地表（ちひょう）をつくる作業（さぎょう）を選（えら）べ。【83】",
@@ -82,7 +82,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 0,
   vi: "Đắp đất tạo mặt bằng phẳng.",
-  explain: "盛土 là công việc đắp thêm đất để làm bằng phẳng khu vực đất thấp hoặc nghiêng."
+  explain: "盛土（もりど）là công việc đắp thêm đất để làm bằng phẳng khu vực đất thấp hoặc nghiêng."
 },
   {
   q: "問98　三角形（さんかくけい）を基本（きほん）とした構造（こうぞう）で屋根（やね）、ドーム、橋梁（きょうりょう）などで使（つか）われる構造（こうぞう）は何（なん）か。",
@@ -117,8 +117,8 @@ window.QUESTION_SETS["4"] = [
     "給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ）"
   ],
   answer: 3,
-  vi: "Công trình lắp đặt thiết bị cấp thoát nước sinh hoạt.",
-  explain: "給排水衛生設備工事 là công việc lắp đặt hệ thống nước và thoát nước để duy trì môi trường sống sạch sẽ, vệ sinh."
+  vi: "Công trình lắp đặt thiết bị cấp thoát nước sinh hoạt là gì? ",
+  explain: "給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ） là công việc lắp đặt hệ thống nước và thoát nước để duy trì môi trường sống sạch sẽ, vệ sinh."
 },
  {
     q: "問101　事故（じこ）やケガが無（な）く、無事（ぶじ）に１日の作業（さぎょう）が終（お）わることを願（ねが）う気持（きもち）を表（あらわ）すために、運用（できつ）なあいさつはどれか【78】",
@@ -130,7 +130,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 1,
     vi: "Câu chào thể hiện mong muốn một ngày làm việc an toàn, không tai nạn hay chấn thương là gì?",
-    explain: "Đáp án đúng là ‘ご安全に’ nghĩa là 'Chúc bạn an toàn'."
+    explain: "Đáp án đúng là ‘ご安全（あんぜん）に’ nghĩa là 'Chúc bạn an toàn'."
   },
   {
     q: "問102　都市（とし）ガス供給（きょうきゅう）のしくみにないものを選（えら）べ【学科３５】",
@@ -142,7 +142,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 0,
     vi: "Hãy chọn nội dung không thuộc quy trình cung cấp khí đốt thành phố.",
-    explain: "‘消毒して浄水池にためられます’ là quy trình xử lý nước, không phải quy trình khí đốt."
+    explain: "消毒（しょうどく）して、浄水池（じょうすいいけ）に貯（た）められます là quy trình xử lý nước, không phải quy trình khí đốt."
   },
   {
     q: "問103　「ご苦労（くろう）さま」と言（い）われたら、どのように返事（へんじ）しますか。正（ただ）しいものを一つ選（えら）べ【79】",
@@ -153,8 +153,8 @@ window.QUESTION_SETS["4"] = [
       "ありがとうございます。"
     ],
     answer: 3,
-    vi: "Khi ai đó nói 'ご苦労さま', bạn nên đáp lại thế nào?",
-    explain: "‘ありがとうございます’ là cách đáp đúng và lịch sự khi cấp trên nói ‘ご苦労さま’."
+    vi: "Khi ai đó nói 'ご苦労（くろう）さま', bạn nên đáp lại thế nào?",
+    explain: "‘ありがとうございます’ là cách đáp đúng và lịch sự khi cấp trên nói ご苦労（くろう）さま."
   },
   {
     q: "問104　指導（しどう）とは何（なに）を示（しめ）すか【76】",
@@ -166,7 +166,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 0,
     vi: "‘Chỉ đạo’ nghĩa là gì?",
-    explain: "指導 là hành động đưa ra lời khuyên mang tính xây dựng để thúc đẩy sự phát triển của người khác."
+    explain: "指導 （しどう） là hành động đưa ra lời khuyên mang tính xây dựng để thúc đẩy sự phát triển của người khác."
   },
   {
     q: "問105　人（ひと）が情報（じょうほう）を受（う）け取（と）り、行動（こうどう）し、そのことの意味（いみ）を理解（りかい）するため、心（こころ）の働（はたら）きを何（なん）というか【14】",
@@ -202,7 +202,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 1,
     vi: "Trong mối quan hệ giữa chi phí, thời gian và chất lượng, câu nào sai?",
-    explain: "Câu 2 sai: Nếu làm nhanh hơn, chi phí thường tăng, không giảm."
+    explain: " Nếu làm nhanh hơn, chi phí thường tăng, không giảm."
   },
   {
     q: "問108　手戻（てもど）りはどんな状態（じょうたい）を示（しめ）すか【20】",
@@ -213,7 +213,7 @@ window.QUESTION_SETS["4"] = [
       "一部（いちぶ）を修正（しゅうせい）したりすべてを最初（さいしょ）から作（つく）り直（なお）したりすること。"
     ],
     answer: 1,
-    vi: "‘手戻り’ là tình trạng gì?",
+    vi: "手戻（てもど）り là tình trạng gì?",
     explain: "Là tình trạng phải quay lại công đoạn trước để sửa lỗi hoặc làm lại do sai sót."
   },
   {
@@ -238,7 +238,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 3,
     vi: "Hãy chọn phương án không liên quan đến bảo ôn – bảo lạnh.",
-    explain: "‘遮光’ nghĩa là chống sáng, không liên quan đến bảo ôn – bảo lạnh."
+    explain: "遮光（しゃこう） nghĩa là chống sáng, không liên quan đến bảo ôn – bảo lạnh."
   },
   {
     q: "問111　KYTの基本（きほん）として４ラウンドについて、正（ただ）しくないものを一つ選（えら）べ【68・69】",
@@ -250,7 +250,7 @@ window.QUESTION_SETS["4"] = [
     ],
     answer: 0,
     vi: "Trong 4 bước KYT, câu nào không đúng?",
-    explain: "‘不要な物を廃棄する’ không thuộc 4 bước KYT (xác định, phân tích, đối sách, hành động)."
+    explain: "不要（ふよう）な物（もの）を廃棄（はいき）する’ không thuộc 4 bước KYT (xác định, phân tích, đối sách, hành động)."
   },
   {
     q: "問145　2022年（ねん）の日本（にほん）の年代別（ねんだいべつ）労働力（ろうどうりょく）人口（じんこう）で、最（もっと）も人口（じんこう）の多（おお）いのは何歳（なんさい）からか。【89】",
@@ -286,8 +286,8 @@ window.QUESTION_SETS["4"] = [
     "主任（しゅにん）技術者（ぎじゅつしゃ）"
   ],
   answer: 1,
-  vi: "職長 là người chỉ huy trực tiếp công nhân (作業員) （さぎょういん）tại hiện trường.",
-  explain: "職長 chịu trách nhiệm chỉ đạo công nhân　作業員（さぎょういん）, đảm bảo an toàn và tiến độ tại công trường."
+  vi: "職長（しょくちょう） là người chỉ huy trực tiếp công nhân (作業員) （さぎょういん）tại hiện trường.",
+  explain: "職長（しょくちょう） chịu trách nhiệm chỉ đạo công nhân　作業員（さぎょういん）, đảm bảo an toàn và tiến độ tại công trường."
 },
 {
   q: "問114　建築物（けんちくぶつ）の安全性（あんぜんせい）に関（かん）わる柱（はしら）や梁（はり）などがわかるように書（か）かれた実施（じっし）計画図（けいかくず）は何（なに）というか【79】",
@@ -298,8 +298,8 @@ window.QUESTION_SETS["4"] = [
     "設備図（せつびず）"
   ],
   answer: 1,
-  vi: "‘構造図’ là bản vẽ kết cấu thể hiện phần cột và dầm của công trình.",
-  explain: "構造図 biểu thị phần chịu lực (柱・梁) để đảm bảo độ bền vững và an toàn."
+  vi: "‘構造図（こうぞうず）’ là bản vẽ kết cấu thể hiện phần cột và dầm của công trình.",
+  explain: "構造図（こうぞうず） biểu thị phần chịu lực , để đảm bảo độ bền vững và an toàn."
 },
 {
   q: "問115　都市化（としか）することで、都市（とし）の気温（きおん）が周辺（しゅうへん）の気温（きおん）よりも高（たか）くなる現象（げんしょう）のことは何という【40】",
@@ -323,7 +323,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 3,
   vi: "Công việc dùng thép để làm khung là công việc kết cấu, không phải thiết bị.",
-  explain: "設備工事 bao gồm điện, nước, thông gió... Còn khung thép (鉄骨工事) là phần kết cấu."
+  explain: "設備工事（せつびこうじ） bao gồm điện, nước, thông gió... Còn khung thép 鉄骨（てっこつ） là phần kết cấu."
 },
 {
   q: "問117　先（さき）に進（すす）んだ作業（さぎょう）工程（こうてい）をやり直（なお）すことは何というか【20】",
@@ -334,8 +334,8 @@ window.QUESTION_SETS["4"] = [
     "手直（てなお）し"
   ],
   answer: 2,
-  vi: "‘手戻り’ nghĩa là phải quay lại công đoạn trước để làm lại do sai sót.",
-  explain: "Khi một phần đã làm xong nhưng phải sửa hoặc làm lại do lỗi, đó là 手戻り."
+  vi: "手戻（てもど）り nghĩa là phải quay lại công đoạn trước để làm lại do sai sót.",
+  explain: "Khi một phần đã làm xong nhưng phải sửa hoặc làm lại do lỗi, đó là手戻（てもど）り."
 },
   {
   q: "問120　電気（でんき）工事（こうじ）のうち、外線（がいせん）工事（こうじ）と言（い）われている工事（こうじ）は次（つぎ）のうちどれか【62】【92】",
@@ -347,6 +347,6 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 2,
   vi: "Trong các loại công trình điện, công trình được gọi là ‘ngoại tuyến’ là gì?",
-  explain: "‘外線工事’ là công việc nối dây điện trên cột điện và dẫn điện từ bên ngoài vào tòa nhà."
+  explain: "外線（がいせん）工事（こうじ） là công việc nối dây điện trên cột điện và dẫn điện từ bên ngoài vào tòa nhà."
 },
 ];

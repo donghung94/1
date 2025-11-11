@@ -11,7 +11,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 2,
   vi: "Hãy chọn nguyên nhân không đúng gây ra việc ‘chờ việc’.",
-  explain: "手待ち là thời gian chờ do vật tư, máy móc hoặc tiến độ trước bị chậm; ‘作業手順の不徹底’ không phải là nguyên nhân trực tiếp."
+  explain: "手待（てま）ち là thời gian chờ do vật tư, máy móc hoặc tiến độ trước bị chậm; 作業（さぎょう）手順（てじゅん）の不徹底（ふてってい） không phải là nguyên nhân trực tiếp."
 },
 {
   q: "問122　仕事（しごと）を構成（こうせい）する４つの要素（ようそ）の中（なか）で、ないものを選（えら）べ。",
@@ -23,7 +23,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 3,
   vi: "Trong 4 yếu tố cấu thành công việc, hãy chọn yếu tố không thuộc nhóm này.",
-  explain: "発注者 (người đặt hàng) không thuộc yếu tố cấu thành công việc mà là bên liên quan."
+  explain: "発注者（はっちゅうしゃ） (người đặt hàng) không thuộc yếu tố cấu thành công việc mà là bên liên quan."
 },
 {
   q: "問123　建築（けんちく）基準法（きじゅんほう）で定（さだ）められたものは、不適切（ふてきせつ）なものを選（えら）べ【19】",
@@ -35,7 +35,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 1,
   vi: "Trong các quy định của Luật tiêu chuẩn xây dựng, hãy chọn nội dung không phù hợp.",
-  explain: "‘インターネットの接続品質’ không thuộc quy định của Luật Xây dựng."
+  explain: "インターネットの接続（せつぞく）品質（ひんしつ） không thuộc quy định của Luật Xây dựng."
 },
 {
   q: "問124　労働（ろうどう）災害（さいがい）補償（ほしょう）保険法（ほけんほう）として、病院（びょういん）での治療費（ちりょうひ）は全額（ぜんがく）、誰（だれ）から支払（しはら）うか【15】",
@@ -47,7 +47,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 1,
   vi: "Theo Luật bảo hiểm tai nạn lao động, chi phí điều trị được chi trả bởi ai?",
-  explain: "Toàn bộ chi phí điều trị do ‘労災保険’ (bảo hiểm tai nạn lao động) chi trả, không do người lao động."
+  explain: "Toàn bộ chi phí điều trị do 労災（ろうさい）保険（ほけん） (bảo hiểm tai nạn lao động) chi trả, không do người lao động."
 },
 {
   q: "問125　防波堤（ぼうはてい）工事（こうじ）は何（なん）か【40】",
@@ -58,8 +58,8 @@ window.QUESTION_SETS["5"] = [
     "港（みなと）で船（ふね）から荷物（にもつ）を積（つ）んだり降（お）ろしたりするための工事（こうじ）"
   ],
   answer: 0,
-  vi: "Công trình đê chắn sóng (防波堤工事) là loại công trình nào?",
-  explain: "防波堤工事 nhằm ngăn sóng biển tràn vào cảng để tàu thuyền cập bến an toàn."
+  vi: "Công trình đê chắn sóng 防波堤（ぼうはてい）工事（こうじ）là loại công trình nào?",
+  explain: "防波堤（ぼうはてい）工事（こうじ） nhằm ngăn sóng biển tràn vào cảng để tàu thuyền cập bến an toàn."
 },
   {
     "q": "問126　電気（でんき）通信（つうしん）設備（せつび）の有線（ゆうせん）設備（せつび）はどれか【63】",
@@ -71,7 +71,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 2,
     "vi": "Thiết bị thông tin hữu tuyến là thiết bị nào?",
-    "explain": "PBX (Private Branch Exchange) là hệ thống tổng đài nội bộ – thuộc loại thiết bị thông tin có dây (有線設備)."
+    "explain": "PBX (Private Branch Exchange) là hệ thống tổng đài nội bộ – thuộc loại thiết bị thông tin có dây 有線（ゆうせん）設備（せつび）."
   },
   {
     "q": "問127　地下（ちか）躯体（くたい）工事（こうじ）は何（なん）か【32】",
@@ -83,7 +83,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 0,
     "vi": "Công trình kết cấu tầng hầm gồm những gì?",
-    "explain": "‘地下躯体工事’ là phần thi công kết cấu chính của tầng hầm — gồm nền, cột, dầm, tường, sàn."
+    "explain": "地下（ちか）躯体（くたい）工事（こうじ） là phần thi công kết cấu chính của tầng hầm — gồm nền, cột, dầm, tường, sàn."
   },
   {
     "q": "問128　道路（どうろ）工事（こうじ）にない道路（どうろ）を選（えら）べ【27】",
@@ -107,7 +107,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 0,
     "vi": "Câu nói thể hiện sự cảm ơn và biết ơn người khác là gì?",
-    "explain": "‘ご苦労さま’ là lời cảm ơn, thể hiện sự trân trọng với công sức người khác."
+    "explain": "ご苦労（くろう）さま là lời cảm ơn, thể hiện sự trân trọng với công sức người khác."
   },
   {
     "q": "問130　最低賃金法（さいていちんぎんほう）について、不適切（ふてきせつ）なものを選（えら）ぶ。",
@@ -179,7 +179,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 2,
     "vi": "Về điều kiện lao động, hãy chọn mục không phù hợp.",
-    "explain": "‘休憩場所’ (địa điểm nghỉ) không phải là điều kiện lao động quy định trong hợp đồng."
+    "explain": "休憩（きゅうけい）場所（ばしょ） (địa điểm nghỉ) không phải là điều kiện lao động quy định trong hợp đồng."
   },
   {
     "q": "問136　労働（ろうどう）災害（さいがい）の保険料（ほけんりょう）はだれが払（はら）うか【15】",
@@ -191,7 +191,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 0,
     "vi": "Phí bảo hiểm tai nạn lao động do ai chi trả?",
-    "explain": "Phí bảo hiểm lao động (労災保険料) do doanh nghiệp chi trả toàn bộ, không trừ vào lương công nhân."
+    "explain": "Phí bảo hiểm lao động 保険料（ほけんりょう） do doanh nghiệp chi trả toàn bộ, không trừ vào lương công nhân."
   },
   {
     "q": "問137　労働者（ろうどうしゃ）が負傷（ふしょう）した場合（ばあい）、使用（しよう）する保険料（ほけんりょう）はだれが払（はら）うか【15】",
@@ -203,7 +203,7 @@ window.QUESTION_SETS["5"] = [
     ],
     "answer": 3,
     "vi": "Khi người lao động bị thương trong lúc làm việc, ai trả tiền bảo hiểm?",
-    "explain": "Trong trường hợp tai nạn lao động, toàn bộ chi phí bảo hiểm do doanh nghiệp (事業主) chi trả."
+    "explain": "Trong trường hợp tai nạn lao động, toàn bộ chi phí bảo hiểm do doanh nghiệp 事業主（じぎょうぬし) chi trả."
   },
   {
   q: "問138　職業（しょくぎょう）能力（のうりょく）開発（かいはつ）促進（そくしん）法（ほう）は、職業（しょくぎょう）訓練（くんれん）や（　　　）の内容（ないよう）を充実（じゅうじつ）させることなどにより、労働者（ろうどうしゃ）の職業（しょくぎょう）能力（のうりょく）を高（たか）めることを目的（もくてき）とした法律（ほうりつ）です。【17】",
@@ -215,7 +215,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 1,
   vi: "Luật xúc tiến phát triển năng lực nghề nghiệp là luật nhằm nâng cao kỹ năng nghề của người lao động thông qua việc củng cố đào tạo nghề và kỳ thi đánh giá kỹ năng.",
-  explain: "『職業能力開発促進法』 quy định việc đào tạo và đánh giá kỹ năng nghề (技能検定) để nâng cao năng lực của người lao động. Do đó đáp án đúng là 技能検定（ぎのうけんてい）."
+  explain: "quy định việc đào tạo và đánh giá kỹ năng nghề để nâng cao năng lực của người lao động. Do đó đáp án đúng là 技能検定（ぎのうけんてい）."
 },
 {
   q: "問139　万（まん）が一（いち）、事故（じこ）が発生（はっせい）した場合（ばあい）の対応（たいおう）について正（ただ）しいものはどれか。【13】",
@@ -227,7 +227,7 @@ window.QUESTION_SETS["5"] = [
   ],
   answer: 1,
   vi: "Trong trường hợp xảy ra tai nạn, điều quan trọng là xác nhận an toàn và ưu tiên cứu giúp người bị nạn.",
-  explain: "Khi có tai nạn lao động, nguyên tắc xử lý đầu tiên là đảm bảo an toàn hiện trường và ưu tiên cứu nạn người bị thương. Vì vậy đáp án đúng là số 2."
+  explain: "Khi có tai nạn lao động, nguyên tắc xử lý đầu tiên là đảm bảo an toàn hiện trường và ưu tiên cứu nạn người bị thương."
 },
 {
   q: "問140　最低（さいてい）の労働（ろうどう）条件（じょうけん）が定（さだ）められた法律（ほうりつ）は、次（つぎ）のうちどれか。【9】",
@@ -238,8 +238,8 @@ window.QUESTION_SETS["5"] = [
     "雇用（こよう）保険（ほけん）法（ほう）"
   ],
   answer: 2,
-  vi: "Luật quy định điều kiện lao động tối thiểu là Luật Tiêu chuẩn Lao động (労働基準法).",
-  explain: "労働基準法（ろうどうきじゅんほう） quy định các tiêu chuẩn cơ bản về điều kiện làm việc như lương, giờ làm, nghỉ phép... Đây là luật cơ bản bảo vệ quyền lợi người lao động."
+  vi: "Luật quy định điều kiện lao động tối thiểu là Luật Tiêu chuẩn Lao động 労働（ろうどう）基準（きじゅん）法（ほう）.",
+  explain: " 労働（ろうどう）基準（きじゅん）法（ほう） quy định các tiêu chuẩn cơ bản về điều kiện làm việc như lương, giờ làm, nghỉ phép... Đây là luật cơ bản bảo vệ quyền lợi người lao động."
 },
  {
     q: "問141　雇用（こよう）保険法（ほけんほう）は誰（だれ）を払（はら）うか。【15】",
@@ -250,8 +250,8 @@ window.QUESTION_SETS["5"] = [
       "事業主（じぎょうぬし）"
     ],
     answer: 0,
-    vi: "Bảo hiểm thất nghiệp (雇用保険) do cả người lao động, chủ doanh nghiệp và Nhà nước cùng chi trả.",
-    explain: "雇用保険法 quy định: phí bảo hiểm được đóng bởi 3 bên — người lao động, người sử dụng lao động và quốc gia (国庫). Mục đích là hỗ trợ người lao động khi thất nghiệp."
+    vi: "Bảo hiểm thất nghiệp  do cả người lao động, chủ doanh nghiệp và Nhà nước cùng chi trả.",
+    explain: " quy định: phí bảo hiểm được đóng bởi 3 bên — người lao động, người sử dụng lao động và quốc gia . Mục đích là hỗ trợ người lao động khi thất nghiệp."
   },
   {
     q: "問142　比較的（ひかくてき）規模（きぼ）の大（おお）きい建築（けんちく）工事（こうじ）における準備（じゅんび）工事（こうじ）の説明（せつめい）でふさわしくないのは、次（つぎ）のうちどれか。",
@@ -263,7 +263,7 @@ window.QUESTION_SETS["5"] = [
     ],
     answer: 3,
     vi: "Việc lắp đặt đá granite hay đá cẩm thạch không phải là công tác chuẩn bị mà là phần hoàn thiện.",
-    explain: "準備工事 bao gồm khảo sát địa chất, dựng văn phòng tạm, đào thử… còn việc lắp đặt vật liệu hoàn thiện (như 大理石) thuộc giai đoạn cuối của thi công."
+    explain: "準備（じゅんび）工事（こうじ）bao gồm khảo sát địa chất, dựng văn phòng tạm, đào thử… còn việc lắp đặt vật liệu hoàn thiện như 大理石（だいりせき）thuộc giai đoạn cuối của thi công."
   },
   {
     q: "問144　工事（こうじ）現場（げんば）から産業（さんぎょう）廃棄物（はいきぶつ）を排出（はいしゅつ）するために必要（ひつよう）な許可（きょか）は、次（つぎ）のうちどれか。【19】",
@@ -274,7 +274,7 @@ window.QUESTION_SETS["5"] = [
       "建設業（けんせつぎょう）許可（きょか）"
     ],
     answer: 1,
-    vi: "Để vận chuyển và xử lý chất thải công nghiệp phải có giấy phép thu gom – vận chuyển chất thải (産業廃棄物収集運搬業の許可).",
+    vi: "Để vận chuyển và xử lý chất thải công nghiệp phải có giấy phép thu gom – vận chuyển chất thải.",
     explain: "Khi công trường phát sinh rác thải công nghiệp, việc thu gom – vận chuyển phải do đơn vị có giấy phép hợp pháp thực hiện theo quy định của pháp luật môi trường."
   },
  {
@@ -286,8 +286,8 @@ window.QUESTION_SETS["5"] = [
       "雇用契約書（こようけいやくしょ）"
     ],
     answer: 1,
-    vi: "Trong hồ sơ thiết kế có bao gồm tài liệu ‘質疑応答書’ (văn bản hỏi – đáp kỹ thuật).",
-    explain: "設計図書 là tập hợp các tài liệu kỹ thuật gồm bản vẽ, chỉ dẫn thi công, biên bản hỏi – đáp (質疑応答書), dùng để thực hiện và nghiệm thu công trình."
+    vi: "Trong hồ sơ thiết kế có bao gồm tài liệu （しつぎおうとうしょ）(văn bản hỏi – đáp kỹ thuật).",
+    explain: "設計図書 （せっけいとしょ）là tập hợp các tài liệu kỹ thuật gồm bản vẽ, chỉ dẫn thi công, biên bản hỏi – đáp (質疑応答書)（しつぎおうとうしょ）, dùng để thực hiện và nghiệm thu công trình."
   },
   {
     q: "問147　デジタル技術（ぎじゅつ）を活用（かつよう）した経営（けいえい）革新（かくしん）のことを、何（なん）というか。【90】",
@@ -322,8 +322,8 @@ window.QUESTION_SETS["5"] = [
       "機械（きかい）・設備（せつび）の防護柵（ぼうごさく）の設置（せっち）"
     ],
     answer: 1,
-    vi: "Biện pháp quản lý (管理的対策) là việc xây dựng, hoàn thiện các quy trình – hướng dẫn công việc.",
-    explain: "Trong mô hình kiểm soát rủi ro (リスク低減措置), quản lý đối sách (管理的対策) bao gồm việc thiết lập quy trình làm việc, hướng dẫn thao tác, đào tạo nhân viên và kiểm tra định kỳ, chứ không phải thay đổi thiết bị hay loại bỏ công việc."
+    vi: "Biện pháp quản lý  là việc xây dựng, hoàn thiện các quy trình – hướng dẫn công việc.",
+    explain: "Trong mô hình kiểm soát rủi ro リスク低減（ていげん）措置（そち）, quản lý đối sách「管理的（かんりてき）対策（たいさく）」bao gồm việc thiết lập quy trình làm việc, hướng dẫn thao tác, đào tạo nhân viên và kiểm tra định kỳ, chứ không phải thay đổi thiết bị hay loại bỏ công việc."
   },
   {
     q: "問150　家庭（かてい）ごみや産業（さんぎょう）廃棄物（はいきぶつ）などを燃（も）やすための炉（ろ）は何（なん）というか。【65】",
@@ -334,7 +334,7 @@ window.QUESTION_SETS["5"] = [
       "焼却炉（しょうきゃくろ）"
     ],
     answer: 3,
-    vi: "Lò dùng để đốt rác thải sinh hoạt hoặc công nghiệp gọi là 焼却炉 (lò thiêu).",
+    vi: "Lò dùng để đốt rác thải sinh hoạt hoặc công nghiệp gọi là焼鈍炉（しょうどんろ）(lò thiêu).",
     explain: "焼却炉（しょうきゃくろ） là lò thiêu rác được dùng trong các nhà máy xử lý chất thải, giúp đốt rác ở nhiệt độ cao để giảm thể tích và ngăn ô nhiễm môi trường."
   },
 ];

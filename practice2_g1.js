@@ -41,9 +41,9 @@ window.PRACTICE_SETS["g2_1"] = [
       "交通（こうつう）事故（じこ）"
     ],
     answer: 1,
-    vi: "Trong công việc đào đất (掘削作業), loại tai nạn nào dễ xảy ra nhất ở vách đất?",
+    vi: "Trong công việc đào đất 掘削（くっさく）作業（さぎょう）, loại tai nạn nào dễ xảy ra nhất ở vách đất?",
     explain: "Trong khi đào đất, vách đất dễ **崩壊（ほうかい）– sụp đổ hoặc sạt lở**, đặc biệt khi không có gia cố.",
-    tip: "💡 Nhớ: 掘削＝đào đất → đất yếu dễ sụp = 崩壊."
+    tip: "💡 Nhớ: 掘削（くっさく）＝đào đất → đất yếu dễ sụp = 崩壊."
   },
    {
     q: "問34　橋梁（きょうりょう）工事（こうじ）では、どんな事故（じこ）が発生（はっせい）しやすいか。【180】",
@@ -54,7 +54,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "重機（じゅうき）の巻き込（まきこ）まれ"
     ],
     answer: 0,
-    vi: "Trong công trình cầu (橋梁工事), loại tai nạn nào dễ xảy ra nhất?",
+    vi: "Trong công trình cầu 橋梁（きょうりょう）工事（こうじ）, loại tai nạn nào dễ xảy ra nhất?",
     explain: "Công trình cầu thường thi công trên cao → dễ xảy ra **rơi vật (飛来) hoặc rơi người (落下)**.",
     tip: "💡 Nhớ: cầu = trên cao → nguy cơ rơi vật, rơi người cao nhất."
   },
@@ -68,7 +68,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "レーザーによる水準（すいじゅん）測量（そくりょう）用（よう）の機械（きかい）"
     ],
     answer: 2,
-    vi: "Trắc đạc bằng Transit là gì?",
+    vi: "Trắc đạc bằng トランシット Transit là gì?",
     explain: "**トランシット (Transit)** là thiết bị có kính ngắm, dùng để **đo góc ngang và dọc** trong công tác trắc địa.",
     tip: "💡 Transit = đo góc (ngang, dọc); Level = đo cao → đừng nhầm nhé!"
   },
@@ -83,7 +83,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "芝付（しばつけ）された芝（しば）への散水（さんすい）は、晴（はれ）た日（ひ）は日中（にっちゅう）を避（さ）け、朝夕（あさゆう）に行（おこな）う"
     ],
     answer: 0,
-    vi: "Trong công tác bảo vệ mái dốc (法面保護工事), thao tác nào là **không đúng**?",
+    vi: "Trong công tác bảo vệ mái dốc 法面（のりめん）保護（ほご）工事（こうじ）, thao tác nào là **không đúng**?",
     explain: "Phun vữa (モルタル吹付) phải thực hiện **từ trên xuống dưới**, không phải từ dưới lên. Làm ngược dễ gây bong tróc.",
     tip: "💡 Nhớ: Làm mái dốc = luôn từ trên xuống dưới để tránh trôi vật liệu."
   },
@@ -96,7 +96,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "甲板長（かんぱんちょう）"
     ],
     answer: 1,
-    vi: "Trong công trình công trình biển (海洋土木工事), ai là người chỉ huy các tàu làm việc?",
+    vi: "Trong công trình công trình biển (海洋（かいよう）土木（どぼく）工事（こうじ）, ai là người chỉ huy các tàu làm việc?",
     explain: "Người **船団長（せんだんちょう）** là người chỉ huy, ra chỉ thị cho từng tàu trong nhóm làm việc.",
     tip: "💡 Nhớ: 団 (だん) = nhóm → 船団長 = trưởng nhóm tàu, người ra lệnh."
   },
@@ -181,7 +181,7 @@ window.PRACTICE_SETS["g2_1"] = [
   answer: 2,
   vi: "Khi quá tập trung vào một điểm mà không để ý xung quanh, lỗi con người đó là gì?",
   explain: "Đó là **場面行動本能（ばめんこうどうほんのう）**, tức là khi hành động theo bản năng trong tình huống, quá tập trung vào một việc mà không quan sát toàn cảnh xung quanh.",
-  tip: "💡 Nhớ: tập trung quá mức vào một điểm → hành động bản năng (場面行動本能)."
+  tip: "💡 Nhớ: tập trung quá mức vào một điểm → hành động bản năng 場面（ばめん）行動（こうどう）本能（ほんのう）."
 },
 
   {
@@ -278,9 +278,9 @@ window.PRACTICE_SETS["g2_1"] = [
       "井戸（いど）を掘（ほ）ること"
     ],
     answer: 2,
-    vi: "Công việc '玉掛け作業' là gì?",
-    explain: "**玉掛け作業** là việc **móc hoặc tháo dây cáp vào hàng hóa khi dùng cần cẩu nâng hạ**.",
-    tip: "💡 Nhớ: 玉掛け = gắn/móc vật → dùng khi làm việc với cần cẩu."
+    vi: "Công việc 玉掛（たまがけ）作業（さぎょう） là gì?",
+    explain: "*玉掛（たまがけ）作業（さぎょう）** là việc **móc hoặc tháo dây cáp vào hàng hóa khi dùng cần cẩu nâng hạ**.",
+    tip: "💡 Nhớ: 玉掛け（たまがけ） = gắn/móc vật → dùng khi làm việc với cần cẩu."
   },
   {
     q: "問51　さく井（い）工事（こうじ）について、地表（ちひょう）や水質（すいしつ）の悪（わる）い帯水層（たいすいそう）から、井戸（いど）に水（みず）が入（はい）らないようにすることは何（なん）か。適切（てきせつ）なものを選（えら）べ。【155】",
@@ -304,7 +304,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "一番（いちばん）上（うえ）の層（そう）で、高（たか）い耐久性（たいきゅうせい）を持（も）ち、滑（すべ）りにくい性質（せいしつ）を持（も）つアスファルトを敷（し）きならす"
     ],
     answer: 2,
-    vi: "Trong công trình lát đường (舗装工事), '路床工事' là gì?",
+    vi: "Trong công trình lát đường 舗装（ほそう）工事（こうじ）, 路床（ろしょう）工事（こうじ） là gì?",
     explain: "**路床（ろしょう）** là **lớp nền thấp nhất của mặt đường**, thường dày khoảng 1m, dùng để chịu lực và làm nền cho lớp trên.",
     tip: "💡 Nhớ: 床 = sàn → 路床 = nền đường (phần thấp nhất)."
   },
@@ -344,7 +344,7 @@ window.PRACTICE_SETS["g2_1"] = [
   ],
   answer: 1,
   vi: "Máy cưa reciprocating (レシプロソー) là gì?",
-  explain: "レシプロソー là **máy cưa điện** có lưỡi dao dài di chuyển **qua lại (前後に動く)** để cắt vật liệu như gỗ, ống, hoặc kim loại.",
+  explain: "レシプロソー là **máy cưa điện** có lưỡi dao dài di chuyển **qua lại 前後（ぜんご）に動（うご）** để cắt vật liệu như gỗ, ống, hoặc kim loại.",
   tip: "💡 Nhớ: レシプロ＝reciprocate＝chuyển động qua lại → cưa qua lại để cắt vật liệu."
 },
   {
@@ -414,7 +414,7 @@ window.PRACTICE_SETS["g2_1"] = [
   ],
   answer: 1,
   vi: "Dụng cụ dùng để buộc chặt và cố định các thanh thép là gì?",
-  explain: "**ハッカー (Hacker)** là móc buộc thép, dùng để xoắn và cố định dây buộc (結束線) quanh các thanh thép.",
+  explain: "**ハッカー (Hacker)** là móc buộc thép, dùng để xoắn và cố định dây buộc (結束線)けっそくせん quanh các thanh thép.",
   tip: "💡 ハッカー = móc buộc thép (xoắn dây thép)."
 },
 ];

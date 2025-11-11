@@ -11,7 +11,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 0,
   vi: "Bản vẽ thiết kế phản ánh các yêu cầu về hiệu suất, hình dạng, kích thước và cách lắp ghép của công trình.",
-  explain: "Đáp án đúng: 発注書が望む性能や建物の形状、寸法、取り合い部分の収まり方 — thể hiện toàn bộ yêu cầu kỹ thuật và đặc điểm cấu tạo công trình."
+  explain: "— thể hiện toàn bộ yêu cầu kỹ thuật và đặc điểm cấu tạo công trình."
 },
 {
   q: "問62　KYTの基本（きほん）手法（しゅほう）として何（なに）が標準的（ひょうじゅんてき）なものとして知られているか。",
@@ -23,7 +23,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 3,
   vi: "Phương pháp cơ bản và tiêu chuẩn trong KYT là phương pháp 4 vòng cơ bản (KYT基礎４ラウンド法).",
-  explain: "Đáp án đúng: KYT基礎（きそ）４ラウンド法（ほう） — phương pháp 4 bước cơ bản trong huấn luyện nhận biết nguy hiểm (Kiken Yochi Training)."
+  explain: " — phương pháp 4 bước cơ bản trong huấn luyện nhận biết nguy hiểm (Kiken Yochi Training)."
 },
 {
   q: "問63 「ほうれんそう」について、不適切（ふてきせつ）なものを選（えら）べ。【学科98】",
@@ -35,7 +35,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 0,
   vi: "Chọn đáp án **không đúng** về 'hōrensō' (báo cáo, liên lạc, trao đổi).",
-  explain: "Đáp án đúng là ①: '現場でやってはいけない服装のこと' — đây không liên quan đến Hō-Ren-Sō. 'Hōrensō' là phương pháp giao tiếp gồm Báo cáo, Liên lạc và Thảo luận."
+  explain: " — đây không liên quan đến Hō-Ren-Sō. 'Hōrensō' là phương pháp giao tiếp gồm Báo cáo, Liên lạc và Thảo luận."
 },
 {
   q: "問64 作業（さぎょう）が不安定（ふあんてい）で品質（ひんしつ）が一定（いってい）ではないことは何（なん）というか【19】",
@@ -47,7 +47,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 3,
   vi: "Từ chỉ công việc không ổn định, chất lượng không đồng đều là gì?",
-  explain: "Đáp án đúng là ④ ムラ — nghĩa là 'không đồng đều', 'thiếu nhất quán'."
+  explain: "ムラ — nghĩa là 'không đồng đều', 'thiếu nhất quán'."
 },
 {
   q: "問65 職長（しょくちょう）の役割（やくわり）にないものを選（えら）べ【2】",
@@ -58,8 +58,8 @@ window.QUESTION_SETS["3"] = [
     "人材（じんざい）管理（かんり）"
   ],
   answer: 0,
-  vi: "Chọn nhiệm vụ **không thuộc vai trò của người giám sát (職長)**.",
-  explain: "Đáp án đúng là ① 設計図の修正 — việc chỉnh sửa bản vẽ thiết kế là nhiệm vụ của kỹ sư thiết kế, không phải của職長."
+  vi: "Chọn nhiệm vụ **không thuộc vai trò của người giám sát (職長)（しょくちょう）**.",
+  explain: " — việc chỉnh sửa bản vẽ thiết kế là nhiệm vụ của kỹ sư thiết kế, không phải của職長（しょくちょう）."
 },
 {
   q: "問66 労働者（ろうどうしゃ）の安全（あんぜん）と健康（けんこう）を守（まも）るため、建設業（けんせつぎょう）において事業所（じぎょうしょ）の労働者（ろうどうしゃ）の数（かず）が50人（にん）以上（いじょう）の場合（ばあい）に設置（せっち）が義務（ぎむ）付（づ）けられているものは、次（つぎ）のうちどれか【54】",
@@ -71,7 +71,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 0,
   vi: "Công trình có trên 50 lao động cần bắt buộc thành lập gì để đảm bảo an toàn?",
-  explain: "Đáp án đúng là ① 安全衛生委員会 — Ủy ban an toàn vệ sinh lao động là bắt buộc khi có từ 50 lao động trở lên."
+  explain: " — Ủy ban an toàn vệ sinh lao động là bắt buộc khi có từ 50 lao động trở lên."
 },
 {
   q: "問67 土木（どぼく）工事（こうじ）にない工事（こうじ）を選（えら）べ。【学科26】",
@@ -83,7 +83,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 1,
   vi: "Chọn công việc **không thuộc nhóm công trình đất (土木工事)**.",
-  explain: "Đáp án đúng là ② 高層工事 — xây dựng nhà cao tầng là thuộc công trình kiến trúc, không phải công trình đất."
+  explain: " — xây dựng nhà cao tầng là thuộc công trình kiến trúc, không phải công trình đất."
 },
   {
   q: "問68 土木工事（どぼくこうじ）に適切（てきせつ）な工事（こうじ）を選（えら）べ【136】",
@@ -94,8 +94,8 @@ window.QUESTION_SETS["3"] = [
     "防波堤（ぼうはてい）工事（こうじ）"
   ],
   answer: 3,
-  vi: "Công trình nào thuộc nhóm công trình đất (土木工事)?",
-  explain: "Đáp án đúng là ④ 防波堤工事 — nghĩa là 'xây đê chắn sóng', thuộc công trình dân dụng (đất)."
+  vi: "Công trình nào thuộc nhóm công trình đất (土木工事)（どぼくこうじ）?",
+  explain: " — nghĩa là 'xây đê chắn sóng', thuộc công trình dân dụng (đất)."
 },
 {
   q: "問69 国家（こっか）免許（めんきょ）が必要（ひつよう）でない職種（しょくしゅ）はどれか【68】",
@@ -106,8 +106,8 @@ window.QUESTION_SETS["3"] = [
     "潜水士（せんすいし）"
   ],
   answer: 2,
-  vi: "Ngành nghề nào **không cần giấy phép quốc gia (国家免許)**?",
-  explain: "Đáp án đúng là ③ 砕石 — công việc đập, nghiền đá không yêu cầu giấy phép quốc gia."
+  vi: "Ngành nghề nào **không cần giấy phép quốc gia 国家（こっか）免許（めんきょ）**?",
+  explain: " — công việc đập, nghiền đá không yêu cầu giấy phép quốc gia."
 },
 {
   q: "問70 施工図（せこうず）についての説明（せつめい）で正（ただ）しいものを選（えら）べ【81・82】",
@@ -118,8 +118,8 @@ window.QUESTION_SETS["3"] = [
     "現場（げんば）の位置（いち）や周囲（しゅうい）の状況（じょうきょう）、施工（せこう）や見積（みつもり）の条件（じょうけん）などが書（か）かれたもの"
   ],
   answer: 1,
-  vi: "Chọn mô tả đúng nhất về bản vẽ thi công (施工図).",
-  explain: "Đáp án đúng là ② — Bản vẽ thi công thể hiện cách dùng vật liệu và trình tự thi công để công nhân hiểu và thực hiện chính xác."
+  vi: "Chọn mô tả đúng nhất về bản vẽ thi công (施工図)（せこうず）.",
+  explain: " — Bản vẽ thi công thể hiện cách dùng vật liệu và trình tự thi công để công nhân hiểu và thực hiện chính xác."
 },
 {
   q: "問71　すでに済（す）んだ作業（さぎょう）工程（こうてい）の一部（いちぶ）を修正（しゅうせい）することは何（なん）というか【20】",
@@ -300,7 +300,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 1,
   vi: "Công việc phần nền móng chịu lực của cầu.",
-  explain: "Trong công trình cầu, “下部工” là phần móng chịu tải trọng của cầu, nên là công việc làm nền móng cho trụ cầu."
+  explain: "Trong công trình cầu, “下部工（かぶこう）” là phần móng chịu tải trọng của cầu, nên là công việc làm nền móng cho trụ cầu."
 },
 {
   q: "問87　施工（せこう）計画（けいかく）の作成（さくせい）や工程（こうてい）管理（かんり）、品質（ひんしつ）管理（かんり）、安全（あんぜん）管理（かんり）などの監督（かんとく）業務（ぎょうむ）をすること人（ひと）は誰（だれ）か。【職長124】",
@@ -324,7 +324,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 3,
   vi: "Cấu trúc bê tông cốt thép.",
-  explain: "Đây là kết cấu dùng cốt thép (鉄筋) bên trong bê tông để tăng độ bền — gọi là kết cấu bê tông cốt thép."
+  explain: "Đây là kết cấu dùng cốt thép (鉄筋) （てっきん）bên trong bê tông để tăng độ bền — gọi là kết cấu bê tông cốt thép."
 },
 {
   q: "問89　柱（はしら）や梁（はり）を鉄筋（てっきん）を組（く）んだ型枠（かたわく）にコンクリートを流（なが）し込（こ）んでつくった建物（たてもの）の構造（こうぞう）を選（えら）べ。【31】",

@@ -288,3 +288,31 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
     background-color: #f8d7da; /* Nền đỏ nhạt */
     border: 1px solid #721c24; /* Khung đỏ đậm */
 }
+.opt {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+.opt.correct {
+  background: #dbeafe;  /* xanh dương nhạt */
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+.opt.incorrect {
+  background: #fee2e2;  /* đỏ nhạt */
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+.opt .mark { margin-left: 6px; font-weight: bold; }
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+.nav .btn {
+  flex: 1;
+  margin: 0 4px;
+}
+.tip { background:#f9fafb; border-left:4px solid #3b82f6; padding:6px 10px; margin-top:6px; }

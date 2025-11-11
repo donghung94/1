@@ -12,7 +12,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 3,
   vi: "Hệ thống sprinkler thuộc loại công trình nào?",
-  explain: "Đáp án đúng: 4 — Thuộc công trình thiết bị phòng cháy chữa cháy (消防設備工事)."
+  explain: "Đáp án đúng:  Thuộc công trình thiết bị phòng cháy chữa cháy 消防（しょうぼう）設備（せつび）工事（こうじ）."
 },
 {
   id: 2,
@@ -25,7 +25,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Bảng dây dùng để quản lý và kết nối đường dây thông tin từ trong ra ngoài tòa nhà gọi là gì?",
-  explain: "Đáp án đúng: 2 — MDF (Main Distribution Frame) là bảng phân phối chính của hệ thống thông tin."
+  explain: "Đáp án đúng: — MDF (Main Distribution Frame) là bảng phân phối chính của hệ thống thông tin."
 },
 {
   id: 3,
@@ -38,7 +38,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Chọn loại công trình phù hợp với công trình thiết bị vệ sinh cấp thoát nước.",
-  explain: "Đáp án đúng: 1 — Công trình thiết bị cấp nước nóng thuộc nhóm cấp thoát nước và vệ sinh."
+  explain: "Đáp án đúng:  — Công trình thiết bị cấp nước nóng thuộc nhóm cấp thoát nước và vệ sinh."
 },
 {
   id: 4,
@@ -51,7 +51,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Trong các loại sau, loại nào không thuộc công trình hoàn thiện nội ngoại thất?",
-  explain: "Đáp án đúng: 1 — Gas không thuộc nhóm hoàn thiện nội ngoại thất."
+  explain: "Đáp án đúng:  — Gas không thuộc nhóm hoàn thiện nội ngoại thất."
 },
 {
   id: 5,
@@ -64,7 +64,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 3,
   vi: "Trong các loại sơ đồ tiến độ, loại nào thể hiện rõ 4 yếu tố: trình tự, ngày, tiến độ và ảnh hưởng tiến độ?",
-  explain: "Đáp án đúng: 4 — Sơ đồ tiến độ kiểu mạng (ネットワーク式工程表) thể hiện đầy đủ 4 yếu tố."
+  explain: "Đáp án đúng:  — Sơ đồ tiến độ kiểu mạng (ネットワーク式工程表) thể hiện đầy đủ 4 yếu tố."
 },
   {
   q: "問6　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【64】",
@@ -77,7 +77,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Công trình trong hình là loại nào?",
-  explain: "Hình cho thấy hệ thống ống nước thải và cấp nước — đây là công trình **給排水設備工事 (cấp thoát nước)**."
+  explain: "Hình cho thấy hệ thống ống nước thải và cấp nước — đây là công trình 給排水（きゅうはいすい）設備（せつび）工事（こうじ） (cấp thoát nước)**."
 },
   {
   q: "問7　「おつかれさまです」はどんな時（とき）に挨拶（あいさつ）するか。【79】",
@@ -102,7 +102,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Sau khi kết thúc công việc có dùng lửa, cần làm gì?",
-  explain: "Đáp án đúng: 1 — Phải chắc chắn rằng lửa đã được dập tắt hoàn toàn."
+  explain: "Đáp án đúng:  — Phải chắc chắn rằng lửa đã được dập tắt hoàn toàn."
 },
 {
   id: 9,
@@ -115,7 +115,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 3,
   vi: "Chọn đáp án đúng về quy tắc ăn mặc khi làm việc.",
-  explain: "Đáp án đúng: 4 — Tay áo phải kéo xuống đến cổ tay khi làm việc để tránh tai nạn."
+  explain: "Đáp án đúng:  Tay áo phải kéo xuống đến cổ tay khi làm việc để tránh tai nạn."
 },
 {
   id: 10,
@@ -127,8 +127,8 @@ window.QUESTION_SETS["1"] = [
     "人体（じんたい）に電流（でんりゅう）が流（なが）れること。"
   ],
   answer: 0,
-  vi: "Chọn định nghĩa đúng về hiện tượng rò điện (漏電).",
-  explain: "Đáp án đúng: 1 — Là hiện tượng dòng điện chảy vào phần không được thiết kế để dẫn điện."
+  vi: "Chọn định nghĩa đúng về hiện tượng rò điện (漏電)（ろうでん）.",
+  explain: "Đáp án đúng:  — Là hiện tượng dòng điện chảy vào phần không được thiết kế để dẫn điện."
 },
 {
   id: 11,
@@ -141,7 +141,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Chọn nội dung KHÔNG phù hợp trong hoạt động báo cáo suýt tai nạn (ヒヤリ・ハット).",
-  explain: "Đáp án đúng: 2 — Không được truy cứu trách nhiệm cá nhân, mà cần phân tích và cải thiện tập thể."
+  explain: "Đáp án đúng:  — Không được truy cứu trách nhiệm cá nhân, mà cần phân tích và cải thiện tập thể."
 },
 {
   id: 12,
@@ -154,7 +154,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Người thi công nhà gỗ được gọi là gì?",
-  explain: "Đáp án đúng: 1 — 大工（だいく） nghĩa là thợ mộc, người làm công trình nhà gỗ."
+  explain: "Đáp án đúng:  — 大工（だいく） nghĩa là thợ mộc, người làm công trình nhà gỗ."
 },
   {
   q: "問13　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【56】",
@@ -167,7 +167,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Hình dưới đây là công trình gì?",
-  explain: "Hình cho thấy khung xương thép được lắp đặt — đây là **鋼製下地工事（こうせいしたじこうじ）**, tức là công trình lắp đặt khung xương kim loại để làm tường hoặc trần."
+  explain: "Hình cho thấy khung xương thép được lắp đặt — đây là **鋼製（こうせい）下地（したじ）工事（こうじ）**, tức là công trình lắp đặt khung xương kim loại để làm tường hoặc trần."
 },
   {
   q: "問14　イラストによると、どんな工事（こうじ）か。【62】",
@@ -180,7 +180,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Theo hình minh họa, đây là loại công trình nào?",
-  explain: "Công nhân đang làm việc trên xe nâng, xử lý dây điện phía trên không trung. Đây là **架空配線工事（かくうはいせんこうじ）**, tức là công trình lắp đặt đường dây điện trên không."
+  explain: "Công nhân đang làm việc trên xe nâng, xử lý dây điện phía trên không trung. Đây là 架空（かくう）配線（はいせん）工事（こうじ）, tức là công trình lắp đặt đường dây điện trên không."
 },
 {
   id: 15,
@@ -193,7 +193,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 2,
   vi: "Chọn cấu trúc KHÔNG phải là cấu trúc bằng thép.",
-  explain: "Đáp án đúng: 3 — ネジ構造 (cấu trúc bằng bu-lông) không được xếp vào nhóm cấu trúc thép chính."
+  explain: "Đáp án đúng:  — ネジ構造（こうぞう） (cấu trúc bằng bu-lông) không được xếp vào nhóm cấu trúc thép chính."
 },
 {
   id: 16,
@@ -206,7 +206,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 3,
   vi: "‘Đắp đất và nén chặt’ là công việc nào?",
-  explain: "Đáp án đúng: 4 — Dùng xe ủi để đắp và nén chặt đất ở khu vực bằng phẳng."
+  explain: "Đáp án đúng:  — Dùng xe ủi để đắp và nén chặt đất ở khu vực bằng phẳng."
 },
   {
     q: "問17　相手（あいて）の仕事（しごと）や苦労（くろう）に対（たい）して、感謝（かんしゃ）して労（ねぎら）う意味（いみ）の言葉（ことば）で、建設（けんせつ）現場（げんば）だけではなく、事務所（じむしょ）や休憩（きゅうけい）場所（ばしょ）などですれ違（ちが）ったときにも使（つか）えます。その言葉（ことば）はどれか【79】",
@@ -243,7 +243,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Phương pháp nung nóng phần nối giữa hai thanh thép và ép lại theo trục gọi là gì?",
-  explain: "Đây là **ガス圧接継手（がすあっせつつぎて）**, tức là phương pháp nối thép bằng hàn ép khí gas — sử dụng nhiệt và áp lực dọc trục để nối chặt hai đầu thép."
+  explain: "Đây là **ガス圧接（あっせつ）継手（つぎて）**, tức là phương pháp nối thép bằng hàn ép khí gas — sử dụng nhiệt và áp lực dọc trục để nối chặt hai đầu thép."
 },
   {
     q: "問20　コンクリート強度（きょうど）の低下（ていか）防止（ぼうし）対策（たいさく）のため、コンクリートに振動（しんどう）を与（あた）えて型枠（かたわく）を隅々（すみずみ）までいきわたらせ、不要（ふよう）な空気（くうき）を除去（じょきょ）するための機械（きかい）は何（なん）というか【50】",
@@ -267,7 +267,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 1,
     vi: "Mực/dấu đặt trực tiếp trên mặt phẳng ngang (như sàn) gọi là gì?",
-    explain: "Đáp án đúng: 地墨 – Vạch mực nền trên mặt phẳng."
+    explain: "Đáp án đúng: 地墨（じすみ） – Vạch mực nền trên mặt phẳng."
   },
   {
     q: "問22　話（はな）したい相手（あいて）が誰（だれ）かと会話中（かいわちゅう）の時（とき）に、急（いそ）いで伝（つた）えることがあるときに、何（なに）を言（い）うか【80】",
@@ -279,7 +279,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 1,
     vi: "Khi cần chen ngang để nhắn gấp lúc người kia đang nói chuyện, phải nói gì?",
-    explain: "Đáp án đúng: 失礼します – Xin phép (cắt lời/đi ngang)."
+    explain: "Đáp án đúng: 失礼（しつれい）します – Xin phép (cắt lời/đi ngang)."
   },
   {
     q: "問23　作業（さぎょう）を終（お）わってから、必（かなら）ず（　　　）をする【99】",
@@ -291,8 +291,8 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 2,
     vi: "Sau khi kết thúc công việc phải làm gì nhất định?",
-    explain: "Đáp án đúng: 後片付け – Thu dọn, dọn vệ sinh hiện trường."
-  },
+    explain: "Đáp án đúng:後（あと）片付（かたづけ）tiếp theo là dọn dẹp vệ sinhsinh "
+  },   
   {
     q: "問24　埋設（まいせつ）について、適切（てきせつ）なものを選（えら）べ【91】",
     options: [
@@ -302,8 +302,8 @@ window.QUESTION_SETS["1"] = [
       "電線（でんせん）を通（とお）す管（くだ）のこと"
     ],
     answer: 2,
-    vi: "Về “mai táng/埋設 (chôn ngầm)”, lựa chọn mô tả đúng là gì?",
-    explain: "Đáp án đúng: 電線などを地中に埋めること – Chôn dây/thiết bị xuống đất."
+    vi: "Về 埋設 （まいせつ）(chôn ngầm), lựa chọn mô tả đúng là gì?",
+    explain: "Đáp án đúng: 電線（でんせん）などを地中（ちちゅう）に埋（う）めること – Chôn dây/thiết bị xuống đất."
   },
   {
     q: "問25　仕事（しごと）をしている人（ひと）より、先（さき）に帰（かえ）らなければならないときに「お先（さき）に失礼（しつれい）します」という挨拶（あいさつ）に対（たい）して、何（なに）を言（い）うか。",
@@ -327,7 +327,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 3,
     vi: "Hãy chọn hạng mục KHÔNG thuộc công trình dân dụng (địa kỹ thuật/cầu đường).",
-    explain: "Đáp án đúng: 4 – Hệ thống điều hòa, thông gió, lọc không khí (thiết bị M&E), không phải công trình đất/đập/đường."
+    explain: "Đáp án đúng:  – Hệ thống điều hòa, thông gió, lọc không khí (thiết bị M&E), không phải công trình đất/đập/đường."
   },
   {
     q: "問27　ダムの役割（やくわり）について、不適切（ふてきせつ）な回答（かいとう）を選（えら）べ【学科26】",
@@ -339,7 +339,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 1,
     vi: "Về vai trò của đập, phương án nào KHÔNG phù hợp?",
-    explain: "Đáp án đúng: 2 – “Bảo an môi trường tự nhiên” là diễn đạt không đúng vai trò đặc trưng của đập."
+    explain: "Đáp án đúng: – “Bảo an môi trường tự nhiên” là diễn đạt không đúng vai trò đặc trưng của đập."
   },
   {
   q: "問28　地下水（ちかすい）を排水（はいすい）するための工法（こうほう）は何（なん）の工事（こうじ）か。【41】",
@@ -364,7 +364,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Khi thanh thép không đủ dài, nối 2 thanh lại thành 1 thanh dài gọi là công việc nối thép.",
-  explain: "Đáp án đúng: 鉄筋継手工事（てっきんつぎてこうじ） — Công việc nối thép để kéo dài thanh."
+  explain: "Đáp án đúng: 鉄筋（てっきん）継手（つぎて）工事（こうじ） — Công việc nối thép để kéo dài thanh."
 },
   {
   q: "問30　タワークレーンを使（つか）って、１階（いっかい）ずつ組（く）み上（あ）げていく方法（ほうほう）は何（なん）というか。【46】",

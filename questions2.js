@@ -72,42 +72,42 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 1,
   vi: "Công trình không thuộc loại công trình hải dương là 造園工事 (làm vườn).",
-  explain: "Đáp án đúng: 造園工事（ぞうえんこうじ） — Công trình làm vườn, không thuộc nhóm công trình hải dương."
+  explain: "Đáp án đúng: 造園（ぞうえん）工事（こうじ） — Công trình làm vườn, không thuộc nhóm công trình hải dương."
 },
   {
   q: "問37　イラストによると、どんな工事（こうじ）か。【32】",
   img: "images/IMG_3314.jpeg",
   options: [
-    "1．地上（ちじょう）躯体（くたい）工事（こうじ）",
-    "2．基礎（きそ）工事（こうじ）",
-    "3．地下（ちか）躯体（くたい）工事（こうじ）",
-    "4．岸壁（がんぺき）工事（こうじ）／解体（かいたい）工事（こうじ）"
+    "地上（ちじょう）躯体（くたい）工事（こうじ）",
+    "基礎（きそ）工事（こうじ）",
+    "地下（ちか）躯体（くたい）工事（こうじ）",
+    "岸壁（がんぺき）工事（こうじ）／解体（かいたい）工事（こうじ）"
   ],
   answer: 0,
   vi: "Dựa theo hình minh họa, đây là loại công trình gì?",
-  explain: "Hình cho thấy phần khung thép của tòa nhà đang được lắp dựng phía trên mặt đất. Đây là **地上躯体工事（ちじょうくたいこうじ）– công trình kết cấu phần thân trên mặt đất**. Công đoạn này bao gồm lắp khung thép, cột, dầm, sàn… sau khi phần móng đã hoàn thành."
+  explain: "Hình cho thấy phần khung thép của tòa nhà đang được lắp dựng phía trên mặt đất. Đây là 地下（ちか）躯体（くたい）工事（こうじ）– công trình kết cấu phần thân trên mặt đất**. Công đoạn này bao gồm lắp khung thép, cột, dầm, sàn… sau khi phần móng đã hoàn thành."
 },
   {
   q: "問38　写真（しゃしん）の装置（そうち）は、次（つぎ）のうちどれか。【33】",
   img: "images/IMG_3315.jpeg",
   options: [
-    "1．防水（ぼうすい）装置（そうち）",
-    "2．免震（めんしん）装置（そうち）",
-    "3．空調（くうちょう）装置（そうち）",
-    "4．自動（じどう）加圧（かあつ）装置（そうち）"
+    "防水（ぼうすい）装置（そうち）",
+    "免震（めんしん）装置（そうち）",
+    "空調（くうちょう）装置（そうち）",
+    "自動（じどう）加圧（かあつ）装置（そうち）"
   ],
   answer: 1,
   vi: "Thiết bị trong hình là loại nào sau đây?",
-  explain: "Đây là **免震装置（めんしんそうち） – thiết bị chống rung, chống động đất**, được lắp giữa phần móng và kết cấu tòa nhà để hấp thụ chấn động khi xảy ra động đất, giúp giảm rung lắc."
+  explain: "Đây là 免震（めんしん）装置（そうち） – thiết bị chống rung, chống động đất**, được lắp giữa phần móng và kết cấu tòa nhà để hấp thụ chấn động khi xảy ra động đất, giúp giảm rung lắc."
 },
   {
   q: "問39　以下（いか）の写真（しゃしん）は何（なん）か。【37】",
   img: "images/5101.png",
   options: [
-    "1．スプリンクラー",
-    "2．火災（かさい）受信機（じゅしんき）",
-    "3．消火（しょうか）ポンプ",
-    "4．保温（ほおん）保冷器（ほれいき）"
+    "スプリンクラー",
+    "火災（かさい）受信機（じゅしんき）",
+    "消火（しょうか）ポンプ",
+    "保温（ほおん）保冷器（ほれいき）"
   ],
   answer: 0,
   vi: "Hình dưới đây là thiết bị gì?",
@@ -117,23 +117,23 @@ window.QUESTION_SETS["2"] = [
   q: "問40　どんな作業（さぎょう）か。正（ただ）しいものを一つ選（えら）べ。【47】",
   img: "images/IMG_3609.jpeg",
   options: [
-    "1．ガス圧接（あっせつ）継手（つぎて）",
-    "2．溶接（ようせつ）継手（つぎて）",
-    "3．鉄筋（てっきん）工事（こうじ）",
-    "4．配筋（はいきん）工事（こうじ）"
+    "ガス圧接（あっせつ）継手（つぎて）",
+    "溶接（ようせつ）継手（つぎて）",
+    "鉄筋（てっきん）工事（こうじ）",
+    "配筋（はいきん）工事（こうじ）"
   ],
   answer: 0,
   vi: "Đây là công việc gì? Hãy chọn đáp án đúng.",
-  explain: "Ảnh cho thấy hai thanh thép được nối bằng phương pháp **ガス圧接（gasu asse tsugite）– nối thép bằng áp lực khí gas nóng**, thường dùng trong thi công kết cấu bê tông cốt thép để nối các thanh thép lại với nhau."
+  explain: "Ảnh cho thấy hai thanh thép được nối bằng phương pháp ガス圧接（あっせつ）継手（つぎて）– nối thép bằng áp lực khí gas nóng**, thường dùng trong thi công kết cấu bê tông cốt thép để nối các thanh thép lại với nhau."
 },
 {
   q: "問41　写真（しゃしん）はどのような工事（こうじ）を行（おこな）っているか。【50】",
   img: "images/IMG_3317.jpeg",
   options: [
-    "1．コンクリート打設（だせつ）工事（こうじ）",
-    "2．機械（きかい）土工事（どこうじ）",
-    "3．サッシ工事（こうじ）",
-    "4．屋根（やね）工事（こうじ）"
+    "コンクリート打設（だせつ）工事（こうじ）",
+    "機械（きかい）土工事（どこうじ）",
+    "サッシ工事（こうじ）",
+    "屋根（やね）工事（こうじ）"
   ],
   answer: 0,
   vi: "Bức ảnh thể hiện công trình nào đang được thực hiện?",

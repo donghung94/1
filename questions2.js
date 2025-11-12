@@ -201,14 +201,14 @@ window.QUESTION_SETS["2"] = [
 },
   {
   q: "問47　以下（いか）の写真（しゃしん）は、何（なん）の工事（こうじ）を示（しめ）すか。【43】",
-  img: "images/0207.pngpng",
+  img: "images/0207.png",
   options: [
     "1．法面（のりめん）整形（せいけい）",
     "2．掘削（くっさく）",
     "3．積（つ）み込（こ）み",
     "4．押土（おしど）"
   ],
-  answer: 1,
+  answer: 0,
   vi: "Hình dưới đây thể hiện công tác gì?",
   explain: "Đây là công tác **法面（のりめん）整形（せいけい）– san gọt, tạo hình mái taluy** bằng máy xúc. Mục đích là làm phẳng và chỉnh độ dốc mái đất sau khi đắp hoặc đào."
 },

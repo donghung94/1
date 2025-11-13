@@ -10,7 +10,7 @@ window.QUESTION_SETS["6"] = [
       "アナログ的（てき）な経営（けいえい）"
     ],
     answer: 0,
-    vi: "Vấn đề lớn nhất hiện nay của ngành xây dựng là tình trạng thiếu nhân lực (人手不足).",
+    vi: "Vấn đề lớn nhất hiện nay của ngành xây dựng là tình trạng thiếu nhân lực 人手不足（ひとでぶそく）.",
     explain: "Hiện nay, do dân số già hóa và số lượng lao động trẻ giảm, ngành xây dựng ở Nhật đang thiếu nghiêm trọng công nhân có tay nghề, ảnh hưởng đến tiến độ và chất lượng công trình."
   },
   {
@@ -22,8 +22,8 @@ window.QUESTION_SETS["6"] = [
       "専門（せんもん）工事（こうじ）業者（ぎょうしゃ）"
     ],
     answer: 0,
-    vi: "Người lập bản vẽ thiết kế là văn phòng thiết kế (設計事務所).",
-    explain: "設計図 được tạo ra bởi các kiến trúc sư hoặc văn phòng thiết kế chuyên nghiệp, thể hiện toàn bộ thông tin về cấu trúc, kích thước, bố trí và vật liệu của công trình trước khi thi công."
+    vi: "Người lập bản vẽ thiết kế là văn phòng thiết kế 設計（せっけい）事務所（じむしょ）.",
+    explain: "設計図（せっけいず） được tạo ra bởi các kiến trúc sư hoặc văn phòng thiết kế chuyên nghiệp, thể hiện toàn bộ thông tin về cấu trúc, kích thước, bố trí và vật liệu của công trình trước khi thi công."
   },
   {
     q: "問154　設計図（せっけいず）を読む人（ひと）は誰（だれ）か。【81】",
@@ -34,8 +34,8 @@ window.QUESTION_SETS["6"] = [
       "発注者（はっちゅうしゃ）"
     ],
     answer: 2,
-    vi: "Người đọc bản vẽ thiết kế là người thi công (施工者).",
-    explain: "施工者 (người thi công) là người trực tiếp đọc và thực hiện công việc theo bản vẽ thiết kế, đảm bảo thi công đúng tiêu chuẩn kỹ thuật, kích thước và vị trí quy định."
+    vi: "Người đọc bản vẽ thiết kế là người thi công 施工者（せこうしゃ）.",
+    explain: "施工者（せこうしゃ） (người thi công) là người trực tiếp đọc và thực hiện công việc theo bản vẽ thiết kế, đảm bảo thi công đúng tiêu chuẩn kỹ thuật, kích thước và vị trí quy định."
   },
   {
     q: "問155　建築物（けんちくぶつ）全体（ぜんたい）の構成（こうせい）やデザイン、間取（まど）りがわかるように書（か）かれたのはどれか。【79】",
@@ -46,7 +46,7 @@ window.QUESTION_SETS["6"] = [
       "外構図（がいこうず）"
     ],
     answer: 0,
-    vi: "Bản vẽ thể hiện cấu trúc tổng thể, thiết kế và bố trí các phòng là 意匠図 (bản vẽ kiến trúc).",
+    vi: "Bản vẽ thể hiện cấu trúc tổng thể, thiết kế và bố trí các phòng là 意匠図（いしょうず） (bản vẽ kiến trúc).",
     explain: "意匠図（いしょうず） trình bày toàn bộ hình dạng, bố cục và mặt bằng công trình – giúp hình dung về không gian và phong cách thiết kế của tòa nhà."
   },
   {
@@ -58,8 +58,8 @@ window.QUESTION_SETS["6"] = [
       "切断（せつだん）する"
     ],
     answer: 0,
-    vi: "Công việc loại bỏ bọt khí để bê tông chặt đều gọi là ‘締め固め’ (lèn chặt).",
-    explain: "締め固め（しめかため） là quá trình rung hoặc gõ khuôn để bê tông lan đều, loại bỏ bọt khí, đảm bảo kết cấu chắc và không rỗ tổ ong."
+    vi: "Công việc loại bỏ bọt khí để bê tông chặt đều gọi là 締（し）め固（かた）め (lèn chặt).",
+    explain: "締（し）め固（かた）め là quá trình rung hoặc gõ khuôn để bê tông lan đều, loại bỏ bọt khí, đảm bảo kết cấu chắc và không rỗ tổ ong."
   },
   {
     q: "問157　必要（ひつよう）なものを必要（ひつよう）な数（かず）だけ配置（はいち）し、不必要（ふひつよう）なものは廃棄（はいき）するなどのことは何（なん）というか。【64】",
@@ -70,8 +70,8 @@ window.QUESTION_SETS["6"] = [
       "清掃（せいそう）"
     ],
     answer: 2,
-    vi: "Chỉ để lại những thứ cần thiết, loại bỏ cái không cần gọi là 整理 (sắp xếp hợp lý).",
-    explain: "Trong 5S, 整理 (Seiri) nghĩa là chọn lọc những vật dụng cần thiết và loại bỏ những thứ không cần thiết khỏi nơi làm việc để nâng cao hiệu quả và an toàn."
+    vi: "Chỉ để lại những thứ cần thiết, loại bỏ cái không cần gọi là 整理（せいり） (sắp xếp hợp lý).",
+    explain: "Trong 5S, 整理（せいり） (Seiri) nghĩa là chọn lọc những vật dụng cần thiết và loại bỏ những thứ không cần thiết khỏi nơi làm việc để nâng cao hiệu quả và an toàn."
   },
   {
     q: "問158　ライフライン工事（こうじ）でないものを選（えら）べ。【34〜37】",
@@ -82,8 +82,8 @@ window.QUESTION_SETS["6"] = [
       "水道（すいどう）工事（こうじ）"
     ],
     answer: 0,
-    vi: "Công trình không thuộc hạ tầng thiết yếu (ライフライン) là 型枠工事 (thi công ván khuôn).",
-    explain: "ライフライン工事 bao gồm điện, nước, gas… là các hệ thống thiết yếu cho đời sống. 型枠工事 chỉ liên quan đến kết cấu bê tông, không phải hạ tầng sinh hoạt."
+    vi: "Công trình không thuộc hạ tầng thiết yếu (ライフライン) là gì hãy chọn đáp án sai.",
+    explain: "ライフライン工事 bao gồm điện, nước, gas… là các hệ thống thiết yếu cho đời sống.型枠（かたわく）工事（こうじ） chỉ liên quan đến kết cấu bê tông, không phải hạ tầng sinh hoạt."
   },
   {
     q: "問159　雇用（こよう）保険法（ほけんほう）の支払（しはら）いは誰（だれ）か。",
@@ -94,8 +94,8 @@ window.QUESTION_SETS["6"] = [
       "全額（ぜんがく）、国（くに）から"
     ],
     answer: 0,
-    vi: "Phí bảo hiểm theo luật 雇用保険法 được đóng bởi cả người lao động và doanh nghiệp.",
-    explain: "Theo 雇用保険法, tiền đóng bảo hiểm được chia giữa người lao động và người sử dụng lao động (doanh nghiệp), Nhà nước chỉ hỗ trợ gián tiếp."
+    vi: "Phí bảo hiểm theo luật 雇用（こよう）保険法（ほけんほう）の支払（しはら）い được đóng bởi ai?.",
+    explain: "Theo 雇用（こよう）保険法（ほけんほう）の支払（しはら）い, tiền đóng bảo hiểm được chia giữa người lao động và người sử dụng lao động (doanh nghiệp), Nhà nước chỉ hỗ trợ gián tiếp."
   },
   {
     q: "問160　安全（あんぜん）衛生（えいせい）活動（かつどう）として、間違（まちが）っているものを選（えら）べ。【51・52】",
@@ -107,11 +107,12 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Sai là chỉ thực hiện tuần tra an toàn vào ngày kiểm tra mà không duy trì thường xuyên.",
-    explain: "安全衛生活動 phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
+    explain: "安全（あんぜん）衛生（えいせい）活動（かつどう） phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
   },
   {
   q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<img src='images/IMG_3386.jpeg'>",
-  options: [
+ img: "images/IMG_3414.jpeg",
+ options: [
     "災害（さいがい）や事故（じこ）で死亡（しぼう）",
     "労働力（ろうどうりょく）人口（じんこう）",
     "在日外国人（ざいにちがいこくじん）",
@@ -123,7 +124,7 @@ window.QUESTION_SETS["6"] = [
 },
 {
   q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
-  img: "images/IMG_3414.jpeg",
+  img: "images/IMG_3386.jpeg",
   options: [
     "施主（せしゅ）",
     "施工（せこう）管理者（かんりしゃ）",

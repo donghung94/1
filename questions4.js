@@ -337,6 +337,19 @@ window.QUESTION_SETS["4"] = [
   vi: "手戻（てもど）り nghĩa là phải quay lại công đoạn trước để làm lại do sai sót.",
   explain: "Khi một phần đã làm xong nhưng phải sửa hoặc làm lại do lỗi, đó là手戻（てもど）り."
 },
+    {
+  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<img src='images/IMG_3386.jpeg'>",
+ img: "images/IMG_3414.jpeg",
+ options: [
+    "災害（さいがい）や事故（じこ）で死亡（しぼう）",
+    "労働力（ろうどうりょく）人口（じんこう）",
+    "在日外国人（ざいにちがいこくじん）",
+    "特定技能実習生（とくていぎのうじっしゅうせい）"
+  ],
+  answer: 1,
+  vi: "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
+  explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
+},
   {
   q: "問120　電気（でんき）工事（こうじ）のうち、外線（がいせん）工事（こうじ）と言（い）われている工事（こうじ）は次（つぎ）のうちどれか【62】【92】",
   options: [

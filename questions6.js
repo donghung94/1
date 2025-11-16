@@ -109,19 +109,7 @@ window.QUESTION_SETS["6"] = [
     vi: "Sai là chỉ thực hiện tuần tra an toàn vào ngày kiểm tra mà không duy trì thường xuyên.",
     explain: "安全（あんぜん）衛生（えいせい）活動（かつどう） phải được thực hiện liên tục – gồm tuần tra, huấn luyện, lắng nghe ý kiến công nhân, và soạn quy trình. Chỉ làm vào một ngày là không đúng tinh thần an toàn."
   },
-  {
-  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】<img src='images/IMG_3386.jpeg'>",
- img: "images/IMG_3414.jpeg",
- options: [
-    "災害（さいがい）や事故（じこ）で死亡（しぼう）",
-    "労働力（ろうどうりょく）人口（じんこう）",
-    "在日外国人（ざいにちがいこくじん）",
-    "特定技能実習生（とくていぎのうじっしゅうせい）"
-  ],
-  answer: 1,
-  vi: "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
-  explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
-},
+ 
 {
   q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
   img: "images/IMG_3386.jpeg",
@@ -145,7 +133,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 2,
     vi: "Chọn tài liệu không nằm trong bộ hồ sơ thiết kế.",
-    explain: "設計図書 (bộ hồ sơ thiết kế) bao gồm các bản vẽ thiết kế, chỉ dẫn kỹ thuật và tài liệu hỏi–đáp kỹ thuật (質疑応答書). Tuy nhiên, 契約書 (hợp đồng) là tài liệu pháp lý riêng, không thuộc thiết kế."
+    explain: "設計図書 （せっけいとしょ）(bộ hồ sơ thiết kế) bao gồm các bản vẽ thiết kế, chỉ dẫn kỹ thuật và tài liệu hỏi–đáp kỹ thuật (質疑応答書)（せっけいとしょ）. Tuy nhiên, 契約書（けいやくしょ） (hợp đồng) là tài liệu pháp lý riêng, không thuộc thiết kế."
   },
   {
     q: "問163　国家（こっか）免許（めんきょ）が必要（ひつよう）な職種（しょくしゅ）はどれか。【68】",
@@ -193,7 +181,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Loại công trình lắp đặt thiết bị để giảm truyền năng lượng động đất vào tòa nhà gọi là gì?",
-    explain: "免震工事 là công trình lắp đặt hệ thống cách ly nền (base isolation) bằng アイソレータ (isolator) hay ダンパー (damper), giúp tòa nhà không rung mạnh khi có động đất."
+    explain: "免震工事 （めんしんこうじ）là công trình lắp đặt hệ thống cách ly nền (base isolation) bằng アイソレータ (isolator) hay ダンパー (damper), giúp tòa nhà không rung mạnh khi có động đất."
   },
   {
     q: "問167　建設業（けんせつぎょう）の社会的（しゃかいてき）役割（やくわり）について、正（ただ）しくないものを選（えら）べ。【87】",
@@ -216,8 +204,8 @@ window.QUESTION_SETS["6"] = [
       "品質（ひんしつ）管理（かんり）"
     ],
     answer: 0,
-    vi: "Hãy chọn công việc không thuộc phạm vi của kỹ thuật viên phụ trách chính (主任技術者).",
-    explain: "主任技術者 phụ trách kế hoạch thi công, quản lý an toàn và chất lượng — không thực hiện việc tính lương, nên đáp án đúng là ①."
+    vi: "Hãy chọn công việc không thuộc phạm vi của kỹ thuật viên phụ trách chính (主任技術者)（しゅにんぎじゅつしゃ）.",
+    explain: "主任技術者（しゅにんぎじゅつしゃ） phụ trách kế hoạch thi công, quản lý an toàn và chất lượng — không thực hiện việc tính lương"
   },
   {
     q: "問169　免許（めんきょ）が必要（ひつよう）なトランシーバーを無免許（むめんきょ）で使用（しよう）すると違反（いはん）になる法（ほう）は何（なん）というか。【24】",
@@ -229,7 +217,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Khi sử dụng bộ đàm (transeiver) mà không có giấy phép thì vi phạm luật nào?",
-    explain: "Việc sử dụng thiết bị phát sóng không phép vi phạm 電波法 (Luật Sóng Điện). Đáp án đúng là ①."
+    explain: "Việc sử dụng thiết bị phát sóng không phép vi phạm 電波法（でんぱほう） (Luật Sóng Điện)."
   },
   {
     q: "問170　上下（じょうげ）水道（すいどう）施設（しせつ）でないものを選（えら）べ。【35】",
@@ -241,7 +229,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 3,
     vi: "Hãy chọn hạng mục không thuộc hệ thống cấp thoát nước.",
-    explain: "配電盤 là bảng điện, không thuộc hệ thống nước. Đáp án đúng là ④."
+    explain: "配電盤　（はいでんばん）là bảng điện, không thuộc hệ thống nước."
   },
   {
     q: "問171　朝礼（ちょうれい）の一番（いちばん）の目的（もくてき）は何（なん）ですか。",
@@ -252,8 +240,8 @@ window.QUESTION_SETS["6"] = [
       "ラジオ体操（たいそう）"
     ],
     answer: 2,
-    vi: "Mục đích chính của buổi chào sáng (朝礼) là gì?",
-    explain: "朝礼 được tổ chức để chia sẻ thông tin an toàn và ngăn ngừa tai nạn tại công trường. Đáp án đúng là ③."
+    vi: "Mục đích chính của buổi chào sáng (朝礼)（ちょうれい） là gì?",
+    explain: "朝礼（ちょうれい） được tổ chức để chia sẻ thông tin an toàn và ngăn ngừa tai nạn tại công trường."
   },
   {
     q: "問172　作業（さぎょう）開始前（かいしまえ）にKY活動（かつどう）を行（おこな）う手順（てじゅん）として、最初（さいしょ）に行（おこな）われるものを選（えら）べ。",
@@ -265,7 +253,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 3,
     vi: "Trong trình tự thực hiện hoạt động KY trước khi bắt đầu công việc, bước đầu tiên là gì?",
-    explain: "Trước tiên cần phát hiện mối nguy hiểm (危険の発見) rồi mới đưa ra biện pháp. Đáp án đúng là ④."
+    explain: "Trước tiên cần phát hiện mối nguy hiểm 危険（きけん）の発見（はっけん） rồi mới đưa ra biện pháp.."
   },
   {
     q: "問173　労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）の目的（もくてき）は何（なん）か。【11】",
@@ -277,7 +265,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 3,
     vi: "Mục đích của Luật An toàn và Vệ sinh Lao động là gì?",
-    explain: "Luật này nhằm bảo vệ an toàn và sức khỏe của người lao động (労働者). Đáp án đúng là ④."
+    explain: "Luật này nhằm bảo vệ an toàn và sức khỏe của người lao động 労働者（ろうどうしゃ）."
   },
   {
     q: "問174　次（つぎ）の段階（だんかい）の作業（さぎょう）に取（と）り掛（か）かれず、作業員（さぎょういん）の動作（どうさ）がストップしている状態（じょうたい）は何（なに）か。【19】",
@@ -289,7 +277,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 1,
     vi: "Tình trạng khi công nhân không thể tiếp tục sang giai đoạn tiếp theo và đang dừng lại được gọi là gì?",
-    explain: "‘手待ち’ nghĩa là “chờ việc” – công nhân không thể tiếp tục công việc do chờ vật liệu, thiết bị,... Đáp án đúng là ②."
+    explain: "‘手待（てま）ち’ nghĩa là “chờ việc” – công nhân không thể tiếp tục công việc do chờ vật liệu, thiết bị,...."
   },
   {
     q: "問175　コンセントや照明（しょうめい）などの電気系（でんきけい）の配線（はいせん）やガス管（かん）・水道管（すいどうかん）・空調（くうちょう）などの配管（はいかん）がわかるようにしたのはどれか。【79】",
@@ -301,7 +289,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 1,
     vi: "Bản vẽ nào thể hiện cách bố trí đường dây điện, ống ga, ống nước, ống điều hòa?",
-    explain: "設備図 thể hiện bố trí toàn bộ hệ thống điện, nước, ga, điều hòa. Đáp án đúng là ②."
+    explain: "設備図（せつびず） thể hiện bố trí toàn bộ hệ thống điện, nước, ga, điều hòa. "
   },
   {
     q: "問176　職場環境（しょくばかんきょう）について、不適切（ふてきせつ）なものを選（えら）べ。【135】",
@@ -312,20 +300,20 @@ window.QUESTION_SETS["6"] = [
       "働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）む"
     ],
     answer: 2,
-    vi: "Về môi trường làm việc, hãy chọn điều **không phù hợp (不適切)**.",
-    explain: "職長 nên tạo môi trường dễ trao đổi và thoải mái. Việc tạo môi trường ‘khó nói xin nghỉ phép’ là sai. Đáp án đúng là lựa chọn thứ 3 ."
+    vi: "Về môi trường làm việc, hãy chọn điều **không phù hợp不適切（ふてきせつ）**.",
+    explain: "職長（しょくちょう） nên tạo môi trường dễ trao đổi và thoải mái. Việc tạo môi trường ‘khó nói xin nghỉ phép’ là sai ."
   },
   {
     q: "問177　職場環境（しょくばかんきょう）について、適切（てきせつ）なものを選（えら）べ。",
     options: [
       "週休（しゅうきゅう）1日（いちにち）を確保（かくほ）する",
       "職長（しょくちょう）だけは育成（いくせい）と確保（かくほ）をする必要（ひつよう）がある",
-      "意識（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）らないことが大切（たいせつ）",
+      "意識長（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）らないことが大切（たいせつ）",
       "働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）まない"
     ],
     answer: 2,
-    vi: "Về môi trường làm việc, hãy chọn điều **phù hợp (適切)**.",
-    explain: "職長 nên tạo môi trường nơi nhân viên có thể dễ dàng nói ra ý kiến hoặc xin nghỉ phép. Đáp án đúng là lựa chọn thứ 3 ."
+    vi: "Về môi trường làm việc, hãy chọn điều **phù hợp 適切（てきせつ）**.",
+    explain: "職長 （しょくちょう）nên tạo môi trường nơi nhân viên có thể dễ dàng nói ra ý kiến hoặc xin nghỉ phép."
   },
   {
     q: "問178　杭工事（くいこうじ）とはどんな工事（こうじ）か。",
@@ -337,7 +325,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 2,
     vi: "Cọc (杭) công trình là loại công việc như thế nào?",
-    explain: "杭工事 là công việc đóng hoặc khoan cọc xuống lòng đất để đỡ công trình phía trên. Đáp án đúng là lựa chọn thứ 3 ."
+    explain: "杭工事（くいこうじ）là công việc đóng hoặc khoan cọc xuống lòng đất để đỡ công trình phía trên."
   },
   {
     q: "問179　清掃（せいそう）とは何（なに）か。",
@@ -348,8 +336,8 @@ window.QUESTION_SETS["6"] = [
       "建設中（けんせつちゅう）に生（しょう）じた汚（よご）れや塵（ちり）、建材（けんざい）の切（き）りくずなどをなくし、きれいな状態（じょうたい）にする"
     ],
     answer: 3,
-    vi: "‘Lau dọn (清掃)’ là gì?",
-    explain: "清掃 là dọn sạch bụi, rác, vật liệu thừa để công trường luôn sạch sẽ, gọn gàng. Đáp án đúng là lựa chọn thứ 4 ."
+    vi: "‘Lau dọn 清掃（せいそう） là gì?",
+    explain: "清掃（せいそう） là dọn sạch bụi, rác, vật liệu thừa để công trường luôn sạch sẽ, gọn gàng."
   },
   {
     q: "問180　流（なが）れよく工事（こうじ）を進（すす）めるには、専門（せんもん）工事（こうじ）業者間（ぎょうしゃかん）の＿＿＿＿が大切（たいせつ）である。",
@@ -361,7 +349,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 1,
     vi: "Để tiến hành thi công một cách trôi chảy, điều gì giữa các nhà thầu chuyên môn là quan trọng?",
-    explain: "Để tiến hành thi công suôn sẻ, sự hợp tác và phối hợp nhóm (チームワーク) giữa các nhà thầu là điều quan trọng. Đáp án đúng là lựa chọn thứ 2 ."
+    explain: "Để tiến hành thi công suôn sẻ, sự hợp tác và phối hợp nhóm (チームワーク) giữa các nhà thầu là điều quan trọng ."
   },
   {
     q: "問2　アスファルトを敷（し）き均（なら）して締（し）め固（かた）める工事（こうじ）を、何（なん）というか。",
@@ -385,7 +373,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 1,
     vi: "Chi phí khi giao một phần công đoạn thi công cho nhà thầu khác gọi là gì?",
-    explain: "費用 khi giao một phần công việc cho nhà thầu khác gọi là 外注費（がいちゅうひ）– chi phí thuê ngoài."
+    explain: "費用（ひよう） khi giao một phần công việc cho nhà thầu khác gọi là 外注費（がいちゅうひ）– chi phí thuê ngoài."
   },
   {
     q: "問5　ポリイソシアネート成分（せいぶん）とポリオール成分（せいぶん）を混（ま）ぜて攪拌（かくはん）することで化学反応（かがくはんのう）が起（お）こり、何（なに）が形成（けいせい）されますか。",
@@ -397,7 +385,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Chất được tạo thành từ phản ứng giữa thành phần Polyisocyanate và Polyol là gì?",
-    explain: "Khi hai thành phần này phản ứng sẽ tạo ra 硬質ウレタンフォーム – Urethane cứng (foam polyurethane)."
+    explain: "Khi hai thành phần này phản ứng sẽ tạo ra 硬質（こうしつ）ウレタンフォーム – Urethane cứng (foam polyurethane)."
   },
   {
     q: "問6　ウレタン効果（こうか）について、次のうちどれか。",
@@ -409,7 +397,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 3,
     vi: "Hiệu quả của Urethane là gì?",
-    explain: "ウレタン có hiệu quả cách nhiệt (断熱効果)."
+    explain: "ウレタン có hiệu quả cách nhiệt 断熱（だんねつ）効果（こうか）."
   },
   {
     q: "問7　駐車場（ちゅうしゃじょう）法（ほう）の目的（もくてき）について、適切（てきせつ）なものを選（えら）べ。",
@@ -420,8 +408,8 @@ window.QUESTION_SETS["6"] = [
       "建築基準（けんちくきじゅん）に関（かん）する法律（ほうりつ）です。"
     ],
     answer: 0,
-    vi: "Luật bãi đậu xe (駐車場法) có mục đích gì?",
-    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị.."
+    vi: "Luật bãi đậu xe 駐車場（ちゅうしゃじょう）法（ほう） có mục đích gì?",
+    explain: "駐車場（ちゅうしゃじょう）法（ほう） quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị.."
   },
   {
     q: "問8　防水（ぼうすい）工事（こうじ）にないものを選（えら）べ。",
@@ -433,7 +421,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Hãy chọn công trình không thuộc hạng mục chống thấm.",
-    explain: "防水工事 là công trình chống thấm. サッシ工事 (công trình khung nhôm/kính) không thuộc nhóm này."
+    explain: "　防水（ぼうすい）工事（こうじ） là công trình chống thấm. サッシ工事 (công trình khung nhôm/kính) không thuộc nhóm này."
   },
   {
     q: "問11　路床（ろしょう）の上（うえ）に砕石（さいせき）などを敷（し）いて、２つの層（そう）は次（つぎ）のうちどれか。",
@@ -457,43 +445,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Vật liệu làm mái nhà của nhà ở, đền, chùa ở Nhật là gì?",
-    explain: "Ngói đất sét (粘土瓦・ねんどがわら) là vật liệu truyền thống dùng cho mái nhà, đền, chùa. → đáp án ① (index 0)."
-  },
-  {
-    q: "問37　雇用（こよう）保険法（ほけんほう）のお支払（しはら）いについて、適切（てきせつ）なものを選（えら）べ。",
-    options: [
-      "労働者（ろうどうしゃ）本人（ほんにん）と事業主（じぎょうぬし）と国庫（こっこ）負担（ふたん）",
-      "事業主（じぎょうぬし）",
-      "国庫（こっこ）負担（ふたん）と労働者（ろうどうしゃ）本人（ほんにん）",
-      "労働者（ろうどうしゃ）本人（ほんにん）"
-    ],
-    answer: 0,
-    vi: "Ai chịu trách nhiệm chi trả Luật Bảo hiểm việc làm?",
-    explain: "Theo luật, người lao động, chủ doanh nghiệp và nhà nước cùng chia sẻ trách nhiệm đóng bảo hiểm ."
-  },
-  {
-    q: "問39　雇用（こよう）保険法（ほけんほう）のお支払（しはら）いについて、適切（てきせつ）なものを選（えら）べ。",
-    options: [
-      "全額（ぜんがく）、労働者（ろうどうしゃ）から",
-      "事業（じぎょう）も労働者（ろうどうしゃ）もお支払（しはら）い",
-      "全額（ぜんがく）、国（くに）から",
-      "全額（ぜんがく）、事業（じぎょう）から"
-    ],
-    answer: 1,
-    vi: "Luật bảo hiểm việc làm do ai chi trả?",
-    explain: "Cả doanh nghiệp và người lao động cùng chi trả ."
-  },
-  {
-    q: "問7　駐車場（ちゅうしゃじょう）法（ほう）の目的（もくてき）について、適切（てきせつ）なものを選（えら）べ。",
-    options: [
-      "回線（かいせん）などの設備（せつび）を設置（せっち）して通信（つうしん）サービスを提供（ていきょう）する電気通信（でんきつうしん）事業（じぎょう）について規定（きてい）した法律（ほうりつ）です。",
-      "航空機（こうくうき）の航行（こうこう）の安全（あんぜん）および障害（しょうがい）の防止（ぼうし）を図（はか）るための法律（ほうりつ）です。",
-      "都市（とし）における自動車（じどうしゃ）の駐車（ちゅうしゃ）のための施設（しせつ）整備（せいび）に関（かん）して定（さだ）めた法律（ほうりつ）です。",
-      "上水道（じょうすいどう）事業（じぎょう）について定（さだ）めた法律（ほうりつ）です。"
-    ],
-    answer: 2,
-    vi: "Luật bãi đậu xe (駐車場法) có mục đích gì?",
-    explain: "駐車場法 quy định về cơ sở hạ tầng đậu xe ô tô trong khu vực đô thị."
-  }
+    explain: "Ngói đất sét (粘土瓦・ねんどがわら) là vật liệu truyền thống dùng cho mái nhà, đền, chùa."
+  },  
 ];
   

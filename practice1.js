@@ -12,8 +12,8 @@ window.PRACTICE_SETS["1"] = [
       "4．マンションなどの骨組（ほねぐ）みを組（く）み立（た）てる"
     ],
     answer: 2,
-    vi: "Chọn đặc điểm đúng của giàn giáo ống thép (単管足場).",
-    explain: "単管足場 linh hoạt, dễ lắp ghép bằng ống thép & kẹp nối → phù hợp thi công ở không gian hẹp.",
+    vi: "Chọn đặc điểm đúng của giàn giáo ống thép (単管足場)（たんかんあしば）.",
+    explain: "単管足場（たんかんあしば） linh hoạt, dễ lắp ghép bằng ống thép & kẹp nối → phù hợp thi công ở không gian hẹp.",
     tip: "💡 Mẹo nhớ: Thấy chữ **単** = “đơn, đơn giản, linh hoạt” → dùng chỗ **hẹp**."
   },
 
@@ -27,8 +27,8 @@ window.PRACTICE_SETS["1"] = [
     ],
     answer: 2,
     vi: "Loại thép nào chứa ≥11% Crom, chống gỉ và giữ bề mặt đẹp lâu?",
-    explain: "ステンレス鋼板 (thép không gỉ) chứa ≥11% Cr tạo lớp màng bảo vệ → chống gỉ, bền đẹp.",
-    tip: "💡 Mẹo nhớ: **Stainless = không stain (không gỉ)** → đẹp bền lâu."
+    explain: "ステンレス鋼板（こうはん） (thép không gỉ) chứa ≥11% Cr tạo lớp màng bảo vệ → chống gỉ, bền đẹp.",
+    tip: "💡 Mẹo nhớ: **Stainess = không stain (không gỉ)** → đẹp bền lâu."
   },
 
   {
@@ -55,7 +55,7 @@ window.PRACTICE_SETS["1"] = [
     ],
     answer: 2,
     vi: "Về công tác đá, hãy chọn đáp án **không đúng**.",
-    explain: "乾式工法 ít lỗi sau thi công hơn so với 湿式工法 → câu 3 nói ngược nên sai.",
+    explain: "乾式工法 （かんしきこうほう）ít lỗi sau thi công hơn so với 湿式工法（かんしきこうほう）.",
     tip: "💡 Mẹo nhớ: Khô (乾) = sạch, ít rắc rối → **khô ít lỗi hơn ướt**."
   },
   {
@@ -72,27 +72,34 @@ window.PRACTICE_SETS["1"] = [
   explain: "Đó là thanh **ランナー (Runner)** – thanh ray nằm ngang ở trần và sàn, dùng để cố định các thanh đứng (スタッド).",
   tip: "💡 Nhớ: Runner = chạy dọc sàn/trần → giữ Stud thẳng đứng."
 },
-  {
-    q: "問6　コンクリートの表面から鉄筋までの距離は何というか。【153】",
-    options: ["1．かぶり", "2．スタッド", "3．スペーサー", "4．シャックル"],
-    answer: 0,
-    vi: "Khoảng cách từ mặt bê tông đến cốt thép gọi là gì?",
-    explain: "Đó là **かぶり厚さ (độ bảo vệ bê tông)** để chống gỉ thép.",
-    tip: "💡 Nhớ: “かぶる” = che phủ → lớp bê tông bảo vệ thép."
-  },
-  {
-    q: "問7　溶接の時に発生する有害ガスを吸い込むと頭痛や吐き気などを起こす。このガスは何か。【157】",
-    options: [
-      "1．フューム",
-      "2．アセチレン",
-      "3．酸素",
-      "4．排気"
-    ],
-    answer: 0,
-    vi: "Khí độc sinh ra khi hàn gây đau đầu, buồn nôn gọi là gì?",
-    explain: "Khói hàn gọi là **フューム (Fume)** – hạt kim loại cực nhỏ gây hại phổi.",
-    tip: "💡 Nhớ: “fume” = khói, hít vào gây đau đầu."
-  },
+ {
+  q: "問6　コンクリートの表面(ひょうめん)から鉄筋(てっきん)までの距離(きょり)は何(なん)というか。【153】",
+  options: [
+    "1．かぶり",
+    "2．スタッド",
+    "3．スペーサー",
+    "4．シャックル"
+  ],
+  answer: 0,
+  vi: "Khoảng cách từ bề mặt bê tông đến thép gọi là gì?",
+  explain: "Khoảng cách từ bề mặt bê tông đến cốt thép được gọi là “かぶり（lớp bảo vệ bê tông）”。",
+  tip: "💡 Nhớ: かぶり = lớp bê tông ‘che phủ’ thép để chống gỉ."
+},
+
+ {
+  q: "問7　溶接(ようせつ)の時(とき)の________を吸(す)い込(こ)むと頭痛(ずつう)·発熱(はつねつ)·寒気(さむけ)·筋肉痛(きんにくつう)·のどの渇(かわ)き·疲労(ひろう)などの症状(しょうじょう)が起(お)こる。________に記入(きにゅう)をしなさい。【157】",
+  options: [
+    "1．ヒューム",
+    "2．アセチレン",
+    "3．酸素(さんそ)",
+    "4．排気(はいき)"
+  ],
+  answer: 0,
+  vi: "Hít phải ________ khi hàn sẽ gây đau đầu, sốt, ớn lạnh, đau cơ, khô họng, mệt mỏi… Hãy điền vào chỗ trống.",
+  explain: "Khi hàn tạo ra 'ヒューム' (khói hàn – welding fume). Hít phải gây hội chứng sốt khói kim loại.",
+  tip: "💡 Nhớ: Hàn = tạo ra khói trắng mịn → gọi là フューム (fume)."
+},
+
   {
     q: "問8　ボックスレンチは何に使うか。【138】",
     options: [

@@ -366,16 +366,17 @@ window.QUESTION_SETS["1"] = [
   vi: "Khi thanh thép không đủ dài, nối 2 thanh lại thành 1 thanh dài gọi là công việc nối thép.",
   explain: "Đáp án đúng: 鉄筋（てっきん）継手（つぎて）工事（こうじ） — Công việc nối thép để kéo dài thanh."
 },
-  {
-  q: "問30　タワークレーンを使（つか）って、１階（いっかい）ずつ組（く）み上（あ）げていく方法（ほうほう）は何（なん）というか。【46】",
-  options: [
-    "1．ブラケット工法（こうほう）",
-    "2．建（た）て逃（に）げ方式（ほうしき）",
-    "3．ノンブラケット工法（こうほう）",
-    "4．水平（すいへい）積（つ）み上（あ）げ方式（ほうしき）"
-  ],
-  answer: 3,
-  vi: "Khi sử dụng cần trục tháp (tower crane) để lắp dựng từng tầng một, phương pháp này được gọi là gì?",
-  explain: "Phương pháp này gọi là **ブラケット工法 (Bracket Kōhō)** — là cách lắp dựng dần từng tầng, dùng giá đỡ (bracket) cố định cần trục theo từng tầng khi công trình cao dần lên."
+{
+  q: "問30. タワークレーンを使(つか)って、1階(いっかい)ずつ組(く)み上(あ)げていく方法(ほうほう)は何(なん)というか【46】",
+  options: [
+    "1. ブラケット工法(こうほう)",
+    "2. 建(た)てて逃(に)げ方式(ほうしき)",
+    "3. ノンブラケット工法(こうほう)",
+    "4. 水平(すいへい)積(つ)み上(あ)げ方式(ほうしき)"
+  ],
+  answer: 3,
+  vi: "Phương pháp sử dụng **タワークレーン (Cần cẩu tháp)** để lắp ráp/nâng lên từng tầng (**1階(いっかい)ずつ**) được gọi là gì?",
+  explain: "Đó là **水平(すいへい)積(つ)み上(あ)げ方式(ほうしき)** (Phương pháp xếp chồng ngang rồi nâng lên). Trong bối cảnh này, thuật ngữ này được sử dụng để chỉ phương pháp nâng cần cẩu tháp lên từng tầng (**1階(いっかい)ずつ**) theo chiều cao của công trình.",
+  tip: "💡 Nhớ: **タワークレーン (Cần cẩu tháp)** + **1階(いっかい)ずつ** = **水平積(すいへいづみ)み上(あ)げ方式(あげほうしき)** (Phương pháp nâng lên theo chiều ngang)."
 }
 ];

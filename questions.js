@@ -374,7 +374,7 @@ window.QUESTION_SETS["1"] = [
     "3．ノンブラケット工法（こうほう）",
     "4．水平（すいへい）積（つ）み上（あ）げ方式（ほうしき）"
   ],
-  answer: 0,
+  answer: 3,
   vi: "Khi sử dụng cần trục tháp (tower crane) để lắp dựng từng tầng một, phương pháp này được gọi là gì?",
   explain: "Phương pháp này gọi là **ブラケット工法 (Bracket Kōhō)** — là cách lắp dựng dần từng tầng, dùng giá đỡ (bracket) cố định cần trục theo từng tầng khi công trình cao dần lên."
 }

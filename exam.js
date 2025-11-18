@@ -1,14 +1,39 @@
-(function(){
-  const $ = (sel)=>document.querySelector(sel);
+(function () {
+  const $ = (sel) => document.querySelector(sel);
   const params = new URLSearchParams(location.search);
-  const setId = params.get('set') || '1';
-  const DATA = (window.QUESTION_SETS && window.QUESTION_SETS[setId]) ? JSON.parse(JSON.stringify(window.QUESTION_SETS[setId])) : [];
-  const quizEl = $('#quiz');
-  const resEl = $('#result');
-  const submitBtn = $('#submitBtn');
-  const redoBtn = $('#redoWrong');
-  const timerEl = $('#timer');
 
+  const setId = params.get("set");
+  const practiceId = params.get("practice");
+  let DATA = [];
+
+  // ✅ Hỗ trợ đề thực hành nhóm 1 (g1_x)
+  let normalizedPracticeId = practiceId;
+  if (practiceId && practiceId.startsWith("g1_")) {
+    normalizedPracticeId = practiceId;
+  }
+
+  // ✅ Ưu tiên thực hành
+  if (normalizedPracticeId && window.PRACTICE_SETS && window.PRACTICE_SETS[normalizedPracticeId]) {
+    DATA = JSON.parse(JSON.stringify(window.PRACTICE_SETS[normalizedPracticeId]));
+    window.questions = window.PRACTICE_SETS[normalizedPracticeId];
+  }
+  // ✅ Lý thuyết
+  else if (setId && window.QUESTION_SETS && window.QUESTION_SETS[setId]) {
+    DATA = JSON.parse(JSON.stringify(window.QUESTION_SETS[setId]));
+    window.questions = window.QUESTION_SETS[setId];
+  }
+  // ❌ Không có đề
+  else {
+    DATA = [];
+    window.questions = [];
+  }
+
+  const quizEl = $("#quiz");
+  const resEl = $("#result");
+  const submitBtn = $("#submitBtn");
+  const redoBtn = $("#redoWrong");
+  const timerEl = $("#timer");
+  
   // 60 phút đếm ngược
   let timeLeft = 60*60;
   const tick = ()=>{

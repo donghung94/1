@@ -112,7 +112,6 @@ window.PRACTICE_SETS["1"] = [
   vi: "Công dụng của box wrench là gì?",
   explain: "Là dụng cụ có phần đầu ổ và tay cầm liền nhau, dùng để siết bu-lông.",
   tip: "💡 Nhớ: Box = đầu kín bao quanh ốc → siết mạnh, an toàn."
-}
 
   },
  {

@@ -78,6 +78,16 @@
     const body = `
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>`:''}
+      ${
+        q.img
+          ? `<div class="q-img">
+              <img src="${q.img}" alt="question image" 
+                   onerror="this.style.display='none';"
+                   style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;">
+             </div>`
+          : ""
+      }
+
       <div class="options">
         ${q.options.map((op,i)=>{
           let cls='opt';
@@ -164,6 +174,14 @@
         <div class="result-item">
           <div class="q-text">${q.q}</div>
           ${q.hira?`<div class="hira">${q.hira}</div>`:''}
+           ${
+            q.img
+              ? `<div class="q-img">
+                  <img src="${q.img}" alt="question image"
+                       style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;">
+                 </div>`
+              : ""
+      }
           <div class="answer-line">❌ <b>Bạn chọn:</b> ${picked!==null?q.options[picked].text:'(chưa chọn)'}</div>
           <div class="answer-line">✅ <b>Đáp án đúng:</b> ${right.text}</div>
           ${q.vi?`<div><b>Dịch:</b> ${q.vi}</div>`:''}

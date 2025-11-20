@@ -4,58 +4,71 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 window.PRACTICE_SETS["2"] = [
 
 {
-  q: "問31　クローラー式の走行装着の前面に、可動式の排土板を装着し、主として掘削・運搬を行う機械は何か。【101】",
-  options: [
-    "1．パワーショベル",
-    "2．ブルドーザー",
-    "3．ホイールローダー",
-    "4．ダンプトラック"
-  ],
-  answer: 1,
-  vi: "Máy nào có gắn lưỡi ủi di động ở phía trước khung bánh xích, chủ yếu dùng để đào đất và vận chuyển?",
-  explain: "Đó là **ブルドーザー (bulldozer)** — xe ủi đất chạy bằng bánh xích, có lưỡi ủi lớn ở phía trước để san, đẩy, hoặc xúc đất. Dùng trong san lấp mặt bằng và mở đường.",
-  tip: "💡 Nhớ: 排土板（はいどばん）＝ tấm ủi đất → nhớ ngay đến ブルドーザー (xe ủi đất)."
+  q: "問31.クローラー式(しき)の走行(そうこう)装着(そうちゃく)の前面(ぜんめん)に、可動式(かどうしき)の排土板(はいどばん)を装着(そうちゃく)し、主(おも)として掘削(くっさく)、運搬(うんぱん)を行(おこな)う機械(きかい)は何(なに)か。【101】",
+  options: [
+    "1. パワーショベル",
+    "2. ブルドーザー",
+    "3. ホイールローダー",
+    "4. ダンプトラック"
+  ],
+  answer: 1,
+  vi: "Loại máy móc nào có trang bị bánh xích (**クローラー式(しき)**), lắp một lưỡi ủi (**排土板(はいどばん)**) có thể di chuyển ở phía trước, và chủ yếu thực hiện các công việc đào (**掘削(くっさく)**) và vận chuyển (**運搬(うんぱん)**)?",
+  explain: "Đó là **ブルドーザー (Xe ủi đất)**. Đặc trưng của máy này là có bánh xích (**クローラー式(しき)**) và lưỡi ủi (**排土板(はいどばん)**) lớn ở phía trước, chuyên dùng để ủi đất, san lấp, và vận chuyển vật liệu trong cự ly ngắn.",
+  tip: "💡 Nhớ: **ブルドーザー (Bulldozer)** = **クローラー式(しき)** (Bánh xích) + **排土板(はいどばん)** (Lưỡi ủi)."
 },
   {
-  q: "問32　この写真は何の足場（あしば）か。【102】",
+  q: "問32. この写真(しゃしん)は何(なに)の足場(あしば)か。【102】",
   img: "images/0611.png",
   options: [
-    "1．くさび緊結式（きんけつしき）足場（あしば）",
-    "2．単管（たんかん）足場（あしば）",
-    "3．枠組（わくぐみ）足場（あしば）",
-    "4．鉄骨（てっこつ）とび"
+    "1. くさび緊結式(きんけつしき)足場(あしば)",
+    "2. 単管(たんかん)足場(あしば)",
+    "3. 枠組(わくぐ)み足場(あしば)",
+    "4. 鉄骨(てっこつ)とび"
   ],
-  answer: 2,
-  vi: "Ảnh này là loại giàn giáo nào?",
-  explain: "Đây là **枠組足場（わくぐみあしば）**, giàn giáo khung, được lắp ghép từ các khung thép hình cửa và tấm sàn thép. Dễ lắp ráp, an toàn, dùng cho tòa nhà nhiều tầng.",
-  tip: "💡 Nhớ: 枠組 = khung → Giàn giáo có khung thép = 枠組足場."
+  answer: 0,
+  vi: "Giàn giáo trong bức ảnh này là loại nào?",
+  explain: "Đó là **くさび緊結式(きんけつしき)足場(あしば) (Giàn giáo kiểu nêm)**. Đặc điểm nhận dạng là các cột chống có các túi để đóng nêm vào, và thanh giằng được kết nối bằng cách đóng nêm (くさび) chặt vào cột. Loại này rất phổ biến trong các công trình sửa chữa nhà ở hoặc tòa nhà thấp tầng.",
+  tip: "💡 Nhớ: Nhìn thấy các chốt nêm đóng vào cột hoặc sàn lưới kim loại đặc trưng như hình → **くさび緊結式(きんけつしき)**."
 },
-{
-  q: "問33　これは何と言うか。【110】",
+  {
+  q: "問33. これは何(なん)と言(い)うか。【110】",
   img: "images/1753.png",
   options: [
-    "1．ラムシリンダ",
-    "2．バーナー",
-    "3．溶接棒（ようせつぼう）",
-    "4．曲げ試験機（まげしけんき）"
+    "1. ラムシリンダ",
+    "2. バーナー",
+    "3. 溶接棒(ようせつぼう)",
+    "4. 曲(ま)げ試験機(しけんき)"
   ],
   answer: 1,
-  vi: "Dụng cụ trong hình gọi là gì?",
-  explain: "Đây là **バーナー（đèn khò gas）**, dùng để làm nóng, nung chảy hoặc hàn các vật liệu kim loại, ống đồng,... thường thấy trong công việc xây dựng hoặc cơ khí.",
-  tip: "💡 Nhớ: バーナー = từ tiếng Anh 'Burner' → liên quan đến ngọn lửa, nhiệt."
+  vi: "Đây được gọi là gì?",
+  explain: "Đây là một đầu **バーナー (Burner)** chuyên dụng. Nó được thiết kế để tạo nhiều ngọn lửa cùng lúc, thường dùng để nung nóng ống thép hoặc các vật liệu kim loại có hình dạng cong một cách đồng đều.",
+  tip: "💡 Nhớ: Dụng cụ tạo ra lửa/nhiệt để nung nóng → **バーナー (Burner)**."
 },
 {
-  q: "問34　ヘルメットと顔全体を確保するシールドが一体になっているヘルメットは何というか。【110】",
-  options: [
-    "1．保護（ほご）メガネ",
-    "2．保護（ほご）ヘルメット",
-    "3．防塵（ぼうじん）マスク",
-    "4．シールド面（めん）付き（つき）ヘルメット"
-  ],
-  answer: 3,
-  vi: "Mũ bảo hộ có tấm che mặt bảo vệ toàn bộ khuôn mặt gọi là gì?",
-  explain: "Đây là **シールド面付きヘルメット** – mũ bảo hộ có gắn sẵn tấm chắn mặt trong suốt, giúp bảo vệ toàn bộ khuôn mặt khỏi bụi, tia lửa hoặc vật văng. Thường dùng trong công việc hàn, cắt kim loại hoặc xây dựng có nguy cơ bắn vật liệu.",
-  tip: "💡 Nhớ: シールド (shield) = tấm chắn → シールド面付きヘルメット = mũ có tấm chắn bảo vệ khuôn mặt."
+  q: "問34.ヘルメットと顔(かお)全体(ぜんたい)を確保(かくほ)するシールドが一体(いったい)になっているヘルメットは何(なに)と言(い)うか。【110】",
+  options: [
+    "1. 保護(ほご)メガネ",
+    "2. 保護(ほご)ヘルメット",
+    "3. 防塵(ぼうじん)マスク",
+    "4. シールド面(めん)付き(つき)ヘルメット"
+  ],
+  answer: 3,
+  vi: "Mũ bảo hiểm có tấm chắn (shield) bảo vệ toàn bộ khuôn mặt (**顔(かお)全体(ぜんたい)**) được tích hợp (**一体(いったい)になっている**) thành một khối được gọi là gì?",
+  explain: "Đó là **シールド面(めん)付き(つき)ヘルメット (Mũ bảo hiểm có tấm chắn)**. Đây là loại mũ bảo hiểm có thêm tấm chắn nhựa trong suốt (**シールド**) có thể nâng lên hạ xuống để bảo vệ mắt và mặt khỏi bụi, mảnh vỡ khi làm việc.",
+  tip: "💡 Nhớ: **シールド面(めん)付き(つき)** (có tấm chắn mặt) + **ヘルメット** (Mũ bảo hiểm) = Đúng như mô tả."
+},
+{
+  q: "問35.ブロック積(つ)み作業(さぎょう)で使用(しよう)する道具(どうぐ)は何(なに)か。【115】",
+  options: [
+    "1. くさび緊結式(きんけつしき)足場(あしば)",
+    "2. こて",
+    "3. シノ ♡",
+    "4. ボルシン"
+  ],
+  answer: 1,
+  vi: "Dụng cụ được sử dụng trong công việc xếp/xây gạch block (**ブロック積(つ)み作業(さぎょう)**) là gì?",
+  explain: "Trong công việc xây gạch block, **こて (Bay/Cái trát)** là dụng cụ chính được sử dụng để trải vữa (mortar), cắt vữa, và hoàn thiện các mối nối (joint) giữa các viên gạch.",
+  tip: "💡 Nhớ: Xây gạch (**ブロック積(つ)み(つみ)**) = Phải dùng **こて (Bay)** để trát vữa."
 },
 {
   q: "問36　写真の工具（こうぐ）の名前（なまえ）はどれか。【116】",
@@ -83,7 +96,7 @@ window.PRACTICE_SETS["2"] = [
   answer: 2,
   vi: "Bộ phận hình tròn (ドーナツ) này dùng để làm gì?",
   explain: "Đây là **丸セパレーター（まるセパレーター）**, dùng để giữ khoảng cách giữa **鉄筋（てっきん／thép）** và **型枠（かたわく／ván khuôn）**, giúp đảm bảo lớp bê tông bảo vệ (かぶり厚) đạt đúng tiêu chuẩn.",
-  tip: "💡 Mẹo nhớ: ドーナツ = hình tròn → giữ khoảng cách giữa thép và ván khuôn (かぶり厚を確保する)."
+  tip: "💡 Mẹo nhớ: ドーナツ = hình tròn → giữ khoảng cách giữa thép và ván khuôn."
 },
 
   {
@@ -97,10 +110,10 @@ window.PRACTICE_SETS["2"] = [
   ],
   answer: 1,
   vi: "Đây là loại công trình gì?",
-  explain: "Công nhân đang thi công **アスファルトシート防水工法**, tức là chống thấm bằng màng nhựa đường dán nóng. Phương pháp này được dùng để chống thấm mái và sàn bê tông.",
-  tip: "💡 Nhớ: Thấy cuộn màng đen trải trên mái → đó là chống thấm bằng màng nhựa đường (アスファルトシート防水)."
+  explain: "Công nhân đang thi công **アスファルトシート防水工法（ぼうすいこうほう）**, tức là chống thấm bằng màng nhựa đường dán nóng. Phương pháp này được dùng để chống thấm mái và sàn bê tông.",
+  tip: "💡 Nhớ: Thấy cuộn màng đen trải trên mái → đó là chống thấm bằng màng nhựa đường (アスファルトシート防水)（ぼうすい）."
 },
-{
+   {
   q: "問39　建設業（けんせつぎょう）における「三大（さんだい）災害（さいがい）」は何（なん）か。【179】",
   img: "images/question39.png",
   options: [
@@ -156,7 +169,7 @@ window.PRACTICE_SETS["2"] = [
   tip: "💡 Mẹo nhớ: Hình chữ U + chốt vặn → シャックル (shackle)."
 },
 {
-  q: "問44　酸素（さんそ）とアセチレンガスを同時（どうじ）に開閉（かいへい）できるようにした器具（きぐ）は何（なに）か。",
+  q: "問44　酸素（さんそ）とアセチレンガスを同時（どうじ）に 開閉（かいへい）できるようにした器具（きぐ）は何（なに）か。",
   options: [
     "1．電動式（でんどうしき）加圧（かあつ）装置（そうち）",
     "2．エコバルブ",
@@ -221,7 +234,7 @@ window.PRACTICE_SETS["2"] = [
   answer: 3,
   vi: "Gia công đầu mút của thép thanh dùng loại máy nào?",
   explain: "Dùng **高速切断機（こうそくせつだんき）** — máy cắt tốc độ cao chuyên dùng để **cắt đầu thép tròn** hoặc thanh sắt trong công trình.",
-  tip: "💡 Mẹo nhớ: 切断（せつだん）= cắt → 高速切断機 = máy cắt tốc độ cao."
+  tip: "💡 Mẹo nhớ: 切断（せつだん）= cắt → 高速（こうそく）切断機（せつだんき） = máy cắt tốc độ cao."
 },
 
 {
@@ -234,8 +247,8 @@ window.PRACTICE_SETS["2"] = [
   ],
   answer: 0,
   vi: "Phương pháp thi công kết hợp cột, dầm và thanh chéo gọi là gì?",
-  explain: "Đây là **軸組み工法（じくぐみこうほう）**, phương pháp thi công truyền thống của Nhật, dùng **cột, dầm và thanh chéo (筋交い)** để tăng độ vững của khung nhà.",
-  tip: "💡 Mẹo nhớ: 軸 = trục → 軸組み = khung trục chính của ngôi nhà."
+  explain: "Đây là 軸組（じくぐ）み工法（こうほう）, phương pháp thi công truyền thống của Nhật, dùng **cột, dầm và thanh chéo 「筋交（すじか）い」 để tăng độ vững của khung nhà.",
+  tip: "💡 Mẹo nhớ: 軸 = trục → 軸組（じくぐ）み = khung trục chính của ngôi nhà."
 },
 {
   q: "問50　板金（ばんきん）溶接（ようせつ）で一番（いちばん）使用（しよう）されているのは、どの溶接方法（ようせつほうほう）か。【168】",
@@ -287,7 +300,7 @@ window.PRACTICE_SETS["2"] = [
     "4．主筋（しゅきん）の配筋（はいきん）→スペースの設置（せっち）→配力筋（はいりょくきん）の配筋（はいきん）"
   ],
   answer: 3,
-  vi: "Hãy chọn trình tự đúng khi bố trí thép sàn (土間配筋).",
+  vi: "Hãy chọn trình tự đúng khi bố trí thép sàn (土間配筋)（どまはいきん）.",
   explain: "Trình tự đúng là **スペースの設置 → 主筋 → 配力筋**. Nghĩa là: đặt spacer trước → lắp thép chính (chủ lực) → sau cùng là thép phụ (phân phối lực).",
   tip: "💡 Mẹo nhớ: Làm 'nền phẳng' → đặt 'thép chính' → thêm 'thép phụ' để hoàn thiện."
 },
@@ -358,7 +371,7 @@ window.PRACTICE_SETS["2"] = [
   answer: 1,
   vi: "Công việc đánh dấu vị trí và độ cao của kết cấu hoặc bộ phận tại công trường được gọi là gì?",
   explain: "Đáp án đúng là **墨出し（すみだし）**, là quá trình vẽ dấu (marking) trực tiếp lên mặt bằng để chỉ vị trí, độ cao, hướng lắp đặt của kết cấu.",
-  tip: "💡 Mẹo nhớ: 墨（すみ）= mực → 出（だ）す = vẽ ra → 墨出し = vẽ dấu xác định vị trí."
+  tip: "💡 Mẹo nhớ: 墨（すみ）= mực → 出（だ）す = vẽ ra → 墨出（すみだ）し = vẽ dấu xác định vị trí."
 },
 
 {
@@ -371,7 +384,7 @@ window.PRACTICE_SETS["2"] = [
   ],
   answer: 0,
   vi: "Trong các mô tả sau về công việc thi công cốt thép, điều nào không đúng?",
-  explain: "Đáp án sai là **1．コンクリートは圧縮力に弱い**. Thực tế, **bê tông mạnh về lực nén (圧縮)** nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
+  explain: " Thực tế, **bê tông mạnh về lực nén (圧縮)** nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
   tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén (圧縮), yếu khi bị kéo (引張)."
 }
 

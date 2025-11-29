@@ -250,3 +250,137 @@
   explain: "Bộ phận tạo ra ngọn lửa để nung nóng (hàn áp lực) là **バーナー (Burner)** . **バーナー** là đầu vòi phun giúp trộn khí và tạo ra ngọn lửa cần thiết. (Lưu ý: **吹管(ふきかん)** là tên gọi chung của toàn bộ thiết bị thổi/hàn khí.)",
   tip: "💡 Nhớ: Bộ phận **đốt lửa/phun lửa** (**炎(ほのお)**) → **バーナー**."
 },
+{
+  q: "問81. 青(あお)い部分(ぶぶん)は何(なに)か。【111】",
+  img: "images/.png",
+  options: [
+    "1. 単管(たんかん)パイプ",
+    "2. 固定(こてい)ベース",
+    "3. フォームタイ",
+    "4. Pコン"
+  ],
+  answer: 2,
+  vi: "Bộ phận màu xanh (**青(あお)い部分(ぶぶん)**) là gì?",
+  explain: "Bộ phận màu xanh được khoanh tròn là **フォームタイ (Form Tie)** . Nó là bộ phận dùng để siết chặt ván khuôn (**型枠(かたわく)**) với thanh **セパレーター** bên trong để chống lại áp lực bê tông (**側圧(そくあつ)**).",
+  tip: "💡 Nhớ: Bộ phận kẹp bên ngoài ván khuôn, dùng để siết → **フォームタイ**."
+},
+{
+  q: "問82. とび工事(こうじ)における不適切(ふてきせつ)なものを選(えら)べ。",
+  options: [
+    "1. 動(うご)きやすいため、ヘルメットと安全(あんぜん)靴(ぐつ)を着用(ちゃくよう)しない",
+    "2. 足場(あしば)が倒(たお)れないように、建物(たてもの)と壁(かべ)つなぎで固定(こてい)する",
+    "3. 足場(あしば)全体(ぜんたい)が垂直(すいちょく)・水平(すいへい)を保(たも)つように、大(おお)きな筋交(すじか)いを取(と)り付(つ)けます",
+    "4. 地面(じめん)の上(うえ)に敷(し)いた敷(しき)板(いた)に、ベース金具(かなぐ)を釘(くぎ)で固定(こてい)する"
+  ],
+  answer: 0,
+  vi: "Chọn câu **không thích hợp (**不適切(ふてきせつ)**) về công việc giàn giáo/thợ cốp pha (**とび工事(こうじ)**).",
+  explain: "Phát biểu **không thích hợp** là Lựa chọn 1. **Không đội mũ bảo hiểm (ヘルメット)** và **không đi giày an toàn (安全靴)** là hành vi vi phạm nghiêm trọng quy tắc an toàn. Trang bị bảo hộ là **bắt buộc (必須)** trong **とび工事(こうじ)**.",
+  tip: "💡 Nhớ: **とび工事(こうじ)** luôn phải **着用(ちゃくよう) (Mặc/Đội)** đầy đủ trang bị bảo hộ."
+},
+{
+  q: "問83. 基準台(きじゅんだい)に対(たい)して簡単(かんたん)な平行(へいこう)な線(せん)を引(ひ)くことができる大工(だいく)道具(どうぐ)は何(なに)か。【116】",
+  options: [
+    "1. きり",
+    "2. かんな",
+    "3. 筋毛引(すじけび)き",
+    "4. のみ"
+  ],
+  answer: 2,
+  vi: "Dụng cụ thợ mộc (**大工(だいく)道具(どうぐ)**) nào có thể dễ dàng kẻ các đường **song song (**平行(へいこう)**) với một mặt chuẩn (**基準台(きじゅんだい)**)?" ,
+  explain: "Đó là **筋毛引(すじけび)き (Dụng cụ kẻ song song/Marking Gauge)** . Dụng cụ này dùng để kẻ một hoặc hai đường thẳng song song với cạnh của vật liệu bằng cách trượt phần chặn dọc theo cạnh đó.",
+  tip: "💡 Nhớ: Dụng cụ kẻ **平行(へいこう)な線(せん)** (Đường song song) → **筋毛引(すじけび)き**."
+},
+{
+  q: "問84. この道具(どうぐ)は何(なん)というのか。【116】",
+  img: "images/.png",
+  options: [
+    "1. きり",
+    "2. 千枚通(せんまいどお)し",
+    "3. げんのう",
+    "4. はけ"
+  ],
+  answer: 0,
+  vi: "Dụng cụ này được gọi là gì?",
+  explain: "Dụng cụ trong ảnh là **きり (Mũi dùi/Awl)** . Nó được sử dụng để tạo lỗ nhỏ hoặc đánh dấu vị trí trước khi đóng đinh hoặc vặn vít.",
+  tip: "💡 Nhớ: Dụng cụ có đầu kim nhọn, dùng để dùi lỗ → **きり**."
+},
+{
+  q: "問85. 以下(いか)の写真(しゃしん)のこては首(くび)の部分(ぶぶん)が枝(えだ)と平(ひら)たい面(めん)の根元(ねもと)について、細(こま)かい部分(ぶぶん)の作業(さぎょう)に適(てき)しています。何(なん)というこてか。【117】",
+  img: "images/85.png",
+  options: [
+    "1. 中塗(なかぬ)りごて",
+    "2. 柳刃(やなぎば)ごて",
+    "3. ブロックごて",
+    "4. 切(き)り付(き)きごて"
+  ],
+  answer: 1,
+  vi: "Cái bay (**こて**) trong ảnh có phần cổ (**首(くび)**) phẳng so với gốc tay cầm (**根元(ねもと)**), phù hợp cho các công việc **chi tiết (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**). Đó là loại bay gì?",
+  explain: "Đó là **柳刃(やなぎば)ごて (Bay lưỡi liễu)**. Bay này có lưỡi dài và hẹp, giống như lưỡi dao liễu, thường được sử dụng cho các công việc trát vữa thạch cao hoặc sơn trát ở các khu vực hẹp hoặc cần sự tinh tế, rất thích hợp cho công việc **chi tiết (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**).",
+  tip: "💡 Nhớ: Bay có lưỡi hẹp, dùng cho **細(こま)かい部分(ぶぶん) (Phần chi tiết)** → **柳刃(やなぎば)ごて**."
+},
+{
+  q: "問86. コンクリートは、圧縮(あっしゅく)する力(ちから)には強(つよ)いですが、(......) 力には弱(よわ)いという性質(せいしつ)があります【153】",
+  options: [
+    "1. 内力(ないりょく)",
+    "2. 引張(ひっぱ)り",
+    "3. 遠心力(えんしんりょく)",
+    "4. 曲(ま)げ力"
+  ],
+  answer: 1,
+  vi: "Bê tông (**コンクリート**) có đặc tính mạnh với lực nén (**圧縮(あっしゅく)する力(ちから)**) nhưng yếu với lực (......).",
+  explain: "Bê tông rất mạnh với lực nén, nhưng lại rất yếu với **引張(ひっぱ)り (Lực kéo/Lực căng)** . Đây là lý do thép cốt (**鉄筋(てっきん)**) được thêm vào để tạo thành bê tông cốt thép, chịu được lực kéo.",
+  tip: "💡 Nhớ: Bê tông **強(つよ)い** (Mạnh) với **圧縮(あっしゅく)** (Nén), **弱(よわ)い** (Yếu) với **引張(ひっぱ)り** (Kéo)."
+},
+{
+  q: "問87. 以下(いか)の器具(きぐ)について、不適切(ふてきせつ)なものを選(えら)べ。",
+  img: "images/87.png",
+  options: [
+    "1. 合板(ごうはん)などの材料(ざいりょう)をまっすぐに切(き)るための電動(でんどう)工具(こうぐ)",
+    "2. 使用(しよう)前(まえ)には、安全(あんぜん)カバーを外(はず)す",
+    "3. 丸(まる)のこガイド定規(じょうぎ)をつけて、材料(ざいりょう)をまっすぐに切(き)ることができる",
+    "4. 集(しゅう)塵(じん)丸(まる)のこは粉塵(ふんじん)を集(あつ)めながら、切断(せつだん)できる"
+  ],
+  answer: 1,
+  vi: "Chọn câu **không thích hợp (**不適切(ふてきせつ)**) về dụng cụ sau [Cưa đĩa/Cưa tròn].",
+  explain: "Phát biểu **không thích hợp** là Lựa chọn 2. **Tuyệt đối không được tháo rời nắp an toàn (**安全(あんぜん)カバーを外(はず)す**) trước khi sử dụng**. Nắp an toàn là bộ phận bắt buộc để bảo vệ người dùng khỏi lưỡi cưa đang quay.",
+  tip: "💡 Nhớ: **安全(あんぜん)カバー (Nắp an toàn)** → **Không bao giờ được tháo ra**."
+},
+{
+  q: "問88. 解体(かいたい)工事(こうじ)を行(おこな)う前(まえ)に何(なに)をしなければならないか。【177】",
+  options: [
+    "1. 足場(あしば)の設置(せっち)・防音(ぼうおん)パネルの取(と)り付(つ)け",
+    "2. ライフラインが止(と)めていることを確認(かくにん)する",
+    "3. 建物(たてもの)内部(ないぶ)の解体(かいたい)",
+    "4. 重機(じゅうき)用(よう)サポートの取(と)り付(つ)け"
+  ],
+  answer: 1,
+  vi: "Cần phải làm gì **trước khi** tiến hành công việc tháo dỡ (**解体工事(かいたいこうじ)**)?" ,
+  explain: "Điều quan trọng và bắt buộc nhất phải làm trước khi bắt đầu tháo dỡ là **Kiểm tra xem các đường dây tiện ích (**ライフライン**) như điện, nước, gas đã được ngắt hoàn toàn hay chưa (**確認(かくにん)する**).** Đây là bước an toàn cơ bản để ngăn ngừa các tai nạn nghiêm trọng (cháy nổ, điện giật).",
+  tip: "💡 Nhớ: **解体工事(かいたいこうじ)** (Tháo dỡ) → An toàn tuyệt đối phải **確認(かくにん) (Kiểm tra)** **ライフライン (Đường tiện ích)** đã ngắt chưa."
+},
+{
+  q: "問89. 切断(せつだん)用(よう)の砥石(とちいし)を回転(かいてん)させて、金属(きんぞく)管(かん)や鉄筋(てっきん)、軽量(けいりょう)鉄骨(てっこつ)などを切断(せつだん)する電動(でんどう)工具(こうぐ)は、何(なに)と言(い)うか。【130】",
+  options: [
+    "1. 集塵機(しゅうじんき)",
+    "2. 高速(こうそく)切断機(せつだんき)",
+    "3. レシプロソー",
+    "4. くぎ打(う)ち機"
+  ],
+  answer: 1,
+  vi: "Dụng cụ điện (**電動工具**) nào dùng để cắt (**切断**) ống kim loại (**金属管**), thép cốt (**鉄筋**) hoặc khung thép nhẹ bằng cách xoay (**回転**) một **đĩa mài/đá cắt (**砥石**)?",
+  explain: "Đó là **高速(こうそく)切断機(せつだんき) (Máy cắt tốc độ cao/High-speed cutting machine)** . Dụng cụ này sử dụng đĩa cắt bằng vật liệu mài mòn để cắt nhanh kim loại.",
+  tip: "💡 Nhớ: **回転(かいてん)** (Xoay) **砥石(とちいし)** (Đá cắt) để cắt **金属(きんぞく)** (Kim loại) → **高速(こうそく)切断機(せつだんき)**."
+},
+{
+  q: "問90. 地面(じめん)を固(かた)めるための機械(きかい)は何(なに)か。【131】",
+  options: [
+    "1. レーキ",
+    "2. ランマ",
+    "3. たこ",
+    "4. バイブレータ"
+  ],
+  answer: 1,
+  vi: "Máy móc (**機械**) được sử dụng để làm **chắc (**固(かた)める**) mặt đất (**地面**) là gì?",
+  explain: "Đó là **ランマ (Rammer/Máy đầm)** . Máy này tạo ra lực tác động thẳng đứng mạnh mẽ để nén và làm chắc đất, đặc biệt là trong các khu vực hẹp hoặc xung quanh cọc. (Lưu ý: **バイブレータ** dùng để đầm **bê tông**)." ,
+  tip: "💡 Nhớ: Máy làm **chắc đất (**地面(じめん)を固(かた)める**) → **ランマ**."
+},

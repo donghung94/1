@@ -254,3 +254,217 @@
   explain: "Đây là **近道(ちかみち)行動(こうどう) (Chikamichi Kōdō - Hành động tắt/Đi đường tắt/Shortcuts)** . Đây là hành vi bỏ qua các bước an toàn hoặc quy trình chuẩn để tiết kiệm thời gian hoặc công sức, thường là nguyên nhân trực tiếp dẫn đến tai nạn. Nó xuất phát từ mong muốn tăng hiệu suất (**こうりつてき**) và dẫn đến việc **bỏ qua (しょうりゃく)** các bước an toàn.",
   tip: "💡 Nhớ: **効率的(こうりつてき)** (Hiệu quả) + **省略(しょうりゃく)** (Bỏ qua hành động) → **近道行動(ちかみちこうどう)** (Hành động tắt)."
 },
+{
+  q: "問113. ガス圧接(あっせつ)工事(こうじ)について、該当(がいとう)しないものを選(えら)べ。【156} ",
+  options: [
+    "1. 継手部分(つぎてぶぶん)は母材(ぼざい)の鉄筋(てっきん)より強度(きょうど)がさがる",
+    "2. 加熱(かねつ)範囲(はんい)の目安(めやす)は鉄筋(てっきん)の直径(ちょっけい)の2倍(ばい)くらい",
+    "3. 切断面(せつだんめん)の圧接(あっせつ)を行(おこな)う日(ひ)に直角(ちょっかく)切断機(せつだんき)を利用(りよう)する",
+    "4. 鉄筋(てっきん)の接合面(せつごうめん)に汚(よご)れがないことを確認(かくにん)し、圧着器(あっちゃくき)にボトルで固定(こてい)する"
+  ],
+  answer: 0,
+  vi: "Về công tác **nối ép khí gas (ガスあっせつこうじ)**, chọn điều **không đúng (がいとうしない)**." ,
+  explain: "Điều **không đúng** là **継手部分(つぎてぶぶん)は母材(ぼざい)の鉄筋(てっきん)より強度(きょうど)がさがる** (Cường độ của mối nối thấp hơn thép nền). Tiêu chuẩn kỹ thuật yêu cầu cường độ của mối nối phải **bằng hoặc cao hơn** cường độ của thép nền (母材).",
+  tip: "💡 Nhớ: Cường độ (**きょうど**) mối nối **không được phép (さがる)** thấp hơn thép nền (**ぼざい**)."
+},
+{
+  q: "問114. 軸組(じくぐ)みの変形(へんけい)を防(ふせ)ぐために斜(なな)めに材料(ざいりょう)を取(と)り付(つ)ける部材(ぶざい)は何(なん)というか。【163】",
+  options: [
+    "1. キャラメル",
+    "2. スペーサー",
+    "3. 手(て)すり",
+    "4. 筋交(すじか)い"
+  ],
+  answer: 3,
+  vi: "Bộ phận vật liệu **lắp đặt chéo (ななめ)** để ngăn chặn **biến dạng khung (じくぐみのへんけい)** được gọi là gì?" ,
+  explain: "Bộ phận được lắp đặt chéo (**ななめにざいりょうをとりつける**) để tăng cường độ cứng và ngăn chặn biến dạng của khung kết cấu (**じくぐみ**) được gọi là **筋交(すじか)い (Sujikai - Thanh giằng/Thanh chống chéo)** . Trong câu 62, đáp án là **仮筋交(かりすじか)い** (Thanh chống tạm thời), đây là một dạng của **筋交い** được dùng tạm thời. Đáp án 4 (**筋交い**) là tên gọi chung và chính xác nhất cho bộ phận này.",
+  tip: "💡 Nhớ: Bộ phận **chéo (ななめ)** chống **biến dạng (へんけい)** khung → **筋交(すじか)い** (Thanh giằng)."
+},
+{
+  q: "問115. 日本(にほん)の住宅(じゅうたく)や神社(じんじゃ)、寺(てら)などの屋根用(やねよう)の材料(ざいりょう)は何(なん)か。【165】",
+  options: [
+    "1. 木材(もくざい)",
+    "2. 板金(ばんきん)材(ざい)",
+    "3. アスファルトシングル",
+    "4. 粘土(ねんど)瓦(がわら)"
+  ],
+  answer: 3,
+  vi: "Vật liệu lợp **mái (やねようのざいりょう)** được sử dụng cho các **nhà ở (じゅうたく)**, **đền thờ (じんじゃ)** và **chùa chiền (てら)** truyền thống ở Nhật Bản là gì?" ,
+  explain: "Vật liệu phổ biến và mang tính biểu tượng nhất được sử dụng cho mái nhà truyền thống, đặc biệt là đền thờ (**じんじゃ**) và chùa chiền (**てら**), là **粘土(ねんど)瓦(がわら) (Nendo Gawara - Ngói đất sét/Ngói men)** . Mặc dù mái nhà truyền thống cũng có thể dùng gỗ (**もくざい** - ván lợp), nhưng ngói đất sét là loại vật liệu phổ biến nhất được sử dụng trên các công trình lớn và nhà ở truyền thống.",
+  tip: "💡 Nhớ: Vật liệu lợp mái cho **神社(じんじゃ)・寺(てら)** (đền/chùa) → **粘土(ねんど)瓦(がわら)** (Ngói đất sét)."
+},
+{
+  q: "問117. どんな作業(さぎょう)か。【167} ",
+  img: "images/117.png",
+  options: [
+    "1. 切断(せつだん) 作業(さぎょう)",
+    "2. 曲(ま)げ作業(さぎょう)",
+    "3. ケガキ作業(さぎょう)",
+    "4. 溶接(ようせつ) 作業(さぎょう)"
+  ],
+  answer: 2,
+  vi: "Đây là loại **công việc (さぎょう)** gì?" ,
+  explain: "Đây là **ケガキ作業(さぎょう) (Kegaki Sagyou - Công việc vạch dấu/Đánh dấu)** . Đây là công đoạn sử dụng dụng cụ sắc nhọn để vẽ các đường cắt, đường gấp hoặc các điểm tham chiếu lên bề mặt vật liệu (thường là kim loại) trước khi tiến hành gia công.",
+  tip: "💡 Nhớ: Dùng dụng cụ sắc nhọn **vạch (かく)** đường lên kim loại → **ケガキ作業(さぎょう)**."
+},
+{
+  q: "問119. これは何(なに)か。【177} ",
+  img: "images/119.png",
+  options: [
+    "1. 防音(ぼうおん) シート",
+    "2. 防水(ぼうすい) シート",
+    "3. 垂直(すいちょく) 養生(ようじょう) ネット",
+    "4. 飛散(ひさん) 防止(ぼうし) ネット"
+  ],
+  answer: 0,
+  vi: "Đây là gì?" ,
+  explain: "Đây là **防音(ぼうおん) シート (Bōon Shīto - Tấm chắn/Cách âm)** . Đây là loại bạt dày, nặng, được sử dụng để bao phủ giàn giáo và công trường xây dựng nhằm **ngăn chặn (ぼうし)** và giảm thiểu tối đa **tiếng ồn (おん)** phát ra từ công trường, đặc biệt quan trọng ở khu vực đô thị.",
+  tip: "💡 Nhớ: Tấm bạt dày, **bao phủ (おお) toàn bộ** giàn giáo → **防音(ぼうおん) シート** (Tấm cách âm)."
+},
+{
+  q: "問120. 解体(かいたい)工事(こうじ)にない作業(さぎょう)はどれか。【177】",
+  img: "Ảnh chụp màn hình 2025-10-13 161947.png",
+  options: [
+    "1. 敷地(しきち)内(ない)にあるものをすべて(ぜんぶ)解体(かいたい)する",
+    "2. 防音(ぼうおん)ネット・防音(ぼうおん)シートなどで前面(ぜんめん)を覆(おお)う",
+    "3. 建具(たてぐ)、石膏(せっこう)ボード、各種(かくしゅ)設備(せつび)などを手作業(てさぎょう)で取(と)り除(のぞ)く、リサイクルで出来(でき)るものは分別(ぶんべつ)する",
+    "4. 外構(がいこう)解体(かいたい)"
+  ],
+  answer: 0,
+  vi: "Trong các công việc sau, công việc nào **không thuộc (ない)** công tác **phá dỡ (かいたいこうじ)**?" ,
+  explain: "Điều **không đúng** là **敷地(しきち)内(ない)にあるものをすべて(ぜんぶ)解体(かいたい)する** (Phá dỡ **tất cả mọi thứ** có trong khuôn viên/khu đất). Mặc dù mục tiêu là phá dỡ cấu trúc, nhưng vẫn có những phần **không được phép (してはいけない)** phá dỡ hoặc **không cần thiết** phải phá dỡ, chẳng hạn như hàng rào/tường ranh giới với nhà bên cạnh, hoặc các phần đất/cây xanh không liên quan. Ba đáp án còn lại (2, 3, 4) đều là các bước hoặc công tác hợp thành của quá trình phá dỡ (lắp đặt vật liệu bảo vệ, tháo dỡ nội thất bằng tay, phá dỡ ngoại thất).",
+  tip: "💡 Nhớ: Giải thể **không phải (ない)** là **すべ(て)て** (tất cả) mọi thứ. Luôn có những thứ cần được giữ lại hoặc không thuộc phạm vi phá dỡ.",
+  },
+  {
+  q: "問121. 滑(すべ)りやすいスレート屋根(やね)からの転落(てんらく)はどんな災害(さいがい)事故(じこ)か。【180】",
+  options: [
+    "1. 倒壊(とうかい)",
+    "2. 激突(げきとつ)",
+    "3. 飛来(ひらい)",
+    "4. 墜落(ついらく)"
+  ],
+  answer: 3,
+  vi: "Việc **rơi (てんらく)** từ mái nhà **lợp ngói (やね)** **dễ trượt (すべりやすい)** là loại **tai nạn (さいがいじこ)** nào?" ,
+  explain: "Tai nạn **rơi/ngã từ trên cao** (ví dụ: từ mái nhà trượt) được gọi là **墜落(ついらく) (Tsuiraku - Rơi/Ngã)**  Mặc dù câu hỏi dùng từ **転落(てんらく)** (rơi/ngã), trong lựa chọn đáp án, **墜落(ついらく)** là thuật ngữ chính xác và phổ biến nhất để chỉ tai nạn rơi từ độ cao trong xây dựng.",
+  tip: "💡 Nhớ: Rơi từ **屋根(やね)** (mái nhà) hoặc vị trí cao → **墜落(ついらく)** (Rơi/Ngã)."
+},
+{
+  q: "問122. 1点(いってん)に集中(しゅうちゅう)すると、まわりが見(み)えなくなるヒユーマンエフーは、何(なに)か。",
+  img: "Ảnh chụp màn hình 2025-10-13 162235.png",
+  options: [
+    "1. 連絡(れんらく)不足(ぶそく)",
+    "2. 近道(ちかみち)行動(こうどう)",
+    "3. 場面(ばめん)行動(こうどう)本能(ほんのう)",
+    "4. 慣(な)れによる手抜(てぬ)き"
+  ],
+  answer: 2,
+  explain: "Đây là **場面(ばめん)行動(こうどう)本能(ほんのう) (Bamen Kōdō Honnō - Phản ứng/Bản năng hành động theo tình huống)** . Đây là loại lỗi con người xảy ra khi người lao động tập trung quá mức (**しゅうちゅう**) vào một nhiệm vụ hoặc một điểm duy nhất, dẫn đến hiện tượng 'tầm nhìn đường hầm' và bỏ qua các mối nguy hiểm hoặc vật cản xung quanh (**まわりが見えなくなる**).",
+  tip: "💡 Nhớ: **1点(いってん)に集中(しゅうちゅう)** (Tập trung 1 điểm) → **まわりが見えなくなる** (Không nhìn thấy xung quanh) → **場面(ばめん)行動(こうどう)本能(ほんのう)**."
+},
+{
+  q: "問123. 物(もの)などにつまずいて転(ころ)んだり、バランスを崩(くず)して転(ころ)ぶことによっておこる労働(ろうどう)災害(さいがい)は何(なん)というか。【180】",
+  img: "Ảnh chụp màn hình 2025-10-13 162356.png",
+  options: [
+    "1. 墜落(ついらく)",
+    "2. 飛来(ひらい)",
+    "3. 転倒(てんとう)",
+    "4. 激突(げきとつ)"
+  ],
+  answer: 2,
+  vi: "Tai nạn lao động (**ろうどうさいがい**) xảy ra do **vấp phải (つまずいて)** vật gì đó và **ngã (ころぶ)**, hoặc **mất thăng bằng (バランスをくずして)** và **ngã (ころぶ)** được gọi là gì?" ,
+  explain: "Tai nạn do **vấp ngã** trên cùng một mặt phẳng (không phải rơi từ độ cao) được gọi là **転倒(てんとう) (Tentō - Vấp ngã/Đổ)** . Khác với **墜落(ついらく)** (rơi từ trên cao), **転倒(てんとう)** là ngã xuống mặt đất.",
+  tip: "💡 Nhớ: **つまずいて** (Vấp phải) + **ころぶ** (Ngã) trên mặt đất → **転倒(てんとう)**."
+},
+{
+  q: "問124. 吸(す)い続(つづ)けると肺(はい)の機能(きのう)障害(しょうがい)を引(ひ)き起(お)こすため何(なに)を着用(ちゃくよう)しなければならないか。【186】",
+  options: [
+    "1. 保護(ほご) メガネ",
+    "2. 手袋(てぶくろ)",
+    "3. 保護(ほご) マスク",
+    "4. シールド面(めん)付(つ)きヘルメット"
+  ],
+  answer: 2,
+  vi: "Để tránh gây ra **rối loạn chức năng phổi (はいのきのうしょうがい)** do **hít phải (すいつづける)** các chất độc hại trong thời gian dài, cần phải **đeo (ちゃくよう)** gì?" ,
+  explain: "Để bảo vệ **phổi (はい)** và hệ hô hấp khỏi bụi mịn, hơi độc hoặc khói có thể gây **rối loạn chức năng (きのうしょうがい)**, chúng ta phải sử dụng **保護(ほご) マスク (Hogo Masuku - Mặt nạ/Khẩu trang bảo hộ)** .",
+  tip: "💡 Nhớ: Bảo vệ **肺(はい)** (phổi) → **マスク** (Mặt nạ/Khẩu trang)."
+},
+{
+  q: "問125. 建設(けんせつ)工事(こうじ)では5mの高(たか)さを超(こ)える場所(ばしょ)での作業(さぎょう)時(じ)には何(なに)を装着(そうちゃく)することが義務(ぎむ)付(づ)けられるか。【189】",
+  options: [
+    "1. ヘルメット",
+    "2. 水平(すいへい) 養生(ようじょう) ネット",
+    "3. 保護(ほご) メガネ",
+    "4. フルハーネス型(がた) 墜落(ついらく) 制止(せいし)用(よう) 器具(きぐ)"
+  ],
+  answer: 3,
+  vi: "Trong công trình **xây dựng (けんせつこうじ)**, khi **làm việc (さぎょう)** ở những nơi có **chiều cao (たかさ) vượt quá 5m**, việc **trang bị (そうちゃく)** gì là **nghĩa vụ (ぎむ)** bắt buộc?" ,
+  explain: "Theo quy định an toàn lao động, khi làm việc ở độ cao **trên 5m (5mをこえる)**, người lao động phải trang bị **フルハーネス型(がた) 墜落(ついらく) 制止(せいし)用(よう) 器具(きぐ) (Full Harness-gata Tsuiraku Seishiyō Kigu - Dụng cụ/Thiết bị chống rơi dạng dây đai toàn thân Full Harness)** . Đây là yêu cầu bắt buộc để ngăn chặn tai nạn **rơi/ngã (ついらく)**.",
+  tip: "💡 Nhớ: Độ cao **5m超(こ)える** (vượt quá 5m) → **フルハーネス** (Dây đai toàn thân)."
+},
+{
+  q: "問126. この道具(どうぐ)の名前(なまえ)は何(なに)か。【190】",
+  img: "images/126.png",
+  options: [
+    "1. 重量(じゅうりょう)測定(そくてい)器(き)",
+    "2. 音量(おんりょう)計測(けいそく)器(き)",
+    "3. 水量(すいりょう)計測(けいそく)器(き)",
+    "4. WBGT計測(けいそく)器(き)"
+  ],
+  answer: 3,
+  vi: "Tên của **dụng cụ (どうぐ)** này là gì?" ,
+  explain: "Dụng cụ trong hình là một thiết bị đo lường nhiệt độ, độ ẩm và bức xạ nhiệt môi trường, được gọi là **WBGT計測(けいそく)器(き) (WBGT Keisokuki - Thiết bị đo WBGT)** . WBGT (Wet-Bulb Globe Temperature) là chỉ số quan trọng dùng để đánh giá nguy cơ **say nắng (ねっちゅうしょう)** tại công trường.",
+  tip: "💡 Nhớ: Thiết bị đo lường nhiệt độ/nguy cơ say nắng (**ねっちゅうしょう**) → **WBGT計測(けいそく)器(き)**."
+},
+{
+  q: "問127. 熱中症(ねっちゅうしょう)対策(たいさく)として、適切(てきせつ)なものを一(ひと)つ選(えら)べ。【190】",
+  options: [
+    "1. 作業(さぎょう)の前(ぜん)後(ご)に水分(すいぶん)や塩分(えんぶん)を控(ひか)える",
+    "2. 通気性(つうきせい)の良(よ)い作業(さぎょう)服(ふく)を着(き)く",
+    "3. エアコンのある休憩(きゅうけい)場所(ばしょ)を利用(りよう)しない",
+    "4. 作業(さぎょう)中(ちゅう)は気持(きも)ち悪(わる)くなっても我慢(がまん)する"
+  ],
+  answer: 1,
+  vi: "Chọn một biện pháp **thích hợp (てきせつな)** để **chống say nắng (ねっちゅうしょうたいさく)**." ,
+  explain: "Biện pháp thích hợp (**てきせつな**) là **通気性(つうきせい)の良(よ)い作業(さぎょう)服(ふく)を着(き)く** (Mặc quần áo bảo hộ có độ thông thoáng tốt). Quần áo thông thoáng giúp cơ thể tản nhiệt (**たいさく**) tốt hơn, giảm nguy cơ **say nắng (ねっちゅうしょう)**.",
+  tip: "💡 Nhớ: Chống **ねっちゅうしょう** (Say nắng) → Mặc đồ **通気性(つうきせい)の良(よ)い** (Thông thoáng tốt)."
+},
+{
+  q: "問128. このマークは、どんな意味(いみ)を指(さ)すか。【191】",
+  img: "images/.png",
+  options: [
+    "1. ご安全(あんぜん)に",
+    "2. 救急(きゅうきゅう)箱(ばこ)",
+    "3. 安全(あんぜん)衛生(えいせい)旗(き)",
+    "4. 安全(あんぜん)や衛生(えいせい)のシンボル"
+  ],
+  answer: 3,
+  vi: "**Biểu tượng (マーク)** này ám chỉ **ý nghĩa (いみ)** gì?" ,
+  explain: "Biểu tượng này (**安全(あんぜん) + 十(クロス) 衛生(えいせい)**) đại diện cho **安全(あんぜん)や衛生(えいせい)のシンボル (Anzen ya Eisei no Shinboru - Biểu tượng của An toàn và Vệ sinh)** . Dấu thập màu xanh lá cây thường biểu thị Y tế (**衛生(えいせい)**), kết hợp với chữ An toàn (**安全(あんぜん)**) tạo thành biểu tượng chung cho sức khỏe và an toàn lao động.",
+  tip: "💡 Nhớ: Dấu thập màu xanh lá cây + chữ **安全(あんぜん)** → **安全(あんぜん)や衛生(えいせい)のシンボル** (Biểu tượng An toàn/Vệ sinh)."
+},
+{
+  q: "問129. 屋根(やね)工事(こうじ)について、適切(てきせつ)なものを一(ひと)つ選(えら)べ。",
+  options: [
+    "1. 平面(へいめん)と平面(へいめん)が接合(せつごう)する部分(ぶぶん)は雨漏(あまも)りしにくい",
+    "2. 日本(にほん)の地域(ちいき)によって、屋根(やね)の形状(けいじょう)や屋根(やね)材(ざい)が異(こと)なる",
+    "3. 粘土(ねんど)瓦(がわら)は軽(かる)いである",
+    "4. 屋根(やね)と壁(かべ)の接続(せつぞく)する部分(ぶぶん)は雨漏(あまも)りしにくい"
+  ],
+  answer: 1,
+  vi: "Về công tác **lợp mái (やねこうじ)**, hãy chọn một điều **thích hợp (てきせつな)**." ,
+  explain: "Điều thích hợp (**てきせつな**) là **日本(にほん)の地域(ちいき)によって、屋根(やね)の形状(けいじょう)や屋根(やね)材(ざい)が異(こと)なる** (Hình dáng mái nhà và vật liệu lợp mái khác nhau tùy theo khu vực của Nhật Bản). Điều này là do các yếu tố khí hậu khác nhau (như tuyết, gió bão, lượng mưa) giữa các vùng (**地域(ちいき)**).",
+  tip: "💡 Nhớ: Công tác **屋根(やね)** (Mái nhà) → **地域(ちいき)によって異(こと)なる** (Khác nhau tùy theo vùng) là đúng."
+},
+{
+  q: "問130. 思(おも)い込(こ)みが原因(げんいん)となるヒユーマンエラーは何(なん)というか。【72】",
+  options: [
+    "1. 集団(しゅうだん)欠陥(けっかん)",
+    "2. 慣(な)れによる手抜(てぬ)き",
+    "3. 認知(にんち)ミス",
+    "4. 連絡(れんらく)不足(ぶそく)"
+  ],
+  answer: 2,
+  vi: "Lỗi con người (Human Error) có **nguyên nhân (げんいん)** là do **sự suy đoán/giả định (おもいこみ)** được gọi là gì?" ,
+  explain: "Lỗi do **suy đoán/giả định (おもいこみ)**, tức là tin rằng một điều gì đó là đúng mà không kiểm tra, là một lỗi trong quá trình xử lý thông tin và được gọi là **認知(にんち)ミス (Ninchi Misu - Lỗi nhận thức/Lỗi tri giác)** . Lỗi này liên quan đến việc hiểu sai hoặc nhận thức sai về tình huống.",
+  tip: "💡 Nhớ: **思(おも)い込(こ)み** (Sự suy đoán/Giả định) → **認知(にんち)ミス** (Lỗi nhận thức)."
+}

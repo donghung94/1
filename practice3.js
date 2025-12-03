@@ -1,3 +1,8 @@
+// File: practice1.js
+window.PRACTICE_SETS = window.PRACTICE_SETS || {};
+
+window.PRACTICE_SETS["3"] = [
+  
 {
   q: "問61. どんな工事(こうじ)か。【160】",
   img: "images/61.png",
@@ -170,7 +175,7 @@
   vi: "Quản lý công đoạn (**工程(こうてい)管理(かんり)**) trong quản lý thi công (**施工(せこう)管理(かんり)**) là gì?",
   explain: "Quản lý công đoạn là **quản lý nhằm mục đích hoàn thành công trình trong thời hạn quy định (工期内完成) để công đoạn thực hiện không bị chậm trễ (遅れが生じない)**. (Tương ứng với Lựa chọn 2)",
   tip: "💡 Nhớ: **工程(こうてい)管理(かんり)** = Quản lý **工期(こうき)** (Thời hạn thi công)."
-}
+},
 {
   q: "問75. 住宅(じゅうたく)の壁(かべ)や床(ゆか)、レンガやブロックを積(つ)み上(あ)げるときの接着剤(せっちゃくざい)などに使(つか)われる建築(けんちく)材料(ざいりょう)は何(なに)か【117】",
   options: [
@@ -383,4 +388,5 @@
   vi: "Máy móc (**機械**) được sử dụng để làm **chắc (**固(かた)める**) mặt đất (**地面**) là gì?",
   explain: "Đó là **ランマ (Rammer/Máy đầm)** . Máy này tạo ra lực tác động thẳng đứng mạnh mẽ để nén và làm chắc đất, đặc biệt là trong các khu vực hẹp hoặc xung quanh cọc. (Lưu ý: **バイブレータ** dùng để đầm **bê tông**)." ,
   tip: "💡 Nhớ: Máy làm **chắc đất (**地面(じめん)を固(かた)める**) → **ランマ**."
-},
+}
+];

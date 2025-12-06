@@ -8,9 +8,9 @@
 
   // ✅ Hỗ trợ đề thực hành nhóm 1 (g1_x)
   let normalizedPracticeId = practiceId;
-  if (practiceId && practiceId.startsWith("g1_")) {
-    normalizedPracticeId = practiceId;
-  }
+  if (practiceId && (practiceId.startsWith("g1_") || practiceId.startsWith("g2_"))) {
+  normalizedPracticeId = practiceId;
+}
 
   // ✅ Ưu tiên thực hành
   if (normalizedPracticeId && window.PRACTICE_SETS && window.PRACTICE_SETS[normalizedPracticeId]) {

@@ -1,4 +1,3 @@
-// File: practice_random_g2.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
 (function() {
@@ -10,22 +9,20 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
     return arr;
   }
 
-  // 🧩 Gộp toàn bộ câu hỏi từ 6 file practice nhóm 2
+  // 🧩 Gộp toàn bộ câu hỏi từ 4 file practice
   const allQuestions = [
     ...(window.PRACTICE_SETS["1"] || []),
     ...(window.PRACTICE_SETS["2"] || []),
     ...(window.PRACTICE_SETS["3"] || []),
-    ...(window.PRACTICE_SETS["4"] || []),
-    ...(window.PRACTICE_SETS["5"] || []),
-    ...(window.PRACTICE_SETS["6"] || [])
+    ...(window.PRACTICE_SETS["4"] || [])
   ];
 
-  // 🧮 Chọn ngẫu nhiên 40 câu (ít hơn thì lấy hết)
+  // 🧮 Chọn ngẫu nhiên 40 câu (nếu ít hơn thì lấy hết)
   const randomCount = Math.min(40, allQuestions.length);
   const randomQuestions = shuffle(allQuestions).slice(0, randomCount);
 
-  // 🟢 Gán vào bộ đề thi nhóm 2
-  window.PRACTICE_SETS["2_random"] = randomQuestions;
+  // 🟢 Gán vào bộ đề thi
+  window.PRACTICE_SETS["g2_random"] = randomQuestions;
 
-  console.log(`✅ Tạo đề ngẫu nhiên nhóm 2: ${randomQuestions.length} câu`);
+  console.log(`✅ Tạo đề ngẫu nhiên nhóm 1: ${randomQuestions.length} câu`);
 })();

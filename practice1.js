@@ -1,7 +1,7 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["1"] = [
+window.PRACTICE_SETS["g1_1"] = [
 
   {
     q: "問1　単管足場（たんかんあしば）の特徴（とくちょう）について、正（ただ）しいものを選（えら）べ。",

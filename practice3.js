@@ -1,7 +1,7 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["3"] = [
+window.PRACTICE_SETS["g2_3"] = [
   
 {
   q: "問61. どんな工事(こうじ)か。【160】",

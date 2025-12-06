@@ -1,7 +1,7 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["4"] = [
+window.PRACTICE_SETS["g2_4"] = [
 
 {
   q: "問91. この写真(しゃしん)の工具(こうぐ)は、何(なに)か。【135】",

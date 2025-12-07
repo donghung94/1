@@ -32,7 +32,7 @@ window.PRACTICE_SETS["g2_3"] = [
 },
 {
   q: "問63. どんな工事(こうじ)か。【170】",
-  img: "images/.png",
+  img: "images/63.png",
   options: [
     "1. コーナーテープによる出隅(でずみ)の処理(しょり)",
     "2. パテ処理(しょり)",
@@ -257,7 +257,7 @@ window.PRACTICE_SETS["g2_3"] = [
 },
 {
   q: "問81. 青(あお)い部分(ぶぶん)は何(なに)か。【111】",
-  img: "images/.png",
+  img: "images/81.png",
   options: [
     "1. 単管(たんかん)パイプ",
     "2. 固定(こてい)ベース",

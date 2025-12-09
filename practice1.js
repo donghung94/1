@@ -181,17 +181,17 @@ window.PRACTICE_SETS["g2_1"] = [
   tip: "💡 Nhớ: 圧着 (あっ**ちゃく**) = Áp lực dán/dính. Dùng lực ấn để dán gạch vào lớp vữa đã trát sẵn."
 },
 {
-  q: "問14.タイル張(ば)り工事(こうじ)として、タイルがはがれることは何(なん)というか。【168】",
-  options: [
-    "1. はく離(り)",
-    "2. はく落(らく)",
-    "3. はく崩(ほう)",
-    "4. はく飛(ひ)"
-  ],
-  answer: 1,
-  vi: "Hiện tượng gạch/tile bị bong ra khỏi bề mặt dán được gọi là gì?",
-  explain: "Hiện tượng gạch/tile bị 'bong ra' khỏi bề mặt là はく離(り) - Bóc tách/Phân ly. Trong khi はく落(らく) (Bóc rụng) là khi gạch/tile bong ra và rơi xuống.",
-  tip: "💡 Nhớ: はく離 (り) = **Rời ra/Bong ra** khỏi bề mặt (nhưng có thể vẫn giữ nguyên vị trí); はく落 (らく) = Bong ra và **Rơi xuống**."
+  q: "問14.タイル張(ば)り工事(こうじ)として、タイルがはがれることは何(なん)というか。【168} ",
+  options: [
+    "1. はく離(り)",
+    "2. はく落(らく)",
+    "3. はく崩(ほう)",
+    "4. はく飛(ひ)"
+  ],
+  answer: 0,
+  vi: "Hiện tượng gạch/tile bị **bong ra (はがれる)** khỏi bề mặt dán được gọi là gì?",
+  explain: "Hiện tượng gạch/tile bị **bong ra (はがれる)** khỏi bề mặt dán được gọi là **はく離(り) (Hakuri - Bóc tách/Phân ly)**. Đây là thuật ngữ kỹ thuật chỉ sự **tách rời** của lớp vật liệu (tile) khỏi lớp nền (vữa/keo dán), phù hợp với nghĩa của từ **はがれる** (bị lột ra).",
+  tip: "💡 Nhớ: タイルが **はがれる** (Gạch/Tile bong ra) → **はく離(り)** (Bóc tách) là thuật ngữ chỉ sự tách rời."
 },
 {
   q: "問15　どんな部材（ぶざい）か。【111】",
@@ -352,17 +352,17 @@ window.PRACTICE_SETS["g2_1"] = [
   tip: "💡 Nhớ: ブロックカッター (Block Cutter) = Máy cắt **chuyên dụng** cho khối bê tông/gạch."
 },
 {
-  q: "問27.土(つち)やアスファルトなどをすくって運(はこ)ぶための道具(どうぐ)は何(なに)か。【130】",
-  options: [
-    "1. 剣(けん)スコップ",
-    "2. 角(かく)スコップ",
-    "3. ダブルスコップ",
-    "4. つるはし"
-  ],
-  answer: 0,
-  vi: "Dụng cụ dùng để xúc và vận chuyển đất hoặc nhựa đường là gì?",
-  explain: "Đó là **剣(けん)スコップ (Xẻng nhọn)**. Mặc dù xẻng vuông (角スコップ) thường được dùng để xúc, nhưng xẻng nhọn là dụng cụ đa năng và phổ biến được sử dụng rộng rãi cho công việc đào, xúc đất và vật liệu rời rạc.",
-  tip: "💡 Nhớ: 剣スコップ (Xẻng nhọn) = Thích hợp cho cả đào và xúc vật liệu."
+  q: "問27.土(つち)やアスファルトなどをすくって運(はこ)ぶための道具(どうぐ)は何(なに)か。【130} ",
+  options: [
+    "1. 剣(けん)スコップ",
+    "2. 角(かく)スコップ",
+    "3. ダブルスコップ",
+    "4. つるはし"
+  ],
+  answer: 1,
+  vi: "Dụng cụ dùng để **xúc (すくう)** và **vận chuyển (はこぶ)** đất hoặc nhựa đường là gì?",
+  explain: "Đó là **角(かく)スコップ (Kaku Sukoppu - Xẻng vuông)**. Xẻng vuông có lưỡi rộng và phẳng, rất thích hợp để **xúc (すくう)** và **vận chuyển (はこぶ)** các vật liệu rời rạc như đất, cát, sỏi, hoặc nhựa đường đã được phá vỡ, tối ưu hơn cho việc *xúc* so với xẻng nhọn (剣スコップ) vốn dùng để *đào*.",
+  tip: "💡 Nhớ: **すくって運(はこ)ぶ** (Xúc và vận chuyển) → **角(かく)スコップ** (Xẻng vuông)."
 },
 {
   q: "問28.始業前点検(しぎょうまえ てんけん)にない作業(さぎょう)は何(なに)か。【148】",

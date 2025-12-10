@@ -85,7 +85,7 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Nhớ: Khi thấy búa nhỏ, đầu thép hai mặt, cán gỗ → đó là 玄能（げんのう）."
 },
 {
-  q: "問37　このドーナツの部品（ぶひん）は何（なに）に使（つか）うか。【107】",
+  q: "問37　このドーナツの部品（ぶひん）は何（なに）に使（つか）うか。【107} ",
   img: "images/0000.png",
   options: [
     "1．柱（はしら）・梁（はり）・壁筋（かべすじ）のかぶり厚（あつ）さを確保（かくほ）する",
@@ -93,10 +93,10 @@ window.PRACTICE_SETS["g2_2"] = [
     "3．鉄筋（てっきん）と型枠（かたわく）のすき間（ま）を確保（かくほ）する",
     "4．怪我（けが）を防止（ぼうし）するため"
   ],
-  answer: 2,
-  vi: "Bộ phận hình tròn (ドーナツ) này dùng để làm gì?",
-  explain: "Đây là **丸セパレーター（まるセパレーター）**, dùng để giữ khoảng cách giữa **鉄筋（てっきん／thép）** và **型枠（かたわく／ván khuôn）**, giúp đảm bảo lớp bê tông bảo vệ (かぶり厚) đạt đúng tiêu chuẩn.",
-  tip: "💡 Mẹo nhớ: ドーナツ = hình tròn → giữ khoảng cách giữa thép và ván khuôn."
+  answer: 0,
+  vi: "Bộ phận hình tròn (**ドーナツ**) này dùng để làm gì?",
+  explain: "Bộ phận **Donut (ドーナツ)** này là một loại **Spacer (Chặn kê)**, được sử dụng để giữ khoảng cách giữa **cốt thép (鉄筋)** và **ván khuôn (型枠)**, nhằm mục đích **確保（かくほ）する (Đảm bảo)** **かぶり厚（あつ）さ (Chiều dày lớp bê tông bảo vệ)** cho các cấu kiện thẳng đứng hoặc mặt bên, như **柱（はしら）(Cột), 梁（はり）(Dầm), và 壁筋（かべすじ）(Thép tường)**.",
+  tip: "💡 Mẹo nhớ: **ドーナツ** (Dạng hình tròn) dùng để bảo vệ lớp bê tông cho cấu kiện **thẳng đứng/mặt đứng** (Cột, Dầm, Tường)."
 },
 
   {
@@ -140,7 +140,7 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Mẹo nhớ: Đào tạo an toàn = nói về an toàn lao động, không nói về tiền lương → chọn **賃金（ちんぎん）**."
 },
 {
-  q: "問41　以下（いか）の部材（ぶざい）は何（なに）か。【108】",
+  q: "問41　以下（いか）の部材（ぶざい）は何（なに）か。【108} ",
   img: "images/0001.png",
   options: [
     "1．PSリンク",
@@ -148,13 +148,13 @@ window.PRACTICE_SETS["g2_2"] = [
     "3．引（ひ）っぱり試験器（しけんき）",
     "4．超音波探傷器（ちょうおんぱ たんしょうき）"
   ],
-  answer: 2,
+  answer: 1,
   vi: "Bộ phận trong hình là gì?",
-  explain: "Đây là **外観測定用器具（がいかんそくていようきぐ）**, hay còn gọi là **スケールゲージ** – dụng cụ đo đường kính và khoảng cách của thép trong thi công. Dụng cụ này giúp kiểm tra độ chính xác khi lắp đặt cốt thép.",
-  tip: "💡 Mẹo nhớ: Hình dạng giống thước đo → 外観測定用器具（そくていようきぐ）."
+  explain: "Đây là **外観（がいかん）測定用（そくていよう）器具（きぐ） (Gaikan Sokuteiyō Kigu - Dụng cụ đo kiểm tra ngoại quan)**. Dụng cụ này dùng để đo đạc và kiểm tra kích thước, khoảng cách và sự chính xác của việc lắp đặt cốt thép.",
+  tip: "💡 Mẹo nhớ: Hình dạng giống thước đo dùng để kiểm tra chi tiết cốt thép → **外観測定用器具**."
 },
 {
-  q: "問42　これはどんな金具（かなぐ）か。【142】",
+  q: "問42　これはどんな金具（かなぐ）か。【142} ",
   img: "images/0002.png",
   options: [
     "1．シャックル",
@@ -162,10 +162,10 @@ window.PRACTICE_SETS["g2_2"] = [
     "3．チェーンブロック",
     "4．ジャッキー"
   ],
-  answer: 1,
-  vi: "Đây là loại phụ kiện kim loại nào?",
-  explain: "Đây là **シャックル（shackle）**, một loại móc nối hình chữ U bằng kim loại, dùng để nối **dây cáp (ワイヤロープ)** hoặc **xích (チェーン)** trong công việc nâng hạ và cố định vật nặng.",
-  tip: "💡 Mẹo nhớ: Hình chữ U + chốt vặn → シャックル (shackle)."
+  answer: 0,
+  vi: "Đây là loại **phụ kiện kim loại (金具)** nào?",
+  explain: "Đây là **シャックル（Shakkuru - Shackle)**. Đây là một loại phụ kiện kim loại hình chữ U có chốt vặn ngang, chuyên dùng để nối dây cáp, xích hoặc các vật nặng khác nhau trong công tác cẩu và nâng hạ.",
+  tip: "💡 Mẹo nhớ: Hình chữ U + chốt vặn → **シャックル** (Shackle)."
 },
 {
   q: "問44　酸素（さんそ）とアセチレンガスを同時（どうじ）に 開閉（かいへい）できるようにした器具（きぐ）は何（なに）か。",
@@ -181,7 +181,7 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Mẹo nhớ: 'eco' = tiết kiệm + an toàn → thiết bị điều phối hai bình khí cùng lúc."
 },
 {
-  q: "問45　小型（こがた）の望遠鏡（ぼうえんきょう）を支（ささ）える視点（してん）を基点（きてん）として上下（じょうげ）方向（ほうこう）、水平（すいへい）方向（ほうこう）の角度（かくど）を測定（そくてい）する機器（きき）です。正（ただ）しいものを選（えら）べ。【133】",
+  q: "問45　小型（こがた）の望遠鏡（ぼうえんきょう）を支（ささ）える視点（してん）を基点（きてん）として上下（じょうげ）方向（ほうこう）、水平（すいへい）方向（ほうこう）の角度（かくど）を測定（そくてい）する機器（きき）です。正（ただ）しいものを選（えら）べ。【133} ",
   img: "images/45.png",
   options: [
     "1．トランシット",
@@ -189,10 +189,10 @@ window.PRACTICE_SETS["g2_2"] = [
     "3．レーザーレベル",
     "4．トータルステーション"
   ],
-  answer: 3,
-  vi: "Thiết bị trong hình là gì?",
-  explain: "Đây là **トータルステーション（Total Station）**, một thiết bị đo hiện đại dùng trong trắc địa, có khả năng **đo góc đứng, góc ngang và khoảng cách** bằng tia laser. Nó giúp định vị chính xác trong thi công xây dựng và khảo sát địa hình.",
-  tip: "💡 Mẹo nhớ: Có màn hình điện tử + ống ngắm → thiết bị trắc địa hiện đại → トータルステーション。"
+  answer: 0,
+  vi: "Đây là thiết bị sử dụng **kính viễn vọng nhỏ (小型の望遠鏡)** làm điểm nhìn tham chiếu để **đo (測定)** **góc (角度)** theo hướng **ngang (水平方向)** và hướng **thẳng đứng (上下方向)**. Chọn thiết bị đúng.",
+  explain: "Thiết bị dùng để **đo góc ngang và góc đứng** bằng kính viễn vọng (không đo khoảng cách bằng laser) chính là **トランシット (Toranshitto - Máy kinh vĩ/Theodolite)**. Trong xây dựng, máy này được dùng để định vị các điểm và xác định phương hướng. **トータルステーション (Total Station)** là phiên bản hiện đại hơn, có thể đo cả khoảng cách.",
+  tip: "💡 Nhớ: Đo **角度** (Góc) **上(じょう)下(げ)** (Đứng) và **水平(すいへい)** (Ngang) → **トランシット** ."
 },
 {
   q: "問43　この道具（どうぐ）は何（なに）というか。【135】",
@@ -223,19 +223,18 @@ window.PRACTICE_SETS["g2_2"] = [
 },
 
 {
-  q: "問48　鉄筋（てっきん）の端面（たんめん）の加工（かこう）はどんな機械（きかい）を使用（しよう）するか。【156】",
+  q: "問48　鉄筋（てっきん）の端面（たんめん）の加工（かこう）はどんな機械（きかい）を使用（しよう）するか。【156} ",
   options: [
     "1．サンダー",
     "2．鉄筋（てっきん）ベンダー",
     "3．鉄筋（てっきん）冷間（れいかん）直角（ちょっかく）切断機（せつだんき）",
     "4．高速（こうそく）切断機（せつだんき）"
   ],
-  answer: 3,
-  vi: "Gia công đầu mút của thép thanh dùng loại máy nào?",
-  explain: "Dùng **高速切断機（こうそくせつだんき）** — máy cắt tốc độ cao chuyên dùng để **cắt đầu thép tròn** hoặc thanh sắt trong công trình.",
-  tip: "💡 Mẹo nhớ: 切断（せつだん）= cắt → 高速（こうそく）切断機（せつだんき） = máy cắt tốc độ cao."
+  answer: 2,
+  vi: "**Gia công (加工)** **đầu mút (端面)** của **thép thanh (鉄筋)** dùng loại máy nào?",
+  explain: "Để **gia công đầu mút (端面)** của thanh thép (thường trong công tác **hàn nối thép**), cần đảm bảo mặt cắt phải **vuông góc (直角)**. Do đó, người ta sử dụng **鉄筋（てっきん）冷間（れいかん）直角（ちょっかく）切断機（せつだんき） (Máy cắt lạnh vuông góc thanh thép)**. Máy này giúp cắt thanh thép một cách chính xác và không làm thay đổi tính chất vật lý của thép (cắt lạnh - 冷間), tạo ra mặt cắt lý tưởng để nối.",
+  tip: "💡 Nhớ: Gia công **端面** (đầu mút/mặt cắt) → Cần **直角** (vuông góc) → **鉄筋冷間直角切断機** ."
 },
-
 {
   q: "問49　土台（どだい）・梁（はり）・たけなどの水平（すいへい）部材（ぶざい）と垂直（すいちょく）部材（ぶざい）の柱（はしら）を組（く）み合わせて、「筋交（すじか）い」と呼（よ）ばれる斜（なな）めの部材（ぶざい）で建物（たてもの）の全体（ぜんたい）の強度（きょうど）を出（だ）す工法（こうほう）は何（なに）というか。【163】",
   options: [
@@ -277,31 +276,31 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Nhớ: 落（らく） = rơi → はく落 = bong tróc và rơi xuống."
 },
 {
-  q: "問52　このマークの名前（なまえ）はどれか。【191】",
-  img: "images/0005.png",
+  q: "問52　このマークの名前（なまえ）はどれか。【191} ",
+  img: "images/0031.png",
   options: [
     "1．安全（あんぜん）マーク",
     "2．緑（みどり）十字（じゅうじ）",
     "3．安全（あんぜん）第一（だいいち）",
-    "4．安全（あんぜん）衛生（えいせい）機（き）"
+    "4．安全（あんぜん）衛生（えいせい）旗（き）"
   ],
-  answer: 1,
-  vi: "Tên của biểu tượng này là gì?",
-  explain: "Đây là **緑十字（みどりじゅうじ）**, biểu tượng tiêu chuẩn của **an toàn lao động tại Nhật Bản**. Dấu thập màu xanh tượng trưng cho **sức khỏe và an toàn (安全衛生)**, thường xuất hiện tại công trường hoặc các tài liệu liên quan đến an toàn.",
-  tip: "💡 Mẹo nhớ: 緑（みどり）= màu xanh lá cây → 十字（じゅうじ）= hình thập → 緑十字 = biểu tượng an toàn sức khỏe."
+  answer: 3,
+  vi: "Tên của **biểu tượng (マーク)** này là gì?",
+  explain: "Biểu tượng này, thường thấy trong các sự kiện và tài liệu an toàn, với dòng chữ 'SAFETY FIRST' và dấu thập xanh lá, được gọi là **安全（あんぜん）衛生（えいせい）旗（き） (Anzen Eisei Ki - Cờ An toàn Vệ sinh)** . Mặc dù dấu thập xanh lá là **緑十字 (Midori Jūji)**, nhưng tổng thể hình ảnh này được gọi là **Cờ An toàn Vệ sinh**.",
+  tip: "💡 Nhớ: Biểu tượng có **dấu thập xanh** và chữ **安全第一** → **安全衛生旗** (Cờ An toàn Vệ sinh)."
 },
 {
-  q: "問53　土間配筋（どまはいきん）の順（じゅん）を正（ただ）しいものを選（えら）べ。【155】",
+  q: "問53　土間配筋（どまはいきん）の順（じゅん）を正（ただ）しいものを選（えら）べ。【155} ",
   options: [
     "1．主筋（しゅきん）の配筋（はいきん）→配力筋（はいりょくきん）の配筋（はいきん）→スペースの設置（せっち）",
     "2．スペースの設置（せっち）→主筋（しゅきん）の配筋（はいきん）→配力筋（はいりょくきん）の配筋（はいきん）",
     "3．配力筋（はいりょくきん）の配筋（はいきん）→スペースの設置（せっち）→主筋（しゅきん）の配筋（はいきん）",
     "4．主筋（しゅきん）の配筋（はいきん）→スペースの設置（せっち）→配力筋（はいりょくきん）の配筋（はいきん）"
   ],
-  answer: 3,
-  vi: "Hãy chọn trình tự đúng khi bố trí thép sàn (土間配筋)（どまはいきん）.",
-  explain: "Trình tự đúng là **スペースの設置 → 主筋 → 配力筋**. Nghĩa là: đặt spacer trước → lắp thép chính (chủ lực) → sau cùng là thép phụ (phân phối lực).",
-  tip: "💡 Mẹo nhớ: Làm 'nền phẳng' → đặt 'thép chính' → thêm 'thép phụ' để hoàn thiện."
+  answer: 0,
+  vi: "Hãy chọn trình tự đúng khi bố trí **thép sàn (土間配筋)**.",
+  explain: "Trình tự đúng là **主筋（しゅきん）の配筋（はいきん）→配力筋（はいりょくきん）の配筋（はいきん）→スペースの設置（せっち）**. Nghĩa là: lắp thép chính (chủ lực) trước → sau đó lắp thép phụ (phân phối lực) → và cuối cùng là đặt **Space (Spacer)** để đảm bảo chiều dày lớp bảo vệ và khoảng cách giữa hai lớp thép (nếu là thép hai lớp).",
+  tip: "💡 Mẹo nhớ: **Thép Chính** → **Thép Phụ** → **Spacer**."
 },
 
 {
@@ -331,19 +330,19 @@ window.PRACTICE_SETS["g2_2"] = [
   explain: "Đó là **タンパー（tamper）**, một dụng cụ nén thủ công dùng trong thi công nền hoặc trải nhựa đường.",
   tip: "💡 Mẹo nhớ: タンパー = 'tamper' (đầm tay, nén bề mặt phẳng)."
 },
-{
-  q: "問56　地面（じめん）を突（つ）いて深（ふか）い穴（あな）を掘（ほ）ることができるスコップは何（なに）と言（い）うか。【131】",
-  img: "images/0006.png",
+  {
+  q: "問56. 地面(じめん)をついて深(ふか)い穴(あな)を掘(ほ)ることでができるスコップは何(なに)か。【131} ",
+  img: "images/056.jpg",
   options: [
-    "1．剣（けん）スコップ",
-    "2．角（かく）スコップ",
-    "3．ダブルスコップ",
-    "4．たこ"
+    "1. 剣(けん)スコップ",
+    "2. 角(かく)スコップ",
+    "3. ダブルスコップ",
+    "4. たこ"
   ],
   answer: 2,
-  vi: "Loại xẻng có thể đâm xuống đất và đào được hố sâu gọi là gì?",
-  explain: "Đáp án đúng là **ダブルスコップ（double scoop）**, là loại xẻng hai nửa gập vào nhau, thường dùng để **đào đất sâu hoặc lấy mẫu đất** trong xây dựng hoặc khảo sát địa chất.",
-  tip: "💡 Mẹo nhớ: ダブル = đôi → スコップ = xẻng → ダブルスコップ = xẻng đôi, đào sâu hiệu quả."
+  vi: "Xẻng nào có thể dùng để **chọc (つく)** xuống mặt đất và **đào (ほる)** một cái hố **sâu (ふかい)**?",
+  explain: "Dụng cụ chuyên dụng để đào các hố **sâu (深(ふか)い)** và **hẹp (細(ほそ)い)**, thường dùng để chôn cọc hoặc lắp đặt đường ống, là **ダブルスコップ (Daburu Sukoppu - Xẻng đôi hay còn gọi là Xẻng đào hố)** . Nó hoạt động bằng cách chọc xuống đất và sau đó kẹp đất lại để đưa lên.",
+  tip: "💡 Nhớ: **深(ふか)い穴(あな)を掘(ほ)る** (Đào hố sâu) → **ダブルスコップ** (Xẻng đôi)."
 },
 {
   q: "問57　急（きゅう）に驚（おどろ）いたり慌（あわ）てることで、とっさに不安全（ふあんぜん）行動（こうどう）や不適切（ふてきせつ）な指示（しじ）行動（こうどう）をとることが起（お）こりやすくなるヒューマンエラーは何（なに）か。【74】",

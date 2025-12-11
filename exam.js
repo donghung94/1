@@ -197,6 +197,24 @@
       ${wrongs.length?`<div><b>Bạn đã làm sai các câu sau:</b></div>${html}`:'<div>🎉 Bạn làm đúng tất cả!</div>'}
     `;
 
+    // ======== AUTO FURIGANA CONVERTER ==========
+function convertFurigana(text) {
+  // Tìm mẫu: Kanji(Nhật) + Hiragana trong ngoặc
+  return text.replace(/([一-龯々〆ヵヶ]+)\s*（([ぁ-んァ-ン]+)）/g, (match, kanji, hira) => {
+    return `<ruby>${kanji}<rt>${hira}</rt></ruby>`;
+  });
+}
+// ===========================================
+
+// Gọi hàm trước khi render mỗi câu
+questions.forEach(q => {
+  if (q.q) q.q = convertFurigana(q.q);
+  if (q.hira) q.hira = convertFurigana(q.hira);
+  if (q.vi) q.vi = convertFurigana(q.vi);
+  if (q.explain) q.explain = convertFurigana(q.explain);
+});
+
+    
     redoBtn.style.display = wrongs.length?'block':'none';
     redoBtn.onclick = ()=>{
       if(!wrongs.length){alert('Không có câu sai!');return;}

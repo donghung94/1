@@ -418,6 +418,19 @@ window.PRACTICE_SETS["g1_1"] = [
     vi: "Do muốn làm nhanh, bỏ qua bước cần thiết gây ra lỗi — lỗi con người này gọi là gì?",
     explain: "Đó là **近道行動・省略行動**, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
     tip: "💡 省略＝rút gọn, 近道＝đi đường tắt → bỏ bước = hành vi nguy hiểm."
-  }
+  },
+  {
+  "q": "問117. どんな<ruby>作業<rt>さぎょう</rt></ruby>か。【167} ",
+  "options": [
+    "1. <ruby>切断<rt>せつだん</rt></ruby> <ruby>作業<rt>さぎょう</rt></ruby>",
+    "2. <ruby>曲<rt>ま</rt></ruby>げ<ruby>作業<rt>さぎょう</rt></ruby>",
+    "3. ケガキ<ruby>作業<rt>さぎょう</rt></ruby>",
+    "4. <ruby>溶接<rt>ようせつ</rt></ruby> <ruby>作業<rt>さぎょう</rt></ruby>"
+  ],
+  "answer": 2,
+  "vi": "Đây là loại <ruby>作業<rt>さぎょう</rt></ruby> (công việc) gì?",
+  "explain": "Đây là **ケガキ<ruby>作業<rt>さぎょう</rt></ruby>** (Kegaki Sagyou - Công việc vạch dấu/Đánh dấu). Đây là công đoạn sử dụng dụng cụ sắc nhọn để vẽ các đường cắt, đường gấp hoặc các điểm tham chiếu lên bề mặt vật liệu (thường là kim loại) trước khi tiến hành gia công.",
+  "tip": "💡 Nhớ: Dùng dụng cụ sắc nhọn **vạch (かく)** đường lên kim loại → **ケガキ<ruby>作業<rt>さぎょう</rt></ruby>** ."
+}
 ];
 

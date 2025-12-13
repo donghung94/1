@@ -297,7 +297,7 @@ window.PRACTICE_SETS["g2_3"] = [
 },
 {
   q: "問84. この道具(どうぐ)は何(なん)というのか。【116】",
-  img: "images/.png",
+  img: "images/84.png",
   options: [
     "1. きり",
     "2. 千枚通(せんまいどお)し",

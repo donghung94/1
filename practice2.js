@@ -249,17 +249,17 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Mẹo nhớ: 軸 = trục → 軸組（じくぐ）み = khung trục chính của ngôi nhà."
 },
 {
-  q: "問50　板金（ばんきん）溶接（ようせつ）で一番（いちばん）使用（しよう）されているのは、どの溶接方法（ようせつほうほう）か。【168】",
-  options: [
-    "1．ガス圧接（あっせつ）",
-    "2．アーク溶接（ようせつ）",
-    "3．融接（ゆうせつ）法（ほう）",
-    "4．ろう接（せつ）"
+  "q": "問50　板金(ばんきん)溶接(ようせつ)で一番(いちばん)使用(しよう)されているのは、どの溶接(ようせつ)方法(ほうほう)か。【168】",
+  "options": [
+    "1．ガス圧接(あっせつ)",
+    "2．アーク溶接(ようせつ)",
+    "3．融接(ゆうせつ)法(ほう)",
+    "4．ろう接(せつ)"
   ],
-  answer: 1,
-  vi: "Phương pháp hàn nào được sử dụng phổ biến nhất trong hàn kim loại tấm?",
-  explain: "Đó là **アーク溶接（Arc welding）**, phương pháp hàn dùng hồ quang điện để **nóng chảy kim loại** tại điểm nối.",
-  tip: "💡 Mẹo nhớ: アーク = ARC (hồ quang) → dùng điện để hàn."
+  "answer": 2,
+  "vi": "Phương pháp hàn nào được sử dụng phổ biến nhất trong **hàn kim loại tấm (板金溶接)**?",
+  "explain": "Trong hàn kim loại tấm (板金溶接), phương pháp được sử dụng rộng rãi nhất là các kỹ thuật dựa trên **融接(ゆうせつ)法(ほう) (Yūsetsu Hō - Phương pháp Nóng chảy)**, trong đó có **アーク溶接(ようせつ)** (Hàn hồ quang) và **ガス溶接** (Hàn khí). Tuy nhiên, **融接(ゆうせつ)法(ほう)** là thuật ngữ tổng quát chỉ việc làm nóng chảy kim loại cơ bản tại điểm nối để tạo ra mối hàn. Cả hàn hồ quang (Arc) và hàn khí (Gas) đều thuộc phương pháp này và phổ biến trong hàn kim loại tấm.",
+  "tip": "💡 Nhớ: **板金(ばんきん)** (Kim loại tấm) $\rightarrow$ Hàn bằng cách làm **nóng chảy** $\rightarrow$ **融接(ゆうせつ)法(ほう)** ."
 },
 
 {
@@ -276,18 +276,18 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Nhớ: 落（らく） = rơi → はく落 = bong tróc và rơi xuống."
 },
 {
-  q: "問52　このマークの名前（なまえ）はどれか。【191} ",
-  img: "images/0031.png",
-  options: [
-    "1．安全（あんぜん）マーク",
-    "2．緑（みどり）十字（じゅうじ）",
-    "3．安全（あんぜん）第一（だいいち）",
-    "4．安全（あんぜん）衛生（えいせい）旗（き）"
+  "q": "問52　このマークの名前(なまえ)はどれか。【191】",
+  "img": "images/0031.png",
+  "options": [
+    "1．安全(あんぜん)マーク",
+    "2．緑(みどり)十字(じゅうじ)",
+    "3．安全(あんぜん)第一(だいいち)",
+    "4．安全(あんぜん)衛生(えいせい)旗(き)"
   ],
-  answer: 3,
-  vi: "Tên của **biểu tượng (マーク)** này là gì?",
-  explain: "Biểu tượng này, thường thấy trong các sự kiện và tài liệu an toàn, với dòng chữ 'SAFETY FIRST' và dấu thập xanh lá, được gọi là **安全（あんぜん）衛生（えいせい）旗（き） (Anzen Eisei Ki - Cờ An toàn Vệ sinh)** . Mặc dù dấu thập xanh lá là **緑十字 (Midori Jūji)**, nhưng tổng thể hình ảnh này được gọi là **Cờ An toàn Vệ sinh**.",
-  tip: "💡 Nhớ: Biểu tượng có **dấu thập xanh** và chữ **安全第一** → **安全衛生旗** (Cờ An toàn Vệ sinh)."
+  "answer": 1,
+  "vi": "Tên của **biểu tượng (マーク)** này là gì?",
+  "explain": "Đây là **緑(みどり)十字(じゅうじ) (Midori Jūji - Thập tự xanh)**. Đây là biểu tượng phổ biến nhất tại Nhật Bản để biểu thị **an toàn (安全)** và **vệ sinh (衛生)**. Nó thường được sử dụng trên cờ, mũ bảo hộ, và các biển báo an toàn.",
+  "tip": "💡 Nhớ: Hình dấu thập màu **xanh lá (緑)** → **緑(みどり)十字(じゅうじ)**."
 },
 {
   q: "問53　土間配筋（どまはいきん）の順（じゅん）を正（ただ）しいものを選（えら）べ。【155} ",

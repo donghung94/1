@@ -204,6 +204,20 @@ window.PRACTICE_SETS["g2_4"] = [
   explain: "Phụ kiện đó là **ハンガー (Hanger)** . Đây là bộ phận kết nối chính, chịu lực, dùng để nối thanh treo (**吊りボルト**) với thanh chính của khung trần (**野縁受け**).",
   tip: "💡 Nhớ: Bộ phận **金具** (kim loại) dùng để **treo/giữ** thanh trần → **ハンガー**."
 },
+  {
+  "q": "問108. この写真(しゃしん)は何(なん)の工具(こうぐ)か。【124】",
+  "img": "images/108.png",
+  "options": [
+    "1. 千枚(せんまい)通(どお)し",
+    "2. コンパス",
+    "3. きり",
+    "4. ディバイダ"
+  ],
+  "answer": 0,
+  "vi": "Dụng cụ trong ảnh này là gì?",
+  "explain": "Đây là **千枚(せんまい)通(どお)し (Senmaidooshi)**, một loại dùi nhọn thường dùng để dùi lỗ trên giấy, vải hoặc đánh dấu trên gỗ/kim loại mỏng.",
+  "tip": "💡 Nhớ: Cây kim nhọn có cán gỗ đơn giản dùng để đâm xuyên qua nhiều tờ giấy → **千枚(せんまい)通(どお)し**."
+},
 {
   q: "問109. ワイヤロープやチェーンとつり荷(に)をつなぐための玉掛(たまかけ)用(よう)金具(かなぐ)はなんというか。【142} ",
   options: [

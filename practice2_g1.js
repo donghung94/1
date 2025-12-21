@@ -12,8 +12,8 @@ window.PRACTICE_SETS["g2_1"] = [
       "緑（みどり）の十字（じゅうじ）"
     ],
     answer: 1,
-    vi: "Cờ an toàn vệ sinh (安全衛生旗) có ý nghĩa là gì?",
-    explain: "Cờ có nền trắng và dấu thập xanh là **biểu tượng cho an toàn và vệ sinh lao động (安全・衛生)**.",
+    vi: "Cờ an toàn vệ sinh 安全（あんぜん）衛生（えいせい） có ý nghĩa là gì?",
+    explain: "Cờ có nền trắng và dấu thập xanh là **biểu tượng cho an toàn và vệ sinh lao động 安全（あんぜん）衛生（えいせい）.",
     tip: "💡 Nhớ: 緑＝an toàn, 十字＝biểu tượng y tế → tượng trưng cho an toàn & sức khỏe."
   },
 
@@ -43,7 +43,7 @@ window.PRACTICE_SETS["g2_1"] = [
     answer: 1,
     vi: "Trong công việc đào đất 掘削（くっさく）作業（さぎょう）, loại tai nạn nào dễ xảy ra nhất ở vách đất?",
     explain: "Trong khi đào đất, vách đất dễ **崩壊（ほうかい）– sụp đổ hoặc sạt lở**, đặc biệt khi không có gia cố.",
-    tip: "💡 Nhớ: 掘削（くっさく）＝đào đất → đất yếu dễ sụp = 崩壊."
+    tip: "💡 Nhớ: 掘削（くっさく）＝đào đất → đất yếu dễ sụp = 崩壊（ほうかい）."
   },
    {
     q: "問34　橋梁（きょうりょう）工事（こうじ）では、どんな事故（じこ）が発生（はっせい）しやすいか。【180】",
@@ -55,7 +55,7 @@ window.PRACTICE_SETS["g2_1"] = [
     ],
     answer: 0,
     vi: "Trong công trình cầu 橋梁（きょうりょう）工事（こうじ）, loại tai nạn nào dễ xảy ra nhất?",
-    explain: "Công trình cầu thường thi công trên cao → dễ xảy ra **rơi vật (飛来) hoặc rơi người (落下)**.",
+    explain: "Công trình cầu thường thi công trên cao → dễ xảy ra **rơi vật 飛来（ひらい） hoặc rơi người 落下（らっか）**.",
     tip: "💡 Nhớ: cầu = trên cao → nguy cơ rơi vật, rơi người cao nhất."
   },
   {
@@ -96,9 +96,9 @@ window.PRACTICE_SETS["g2_1"] = [
       "甲板長（かんぱんちょう）"
     ],
     answer: 1,
-    vi: "Trong công trình công trình biển (海洋（かいよう）土木（どぼく）工事（こうじ）, ai là người chỉ huy các tàu làm việc?",
+    vi: "Trong công trình công trình biển 海洋（かいよう）土木（どぼく）工事（こうじ）, ai là người chỉ huy các tàu làm việc?",
     explain: "Người **船団長（せんだんちょう）** là người chỉ huy, ra chỉ thị cho từng tàu trong nhóm làm việc.",
-    tip: "💡 Nhớ: 団 (だん) = nhóm → 船団長 = trưởng nhóm tàu, người ra lệnh."
+    tip: "💡 Nhớ: 団 (だん) = nhóm → 船団長（せんだんちょう） = trưởng nhóm tàu, người ra lệnh."
   },
 
   {
@@ -221,8 +221,8 @@ window.PRACTICE_SETS["g2_1"] = [
       "推進（すいしん）トンネル工事（こうじ）"
     ],
     answer: 2,
-    vi: "Loại mũ bảo hộ có tấm che mặt (シールド面付きヘルメット) phù hợp cho công việc nào?",
-    explain: "Mũ có tấm che mặt dùng để **bảo vệ khỏi tia lửa, nhiệt, sáng chói khi hàn**, nên phù hợp với **溶接工事 (công việc hàn)**.",
+    vi: "Loại mũ bảo hộ có tấm che mặt シールド面（めん）付きヘルメット phù hợp cho công việc nào?",
+    explain: "Mũ có tấm che mặt dùng để **bảo vệ khỏi tia lửa, nhiệt, sáng chói khi hàn**, nên phù hợp với 溶接（ようせつ）工事（こうじ） (công việc hàn)**.",
     tip: "💡 Nhớ: シールド面＝tấm chắn → dùng khi hàn để bảo vệ mặt."
   },
 
@@ -251,7 +251,7 @@ window.PRACTICE_SETS["g2_1"] = [
     ],
     answer: 0,
     vi: "Hopper (ホッパ) là gì?",
-    explain: "ホッパ là **phễu nhận bê tông tươi (生コン)** từ xe trộn, trước khi bơm vào khuôn.",
+    explain: "ホッパ là **phễu nhận bê tông tươi 生コン（なまこん）** từ xe trộn, trước khi bơm vào khuôn.",
     tip: "💡 Nhớ: Hopper = phễu → chỗ nhận bê tông từ xe trộn."
   },
   {
@@ -280,7 +280,7 @@ window.PRACTICE_SETS["g2_1"] = [
     answer: 2,
     vi: "Công việc 玉掛（たまがけ）作業（さぎょう） là gì?",
     explain: "*玉掛（たまがけ）作業（さぎょう）** là việc **móc hoặc tháo dây cáp vào hàng hóa khi dùng cần cẩu nâng hạ**.",
-    tip: "💡 Nhớ: 玉掛け（たまがけ） = gắn/móc vật → dùng khi làm việc với cần cẩu."
+    tip: "💡 Nhớ: 玉掛（たまがけ） = gắn/móc vật → dùng khi làm việc với cần cẩu."
   },
   {
     q: "問51　さく井（い）工事（こうじ）について、地表（ちひょう）や水質（すいしつ）の悪（わる）い帯水層（たいすいそう）から、井戸（いど）に水（みず）が入（はい）らないようにすることは何（なん）か。適切（てきせつ）なものを選（えら）べ。【155】",
@@ -319,7 +319,7 @@ window.PRACTICE_SETS["g2_1"] = [
   answer: 1,
   vi: "Vật liệu dùng để làm phẳng bề mặt gồ ghề là gì?",
   explain: "“パテ” là bột trét, được dùng để làm phẳng bề mặt tường, trần hoặc vật liệu trước khi sơn hoặc hoàn thiện. Nó giúp loại bỏ các chỗ lõm, gồ ghề để tạo mặt phẳng đẹp.",
-  tip: "💡 Nhớ: パテ = bột trét → dùng để làm phẳng (平らにする)."
+  tip: "💡 Nhớ: パテ = bột trét → dùng để làm phẳng 平（たい）らにする."
 },
 {
   q: "問54　塗装（とそう）工事（こうじ）のスクレーパーは何（なに）ですか。【122】",
@@ -393,14 +393,14 @@ window.PRACTICE_SETS["g2_1"] = [
   q: "問59　イラストのキャラメルはどんな目的（もくてき）として使（つか）われているか。【114】",
    img: "images/0059.png",
   options: [
-    "床筋（ゆかすじ）の下（した）に置（お）くサイコロ状（じょう）のモルタルブロックで、床筋のかぶり厚さを確保（かくほ）するため",
+    "床筋（ゆかすじ）の下（した）に置（お）くサイコロ状（じょう）のモルタルブロックで、床筋（ゆかすじ）のかぶり厚 (あつ) さを確保（かくほ）するため",
     "柱（はしら）、梁（はり）、壁筋（かべすじ）のかぶり厚さを確保するため",
     "鉄筋（てっきん）のかぶりと型枠（かたわく）のきまを確保するため",
     "怪我（けが）を防止（ぼうし）するため"
   ],
   answer: 0,
   vi: "Khối vuông (caramel block) trong hình được sử dụng với mục đích gì?",
-  explain: "**キャラメルブロック** là khối vữa (mortar block) đặt dưới cốt thép sàn để giữ **độ dày lớp bê tông bảo vệ (かぶり厚さ)** đúng tiêu chuẩn.",
+  explain: "**キャラメルブロック** là khối vữa (mortar block) đặt dưới cốt thép sàn để giữ **độ dày lớp bê tông bảo vệ かぶり厚(あつ)さ** đúng tiêu chuẩn.",
   tip: "💡 キャラメルブロック = khối đỡ thép, giúp giữ khoảng cách giữa cốt thép và sàn bê tông."
 },
 

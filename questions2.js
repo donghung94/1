@@ -23,7 +23,7 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 1,
   vi: "Rác thải phát sinh từ hoạt động kinh doanh được chia thành hai loại. Hãy chọn loại phân chia đúng.",
-  explain: "Rác thải trong hoạt động kinh doanh được chia thành hai loại: **産業廃棄物 (rác thải công nghiệp)** và **事業系一般廃棄物 (rác thải sinh hoạt từ hoạt động kinh doanh)**."
+  explain: "Rác thải trong hoạt động kinh doanh được chia thành hai loại: 産業（さんぎょう）廃棄物（はいきぶつ） (rác thải công nghiệp) và事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ） (rác thải sinh hoạt từ hoạt động kinh doanh)**."
 },
 {
   q: "問33　ライフライン・設備（せつび）工事（こうじ）で、部屋（へや）の温度（おんど）、湿度（しつど）などを調整（ちょうせい）するという意味（いみ）の言葉（ことば）はどれか。",
@@ -48,7 +48,7 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 0,
   vi: "Dựa theo hình minh họa, đây là loại công trình nào?",
-  explain: "Đây là **防波堤（ぼうはてい）工事 – công trình đê chắn sóng**, được xây dựng để ngăn sóng biển và bảo vệ cảng hoặc khu vực ven biển khỏi tác động của sóng lớn."
+  explain: "Đây là 防波堤（ぼうはてい）工事（こうじ） – công trình đê chắn sóng**, được xây dựng để ngăn sóng biển và bảo vệ cảng hoặc khu vực ven biển khỏi tác động của sóng lớn."
 },
 {
   q: "問35　５Ｓ活動（かつどう）における職長（しょくちょう）の役割（やくわり）について、不適切（ふてきせつ）なものを選（えら）べ。",
@@ -60,7 +60,7 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 2,
   vi: "Nhiệm vụ của tổ trưởng trong hoạt động 5S không phải là đùn đẩy cho công nhân.",
-  explain: "Đáp án đúng: 職長（しょくちょう）は整備や清掃などを率先して行うべき — Tổ trưởng phải gương mẫu thực hiện 5S."
+  explain: "Đáp án đúng: 職長（しょくちょう）は、整備（せいび）や清掃（せいそう）、整頓（せいとん）、安全（あんぜん）意識（いしき）を率先（そっせん）して行（おこな）うことではなく、できるだけ作業員（さぎょういん）に行（おこな）わせる。 — Tổ trưởng phải gương mẫu thực hiện 5S."
 },
 {
   q: "問36　海洋（かいよう）土木（どぼく）工事（こうじ）の代表的（だいひょうてき）な工事（こうじ）について正（ただ）しくないものを選（えら）べ。",
@@ -210,7 +210,7 @@ window.QUESTION_SETS["2"] = [
   ],
   answer: 0,
   vi: "Hình dưới đây thể hiện công tác gì?",
-  explain: "Đây là công tác **法面（のりめん）整形（せいけい）– san gọt, tạo hình mái taluy** bằng máy xúc. Mục đích là làm phẳng và chỉnh độ dốc mái đất sau khi đắp hoặc đào."
+  explain: "Đây là công tác 法面（のりめん）整形（せいけい）– san gọt, tạo hình mái taluy bằng máy xúc. Mục đích là làm phẳng và chỉnh độ dốc mái đất sau khi đắp hoặc đào."
 },
 {
   q: "問48　既成（きせい）杭（くい）工法（こうほう）とは、次（つぎ）のうちどれか。",

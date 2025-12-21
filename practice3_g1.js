@@ -1,6 +1,6 @@
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g3_1"] = [
+window.PRACTICE_SETS["g1_3"] = [
 {
   q: "問61　鉄筋（てっきん）のかぶり（鉄筋と型枠のすきま）を確保（かくほ）する部材（ぶざい）は何（なに）か。【114】",
   options: [

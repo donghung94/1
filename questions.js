@@ -127,7 +127,7 @@ window.QUESTION_SETS["1"] = [
     "人体（じんたい）に電流（でんりゅう）が流（なが）れること。"
   ],
   answer: 0,
-  vi: "Chọn định nghĩa đúng về hiện tượng rò điện (漏電)（ろうでん）.",
+  vi: "Chọn định nghĩa đúng về hiện tượng rò điện 漏電（ろうでん）.",
   explain: "Đáp án đúng:  — Là hiện tượng dòng điện chảy vào phần không được thiết kế để dẫn điện."
 },
 {
@@ -355,7 +355,7 @@ window.QUESTION_SETS["1"] = [
   explain: "Hình vẽ mô tả hệ thống ống hút nước ngầm với bể và bơm trung gian — đây là ウォルポイント工事（こうじ）, dùng để hạ mực nước ngầm trước khi thi công móng hoặc tầng hầm."
 },
   {
-  q: "問29　鉄筋（てっきん）の長（なが）さが足（た）りない場合（ばあい）、２本（にほん）の鉄筋（てっきん）をつなぎ合わせて、長（なが）い１本（いっぽん）の鉄筋（てっきん）にする工事（こうじ）は何（なん）と言（い）うか。",
+  q: "問29　鉄筋（てっきん）の長（なが）さが足（た）りない場合（ばあい）、２本（にほん）の鉄筋（てっきん）をつなぎ合 (あ) わせて、長（なが）い１本（いっぽん）の鉄筋（てっきん）にする工事（こうじ）は何（なん）と言（い）うか。",
   options: [
     "鉄筋（てっきん）工事（こうじ）",
     "鉄筋（てっきん）継手（つぎて）工事（こうじ）",

@@ -167,6 +167,20 @@ window.PRACTICE_SETS["g2_2"] = [
   explain: "Đây là **シャックル（Shakkuru - Shackle)**. Đây là một loại phụ kiện kim loại hình chữ U có chốt vặn ngang, chuyên dùng để nối dây cáp, xích hoặc các vật nặng khác nhau trong công tác cẩu và nâng hạ.",
   tip: "💡 Mẹo nhớ: Hình chữ U + chốt vặn → **シャックル** (Shackle)."
 },
+  {
+  q: "問43　この道具（どうぐ）は何（なに）というか。【135】",
+  img: "images/0004.png",
+  options: [
+    "1．ベンチ",
+    "2．はさみ",
+    "3．カッターナイフ",
+    "4．くい切（き）り"
+  ],
+  answer: 3,
+  vi: "Dụng cụ trong hình gọi là gì?",
+  explain: "Đây là **くい切り（くいきり）**, một loại kìm chuyên dùng để **cắt đầu đinh hoặc dây kim loại nhỏ**, thường được sử dụng trong thi công lắp đặt thép, ván khuôn, hoặc làm sạch đầu thép sau khi buộc.",
+  tip: "💡 Mẹo nhớ: くい切り = 'cắt đầu đinh' → phần miệng phẳng, cắt sát bề mặt."
+},
 {
   q: "問44　酸素（さんそ）とアセチレンガスを同時（どうじ）に 開閉（かいへい）できるようにした器具（きぐ）は何（なに）か。",
   options: [
@@ -194,20 +208,7 @@ window.PRACTICE_SETS["g2_2"] = [
   explain: "Thiết bị dùng để **đo góc ngang và góc đứng** bằng kính viễn vọng (không đo khoảng cách bằng laser) chính là **トランシット (Toranshitto - Máy kinh vĩ/Theodolite)**. Trong xây dựng, máy này được dùng để định vị các điểm và xác định phương hướng. **トータルステーション (Total Station)** là phiên bản hiện đại hơn, có thể đo cả khoảng cách.",
   tip: "💡 Nhớ: Đo **角度** (Góc) **上(じょう)下(げ)** (Đứng) và **水平(すいへい)** (Ngang) → **トランシット** ."
 },
-{
-  q: "問43　この道具（どうぐ）は何（なに）というか。【135】",
-  img: "images/0004.png",
-  options: [
-    "1．ベンチ",
-    "2．はさみ",
-    "3．カッターナイフ",
-    "4．くい切（き）り"
-  ],
-  answer: 3,
-  vi: "Dụng cụ trong hình gọi là gì?",
-  explain: "Đây là **くい切り（くいきり）**, một loại kìm chuyên dùng để **cắt đầu đinh hoặc dây kim loại nhỏ**, thường được sử dụng trong thi công lắp đặt thép, ván khuôn, hoặc làm sạch đầu thép sau khi buộc.",
-  tip: "💡 Mẹo nhớ: くい切り = 'cắt đầu đinh' → phần miệng phẳng, cắt sát bề mặt."
-},
+
 {
   q: "問47　二本（にほん）の金属棒（きんぞくぼう）を蝶番（ちょうつがい）でつないだ形（かたち）をして、熱（ねっ）した鉄（てつ）などをつかむための鉄製（てっせい）の工具（こうぐ）は何（なに）か。",
   options: [
@@ -375,15 +376,15 @@ window.PRACTICE_SETS["g2_2"] = [
 {
   q: "問60　鉄筋（てっきん）工事（こうじ）について、不適切（ふてきせつ）なものを選（えら）べ。【153】",
   options: [
-    "1．コンクリートは圧縮力（あっしゅくりょく）に弱いため、鉄筋（てっきん）を入れて補（おぎな）うことができる",
+    "1．コンクリートは圧縮力（あっしゅくりょく）に弱（よわ）いため、鉄筋（てっきん）を入れて補（おぎな）うことができる",
     "2．鉄筋（てっきん）は酸化（さんか）して錆（さ）びる性質（せいしつ）がある",
     "3．コンクリートはアルカリ性（せい）なので、鉄筋（てっきん）を錆（さび）から守（まも）る",
     "4．コンクリートの性質（せいしつ）は圧縮（あっしゅく）する力（ちから）には強（つよ）いが、引（ひ）っ張（ぱ）られる力（ちから）には弱（よわ）い"
   ],
   answer: 0,
   vi: "Trong các mô tả sau về công việc thi công cốt thép, điều nào không đúng?",
-  explain: " Thực tế, **bê tông mạnh về lực nén (圧縮)** nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
-  tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén (圧縮), yếu khi bị kéo (引張)."
+  explain: " Thực tế, **bê tông mạnh về lực nén 圧縮力（あっしゅくりょく） nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
+  tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén 圧縮力（あっしゅくりょく）, yếu khi bị kéo 引（ひ）っ張（ぱ）."
 }
 
 ];

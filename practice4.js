@@ -309,6 +309,19 @@ window.PRACTICE_SETS["g2_4"] = [
   explain: "Vật liệu phổ biến và mang tính biểu tượng nhất được sử dụng cho mái nhà truyền thống, đặc biệt là đền thờ (**じんじゃ**) và chùa chiền (**てら**), là **粘土(ねんど)瓦(がわら) (Nendo Gawara - Ngói đất sét/Ngói men)** . Mặc dù mái nhà truyền thống cũng có thể dùng gỗ (**もくざい** - ván lợp), nhưng ngói đất sét là loại vật liệu phổ biến nhất được sử dụng trên các công trình lớn và nhà ở truyền thống.",
   tip: "💡 Nhớ: Vật liệu lợp mái cho **神社(じんじゃ)・寺(てら)** (đền/chùa) → **粘土(ねんど)瓦(がわら)** (Ngói đất sét)."
 },
+  {
+  "q": "問116. 雪(ゆき)の多(おお)い地方(ちほう)では、雪止(ゆきど)めをして、屋根(やね)に積(つ)もった雪(ゆき)が下(した)に落(お)ちないようにする金具(かなぐ)は何(なん)と言(い)うか。【166】",
+  "options": [
+    "1. 雪止(ゆきど)め",
+    "2. 雨(あま)どい",
+    "3. 防水(ぼうすい)シート",
+    "4. タイル"
+  ],
+  "answer": 0,
+  "vi": "Ở những vùng có nhiều tuyết, loại móc kim loại nào được lắp trên mái nhà để ngăn tuyết tích tụ không bị rơi xuống dưới?",
+  "explain": "**雪止(ゆきど)め (Yukidome)** là các linh kiện kim loại được lắp đặt trên mái nhà nhằm giữ tuyết lại, ngăn chặn việc tuyết rơi đột ngột xuống dưới gây nguy hiểm cho người đi đường hoặc làm hỏng máng nước. (Lưu ý: **雨(あま)どい** là máng xối, **防水(ぼうすい)シート** là tấm chống thấm).",
+  "tip": "💡 Nhớ: **雪(ゆき)を止(と)める** (Dừng tuyết lại) → **雪止(ゆきど)め**."
+},
 {
   q: "問117. どんな作業(さぎょう)か。【167} ",
   img: "images/117.png",

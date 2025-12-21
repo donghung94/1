@@ -12,7 +12,7 @@ window.PRACTICE_SETS["g2_1"] = [
       "4．マンションなどの骨組（ほねぐ）みを組（く）み立（た）てる"
     ],
     answer: 2,
-    vi: "Chọn đặc điểm đúng của giàn giáo ống thép (単管足場)（たんかんあしば）.",
+    vi: "Chọn đặc điểm đúng của giàn giáo ống thép 単管足場（たんかんあしば）.",
     explain: "単管足場（たんかんあしば） linh hoạt, dễ lắp ghép bằng ống thép & kẹp nối → phù hợp thi công ở không gian hẹp.",
     tip: "💡 Mẹo nhớ: Thấy chữ **単** = “đơn, đơn giản, linh hoạt” → dùng chỗ **hẹp**."
   },
@@ -164,7 +164,7 @@ window.PRACTICE_SETS["g2_1"] = [
   ],
   answer: 2,
   vi: "Hãy chọn thứ không nằm trong 'Ba thảm họa/tai nạn lớn' (trong ngành xây dựng).",
-  explain: "Ba thảm họa lớn (三大災害)(さんだいさいがい) trong ngành xây dựng Nhật Bản là:  Ngã cao  墜落(ついらく)·転落(てんらく),  機械(きかい)などでの災害(さがい), và 転倒(てんとう)·崩壊(ほうかい) Do đó,  Tai nạn giao thông (交通事故)(こうつう じこ) là phương án không được bao gồm.",
+  explain: "Ba thảm họa lớn 三大災害(さんだいさいがい) trong ngành xây dựng Nhật Bản là:  Ngã cao  墜落(ついらく)·転落(てんらく),  機械(きかい)などでの災害(さがい), và 転倒(てんとう)·崩壊(ほうかい) Do đó,  Tai nạn giao thông (交通事故)(こうつう じこ) là phương án không được bao gồm.",
   tip: "💡 Nhớ: Ba thảm họa lớn trong xây dựng = NGÃ CAO, MÁY MÓC, SẬP ĐỔ."
 },
 {
@@ -213,7 +213,7 @@ window.PRACTICE_SETS["g2_1"] = [
     "1. パイプサポート",
     "2. 端太角(ばたかく)",
     "3. トンボ端太(とんぼ ばた)",
-    "4. 筋交い(すじかい)"
+    "4. 筋交(すじか)い"
   ],
   answer: 2,
   vi: "Gỗ được sử dụng để đỡ ống thép đơn (tankan pipe) của khuôn ván đáy dầm và dựng cột chống (pipe support) được gọi là gì?",
@@ -315,7 +315,7 @@ window.PRACTICE_SETS["g2_1"] = [
 {
   q: "問24.首(くび)の部分(ぶぶん)が枝(えだ)と平(ひら)たい面(めん)の根元(ねもと)についてる。細(こま)かい部分(ぶぶん)の作業(さぎょう)に適(てき)しています。そのこては、何(なん)か。【117】",
   options: [
-    "1. 中塗り(なかぬり)ごて",
+    "1. 中塗(なかぬ)りごて",
     "2. 柳刃(やなぎば)ごて",
     "3. 目地(めじ)ごて",
     "4. 角(かど)ごて"

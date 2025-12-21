@@ -25,6 +25,19 @@ window.QUESTION_SETS["6"] = [
     vi: "Người lập bản vẽ thiết kế là văn phòng thiết kế 設計（せっけい）事務所（じむしょ）.",
     explain: "設計図（せっけいず） được tạo ra bởi các kiến trúc sư hoặc văn phòng thiết kế chuyên nghiệp, thể hiện toàn bộ thông tin về cấu trúc, kích thước, bố trí và vật liệu của công trình trước khi thi công."
   },
+    {
+  q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
+  img: "images/IMG_3386.jpeg",
+  options: [
+    "施主（せしゅ）",
+    "施工（せこう）管理者（かんりしゃ）",
+    "現場（げんば）で作業（さぎょう）する技能者（ぎのうしゃ）",
+    "発注者（はっちゅうしゃ）"
+  ],
+  answer: 0,
+  vi: "Người đọc bản vẽ này là **施主（せしゅ） – chủ công trình**.",
+  explain: "施主（せしゅ） là người sở hữu hoặc đặt hàng công trình xây dựng. Họ xem bản vẽ để xác nhận nội dung thiết kế trước khi thi công, trong khi những người khác như 施工管理者 hay 技能者 là người thực hiện hoặc giám sát thi công."
+},
   {
     q: "問154　設計図（せっけいず）を読む人（ひと）は誰（だれ）か。【81】",
     options: [
@@ -83,7 +96,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Công trình không thuộc hạ tầng thiết yếu (ライフライン) là gì hãy chọn đáp án sai.",
-    explain: "ライフライン工事 bao gồm điện, nước, gas… là các hệ thống thiết yếu cho đời sống.型枠（かたわく）工事（こうじ） chỉ liên quan đến kết cấu bê tông, không phải hạ tầng sinh hoạt."
+    explain: "ライフライン工事（こうじ） bao gồm điện, nước, gas… là các hệ thống thiết yếu cho đời sống.型枠（かたわく）工事（こうじ） chỉ liên quan đến kết cấu bê tông, không phải hạ tầng sinh hoạt."
   },
   {
     q: "問159　雇用（こよう）保険法（ほけんほう）の支払（しはら）いは誰（だれ）か。",
@@ -111,17 +124,17 @@ window.QUESTION_SETS["6"] = [
   },
  
 {
-  q: "問153　この図（ず）の読む（よむ）人（ひと）は誰（だれ）か。【81・82】",
-  img: "images/IMG_3386.jpeg",
-  options: [
-    "施主（せしゅ）",
-    "施工（せこう）管理者（かんりしゃ）",
-    "現場（げんば）で作業（さぎょう）する技能者（ぎのうしゃ）",
-    "発注者（はっちゅうしゃ）"
+  "q": "問161. 暑(あつ)さ指数(しすう)の低減(ていげん)をするため、不適切(ふできせつ)なものはどれか。【48】",
+  "options": [
+    "1. ドライミストを設置(せっち)する",
+    "2. 作業用(さぎょうよう)大型(おおがた)扇風機(せんぷうき)を設置(せっち)する",
+    "3. 遮光(しゃこう)ネットを設置(せっち)する",
+    "4. 風(かぜ)を切断(せつだん)する"
   ],
-  answer: 0,
-  vi: "Người đọc bản vẽ này là **施主（せしゅ） – chủ công trình**.",
-  explain: "施主（せしゅ） là người sở hữu hoặc đặt hàng công trình xây dựng. Họ xem bản vẽ để xác nhận nội dung thiết kế trước khi thi công, trong khi những người khác như 施工管理者 hay 技能者 là người thực hiện hoặc giám sát thi công."
+  "answer": 3,
+  "vi": "Để làm giảm chỉ số độ nóng (WBGT), hành động nào sau đây là **KHÔNG phù hợp**?",
+  "explain": "Để giảm nhiệt độ và WBGT, cần tạo sự thông thoáng. Việc **風(かぜ)を切断(せつだん)する (Chặn luồng gió)** sẽ làm không khí đứng yên, khiến mồ hôi khó bay hơi và làm tăng nguy cơ sốc nhiệt. Các biện pháp như phun sương (Dry mist), dùng quạt lớn và lưới che nắng đều là biện pháp đúng.",
+  "tip": "💡 Nhớ: Để chống nóng thì cần **Gió (風)** và **Bóng râm (日陰)**. Chặn gió là sai!"
 },
   {
     q: "問162　設計図書（せっけいとしょ）の中（なか）に含（ふく）まない書類（しょるい）を選（えら）べ。【19】",
@@ -145,7 +158,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 0,
     vi: "Ngành nghề nào cần có giấy phép quốc gia.",
-    explain: "Công việc 発破 (nổ mìn) là hoạt động đặc biệt nguy hiểm, bắt buộc phải có 国家免許 (giấy phép quốc gia). Các công việc khác chỉ cần chứng chỉ an toàn hoặc huấn luyện đặc biệt."
+    explain: "Công việc 発破（はっぱ） là hoạt động đặc biệt nguy hiểm, bắt buộc phải có 国家（こっか）免許（めんきょ） giấy phép quốc gia. Các công việc khác chỉ cần chứng chỉ an toàn hoặc huấn luyện đặc biệt."
   },
   {
     q: "問164　原価（げんか）管理（かんり）について完成（かんせい）工事（こうじ）原価（げんか）の外注費（がいちゅうひ）は何（なに）か。【35】",
@@ -156,8 +169,8 @@ window.QUESTION_SETS["6"] = [
       "材料費（ざいりょうひ）、労務費（ろうむひ）、外注費（がいちゅうひ）以外（いがい）の費用（ひよう）"
     ],
     answer: 2,
-    vi: "Trong quản lý giá thành, chi phí thuê ngoài (外注費) là gì?",
-    explain: "外注費 là chi phí khi một phần công đoạn thi công được giao cho nhà thầu phụ khác thực hiện. Không bao gồm nhân công nội bộ hay vật liệu chính."
+    vi: "Trong quản lý giá thành, chi phí thuê ngoài 外注費（がいちゅうひ） là gì?",
+    explain: "外注費（がいちゅうひ） là chi phí khi một phần công đoạn thi công được giao cho nhà thầu phụ khác thực hiện. Không bao gồm nhân công nội bộ hay vật liệu chính."
   },
   {
     q: "問165　標準（ひょうじゅん）仕様書（しようしょ）より、さらに具体的（ぐたいてき）な内容（ないよう）が特記（とっき）事項（じこう）として書（か）かれた書類（しょるい）は何（なに）というか。【80】",
@@ -169,7 +182,7 @@ window.QUESTION_SETS["6"] = [
     ],
     answer: 2,
     vi: "Tài liệu ghi chi tiết các điều khoản đặc biệt cụ thể hơn so với bản tiêu chuẩn là gì?",
-    explain: "特記仕様書 là tài liệu ghi rõ các yêu cầu kỹ thuật đặc biệt (ví dụ vật liệu, phương pháp, điều kiện thi công) bổ sung cho 標準仕様書 (bản tiêu chuẩn)."
+    explain: "標準（ひょうじゅん）仕様書（しようしょ） là tài liệu ghi rõ các yêu cầu kỹ thuật đặc biệt (ví dụ vật liệu, phương pháp, điều kiện thi công) bổ sung cho 標準仕様書 (bản tiêu chuẩn)."
   },
   {
     q: "問166　地震（じしん）のエネルギーを建物（たてもの）に伝（つた）えにくくするために、基礎（きそ）部分（ぶぶん）にアイソレータやダンパーなどの装置（そうち）を取（と）り付（つ）ける工事（こうじ）は何（なに）か。【19】",
@@ -204,7 +217,7 @@ window.QUESTION_SETS["6"] = [
       "品質（ひんしつ）管理（かんり）"
     ],
     answer: 0,
-    vi: "Hãy chọn công việc không thuộc phạm vi của kỹ thuật viên phụ trách chính (主任技術者)（しゅにんぎじゅつしゃ）.",
+    vi: "Hãy chọn công việc không thuộc phạm vi của kỹ thuật viên phụ trách chính 主任技術者（しゅにんぎじゅつしゃ）.",
     explain: "主任技術者（しゅにんぎじゅつしゃ） phụ trách kế hoạch thi công, quản lý an toàn và chất lượng — không thực hiện việc tính lương"
   },
   {
@@ -240,7 +253,7 @@ window.QUESTION_SETS["6"] = [
       "ラジオ体操（たいそう）"
     ],
     answer: 2,
-    vi: "Mục đích chính của buổi chào sáng (朝礼)（ちょうれい） là gì?",
+    vi: "Mục đích chính của buổi chào sáng 朝礼（ちょうれい） là gì?",
     explain: "朝礼（ちょうれい） được tổ chức để chia sẻ thông tin an toàn và ngăn ngừa tai nạn tại công trường."
   },
   {

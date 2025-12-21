@@ -338,6 +338,19 @@ window.QUESTION_SETS["4"] = [
   explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
 },
   {
+  "q": "問119. トイレの便器(べんき)、洗面器(せんめんき)などを設置(せっち)する工事(こうじ)を行(おこな)う工事(こうじ)は何(なん)か。【65】",
+  "options": [
+    "1．給湯(きゅうとう)設備(せつび)",
+    "2．排水(はいすい)・通気(つうき)設備(せつび)",
+    "3．衛生(えいせい)器具(きぐ)設備(せつび)工事(こうじ)",
+    "4．給水(きゅうすい)設備(せつび)工事(こうじ)"
+  ],
+  "answer": 2,
+  "vi": "Công việc thực hiện **lắp đặt 設備(せつび)** các thiết bị như **bồn cầu 便器(べんき)** nhà vệ sinh, **chậu rửa mặt 洗面器(せんめんき)** được gọi là gì?",
+  "explain": "Việc lắp đặt các thiết bị vệ sinh cố định như bồn cầu, chậu rửa, bồn tắm được phân loại là 衛生(えいせい)器具(きぐ)設備(せつび)工事(こうじ) (Công việc lắp đặt thiết bị vệ sinh).",
+  "tip": "💡 Nhớ: 便器(べんき) (Bồn cầu) + 洗面器(せんめんき) (Chậu rửa) → 衛生(えいせい)器具(きぐ) (Thiết bị vệ sinh)."
+},
+  {
   q: "問120　電気（でんき）工事（こうじ）のうち、外線（がいせん）工事（こうじ）と言（い）われている工事（こうじ）は次（つぎ）のうちどれか【62】【92】",
   options: [
     "冷暖房（れいだんぼう）設備（せつび）への電源（でんげん）供給（きょうきゅう）",

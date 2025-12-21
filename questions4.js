@@ -273,7 +273,7 @@ window.QUESTION_SETS["4"] = [
     "主任（しゅにん）技術者（ぎじゅつしゃ）"
   ],
   answer: 1,
-  vi: "職長（しょくちょう） là người chỉ huy trực tiếp công nhân (作業員) （さぎょういん）tại hiện trường.",
+  vi: "職長（しょくちょう） là người chỉ huy trực tiếp công nhân 作業員（さぎょういん）tại hiện trường.",
   explain: "職長（しょくちょう） chịu trách nhiệm chỉ đạo công nhân　作業員（さぎょういん）, đảm bảo an toàn và tiến độ tại công trường."
 },
 {

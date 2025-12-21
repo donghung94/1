@@ -277,6 +277,20 @@ window.QUESTION_SETS["5"] = [
     vi: "Để vận chuyển và xử lý chất thải công nghiệp phải có giấy phép thu gom – vận chuyển chất thải.",
     explain: "Khi công trường phát sinh rác thải công nghiệp, việc thu gom – vận chuyển phải do đơn vị có giấy phép hợp pháp thực hiện theo quy định của pháp luật môi trường."
   },
+  {
+  "q": "問145. 2022年(ねん)の日本(にほん)の年代(ねんだい)別(べつ)労働力(ろうどうりょく)人口(じんこう)で、最(もっと)も人口(じんこう)の多(おお)いのは何歳(なんさい)からか。【89】",
+    img: "images/IMG_3386.jpeg.png",
+    "options": [
+    "1. 65歳(さい)以上(いじょう)",
+    "2. 15～24歳(さい)",
+    "3. 45～54歳(さい)",
+    "4. 35～44歳(さい)"
+  ],
+  "answer": 2,
+  "vi": "Trong lực lượng dân số lao động Nhật Bản năm 2022 phân theo độ tuổi, độ tuổi nào có số lượng đông nhất?",
+  "explain": "Dựa vào biểu đồ, nhóm tuổi 45～54歳(さい) có thanh ngang dài nhất với con số **1671** (vạn người), đây là nhóm chiếm tỷ trọng lớn nhất trong lực lượng lao động.",
+  "tip": "💡 Nhớ: Nhìn biểu đồ tìm thanh dài nhất → **45～54歳**."
+},
  {
     q: "問146　設計図書（せっけいとしょ）の中（なか）に含（ふく）む書類（しょるい）を選（えら）べ。【19】",
     options: [

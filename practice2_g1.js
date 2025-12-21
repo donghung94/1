@@ -1,7 +1,7 @@
 // File: practice2_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g2_1"] = [
+window.PRACTICE_SETS["g1_2"] = [
   {
     q: "問31　安全（あんぜん）衛生（えいせい）旗（はた）の意味（いみ）はなんですか？",
     img: "images/0031.png",

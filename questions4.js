@@ -35,7 +35,7 @@ window.QUESTION_SETS["4"] = [
   ],
   answer: 1,
   vi: "Sai vì việc cải tiến, thực hiện là nhiệm vụ của cả tổ, không chỉ thợ.",
-  explain: "Việc thực hiện công trình yêu cầu phối hợp, không chỉ do người thợ, mà職長 cũng chịu trách nhiệm chỉ đạo."
+  explain: "Việc thực hiện công trình yêu cầu phối hợp, không chỉ do người thợ, mà 職長（しょくちょう） cũng chịu trách nhiệm chỉ đạo."
 },
 {
   q: "問94　労働安全衛生法（あんぜんえいせいほう）について、不適切（ふてきせつ）なものを選（えら）べ。【学科11】",

@@ -122,9 +122,9 @@ window.QUESTION_SETS["2"] = [
     "鉄筋（てっきん）工事（こうじ）",
     "配筋（はいきん）工事（こうじ）"
   ],
-  answer: 0,
+  answer: 1,
   vi: "Đây là công việc gì? Hãy chọn đáp án đúng.",
-  explain: "Ảnh cho thấy hai thanh thép được nối bằng phương pháp ガス圧接（あっせつ）継手（つぎて）– nối thép bằng áp lực khí gas nóng**, thường dùng trong thi công kết cấu bê tông cốt thép để nối các thanh thép lại với nhau."
+  explain: "Ảnh cho thấy hai thanh thép được nối bằng phương pháp 溶接（ようせつ）継手（つぎて）, thường dùng trong thi công kết cấu bê tông cốt thép để nối các thanh thép lại với nhau."
 },
 {
   q: "問41　写真（しゃしん）はどのような工事（こうじ）を行（おこな）っているか。【50】",

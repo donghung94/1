@@ -64,7 +64,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 3,
   vi: "Trong các loại sơ đồ tiến độ, loại nào thể hiện rõ 4 yếu tố: trình tự, ngày, tiến độ và ảnh hưởng tiến độ?",
-  explain: "Đáp án đúng:  — Sơ đồ tiến độ kiểu mạng (ネットワーク式工程表) thể hiện đầy đủ 4 yếu tố."
+  explain: "Đáp án đúng:  — Sơ đồ tiến độ kiểu mạng ネットワーク　式工程表（こうていひょう thể hiện đầy đủ 4 yếu tố."
 },
   {
   q: "問6　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【64】",
@@ -77,7 +77,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Công trình trong hình là loại nào?",
-  explain: "Hình cho thấy hệ thống ống nước thải và cấp nước — đây là công trình 給排水（きゅうはいすい）設備（せつび）工事（こうじ） (cấp thoát nước)**."
+  explain: "Hình cho thấy hệ thống ống nước thải và cấp nước — đây là công trình 給排水（きゅうはいすい）設備（せつび）工事（こうじ） cấp thoát nước."
 },
   {
   q: "問7　「おつかれさまです」はどんな時（とき）に挨拶（あいさつ）するか。【79】",
@@ -167,7 +167,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Hình dưới đây là công trình gì?",
-  explain: "Hình cho thấy khung xương thép được lắp đặt — đây là **鋼製（こうせい）下地（したじ）工事（こうじ）**, tức là công trình lắp đặt khung xương kim loại để làm tường hoặc trần."
+  explain: "Hình cho thấy khung xương thép được lắp đặt — đây là 鋼製（こうせい）下地（したじ）工事（こうじ）, tức là công trình lắp đặt khung xương kim loại để làm tường hoặc trần."
 },
   {
   q: "問14　イラストによると、どんな工事（こうじ）か。【62】",
@@ -230,7 +230,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 0,
     vi: "Để làm công việc nổ mìn (phát phá), cần gì?",
-    explain: "Đáp án đúng: 発破技師免許 – Phải có giấy phép kỹ sư nổ mìn."
+    explain: "Đáp án đúng: 発破（はっぱ）技師（ぎし）免許（めんきょ） – Phải có giấy phép kỹ sư nổ mìn."
   },
   {
   q: "問19　鉄筋（てっきん）と鉄筋（てっきん）のつなぐ部分（ぶぶん）を加熱（かねつ）して、軸方向（じくほうこう）に圧力（あつりょく）をかけて接合（せつごう）する工法（こうほう）は何（なん）と言（い）うか。【47】",
@@ -243,7 +243,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 1,
   vi: "Phương pháp nung nóng phần nối giữa hai thanh thép và ép lại theo trục gọi là gì?",
-  explain: "Đây là **ガス圧接（あっせつ）継手（つぎて）**, tức là phương pháp nối thép bằng hàn ép khí gas — sử dụng nhiệt và áp lực dọc trục để nối chặt hai đầu thép."
+  explain: "Đây là ガス圧接（あっせつ）継手（つぎて）, tức là phương pháp nối thép bằng hàn ép khí gas — sử dụng nhiệt và áp lực dọc trục để nối chặt hai đầu thép."
 },
   {
     q: "問20　コンクリート強度（きょうど）の低下（ていか）防止（ぼうし）対策（たいさく）のため、コンクリートに振動（しんどう）を与（あた）えて型枠（かたわく）を隅々（すみずみ）までいきわたらせ、不要（ふよう）な空気（くうき）を除去（じょきょ）するための機械（きかい）は何（なん）というか【50】",
@@ -315,7 +315,7 @@ window.QUESTION_SETS["1"] = [
     ],
     answer: 2,
     vi: "Khi ai đó nói “xin phép về trước”, bạn đáp lại thế nào?",
-    explain: "Đáp án đúng: お疲れ様でした – Cảm ơn đã vất vả, chúc nghỉ ngơi."
+    explain: "Đáp án đúng: お疲（つか）れ様（さま）でした – Cảm ơn đã vất vả, chúc nghỉ ngơi."
   },
   {
     q: "問26　土木（どぼく）工事（こうじ）でない工事（こうじ）を選（えら）べ【26〜30】",
@@ -352,7 +352,7 @@ window.QUESTION_SETS["1"] = [
   ],
   answer: 0,
   vi: "Phương pháp thi công nào dùng để hút và thoát nước ngầm ra khỏi lòng đất?",
-  explain: "Hình vẽ mô tả hệ thống ống hút nước ngầm với bể và bơm trung gian — đây là **ウォルポイント工事（Well Point 工事）**, dùng để hạ mực nước ngầm trước khi thi công móng hoặc tầng hầm."
+  explain: "Hình vẽ mô tả hệ thống ống hút nước ngầm với bể và bơm trung gian — đây là ウォルポイント工事（こうじ）, dùng để hạ mực nước ngầm trước khi thi công móng hoặc tầng hầm."
 },
   {
   q: "問29　鉄筋（てっきん）の長（なが）さが足（た）りない場合（ばあい）、２本（にほん）の鉄筋（てっきん）をつなぎ合わせて、長（なが）い１本（いっぽん）の鉄筋（てっきん）にする工事（こうじ）は何（なん）と言（い）うか。",
@@ -377,6 +377,6 @@ window.QUESTION_SETS["1"] = [
   answer: 3,
   vi: "Phương pháp sử dụng **タワークレーン (Cần cẩu tháp)** để lắp ráp/nâng lên từng tầng (**1階(いっかい)ずつ**) được gọi là gì?",
   explain: "Đó là **水平(すいへい)積(つ)み上(あ)げ方式(ほうしき)** (Phương pháp xếp chồng ngang rồi nâng lên). Trong bối cảnh này, thuật ngữ này được sử dụng để chỉ phương pháp nâng cần cẩu tháp lên từng tầng (**1階(いっかい)ずつ**) theo chiều cao của công trình.",
-  tip: "💡 Nhớ: **タワークレーン (Cần cẩu tháp)** + **1階(いっかい)ずつ** = **水平積(すいへいづみ)み上(あ)げ方式(あげほうしき)** (Phương pháp nâng lên theo chiều ngang)."
+  tip: "💡 Nhớ: **タワークレーン (Cần cẩu tháp) + 1階　(いっかい)ずつ = 水平積　(すいへいづみ)　み上　(あ)げ方式　(あげほうしき) (Phương pháp nâng lên theo chiều ngang)."
 }
 ];

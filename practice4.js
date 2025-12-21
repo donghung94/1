@@ -13,7 +13,7 @@ window.PRACTICE_SETS["g2_4"] = [
     "4. コンベックス"
   ],
   answer: 2,
-  vi: "Dụng cụ (**工具**) trong ảnh này là gì?",
+  vi: "Dụng cụ 工具(こうぐ) trong ảnh này là gì?",
   explain: "Dụng cụ trong ảnh là **スランプ試験(しけん)工具(こうぐ) (Dụng cụ thí nghiệm độ sụt bê tông/Slump test tool)** . Thí nghiệm này dùng để đo độ sụt của bê tông tươi (**生(なま)コンクリート**) nhằm kiểm tra tính công tác (độ dẻo/lưu động) của nó.",
   tip: "💡 Nhớ: Dụng cụ đo độ sụt của bê tông tươi → **スランプ試験(しけん)工具(こうぐ)**."
 },
@@ -39,7 +39,7 @@ window.PRACTICE_SETS["g2_4"] = [
     "4. かくはん機(き)"
   ],
   answer: 0,
-  vi: "Dụng cụ có lưới (**網**) có thể phân loại vật liệu (**材料**) theo **kích thước (**大きさ**) được gọi là gì?",
+  vi: "Dụng cụ có lưới 網(あみ) có thể phân loại vật liệu 材料(ざいりょう) theo **kích thước 大(おお)きさ được gọi là gì?",
   explain: "Đó là **ふるい (Sàng/Rây/Sieve)** . Sàng được sử dụng để lọc và phân loại các vật liệu hạt như cát, sỏi theo kích cỡ, đảm bảo chất lượng của vữa hoặc bê tông.",
   tip: "💡 Nhớ: Dụng cụ có **網(あみ) (Lưới)** dùng để **仕分(しわ)け(Phân loại)** theo **大(おお)きさ(Kích thước)** → **ふるい**."
 },

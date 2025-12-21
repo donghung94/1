@@ -1,7 +1,7 @@
 // File: practice2_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g4_1"] = [
+window.PRACTICE_SETS["g1_4"] = [
 {
   q: "問91　手押（てお）し型（がた）の小型（こがた）のロードローラで何（なに）ですか。正（ただ）しいものを一（ひと）つ選（えら）べ。【108】",
   options: [

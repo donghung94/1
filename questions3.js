@@ -22,7 +22,7 @@ window.QUESTION_SETS["3"] = [
     "KYT基礎（きそ）４ラウンド法（ほう）"
   ],
   answer: 3,
-  vi: "Phương pháp cơ bản và tiêu chuẩn trong KYT là phương pháp 4 vòng cơ bản (KYT基礎４ラウンド法).",
+  vi: "Phương pháp cơ bản và tiêu chuẩn trong KYT là phương pháp 4 vòng cơ bản KYT基礎（きそ）４ラウンド法（ほう）.",
   explain: " — phương pháp 4 bước cơ bản trong huấn luyện nhận biết nguy hiểm (Kiken Yochi Training)."
 },
 {
@@ -35,7 +35,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 0,
   vi: "Chọn đáp án **không đúng** về 'hōrensō' (báo cáo, liên lạc, trao đổi).",
-  explain: " — đây không liên quan đến Hō-Ren-Sō. 'Hōrensō' là phương pháp giao tiếp gồm Báo cáo, Liên lạc và Thảo luận."
+  explain: " — đây không liên quan đến Hō-Ren-Sō. 「ほうれんそう」 là phương pháp giao tiếp gồm Báo cáo, Liên lạc và Thảo luận."
 },
 {
   q: "問64 作業（さぎょう）が不安定（ふあんてい）で品質（ひんしつ）が一定（いってい）ではないことは何（なん）というか【19】",
@@ -59,7 +59,7 @@ window.QUESTION_SETS["3"] = [
   ],
   answer: 0,
   vi: "Chọn nhiệm vụ **không thuộc vai trò của người giám sát (職長)（しょくちょう）**.",
-  explain: " — việc chỉnh sửa bản vẽ thiết kế là nhiệm vụ của kỹ sư thiết kế, không phải của職長（しょくちょう）."
+  explain: " — việc chỉnh sửa bản vẽ thiết kế là nhiệm vụ của kỹ sư thiết kế, không phải của 職長（しょくちょう）."
 },
 {
   q: "問66 労働者（ろうどうしゃ）の安全（あんぜん）と健康（けんこう）を守（まも）るため、建設業（けんせつぎょう）において事業所（じぎょうしょ）の労働者（ろうどうしゃ）の数（かず）が50人（にん）以上（いじょう）の場合（ばあい）に設置（せっち）が義務（ぎむ）付（づ）けられているものは、次（つぎ）のうちどれか【54】",
@@ -82,7 +82,7 @@ window.QUESTION_SETS["3"] = [
     "防波堤（ぼうはてい）工事（こうじ）"
   ],
   answer: 1,
-  vi: "Chọn công việc **không thuộc nhóm công trình đất (土木工事)**.",
+  vi: "Chọn công việc **không thuộc nhóm công trình đất 土木（どぼく）工事（こうじ）.",
   explain: " — xây dựng nhà cao tầng là thuộc công trình kiến trúc, không phải công trình đất."
 },
   {

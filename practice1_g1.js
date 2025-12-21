@@ -12,8 +12,8 @@ window.PRACTICE_SETS["g1_1"] = [
       "目（め）で直接（ちょくせつ）見ることができない海底（かいてい）の形（かたち）を測（はか）るための機械（きかい）"
     ],
     answer: 0,
-    vi: "Phao (浮標) là thiết bị dùng để làm gì?",
-    explain: "浮標 (phao) là thiết bị được đặt xung quanh khu vực thi công trên biển để **báo hiệu cho tàu thuyền khác biết** về khu vực công trường.",
+    vi: "Phao 浮標（ふひょう） là thiết bị dùng để làm gì?",
+    explain: "浮標（ふひょう） là thiết bị được đặt xung quanh khu vực thi công trên biển để **báo hiệu cho tàu thuyền khác biết** về khu vực công trường.",
     tip: "💡 Nhớ: ‘浮’ = nổi, ‘標’ = dấu hiệu → vật nổi báo hiệu trên mặt nước."
   },
 {
@@ -26,7 +26,7 @@ window.PRACTICE_SETS["g1_1"] = [
   ],
   answer: 2,
   vi: "Bộ phận giữ khoảng cách cốp pha cố định và xiết ống là gì?",
-  explain: "**フォームタイ（Form tie）** là bộ phận dùng để cố định khoảng cách giữa hai tấm ván khuôn (型枠) và siết chặt bằng ống (パイプ).",
+  explain: "**フォームタイ（Form tie）** là bộ phận dùng để cố định khoảng cách giữa hai tấm ván khuôn 型枠（かたわく） và siết chặt bằng ống (パイプ).",
   tip: "💡 Nhớ: フォームタイ = form tie = thanh giữ khoảng cách ván khuôn."
 },
 
@@ -41,8 +41,8 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 0,
     vi: "Hình ảnh trên là loại công trình nào?",
-    explain: "Hình cho thấy máy lu lèn mặt đường → là **舗装工事 (thi công lát đường, trải nhựa)**.",
-    tip: "💡 Nhớ: 舗装＝mặt đường; lu xe → trải nhựa."
+    explain: "Hình cho thấy máy lu lèn mặt đường → là 舗装（ほそう）工事（こうじ） (thi công lát đường, trải nhựa)**.",
+    tip: "💡 Nhớ:  舗装（ほそう）mặt đường; lu xe → trải nhựa."
   },
 
  {
@@ -54,9 +54,9 @@ window.PRACTICE_SETS["g1_1"] = [
     "崩壊（ほうかい）"
   ],
   answer: 1,
-  vi: "Trong công trình sông ngòi (河川工事), loại tai nạn dễ xảy ra nhất là gì?",
-  explain: "Ở công trình sông (河川工事), mặt đất thường trơn trượt do nước, bùn nên dễ xảy ra **転倒（てんとう）– té ngã**.",
-  tip: "💡 Nhớ: Công trình sông nước → bùn trơn → dễ **転倒 (té ngã)**."
+  vi: "Trong công trình sông ngòi 河川工事（かせんこうじ）, loại tai nạn dễ xảy ra nhất là gì?",
+  explain: "Ở công trình sông 河川工事（かせんこうじ）, mặt đất thường trơn trượt do nước, bùn nên dễ xảy ra **転倒（てんとう）– té ngã**.",
+  tip: "💡 Nhớ: Công trình sông nước → bùn trơn → dễ 転倒（てんとう） (té ngã)."
 },
 {
   q: "問5　梁底（はりそこ）型枠（かたわく）の単管（たんかん）パイプを受（う）け、パイプサポートを立（た）てる際（さい）に使用（しよう）する部材（ぶざい）は何（なに）か。【118】",
@@ -67,8 +67,8 @@ window.PRACTICE_SETS["g1_1"] = [
     "トンボ端（ばた）"
   ],
   answer: 3,
-  vi: "Khi dựng chống đỡ dầm (梁底型枠), bộ phận gỗ dùng để kê ống đơn là gì?",
-  explain: "**トンボ端（ばた）** là thanh gỗ đặt ngang để đỡ ống đơn (単管パイプ) và giúp cố định vị trí khi dựng chống.",
+  vi: "Khi dựng chống đỡ dầm 梁底（はりそこ）型枠（かたわく）, bộ phận gỗ dùng để kê ống đơn là gì?",
+  explain: "**トンボ端（ばた）** là thanh gỗ đặt ngang để đỡ ống đơn 単管（たんかん）パイプ và giúp cố định vị trí khi dựng chống.",
   tip: "💡 Nhớ: トンボ端 = thanh đỡ ngang ở chân chống để giữ ống đơn cố định."
 },
 
@@ -97,12 +97,12 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 1,
     vi: "Tại công trường, loại tai nạn thường xảy ra khi máy xúc (バックホウ) làm việc trên sườn dốc là gì?",
-    explain: "Máy xúc trên dốc dễ bị **転倒 (lật)** do trọng tâm lệch khi quay hoặc di chuyển.",
-    tip: "💡 Nhớ: 法面（のりめん）＝sườn dốc → máy xúc dễ bị lật = 転倒."
+    explain: "Máy xúc trên dốc dễ bị 転倒（てんとう） (lật) do trọng tâm lệch khi quay hoặc di chuyển.",
+    tip: "💡 Nhớ: 法面（のりめん）＝sườn dốc → máy xúc dễ bị lật = 転倒（てんとう）."
   },
 
  {
-  "q": "問8　安全（あんぜん）施工（せこう）サイクル（さいくる）は何（なに）ですか。不適切（ふてき）なものは何（なに）か。【182】",
+  "q": "問8　安全（あんぜん）施工（せこう）サイクル は何（なに）ですか。不適切（ふてき）なものは何（なに）か。【182】",
   "options": [
     "作業（さぎょう）前（まえ）の安全（あんぜん）朝礼（ちょうれい）",
     "作業（さぎょう）開始（かいし）前（まえ）の点検（てんけん）",
@@ -110,8 +110,8 @@ window.PRACTICE_SETS["g1_1"] = [
     "安全（あんぜん）靴（ぐつ）"
   ],
   "answer": 3,
-  "vi": "Trong Chu trình thi công an toàn (安全施工サイクル), lựa chọn nào là không phù hợp (不適切)?",
-  "explain": "安全靴 (Anzengutsu - Giày bảo hộ) là trang bị cá nhân (bảo hộ lao động), không phải nội dung hoặc bước thuộc Chu trình kiểm soát an toàn (Anzen Sekou Cycle) như: Họp an toàn trước làm việc (朝礼), Kiểm tra trước khi bắt đầu công việc (点検), hoặc Tuần tra an toàn (パトロール).",
+  "vi": "Trong Chu trình thi công an toàn 安全（あんぜん）施工（せこう）サイクル, lựa chọn nào là không phù hợp 不適切（ふてき）?",
+  "explain": "安全（あんぜん）靴（ぐつ） là trang bị cá nhân (bảo hộ lao động), không phải nội dung hoặc bước thuộc Chu trình kiểm soát an toàn (Anzen Sekou Cycle) như: Họp an toàn trước làm việc (朝礼), Kiểm tra trước khi bắt đầu công việc (点検), hoặc Tuần tra an toàn (パトロール).",
   "tip": "💡 Chu trình (サイクル) kiểm soát an toàn thường bao gồm các hoạt động kiểm tra, họp, tuần tra/giám sát, không phải là trang bị cá nhân như Giày bảo hộ (安全靴)."
 },
 
@@ -125,7 +125,7 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 1,
     vi: "Thiết bị nào dùng để di chuyển ống dẫn bê tông tới vị trí cần đổ?",
-    explain: "**ブーム装置** là cánh tay cần của xe bơm bê tông, dùng để điều hướng ống dẫn.",
+    explain: "ブーム装置（そうち）là cánh tay cần của xe bơm bê tông, dùng để điều hướng ống dẫn.",
     tip: "💡 Boom = cánh tay vươn → đưa ống đến chỗ đổ bê tông."
   },
 
@@ -251,21 +251,21 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 3,
     vi: "Lỗi con người do nhìn nhầm, nghe nhầm, hiểu sai gọi là gì?",
-    explain: "Đó là **認知ミス (lỗi nhận thức)** – hiểu sai do chủ quan, nhìn/ nghe nhầm.",
-    tip: "💡 Nhớ: 認知＝nhận thức → lỗi do hiểu sai, nhìn sai."
+    explain: "Đó là 認知（にんち）ミス (lỗi nhận thức)** – hiểu sai do chủ quan, nhìn/ nghe nhầm.",
+    tip: "💡 Nhớ: 認知（にんち）＝nhận thức → lỗi do hiểu sai, nhìn sai."
   },
 {
   "q": "問19. 丸(まる)セパレーターとは何(なに)か?【117】",
   "options": [
-    "セパレーターの先端(せんたん)に取(と)り付(つ)けるプラスチック製(せい)の部品(ぶひん)。",
-    "コンクリートの厚(あつ)みを施工図(せこうず)どおりに確保(かくほ)する。",
-    "型枠(かたわく)の間隔(かんかく)を一定(いってい)に保(たも)ち",
-    "型枠(かたわく)を作(つく)るための、型枠(かたわく)用(よう)合板(ごうばん)のこと"
+    "1. セパレーターの先端(せんたん)に取(と)り付(つ)けるプラスチック製(せい)の部品(ぶひん)",
+    "2. コンクリートの厚(あつ)みを施工(せこう)図(ず)どおりに確保(khakuho)する",
+    "3. 型枠(かたわく)の間隔(かんかく)を一定(いってい)に保(たも)つもの",
+    "4. 型枠(かたわく)を作(つく)るための、型枠(かたわく)用(よう)合板(ごうばん)のこと"
   ],
-  "answer": 2,
-  "vi": "丸セパレーター (Maru Separator - Bộ giữ khoảng cách tròn) là gì?",
-  "explain": "セパレーター (Separator) là thanh kim loại dùng trong công tác lắp đặt 型枠 (Kawataku - cốp pha). Chức năng chính của nó là giữ cho **間隔 (かんかく - khoảng cách) giữa hai mặt cốp pha được 一定(いってい) - cố định/nhất định)**, đảm bảo độ dày của bức tường bê tông sau khi đổ là chính xác theo bản vẽ..",
-  "tip": "💡 セパレーター (Separator) = Bộ phận **giữ khoảng cách** (間隔を一定に保つ) cố định giữa hai mặt cốp pha."
+  "answer": 1,
+  "vi": "丸(まる)セパレーター (Maru Separator) là gì?",
+  "explain": "Maru Separator là một linh kiện quan trọng trong lắp đặt cốp pha. Nhiệm vụ của nó là **確保(かくほ) (đảm bảo)** sao cho **厚(あつ)み (độ dày)** của **コンクリート (bê tông)** được thực hiện chính xác theo đúng **施工(せこう)図(ず) (bản vẽ thi công)**.",
+  "tip": "💡 Nhớ: **セパレーター** = Đảm bảo **厚(あつ)み** (độ dày) bê tông."
 },
 
   {
@@ -292,8 +292,8 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 1,
     vi: "Dụng cụ trong hình là gì?",
-    explain: "Đây là **フォームタイ回し** – dụng cụ chuyên dùng để siết hoặc tháo thanh form-tie trong cốp pha.",
-    tip: "💡 Nhớ: ‘回し’ = vặn → dụng cụ để vặn thanh tie (フォームタイ)."
+    explain: "Đây là フォームタイ回（まわ）し – dụng cụ chuyên dùng để siết hoặc tháo thanh form-tie trong cốp pha.",
+    tip: "💡 Nhớ: ‘回（まわ）し’ = vặn → dụng cụ để vặn thanh tie (フォームタイ)."
   },
 
   {
@@ -361,8 +361,8 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 0,
     vi: "Dụng cụ trong hình dùng để làm gì?",
-    explain: "Đây là **thiết bị đo kích thước phần mối nối hàn áp lực (圧接部)** – dùng để đo đường kính và bề rộng chỗ nối thép.",
-    tip: "💡 Nhớ: 圧接部＋直径→ thiết bị đo kích thước mối hàn."
+    explain: "Đây là **thiết bị đo kích thước phần mối nối hàn áp lực 圧接部（あっせつぶ） – dùng để đo đường kính và bề rộng chỗ nối thép.",
+    tip: "💡 Nhớ: 圧接部（あっせつぶ）のふくらみの直径（ちょっけい）→ thiết bị đo kích thước mối hàn."
   },
 
   {
@@ -374,8 +374,8 @@ window.PRACTICE_SETS["g1_1"] = [
       "工事（こうじ）に関係（かんけい）する材料（ざいりょう）や労務費（ろうむひ）、現場（げんば）経費（けいひ）などの予算（よさん）を超（こ）えないようにする管理（かんり）である"
     ],
     answer: 0,
-    vi: "Quản lý chất lượng (品質管理) là gì?",
-    explain: "品質管理 là **đảm bảo chất lượng công trình đáp ứng yêu cầu của chủ đầu tư (発注者)**.",
+    vi: "Quản lý chất lượng 品質（ひんしつ）管理（かんり） là gì?",
+    explain: "品質（ひんしつ）管理（かんり） là **đảm bảo chất lượng công trình đáp ứng yêu cầu của chủ đầu tư 発注者（はっちゅうしゃ）**.",
     tip: "💡 品質＝chất lượng; 管理＝quản lý → quản lý để đảm bảo chất lượng đạt yêu cầu."
   },
  {
@@ -387,7 +387,7 @@ window.PRACTICE_SETS["g1_1"] = [
       "工事（こうじ）に関係（かんけい）する材料費（ざいりょうひ）、労務費（ろうむひ）、現場（げんば）経費（けいひ）などの予算（よさん）を超（こ）えないように管理（かんり）する"
     ],
     answer: 1,
-    vi: "Trong quản lý thi công, quản lý tiến độ (工程管理) là gì?",
+    vi: "Trong quản lý thi công, quản lý tiến độ 工程（こうてい）管理（かんり） là gì?",
     explain: "**工程管理（こうていかんり）** là việc quản lý để công trình được hoàn thành đúng tiến độ, không bị chậm trễ.",
     tip: "💡 Nhớ: 工程＝tiến độ, 管理＝quản lý → quản lý để không trễ thời gian."
   },
@@ -402,7 +402,7 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 1,
     vi: "Biện pháp thích hợp để phòng tránh say nắng là gì?",
-    explain: "Phải **mặc quần áo làm việc thông thoáng (通気性の良い作業服)** để cơ thể không bị tích nhiệt và mất nước.",
+    explain: "Phải **mặc quần áo làm việc thông thoáng 通気性（つうきせい）の良（よ）い作業服（さぎょうふく）** để cơ thể không bị tích nhiệt và mất nước.",
     tip: "💡 熱中症＝say nắng; 通気性＝thông thoáng → quần áo mát là quan trọng nhất."
   },
 
@@ -416,7 +416,7 @@ window.PRACTICE_SETS["g1_1"] = [
     ],
     answer: 0,
     vi: "Do muốn làm nhanh, bỏ qua bước cần thiết gây ra lỗi — lỗi con người này gọi là gì?",
-    explain: "Đó là **近道行動・省略行動**, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
+    explain: "Đó là 近道行動（ちかみちこうどう）・省略行動（しょうりゃくこうどう）, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
     tip: "💡 省略＝rút gọn, 近道＝đi đường tắt → bỏ bước = hành vi nguy hiểm."
   }
 ];

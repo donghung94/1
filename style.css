@@ -79,7 +79,7 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
   line-height: 1.6;
   font-size: 14px;
   color: #222;
-  white-space: pre-line;            /* giữ nguyên xuống dòng trong vocab */
+  white-space: pre-wrap;            /* giữ nguyên xuống dòng trong vocab */
 }
 
 .meaning-box strong {

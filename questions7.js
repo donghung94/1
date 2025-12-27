@@ -156,4 +156,238 @@ window.QUESTION_SETS["7"] = [
   "explain": "Quản lý 品質（ひんしつ） - chất lượng là việc quản lý nhằm đảm bảo công trình đạt được chất lượng theo đúng như 設計（せっけい）図書（としょ） - hồ sơ thiết kế và các tiêu chuẩn đã đề ra.\n\nTừ vựng:\n建設（けんせつ）\n(xây dựng)\n正（ただ）しい\n(đúng)\n満（み）たす\n(đáp ứng/thỏa mãn)\n把握（はあく）\n(nắm bắt/thấu hiểu)",
   "tip": "💡 品質管理（ひんしつかんり） cốt lõi là làm đúng theo bản vẽ và thông số kỹ thuật đã cam kết."
 },
+  {
+  "q": "問20. 都市化（としか）することで、都市（とし）の気温（きおん）が周辺（しゅうへん）の気温（きおん）よりも高（たか）くなる現象（げんしょう）のことは何（なん）というか。",
+  "options": [
+    "ヒートアイランド",
+    "熱中症（ねっちゅうしょう）",
+    "地球（ちきゅう）温暖化（おんだんか）",
+    "地盤（じばん）沈下（ちんか）"
+  ],
+  "answer": 0,
+  "vi": "Hiện tượng nhiệt độ ở thành phố trở nên cao hơn nhiệt độ ở các vùng xung quanh do quá trình đô thị hóa được gọi là gì?",
+  "explain": "Hiện tượng này được gọi là ヒートアイランド - đảo nhiệt đô thị. Đây là hiện tượng mà 都市（とし） - thành phố có 気温（きおん） - nhiệt độ cao hơn so với các khu vực 周辺（しゅうへん） - xung quanh.\n\nTừ vựng:\n都市化（としか）\n(đô thị hóa)\n気温（きおん）\n(nhiệt độ)\n周辺（しゅうへん）\n(xung quanh)\n現象（げんしょう）\n(hiện tượng)",
+  "tip": "💡 ヒートアイランド (Heat Island) là một thuật ngữ phổ biến trong các vấn đề về môi trường đô thị."
+},
+  {
+  "q": "問21. 職場（しょくば）環境（かんきょう）について、適切（てきせつ）なものを選（えら）べ。",
+  "options": [
+    "週（しゅう）休（きゅう）1日（にち）を確保（かくほ）する",
+    "職長（しょくちょう）だけは育成（いくせい）と確保（かくほ）をする必要（ひつよう）がある",
+    "職長（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）らないことが大切（たいせつ）",
+    "働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）まない"
+  ],
+  "answer": 2,
+  "vi": "Hãy chọn phương án thích hợp về môi trường làm việc.",
+  "explain": "Trong một môi trường làm việc tốt, 職長（しょくちょう） - quản đốc/tổ trưởng cần đóng vai trò quan trọng trong việc tạo ra bầu không khí cởi mở, không để xảy ra tình trạng nhân viên cảm thấy khó khăn khi muốn xin nghỉ phép.\n\nTừ vựng:\n職場（しょくば）環境（かんきょう）\n(môi trường làm việc)\n適切（てきせつ）\n(thích hợp)\n確保（かくほ）\n(bảo đảm/duy trì)\n有給（ゆうきゅう）取得（しゅとく）\n(nghỉ phép có lương)",
+  "tip": "💡 Một người quản lý giỏi là người biết xây dựng môi trường mà nhân viên có thể thoải mái thực hiện quyền lợi của mình."
+},
+  {
+  "q": "問22. 労働（ろうどう）安全（あんぜん）衛生（えいせい）管理（かんり）における正（ただ）しくない物（もの）を選（えら）べ。",
+  "options": [
+    "健康（けんこう）に影響（えいきょう）を与える要因（よういん）の対策（たいさく）",
+    "休憩室（きゅうけいしつ）、更衣室（こういしつ）は作業（さぎょう）環境（かんきょう）ではない",
+    "温度計（おんどけい）・湿度計（しつどけい）の設置（せっち）",
+    "熱中症（ねっちゅうしょう）対策（たいさく）"
+  ],
+  "answer": 1,
+  "vi": "Hãy chọn phương án KHÔNG đúng về quản lý an toàn vệ sinh lao động.",
+  "explain": "Trong quản lý lao động, 休憩室（きゅうけいしつ） - phòng nghỉ và 更衣室（こういしつ） - phòng thay đồ vẫn được tính là một phần của 作業（さぎょう）環境（かんきょう） - môi trường làm việc vì chúng ảnh hưởng trực tiếp đến sức khỏe và sự hồi phục của người lao động.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）\n(an toàn vệ sinh lao động)\n影響（えいきょう）\n(ảnh hưởng)\n対策（たいさく）\n(đối sách/biện pháp)\n設置（せっち）\n(lắp đặt/thiết lập)",
+  "tip": "💡 Hãy nhớ rằng mọi khu vực hỗ trợ người lao động tại nơi làm việc đều nằm trong phạm vi quản lý môi trường lao động."
+},
+  {
+  "q": "問23. 暑（あつ）さ指数（しすう）の低減（ていげん）をするため、不適切（ふてきせつ）なものはどれか。",
+  "options": [
+    "ドライミストを設置（せっち）する",
+    "作業用（さぎょうよう）大型（おおがた）扇風機（せんぷうき）",
+    "遮光（しゃこう）ネットを設置（せっち）する",
+    "風（かぜ）を遮断（しゃだん）"
+  ],
+  "answer": 3,
+  "vi": "Để làm giảm chỉ số độ nóng, điều nào sau đây là KHÔNG thích hợp?",
+  "explain": "Để 低減（ていげん） - làm giảm chỉ số nhiệt độ, chúng ta cần lưu thông không khí. Việc 風（かぜ）を遮断（しゃだん） - chắn gió sẽ làm cho khu vực làm việc trở nên bí bách và nóng hơn, vì vậy đây là hành động không phù hợp.\n\nTừ vựng:\n暑（あつ）さ指数（しすう）\n(chỉ số độ nóng)\n低減（ていげん）\n(làm giảm/giảm thiểu)\n不適切（ふてきせつ）\n(không thích hợp)\n遮断（しゃだん）\n(chắn/cắt đứt/ngăn cách)",
+  "tip": "💡 Để chống nóng hiệu quả, việc duy trì sự thông thoáng gió là cực kỳ quan trọng."
+},
+  {
+  "q": "問24. 安全（あんぜん）衛生（えいせい）活動（かつどう）として、間違（まちが）っているものを選（えら）べ。",
+  "options": [
+    "当日（とうじつ）の安全（あんぜん）パトロールをする時（とき）だけはしっかりを実施（じっし）する",
+    "作業員（さぎょういん）の声（こえ）を聴（き）く",
+    "安全（あんぜん）衛生（えいせい）教育（きょういく）を実施（じっし）する",
+    "作業（さぎょう）手順書（てじゅんしょ）を作成（さくせい）する"
+  ],
+  "answer": 0,
+  "vi": "Hãy chọn phương án SAI về hoạt động an toàn vệ sinh.",
+  "explain": "Hoạt động 安全（あんぜん） - an toàn cần được thực hiện thường xuyên và liên tục. Việc chỉ thực hiện nghiêm túc vào những lúc có 安全（あんぜん）パトロール - tuần tra an toàn là một cách làm đối phó và không chính xác.\n\nTừ vựng:\n安全（あんぜん）衛生（えいせい）活動（かつどう）\n(hoạt động an toàn vệ sinh)\n間違（まちが）っている\n(sai/nhầm lẫn)\n実施（じっし）\n(thực thi/thực hiện)\n作業（さぎょう）手順書（てじゅんしょ）\n(bản hướng dẫn quy trình công việc)",
+  "tip": "💡 An toàn không phải là để đối phó với kiểm tra, mà là để bảo vệ tính mạng của chính mình và đồng nghiệp mỗi ngày."
+},
+  {
+  "q": "問25. 労働（ろうどう）安全（あんぜん）衛生（えいせい）について、不適切（ふてきせつ）なものをえらべ。",
+  "options": [
+    "労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）では、事業場（じぎょうじょう）の規模（きぼ）が50人（にん）以上（いじょう）の場合（ばあい）、安全（あんぜん）管理者（かんりしゃ）および衛生（えいせい）管理者（かんりしゃ）を選任（せんにん）することが義務（ぎむ）付（づ）けられています",
+    "安全（あんぜん）管理者（かんりしゃ）に選任（せんにん）されなかった場合（ばあい）も、職長（しょくちょう）は現場（げんば）の安全（あんぜん）を保（たも）つための行動（こうどう）が求（もと）められます",
+    "安全（あんぜん）管理者（かんりしゃ）と衛生（えいせい）管理者（かんりしゃ）は職長（しょくちょう）が兼務（けんむ）することもあります",
+    "事業（じぎょう）規模（きぼ）にもかかわらず、職長（しょくちょう）がいれば、安全（あんぜん）衛生（えいせい）委員会（いいんかい）を選任（せんにん）しなくても良（よ）い"
+  ],
+  "answer": 3,
+  "vi": "Hãy chọn phương án KHÔNG thích hợp về an toàn vệ sinh lao động.",
+  "explain": "Theo quy định, tùy thuộc vào 事業（じぎょう）規模（きぼ） - quy mô doanh nghiệp, việc thành lập 安全（あんぜん）衛生（えいせい）委員会（いいんかい） - Ủy ban an toàn vệ sinh là bắt buộc. Việc nói rằng chỉ cần có quản đốc là không cần thành lập ủy ban này là 不適切（ふてきせつ） - không thích hợp.\n\nTừ vựng:\n義務（ぎむ）付（づ）け\n(nghĩa vụ/bắt buộc)\n選任（せんにん）\n(bổ nhiệm/tuyển chọn)\n兼務（けんむ）\n(kiêm nhiệm)\n安全（あんぜん）衛生（えいせい）委員会（いいんかい）\n(ủy ban an toàn vệ sinh)",
+  "tip": "💡 Việc tuân thủ các quy định về tổ chức an toàn vệ sinh phụ thuộc chặt chẽ vào số lượng nhân viên tại nơi làm việc."
+},
+  {
+  "q": "問26. 労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）について、不適切（ふてきせつ）なものをえらべ。",
+  "options": [
+    "職場（しょくば）における労働者（ろうどうしゃ）の安全（あんぜn）と健康（けんこう）を確保（かくほ）すること",
+    "定められている内容（ないよう）を知（し）っておくことで、職長（しょくちょう）として、会社（かいしゃ）や上司（じょうし）に報告（ほうこく）すべき内容（ないよう）や改善（かいぜん）提案（ていあん）をするための視点（してん）を持（も）つことができます",
+    "賃金（ちんぎん）、労働（ろうどう）時間（じかん）はもちろん、解雇（かいこ）、災害（さいがい）補償（ほしょう）、安全（あんぜん）衛生（えいせい）、寄宿舎（きしゅくしゃ）等（とう）に関（かん）する条件（じょうけん）を含（ふく）む",
+    "職長（しょくちょう）としては、労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）の改正（かいせい）内容（ないよう）に関心（かんしん）を持（も）ち、自分（じぶん）たちの作業（さぎょう）現場（げんば）でも適用（てきよう）されるかどうかを考（かんが）える必要（ひつよう）があります"
+  ],
+  "answer": 2,
+  "vi": "Hãy chọn phương án KHÔNG thích hợp về Luật An toàn vệ sinh lao động.",
+  "explain": "Luật An toàn vệ sinh lao động tập trung vào việc đảm bảo 安全（あんぜん） - an toàn và 健康（けんこう） - sức khỏe tại nơi làm việc. Các vấn đề như 賃金（ちんぎん） - tiền lương, 労働（ろうどう）時間（じかん） - thời gian làm việc hay 解雇（かいこ） - sa thải thuộc phạm vi điều chỉnh của Luật Tiêu chuẩn lao động (労働基準法), không phải Luật An toàn vệ sinh lao động.\n\nTừ vựng:\n確保（かくほ）\n(bảo đảm)\n改善（かいぜん）提案（ていあん）\n(đề xuất cải tiến)\n災害（さいがい）補償（ほしょう）\n(bồi thường tai nạn)\n改正（かいせい）\n(sửa đổi/cải chính)",
+  "tip": "💡 Hãy phân biệt rõ: Luật An toàn vệ sinh lo về 'sức khỏe & tính mạng', còn Luật Tiêu chuẩn lao động lo về 'hợp đồng & tiền lương'."
+},
+  {
+  "q": "問28. リスクアセスメントの基本（きほん）的（てき）な手順（てじゅん）に2番目（にばんめ）の手順（てじゅん）は、どれか。",
+  "options": [
+    "危険性（きけんせい）または有害性（ゆうがいせい）の特定（とくてい）",
+    "リスク低減（ていげん）措置（そち）の実施（じっし）",
+    "リスク低減（ていげん）のための優先度（ゆうせんど）の設定（せってい）",
+    "リスクの見積（みつ）もり"
+  ],
+  "answer": 3,
+  "vi": "Trong các bước cơ bản của đánh giá rủi ro (Risk Assessment), bước thứ 2 là bước nào?",
+  "explain": "Quy trình リスクアセスメント (Đánh giá rủi ro) thường gồm các bước: 1. Xác định nguy hiểm -> 2. リスクの見積（みつ）もり (Ước tính rủi ro) -> 3. Thiết lập mức độ ưu tiên -> 4. Thực hiện biện pháp giảm thiểu. Do đó, bước thứ 2 chính là ước tính mức độ rủi ro.\n\nTừ vựng:\n手順（てじゅん）\n(trình tự/bước thực hiện)\n特定（とくてい）\n(xác định/nhận dạng)\n見積（みつ）もり\n(ước tính/đánh giá)\n優先度（ゆうせんど）\n(mức độ ưu tiên)",
+  "tip": "💡 Hãy nhớ trình tự: Tìm ra mối nguy -> Đánh giá xem nó nặng hay nhẹ (Ước tính) -> Quyết định cái nào làm trước."
+},
+  {
+  "q": "問31. 整頓（せいとん）の定義（ていぎ）はどれか。",
+  "options": [
+    "不要（ふよう）な資材（しざい）や道具（どうぐ）、建設（けんせつ）中（ちゅう）の廃材（はいざい）やごみなどを撤去（てっきょ）すること",
+    "資材（しざい）や道具（どうぐ）を置（お）き場所（ばしょ）を決（き）め、その場所（ばしょ）におくこと",
+    "安全靴（あんぜんぐつ）やヘルメットなどの労働者（ろうどうしゃ）の安全（あんぜん）装備品（そうびひん）を管理（かんり）すること",
+    "建設（けんせつ）中（ちゅう）に生（しょう）じたごみや塵（ちり）、建材（けんざい）の切（き）りくずを掃除（そうじ）すること"
+  ],
+  "answer": 1,
+  "vi": "Định nghĩa của 'Sắp xếp' (Seiton) là gì?",
+  "explain": "Trong 5S, 整頓（せいとん） - Sắp xếp có nghĩa là quy định chỗ để cho từng loại 資材（しざい） - vật tư và 道具（どうぐ） - dụng cụ, sau đó luôn để chúng đúng vào vị trí đã định để có thể lấy ra sử dụng ngay lập tức khi cần.\n\nTừ vựng:\n整頓（せいとん）\n(sắp xếp)\n定義（ていぎ）\n(định nghĩa)\n資材（しざい）\n(vật tư)\n撤去（てっきょ）\n(dỡ bỏ/thu dọn)",
+  "tip": "💡 Hãy nhớ: Sàng lọc (Seiri) là bỏ đồ không cần thiết, còn Sắp xếp (Seiton) là để đồ cần thiết vào đúng chỗ."
+},
+ {
+  "q": "問33. 5S活動（かつどう）における職長（しょくちょう）の役割（やくわり）について、不適切（ふてきせつ）なものを選（えら）べ。",
+  "options": [
+    "5S活動（かつどう）の必要性（ひつようせい）や方法（ほうほう）、ルールなどを指導（しどう）し、定期（ていき）的（てき）なチェックや評価（ひょうか）を行（おこな）う",
+    "現場（げんば）の危険（きけん）箇所（かしょ）や改善（かいぜん）点（てん）を指摘（してき）し、作業員（さぎょういん）と協力（きょうりょく）して改善（かいぜん）策（さく）を実施（じっし）する",
+    "職長（しょくちょう）は、作業（さぎょう）環境（かんきょう）の整備（せいび）や清掃（せいそう）、整頓（せいとん）、安全（あんぜん）意識（いしき）を率先（そっせん）して行（おこな）うのではなく、できるだけ作業員（さぎょういん）に行（おこな）う",
+    "生産性（せいさんせい）の向上（こうじょう）を促進（そくしん）させること"
+  ],
+  "answer": 2,
+  "vi": "Hãy chọn phương án KHÔNG thích hợp về vai trò của quản đốc trong hoạt động 5S.",
+  "explain": "Trong hoạt động 5S, 職長（しょくちょう） - quản đốc/tổ trưởng phải là người 率先（そっせん） - tiên phong, gương mẫu thực hiện để làm gương cho nhân viên. Việc nói rằng quản đốc không cần làm mà chỉ để cho 作業員（さぎょういん） - công nhân làm là 不適切（ふてきせつ） - không thích hợp.\n\nTừ vựng:\n役割（やくわり）\n(vai trò)\n指導（しどう）\n(hướng dẫn/chỉ đạo)\n指摘（してき）\n(chỉ ra/nhận xét)\n率先（そっせん）\n(tiên phong/làm gương)",
+  "tip": "💡 Một người lãnh đạo giỏi luôn là người tiên phong thực hiện những tiêu chuẩn chung của tập thể."
+},
+  {
+  "q": "問34. KYT（ケーワイティー）の基本（きほん）手法（しゅほう）として何（なに）が標準（ひょうじゅん）的（てき）なものとして知（し）られているか。",
+  "options": [
+    "危険（きけん）予知（よち）訓練（くんれん）",
+    "ハインリッヒの法則（ほうそく）",
+    "作業（さぎょう）場所（ばしょ）や作業（さぎょう）内容（ないよう）の危険（きけん）の洗（あら）い出（だ）し",
+    "KYT（ケーワイティー）基礎（きそ）4（よん）ラウンド法（ほう）"
+  ],
+  "answer": 3,
+  "vi": "Phương pháp cơ bản nào của KYT được biết đến như là một tiêu chuẩn?",
+  "explain": "KYT là viết tắt của Kiken Yochi Training. Phương pháp tiêu chuẩn và phổ biến nhất của nó chính là KYT基礎（きそ）4ラウンド法（ほう） - Phương pháp KYT cơ bản 4 bước (4 rounds), giúp nhóm nhận diện và giải quyết các mối nguy tại hiện trường.\n\nTừ vựng:\n基本（きほん）手法（しゅほう）\n(phương pháp cơ bản)\n標準（ひょうじゅん）的（てき）\n(mang tính tiêu chuẩn)\n基礎（きそ）\n(cơ bản/nền tảng)\n洗（あら）い出（だ）し\n(xác định/rà soát kỹ lưỡng)",
+  "tip": "💡 Khi nhắc đến KYT, hãy nhớ ngay đến '4 Round' (4 bước) vì đây là kỹ thuật cốt lõi để dự đoán nguy hiểm."
+},
+  {
+  "q": "問35. KYT（ケーワイティー）の基本（きほん）として4（よん）ラウンドについて、正（ただ）しくないものを一つ（ひとつ）選（えら）べ。",
+  "options": [
+    "不要（ふよう）な物（もの）を廃棄（はいき）する",
+    "これが危険（きけん）のポイントだ",
+    "どんな危険（きけん）が潜（ひそ）んでいるか",
+    "あなたならどうする？"
+  ],
+  "answer": 0,
+  "vi": "Hãy chọn một phương án KHÔNG đúng về 4 bước (4 rounds) cơ bản của KYT.",
+  "explain": "4 bước (4 rounds) của KYT bao gồm: 1. Nắm bắt hiện trạng (Dự đoán nguy hiểm), 2. Xác định trọng điểm (Đây là điểm nguy hiểm), 3. Đề ra biện pháp (Bạn sẽ làm gì?), 4. Thiết lập mục tiêu. Việc 不要（ふよう）な物（もの）を廃棄（はいき）する - vứt bỏ đồ dùng không cần thiết thuộc về hoạt động 5S (Sàng lọc), không nằm trong 4 bước của KYT.\n\nTừ vựng:\n廃棄（はいき）\n(vứt bỏ/thanh lý)\n潜（ひそ）んでいる\n(tiềm ẩn/ẩn giấu)\n危険（きけん）のポイント\n(điểm nguy hiểm trọng yếu)\n把握（はあく）\n(nắm bắt/thấu hiểu)",
+  "tip": "💡 Hãy phân biệt: KYT là để 'dự đoán và phòng tránh' nguy hiểm, còn 5S là để 'sắp xếp và dọn dẹp' nơi làm việc."
+},
+  {
+  "q": "問36. ヒヤリ・ハット活動（かつどう）について、不適切（ふてきせつ）なものを選（えら）べ。",
+  "options": [
+    "作業員（さぎょういん）が経験（けいけん）したヒヤリ・ハットを全員（ぜんいん）で共有（きょうゆう）することによって、現場（げんば）の安全性（あんぜんせい）を高（たか）める",
+    "再（さい）発生（はっせい）しないため、ヒヤリ・ハットを経験（けいけん）したことを報告（ほうこく）した作業員（さぎょういん）の責任（せきにん）を追及（ついきゅう）し、反省（はんせい）を促（うなが）す",
+    "報告（ほうこく）された内容（ないよう）を分析（ぶんせき）して、同様（どうよう）の事故（じこ）やトラブルが起（お）こらないように改善（かいぜん）点（てん）を導（みち）き出（だ）すことができます",
+    "報告（ほうこく）されたヒヤリ・ハットを分析（ぶんせき）し、原因（げんいん）を特定（とくてい）し、改善（かいぜん）策（さく）を提案（ていあん）します"
+  ],
+  "answer": 1,
+  "vi": "Hãy chọn phương án KHÔNG thích hợp về hoạt động Hiyari-Hatto (suýt soát tai nạn).",
+  "explain": "Mục tiêu của ヒヤリ・ハット là để chia sẻ kinh nghiệm và phòng ngừa tai nạn, không phải để 責任（せきにん）を追及（ついきゅう） - truy cứu trách nhiệm cá nhân. Nếu làm vậy, 作業員（さぎょういん） - người lao động sẽ sợ hãi và không dám báo cáo sự cố nữa.\n\nTừ vựng:\n安全性（あんぜんせい）を高（たか）める\n(nâng cao tính an toàn)\n責任（せきにん）を追及（ついきゅう）\n(truy cứu trách nhiệm)\n反省（はんせい）を促（うなが）す\n(thúc giục/yêu cầu kiểm điểm)\n改善（かいぜん）策（さく）を提案（ていあん）\n(đề xuất biện pháp cải thiện)",
+  "tip": "💡 Hiyari-Hatto cần một môi trường cởi mở để mọi người tự giác báo cáo, từ đó giúp cả tập thể tránh được tai nạn lớn."
+},
+  {
+  "q": "問37. パワーハラスメントに該当（がいとう）しないものを選（えら）べ。",
+  "options": [
+    "適正（てきせい）な仕事（しごと）の指示（しじ）",
+    "仕事（しごと）に関係（かんけい）ない雑用（ざつよう）をさせる",
+    "暴言（ぼうげん）",
+    "無視（むし）"
+  ],
+  "answer": 0,
+  "vi": "Hãy chọn phương án KHÔNG thuộc về hành vi quấy rối quyền lực (Power Harassment).",
+  "explain": "パワーハラスメント (Pawahara) là việc lợi dụng chức vụ để gây áp lực hoặc bắt nạt cấp dưới. Việc đưa ra 適正（てきせい）な仕事（しごと）の指示（しじ） - Chỉ thị công việc đúng đắn, phù hợp là một phần của quản lý công việc bình thường, không phải là quấy rối.\n\nTừ vựng:\n該当（がいとう）しない\n(không thuộc về/không tương ứng)\n適正（てきせい）\n(đúng đắn/phù hợp)\n雑用（ざつよう）\n(việc vặt vãnh/tạp vụ)\n暴言（ぼうげん）\n(lời lẽ thô bạo/xúc phạm)",
+  "tip": "💡 Quản lý công việc nghiêm túc nhưng công bằng và đúng chuyên môn thì không bị coi là quấy rối quyền lực."
+},
+  {
+  "q": "問38. 指導（しどう）とは何（なに）を示（しめ）すか。",
+  "options": [
+    "相手（あいて）の成長（せいちょう）や発展（はってん）を促（うなが）すために、建設（けんせつ）的（てき）なアドバイスを行（おこな）う",
+    "相手（あいて）に対して不適切（ふてきせつ）な言動（げんどう）や行動（こうどう）をすること",
+    "作業員（さぎょういん）を職場（しょくば）以外（いがい）でも監視（かんし）する",
+    "個人（こじん）的（てき）な情報（じょうほう）を本人（ほんにん）の了解（りょうかい）を得（え）ないで他（た）の作業員（さぎょういん）に話（はな）す"
+  ],
+  "answer": 0,
+  "vi": "Chỉ đạo (hướng dẫn) có nghĩa là gì?",
+  "explain": "指導（しどう） - Chỉ đạo hay hướng dẫn thực chất là việc đưa ra những 建設（けんせつ）的（てき）なアドバイス - lời khuyên mang tính xây dựng nhằm 促（うなが）す - thúc đẩy sự 成長（せいちょう） - trưởng thành và phát triển của đối phương. Các hành vi xâm phạm đời tư hay bắt nạt đều không phải là chỉ đạo.\n\nTừ vựng:\n指導（しどう）\n(chỉ đạo/hướng dẫn)\n建設（けんせつ）的（てき）\n(có tính xây dựng)\n成長（せいちょう）\n(trưởng thành/phát triển)\n了解（りょうかい）を得（え）る\n(có được sự đồng ý/thấu hiểu)",
+  "tip": "💡 Hãy nhớ: Chỉ đạo đúng đắn là giúp người khác tiến bộ hơn, chứ không phải là kiểm soát hay gây áp lực."
+},
+  {
+  "q": "問39. 設計（せっけい）図書（としょ）の中（なか）に含（ふく）まない書類（しょるい）を選（えら）べ。",
+  "options": [
+    "設計（せっけい）図（ず）",
+    "仕様（しよう）書（しょ）",
+    "契約（けいやく）書（しょ）",
+    "質疑（しつぎ）応答（おうとう）書（しょ）"
+  ],
+  "answer": 2,
+  "vi": "Hãy chọn loại hồ sơ KHÔNG bao gồm trong hồ sơ thiết kế (hồ sơ kỹ thuật).",
+  "explain": "設計（せっけい）図書（としょ） - Hồ sơ thiết kế bao gồm bản vẽ, bảng thông số kỹ thuật (仕様書) và các tài liệu giải đáp thắc mắc liên quan đến kỹ thuật (質疑応答書). 契約（けいやく）書（しょ） - Hợp đồng là hồ sơ mang tính pháp lý/kinh tế, không nằm trong danh mục hồ sơ thiết kế kỹ thuật.\n\nTừ vựng:\n設計（せっけい）図書（としょ）\n(hồ sơ thiết kế)\n仕様（しよう）書（しょ）\n(bản đặc tả/thông số kỹ thuật)\n契約（けいやく）書（しょ）\n(hợp đồng)\n質疑（しつぎ）応答（おうとう）\n(hỏi và đáp/giải đáp thắc mắc)",
+  "tip": "💡 Hãy nhớ: Hồ sơ thiết kế chỉ gồm những gì liên quan đến bản vẽ và cách thức thi công, không bao gồm hợp đồng ký kết."
+},
+  {
+  "q": "問41. 建築物（けんちくぶつ）全体（ぜんたい）の構成（こうせい）やデザイン、間取（まど）りがわかるように書（か）かれたのはどれか。",
+  "options": [
+    "意匠（いしょう）図（ず）",
+    "構造（こうぞう）図（ず）",
+    "設備（せつび）図（ず）",
+    "外構（がいこう）図（ず）"
+  ],
+  "answer": 0,
+  "vi": "Bản vẽ nào được vẽ để cho thấy cấu trúc tổng thể, thiết kế và cách bố trí phòng (mặt bằng) của công trình?",
+  "explain": "意匠（いしょう）図（ず） - Bản vẽ kiến trúc (hoặc bản vẽ thiết kế ý đồ) là loại bản vẽ tập trung vào hình dáng, 構成（こうせい） - cấu trúc tổng thể và 間取（まど）り - cách bố trí không gian của tòa nhà. Các loại bản vẽ khác như 構造図 (kết cấu) hay 設備図 (thiết bị) tập trung vào các chi tiết kỹ thuật chuyên biệt hơn.\n\nTừ vựng:\n建築物（けんちくぶつ）\n(công trình kiến trúc/tòa nhà)\n意匠（いしょう）図（ず）\n(bản vẽ kiến trúc/thiết kế)\n構成（こうせい）\n(cấu trúc/cấu thành)\n間取（まど）り\n(sơ đồ bố trí phòng/mặt bằng)",
+  "tip": "💡 Hãy nhớ: '意匠' (Ishou) liên quan đến diện mạo và thẩm mỹ, nên nó chính là bản vẽ cho thấy thiết kế tổng thể."
+},
+  {
+  "q": "問42. 標準（ひょうじゅん）仕様（しよう）書（しょ）より、さらに具体（ぐたい）的（てき）な内容（ないよう）が特記（とっき）事項（じこう）として書（か）かれた書類（しょるい）は何か。",
+  "options": [
+    "標準（ひょうじゅん）仕様（しよう）書（しょ）",
+    "設計（せっけい）図書（としょ）",
+    "特記（とっき）仕様（しよう）書（しょ）",
+    "設計（せっけい）図（ず）"
+  ],
+  "answer": 2,
+  "vi": "Loại hồ sơ nào ghi chép các nội dung cụ thể hơn dưới dạng các hạng mục đặc biệt so với Bản mã tiêu chuẩn?",
+  "explain": "特記（とっき）仕様（しよう）書（しょ） - Bản mã đặc biệt là hồ sơ ghi lại những yêu cầu, chỉ dẫn cụ thể và riêng biệt cho một công trình nhất định, vượt ra ngoài những quy định chung có trong 標準（ひょうじゅん）仕様（しよう）書（しょ） - Bản mã tiêu chuẩn.\n\nTừ vựng:\n特記（とっき）事項（じこう）\n(các hạng mục ghi chú đặc biệt)\n仕様（しよう）書（しょ）\n(bản đặc tả/thông số kỹ thuật)\n具体（ぐたい）的（てき）\n(cụ thể/chi tiết)\n設計（せっけい）図書（としょ）\n(hồ sơ thiết kế kỹ thuật)",
+  "tip": "💡 Hãy nhớ: 'Tiêu chuẩn' (Hyojun) là quy định chung, còn 'Đặc biệt' (Tokki) là những chi tiết riêng lẻ chỉ dành cho công trình đó."
+}
 ];

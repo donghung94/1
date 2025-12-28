@@ -389,5 +389,70 @@ window.QUESTION_SETS["7"] = [
   "vi": "Loại hồ sơ nào ghi chép các nội dung cụ thể hơn dưới dạng các hạng mục đặc biệt so với Bản mã tiêu chuẩn?",
   "explain": "特記（とっき）仕様（しよう）書（しょ） - Bản mã đặc biệt là hồ sơ ghi lại những yêu cầu, chỉ dẫn cụ thể và riêng biệt cho một công trình nhất định, vượt ra ngoài những quy định chung có trong 標準（ひょうじゅん）仕様（しよう）書（しょ） - Bản mã tiêu chuẩn.\n\nTừ vựng:\n特記（とっき）事項（じこう）\n(các hạng mục ghi chú đặc biệt)\n仕様（しよう）書（しょ）\n(bản đặc tả/thông số kỹ thuật)\n具体（ぐたい）的（てき）\n(cụ thể/chi tiết)\n設計（せっけい）図書（としょ）\n(hồ sơ thiết kế kỹ thuật)",
   "tip": "💡 Hãy nhớ: 'Tiêu chuẩn' (Hyojun) là quy định chung, còn 'Đặc biệt' (Tokki) là những chi tiết riêng lẻ chỉ dành cho công trình đó."
+},
+{
+  "q": "問44. 施工（せこう）図（ず）についての説明（せつめい）で正（ただ）しいものを選（えら）べ。",
+  "options": [
+    "建築物（けんちくぶつ）の安全性（あんぜんせい）に関（かか）わる柱（はしら）や梁（はり）などの構造（こうぞう）部（ぶ）がわかるように書（か）かれたもの",
+    "どんな材料（ざいりょう）をどんな順番（じゅんばん）に、どう組（く）み合（あ）わせて使（つか）ったら良（よ）いかを作業者（さぎょうしゃ）にわかるように説明（せつめい）したもの",
+    "建築主（けんちくしゅ）が求（もと）める間取（まど）り、構造（こうぞう）、材料（ざいりょう）、設備（せつび）などを含（ふく）めて、建物（たてもの）全体（ぜんたい）の概要（がいよう）を示（しめ）したもの",
+    "現場（げんば）の位置（いち）や周囲（しゅうい）の状況（じょうきょう）、施工（せこう）や見積（みつもり）の条件（じょうけん）などが書（か）かれたもの"
+  ],
+  "answer": 1,
+  "vi": "Hãy chọn thuyết minh đúng về Bản vẽ thi công (Sekou-zu).",
+  "explain": "施工（せこう）図（ず） - Bản vẽ thi công là bản vẽ hướng dẫn chi tiết cho 作業者（さぎょうしゃ） - người thợ biết cụ thể về 材料（ざいりょう） - vật liệu, 順番（じゅんばん） - trình tự và cách 組（く）み合（あ）わせ - lắp ráp để thực hiện công việc tại hiện trường.\n\nTừ vựng:\n施工（せこう）\n(thi công)\n順番（じゅんばん）\n(trình tự)\n材料（ざいりょう）\n(vật liệu)\n組（く）み合（あ）わせ\n(lắp ráp/kết hợp)",
+  "tip": "💡 Bản vẽ thi công đóng vai trò như một bản hướng dẫn lắp ráp chi tiết nhất dành cho công nhân trực tiếp tại công trường."
+},
+  {
+  "q": "問45. 施工（せこう）品質（ひんしつ）と施工（せこう）図（ず）について、間違（まちが）っているものを選（えら）べ。",
+  "options": [
+    "施工（せこう）図（ず）に不備（ふび）があると、設計（せっけい）図（ず）で求（もと）めていた品質（ひんしつ）を実現（じつげん）できない",
+    "施工（せこう）図（ず）通（どお）りの完成（かんせい）物（ぶつ）ができるための工夫（くふう）をするのは、職長（しょくちょう）ではなく、現場（げんば）よく知（し）っている作業（さぎょう）する作業員（さぎょういん）の役割（やくわり）である",
+    "施工（せこう）図（ず）が無い場合（ばあい）、完成（かんせい）までに多（おお）くの手戻（てもど）りや手（て）直しが発生（はっせい）し、無駄（むだ）な時間と手間（てま）をかけることになる",
+    "施工（せこう）図（ず）と仕事（しごと）する時の工夫（くふう）が必要（ひつよう）"
+  ],
+  "answer": 1,
+  "vi": "Hãy chọn phương án SAI về Chất lượng thi công và Bản vẽ thi công.",
+  "explain": "Phương án 2 là sai vì việc đưa ra 工夫（くふう） - các sáng kiến, giải pháp để đảm bảo công trình hoàn thành đúng bản vẽ là trách nhiệm quan trọng của 職長（しょくちょう） - Quản đốc, chứ không thể chỉ là vai trò của công nhân.\n\nTừ vựng:\n不備（ふび）\n(sai sót/thiếu sót)\n実現（じつげん）\n(thực hiện/đạt được)\n手（て）直し\n(sửa chữa lại)\n役割（やくわり）\n(vai trò/trách nhiệm)",
+  "tip": "💡 Quản đốc là người chịu trách nhiệm kỹ thuật chính, phải chủ động đưa ra phương án thi công tối ưu nhất."
+},
+  {
+  "q": "問46. 建設（けんせつ）業（ぎょう）の社会的（しゃかいてき）役割（やくわり）について、正（ただ）しくないものを選（えら）べ。",
+  "options": [
+    "高層（こうそう）ビルや大規模（だいきぼ）ショッピングモールの開発（かいはつ）で都市（とし）を発展（はってん）させる役割（やくわり）",
+    "住宅（じゅうたく）建設（けんせつ）によって、快適（かいてき）な生活（せいかつ）環境（かんきょう）と社会（しゃかい）福祉（ふくし）の向上（こうじょう）に貢献（こうけん）する役割（やくわり）",
+    "建設（けんせつ）工事（こうじ）によって自然（しぜん）環境（かんきょう）を破壊（はかい）する役割（やくわり）",
+    "災害（さいがい）時（じ）には、被災（ひさい）施設（しせつ）の修復（しゅうふく）や再建（さいけん）を行（おこな）う役割（やくわり）"
+  ],
+  "answer": 2,
+  "vi": "Hãy chọn phương án SAI về vai trò xã hội của ngành xây dựng.",
+  "explain": "Ngành xây dựng có vai trò phát triển đô thị, cải thiện đời sống và khắc phục thiên tai. Việc 'phá hoại môi trường tự nhiên' 自然（しぜん）環境（かんきょう）を破壊（はかい）する役割（やくわり） chắc chắn không phải là một 'vai trò' hay mục tiêu đúng đắn của ngành.\n\nTừ vựng:\n社会的（しゃかいてき）役割（やくわり）\n(vai trò xã hội)\n貢献（こうけん）\n(cống hiến/đóng góp)\n破壊（はかい）\n(phá hoại)\n被災（ひさい）施設（しせつ）\n(cơ sở vật chất bị thiệt hại do thiên tai)",
+  "tip": "💡 Một ngành nghề được xã hội công nhận luôn mang lại giá trị tích cực, phá hoại là đáp án sai."
+},
+  {
+  q: "問118　このグラフは年代別（ねんだいべつ）の調査（ちょうさ）結果（けっか）のグラフを示（しめ）す。（　　）に適切（てきせつ）な言葉（ことば）を選（えら）べ。【89】",
+ img: "images/IMG_3386.jpeg",
+ options: [
+    "災害（さいがい）や事故（じこ）で死亡（しぼう）",
+    "労働力（ろうどうりょく）人口（じんこう）",
+    "在日外国人（ざいにちがいこくじん）",
+    "特定技能実習生（とくていぎのうじっしゅうせい）"
+  ],
+  answer: 1,
+  vi: "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
+  explain: "Từ '労働力人口' nghĩa là dân số trong độ tuổi lao động. Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, cho thấy đây là biểu đồ về lực lượng lao động theo độ tuổi."
+},
+  {
+  "q": "問49. 若手（わかて）の建設（けんせつ）業（ぎょう）離（ばな）れの対策（たいさく）について、若手（わかて）を増（ふ）やすための新（しん）4Kの中（なか）、正（ただ）しくないものを選（えら）べ。",
+  "options": [
+    "休暇（きゅうか）がとれる",
+    "かっこいい",
+    "汚（きたな）くない",
+    "希望（きぼう）が持（も）つ"
+  ],
+  "answer": 2,
+  "vi": "Về các biện pháp giải quyết tình trạng giới trẻ rời bỏ ngành xây dựng, hãy chọn phương án KHÔNG đúng trong nội dung của 'Tân 4K' nhằm tăng cường lực lượng lao động trẻ.",
+  "explain": "Khái niệm 'Tân 4K' (Shin-4K) được đưa ra để thay đổi hình ảnh tiêu cực của ngành xây dựng, bao gồm: 給与 (Kyuyo - Lương tốt), 休暇 (Kyuka - Có ngày nghỉ), 希望 (Kibo - Có hy vọng) và かっこいい (Kakkoii - Ngầu/Đẹp trai). Phương án 汚くない (Kitanakunai - Không bẩn) không nằm trong bộ tiêu chuẩn chính thức của Tân 4K này.",
+  "tip": "💡 'Tân 4K' là nỗ lực của Nhật Bản để biến ngành xây dựng thành một nghề nghiệp hấp dẫn, có tương lai và đãi ngộ tốt cho thanh niên."
 }
 ];

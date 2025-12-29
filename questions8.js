@@ -708,7 +708,7 @@ window.QUESTION_SETS["8"] = [
   "explain": "Trong ngành xây dựng, 衛生（えいせい） (Vệ sinh) liên quan trực tiếp đến việc cung cấp nước sạch và xử lý nước thải để 健康（けんこう）を守（まも）る (Bảo vệ sức khỏe con người) và 清潔（せいけつ）を保（たも）つ (Duy trì sự sạch sẽ). Các phương án khác liên quan đến thông gió (排煙/換気) hoặc điều hòa không khí (空調).\n\nTừ vựng:\n衛生（えいせい） - Vệ sinh\n健康（けんこう） - Sức khỏe\n清潔（せいけつ） - Sạch sẽ\n保（たも）つ - Duy trì / Giữ gìn\n排出（はいしゅつ） - Bài xuất / Đưa ra ngoài",
   "tip": "💡 Ghi nhớ: 衛生（えいせい）（Vệ sinh）luôn gắn liền với mục đích 健康（けんこう）（Kiện khang - Sức khỏe）và 清潔（せいけつ）（Thanh khiết - Sạch sẽ）."
 },
-  [
+  
   {
     "id": 88,
     "q": "問88. 「ほうれんそう」について、不適切（ふてきせつ）なものを選（えら）べ.",

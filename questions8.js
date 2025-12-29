@@ -736,6 +736,6 @@ window.QUESTION_SETS["8"] = [
     "vi": "Sau khi kết thúc công việc, nhất định phải thực hiện (____), và nếu có sử dụng lửa thì phải xác nhận đã dập tắt lửa hoàn toàn.",
     "explain": "Sau khi kết thúc công việc, việc quan trọng nhất là 後片付け（あとかたづけ） (Dọn dẹp/Sắp xếp lại hiện trường) để đảm bảo an toàn và sẵn sàng cho ca làm việc tiếp theo. ラジオ体操（たいそう） và 朝礼（ちょうれい） thường diễn ra vào đầu buổi tập trung.\n\nTừ vựng:\n終了（しゅうりょう） - Kết thúc\n後片付け（あとかたづけ） - Dọn dẹp sau khi làm xong\n消火（しょうか） - Dập lửa\n確実（かくじつ） - Xác thực / Chắc chắn\n確認（かくにん） - Xác nhận",
     "tip": "💡 Ghi nhớ: 終了（しゅうりょう）（Chung liễu - Kết thúc）thì phải 後片付け（あとかたづけ）（Hậu phiến phó - Dọn dẹp dứt điểm）."
-  },
+  }
 
 ];

@@ -413,7 +413,7 @@ window.QUESTION_SETS["7"] = [
   ],
   "answer": 1,
   "vi": "Hãy chọn phương án SAI về Chất lượng thi công và Bản vẽ thi công.",
-  "explain": "Phương án 2 là sai vì việc đưa ra 工夫（くふう） - các sáng kiến, giải pháp để đảm bảo công trình hoàn thành đúng bản vẽ là trách nhiệm quan trọng của 職長（しょくちょう） - Quản đốc, chứ không thể chỉ là vai trò của công nhân.\n\nTừ vựng:\n不備（ふび）\n(sai sót/thiếu sót)\n実現（じつげん）\n(thực hiện/đạt được)\n手（て）直し\n(sửa chữa lại)\n役割（やくわり）\n(vai trò/trách nhiệm)",
+  "explain": "việc đưa ra 工夫（くふう） - các sáng kiến, giải pháp để đảm bảo công trình hoàn thành đúng bản vẽ là trách nhiệm quan trọng của 職長（しょくちょう） - Quản đốc, chứ không thể chỉ là vai trò của công nhân.\n\nTừ vựng:\n不備（ふび）\n(sai sót/thiếu sót)\n実現（じつげん）\n(thực hiện/đạt được)\n手（て）直し\n(sửa chữa lại)\n役割（やくわり）\n(vai trò/trách nhiệm)",
   "tip": "💡 Quản đốc là người chịu trách nhiệm kỹ thuật chính, phải chủ động đưa ra phương án thi công tối ưu nhất."
 },
   {
@@ -454,5 +454,45 @@ window.QUESTION_SETS["7"] = [
   "vi": "Về các biện pháp giải quyết tình trạng giới trẻ rời bỏ ngành xây dựng, hãy chọn phương án KHÔNG đúng trong nội dung của 'Tân 4K' nhằm tăng cường lực lượng lao động trẻ.",
   "explain": "Khái niệm 'Tân 4K' (Shin-4K) được đưa ra để thay đổi hình ảnh tiêu cực của ngành xây dựng, bao gồm: 給与 (Kyuyo - Lương tốt), 休暇 (Kyuka - Có ngày nghỉ), 希望 (Kibo - Có hy vọng) và かっこいい (Kakkoii - Ngầu/Đẹp trai). Phương án 汚くない (Kitanakunai - Không bẩn) không nằm trong bộ tiêu chuẩn chính thức của Tân 4K này.",
   "tip": "💡 'Tân 4K' là nỗ lực của Nhật Bản để biến ngành xây dựng thành một nghề nghiệp hấp dẫn, có tương lai và đãi ngộ tốt cho thanh niên."
+},
+  {
+  "q": "問50. デジタル技術（ぎじゅつ）を活用（かつよう）した経営（けえい）革新（かくしん）のことを、何（なん）というか。",
+  "options": [
+    "DX",
+    "EX",
+    "FX",
+    "GX"
+  ],
+  "answer": 0,
+  "vi": "Việc đổi mới kinh doanh bằng cách sử dụng công nghệ kỹ thuật số được gọi là gì?",
+  "explain": "DX (Digital Transformation - Chuyển đổi số) là việc ứng dụng công nghệ số để thay đổi mô hình kinh doanh, tạo ra những giá trị mới và nâng cao hiệu quả hoạt động của doanh nghiệp.\n\nTừ vựng:\n活用（かつよう）\n(tận dụng/sử dụng)\n経営（けえい）革新（かくしん）\n(đổi mới kinh doanh/quản trị)\n技術（ぎじゅつ）\n(kỹ thuật/công nghệ)",
+  "tip": "💡 DX là từ khóa cực kỳ phổ biến hiện nay, ám chỉ sự thay đổi toàn diện nhờ công nghệ số."
+},
+  {
+  "q": "問51. 主任（しゅにん）技術者（ぎじゅつしゃ）はどんな業務（ぎょうむ）をするか。",
+  "options": [
+    "作業員（さぎょういん）を指揮（しき）する",
+    "工程（こうてい）管理（かんり）、品質（ひんしつ）管理（かんり）、安全（あんぜん）管理（かんり）などの監督（かんとく）業務（ぎょうむ）をする",
+    "設計（せっけい）図（ず）を作成（さくせい）する",
+    "賃金（ちんぎん）の計算（けいさん）"
+  ],
+  "answer": 1,
+  "vi": "Kỹ thuật viên trưởng (Shunin Gijutsusha) thực hiện những công việc gì?",
+  "explain": "主任（しゅにん）技術者（ぎじゅつしゃ） có trách nhiệm quản lý kỹ thuật tại công trường, bao gồm các nhiệm vụ giám sát (監督業務) như: 工程管理 (Quản lý tiến độ), 品質管理 (Quản lý chất lượng) và 安全管理 (Quản lý an toàn).\n\nTừ vựng:\n主任（しゅにん）技術者（ぎじゅつしゃ）\n(kỹ thuật viên trưởng)\n監督（かんとく）業務（ぎょうむ）\n(nghiệp vụ giám sát)\n工程（こうてい）管理（かんり）\n(quản lý tiến độ)\n品質（ひんしつ）管理（かんり）\n(quản lý chất lượng)",
+  "tip": "💡 Hãy nhớ: Kỹ thuật viên trưởng là người chịu trách nhiệm về '3 cái quản lý' (tiến độ, chất lượng, an toàn) tại hiện trường."
+},
+  {
+  "q": "問52. 主任（しゅにん）技術者（ぎじゅつしゃ）にない作業（さぎょう）を選（えら）べ。",
+  "options": [
+    "賃金（ちんぎん）計算（けいさん）を行（おこな）う",
+    "施工（せこう）計画（けいかく）を作成（さくせい）",
+    "安全（あんぜん）管理（かんり）",
+    "品質（ひんしつ）管理（かんり）"
+  ],
+  "answer": 0,
+  "vi": "Hãy chọn công việc KHÔNG thuộc về Kỹ thuật viên trưởng (Shunin Gijutsusha).",
+  "explain": "Kỹ thuật viên trưởng chịu trách nhiệm về mặt kỹ thuật và quản lý thi công (lập kế hoạch, quản lý an toàn, chất lượng). Việc 賃金（ちんぎん）計算（けいさん） - Tính toán tiền lương là nghiệp vụ thuộc bộ phận kế toán hoặc hành chính, không phải công việc chuyên môn của kỹ thuật viên trưởng.\n\nTừ vựng:\n賃金（ちんぎん）計算（けいさん）\n(tính toán tiền lương)\n施工（せこう）計画（けいかく）\n(kế hoạch thi công)\n安全（あんぜん）管理（かんり）\n(quản lý an toàn)\n品質（ひんしつ）管理（かんり）\n(quản lý chất lượng)",
+  "tip": "💡 Hãy nhớ: Kỹ thuật viên trưởng lo về 'Kỹ thuật' và 'Hiện trường', không lo về 'Sổ sách tiền lương'."
 }
+  
 ];

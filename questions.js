@@ -54,17 +54,16 @@ window.QUESTION_SETS["1"] = [
   explain: "Đáp án đúng:  — Gas không thuộc nhóm hoàn thiện nội ngoại thất."
 },
 {
-  id: 5,
-  q: "問5 工程表（こうていひょう）から読（よ）み取（と）れる４つの要素（ようそ）はどれか。",
-  options: [
-    "ガントチャート",
-    "バーチャート",
-    "グラフ式工程表（こうていひょう）",
-    "ネットワーク式工程表（こうていひょう）"
+  "q": "問5. 工程表(こうていひょう)からは、「作業(さぎょう)の手順(てじゅん)」「作業(さぎょう)に必要(ひつよう)な日数(にっすう)」「作業(さぎょう)進行(しんこう)の度合(どあい)」「工期(こうき)に影響(えいきょう)する作業(さぎょう)」の4つが読(よ)み取(と)れることが望(のぞ)ましく、この4つが読(よ)み取(と)れるのはどれか【44 職長】",
+  "options": [
+    "1. ガントチャート",
+    "2. バーチャート",
+    "3. グラフ式(しき)工程表(こうていひょう)",
+    "4. ネットワーク式(しき)工程表(こうていひょう)"
   ],
-  answer: 3,
-  vi: "Trong các loại sơ đồ tiến độ, loại nào thể hiện rõ 4 yếu tố: trình tự, ngày, tiến độ và ảnh hưởng tiến độ?",
-  explain: "Đáp án đúng:  — Sơ đồ tiến độ kiểu mạng ネットワーク　式工程表（こうていひょう thể hiện đầy đủ 4 yếu tố."
+  "answer": 3,
+  "vi": "Loại biểu đồ tiến độ nào có thể đọc được cả 4 yếu tố: trình tự công việc, số ngày cần thiết, độ tiến triển và các công việc ảnh hưởng đến tổng thời hạn?",
+  "explain": "Chỉ có **ネットワーク式(しき)工程表(こうていひょう) (Biểu đồ mạng lưới)** là cho phép người quản lý nhìn thấy rõ mối quan hệ giữa các công việc và xác định được đường găng (critical path) - những công việc ảnh hưởng trực tiếp đến thời hạn hoàn thành.",
 },
   {
   q: "問6　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【64】",

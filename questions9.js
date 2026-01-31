@@ -1,5 +1,5 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["8"] = [
+window.QUESTION_SETS["9"] = [
   {
   "q": "問6. ウレタン効果(こうか)について、次(つぎ)のうち、どれかか。",
   "options": [

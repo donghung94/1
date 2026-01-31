@@ -1,6 +1,6 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
 window.QUESTION_SETS["9"] = {
-  shuffle: false,
+  shuffle: true,
   questions: [
   {
   "q": "問6. ウレタン効果(こうか)について、次(つぎ)のうち、どれかか。",

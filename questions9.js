@@ -1,6 +1,6 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
 
-window.QUESTION_SETS["update"] = {
+window.QUESTION_SETS["9"] = {
   noShuffle: true,      // 🔥 CỜ CHỐNG RANDOM
   questions: [
   {

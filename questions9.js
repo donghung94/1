@@ -1,7 +1,5 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["9"]
-  noShuffle: true,      // 🔥 CỜ CHỐNG RANDOM
-  questions: [
+window.QUESTION_SETS["8"] = [
   {
   "q": "問6. ウレタン効果(こうか)について、次(つぎ)のうち、どれかか。",
   "options": [

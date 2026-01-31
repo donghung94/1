@@ -1,5 +1,8 @@
-<script>
-export const QUESTIONS = [
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+
+window.QUESTION_SETS["update"] = {
+  noShuffle: true,      // 🔥 CỜ CHỐNG RANDOM
+  questions: [
   {
   "q": "問6. ウレタン効果(こうか)について、次(つぎ)のうち、どれかか。",
   "options": [
@@ -52,5 +55,5 @@ export const QUESTIONS = [
   "explain": "Phản ứng giữa Polyisocyanate và Polyol tạo ra **硬質(こうしつ)ウレタンフォーム** (Mút Urethane cứng). Đây là vật liệu cách nhiệt cực kỳ hiệu quả trong xây dựng.\n\nTừ vựng:\n成分(せいぶん) - Thành phần\n混(ま)ぜる - Trộn lẫn\n撹拌(かくはん) - Khuấy / Đảo\n形成(けいせい) - Hình thành / Tạo thành",
   "tip": "💡 Ghi nhớ: **ポリ...** + **ポリ...** = **ウレタン** (Urethane)."
 }
-  </script>
+    ],
   

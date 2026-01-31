@@ -53,14 +53,28 @@
     return arr;
   }
 
-  const questions = DATA.map(q => {
-    const correctIndex = q.answer;
-    const opts = q.options.map((t, i) => ({ text: t, correct: (i === correctIndex) }));
-    shuffle(opts);
-    return { ...q, options: opts };
-  });
+  // ================== KIỂM TRA CÓ RANDOM HAY KHÔNG ==================
+const noShuffle = DATA && DATA.noShuffle === true;
+const sourceQuestions = DATA.questions || DATA;
 
-  shuffle(questions);
+// ================== BUILD QUESTIONS ==================
+const questions = sourceQuestions.map(q => {
+  const correctIndex = q.answer;
+
+  let opts = q.options.map((t, i) => ({
+    text: t,
+    correct: i === correctIndex
+  }));
+
+  // ❌ KHÔNG random đáp án nếu noShuffle = true
+  if (!noShuffle) shuffle(opts);
+
+  return { ...q, options: opts };
+});
+
+// ❌ KHÔNG random câu hỏi nếu noShuffle = true
+if (!noShuffle) shuffle(questions);
+
 
   let cur = 0;
   const user = new Array(questions.length).fill(null);

@@ -1,5 +1,7 @@
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["9"] = [
+window.QUESTION_SETS["practice_01"] = {
+  shuffle: false,
+  questions: [
   {
   "q": "問6. ウレタン効果(こうか)について、次(つぎ)のうち、どれかか。",
   "options": [

@@ -1,15 +1,57 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Admin - Thiết bị đăng nhập</title>
-</head>
-<body>
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { 
+  getAuth, onAuthStateChanged 
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { 
+  getFirestore, collection, getDocs 
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-<h2>📊 Quản lý thiết bị đăng nhập</h2>
+const firebaseConfig = {
+  apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
+  authDomain: "donghung-3208d.firebaseapp.com",
+  projectId: "donghung-3208d"
+};
 
-<div id="userList">Đang tải dữ liệu...</div>
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-<script type="module" src="admin.js"></script>
-</body>
-</html>
+const list = document.getElementById("userList");
+
+// 🔴 BẮT BUỘC: chờ auth xong
+onAuthStateChanged(auth, async (user) => {
+  if (!user) {
+    list.innerHTML = "❌ Chưa đăng nhập. Vui lòng đăng nhập trước.";
+    return;
+  }
+
+  try {
+    const snap = await getDocs(collection(db, "users"));
+    let users = [];
+
+    snap.forEach(doc => {
+      const data = doc.data();
+      users.push({
+        email: data.email || "(no email)",
+        count: data.devices ? data.devices.length : 0
+      });
+    });
+
+    // sắp xếp từ nhiều → ít
+    users.sort((a, b) => b.count - a.count);
+
+    list.innerHTML = "";
+    users.forEach(u => {
+      list.innerHTML += `
+        <div style="border:1px solid #ccc;padding:8px;margin:6px">
+          <b>${u.email}</b><br>
+          📱 Thiết bị: <b>${u.count}</b>
+        </div>
+      `;
+    });
+
+  } catch (err) {
+    console.error(err);
+    list.innerHTML = "🚨 Lỗi đọc dữ liệu Firestore";
+  }
+});

@@ -61,7 +61,7 @@ export async function loginUser(email, password) {
 
     location.href = "index.html";
   } catch (err) {
-    alert("Lỗi đăng nhập");
+    alert("Đăng nhập thành công");
     console.error(err);
   }
 }

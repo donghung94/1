@@ -1,18 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  signOut
+import { 
+  getAuth, signInWithEmailAndPassword, signOut 
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import {
-  getFirestore,
-  doc,
-  getDoc,
-  setDoc,
-  updateDoc
+import { 
+  getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion 
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-/* ================== FIREBASE CONFIG ================== */
 const firebaseConfig = {
   apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
   authDomain: "donghung-3208d.firebaseapp.com",
@@ -26,58 +19,40 @@ const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 
-/* ================== DEVICE ID ================== */
-// 1 thiết bị = 1 id cố định (lưu localStorage)
+// 👉 tạo ID thiết bị (đơn giản, đủ dùng)
 function getDeviceId() {
-  let id = localStorage.getItem("DEVICE_ID");
+  let id = localStorage.getItem("device_id");
   if (!id) {
-    id = crypto.randomUUID();
-    localStorage.setItem("DEVICE_ID", id);
+    id = navigator.userAgent + "_" + Math.random().toString(36).slice(2);
+    localStorage.setItem("device_id", id);
   }
   return id;
 }
 
-/* ================== LOGIN ================== */
 export async function loginUser(email, password) {
-  const deviceId = getDeviceId();
-  const ua = navigator.userAgent;
-
   const cred = await signInWithEmailAndPassword(auth, email, password);
   const user = cred.user;
 
-  const userRef = doc(db, "users", user.uid);
-  const snap = await getDoc(userRef);
-
-  const now = Date.now();
+  const deviceId = getDeviceId();
+  const ref = doc(db, "users", user.uid);
+  const snap = await getDoc(ref);
 
   if (!snap.exists()) {
-    // 🆕 User mới
-    await setDoc(userRef, {
+    await setDoc(ref, {
       email: user.email,
-      devices: {
-        [deviceId]: { ua, lastLogin: now }
-      },
-      deviceCount: 1,
-      lastLogin: now
+      devices: [deviceId],
+      lastLogin: Date.now()
     });
   } else {
-    const data = snap.data();
-    const devices = data.devices || {};
-
-    // ➕ Thêm / cập nhật thiết bị
-    devices[deviceId] = { ua, lastLogin: now };
-
-    await updateDoc(userRef, {
-      devices,
-      deviceCount: Object.keys(devices).length,
-      lastLogin: now
+    await updateDoc(ref, {
+      devices: arrayUnion(deviceId),
+      lastLogin: Date.now()
     });
   }
 
   location.href = "index.html";
 }
 
-/* ================== LOGOUT ================== */
 export async function logout() {
   await signOut(auth);
   location.href = "login.html";

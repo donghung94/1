@@ -1,95 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <title>Admin – Quản lý thiết bị đăng nhập</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #f1f5f9;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      margin-bottom: 12px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    }
-    th, td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #e5e7eb;
-      text-align: left;
-      font-size: 14px;
-      vertical-align: top;
-    }
-    th {
-      background: #1e293b;
-      color: #fff;
-      position: sticky;
-      top: 0;
-    }
-    tr.warn {
-      background: #fff1f2;
-    }
-    .badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .badge.ok { background: #dcfce7; color: #166534; }
-    .badge.warn { background: #fee2e2; color: #991b1b; }
-    .device {
-      font-size: 12px;
-      color: #334155;
-      margin-bottom: 4px;
-      word-break: break-all;
-    }
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    button {
-      padding: 8px 12px;
-      border-radius: 8px;
-      border: none;
-      background: #1e40af;
-      color: #fff;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Admin - Thiết bị đăng nhập</title>
 </head>
-
 <body>
-  <div class="top">
-    <h1>🛡️ Admin – Theo dõi chia sẻ tài khoản</h1>
-    <button id="refreshBtn">🔄 Refresh</button>
-  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Email</th>
-        <th>Số thiết bị</th>
-        <th>Trạng thái</th>
-        <th>Chi tiết thiết bị</th>
-        <th>Lần đăng nhập cuối</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
+<h2>📊 Quản lý thiết bị đăng nhập</h2>
 
-  <script type="module" src="./admin.js"></script>
+<div id="userList">Đang tải dữ liệu...</div>
+
+<script type="module" src="admin.js"></script>
 </body>
 </html>

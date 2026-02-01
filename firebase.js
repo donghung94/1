@@ -1,12 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-import { 
-  getAuth, signInWithEmailAndPassword, signOut 
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { 
-  getFirestore, doc, setDoc 
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-/* ================== CONFIG ================== */
+/* ================== FIREBASE CONFIG ================== */
 const firebaseConfig = {
   apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
   authDomain: "donghung-3208d.firebaseapp.com",
@@ -21,57 +27,58 @@ export const auth = getAuth(app);
 export const db = getFirestore(app);
 
 /* ================== DEVICE ID ================== */
+// 1 thiết bị = 1 id cố định (lưu localStorage)
 function getDeviceId() {
-  let id = localStorage.getItem("device_id");
+  let id = localStorage.getItem("DEVICE_ID");
   if (!id) {
     id = crypto.randomUUID();
-    localStorage.setItem("device_id", id);
+    localStorage.setItem("DEVICE_ID", id);
   }
   return id;
 }
 
 /* ================== LOGIN ================== */
 export async function loginUser(email, password) {
-  try {
-    const cred = await signInWithEmailAndPassword(auth, email, password);
-    const user = cred.user;
+  const deviceId = getDeviceId();
+  const ua = navigator.userAgent;
 
-    const deviceId = getDeviceId();
+  const cred = await signInWithEmailAndPassword(auth, email, password);
+  const user = cred.user;
 
-    // lưu user (merge để không ghi đè)
-    await setDoc(
-      doc(db, "users", user.uid),
-      {
-        email: user.email,
-        lastLogin: Date.now()
+  const userRef = doc(db, "users", user.uid);
+  const snap = await getDoc(userRef);
+
+  const now = Date.now();
+
+  if (!snap.exists()) {
+    // 🆕 User mới
+    await setDoc(userRef, {
+      email: user.email,
+      devices: {
+        [deviceId]: { ua, lastLogin: now }
       },
-      { merge: true }
-    );
+      deviceCount: 1,
+      lastLogin: now
+    });
+  } else {
+    const data = snap.data();
+    const devices = data.devices || {};
 
-    // lưu thiết bị đăng nhập
-    await setDoc(
-      doc(db, "users", user.uid, "devices", deviceId),
-      {
-        deviceId,
-        userAgent: navigator.userAgent,
-        lastLogin: Date.now()
-      },
-      { merge: true }
-    );
+    // ➕ Thêm / cập nhật thiết bị
+    devices[deviceId] = { ua, lastLogin: now };
 
-    location.href = "index.html";
-  } catch (err) {
-    alert("Đăng nhập thành công");
-    console.error(err);
+    await updateDoc(userRef, {
+      devices,
+      deviceCount: Object.keys(devices).length,
+      lastLogin: now
+    });
   }
+
+  location.href = "index.html";
 }
 
 /* ================== LOGOUT ================== */
 export async function logout() {
-  try {
-    await signOut(auth);
-    location.href = "login.html";
-  } catch (err) {
-    console.error(err);
-  }
+  await signOut(auth);
+  location.href = "login.html";
 }

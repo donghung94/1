@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản - Toukutei Gino 2</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Để padding không làm vỡ khung */
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* Màu xanh tiêu chuẩn */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .error { color: red; }
+        .success { color: green; }
+        .note {
+            font-size: 12px;
+            color: #888;
+            margin-top: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Đăng Ký Học Viên</h2>
+    <form id="registerForm">
+        <div class="form-group">
+            <label for="fullName">Họ và tên</label>
+            <input type="text" id="fullName" placeholder="Ví dụ: Nguyễn Văn A" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" placeholder="Tối thiểu 6 ký tự" required minlength="6">
+        </div>
+        
+        <button type="submit" id="btnSubmit">Tạo tài khoản</button>
+    </form>
+    
+    <div id="message" class="message"></div>
+
+    <div class="note">
+        Hệ thống luyện thi <strong>特定技能（とくていぎのう）2号（ごう）</strong><br>
+        Lưu ý: Tài khoản chỉ được phép sử dụng tối đa trên 02 thiết bị.
+    </div>
+</div>
+
+<script type="module">
+    // 1. Import Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    // 2. CẤU HÌNH FIREBASE CỦA BẠN (Thay thế đoạn này bằng config trong Project Settings của bạn)
+    // ⚠️ QUAN TRỌNG: Bạn hãy copy từ Firebase Console -> Project Settings -> General -> Your apps -> SDK setup and configuration
+    const firebaseConfig = {
+        apiKey: "API_KEY_CUA_BAN",
+        authDomain: "PROJECT_ID.firebaseapp.com",
+        projectId: "PROJECT_ID",
+        storageBucket: "PROJECT_ID.appspot.com",
+        messagingSenderId: "SENDER_ID",
+        appId: "APP_ID"
+    };
+
+    // Khởi tạo Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // 3. Xử lý sự kiện Submit Form
+    const registerForm = document.getElementById('registerForm');
+    const messageDiv = document.getElementById('message');
+    const btnSubmit = document.getElementById('btnSubmit');
+
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Ngăn load lại trang
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const fullName = document.getElementById('fullName').value;
+
+        // Reset thông báo
+        messageDiv.textContent = "Đang xử lý...";
+        messageDiv.className = "message";
+        btnSubmit.disabled = true;
+
+        try {
+            // Bước A: Tạo User trên Authentication
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            // Bước B: Tạo Document trên Firestore (Quan trọng cho Admin quản lý)
+            await setDoc(doc(db, "users", user.uid), {
+                name: fullName,
+                email: email,
+                role: "student",     // Đánh dấu là học viên
+                device_count: 0,     // Khởi tạo: chưa có thiết bị nào
+                devices: {},         // Danh sách thiết bị rỗng
+                status: "active",    // Trạng thái hoạt động
+                createdAt: serverTimestamp(),
+                exam_progress: {     // Ví dụ lưu tiến độ học
+                    doboku: 0,       // Tiến độ phần 土木（どぼく）
+                    kenchiku: 0      // Tiến độ phần 建築（けんちく）
+                }
+            });
+
+            // Bước C: Thông báo thành công
+            messageDiv.textContent = "✅ Đăng ký thành công! Đã tạo dữ liệu quản lý.";
+            messageDiv.className = "message success";
+            
+            // Xóa form để nhập người tiếp theo (nếu bạn dùng file này để nhập liệu)
+            registerForm.reset(); 
+
+        } catch (error) {
+            console.error(error);
+            let errorMsg = "Lỗi không xác định: " + error.message;
+            
+            // Dịch một số lỗi phổ biến sang tiếng Việt
+            if (error.code === 'auth/email-already-in-use') {
+                errorMsg = "❌ Email này đã được đăng ký rồi!";
+            } else if (error.code === 'auth/weak-password') {
+                errorMsg = "❌ Mật khẩu phải có ít nhất 6 ký tự.";
+            } else if (error.code === 'auth/invalid-email') {
+                errorMsg = "❌ Định dạng Email không hợp lệ.";
+            }
+
+            messageDiv.textContent = errorMsg;
+            messageDiv.className = "message error";
+        } finally {
+            btnSubmit.disabled = false;
+        }
+    });
+</script>
+
+</body>
+</html>

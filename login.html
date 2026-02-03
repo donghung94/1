@@ -1,90 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Đăng nhập –  Quiz App</title>
-  <link rel="icon" href="icon-192.png" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng nhập – Toukutei Gino 2</title>
+    <link rel="icon" href="icon-192.png" /> 
+    <style>
+        /* Reset cơ bản */
+        * { box-sizing: border-box; }
+        body {
+            background: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
 </head>
 
-<body style="background:#f8fafc;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;">
+<body>
 
-  <div style="background:#fff;padding:26px 22px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.12);text-align:center;width:320px;">
-    <img src="icon-192.png" alt="Logo" style="width:80px;border-radius:12px;margin-bottom:10px;" />
-    <h2 style="margin:6px 0 12px;font-size:18px">🔒 Đăng nhập hệ thống</h2>
+    <div style="background:#fff;padding:26px 22px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.12);text-align:center;width:320px;">
+        <img src="icon-192.png" alt="Logo" style="width:80px;border-radius:12px;margin-bottom:10px; display:none;" id="appLogo" />
+        
+        <h2 style="margin:6px 0 12px;font-size:18px; color: #333;">🔒 Đăng nhập hệ thống</h2>
+        <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Luyện thi Kỹ năng đặc định số 2</p>
 
-    <input type="email" id="email" placeholder="Email"
-      style="width:100%;padding:10px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none" />
-    <input type="password" id="password" placeholder="Mật khẩu"
-      style="width:100%;padding:10px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none" />
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required
+                style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none; transition: 0.3s;" 
+                onfocus="this.style.borderColor='#1e40af'" onblur="this.style.borderColor='#e5e7eb'" />
+            
+            <input type="password" id="password" placeholder="Mật khẩu" required
+                style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none; transition: 0.3s;" 
+                onfocus="this.style.borderColor='#1e40af'" onblur="this.style.borderColor='#e5e7eb'" />
 
-    <button id="loginBtn"
-      style="background:#1e40af;color:#fff;border:none;padding:10px 15px;width:100%;border-radius:8px;cursor:pointer;font-weight:600;margin-top:6px;">
-      Đăng nhập
-    </button>
+            <button type="submit" id="loginBtn"
+                style="background:#1e40af;color:#fff;border:none;padding:12px 15px;width:100%;border-radius:8px;cursor:pointer;font-weight:600;margin-top:10px; font-size: 15px;">
+                Đăng nhập
+            </button>
+        </form>
 
-    <p id="message" style="margin-top:12px;font-size:14px;min-height:18px;"></p>
+        <p id="message" style="margin-top:12px;font-size:14px;min-height:18px; line-height: 1.4;"></p>
 
-    <div style="margin-top:8px;font-size:12px;color:#6b7280;">
-      (Nếu thấy lỗi “đang đăng nhập ở thiết bị khác”, hãy đăng xuất ở thiết bị cũ trước.)
+        <div style="margin-top:15px;font-size:12px;color:#6b7280; border-top: 1px solid #eee; padding-top: 10px;">
+            Lưu ý: Tài khoản chỉ sử dụng tối đa <strong>02 thiết bị</strong>.
+        </div>
     </div>
-  </div>
 
-  <script type="module">
-    import { auth, loginUser } from "./firebase.js";
-    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-    const $ = (s)=>document.querySelector(s);
-    const emailEl = $("#email");
-    const passEl  = $("#password");
-    const btn     = $("#loginBtn");
-    const msg     = $("#message");
+        // 2. CẤU HÌNH FIREBASE (⚠️ THAY CỦA BẠN VÀO ĐÂY)
+        const firebaseConfig = {
+            apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
+            authDomain: "donghung-3208d.firebaseapp.com",
+            projectId: "donghung-3208d",
+            storageBucket: "donghung-3208d.firebasestorage.app",
+            messagingSenderId: "753379492663",
+            appId: "1:753379492663:web:baff34f2c0bac00e02d0b2"
+        };
 
-    // ✅ Nếu đã có phiên hợp lệ → tự vào app
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        msg.textContent = "🔄 Đã có phiên đăng nhập, đang chuyển...";
-        msg.style.color = "green";
-        setTimeout(()=> location.href = "index.html", 300);
-      }
-    });
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
 
-    // 🔐 Đăng nhập
-    btn.addEventListener("click", async () => {
-      const email = emailEl.value.trim();
-      const password = passEl.value.trim();
+        function getDeviceId() {
+            let deviceId = localStorage.getItem('my_device_id');
+            if (!deviceId) {
+                deviceId = 'dev_' + Math.random().toString(36).substr(2, 9) + '_' + window.screen.width;
+                localStorage.setItem('my_device_id', deviceId);
+            }
+            return deviceId;
+        }
 
-      if (!email || !password) {
-        msg.textContent = "⚠️ Vui lòng nhập đủ email và mật khẩu.";
-        msg.style.color = "red";
-        return;
-      }
+        function getDeviceName() {
+            const ua = navigator.userAgent;
+            if (ua.includes("iPhone")) return "iPhone";
+            if (ua.includes("iPad")) return "iPad";
+            if (ua.includes("Android")) return "Android";
+            if (ua.includes("Win")) return "Windows PC";
+            if (ua.includes("Mac")) return "Macbook";
+            return "Thiết bị khác";
+        }
 
-      try {
-        btn.disabled = true;
-        btn.textContent = "⏳ Đang kiểm tra...";
-        msg.textContent = "";
+        const emailEl = document.getElementById("email");
+        const passEl  = document.getElementById("password");
+        const btn      = document.getElementById("loginBtn");
+        const msg      = document.getElementById("message");
+        const loginForm = document.getElementById("loginForm");
 
-        await loginUser(email, password);
-        // Nếu thành công → firebase.js sẽ tự redirect
-      } catch (err) {
-        msg.textContent = "❌ " + (err?.message || "Đăng nhập thất bại");
-        msg.style.color = "red";
-      } finally {
-        btn.disabled = false;
-        btn.textContent = "Đăng nhập";
-      }
-    });
+        onAuthStateChanged(auth, (user) => {
+             if (user) {
+                msg.textContent = "🔄 Đang tải dữ liệu...";
+                msg.style.color = "green";
+                setTimeout(()=> location.href = "index.html", 500);
+             }
+        });
 
-    // Nhấn Enter để đăng nhập
-    [emailEl, passEl].forEach(el => {
-      el.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") btn.click();
-      });
-    });
-  </script>
+        loginForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = emailEl.value.trim();
+            const password = passEl.value.trim();
+            const currentDeviceId = getDeviceId();
+            const currentDeviceName = getDeviceName();
+
+            msg.textContent = "⏳ Đang kiểm tra...";
+            msg.style.color = "#1e40af"; 
+            btn.disabled = true;
+            btn.textContent = "Đang xử lý...";
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                const userDocRef = doc(db, "users", user.uid);
+                const userSnap = await getDoc(userDocRef);
+
+                // --- TỰ ĐỘNG TẠO HỒ SƠ CHO USER CŨ ---
+                if (!userSnap.exists()) {
+                    const initialData = {
+                        name: user.displayName || "Học viên",
+                        email: user.email,
+                        role: "student",
+                        device_count: 1, 
+                        devices: {
+                            [currentDeviceId]: {
+                                name: currentDeviceName,
+                                addedAt: serverTimestamp(),
+                                last_login: serverTimestamp()
+                            }
+                        },
+                        status: "active",
+                        createdAt: serverTimestamp()
+                    };
+                    await setDoc(userDocRef, initialData);
+                } else {
+                    // --- LOGIC KIỂM TRA CHO USER ĐÃ CÓ HỒ SƠ ---
+                    const userData = userSnap.data();
+
+                    if (userData.status === 'banned') {
+                        await signOut(auth);
+                        throw new Error("Tài khoản đã bị khóa.");
+                    }
+
+                    const devices = userData.devices || {};
+                    const deviceCount = userData.device_count || 0;
+
+                    if (devices[currentDeviceId]) {
+                        await updateDoc(userDocRef, {
+                            [`devices.${currentDeviceId}.last_login`]: serverTimestamp()
+                        });
+                    } else {
+                        if (deviceCount >= 2) {
+                            await signOut(auth);
+                            throw new Error("🚫 Đã đạt giới hạn 2 thiết bị.");
+                        } else {
+                            await updateDoc(userDocRef, {
+                                [`devices.${currentDeviceId}`]: {
+                                    name: currentDeviceName,
+                                    addedAt: serverTimestamp(),
+                                    last_login: serverTimestamp()
+                                },
+                                device_count: deviceCount + 1
+                            });
+                        }
+                    }
+                }
+
+                msg.textContent = "✅ Thành công!";
+                msg.style.color = "green";
+                setTimeout(() => location.href = "index.html", 800);
+
+            } catch (err) {
+                let text = err.message;
+                if (err.code === 'auth/invalid-credential') text = "Sai email hoặc mật khẩu.";
+                msg.textContent = "❌ " + text;
+                msg.style.color = "#ef4444";
+                btn.disabled = false;
+                btn.textContent = "Đăng nhập";
+            }
+        });
+    </script>
 </body>
 </html>

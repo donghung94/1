@@ -26,17 +26,46 @@
 
 <body class="mono">
   <!-- 🔐 Kiểm tra đăng nhập -->
-  <script type="module">
+<script type="module">
     import { auth, logout } from "./firebase.js";
-    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-    // ✅ Nếu chưa đăng nhập thì quay về login
-    onAuthStateChanged(auth, (user) => {
+    // Khởi tạo Firestore để kiểm tra dữ liệu
+    const db = getFirestore();
+
+    onAuthStateChanged(auth, async (user) => {
       if (!user) {
         console.warn("⚠️ Chưa đăng nhập, quay về login...");
         location.href = "login.html";
       } else {
         console.log("✅ Đã đăng nhập:", user.email);
+
+        // --- BẮT ĐẦU: LOGIC BẢO VỆ 1 THIẾT BỊ ---
+        try {
+            const userDocRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userDocRef);
+
+            if (userSnap.exists()) {
+                const data = userSnap.data();
+                // Lấy ID máy hiện tại từ bộ nhớ
+                const currentDeviceId = localStorage.getItem('my_device_id');
+                const devices = data.devices || {};
+
+                // Điều kiện chặn:
+                // 1. Máy này KHÔNG nằm trong danh sách đã lưu (devices)
+                // 2. VÀ Tài khoản đã đủ (hoặc quá) 1 thiết bị (device_count >= 1)
+                if (!devices[currentDeviceId] && (data.device_count >= 1)) {
+                    alert("🚫 CẢNH BÁO BẢO MẬT\n\nTài khoản này chỉ được phép sử dụng trên 1 thiết bị duy nhất.\nBạn đang truy cập từ thiết bị lạ.");
+                    
+                    await signOut(auth); // Đăng xuất ngay lập tức
+                    window.location.href = "login.html"; // Đá về trang đăng nhập
+                }
+            }
+        } catch (error) {
+            console.error("Lỗi kiểm tra thiết bị:", error);
+        }
+        // --- KẾT THÚC LOGIC BẢO VỆ ---
       }
     });
 

@@ -2,38 +2,63 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Kiểm tra thiết bị</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị Viên - Toukutei 2</title>
     <style>
-        body { font-family: sans-serif; padding: 20px; line-height: 1.6; background: #f4f4f9; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
-        .info { background: #eef2ff; padding: 10px; border-radius: 5px; border-left: 5px solid #1e40af; margin-bottom: 10px; word-break: break-all; }
-        .status-ok { color: green; font-weight: bold; }
-        .status-err { color: red; font-weight: bold; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        
+        /* Phần thông tin máy Admin */
+        .admin-info { background: #eff6ff; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2563eb; font-size: 13px; }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th { background: #1e40af; color: white; padding: 12px; text-align: left; }
+        td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+        
+        .btn { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; color: white; }
+        .btn-reset { background: #f59e0b; }
+        .btn-ban { background: #ef4444; }
+        .btn-unban { background: #10b981; }
+        
+        .status-active { color: #059669; font-weight: bold; }
+        .status-banned { color: #dc2626; font-weight: bold; }
+        .device-id { font-family: monospace; font-size: 11px; background: #eee; padding: 2px 4px; display: block; margin-top: 4px; color: #666; }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h2>🔍 Kiểm tra thông tin máy</h2>
-    
-    <div id="auth-status">Đang kiểm tra đăng nhập...</div>
-    <hr>
-    
-    <p><strong>ID thiết bị của máy này:</strong></p>
-    <div id="device-id" class="info">Đang lấy ID...</div>
+<div class="container">
+    <div class="header">
+        <h2>Quản Lý Học Viên</h2>
+        <button class="btn" style="background:#64748b" onclick="location.reload()">Làm mới trang</button>
+    </div>
 
-    <p><strong>Tên thiết bị (nhận diện):</strong></p>
-    <div id="device-name" class="info">Đang nhận diện...</div>
+    <div class="admin-info" id="current-admin-device">
+        Đang kiểm tra thiết bị quản trị...
+    </div>
 
-    <div id="db-status"></div>
+    <div id="loading" style="text-align:center; padding: 20px;">🚀 Đang tải danh sách học viên...</div>
+
+    <table id="adminTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Học viên</th>
+                <th>Thiết bị (ID)</th>
+                <th>Tiến độ</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="userList"></tbody>
+    </table>
 </div>
 
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, getDocs, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-    // Cấu hình của bạn
     const firebaseConfig = {
         apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
         authDomain: "donghung-3208d.firebaseapp.com",
@@ -44,46 +69,92 @@
     };
 
     const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
     const db = getFirestore(app);
+    const auth = getAuth(app);
 
-    // 1. Lấy ID từ LocalStorage
-    const currentId = localStorage.getItem('my_device_id');
-    document.getElementById('device-id').innerText = currentId || "Chưa có ID (Hãy đăng nhập tại login.html trước)";
+    // 1. Nhận diện máy Admin đang dùng
+    const myDeviceId = localStorage.getItem('my_device_id') || "Chưa xác định";
+    document.getElementById('current-admin-device').innerHTML = `
+        <strong>Máy của bạn:</strong> ${navigator.platform} | <strong>ID:</strong> ${myDeviceId}
+    `;
 
-    // 2. Nhận diện tên máy
-    const ua = navigator.userAgent;
-    let name = "Thiết bị lạ";
-    if (ua.includes("Windows")) name = "Windows PC";
-    else if (ua.includes("iPhone")) name = "iPhone";
-    else if (ua.includes("Android")) name = "Điện thoại Android";
-    document.getElementById('device-name').innerText = name;
-
-    // 3. Kiểm tra kết nối Firebase
+    // 2. Chỉ tải dữ liệu sau khi Auth thành công
     onAuthStateChanged(auth, async (user) => {
-        const authStatus = document.getElementById('auth-status');
-        const dbStatus = document.getElementById('db-status');
+        if (!user) {
+            alert("Vui lòng đăng nhập trước!");
+            window.location.href = "login.html";
+            return;
+        }
 
-        if (user) {
-            authStatus.innerHTML = `Trạng thái: <span class="status-ok">Đã đăng nhập</span><br>Email: ${user.email}`;
-            
-            try {
-                // Thử đọc dữ liệu của chính mình để xem Rules có chạy không
-                const userDoc = await getDoc(doc(db, "users", user.uid));
-                if (userDoc.exists()) {
-                    dbStatus.innerHTML = `<span class="status-ok">✅ Đã kết nối Database thành công!</span>`;
-                    console.log("Dữ liệu trên Server:", userDoc.data());
-                } else {
-                    dbStatus.innerHTML = `<span class="status-err">❌ Đăng nhập OK nhưng chưa có hồ sơ trên Firestore.</span>`;
+        try {
+            const querySnapshot = await getDocs(collection(db, "users"));
+            const userList = document.getElementById('userList');
+            userList.innerHTML = '';
+
+            querySnapshot.forEach((userDoc) => {
+                const data = userDoc.data();
+                const uid = userDoc.id;
+
+                // Lấy ID thiết bị của học viên (nếu có)
+                let deviceIdText = "Chưa đăng nhập máy nào";
+                if (data.devices) {
+                    const ids = Object.keys(data.devices);
+                    if (ids.length > 0) deviceIdText = ids[0]; // Lấy ID đầu tiên
                 }
-            } catch (e) {
-                dbStatus.innerHTML = `<span class="status-err">❌ Lỗi Rules: ${e.message}</span>`;
-            }
-        } else {
-            authStatus.innerHTML = `Trạng thái: <span class="status-err">Chưa đăng nhập</span>`;
-            dbStatus.innerHTML = `<a href="login.html">Đến trang Đăng nhập</a>`;
+
+                const row = `
+                    <tr>
+                        <td>
+                            <strong>${data.name || 'N/A'}</strong><br>
+                            <small>${data.email}</small>
+                        </td>
+                        <td>
+                            <b>${data.device_count || 0} / 1</b>
+                            <span class="device-id">${deviceIdText}</span>
+                        </td>
+                        <td>
+                            T: ${data.exam_progress?.doboku || 0}% | K: ${data.exam_progress?.kenchiku || 0}%
+                        </td>
+                        <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
+                            ${data.status === 'banned' ? 'Khóa' : 'Mở'}
+                        </td>
+                        <td>
+                            <button class="btn btn-reset" onclick="resetDevice('${uid}')">Reset Máy</button>
+                            <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
+                                onclick="toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
+                                ${data.status === 'banned' ? 'Mở' : 'Khóa'}
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                userList.innerHTML += row;
+            });
+
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('adminTable').style.display = 'table';
+
+        } catch (error) {
+            console.error("Lỗi:", error);
+            document.getElementById('loading').innerHTML = "❌ Lỗi tải dữ liệu. Kiểm tra lại Rules.";
         }
     });
+
+    // Hàm Reset máy
+    window.resetDevice = async (uid) => {
+        if (confirm("Reset thiết bị cho học viên này?")) {
+            await updateDoc(doc(db, "users", uid), { device_count: 0, devices: {} });
+            location.reload();
+        }
+    };
+
+    // Hàm Khóa/Mở
+    window.toggleStatus = async (uid, newStatus) => {
+        if (confirm("Xác nhận thay đổi trạng thái học viên?")) {
+            await updateDoc(doc(db, "users", uid), { status: newStatus });
+            location.reload();
+        }
+    };
 </script>
+
 </body>
 </html>

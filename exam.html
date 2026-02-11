@@ -12,62 +12,55 @@
 
 <body class="mono">
   <!-- 🔐 Kiểm tra đăng nhập -->
-  <script type="module">
-    import { auth } from "./firebase.js";
-    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    onAuthStateChanged(auth, (user) => {
-      if (!user) location.href = "login.html";
-    });
-    // Đảm bảo đã import đầy đủ từ firebase.js và gstatic
-import { auth, db } from "./firebase.js"; 
-import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+ <script type="module">
+    // 1. Thêm db và signOut vào phần import
+    import { auth, db } from "./firebase.js"; 
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        // Nếu chưa đăng nhập thì không cho làm bài
-        location.href = "login.html";
-    } else {
-        try {
-            const userDocRef = doc(db, "users", user.uid);
-            const userSnap = await getDoc(userDocRef);
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            location.href = "login.html";
+        } else {
+            try {
+                // 2. Lấy dữ liệu học viên từ Firestore
+                const userDocRef = doc(db, "users", user.uid);
+                const userSnap = await getDoc(userDocRef);
 
-            if (userSnap.exists()) {
-                const data = userSnap.data();
-                const currentDeviceId = localStorage.getItem('my_device_id');
-                const devices = data.devices || {};
+                if (userSnap.exists()) {
+                    const data = userSnap.data();
+                    const currentDeviceId = localStorage.getItem('my_device_id');
+                    const devices = data.devices || {};
 
-                // 1. Kiểm tra thiết bị (Bảo mật: Tránh việc đang làm bài thì máy khác đăng nhập)
-                if (data.device_count >= 1 && !devices[currentDeviceId]) {
-                    alert("🚫 Thiết bị không hợp lệ. Bạn sẽ bị đăng xuất.");
-                    await signOut(auth);
-                    location.href = "login.html";
-                    return;
+                    // 3. KIỂM TRA THIẾT BỊ (Bảo mật cho trang thi)
+                    if (data.device_count >= 1 && !devices[currentDeviceId]) {
+                        alert("🚫 Thiết bị không hợp lệ hoặc đã bị đổi. Bạn sẽ bị đăng xuất.");
+                        await signOut(auth);
+                        location.href = "login.html";
+                        return;
+                    }
+
+                    // 4. HIỂN THỊ TÊN (Đảm bảo bạn đã thêm thẻ HTML có id="user-display-name")
+                    const welcomeSection = document.getElementById('welcome-section');
+                    const nameDisplay = document.getElementById('user-display-name');
+                    
+                    if (welcomeSection && nameDisplay) {
+                        nameDisplay.innerText = data.name || "Học viên";
+                        welcomeSection.style.display = "flex"; 
+                    }
+
+                    // Lưu ý: Nếu trang exam.html có hàm khởi tạo câu hỏi (ví dụ: loadQuiz()), 
+                    // bạn nên gọi nó ở đây để đảm bảo tên đã tải xong mới hiện đề.
+
+                } else {
+                    console.warn("Không tìm thấy dữ liệu học viên.");
                 }
-
-                // 2. Hiển thị tên học viên
-                const welcomeSection = document.getElementById('welcome-section');
-                const nameDisplay = document.getElementById('user-display-name');
-                
-                if (welcomeSection && nameDisplay) {
-                    nameDisplay.innerText = data.name || "Học viên";
-                    welcomeSection.style.display = "flex"; 
-                }
-
-                // Sau khi xác thực xong mới bắt đầu tải câu hỏi (nếu bạn có hàm loadQuiz)
-                // if (typeof loadQuiz === "function") loadQuiz();
-
-            } else {
-                alert("Không tìm thấy dữ liệu học viên.");
-                location.href = "login.html";
+            } catch (error) {
+                console.error("Lỗi xác thực tại trang thi:", error);
             }
-        } catch (error) {
-            console.error("Lỗi xác thực tại trang thi:", error);
         }
-    }
-});
-  </script>
-
+    });
+</script>
   <header class="header">
     <div class="brand small">
       <img src="icon-192.png" alt="H" class="logo">
@@ -76,17 +69,18 @@ onAuthStateChanged(auth, async (user) => {
         <div class="subtitle">Trung Tâm Nhật Ngữ </div>
       </div>
     </div>
-    <div id="welcome-section" style="display: none; padding: 8px 15px; background: #f8fafc; border-bottom: 1px solid #cbd5e1; justify-content: space-between; align-items: center;">
-    <div style="font-size: 14px;">
-        <span style="color: #64748b;">Học viên: </span>
-        <strong id="user-display-name" style="color: #1e40af;">Đang tải...</strong>
-    </div>
+
     <a href="index.html" style="text-decoration: none; font-size: 12px; color: #1e40af; font-weight: bold;">🏠 Trang chủ</a>
 </div>
     <div class="hud">
       <span id="timer" class="timer">60:00</span>
       <button id="submitBtn" class="btn">Nộp bài</button>
       <a href="index.html" class="btn ghost">Trang chủ</a>
+    </div>
+    <div id="welcome-section" style="display: none; padding: 10px 20px; background: #f8fafc; border-bottom: 1px solid #ddd; justify-content: space-between; align-items: center;">
+    <div>
+        <span style="color: #666;">Học viên: </span>
+        <strong id="user-display-name" style="color: #1e40af;">...</strong>
     </div>
   </header>
 

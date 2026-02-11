@@ -1,8 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra thiết bị</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; background: #f4f4f9; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        .info { background: #eef2ff; padding: 10px; border-radius: 5px; border-left: 5px solid #1e40af; margin-bottom: 10px; word-break: break-all; }
+        .status-ok { color: green; font-weight: bold; }
+        .status-err { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🔍 Kiểm tra thông tin máy</h2>
+    
+    <div id="auth-status">Đang kiểm tra đăng nhập...</div>
+    <hr>
+    
+    <p><strong>ID thiết bị của máy này:</strong></p>
+    <div id="device-id" class="info">Đang lấy ID...</div>
+
+    <p><strong>Tên thiết bị (nhận diện):</strong></p>
+    <div id="device-name" class="info">Đang nhận diện...</div>
+
+    <div id="db-status"></div>
+</div>
+
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+    // Cấu hình của bạn
     const firebaseConfig = {
         apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
         authDomain: "donghung-3208d.firebaseapp.com",
@@ -13,83 +44,46 @@
     };
 
     const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
     const auth = getAuth(app);
+    const db = getFirestore(app);
 
-    // Hàm tải dữ liệu (chỉ gọi khi đã chắc chắn đăng nhập)
-    async function loadUsers() {
-        const userList = document.getElementById('userList');
-        try {
-            console.log("🚀 Auth OK, bắt đầu lấy dữ liệu Firestore...");
-            const snapshot = await getDocs(collection(db, "users"));
-            userList.innerHTML = '';
+    // 1. Lấy ID từ LocalStorage
+    const currentId = localStorage.getItem('my_device_id');
+    document.getElementById('device-id').innerText = currentId || "Chưa có ID (Hãy đăng nhập tại login.html trước)";
 
-            snapshot.forEach((userDoc) => {
-                const data = userDoc.data();
-                const uid = userDoc.id;
-                
-                let deviceHtml = "";
-                if (data.devices) {
-                    Object.keys(data.devices).forEach(key => {
-                        deviceHtml += `<span class="device-tag">💻 ${data.devices[key].name || 'Thiết bị'}</span>`;
-                    });
-                }
+    // 2. Nhận diện tên máy
+    const ua = navigator.userAgent;
+    let name = "Thiết bị lạ";
+    if (ua.includes("Windows")) name = "Windows PC";
+    else if (ua.includes("iPhone")) name = "iPhone";
+    else if (ua.includes("Android")) name = "Điện thoại Android";
+    document.getElementById('device-name').innerText = name;
 
-                const dobokuProgress = data.exam_progress?.doboku || 0;
-                const kenchikuProgress = data.exam_progress?.kenchiku || 0;
+    // 3. Kiểm tra kết nối Firebase
+    onAuthStateChanged(auth, async (user) => {
+        const authStatus = document.getElementById('auth-status');
+        const dbStatus = document.getElementById('db-status');
 
-                const row = `
-                    <tr>
-                        <td><strong>${data.name || 'Học viên'}</strong><br><small>${data.email}</small></td>
-                        <td><b>${data.device_count || 0} / 1</b>${deviceHtml}</td>
-                        <td>
-                            <span class="progress-badge">Thổ mộc: ${dobokuProgress}%</span>
-                            <span class="progress-badge">Kiến trúc: ${kenchikuProgress}%</span>
-                        </td>
-                        <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
-                            ${data.status === 'banned' ? 'Đã khóa' : 'Hoạt động'}
-                        </td>
-                        <td>
-                            <button class="btn btn-reset" onclick="resetDevice('${uid}')">Reset Máy</button>
-                            ${data.status === 'banned' 
-                                ? `<button class="btn btn-unban" onclick="toggleStatus('${uid}', 'active')">Mở khóa</button>`
-                                : `<button class="btn btn-ban" onclick="toggleStatus('${uid}', 'banned')">Khóa</button>`
-                            }
-                        </td>
-                    </tr>`;
-                userList.innerHTML += row;
-            });
-
-            document.getElementById('loading').style.display = 'none';
-            document.getElementById('adminTable').style.display = 'table';
-        } catch (error) {
-            console.error("Lỗi Firestore:", error);
-            document.getElementById('loading').innerHTML = `❌ Lỗi quyền truy cập. <br><small>${error.message}</small>`;
-        }
-    }
-
-    // --- QUAN TRỌNG: Kiểm tra đăng nhập trước khi chạy ---
-    onAuthStateChanged(auth, (user) => {
         if (user) {
-            console.log("✅ Admin đã đăng nhập:", user.email);
-            loadUsers();
+            authStatus.innerHTML = `Trạng thái: <span class="status-ok">Đã đăng nhập</span><br>Email: ${user.email}`;
+            
+            try {
+                // Thử đọc dữ liệu của chính mình để xem Rules có chạy không
+                const userDoc = await getDoc(doc(db, "users", user.uid));
+                if (userDoc.exists()) {
+                    dbStatus.innerHTML = `<span class="status-ok">✅ Đã kết nối Database thành công!</span>`;
+                    console.log("Dữ liệu trên Server:", userDoc.data());
+                } else {
+                    dbStatus.innerHTML = `<span class="status-err">❌ Đăng nhập OK nhưng chưa có hồ sơ trên Firestore.</span>`;
+                }
+            } catch (e) {
+                dbStatus.innerHTML = `<span class="status-err">❌ Lỗi Rules: ${e.message}</span>`;
+            }
         } else {
-            console.warn("⚠️ Chưa đăng nhập Admin, chuyển hướng...");
-            alert("Bạn cần đăng nhập trước khi vào trang quản trị!");
-            window.location.href = "login.html";
+            authStatus.innerHTML = `Trạng thái: <span class="status-err">Chưa đăng nhập</span>`;
+            dbStatus.innerHTML = `<a href="login.html">Đến trang Đăng nhập</a>`;
         }
     });
-
-    // Các hàm global cho button
-    window.resetDevice = async (uid) => {
-        if (!confirm("Reset thiết bị cho học viên này?")) return;
-        await updateDoc(doc(db, "users", uid), { device_count: 0, devices: {} });
-        location.reload();
-    };
-
-    window.toggleStatus = async (uid, nextStatus) => {
-        if (!confirm("Xác nhận thay đổi trạng thái?")) return;
-        await updateDoc(doc(db, "users", uid), { status: nextStatus });
-        location.reload();
-    };
 </script>
+</body>
+</html>

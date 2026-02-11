@@ -23,7 +23,10 @@
 
   <script type="module" src="firebase.js"></script>
 </head>
-
+<div id="welcome-section" style="padding: 10px 20px; background: #fff; border-bottom: 1px solid #e5e7eb; display: none;">
+    <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
+    <strong id="user-display-name" style="color: #1e40af; font-size: 16px;">Học viên</strong>
+</div>
 <body class="mono">
   <!-- 🔐 Kiểm tra đăng nhập -->
 <script type="module">
@@ -32,12 +35,12 @@
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
     import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-    onAuthStateChanged(auth, async (user) => {
-      if (!user) {
+  onAuthStateChanged(auth, async (user) => {
+    if (!user) {
         location.href = "login.html";
-      } else {
+    } else {
         try {
-            // Sử dụng db đã import
+            // 1. Truy vấn dữ liệu từ Firestore
             const userDocRef = doc(db, "users", user.uid);
             const userSnap = await getDoc(userDocRef);
 
@@ -46,17 +49,33 @@
                 const currentDeviceId = localStorage.getItem('my_device_id');
                 const devices = data.devices || {};
 
-                if (!devices[currentDeviceId] && data.device_count >= 1) {
-                    alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
+                // 2. KIỂM TRA THIẾT BỊ (Chặn nếu máy lạ)
+                if (data.device_count >= 1 && !devices[currentDeviceId]) {
+                    alert("🚫 Tài khoản chỉ được dùng trên 1 máy. Bạn sẽ bị đăng xuất.");
                     await signOut(auth);
                     location.href = "login.html";
+                    return; // Dừng xử lý các lệnh bên dưới
                 }
+
+                // 3. HIỂN THỊ TÊN HỌC VIÊN
+                const welcomeBar = document.getElementById('welcome-bar');
+                const nameDisplay = document.getElementById('user-name-display');
+                if (welcomeBar && nameDisplay) {
+                    nameDisplay.innerText = data.name || "Học viên"; // Ưu tiên tên trong Database
+                    welcomeBar.style.display = "block"; // Hiện thanh chào
+                }
+
+                // 4. HIỆN NỘI DUNG TRANG (Nếu bạn có ẩn Body trước đó)
+                document.body.style.opacity = "1";
+
+            } else {
+                console.warn("Không tìm thấy hồ sơ học viên trên Firestore.");
             }
         } catch (error) {
-            console.error("Lỗi:", error);
+            console.error("Lỗi xác thực thiết bị/tên:", error);
         }
-      }
-    });
+    }
+});
 
     window.logout = logout;
   </script>

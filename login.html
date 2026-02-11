@@ -244,7 +244,7 @@
                             [`devices.${currentDeviceId}.last_login`]: serverTimestamp()
                         });
                     } else {
-                        if (deviceCount >= 2) {
+                        if (deviceCount >= 1) {
                             await signOut(auth);
                             throw new Error("🚫 Đã đạt giới hạn 2 thiết bị.");
                         } else {

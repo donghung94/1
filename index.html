@@ -27,45 +27,34 @@
 <body class="mono">
   <!-- 🔐 Kiểm tra đăng nhập -->
 <script type="module">
-    import { auth, logout } from "./firebase.js";
+    // Nhập db từ file firebase.js thay vì khởi tạo mới
+    import { auth, logout, db } from "./firebase.js"; 
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-
-    // Khởi tạo Firestore để kiểm tra dữ liệu
-    const db = getFirestore();
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
     onAuthStateChanged(auth, async (user) => {
       if (!user) {
-        console.warn("⚠️ Chưa đăng nhập, quay về login...");
         location.href = "login.html";
       } else {
-        console.log("✅ Đã đăng nhập:", user.email);
-
-        // --- BẮT ĐẦU: LOGIC BẢO VỆ 1 THIẾT BỊ ---
         try {
+            // Sử dụng db đã import
             const userDocRef = doc(db, "users", user.uid);
             const userSnap = await getDoc(userDocRef);
 
             if (userSnap.exists()) {
                 const data = userSnap.data();
-                // Lấy ID máy hiện tại từ bộ nhớ
                 const currentDeviceId = localStorage.getItem('my_device_id');
                 const devices = data.devices || {};
 
-                // Điều kiện chặn:
-                // 1. Máy này KHÔNG nằm trong danh sách đã lưu (devices)
-                // 2. VÀ Tài khoản đã đủ (hoặc quá) 1 thiết bị (device_count >= 1)
-                if (!devices[currentDeviceId] && (data.device_count >= 1)) {
-                    alert("🚫 CẢNH BÁO BẢO MẬT\n\nTài khoản này chỉ được phép sử dụng trên 1 thiết bị duy nhất.\nBạn đang truy cập từ thiết bị lạ.");
-                    
-                    await signOut(auth); // Đăng xuất ngay lập tức
-                    window.location.href = "login.html"; // Đá về trang đăng nhập
+                if (!devices[currentDeviceId] && data.device_count >= 1) {
+                    alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
+                    await signOut(auth);
+                    location.href = "login.html";
                 }
             }
         } catch (error) {
-            console.error("Lỗi kiểm tra thiết bị:", error);
+            console.error("Lỗi:", error);
         }
-        // --- KẾT THÚC LOGIC BẢO VỆ ---
       }
     });
 

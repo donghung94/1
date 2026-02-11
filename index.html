@@ -6,12 +6,11 @@
   <meta http-equiv="Expires" content="0" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quiz APP CENTER </title>
+  <title>Quiz APP CENTER</title>
   <link rel="icon" href="icon-192.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="style.css">
 
-  <!-- 🚀 Ép tải sẵn 6 file đề + 2 đề thực hành -->
   <script>
     const quizFiles = [
       "questions.js","questions2.js","questions3.js",
@@ -23,73 +22,94 @@
 
   <script type="module" src="firebase.js"></script>
 </head>
-<div id="welcome-section" style="padding: 10px 20px; background: #fff; border-bottom: 1px solid #e5e7eb; display: none;">
-    <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
-    <strong id="user-display-name" style="color: #1e40af; font-size: 16px;">Học viên</strong>
-</div>
+
 <body class="mono">
-  <!-- 🔐 Kiểm tra đăng nhập -->
+  <div id="welcome-section" style="padding: 12px 20px; background: #fff; border-bottom: 2px solid #1e40af; display: none; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
+      <strong id="user-display-name" style="color: #1e40af; font-size: 16px;">Học viên</strong>
+    </div>
+    <button onclick="logout()" class="logout-btn" style="font-size: 12px; padding: 4px 8px;">Đăng xuất</button>
+  </div>
+
 <script type="module">
-    // Nhập db từ file firebase.js thay vì khởi tạo mới
     import { auth, logout, db } from "./firebase.js"; 
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
     import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-  onAuthStateChanged(auth, async (user) => {
-    if (!user) {
-        location.href = "login.html";
-    } else {
-        try {
-            // 1. Truy vấn dữ liệu từ Firestore
-            const userDocRef = doc(db, "users", user.uid);
-            const userSnap = await getDoc(userDocRef);
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            location.href = "login.html";
+        } else {
+            try {
+                const userDocRef = doc(db, "users", user.uid);
+                const userSnap = await getDoc(userDocRef);
 
-            if (userSnap.exists()) {
-                const data = userSnap.data();
-                const currentDeviceId = localStorage.getItem('my_device_id');
-                const devices = data.devices || {};
+                if (userSnap.exists()) {
+                    const data = userSnap.data();
+                    const currentDeviceId = localStorage.getItem('my_device_id');
+                    const devices = data.devices || {};
 
-                // 2. KIỂM TRA THIẾT BỊ (Chặn nếu máy lạ)
-                if (data.device_count >= 1 && !devices[currentDeviceId]) {
-                    alert("🚫 Tài khoản chỉ được dùng trên 1 máy. Bạn sẽ bị đăng xuất.");
-                    await signOut(auth);
-                    location.href = "login.html";
-                    return; // Dừng xử lý các lệnh bên dưới
+                    // Kiểm tra thiết bị
+                    if (data.device_count >= 1 && !devices[currentDeviceId]) {
+                        alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
+                        await signOut(auth);
+                        location.href = "login.html";
+                        return;
+                    }
+
+                    // HIỂN THỊ TÊN (Đã sửa ID cho khớp với HTML bên trên)
+                    const welcomeSection = document.getElementById('welcome-section');
+                    const nameDisplay = document.getElementById('user-display-name');
+                    
+                    if (welcomeSection && nameDisplay) {
+                        nameDisplay.innerText = data.name || "Học viên";
+                        welcomeSection.style.setProperty('display', 'flex', 'important'); // Hiện thanh chào
+                    }
+
+                } else {
+                    console.warn("Không tìm thấy hồ sơ.");
                 }
-
-                // 3. HIỂN THỊ TÊN HỌC VIÊN
-                const welcomeBar = document.getElementById('welcome-bar');
-                const nameDisplay = document.getElementById('user-name-display');
-                if (welcomeBar && nameDisplay) {
-                    nameDisplay.innerText = data.name || "Học viên"; // Ưu tiên tên trong Database
-                    welcomeBar.style.display = "block"; // Hiện thanh chào
-                }
-
-                // 4. HIỆN NỘI DUNG TRANG (Nếu bạn có ẩn Body trước đó)
-                document.body.style.opacity = "1";
-
-            } else {
-                console.warn("Không tìm thấy hồ sơ học viên trên Firestore.");
+            } catch (error) {
+                console.error("Lỗi:", error);
             }
-        } catch (error) {
-            console.error("Lỗi xác thực thiết bị/tên:", error);
         }
-    }
-});
+    });
 
     window.logout = logout;
-  </script>
+</script>
 
 <header class="header">
   <div class="brand">
     <img src="icon-192.png" alt="H" class="logo">
     <div class="titles">
       <div class="brand-name">Quiz APP</div>
-      <div class="subtitle">Trung tâm nhật ngữ đồng hành và phát triển 
+      <div class="subtitle">Trung tâm nhật ngữ đồng hành và phát triển</div>
     </div>
   </div>
-  
 </header>
+
+<main class="container">
+  </main>
+
+<footer class="footer">© 2025 • Quiz APP CENTER</footer>
+
+<style>
+.logout-btn {
+  background:#ef4444;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.logout-btn:hover { background:#dc2626; }
+/* ... Các style khác giữ nguyên ... */
+</style>
+
+</body>
+</html>
 
 <!-- ============================
      🎥 VIDEO GIẢNG DẠY

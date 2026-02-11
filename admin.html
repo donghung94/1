@@ -1,80 +1,33 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản Trị Viên - Toukutei 2</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
-        .container { max-width: 1100px; margin: auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        h2 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-top: 0; }
-        
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
-        th { background: #1e40af; color: white; padding: 12px; text-align: left; font-size: 14px; }
-        td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 14px; vertical-align: top; }
-        tr:hover { background-color: #f8fafc; }
-
-        .btn { padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; color: white; font-size: 12px; }
-        .btn-reset { background: #f59e0b; margin-right: 5px; }
-        .btn-reset:hover { background: #d97706; }
-        .btn-ban { background: #ef4444; }
-        .btn-unban { background: #10b981; }
-
-        .progress-badge { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; display: inline-block; margin: 2px; }
-        .device-tag { font-size: 11px; background: #e2e8f0; padding: 2px 6px; border-radius: 4px; color: #475569; display: block; margin-top: 4px; }
-        .status-active { color: #059669; font-weight: bold; }
-        .status-banned { color: #dc2626; font-weight: bold; }
-        
-        #loading { text-align: center; padding: 50px; font-size: 18px; color: #64748b; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>Quản Lý Học Viên & Thiết Bị</h2>
-    <div id="loading">🚀 Đang tải dữ liệu học viên...</div>
-    
-    <table id="adminTable" style="display:none;">
-        <thead>
-            <tr>
-                <th>Học viên / Email</th>
-                <th>Thiết bị (Max: 1)</th>
-                <th>Tiến độ học</th>
-                <th>Trạng thái</th>
-                <th>Thao tác</th>
-            </tr>
-        </thead>
-        <tbody id="userList"></tbody>
-    </table>
-</div>
-
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getFirestore, collection, getDocs, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-   const firebaseConfig = {
-  apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
-  authDomain: "donghung-3208d.firebaseapp.com",
-  projectId: "donghung-3208d",
-  storageBucket: "donghung-3208d.firebasestorage.app",
-  messagingSenderId: "753379492663",
-  appId: "1:753379492663:web:baff34f2c0bac00e02d0b2",
-};
+    const firebaseConfig = {
+        apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
+        authDomain: "donghung-3208d.firebaseapp.com",
+        projectId: "donghung-3208d",
+        storageBucket: "donghung-3208d.firebasestorage.app",
+        messagingSenderId: "753379492663",
+        appId: "1:753379492663:web:baff34f2c0bac00e02d0b2"
+    };
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
+    const auth = getAuth(app);
 
+    // Hàm tải dữ liệu (chỉ gọi khi đã chắc chắn đăng nhập)
     async function loadUsers() {
+        const userList = document.getElementById('userList');
         try {
+            console.log("🚀 Auth OK, bắt đầu lấy dữ liệu Firestore...");
             const snapshot = await getDocs(collection(db, "users"));
-            const userList = document.getElementById('userList');
             userList.innerHTML = '';
 
             snapshot.forEach((userDoc) => {
                 const data = userDoc.data();
                 const uid = userDoc.id;
                 
-                // Hiển thị thiết bị
                 let deviceHtml = "";
                 if (data.devices) {
                     Object.keys(data.devices).forEach(key => {
@@ -82,20 +35,13 @@
                     });
                 }
 
-                // Hiển thị tiến độ (Nếu không có thì hiện 0)
                 const dobokuProgress = data.exam_progress?.doboku || 0;
                 const kenchikuProgress = data.exam_progress?.kenchiku || 0;
 
                 const row = `
                     <tr>
-                        <td>
-                            <strong>${data.name || 'Học viên'}</strong><br>
-                            <small style="color:#64748b">${data.email}</small>
-                        </td>
-                        <td>
-                            <b>${data.device_count || 0} / 1</b>
-                            ${deviceHtml}
-                        </td>
+                        <td><strong>${data.name || 'Học viên'}</strong><br><small>${data.email}</small></td>
+                        <td><b>${data.device_count || 0} / 1</b>${deviceHtml}</td>
                         <td>
                             <span class="progress-badge">Thổ mộc: ${dobokuProgress}%</span>
                             <span class="progress-badge">Kiến trúc: ${kenchikuProgress}%</span>
@@ -110,46 +56,40 @@
                                 : `<button class="btn btn-ban" onclick="toggleStatus('${uid}', 'banned')">Khóa</button>`
                             }
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
                 userList.innerHTML += row;
             });
 
             document.getElementById('loading').style.display = 'none';
             document.getElementById('adminTable').style.display = 'table';
         } catch (error) {
-            console.error(error);
-            alert("Lỗi tải dữ liệu. Hãy kiểm tra Rules Firestore!");
+            console.error("Lỗi Firestore:", error);
+            document.getElementById('loading').innerHTML = `❌ Lỗi quyền truy cập. <br><small>${error.message}</small>`;
         }
     }
 
-    // --- HÀM RESET THIẾT BỊ ---
+    // --- QUAN TRỌNG: Kiểm tra đăng nhập trước khi chạy ---
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log("✅ Admin đã đăng nhập:", user.email);
+            loadUsers();
+        } else {
+            console.warn("⚠️ Chưa đăng nhập Admin, chuyển hướng...");
+            alert("Bạn cần đăng nhập trước khi vào trang quản trị!");
+            window.location.href = "login.html";
+        }
+    });
+
+    // Các hàm global cho button
     window.resetDevice = async (uid) => {
-        if (!confirm("Bạn có chắc muốn Reset thiết bị cho học viên này không? Họ sẽ có thể đăng nhập ở máy mới.")) return;
-        try {
-            const userRef = doc(db, "users", uid);
-            await updateDoc(userRef, {
-                device_count: 0,
-                devices: {}
-            });
-            alert("Đã Reset thành công!");
-            loadUsers();
-        } catch (e) { alert("Lỗi: " + e.message); }
+        if (!confirm("Reset thiết bị cho học viên này?")) return;
+        await updateDoc(doc(db, "users", uid), { device_count: 0, devices: {} });
+        location.reload();
     };
 
-    // --- HÀM KHÓA / MỞ KHÓA ---
     window.toggleStatus = async (uid, nextStatus) => {
-        const action = nextStatus === 'banned' ? "Khóa" : "Mở khóa";
-        if (!confirm(`Xác nhận ${action} học viên này?`)) return;
-        try {
-            await updateDoc(doc(db, "users", uid), { status: nextStatus });
-            loadUsers();
-        } catch (e) { alert("Lỗi: " + e.message); }
+        if (!confirm("Xác nhận thay đổi trạng thái?")) return;
+        await updateDoc(doc(db, "users", uid), { status: nextStatus });
+        location.reload();
     };
-
-    // Khởi động
-    loadUsers();
-
 </script>
-</body>
-</html>

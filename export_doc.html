@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Export tài liệu</title>
+</head>
+<body>
+
+<h2>Xuất tài liệu câu hỏi</h2>
+<button onclick="exportDoc()">Xuất file text</button>
+
+<pre id="output"></pre>
+
+<script src="questions.js"></script>
+
+<script>
+function exportDoc() {
+  let data = window.QUESTION_SETS["1"];
+  let text = "";
+
+  data.forEach(q => {
+    text += q.q + "\n\n";
+
+    q.options.forEach((op, i) => {
+      text += (i+1) + ". " + op + "\n";
+    });
+
+    text += "\nDịch: " + q.vi + "\n";
+    text += "Giải thích: " + q.explain + "\n";
+    text += "Đáp án: " + q.options[q.answer] + "\n";
+    text += "\n----------------------\n\n";
+  });
+
+  document.getElementById("output").textContent = text;
+
+  // tải file
+  let blob = new Blob([text], {type:"text/plain"});
+  let a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "tai_lieu.txt";
+  a.click();
+}
+</script>
+
+</body>
+</html>

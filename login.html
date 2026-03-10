@@ -16,6 +16,29 @@
     .login-box input { width: 100%; padding: 10px 12px; margin: 8px 0; border: 1px solid #e5e7eb; border-radius: 8px; }
     .login-box button { width: 100%; padding: 10px; border: none; border-radius: 8px; background: #1e40af; color: #fff; font-weight: 600; margin-top: 8px; }
     .note { margin-top: 8px; font-size: 12px; color: #6b7280; }
+        .login-box button { 
+    width: 100%; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px; 
+    background: #1e40af; 
+    color: #fff; 
+    font-weight: 600; 
+    margin-top: 8px; 
+    cursor: pointer;
+}
+
+/* Style riêng cho nút đăng ký */
+.btn-register {
+    background: #ffffff !important;
+    color: #1e40af !important;
+    border: 1px solid #1e40af !important;
+    margin-top: 12px !important;
+}
+
+.btn-register:hover {
+    background: #f0f4ff !important;
+}
     </style>
 </head>
 
@@ -33,15 +56,19 @@
         <h2 style="margin:6px 0 12px;font-size:18px; color: #333;">🔒 Đăng nhập Quiz App</h2>
         <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Luyện thi Kỹ năng đặc định số 2</p>
 
-        <form id="loginForm">
-            <input type="email" id="email" placeholder="Email" required
-                style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none;" />
-            
-            <input type="password" id="password" placeholder="Mật khẩu" required
-                style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none;" />
 
-            <button type="submit" id="loginBtn">Đăng nhập</button>
-        </form>
+
+        <form id="loginForm">
+    <input type="email" id="email" placeholder="Email" required
+        style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none;" />
+    
+    <input type="password" id="password" placeholder="Mật khẩu" required
+        style="width:100%;padding:12px 12px;margin:8px 0;border:1px solid #e5e7eb;border-radius:8px;outline:none;" />
+
+    <button type="submit" id="loginBtn">Đăng nhập</button>
+    
+    <button type="button" onclick="location.href='register.html'" class="btn-register">Đăng ký tài khoản</button>
+</form>
 
         <p id="message" style="margin-top:12px;font-size:14px;min-height:18px; line-height: 1.4;"></p>
 
@@ -131,6 +158,8 @@
                 } else {
                     // TRƯỜNG HỢP 2: ĐÃ CÓ HỒ SƠ
                     const userData = userSnap.data();
+                    // Tạo biến kiểm tra Admin
+                    const isAdmin = userData.role === 'admin';
                     if (userData.status === 'banned') {
                         await signOut(auth);
                         throw new Error("Tài khoản đã bị khóa.");
@@ -146,7 +175,7 @@
                         });
                     } else {
                         // B. Nếu là máy mới hoàn toàn
-                        if (deviceCount >= 1) { 
+                        if (!isAdmin && deviceCount >= 1) {
                             // Chặn ngay vì đã đủ 1 máy
                             await signOut(auth);
                             throw new Error("🚫 Tài khoản chỉ được sử dụng trên 1 thiết bị. Vui lòng liên hệ Admin để Reset.");
@@ -157,8 +186,8 @@
                                     name: currentDeviceName,
                                     addedAt: serverTimestamp(),
                                     last_login: serverTimestamp()
-                                },
-                                device_count: 1 // Ghi đè thành 1
+                               },
+            device_count: isAdmin ? deviceCount : 1 // Admin thì giữ nguyên hoặc tăng, không ép về 1
                             });
                         }
                     }

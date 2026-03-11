@@ -81,39 +81,45 @@
                     if(document.getElementById('modal-fb')) document.getElementById('modal-fb').href = `https://m.me/yourpage?text=${msg}`;
                     if(document.getElementById('modal-line')) document.getElementById('modal-line').href = `https://line.me/ti/p/~yourid`;
 
-                    // 5. LOGIC KHÓA ĐỀ THI
-                    document.querySelectorAll('.exam-list a').forEach(link => {
-                        const url = new URL(link.href, window.location.origin);
-                        const setParam = url.searchParams.get('set');
-                        const practiceParam = url.searchParams.get('practice');
-                        
-                        let isLocked = false;
+                 // 5. LOGIC KHÓA ĐỀ THI
+document.querySelectorAll('.exam-list a').forEach(link => {
+    const url = new URL(link.href, window.location.origin);
+    const setParam = url.searchParams.get('set');
+    const practiceParam = url.searchParams.get('practice');
+    const isPrometric = link.href.includes('prometric.html'); // Kiểm tra có phải link thi thử không
 
-                        if (!isPremium) {
-                            if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
-                                isLocked = true;
-                            }
-                        } 
-                        // MỚI (Thêm !isAdmin vào để Admin không bị check Group):
-                        else if (isPremium && practiceParam && !isAdmin) { 
-                        const requiredG = "g" + userGroup;
-                       if (!practiceParam.includes(requiredG)) {
-                        isLocked = true;
-                            }
-                        }
+    let isLocked = false;
 
-                        if (isLocked) {
-                            link.classList.add('exam-locked');
-                            link.addEventListener('click', (e) => {
-                                e.preventDefault();
-                                if (!isPremium) {
-                                    document.getElementById('premium-modal').style.display = 'flex';
-                                } else {
-                                    alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
-                                }
-                            });
-                        }
-                    });
+    if (!isPremium) {
+        // Nếu là link Prometric thì KHÔNG khóa (isLocked vẫn = false)
+        if (isPrometric) {
+            isLocked = false; 
+            // Cập nhật lại link để thêm giới hạn 30 câu cho người dùng thường
+            link.href = "prometric.html?set=questions.js&limit=30";
+        } 
+        else if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
+            isLocked = true;
+        }
+    } 
+    else if (isPremium && practiceParam && !isAdmin) {
+        const requiredG = "g" + userGroup;
+        if (!practiceParam.includes(requiredG)) {
+            isLocked = true;
+        }
+    }
+
+    if (isLocked) {
+        link.classList.add('exam-locked');
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!isPremium) {
+                document.getElementById('premium-modal').style.display = 'flex';
+            } else {
+                alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
+            }
+        });
+    }
+});
                 }
             } catch (error) {
                 console.error("Lỗi:", error);

@@ -39,6 +39,13 @@
 
 <div class="container">
     <div class="header">
+        <div style="margin-bottom: 20px; display: flex; gap: 10px;">
+    <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên hoặc email học viên..." 
+           style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none;">
+    <div style="background: white; padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; display: flex; align-items: center;">
+        Tổng: <strong id="userCount" style="margin-left: 5px; color: #1e40af;">0</strong>
+    </div>
+</div>
         <h2>Quản Lý Học Viên 海洋（かいよう）土木（どぼく）</h2>
         <button class="btn btn-refresh" onclick="location.reload()">🔄 Làm mới danh sách</button>
     </div>
@@ -79,7 +86,7 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
     const auth = getAuth(app);
-
+    let allUsers = []; // Biến này dùng để lưu dữ liệu gốc phục vụ tìm kiếm
     // KIỂM TRA ĐĂNG NHẬP VÀ QUYỀN ADMIN
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
@@ -108,59 +115,96 @@
         }
     });
 
-    async function fetchUsers() {
-        try {
-            const querySnapshot = await getDocs(collection(db, "users"));
-            const userList = document.getElementById('userList');
-            userList.innerHTML = '';
+async function fetchUsers() {
+    try {
+        const querySnapshot = await getDocs(collection(db, "users"));
+        allUsers = [];
 
-            querySnapshot.forEach((userDoc) => {
-                const data = userDoc.data();
-                const uid = userDoc.id;
-                const userGroup = data.group || "1";
-                let deviceIdText = "Chưa có máy";
+        querySnapshot.forEach((userDoc) => {
+            allUsers.push({ uid: userDoc.id, ...userDoc.data() });
+        });
 
-                if (data.devices && Object.keys(data.devices).length > 0) {
-                    deviceIdText = Object.keys(data.devices)[0];
-                }
+        // --- TỰ ĐỘNG SẮP XẾP A-Z THEO TÊN ---
+        allUsers.sort((a, b) => {
+            const nameA = (a.name || "").toLowerCase();
+            const nameB = (b.name || "").toLowerCase();
+            return nameA.localeCompare(nameB, 'vi');
+        });
 
-                const row = `
-                    <tr>
-                        <td>
-                            <strong>${data.name || 'Học viên mới'}</strong><br>
-                            <small style="color: #64748b">${data.email}</small>
-                        </td>
-                        <td>
-                            ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : '<span class="badge-g2">NHÓM 2</span>'}
-                            <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
-                                <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
-                                <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
-                            </select>
-                        </td>
-                        <td>
-                            ${data.isPremium ? '<span class="badge-premium">⭐ PREMIUM</span>' : '<span class="badge-free">MIỄN PHÍ</span>'}
-                        </td>
-                        <td>
-                            <b>${data.device_count || 0}/1</b>
-                            <span class="device-id">${deviceIdText}</span>
-                        </td>
-                        <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
-                            ${data.status === 'banned' ? '🚫 Đã khóa' : '✅ Hoạt động'}
-                        </td>
-                        <td>
-                            <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">
-                                ${data.isPremium ? 'Hạ cấp' : 'Mở Premium'}
-                            </button>
-                            <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset Máy</button>
-                            <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
-                                    onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
-                                ${data.status === 'banned' ? 'Mở khóa' : 'Khóa'}
-                            </button>
-                        </td>
-                    </tr>
-                `;
-                userList.innerHTML += row;
+        renderTable(allUsers); // Gọi hàm hiển thị
+
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('adminTable').style.display = 'table';
+    } catch (e) {
+        document.getElementById('loading').innerHTML = "❌ Lỗi: " + e.message;
+    }
+}
+
+// TÁCH RIÊNG HÀM HIỂN THỊ ĐỂ DÙNG CHO CẢ TÌM KIẾM
+function renderTable(users) {
+    const userList = document.getElementById('userList');
+    userList.innerHTML = '';
+    document.getElementById('userCount').innerText = users.length;
+
+    users.forEach((data) => {
+        const uid = data.uid;
+        const userGroup = data.group || "1";
+        let deviceIdText = (data.devices && Object.keys(data.devices).length > 0) 
+                           ? Object.keys(data.devices)[0] : "Chưa có máy";
+
+        const row = `
+            <tr>
+                <td>
+                    <strong>${data.name || 'Học viên mới'}</strong><br>
+                    <small style="color: #64748b">${data.email}</small>
+                </td>
+                <td>
+                    ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : '<span class="badge-g2">NHÓM 2</span>'}
+                    <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
+                        <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
+                        <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
+                    </select>
+                </td>
+                <td>
+                    ${data.isPremium ? '<span class="badge-premium">⭐ PREMIUM</span>' : '<span class="badge-free">MIỄN PHÍ</span>'}
+                </td>
+                <td>
+                    <b>${data.device_count || 0}/1</b>
+                    <span class="device-id">${deviceIdText}</span>
+                </td>
+                <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
+                    ${data.status === 'banned' ? '🚫 Đã khóa' : '✅ Hoạt động'}
+                </td>
+                <td>
+                    <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">
+                        ${data.isPremium ? 'Hạ cấp' : 'Mở Premium'}
+                    </button>
+                    <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset</button>
+                    <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
+                            onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
+                        ${data.status === 'banned' ? 'Mở' : 'Khóa'}
+                    </button>
+                </td>
+            </tr>`;
+        userList.innerHTML += row;
+    });
+}
+
+// XỬ LÝ SỰ KIỆN GÕ VÀO THANH TÌM KIẾM
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('adminSearchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const keyword = e.target.value.toLowerCase().trim();
+            const filtered = allUsers.filter(user => {
+                const name = (user.name || "").toLowerCase();
+                const email = (user.email || "").toLowerCase();
+                return name.includes(keyword) || email.includes(keyword);
             });
+            renderTable(filtered);
+        });
+    }
+});
 
             document.getElementById('loading').style.display = 'none';
             document.getElementById('adminTable').style.display = 'table';

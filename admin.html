@@ -7,9 +7,15 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
         .container { max-width: 1200px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
+        .header { display: flex; flex-direction: column; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .admin-info { background: #eff6ff; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2563eb; font-size: 13px; color: #1e40af; }
         
+        /* Search Box */
+        .search-container { display: flex; gap: 10px; margin-bottom: 10px; }
+        #adminSearchInput { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none; font-size: 14px; }
+        .count-box { background: white; padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; display: flex; align-items: center; white-space: nowrap; }
+
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th { background: #1e40af; color: white; padding: 12px; text-align: left; }
         td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 14px; vertical-align: middle; }
@@ -39,8 +45,17 @@
 
 <div class="container">
     <div class="header">
-        <h2>Quản Lý Học Viên 海洋（かいよう）土木（どぼく）</h2>
-        <button class="btn btn-refresh" onclick="location.reload()">🔄 Làm mới danh sách</button>
+        <div class="header-top">
+            <h2 style="margin:0;">Quản Lý Học Viên 海洋（かいよう）土木（どぼく）</h2>
+            <button class="btn btn-refresh" onclick="location.reload()">🔄 Làm mới danh sách</button>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên hoặc email học viên...">
+            <div class="count-box">
+                Tổng: <strong id="userCount" style="margin-left: 5px; color: #1e40af;">0</strong>
+            </div>
+        </div>
     </div>
 
     <div class="admin-info" id="current-admin-device">Đang xác thực quyền quản trị...</div>
@@ -79,126 +94,135 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
     const auth = getAuth(app);
+    let allUsers = []; 
 
-    // KIỂM TRA ĐĂNG NHẬP VÀ QUYỀN ADMIN
+    // 1. KIỂM TRA QUYỀN ADMIN
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
             window.location.href = "login.html";
             return;
         }
-
         try {
             const userDoc = await getDoc(doc(db, "users", user.uid));
-            
             if (!userDoc.exists() || userDoc.data().role !== 'admin') {
-                alert("🚫 Lỗi: Bạn không có quyền truy cập trang quản trị!");
+                alert("🚫 Bạn không có quyền quản trị!");
                 window.location.href = "index.html";
                 return;
             }
-
-            // Hiển thị thông tin máy Admin
-            const myDeviceId = localStorage.getItem('my_device_id') || "Chưa xác định";
-            document.getElementById('current-admin-device').innerHTML = `Chào Admin: <b>${userDoc.data().name}</b> | Thiết bị: ${navigator.platform}`;
-            
-            // Tải dữ liệu
+            document.getElementById('current-admin-device').innerHTML = `Chào Admin: <b>${userDoc.data().name}</b> | Hệ thống: ${navigator.platform}`;
             fetchUsers();
         } catch (error) {
             console.error(error);
-            alert("Lỗi xác thực hệ thống!");
         }
     });
 
+    // 2. TẢI DỮ LIỆU TỪ FIREBASE
     async function fetchUsers() {
         try {
             const querySnapshot = await getDocs(collection(db, "users"));
-            const userList = document.getElementById('userList');
-            userList.innerHTML = '';
-
+            allUsers = [];
             querySnapshot.forEach((userDoc) => {
-                const data = userDoc.data();
-                const uid = userDoc.id;
-                const userGroup = data.group || "1";
-                let deviceIdText = "Chưa có máy";
-
-                if (data.devices && Object.keys(data.devices).length > 0) {
-                    deviceIdText = Object.keys(data.devices)[0];
-                }
-
-                const row = `
-                    <tr>
-                        <td>
-                            <strong>${data.name || 'Học viên mới'}</strong><br>
-                            <small style="color: #64748b">${data.email}</small>
-                        </td>
-                        <td>
-                            ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : '<span class="badge-g2">NHÓM 2</span>'}
-                            <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
-                                <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
-                                <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
-                            </select>
-                        </td>
-                        <td>
-                            ${data.isPremium ? '<span class="badge-premium">⭐ PREMIUM</span>' : '<span class="badge-free">MIỄN PHÍ</span>'}
-                        </td>
-                        <td>
-                            <b>${data.device_count || 0}/1</b>
-                            <span class="device-id">${deviceIdText}</span>
-                        </td>
-                        <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
-                            ${data.status === 'banned' ? '🚫 Đã khóa' : '✅ Hoạt động'}
-                        </td>
-                        <td>
-                            <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">
-                                ${data.isPremium ? 'Hạ cấp' : 'Mở Premium'}
-                            </button>
-                            <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset Máy</button>
-                            <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
-                                    onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
-                                ${data.status === 'banned' ? 'Mở khóa' : 'Khóa'}
-                            </button>
-                        </td>
-                    </tr>
-                `;
-                userList.innerHTML += row;
+                allUsers.push({ uid: userDoc.id, ...userDoc.data() });
             });
 
+            // Sắp xếp A-Z
+            allUsers.sort((a, b) => (a.name || "").toLowerCase().localeCompare((b.name || "").toLowerCase(), 'vi'));
+
+            renderTable(allUsers);
             document.getElementById('loading').style.display = 'none';
             document.getElementById('adminTable').style.display = 'table';
         } catch (e) {
-            document.getElementById('loading').innerHTML = "❌ Lỗi tải dữ liệu: " + e.message;
+            document.getElementById('loading').innerHTML = "❌ Lỗi: " + e.message;
         }
     }
 
-    // GẮN HÀM VÀO WINDOW ĐỂ NÚT BẤM HOẠT ĐỘNG
+    // 3. HÀM HIỂN THỊ DỮ LIỆU
+    function renderTable(users) {
+        const userList = document.getElementById('userList');
+        userList.innerHTML = '';
+        document.getElementById('userCount').innerText = users.length;
+
+        users.forEach((data) => {
+            const uid = data.uid;
+            const userGroup = data.group || "1";
+            let deviceIdText = (data.devices && Object.keys(data.devices).length > 0) 
+                               ? Object.keys(data.devices)[0] : "Chưa có máy";
+
+            const row = `
+                <tr>
+                    <td>
+                        <strong>${data.name || 'Học viên mới'}</strong><br>
+                        <small style="color: #64748b">${data.email}</small>
+                    </td>
+                    <td>
+                        ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : '<span class="badge-g2">NHÓM 2</span>'}
+                        <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
+                            <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
+                            <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
+                        </select>
+                    </td>
+                    <td>
+                        ${data.isPremium ? '<span class="badge-premium">⭐ PREMIUM</span>' : '<span class="badge-free">MIỄN PHÍ</span>'}
+                    </td>
+                    <td>
+                        <b>${data.device_count || 0}/1</b>
+                        <span class="device-id">${deviceIdText}</span>
+                    </td>
+                    <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
+                        ${data.status === 'banned' ? '🚫 Khóa' : '✅ Active'}
+                    </td>
+                    <td>
+                        <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">Gói</button>
+                        <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset</button>
+                        <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
+                                onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
+                            ${data.status === 'banned' ? 'Mở' : 'Khóa'}
+                        </button>
+                    </td>
+                </tr>`;
+            userList.innerHTML += row;
+        });
+    }
+
+    // 4. LẮNG NGHE TÌM KIẾM
+    document.getElementById('adminSearchInput').addEventListener('input', (e) => {
+        const keyword = e.target.value.toLowerCase().trim();
+        const filtered = allUsers.filter(user => 
+            (user.name || "").toLowerCase().includes(keyword) || 
+            (user.email || "").toLowerCase().includes(keyword)
+        );
+        renderTable(filtered);
+    });
+
+    // 5. CÁC THAO TÁC CƠ SỞ DỮ LIỆU
     window.changeGroup = async (uid, newGroup) => {
-        if (confirm(`Chuyển học viên sang Nhóm ${newGroup}?`)) {
+        if (confirm(`Chuyển sang Nhóm ${newGroup}?`)) {
             await updateDoc(doc(db, "users", uid), { group: newGroup });
-            location.reload();
+            fetchUsers(); // Tải lại danh sách không cần F5
         }
     };
 
     window.togglePremium = async (uid, newStatus) => {
-        if (confirm(newStatus ? "Nâng cấp Premium cho học viên này?" : "Hạ cấp xuống bản Free?")) {
+        if (confirm(newStatus ? "Mở Premium?" : "Hạ cấp Free?")) {
             await updateDoc(doc(db, "users", uid), { isPremium: newStatus });
-            location.reload();
+            fetchUsers();
         }
     };
 
     window.resetDevice = async (uid) => {
-        if (confirm("Xác nhận Reset thiết bị?")) {
+        if (confirm("Reset thiết bị?")) {
             await updateDoc(doc(db, "users", uid), { device_count: 0, devices: {} });
-            alert("Đã reset thiết bị thành công!");
-            location.reload();
+            alert("Đã reset!");
+            fetchUsers();
         }
     };
 
     window.toggleStatus = async (uid, newStatus) => {
-        if (confirm("Thay đổi trạng thái tài khoản này?")) {
+        if (confirm("Thay đổi trạng thái?")) {
             await updateDoc(doc(db, "users", uid), { status: newStatus });
-            location.reload();
+            fetchUsers();
         }
     };
-
 </script>
 </body>
 </html>

@@ -10,7 +10,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 0,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về Hệ thống tích lũy kinh nghiệm nghề nghiệp xây dựng (CCUS).",
-  "explain": "Hệ thống CCUS được thiết kế để cải thiện đãi ngộ cho người lao động thông qua 技能（ぎのう）の公正（こうせい）な評価（ひょうか） (Đánh giá công bằng kỹ năng), giúp 効率（こうりつ）化（か） (Tăng hiệu quả) và 品質（ひんしつ）向上（こうじょう） (Nâng cao chất lượng). Việc 企業（きぎょう）の利潤（りじゅん）追求（ついきゅう） (Truy cầu lợi nhuận doanh nghiệp) không phải là mục đích trực tiếp của hệ thống này.\n\nTừ vựng:\n利潤（りじゅん）追求（ついきゅう）\n(truy cầu lợi nhuận)\n技能（ぎのう）\n(kỹ năng/tay nghề)\n公正（こうせい）\n(công bằng)\n効率（こうりつ）化（か）\n(tăng hiệu suất/hiệu quả hóa)\n品質（ひんしつ）向上（こうじょう）\n(nâng cao chất lượng)",
+  "explain": "Hệ thống CCUS được thiết kế để cải thiện đãi ngộ cho người lao động thông qua 技能（ぎのう）の公正（こうせい）な評価（ひょうか） (Đánh giá công bằng kỹ năng), giúp 効率（こうりつ）化（か） (Tăng hiệu quả) và 品質（ひんしつ）向上（こうじょう） (Nâng cao chất lượng). Việc 企業（きぎょう）の利潤（りじゅん）追求（ついきゅう） (Truy cầu lợi nhuận doanh nghiệp) không phải là mục đích trực tiếp của hệ thống này.\n\nTừ vựng:\n利潤（りじゅん）追求（ついきゅう）(truy cầu lợi nhuận)\n技能（ぎのう）(kỹ năng/tay nghề)\n公正（こうせい）(công bằng)\n効率（こうりつ）化（か）(tăng hiệu suất/hiệu quả hóa)\n品質（ひんしつ）向上（こうじょう）(nâng cao chất lượng)",
   "tip": "💡 CCUS tập trung vào việc ghi nhận năng lực thực tế của người thợ để đảm bảo họ nhận được mức lương xứng đáng."
 },
     {
@@ -23,7 +23,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 2,
   "vi": "Mục đích quan trọng nhất của việc họp giao ban sáng (Chouri) là gì?",
-  "explain": "Mục đích cốt lõi của 朝礼（ちょうれい） (họp sáng) tại 建設（けんせつ）現場（げんば） (công trường xây dựng) là chia sẻ thông tin để 事故（じこ）を防（ふせ）ぐ (phòng tránh tai nạn). Việc 確認（かくにん） (xác nhận) 人数（にんずう） (số người) hay ラジオ体操（たいそう） (tập thể dục) chỉ là các bước bổ trợ cho an toàn.\n\nTừ vựng:\n朝礼（ちょうれい）\n(họp giao ban sáng)\n目的（もくてき）\n(mục đích)\n建設（けんせつ）現場（げんば）\n(công trường xây dựng)\n事故（じこ）を防（ふせ）ぐ\n(phòng tránh tai nạn/sự cố)\n確認（かくにん）\n(xác nhận/kiểm tra)\n人数（にんずう）\n(số người)\nラジオ体操（たいそう）\n(tập thể dục buổi sáng)",
+  "explain": "Mục đích cốt lõi của 朝礼（ちょうれい） (họp sáng) tại 建設（けんせつ）現場（げんば） (công trường xây dựng) là chia sẻ thông tin để 事故（じこ）を防（ふせ）ぐ (phòng tránh tai nạn). Việc 確認（かくにん） (xác nhận) 人数（にんずう） (số người) hay ラジオ体操（たいそう） (tập thể dục) chỉ là các bước bổ trợ cho an toàn.\n\nTừ vựng:\n朝礼（ちょうれい）(họp giao ban sáng)\n目的（もくてき）(mục đích)\n建設（けんせつ）現場（げんば）(công trường xây dựng)\n事故（じこ）を防（ふせ）ぐ(phòng tránh tai nạn/sự cố)\n確認（かくにん）(xác nhận/kiểm tra)\n 人数（にんずう）(số người)\nラジオ体操（たいそう）(tập thể dục buổi sáng)",
   "tip": "💡 Hãy nhớ: An toàn là ưu tiên số 1, nên họp sáng chính là để ngăn chặn mọi rủi ro trước khi bắt đầu làm việc."
 },
     {
@@ -36,7 +36,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 3,
   "vi": "Hãy chọn bước được thực hiện đầu tiên trong quy trình thực hiện hoạt động KY (dự đoán nguy cơ) trước khi bắt đầu công việc.",
-  "explain": "Quy trình KY (Kiken Yochi) luôn bắt đầu bằng việc 危険（きけん）の発見（はっけん） (Phát hiện nguy hiểm). Sau khi tìm ra các yếu tố nguy hiểm, chúng ta mới tiến hành 対策（たいさく）の検討（けんとう） (Thảo luận biện pháp), 行動（こうどう）目標（もくひょう）の決定（けってい） (Quyết định mục tiêu hành động) và cuối cùng là かけ声（ごえ） (Hô khẩu hiệu) để xác nhận.\n\nTừ vựng:\n作業（さぎょう）開始（かいし）前（まえ）\n(trước khi bắt đầu công việc)\n手順（てじゅん）\n(trình tự/các bước)\n最初（さいしょ）\n(đầu tiên)\n危険（きけん）の発見（はっけん）\n(phát hiện nguy hiểm)\n対策（たいさく）の検討（けんとう）\n(thảo luận biện pháp đối phó)\n行動（こうどう）目標（もくひょう）\n(mục tiêu hành động)\nかけ声（ごえ）\n(hô khẩu hiệu/tiếng hô động viên)",
+  "explain": "Quy trình KY (Kiken Yochi) luôn bắt đầu bằng việc 危険（きけん）の発見（はっけん） (Phát hiện nguy hiểm). Sau khi tìm ra các yếu tố nguy hiểm, chúng ta mới tiến hành 対策（たいさく）の検討（けんとう） (Thảo luận biện pháp), 行動（こうどう）目標（もくひょう）の決定（けってい） (Quyết định mục tiêu hành động) và cuối cùng là かけ声（ごえ） (Hô khẩu hiệu) để xác nhận.\n\nTừ vựng:\n作業（さぎょう）開始（かいし）前（まえ）(trước khi bắt đầu công việc)\n手順（てじゅん）(trình tự/các bước)\n最初（さいしょ）(đầu tiên)\n危険（きけん）の発見（はっけん）(phát hiện nguy hiểm)\n対策（たいさく）の検討（けんとう）(thảo luận biện pháp đối phó)\n行動（こうどう）目標（もくひょう）(mục tiêu hành động)\nかけ声（ごえ）(hô khẩu hiệu/tiếng hô động viên)",
   "tip": "💡 Quy tắc cơ bản: Phải nhìn thấy 'nguy hiểm' trước thì mới biết cách để phòng tránh nó."
 },
     {
@@ -49,7 +49,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 3,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về Luật Lương tối thiểu.",
-  "explain": "Luật Lương tối thiểu 適用（てきよう） (áp dụng) cho tất cả người lao động bất kể 雇用（こよう）形態（けいたい） (hình thức thuê mướn như chính thức, bán thời gian, phái cử) hay 職種（しょくしゅ） (loại công việc). Do đó, nói rằng có hình thức hay nghề nghiệp không được áp dụng là sai.\n\nTừ vựng:\n最低（さいてい）賃金（ちんぎん）\n(lương tối thiểu)\n不適切（ふてきせつ）\n(không thích hợp)\n公正（こうせい）な競争（きょうそう）\n(cạnh tranh công bằng)\n雇用（こよう）形態（けいたい）\n(hình thức việc làm)\n適用（てきよう）\n(áp dụng)",
+  "explain": "Luật Lương tối thiểu 適用（てきよう） (áp dụng) cho tất cả người lao động bất kể 雇用（こよう）形態（けいたい） (hình thức thuê mướn như chính thức, bán thời gian, phái cử) hay 職種（しょくしゅ） (loại công việc). Do đó, nói rằng có hình thức hay nghề nghiệp không được áp dụng là sai.\n\nTừ vựng:\n最低（さいてい）賃金（ちんぎん）(lương tối thiểu)\n不適切（ふてきせつ）(không thích hợp)\n公正（こうせい）な競争（きょうそう）(cạnh tranh công bằng)\n雇用（こよう）形態（けいたい）(hình thức việc làm)\n適用（てきよう）(áp dụng)",
   "tip": "💡 Luật lương tối thiểu là 'lưới an toàn' cho mọi người lao động, không chừa một ai."
 },
   {
@@ -62,7 +62,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 3,
   "vi": "Mục đích của Luật An toàn vệ sinh lao động là gì?",
-  "explain": "目的（もくてき） (Mục đích) chính của 労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう） (Luật An toàn vệ sinh lao động) là nhằm 確保（かくほ） (đảm bảo) và 保護（ほご） (bảo vệ) cả 安全（あんぜん） (an toàn) lẫn 健康（けんこう） (sức khỏe) cho tất cả 労働者（ろうどうしゃ） (người lao động) tại nơi làm việc.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）\n(luật an toàn vệ sinh lao động)\n目的（もくてき）\n(mục đích)\n労働者（ろうどうしゃ）\n(người lao động)\n安全（あんぜん）\n(an toàn)\n健康（けんこう）\n(sức khỏe)\n保護（ほご）する\n(bảo vệ)\n確保（かくほ）する\n(đảm bảo)",
+  "explain": "目的（もくてき） (Mục đích) chính của 労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう） (Luật An toàn vệ sinh lao động) là nhằm 確保（かくほ） (đảm bảo) và 保護（ほご） (bảo vệ) cả 安全（あんぜん） (an toàn) lẫn 健康（けんこう） (sức khỏe) cho tất cả 労働者（ろうどうしゃ） (người lao động) tại nơi làm việc.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）(luật an toàn vệ sinh lao động)\n目的（もくてき）(mục đích)\n労働者（ろうどうしゃ）(người lao động)\n安全（あんぜん）(an toàn)\n健康（けんこう）(sức khỏe)\n保護（ほご）する(bảo vệ)\n確保（かくほ）する(đảm bảo)",
   "tip": "💡 Hãy nhớ: Luật này không chỉ bảo vệ an toàn khỏi tai nạn mà còn bảo vệ cả sức khỏe lâu dài của người lao động."
 },
   {
@@ -75,7 +75,7 @@ window.QUESTION_SETS["8"] = [
   ],
   "answer": 0,
   "vi": "Hãy chọn phương án đúng về việc chi trả phí Bảo hiểm thất nghiệp (Koyo Hoken).",
-  "explain": "雇用（こよう）保険（ほけん） (Bảo hiểm thất nghiệp) là loại bảo hiểm mà cả 労働者（ろうどうしゃ） (người lao động) và 事業（じぎょう） [chủ doanh nghiệp/công ty] đều phải có trách nhiệm お支払（しはら）い (chi trả/đóng phí) theo tỷ lệ nhất định.\n\nTừ vựng:\n雇用（こよう）保険（ほけん）法（ほう）\n(luật bảo hiểm thất nghiệp)\nお支払（しはら）い\n(việc chi trả/đóng tiền)\n適切（てきせつ）\n(thích hợp/đúng)\n労働者（ろうどうしゃ）\n(người lao động)\n事業（じぎょう）\n(doanh nghiệp/người sử dụng lao động)\n全額（ぜんがく）\n(toàn bộ số tiền)",
+  "explain": "雇用（こよう）保険（ほけん） (Bảo hiểm thất nghiệp) là loại bảo hiểm mà cả 労働者（ろうどうしゃ） (người lao động) và 事業（じぎょう） [chủ doanh nghiệp/công ty] đều phải có trách nhiệm お支払（しはら）い (chi trả/đóng phí) theo tỷ lệ nhất định.\n\nTừ vựng:\n雇用（こよう）保険（ほけん）法（ほう）(luật bảo hiểm thất nghiệp)\nお支払（しはら）い(việc chi trả/đóng tiền)\n適切（てきせつ）(thích hợp/đúng)\n労働者（ろうどうしゃ）(người lao động)\n事業（じぎょう）(doanh nghiệp/người sử dụng lao động)\n全額（ぜんがく）\n(toàn bộ số tiền)",
   "tip": "💡 Bảo hiểm thất nghiệp khác với Bảo hiểm tai nạn lao động (Rousai) ở chỗ người lao động cũng phải cùng công ty đóng phí hằng tháng."
 },
   {

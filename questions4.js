@@ -1,7 +1,10 @@
-// questions.js — Đề 2 (問91〜問120)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["4"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["4"] = {
+  "videoUrl": "https://drive.google.com/file/d/1pbNU--shLC_jmu6MqDFKfZo18Q2S4abK/preview", // Link video Youtube
+  "questions": [
+    {
   q: "問91　板金（ばんきん）工事（こうじ）に適切（てきせつ）がある工事（こうじ）を選（えら）べ。【学科55】",
   options: [
     "研（と）ぎ出（だ）し工事（こうじ）",
@@ -361,5 +364,6 @@ window.QUESTION_SETS["4"] = [
   answer: 2,
   vi: "Trong các loại công trình điện, công trình được gọi là ‘ngoại tuyến’ là gì?",
   explain: "外線（がいせん）工事（こうじ） là công việc nối dây điện trên cột điện và dẫn điện từ bên ngoài vào tòa nhà."
-},
-];
+}
+]
+};

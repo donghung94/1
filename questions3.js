@@ -1,7 +1,10 @@
-// questions.js — Đề 2 (問61〜問90)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["3"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["3"] = {
+  "videoUrl": "https://drive.google.com/file/d/15HdTCImzFweiJf1BENJSbys8vcWFP30-/preview", // Link video Youtube
+  "questions": [
+    {
   q: "問61　設計図（せっけいず）は何（なに）が反映（はんえい）されるか。",
   options: [
     "発注書（はっちゅうしょ）が望（のぞ）む性能（せいのう）や建物（たてもの）の形状（けいじょう）、寸法（すんぽう）、取（と）り合（あ）い部分（ぶぶん）の収（おさ）まり方（かた）",
@@ -350,4 +353,5 @@ window.QUESTION_SETS["3"] = [
   vi: "Chậu rửa mặt không thuộc thiết bị điện – viễn thông.",
   explain: "Các vật dụng điện – viễn thông như điện thoại, anten, bảo an khí... chậu rửa thuộc lĩnh vực cấp thoát nước, không phải viễn thông."
 }
-];
+]
+};

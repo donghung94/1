@@ -26,13 +26,12 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
-                    const isAdmin = data.role === 'admin'; // Xác định quyền Admin
-                    const isPremium = data.isPremium === true || isAdmin; // Admin mặc định là Premium
+                    const isAdmin = data.role === 'admin'; 
+                    const isPremium = data.isPremium === true || isAdmin; 
                     
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 
-                    // --- 1. CHẶN THIẾT BỊ (Bỏ qua nếu là Admin) ---
                     if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
                         alert("🚫 Thiết bị không hợp lệ. Bạn sẽ bị đăng xuất.");
                         await signOut(auth);
@@ -40,13 +39,11 @@
                         return;
                     }
 
-                    // --- 2. KIỂM TRA QUYỀN TRUY CẬP ĐỀ (Premium) ---
                     const urlParams = new URLSearchParams(window.location.search);
                     const setNum = urlParams.get('set');
                     const practice = urlParams.get('practice');
                     const allowedSets = ['1', '2', '3']; 
 
-                    // Nếu không phải Premium (và không phải Admin) thì mới hiện Modal khóa
                     if (!isPremium) {
                         if ((setNum && !allowedSets.includes(setNum)) || practice || setNum === 'randomExam') {
                             const modal = document.getElementById('premium-modal');
@@ -59,7 +56,6 @@
                         }
                     }
 
-                    // Hiển thị tên (thêm chữ Admin nếu là admin cho dễ phân biệt)
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
                         nameDisplay.innerText = isAdmin ? `(AD) ${data.name}` : (data.name || "Học viên");
@@ -119,8 +115,18 @@
     </div>
   </div>
 </header>
-     
+      
   <main class="container">
+  <div id="videoContainer" style="display: none; margin-bottom: 20px; text-align: center;">
+  <h3 style="color: #2c3e50; font-size: 1.1rem; margin-bottom: 10px;">🎥 Video giải đề</h3>
+  <div class="video-link">
+    <a id="videoBtn" href="#" target="_blank" rel="noopener noreferrer" 
+       style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: white; border-radius: 25px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       ▶️ Xem video
+    </a>
+  </div>
+</div>
+
     <div id="quiz" class="card"></div>
     <div id="result" class="card" style="display:none"></div>
   </main>
@@ -157,107 +163,34 @@
     .btn.ghost { background: #f3f4f6; color: #1e40af; font-weight: bold; border: 1px solid #1e40af; }
     .btn.ghost:hover { background: #e0e7ff; }
 
-    /* Style cho cụm nút Đảo */
     .shuffle-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        background: rgba(30, 64, 175, 0.1);
-        padding: 4px 8px;
-        border-radius: 20px;
+        display: flex; align-items: center; gap: 5px; background: rgba(30, 64, 175, 0.1); padding: 4px 8px; border-radius: 20px;
     }
     .shuffle-label { font-size: 11px; font-weight: bold; color: #1e40af; }
     .switch-small { position: relative; display: inline-block; width: 34px; height: 18px; }
     .switch-small input { opacity: 0; width: 0; height: 0; }
     .slider-small {
-        position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0;
-        background-color: #cbd5e1; transition: .4s; border-radius: 18px;
+        position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 18px;
     }
     .slider-small:before {
-        position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px;
-        background-color: white; transition: .4s; border-radius: 50%;
+        position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;
     }
     input:checked + .slider-small { background-color: #1e40af; }
     input:checked + .slider-small:before { transform: translateX(16px); }
-    /* Điều chỉnh Header để chia 2 hàng */
-.header {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 15px;
-    background: #fff;
-    border-bottom: 2px solid #7fb069;
-}
-
-/* Style cho cụm Đảo câu (Khoanh đen) */
-.shuffle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #f0f4ff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    border: 1px solid #d1d9ff;
-}
-.shuffle-label { font-size: 12px; font-weight: bold; color: #1e40af; }
-
-/* Nút Trang chủ và Nộp bài */
-.btn-home { font-size: 13px !important; padding: 5px 10px !important; }
-#submitBtn { font-weight: bold; border-radius: 8px; }
-    /* Header tổng chia thành cột dọc (2 hàng) */
-/* Header tổng bám sát 2 lề */
-.header {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 10px 15px !important;
-    background: #fff;
-    border-bottom: 2px solid #7fb069;
-    align-items: stretch !important; /* Quan trọng: Ép header rộng hết cỡ, không căn giữa con */
-}
-
-/* Các hàng con bên trong */
-.header-top, .header-bottom {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important; /* Đẩy ra 2 đầu */
-    align-items: center !important;
-    width: 100% !important;
-}
-
-/* Reset lại margin để các phần tử bám sát lề */
-.brand, .btn-home, .shuffle-wrapper, .exam-status {
-    margin: 0 !important;
-}
-
-/* Các thành phần bổ trợ */
-.exam-status {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-red {
-    background: #ee0000 !important;
-    color: white !important;
-    font-weight: bold;
-    border: none;
-    padding: 6px 15px;
-    border-radius: 8px;
-}
-
-.timer {
-    font-size: 20px;
-    font-weight: bold;
-    color: #1e40af;
-}
-
-.shuffle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #f0f4ff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    border: 1px solid #d1d9ff;
+    
+    .header {
+        display: flex !important; flex-direction: column !important; padding: 10px 15px !important; background: #fff; border-bottom: 2px solid #7fb069; align-items: stretch !important; 
+    }
+    .header-top, .header-bottom {
+        display: flex !important; flex-direction: row !important; justify-content: space-between !important; align-items: center !important; width: 100% !important;
+    }
+    .brand, .btn-home, .shuffle-wrapper, .exam-status { margin: 0 !important; }
+    .exam-status { display: flex; align-items: center; gap: 10px; }
+    .btn-red { background: #ee0000 !important; color: white !important; font-weight: bold; border: none; padding: 6px 15px; border-radius: 8px; }
+    .timer { font-size: 20px; font-weight: bold; color: #1e40af; }
+    /* Ép các phần tử này hiển thị đúng dấu xuống dòng từ JSON */
+.explain-box, .q-text, .tip, .answer-line {
+    white-space: pre-line !important;
 }
   </style>
 

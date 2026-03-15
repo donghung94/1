@@ -1,8 +1,9 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g2_1"] = [
-
+window.PRACTICE_SETS["g2_1"] = {
+  "videoUrl": "https://drive.google.com/file/d/1mJODJpyQfVn9eHu3o094PIJHkmuJVdRz/preview", // Link video Youtube
+  "questions": [
   {
     q: "問1　単管足場（たんかんあしば）の特徴（とくちょう）について、正（ただ）しいものを選（えら）べ。",
     options: [
@@ -404,4 +405,5 @@ window.PRACTICE_SETS["g2_1"] = [
   tip: "💡 Nhớ: **サイクル (Cycle)** là chu trình/bước đi. **靴(ぐつ)** (Giày) là vật dụng, không phải là bước đi."
 }
 
-];
+]
+};

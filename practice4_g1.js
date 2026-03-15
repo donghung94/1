@@ -1,8 +1,10 @@
-// File: practice2_g1_part1.js
+// File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_4"] = [
-{
+window.PRACTICE_SETS["g4_1"] = {
+    "videoUrl": "https://drive.google.com/file/d/1BF0d2Ily8z7K46b6McVTD_cM54mQNHPO/preview", // Link video Youtube
+  "questions": [
+  {
   q: "問91　手押（てお）し型（がた）の小型（こがた）のロードローラで何（なに）ですか。正（ただ）しいものを一（ひと）つ選（えら）べ。【108】",
   options: [
     "アスファルトフィニッシャー",
@@ -584,4 +586,5 @@ window.PRACTICE_SETS["g1_4"] = [
   explain: "**WBGT** (Wet Bulb Globe Temperature) là **chỉ số đo mức độ nóng bức (暑さ指数)**, giúp đánh giá nguy cơ say nắng và mệt mỏi do nhiệt trên công trường.",
   tip: "💡 WBGT = chỉ số nhiệt kết hợp độ ẩm, nhiệt độ và bức xạ mặt trời."
 }
-];
+]
+};

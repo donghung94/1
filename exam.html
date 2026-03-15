@@ -28,7 +28,7 @@
                     const data = userSnap.data();
                     const isAdmin = data.role === 'admin'; 
                     const isPremium = data.isPremium === true || isAdmin; 
-                    
+                    localStorage.setItem('isPremium', isPremium);
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 

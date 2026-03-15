@@ -1,7 +1,7 @@
 // File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_1"] = {
+window.PRACTICE_SETS["g3_1"] = {
     "videoUrl": "https://drive.google.com/file/d/14e4NwQghwt15Nw0T-BVB1l9rGCFzXrUy/preview", // Link video Youtube
   "questions": [
   {

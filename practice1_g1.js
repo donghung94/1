@@ -1,7 +1,9 @@
 // File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_1"] = [
+window.PRACTICE_SETS["g1_1"] = {
+    "videoUrl": "https://drive.google.com/file/d/1gGpT0tpaqYIlqeTlaILwBr56Xb7ijLg0/preview", // Link video Youtube
+  "questions": [
   {
     q: "問1　浮標（ふひょう）の定義（ていぎ）は何（なに）か。【105】",
     img: "images/5102.png",
@@ -420,5 +422,6 @@ window.PRACTICE_SETS["g1_1"] = [
     explain: "Đó là 近道行動（ちかみちこうどう）・省略行動（しょうりゃくこうどう）, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
     tip: "💡 省略＝rút gọn, 近道＝đi đường tắt → bỏ bước = hành vi nguy hiểm."
   }
-];
+]
+};
 

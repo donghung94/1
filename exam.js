@@ -32,6 +32,16 @@
   const redoBtn = $("#redoWrong");
   const timerEl = $("#timer");
 
+  // ================== XỬ LÝ HIỂN THỊ VIDEO ==================
+  const vContainer = $("#videoContainer");
+  const vBtn = $("#videoBtn"); // Bắt đúng ID của nút bấm
+  let videoUrl = DATA.videoUrl || null; 
+
+  // Gán link video vào thuộc tính href của nút bấm
+  if (vBtn && videoUrl) {
+    vBtn.href = videoUrl;
+  }
+
   // ---------------- TIMER ----------------
   let timeLeft = 3600;
   const tick = () => {
@@ -53,8 +63,7 @@
     return arr;
   }
 
-  // ================== KIỂM TRA CHẾ ĐỘ ĐẢO CÂU (MỚI) ==================
-  // Lấy trạng thái từ nút gạt ở Header
+  // ================== KIỂM TRA CHẾ ĐỘ ĐẢO CÂU ==================
   const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
   const sourceQuestions = DATA.questions || DATA;
 
@@ -67,15 +76,11 @@
       correct: i === correctIndex
     }));
 
-    // Chỉ đảo đáp án nếu nút gạt đang BẬT
     if (isShuffleActive) shuffle(opts);
-
     return { ...q, options: opts };
   });
 
-  // Chỉ đảo thứ tự câu hỏi nếu nút gạt đang BẬT
   if (isShuffleActive) shuffle(questions);
-
 
   let cur = 0;
   const user = new Array(questions.length).fill(null);
@@ -100,6 +105,15 @@
     if (!questions.length) {
       quizEl.innerHTML = "<p>Không có dữ liệu câu hỏi.</p>";
       return;
+    }
+
+    // --- LOGIC ẨN/HIỆN NÚT VIDEO THEO CÂU HỎI ---
+    if (vContainer) {
+      if (cur === 0 && videoUrl) {
+        vContainer.style.display = "block"; // Chỉ hiện ở câu đầu tiên
+      } else {
+        vContainer.style.display = "none";  // Ẩn đi ở các câu sau
+      }
     }
 
     const q = questions[cur];
@@ -127,7 +141,7 @@
       </div>
       <div id="explainBox" class="explain-box" style="display:${hasAnswered?"block":"none"};">
         ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
-        ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain}</div>` : ""}
+       ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain.replace(/\n/g, '<br>')}</div>` : ""}
         ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
       </div>
     `;
@@ -157,7 +171,15 @@
     });
 
     $("#backBtn").onclick = () => { if (cur > 0) { cur--; render(); } };
-    $("#nextBtn").onclick = () => { if (user[cur] !== null && cur < questions.length - 1) { cur++; render(); } };
+    
+    // Nút Tiếp theo
+    $("#nextBtn").onclick = () => { 
+      if (user[cur] !== null && cur < questions.length - 1) { 
+        cur++; 
+        render(); 
+      } 
+    };
+
     $("#explainBtn").onclick = () => {
       const box = $("#explainBox");
       box.style.display = (box.style.display === "none") ? "block" : "none";
@@ -185,13 +207,17 @@
           <div class="answer-line">❌ <b>Bạn chọn:</b> ${picked!==null?q.options[picked].text:"(chưa chọn)"}</div>
           <div class="answer-line">✅ <b>Đáp án đúng:</b> ${right.text}</div>
           ${q.vi?`<div><b>Dịch:</b> ${q.vi}</div>`:""}
-          ${q.explain?`<div class="explain-box"><b>📘 Giải thích:</b> ${q.explain}</div>`:""}
+         ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain.replace(/\n/g, '<br>')}</div>` : ""}
           ${q.tip?`<div class="tip">${q.tip}</div>`:""}
         </div>
       `;
     }).join("");
 
     quizEl.style.display="none";
+    
+    // Ẩn nút video khi nộp bài
+    if (vContainer) vContainer.style.display = "none"; 
+    
     resEl.style.display="block";
     resEl.innerHTML = `
       <div class="result-title">✅ Bạn làm đúng ${correct}/${questions.length}</div>

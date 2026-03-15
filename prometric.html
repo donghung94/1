@@ -150,40 +150,12 @@
     let timeLeft = 3600;
 
     function loadData() {
-    const qSets = window.QUESTION_SETS || {};
-    
-    // Lấy tham số limit từ URL (ví dụ: prometric.html?limit=30)
-    const urlParams = new URLSearchParams(window.location.search);
-    const limit = urlParams.get('limit');
-    
-    // Nếu có limit (người dùng Free), chỉ lấy bộ câu hỏi từ questions.js (ID là '1')
-    // Nếu không có limit (Premium/Admin), lấy toàn bộ 8 bộ đề
-    let ids = ['1', '2', '3', '4', '5', '6', '7', '8'];
-    
-    if (limit) {
-        ids = ['1']; // Chỉ lấy đề 1 để giới hạn nội dung
-        console.log("Chế độ học thử: Giới hạn 30 câu từ bộ đề 1.");
+        const qSets = window.QUESTION_SETS || {};
+        const ids = ['1','2','3','4','5','6','7','8'];
+        ids.forEach(id => { if(qSets[id]) currentQuestions = currentQuestions.concat(qSets[id]); });
+        currentQuestions = currentQuestions.sort(() => Math.random() - 0.5).slice(0, 40);
+        return currentQuestions.length > 0;
     }
-
-    currentQuestions = [];
-    ids.forEach(id => { 
-        if(qSets[id]) currentQuestions = currentQuestions.concat(qSets[id]); 
-    });
-
-    // Xáo trộn ngẫu nhiên
-    currentQuestions = currentQuestions.sort(() => Math.random() - 0.5);
-
-    // Nếu có limit thì cắt lấy đúng số lượng (30 câu)
-    if (limit) {
-        const limitCount = parseInt(limit);
-        currentQuestions = currentQuestions.slice(0, limitCount);
-    } else {
-        // Nếu là Premium/Admin thì lấy 40 hoặc 60 câu tùy ý bạn (mặc định đang để 40)
-        currentQuestions = currentQuestions.slice(0, 40);
-    }
-
-    return currentQuestions.length > 0;
-}
 
     function convertFurigana(text) {
         if (!text) return "";

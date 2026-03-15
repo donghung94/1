@@ -1,7 +1,10 @@
-// questions.js — Đề 1 (問1〜問8)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["1"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["1"] = {
+  "videoUrl": "https://drive.google.com/file/d/14zuUu2HYa0Rr6okgUrSV7JQgaY2mZFmA/preview", // Link video Youtube
+  "questions": [
+    {
   id: 1,
   q: "問1 スプリンクラーは、なんの工事（こうじ）か。",
   options: [
@@ -378,4 +381,5 @@ window.QUESTION_SETS["1"] = [
   explain: "Đó là **水平(すいへい)積(つ)み上(あ)げ方式(ほうしき)** (Phương pháp xếp chồng ngang rồi nâng lên). Trong bối cảnh này, thuật ngữ này được sử dụng để chỉ phương pháp nâng cần cẩu tháp lên từng tầng (**1階(いっかい)ずつ**) theo chiều cao của công trình.",
   tip: "💡 Nhớ: **タワークレーン (Cần cẩu tháp) + 1階　(いっかい)ずつ = 水平積　(すいへいづみ)　み上　(あ)げ方式　(あげほうしき) (Phương pháp nâng lên theo chiều ngang)."
 }
-];
+]
+};

@@ -1,7 +1,10 @@
+// File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_3"] = [
-{
+window.PRACTICE_SETS["g1_1"] = {
+    "videoUrl": "https://drive.google.com/file/d/14e4NwQghwt15Nw0T-BVB1l9rGCFzXrUy/preview", // Link video Youtube
+  "questions": [
+  {
   q: "問61　鉄筋（てっきん）のかぶり（鉄筋と型枠のすきま）を確保（かくほ）する部材（ぶざい）は何（なに）か。【114】",
   options: [
     "結束線（けっそくせん）",
@@ -404,5 +407,6 @@ window.PRACTICE_SETS["g1_3"] = [
   vi: "Well point là gì? Hãy chọn đáp án đúng nhất.",
   explain: "**ウェルポイント** là một **ống cấp nước 水給管（すいきゅうかん）* có gắn **lưới lọc 網（あみ）** để hút nước ngầm. Nó được sử dụng trong công trình hạ thấp mực nước ngầm (ウェルポイント工事).",
   tip: "💡 Dùng để hạ mực nước ngầm và làm khô nền đất trong thi công móng."
-},
-  ];
+}
+  ]
+};

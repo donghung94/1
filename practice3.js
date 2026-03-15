@@ -391,4 +391,5 @@ window.PRACTICE_SETS["g2_3"] = {
   explain: "Đó là **ランマ (Rammer/Máy đầm)** . Máy này tạo ra lực tác động thẳng đứng mạnh mẽ để nén và làm chắc đất, đặc biệt là trong các khu vực hẹp hoặc xung quanh cọc. (Lưu ý: **バイブレータ** dùng để đầm **bê tông**)." ,
   tip: "💡 Nhớ: Máy làm **chắc đất (**地面(じめん)を固(かた)める**) → **ランマ**."
 }
-];
+]
+};

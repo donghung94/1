@@ -149,9 +149,9 @@
     let flags = [];
     let timeLeft = 3600;
 
-   function loadData() {
+  function loadData() {
         const qSets = window.QUESTION_SETS || {};
-        const ids = ['1','2','3','4','5','6','7','8','9'];
+        const ids = ['1','2','3','4','5','6','7','8'];
         
         // Lấy trạng thái Premium từ bộ nhớ
         const isPremiumUser = localStorage.getItem('isPremium') === 'true';
@@ -173,6 +173,7 @@
         }
 
         return currentQuestions.length > 0;
+    
     }
 
     function convertFurigana(text) {

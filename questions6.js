@@ -1,7 +1,10 @@
-// questions.js — Đề 2 (問151〜問180)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["6"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["6"] = {
+  "videoUrl": "https://drive.google.com/file/d/13CuPqRAMXaGMBydz9l4g2tT14fdWR0dP/preview", // Link video Youtube
+  "questions": [
+    {
     q: "問151　建設業（けんせつぎょう）の問題（もんだい）について、特（とく）に重要（じゅうよう）な問題（もんだい）は何（なに）か。【87】",
     options: [
       "人手不足（ひとでぶそく）",
@@ -364,5 +367,6 @@ window.QUESTION_SETS["6"] = [
     vi: "Để tiến hành thi công một cách trôi chảy, điều gì giữa các nhà thầu chuyên môn là quan trọng?",
     explain: "Để tiến hành thi công suôn sẻ, sự hợp tác và phối hợp nhóm (チームワーク) giữa các nhà thầu là điều quan trọng ."
   }
-];
+]
+};
   

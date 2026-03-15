@@ -1,7 +1,10 @@
-// questions.js — Đề 2 (問121〜問150)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["5"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["5"] = {
+  "videoUrl": "https://drive.google.com/file/d/1Imvs2uVRChSOaKT6jGlmOXJuLdWn4tZy/preview", // Link video Youtube
+  "questions": [
+    {
   q: "問121　手待（てま）ちの原因（げんいん）について正（ただ）しくないものを選（えら）べ【20】",
   options: [
     "クレーン等（など）の使用（しよう）待（ま）ち",
@@ -350,5 +353,6 @@ window.QUESTION_SETS["5"] = [
     answer: 3,
     vi: "Lò dùng để đốt rác thải sinh hoạt hoặc công nghiệp gọi là焼鈍炉（しょうどんろ）(lò thiêu).",
     explain: "焼却炉（しょうきゃくろ） là lò thiêu rác được dùng trong các nhà máy xử lý chất thải, giúp đốt rác ở nhiệt độ cao để giảm thể tích và ngăn ô nhiễm môi trường."
-  },
-];
+  }
+]
+};

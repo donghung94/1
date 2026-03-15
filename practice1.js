@@ -2,7 +2,7 @@
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
 window.PRACTICE_SETS["g2_1"] = {
-  "videoUrl": "https://drive.google.com/file/d/1mJODJpyQfVn9eHu3o094PIJHkmuJVdRz/preview", // Link video Youtube
+  "videoUrl": "https://drive.google.com/file/d/1u150UMjUu_YofEHNoCBIyfpHAk0wRyV1/preview", // Link video Youtube
   "questions": [
   {
     q: "問1　単管足場（たんかんあしば）の特徴（とくちょう）について、正（ただ）しいものを選（えら）べ。",

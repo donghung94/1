@@ -149,11 +149,29 @@
     let flags = [];
     let timeLeft = 3600;
 
-    function loadData() {
+   function loadData() {
         const qSets = window.QUESTION_SETS || {};
-        const ids = ['1','2','3','4','5','6','7','8'];
-        ids.forEach(id => { if(qSets[id]) currentQuestions = currentQuestions.concat(qSets[id]); });
-        currentQuestions = currentQuestions.sort(() => Math.random() - 0.5).slice(0, 40);
+        const ids = ['1','2','3','4','5','6','7','8','9'];
+        
+        // Lấy trạng thái Premium từ bộ nhớ
+        const isPremiumUser = localStorage.getItem('isPremium') === 'true';
+
+        ids.forEach(id => { 
+            if(qSets[id]) currentQuestions = currentQuestions.concat(qSets[id]); 
+        });
+
+        // Xáo trộn toàn bộ câu hỏi
+        currentQuestions = currentQuestions.sort(() => Math.random() - 0.5);
+
+        // LOGIC CHẶN 30 CÂU:
+        // Nếu không phải Premium, chỉ lấy tối đa 30 câu để thi thử
+        if (!isPremiumUser) {
+            currentQuestions = currentQuestions.slice(0, 30);
+        } else {
+            // Nếu là Premium thì lấy 40 câu như bình thường
+            currentQuestions = currentQuestions.slice(0, 40);
+        }
+
         return currentQuestions.length > 0;
     }
 

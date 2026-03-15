@@ -149,31 +149,39 @@
     let flags = [];
     let timeLeft = 3600;
 
-  function loadData() {
+function loadData() {
         const qSets = window.QUESTION_SETS || {};
-        const ids = ['1','2','3','4','5','6','7','8'];
-        
-        // Lấy trạng thái Premium từ bộ nhớ
         const isPremiumUser = localStorage.getItem('isPremium') === 'true';
 
-        ids.forEach(id => { 
-            if(qSets[id]) currentQuestions = currentQuestions.concat(qSets[id]); 
-        });
+        // 1. CHỌN NGUỒN DỮ LIỆU
+        if (!isPremiumUser) {
+            // Tài khoản thường: CHỈ lấy từ bộ đề 1
+            if (qSets['1']) {
+                currentQuestions = JSON.parse(JSON.stringify(qSets['1'])); 
+            }
+        } else {
+            // Tài khoản Premium: Gom tất cả bộ đề như cũ
+            const ids = ['1','2','3','4','5','6','7','8','9'];
+            ids.forEach(id => { 
+                if (qSets[id]) {
+                    currentQuestions = currentQuestions.concat(qSets[id]);
+                }
+            });
+        }
 
-        // Xáo trộn toàn bộ câu hỏi
+        // 2. XÁO TRỘN
         currentQuestions = currentQuestions.sort(() => Math.random() - 0.5);
 
-        // LOGIC CHẶN 30 CÂU:
-        // Nếu không phải Premium, chỉ lấy tối đa 30 câu để thi thử
+        // 3. GIỚI HẠN SỐ LƯỢNG
         if (!isPremiumUser) {
+            // Chặn ở 30 câu đầu của bộ 1
             currentQuestions = currentQuestions.slice(0, 30);
         } else {
-            // Nếu là Premium thì lấy 40 câu như bình thường
+            // Lấy 40 câu ngẫu nhiên từ kho đề khổng lồ
             currentQuestions = currentQuestions.slice(0, 40);
         }
 
         return currentQuestions.length > 0;
-    
     }
 
     function convertFurigana(text) {

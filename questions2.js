@@ -1,7 +1,10 @@
-// questions.js — Đề 2 (問31〜問60)
 window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["2"] = [
-{
+
+// CHỈ bộ nào muốn có video thì làm theo mẫu này:
+window.QUESTION_SETS["2"] = {
+  "videoUrl": "https://drive.google.com/file/d/1gQB00gtLkUk5GIOSnvWoLycPlQbnXALB/preview", // Link video Youtube
+  "questions": [
+    {
   q: "問31　排水（はいすい）を下水道（げすいどう）に流（なが）してはいけない理由（りゆう）として、不適切（ふてきせつ）なものを選（えら）べ。",
   options: [
     "他（た）の排水（はいすい）と混（ま）ざると有毒（ゆうどく）ガスが発生（はっせい）するから",
@@ -368,4 +371,5 @@ window.QUESTION_SETS["2"] = [
   vi: "Trong ngành điện, 'bay' hoặc 'rơi' thường chỉ hiện tượng ngắt mạch do cầu dao tự động ngắt.",
   explain: "Đáp án đúng: ブレーカーが作動（さどう）して、回路（かいろ）が解放（かいほう）される — mô tả hiện tượng khi cầu dao tự ngắt mạch điện."
 }
-];
+]
+};

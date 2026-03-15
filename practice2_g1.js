@@ -1,10 +1,10 @@
 // File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_2"] = {
-    "videoUrl": "https://drive.google.com/file/d/1QRK8AVmYzI8pToCPqTfASDNkZ-_dQlMe/preview", // Link video Youtube
+window.PRACTICE_SETS["g1_1"] = {
+    "videoUrl": "https://drive.google.com/file/d/1gGpT0tpaqYIlqeTlaILwBr56Xb7ijLg0/preview", // Link video Youtube
   "questions": [
-      {
+  {
     q: "問31　安全（あんぜん）衛生（えいせい）旗（はた）の意味（いみ）はなんですか？",
     img: "images/0031.png",
     options: [

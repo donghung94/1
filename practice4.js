@@ -1,7 +1,9 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g2_4"] = [
+window.PRACTICE_SETS["g2_4"] = {
+    "videoUrl": "https://drive.google.com/file/d/1EN9vYi6xGd_Z8w8IYSUCgycAJNBL5DpI/preview", // Link video Youtube
+  "questions": [
 
 {
   q: "問91. この写真(しゃしん)の工具(こうぐ)は、何(なに)か。【135】",
@@ -494,4 +496,5 @@ window.PRACTICE_SETS["g2_4"] = [
   explain: "Lỗi do **suy đoán/giả định (おもいこみ)**, tức là tin rằng một điều gì đó là đúng mà không kiểm tra, là một lỗi trong quá trình xử lý thông tin và được gọi là **認知(にんち)ミス (Ninchi Misu - Lỗi nhận thức/Lỗi tri giác)** . Lỗi này liên quan đến việc hiểu sai hoặc nhận thức sai về tình huống.",
   tip: "💡 Nhớ: **思(おも)い込(こ)み** (Sự suy đoán/Giả định) → **認知(にんち)ミス** (Lỗi nhận thức)."
 }
-];
+]
+};

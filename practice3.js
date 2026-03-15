@@ -1,7 +1,9 @@
 // File: practice1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g2_3"] = [
+window.PRACTICE_SETS["g2_3"] = {
+    "videoUrl": "https://drive.google.com/file/d/1dY57VCcvz5d4rM1TJ0guUjf4bIam0J8Y/preview", // Link video Youtube
+  "questions": [
   
 {
   q: "問61. どんな工事(こうじ)か。【160】",

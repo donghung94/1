@@ -63,9 +63,17 @@
     return arr;
   }
 
-  // ================== KIỂM TRA CHẾ ĐỘ ĐẢO CÂU ==================
+// ================== KIỂM TRA CHẾ ĐỘ ĐẢO CÂU ==================
   const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
-  const sourceQuestions = DATA.questions || DATA;
+  let sourceQuestions = DATA.questions || DATA; // Chú ý: Đổi const thành let ở đây
+
+  // ================== KIỂM TRA BẢN QUYỀN ==================
+  const isPremiumUser = localStorage.getItem('isPremium') === 'true';
+  
+  // Nếu tài khoản KHÔNG phải Premium và đang làm Bộ đề 1 (Lý thuyết chung) -> Chỉ lấy 30 câu đầu
+  if (!isPremiumUser && setId === '1') {
+      sourceQuestions = sourceQuestions.slice(0, 30);
+  }
 
   // ================== BUILD QUESTIONS ==================
   const questions = sourceQuestions.map(q => {

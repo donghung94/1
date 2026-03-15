@@ -1,8 +1,9 @@
 
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g2_2"] = [
-
+window.PRACTICE_SETS["g2_2"] =  {
+  "videoUrl": "https://drive.google.com/file/d/16UX_pvSMPOZlck0kecvfNYOuNmEVPNDT/preview", // Link video Youtube
+  "questions": [
 {
   q: "問31.クローラー式(しき)の走行(そうこう)装着(そうちゃく)の前面(ぜんめん)に、可動式(かどうしき)の排土板(はいどばん)を装着(そうちゃく)し、主(おも)として掘削(くっさく)、運搬(うんぱん)を行(おこな)う機械(きかい)は何(なに)か。【101】",
   options: [
@@ -387,4 +388,5 @@ window.PRACTICE_SETS["g2_2"] = [
   tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén 圧縮力（あっしゅくりょく）, yếu khi bị kéo 引（ひ）っ張（ぱ）."
 }
 
-];
+]
+};

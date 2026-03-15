@@ -1,8 +1,9 @@
-// File: practice2_g1_part1.js
+// File: practice1_g1_part1.js
 window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 
-window.PRACTICE_SETS["g1_2"] = [
-  {
+window.PRACTICE_SETS["g1_1"] = {
+    "videoUrl": "https://drive.google.com/file/d/1QRK8AVmYzI8pToCPqTfASDNkZ-_dQlMe/preview", // Link video Youtube
+  "questions": [
     q: "問31　安全（あんぜん）衛生（えいせい）旗（はた）の意味（いみ）はなんですか？",
     img: "images/0031.png",
     options: [
@@ -416,5 +417,6 @@ window.PRACTICE_SETS["g1_2"] = [
   vi: "Dụng cụ dùng để buộc chặt và cố định các thanh thép là gì?",
   explain: "**ハッカー (Hacker)** là móc buộc thép, dùng để xoắn và cố định dây buộc (結束線)けっそくせん quanh các thanh thép.",
   tip: "💡 ハッカー = móc buộc thép (xoắn dây thép)."
-},
-];
+}
+]
+};

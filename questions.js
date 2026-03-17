@@ -4,69 +4,75 @@ window.QUESTION_SETS = window.QUESTION_SETS || {};
 window.QUESTION_SETS["1"] = {
   "videoUrl": "https://drive.google.com/file/d/14zuUu2HYa0Rr6okgUrSV7JQgaY2mZFmA/preview", // Link video Youtube
   "questions": [
-    {
-  id: 1,
-  q: "問1 スプリンクラーは、なんの工事（こうじ）か。",
-  options: [
-    "海洋（かいよう）土木（どぼく）工事（こうじ）",
-    "通信（つうしん）工事（こうじ）",
-    "土木（どぼく）工事（こうじ）",
-    "消防（しょうぼう）設備（せつび）工事（こうじ）"
-  ],
-  answer: 3,
-  vi: "Hệ thống sprinkler thuộc loại công trình nào?",
-  explain: "Đáp án đúng:  Thuộc công trình thiết bị phòng cháy chữa cháy 消防（しょうぼう）設備（せつび）工事（こうじ）."
-},
-{
-  id: 2,
-  q: "問2 建物（たてもの）の中（なか）から外（そと）に通（つう）じる通信（つうしん）回線（かいせん）を管理（かんり）・接続（せつぞく）するための配線盤（はいせんばん）を何（なん）というか。",
-  options: [
-    "分電盤（ぶんでんばん）",
-    "MDF",
-    "PBX",
-    "分配器（ぶんぱいき）"
-  ],
-  answer: 1,
-  vi: "Bảng dây dùng để quản lý và kết nối đường dây thông tin từ trong ra ngoài tòa nhà gọi là gì?",
-  explain: "Đáp án đúng: — MDF (Main Distribution Frame) là bảng phân phối chính của hệ thống thông tin."
-},
-{
-  id: 3,
-  q: "問3 給排水（きゅうはいすい）衛生（えいせい）設備（せつび）工事（こうじ）について、適切（てきせつ）なものを選（えら）べ。",
-  options: [
-    "給湯（きゅうとう）設備（せつび）工事（こうじ）",
-    "地熱井（ちねつい）工事（こうじ）",
-    "塗装（とそう）工事（こうじ）",
-    "舗装（ほそう）工事（こうじ）"
-  ],
-  answer: 0,
-  vi: "Chọn loại công trình phù hợp với công trình thiết bị vệ sinh cấp thoát nước.",
-  explain: "Đáp án đúng:  — Công trình thiết bị cấp nước nóng thuộc nhóm cấp thoát nước và vệ sinh."
-},
-{
-  id: 4,
-  q: "問4 内外装（ないがいそう）仕上（しあ）げ工事（こうじ）に含（ふく）まれないものはどれか。",
-  options: [
-    "ガス",
-    "屋根（やね）",
-    "カーテンウォール",
-    "防水（ぼうすい）"
-  ],
-  answer: 0,
-  vi: "Trong các loại sau, loại nào không thuộc công trình hoàn thiện nội ngoại thất?",
-  explain: "Đáp án đúng:  — Gas không thuộc nhóm hoàn thiện nội ngoại thất."
-},
-{
-  "q": "問5. 工程表(こうていひょう)からは、「作業(さぎょう)の手順(てじゅん)」「作業(さぎょう)に必要(ひつよう)な日数(にっすう)」「作業(さぎょう)進行(しんこう)の度合(どあい)」「工期(こうき)に影響(えいきょう)する作業(さぎょう)」の4つが読(よ)み取(と)れることが望(のぞ)ましく、この4つが読(よ)み取(と)れるのはどれか【44 職長】",
+  {
+  "id": 1,
+  "q": "問(もん)1. スプリンクラーは、なんの工事(こうじ)か。",
   "options": [
-    "1. ガントチャート",
-    "2. バーチャート",
-    "3. グラフ式(しき)工程表(こうていひょう)",
-    "4. ネットワーク式(しき)工程表(こうていひょう)"
+    "1．海洋(かいよう)土木(どぼく)工事(こうじ)",
+    "2．通信(つうしん)工事(こうじ)",
+    "3．土木(どぼく)工事(こうじ)",
+    "4．消防(しょうぼう)設備(せつび)工事(こうじ)"
+  ],
+  "answer": 3,
+  "vi": "Hệ thống Sprinkler thuộc loại công trình nào?",
+  "explain": "Hệ thống Sprinkler là vòi phun nước tự động được lắp đặt để chữa cháy khi có hỏa hoạn xảy ra, vì vậy nó thuộc về nhóm công trình thiết bị phòng cháy chữa cháy.\n\nTừ vựng:\nスプリンクラー: Hệ thống vòi phun nước tự động\n消防(しょうぼう): Phòng cháy chữa cháy\n設備(せつび): Thiết bị\n工事(こうじ): Công trình / Thi công\n海洋(かいよう): Hải dương / Biển\n通信(つうしん): Thông tin liên lạc",
+  "tip": "💡 Mẹo nhớ: Thấy từ スプリンクラー (vòi phun nước) hãy chọn ngay đáp án có chữ 消防(しょうぼう) (phòng cháy)."
+},
+{
+  "id": 2,
+  "q": "問(もん)2. 建物(たてもの)の中(なか)から外(そと)に通(つう)じる通信(つうしん)回線(かいせん)を管理(かんり)・接続(せつぞく)するための配線盤(はいせんばん)を何(なん)というか。",
+  "options": [
+    "1．分電盤(ぶんでんばん)",
+    "2．MDF",
+    "3．PBX",
+    "4．分配器(ぶんぱいき)"
+  ],
+  "answer": 1,
+  "vi": "Bảng dây dùng để quản lý và kết nối đường dây thông tin từ trong ra ngoài tòa nhà gọi là gì?",
+  "explain": "MDF (Main Distribution Frame) là khung phân phối chính, nơi tập trung các đường dây thuê bao từ ngoài vào và kết nối với hệ thống bên trong tòa nhà.\n\nTừ vựng:\n建物(たてもの): Tòa nhà\n中(なか): Bên trong\n外(そと): Bên ngoài\n通信(つうしん): Thông tin liên lạc\n回線(かいせん): Đường truyền / Tuyến\n管理(かんり): Quản lý\n接続(せつぞく): Kết nối\n配線盤(はいせんばん): Bảng đi dây",
+  "tip": "💡 Mẹo nhớ: Thấy cụm từ 通信(つうしん) (thông tin) đi kèm với 配線盤(はいせんばん) (bảng dây) thì hãy chọn ngay MDF."
+},
+{
+  "id": 3,
+  "q": "問(もん)3. 給排水(きゅうはいすい)衛生(えいせい)設備(せつび)工事(こうじ)について、適切(てきせつ)なものを選(えら)べ。",
+  "options": [
+    "1．給湯(きゅうとう)設備(せつび)工事(こうじ)",
+    "2．地熱井(ちねつい)工事(こうじ)",
+    "3．塗装(とそう)工事(こうじ)",
+    "4．舗装(ほそう)工事(こうじ)"
+  ],
+  "answer": 0,
+  "vi": "Chọn loại công trình phù hợp với công trình thiết bị vệ sinh cấp thoát nước.",
+  "explain": "Công trình thiết bị cấp nước nóng là một phần quan trọng thuộc nhóm thiết bị vệ sinh cấp thoát nước trong tòa nhà.\n\nTừ vựng:\n給排水(きゅうはいすい): Cấp thoát nước\n衛生(えいせい): Vệ sinh\n設備(せつび): Thiết bị\n工事(こうじ): Công trình / Thi công\n適切(てきせつ): Phù hợp / Thích hợp\n選(えら)ぶ: Chọn\n給湯(きゅうとう): Cấp nước nóng",
+  "tip": "💡 Mẹo nhớ: Thấy cụm từ 給排水(きゅうはいすい) (cấp thoát nước) hãy chọn ngay đáp án có chữ 給湯(きゅうとう) (cấp nước nóng) vì chúng cùng thuộc hệ thống nước."
+},
+{
+  "id": 4,
+  "q": "問(もん)4. 内外装(ないがいそう)仕上(しあ)げ工事(こうじ)に含(ふく)まれないものはどれか。",
+  "options": [
+    "1．ガス",
+    "2．屋根(やね)",
+    "3．カーテンウォール",
+    "4．防水(ぼうすい)"
+  ],
+  "answer": 0,
+  "vi": "Trong các loại sau, loại nào không thuộc công trình hoàn thiện nội ngoại thất?",
+  "explain": "Công trình hoàn thiện nội ngoại thất tập trung vào phần bao che và trang trí bề mặt tòa nhà như mái, tường kính hay chống thấm. Gas thuộc về hệ thống thiết bị tiện ích, không phải là phần hoàn thiện bề mặt.\n\nTừ vựng:\n内外装(ないがいそう): Nội ngoại thất\n仕上(しあ)げ: Hoàn thiện\n工事(こうじ): Công trình / Thi công\n含(ふく)む: Bao gồm\n屋根(やね): Mái nhà\n防水(ぼうすい): Chống thấm",
+  "tip": "💡 Mẹo nhớ: Thấy cụm từ 内外装(ないがいそう) (nội ngoại thất) thì chọn các phần liên quan đến bề mặt nhà, còn ガス (gas) là thuộc hệ thống đường ống nên sẽ không thuộc nhóm này."
+},
+{
+  "id": 5,
+  "q": "問(もん)5. 工程表(こうていひょう)からは、「作業(さぎょう)の手順(てじゅん)」「作業(さぎょう)に必要(ひつよう)な日数(にっすう)」「作業(さぎょう)進行(しんこう)の度合(どあい)」「工期(こうき)に影響(えいきょう)する作業(さぎょう)」の4つが読(よ)み取(t)れることが望(のぞ)ましく、この4つが読(よ)み取(と)れるのはどれか。",
+  "options": [
+    "1．ガントチャート",
+    "2．バーチャート",
+    "3．グラフ式(しき)工程表(こうていひょう)",
+    "4．ネットワーク式(しき)工程表(こうていひょう)"
   ],
   "answer": 3,
   "vi": "Loại biểu đồ tiến độ nào có thể đọc được cả 4 yếu tố: trình tự công việc, số ngày cần thiết, độ tiến triển và các công việc ảnh hưởng đến tổng thời hạn?",
-  "explain": "Chỉ có **ネットワーク式(しき)工程表(こうていひょう) (Biểu đồ mạng lưới)** là cho phép người quản lý nhìn thấy rõ mối quan hệ giữa các công việc và xác định được đường găng (critical path) - những công việc ảnh hưởng trực tiếp đến thời hạn hoàn thành.",
+  "explain": "Biểu đồ mạng lưới là loại sơ đồ duy nhất thể hiện được mối liên hệ logic giữa các công việc, giúp người quản lý xác định được trình tự và những công việc then chốt ảnh hưởng đến tiến độ chung của toàn dự án.\n\nTừ vựng:\n工程表(こうていひょう): Biểu đồ tiến độ\n作業(さぎょう): Công việc\n手順(てじゅん): Trình tự\n必要(ひつよう): Cần thiết\n日数(にっすう): Số ngày\n進行(しんこう): Tiến độ\n度合(どあい): Mức độ\n工期(こうき): Thời hạn thi công\n影響(えいきょう): Ảnh hưởng",
+  "tip": "💡 Mẹo nhớ: Khi thấy câu hỏi liệt kê cả 4 yếu tố phức tạp hoặc nhắc đến việc ảnh hưởng đến thời hạn, hãy chọn ngay đáp án có chữ ネットワーク (Network)."
 },
   {
   q: "問6　以下（いか）の写真（しゃしん）は何（なん）の工事（こうじ）か。【64】",

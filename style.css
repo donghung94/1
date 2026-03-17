@@ -316,3 +316,29 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
   margin: 0 4px;
 }
 .tip { background:#f9fafb; border-left:4px solid #3b82f6; padding:6px 10px; margin-top:6px; }
+/* Màu xanh dương nhạt cho phần dịch tiếng Việt */
+.question-vi {
+  color: #1976D2;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Khung màu xanh dương rất nhạt cho phần giải thích */
+.question-explain {
+  background-color: #E3F2FD;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #2196F3;
+  line-height: 1.6;
+  white-space: pre-wrap; /* Giữ nguyên xuống dòng từ JSON */
+}
+
+/* Khung màu xanh lá nhạt cho phần mẹo (tip) */
+.question-tip {
+  margin-top: 10px;
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px dashed #4CAF50;
+}

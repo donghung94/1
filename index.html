@@ -55,6 +55,20 @@
 
                     // 2. Thông tin tài khoản
                    const isPremium = data.isPremium === true || isAdmin;
+                  // ... trong đoạn code Firebase cũ của bạn ...
+const isPremium = data.isPremium === true || isAdmin;
+
+const promoSection = document.getElementById('promo-section');
+
+if (isPremium) {
+    // Nếu là Premium: Ẩn bảng thông báo
+    if (promoSection) promoSection.style.display = 'none';
+    document.body.classList.add('is-premium'); // Thêm class để chắc chắn ẩn bằng CSS
+} else {
+    // Nếu là người dùng thường: Hiện bảng thông báo
+    if (promoSection) promoSection.style.display = 'block';
+}
+// ... giữ nguyên các đoạn code phía sau ...
                     const userGroup = data.group || "1";
                     const allowedSets = ['1', '2', '3'];
 
@@ -148,7 +162,19 @@ document.querySelectorAll('.exam-list a').forEach(link => {
   
   </div>
 </header>
-
+<div id="promo-section" class="promo-banner" style="display: none;">
+    <div class="promo-content">
+        <p style="margin: 0; color: #e74c3c; font-weight: bold;">🔥 ƯU ĐÃI THÁNG 3 - CHỈ CÒN vài ngày!</p>
+        <p style="margin: 5px 0; font-size: 14px;">
+            Nâng cấp Premium: <span style="text-decoration: line-through; color: #94a3b8;">800k</span> 
+            <span style="color: #1e40af; font-weight: bold; font-size: 18px;"> ➔ 499.000đ</span>
+        </p>
+        <button onclick="document.getElementById('premium-modal').style.display='flex'" 
+                style="background: #1e40af; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">
+            Mở khóa toàn bộ ngay
+        </button>
+    </div>
+</div>
 
   </main>
 
@@ -344,6 +370,18 @@ document.querySelectorAll('.exam-list a').forEach(link => {
     font-size: 10px;
     padding: 2px 6px;
     border-radius: 4px;
+}
+  .promo-banner {
+    background: #fff5f5;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px dashed #e74c3c;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+/* Style này giúp ẩn hiện mượt mà */
+.is-premium #promo-section {
+    display: none !important;
 }
 </style>
 <div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; backdrop-filter: blur(4px);">

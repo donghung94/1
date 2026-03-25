@@ -40,39 +40,34 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
-                  // --- THÊM DÒNG NÀY ĐỂ XÁC ĐỊNH ADMIN ---
                     const isAdmin = data.role === 'admin';
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 
                     // 1. Kiểm tra thiết bị
-                   if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
+                    if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
                         alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
                         await signOut(auth);
                         location.href = "login.html";
                         return;
                     }
 
-                    // 2. Thông tin tài khoản
-                   const isPremium = data.isPremium === true || isAdmin;
-                  // ... trong đoạn code Firebase cũ của bạn ...
-const isPremium = data.isPremium === true || isAdmin;
-
-const promoSection = document.getElementById('promo-section');
-
-if (isPremium) {
-    // Nếu là Premium: Ẩn bảng thông báo
-    if (promoSection) promoSection.style.display = 'none';
-    document.body.classList.add('is-premium'); // Thêm class để chắc chắn ẩn bằng CSS
-} else {
-    // Nếu là người dùng thường: Hiện bảng thông báo
-    if (promoSection) promoSection.style.display = 'block';
-}
-// ... giữ nguyên các đoạn code phía sau ...
+                    // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
+                    const isPremium = data.isPremium === true || isAdmin;
                     const userGroup = data.group || "1";
                     const allowedSets = ['1', '2', '3'];
 
-                    // 3. Hiển thị Header
+                    // 3. Điều khiển hiển thị Bảng thông báo ưu đãi
+                    const promoSection = document.getElementById('promo-section');
+                    if (isPremium) {
+                        if (promoSection) promoSection.style.display = 'none';
+                        document.body.classList.add('is-premium');
+                    } else {
+                        if (promoSection) promoSection.style.display = 'block';
+                        document.body.classList.remove('is-premium');
+                    }
+
+                    // 4. Hiển thị Header
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
                         const statusBadge = isPremium 
@@ -82,62 +77,68 @@ if (isPremium) {
                         document.getElementById('welcome-section').style.setProperty('display', 'flex', 'important');
                     }
 
-                 // 1. Tạo tin nhắn tự động (Đã mã hóa để không lỗi font tiếng Việt)
-const rawMsg = `Chào Admin, mình là ${data.name || 'Học viên'} (Nhóm ${userGroup}). Mình muốn hỗ trợ về Premium.`;
-const msg = encodeURIComponent(rawMsg);
+                    // 5. Cập nhật Link liên hệ
+                    const rawMsg = `Chào Admin, mình là ${data.name || 'Học viên'} (Nhóm ${userGroup}). Mình muốn hỗ trợ về Premium.`;
+                    const msg = encodeURIComponent(rawMsg);
+                    
+                    const setLink = (id, url) => { if(document.getElementById(id)) document.getElementById(id).href = url; };
+                    setLink('zalo-link', `https://zalo.me/07090778422?text=${msg}`);
+                    setLink('fb-link', `https://www.facebook.com/61585194247868`);
+                    setLink('line-link', `https://line.me/ti/p/nongaphao`);
+                    setLink('modal-zalo', `https://zalo.me/07090778422?text=${msg}`);
+                    setLink('modal-fb', `https://www.facebook.com/61585194247868`);
+                    setLink('modal-line', `https://line.me/ti/p/nongaphao`);
 
-// 2. Cập nhật Link cho Footer (Thay số điện thoại/ID của bạn vào)
-if(document.getElementById('zalo-link')) document.getElementById('zalo-link').href = `https://zalo.me/07090778422?text=${msg}`;
-if(document.getElementById('fb-link')) document.getElementById('fb-link').href = `https://www.facebook.com/61585194247868`; // FB không nhận text tự động qua m.me
-if(document.getElementById('line-link')) document.getElementById('line-link').href = `https://line.me/ti/p/nongaphao`;
+                    // 6. LOGIC KHÓA ĐỀ THI (Quan trọng nhất)
+                    document.querySelectorAll('.exam-list a').forEach(link => {
+                        const url = new URL(link.href, window.location.origin);
+                        const setParam = url.searchParams.get('set');
+                        const practiceParam = url.searchParams.get('practice');
+                        const isPrometric = link.href.includes('prometric.html');
 
-// 3. Cập nhật Link cho Premium Modal
-if(document.getElementById('modal-zalo')) document.getElementById('modal-zalo').href = `https://zalo.me/07090778422?text=${msg}`;
-if(document.getElementById('modal-fb')) document.getElementById('modal-fb').href = `https://www.facebook.com/61585194247868`;
-if(document.getElementById('modal-line')) document.getElementById('modal-line').href = `https://line.me/ti/p/nongaphao`;
+                        let isLocked = false;
 
-                 // 5. LOGIC KHÓA ĐỀ THI
-document.querySelectorAll('.exam-list a').forEach(link => {
-    const url = new URL(link.href, window.location.origin);
-    const setParam = url.searchParams.get('set');
-    const practiceParam = url.searchParams.get('practice');
-    const isPrometric = link.href.includes('prometric.html'); // Kiểm tra có phải link thi thử không
+                        if (!isPremium) {
+                            if (isPrometric) {
+                                // Người dùng thường: Đổi link sang bản giới hạn 30 câu
+                                link.href = "prometric.html?set=questions.js&limit=30";
+                                isLocked = false; 
+                            } 
+                            else if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
+                                isLocked = true;
+                            }
+                        } 
+                        else {
+                            // Người dùng Premium: Kiểm tra nhóm thực hành
+                            if (practiceParam && !isAdmin) {
+                                const requiredG = "g" + userGroup;
+                                if (!practiceParam.includes(requiredG)) {
+                                    isLocked = true;
+                                }
+                            }
+                        }
 
-    let isLocked = false;
+                        // Thực thi khóa nếu isLocked = true
+                        if (isLocked) {
+                            link.classList.add('exam-locked');
+                            // Loại bỏ các event cũ để tránh lặp
+                            const newLink = link.cloneNode(true);
+                            link.parentNode.replaceChild(newLink, link);
+                            
+                            newLink.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                if (!isPremium) {
+                                    document.getElementById('premium-modal').style.display = 'flex';
+                                } else {
+                                    alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
+                                }
+                            });
+                        }
+                    });
 
-    if (!isPremium) {
-        // Nếu là link Prometric thì KHÔNG khóa (isLocked vẫn = false)
-        if (isPrometric) {
-            isLocked = false; 
-            // Cập nhật lại link để thêm giới hạn 30 câu cho người dùng thường
-            link.href = "prometric.html?set=questions.js&limit=30";
-        } 
-        else if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
-            isLocked = true;
-        }
-    } 
-    else if (isPremium && practiceParam && !isAdmin) {
-        const requiredG = "g" + userGroup;
-        if (!practiceParam.includes(requiredG)) {
-            isLocked = true;
-        }
-    }
-
-    if (isLocked) {
-        link.classList.add('exam-locked');
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (!isPremium) {
-                document.getElementById('premium-modal').style.display = 'flex';
-            } else {
-                alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
-            }
-        });
-    }
-});
                 }
             } catch (error) {
-                console.error("Lỗi:", error);
+                console.error("Lỗi hệ thống:", error);
             }
         }
     });

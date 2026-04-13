@@ -9,13 +9,13 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
     return arr;
   }
 
-  // 🧩 Gộp toàn bộ câu hỏi từ 4 file practice
-  const allQuestions = [
-    ...(window.PRACTICE_SETS["g2_1"] || []),
-    ...(window.PRACTICE_SETS["g2_2"] || []),
-    ...(window.PRACTICE_SETS["g2_3"] || []),
-    ...(window.PRACTICE_SETS["g2_4"] || [])
-  ];
+ // 🧩 Gộp toàn bộ câu hỏi từ các file (Truy cập vào thuộc tính .questions)
+const allQuestions = [
+  ...(window.PRACTICE_SETS["g2_1"]?.questions || []),
+  ...(window.PRACTICE_SETS["g2_2"]?.questions || []),
+  ...(window.PRACTICE_SETS["g2_3"]?.questions || []),
+  ...(window.PRACTICE_SETS["g2_4"]?.questions || [])
+];
 
   // 🧮 Chọn ngẫu nhiên 40 câu (nếu ít hơn thì lấy hết)
   const randomCount = Math.min(40, allQuestions.length);

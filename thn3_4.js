@@ -1,5 +1,6 @@
-window.QUESTION_SETS = window.QUESTION_SETS || {};
-window.QUESTION_SETS["n3_4"] = {
+window.PRACTICE_SETS = window.PRACTICE_SETS || {};
+
+window.PRACTICE_SETS["g3_4"] = {
   shuffle: true,
   questions: [
   {

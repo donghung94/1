@@ -1,9 +1,8 @@
-// File: practice1.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["thn3_4"] = {
-  "questions": [
-{
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["n3_4"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "問(もん)題(だい)1. 墨(すみ)つぼは、建(けん)設(せつ)作(さ)業(ぎょう)において主(おも)にどのように使(し)用(よう)されますか？",
    "img": "images/21.png",

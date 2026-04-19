@@ -155,10 +155,16 @@
                         <small style="color: #64748b">${data.email}</small>
                     </td>
                     <td>
-                        ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : '<span class="badge-g2">NHÓM 2</span>'}
+                        ${userGroup === '1' 
+  ? '<span class="badge-g1">NHÓM 1</span>' 
+  : userGroup === '2'
+    ? '<span class="badge-g2">NHÓM 2</span>'
+    : '<span class="badge-g3">NHÓM 3</span>'
+}
                         <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
                             <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
                             <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
+                             <option value="3" ${userGroup === '3' ? 'selected' : ''}>➡️ Nhóm 3</option>
                         </select>
                     </td>
                     <td>

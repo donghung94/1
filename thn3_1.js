@@ -1,8 +1,8 @@
-// File: practice1.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["n3_1"] = {
-  "questions": [
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["9"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "問(もん)1. 建設業(けんせつぎょう)における「三(さん)大(だい)災害(さいがい)」に含(ふく)まれないものはどれですか？",
   "options": [
@@ -356,5 +356,6 @@ window.PRACTICE_SETS["n3_1"] = {
   "explain": "Chu kỳ thi công an toàn (Anzen Sekou Cycle) là một quy trình lặp đi lặp lại hàng ngày (như họp đầu giờ, kiểm tra hiện trường, họp chỉ đạo) nhằm duy trì an toàn và vệ sinh lao động một cách liên tục. Việc chỉ thực hiện 'một lần duy nhất' (ichido dake) hoàn toàn trái ngược với bản chất 'chu kỳ' của nó.\n\nTừ vựng:\n安全(あんぜん)施工(せこう)サイクル (Chu kỳ thi công an toàn): Quy trình quản lý an toàn lặp lại hàng ngày.\n目的(もくてき) (Mục đích): Đích đến hoặc kết quả mong muốn.\n適切(てきせつ) (Phù hợp): Đúng với tiêu chuẩn.\n習慣化(しゅうかんか) (Tập quán hóa): Biến thành thói quen hàng ngày.\n一体化(いったいか) (Nhất thể hóa): Kết hợp thành một khối thống nhất.\n実施(じっし) (Thực hiện): Tiến hành triển khai công việc.",
   "tip": "💡 Mẹo nhớ: Khi thấy câu hỏi nhắc đến サイクル (Chu kỳ/Cycle) mà đáp án có từ 一度(いちど)だけ (Chỉ một lần) thì đó chính là đáp án sai cần chọn, vì chu kỳ thì phải lặp đi lặp lại."
 }
-    ]
-};
+  ]
+    
+  };

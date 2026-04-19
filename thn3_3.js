@@ -1,9 +1,8 @@
-// File: practice1.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["thn3_1"] = {
-  "questions": [
-    {
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["n3_3"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "問(もん)題(だい)1. グラスウール(ぐらすうーる)保(ほ)温(おん)材(ざい)と比較(ひかく)して、より優(すぐ)れた耐(たい)火(か)性(せい)を持(も)つ保(ほ)温(おん)材(ざい)はどれですか？",
   "options": [

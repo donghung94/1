@@ -1,10 +1,8 @@
-// File: practice1.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["thn3_2"] = {
-  "questions": [
-    
-      {
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["n3_6"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "問(もん)1. 建設業(けんせつぎょう)における「三(さん)大(だい)災害(さいがい)」に含(ふく)まれないものはどれですか？",
   "options": [

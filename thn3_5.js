@@ -1,9 +1,8 @@
-// File: practice1.js
-window.PRACTICE_SETS = window.PRACTICE_SETS || {};
-
-window.PRACTICE_SETS["thn3_1"] = {
-  "questions": [
-    {
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["n3_2"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "問(もん)題(だい)1. 建(けん)設(せつ)現(げん)場(ば)において、ベテラン(べてらん)技(ぎ)能(のう)者(しゃ)が常(つね)に意(い)識(しき)している事(じ)項(こう)は何(なん)のためですか？",
   "options": [

@@ -1,4 +1,8 @@
-{
+window.QUESTION_SETS = window.QUESTION_SETS || {};
+window.QUESTION_SETS["n3_"] = {
+  shuffle: true,
+  questions: [
+  {
   "id": 1,
   "q": "第(だい)1問(もん). 次(つぎ)のうち、「油(ゆ)圧(あつ)ショベル(しょべる)」の機(き)能(のう)として正(ただ)しいものを選(えら)びなさい。",
   "options": [
@@ -361,4 +365,6 @@
   "explain": "Dụng cụ trong hình là dao gọt bavia (reamer). Khi cắt ống đồng (doukan), ở mặt trong của vết cắt thường xuất hiện các gờ sắc nhọn gọi là bavia (bari). Việc sử dụng dụng cụ này để loại bỏ bavia (jokyo) là cực kỳ quan trọng, giúp lòng ống trơn tru, đảm bảo lưu chất chảy tốt và không làm hỏng các mối nối loe ống sau đó.\n\nTừ vựng:\n画像(がぞう) (Hình ảnh): Tư liệu hình ảnh minh họa.\n道具(どうぐ) (Dụng cụ): Đồ dùng hỗ trợ công việc.\n使用(しよう) (Sử dụng): Việc dùng công cụ.\n銅管(どうかん) (Ống đồng): Loại ống làm từ đồng.\n内面(ないめん) (Mặt trong): Phía bên trong lòng ống.\nバリ(ばり) (Bavia): Phần kim loại thừa, sắc nhọn sau khi cắt.\n除去(じょきょ) (Loại bỏ): Làm sạch, lấy đi phần thừa.\n太さ(ふとさ) (Độ dày/Đường kính): Kích thước của ống.\n測る(はかる) (Đo đạc): Xác định thông số.\n研磨(けんま) (Mài/Đánh bóng): Làm nhẵn bề mặt.\n光らせる(ひからせる) (Làm cho sáng bóng): Đánh bóng kim loại.\n穴(あな) (Lỗ): Phần rỗng xuyên qua vật.\n開ける(あける) (Khoan/Mở): Tạo ra lỗ.",
   "tip": "💡 Ghi nhớ: Trong thi công ống đồng, sau khi cắt luôn phải làm sạch lòng ống. Khi thấy dụng cụ có đầu nhọn xoay được (dao gọt bavia), hãy chọn ngay đáp án có từ バリ(ばり) (Bavia) và 除(じょ)去(きょ) (Loại bỏ)."
 }
+     ]
     
+  };

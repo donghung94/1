@@ -2,31 +2,38 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Quản Trị Viên - Toukutei 2</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f1f5f9; margin: 0; padding: 10px; }
+        .container { max-width: 1200px; margin: auto; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
         .header { display: flex; flex-direction: column; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
-        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .admin-info { background: #eff6ff; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2563eb; font-size: 13px; color: #1e40af; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .header-top h2 { font-size: 1.2rem; }
+
+        .admin-info { background: #eff6ff; padding: 10px 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #2563eb; font-size: 13px; color: #1e40af; line-height: 1.5; }
         
         /* Search Box */
-        .search-container { display: flex; gap: 10px; margin-bottom: 10px; }
-        #adminSearchInput { flex: 1; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none; font-size: 14px; }
-        .count-box { background: white; padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; display: flex; align-items: center; white-space: nowrap; }
+        .search-container { display: flex; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+        #adminSearchInput { flex: 1; min-width: 200px; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; outline: none; font-size: 14px; }
+        .count-box { background: white; padding: 10px 20px; border-radius: 8px; border: 1px solid #cbd5e1; display: flex; align-items: center; white-space: nowrap; font-size: 14px; }
 
+        /* Table Desktop */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th { background: #1e40af; color: white; padding: 12px; text-align: left; }
+        th { background: #1e40af; color: white; padding: 12px; text-align: left; font-size: 14px; }
         td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 14px; vertical-align: middle; }
         
-        .btn { padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; color: white; margin-right: 5px; transition: opacity 0.2s; }
+        /* Buttons */
+        .btn { padding: 8px 12px; border: none; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold; color: white; transition: opacity 0.2s; display: inline-flex; align-items: center; justify-content: center; min-height: 35px; }
         .btn:hover { opacity: 0.8; }
         .btn-reset { background: #f59e0b; }
         .btn-ban { background: #ef4444; }
         .btn-unban { background: #10b981; }
         .btn-premium { background: #8b5cf6; }
         .btn-refresh { background: #64748b; }
+        
+        .action-group { display: flex; gap: 5px; flex-wrap: wrap; }
         
         .status-active { color: #059669; font-weight: bold; }
         .status-banned { color: #dc2626; font-weight: bold; }
@@ -35,10 +42,34 @@
         
         .badge-g1 { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid #bbf7d0; }
         .badge-g2 { background: #fef9c3; color: #854d0e; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid #fef08a; }
-        .group-select { padding: 5px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 12px; margin-top: 5px; cursor: pointer; display: block; }
+        .badge-g3 { background: #e0f2fe; color: #0369a1; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid #bae6fd; }
+
+        .group-select { padding: 8px; border-radius: 4px; border: 1px solid #cbd5e1; font-size: 13px; margin-top: 8px; cursor: pointer; width: 100%; max-width: 150px; background: white; }
         
-        .device-id { font-family: monospace; font-size: 11px; background: #f1f5f9; padding: 4px; display: block; margin-top: 6px; color: #64748b; border-radius: 4px; word-break: break-all; }
+        .device-id { font-family: monospace; font-size: 10px; background: #f8fafc; padding: 6px; display: block; margin-top: 6px; color: #64748b; border-radius: 4px; word-break: break-all; border: 1px dashed #cbd5e1; }
         #loading { font-weight: bold; color: #2563eb; }
+
+        /* RESPONSIVE MOBILE */
+        @media screen and (max-width: 768px) {
+            .container { padding: 10px; }
+            
+            /* Chuyển bảng thành dạng card */
+            thead { display: none; } /* Ẩn tiêu đề bảng */
+            
+            table, tbody, tr, td { display: block; width: 100%; }
+            
+            tr { margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+            
+            td { border-bottom: 1px solid #f1f5f9; padding: 10px 5px; text-align: left; position: relative; }
+            td:last-child { border-bottom: none; }
+
+            /* Tạo nhãn giả cho từng cột */
+            td::before { content: attr(data-label); font-weight: bold; color: #1e40af; font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 5px; }
+
+            .group-select { max-width: 100%; }
+            .action-group { margin-top: 5px; }
+            .btn { flex: 1; } /* Nút bấm rộng ra trên mobile */
+        }
     </style>
 </head>
 <body>
@@ -47,11 +78,11 @@
     <div class="header">
         <div class="header-top">
             <h2 style="margin:0;">Quản Lý Học Viên 海洋（かいよう）土木（どぼく）</h2>
-            <button class="btn btn-refresh" onclick="location.reload()">🔄 Làm mới danh sách</button>
+            <button class="btn btn-refresh" onclick="location.reload()">🔄 Làm mới</button>
         </div>
         
         <div class="search-container">
-            <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên hoặc email học viên...">
+            <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên hoặc email...">
             <div class="count-box">
                 Tổng: <strong id="userCount" style="margin-left: 5px; color: #1e40af;">0</strong>
             </div>
@@ -60,7 +91,7 @@
 
     <div class="admin-info" id="current-admin-device">Đang xác thực quyền quản trị...</div>
 
-    <div id="loading" style="text-align:center; padding: 40px;">🚀 Đang kết nối hệ thống Firestore...</div>
+    <div id="loading" style="text-align:center; padding: 40px;">🚀 Đang kết nối Firestore...</div>
 
     <table id="adminTable" style="display:none;">
         <thead>
@@ -96,7 +127,6 @@
     const auth = getAuth(app);
     let allUsers = []; 
 
-    // 1. KIỂM TRA QUYỀN ADMIN
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
             window.location.href = "login.html";
@@ -109,14 +139,13 @@
                 window.location.href = "index.html";
                 return;
             }
-            document.getElementById('current-admin-device').innerHTML = `Chào Admin: <b>${userDoc.data().name}</b> | Hệ thống: ${navigator.platform}`;
+            document.getElementById('current-admin-device').innerHTML = `Chào Admin: <b>${userDoc.data().name}</b><br>Hệ thống: ${navigator.platform}`;
             fetchUsers();
         } catch (error) {
             console.error(error);
         }
     });
 
-    // 2. TẢI DỮ LIỆU TỪ FIREBASE
     async function fetchUsers() {
         try {
             const querySnapshot = await getDocs(collection(db, "users"));
@@ -124,10 +153,7 @@
             querySnapshot.forEach((userDoc) => {
                 allUsers.push({ uid: userDoc.id, ...userDoc.data() });
             });
-
-            // Sắp xếp A-Z
             allUsers.sort((a, b) => (a.name || "").toLowerCase().localeCompare((b.name || "").toLowerCase(), 'vi'));
-
             renderTable(allUsers);
             document.getElementById('loading').style.display = 'none';
             document.getElementById('adminTable').style.display = 'table';
@@ -136,7 +162,6 @@
         }
     }
 
-    // 3. HÀM HIỂN THỊ DỮ LIỆU
     function renderTable(users) {
         const userList = document.getElementById('userList');
         userList.innerHTML = '';
@@ -150,47 +175,43 @@
 
             const row = `
                 <tr>
-                    <td>
+                    <td data-label="Học viên">
                         <strong>${data.name || 'Học viên mới'}</strong><br>
                         <small style="color: #64748b">${data.email}</small>
                     </td>
-                    <td>
-                        ${userGroup === '1' 
-  ? '<span class="badge-g1">NHÓM 1</span>' 
-  : userGroup === '2'
-    ? '<span class="badge-g2">NHÓM 2</span>'
-    : '<span class="badge-g3">NHÓM 3</span>'
-}
+                    <td data-label="Phân Nhóm">
+                        ${userGroup === '1' ? '<span class="badge-g1">NHÓM 1</span>' : userGroup === '2' ? '<span class="badge-g2">NHÓM 2</span>' : '<span class="badge-g3">NHÓM 3</span>'}
                         <select class="group-select" onchange="window.changeGroup('${uid}', this.value)">
                             <option value="1" ${userGroup === '1' ? 'selected' : ''}>➡️ Nhóm 1</option>
                             <option value="2" ${userGroup === '2' ? 'selected' : ''}>➡️ Nhóm 2</option>
-                             <option value="3" ${userGroup === '3' ? 'selected' : ''}>➡️ Nhóm 3</option>
+                            <option value="3" ${userGroup === '3' ? 'selected' : ''}>➡️ Nhóm 3</option>
                         </select>
                     </td>
-                    <td>
+                    <td data-label="Gói học">
                         ${data.isPremium ? '<span class="badge-premium">⭐ PREMIUM</span>' : '<span class="badge-free">MIỄN PHÍ</span>'}
                     </td>
-                    <td>
+                    <td data-label="Thiết bị">
                         <b>${data.device_count || 0}/1</b>
                         <span class="device-id">${deviceIdText}</span>
                     </td>
-                    <td class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
+                    <td data-label="Trạng thái" class="${data.status === 'banned' ? 'status-banned' : 'status-active'}">
                         ${data.status === 'banned' ? '🚫 Khóa' : '✅ Active'}
                     </td>
-                    <td>
-                        <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">Gói</button>
-                        <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset</button>
-                        <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
-                                onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
-                            ${data.status === 'banned' ? 'Mở' : 'Khóa'}
-                        </button>
+                    <td data-label="Thao tác">
+                        <div class="action-group">
+                            <button class="btn btn-premium" onclick="window.togglePremium('${uid}', ${!data.isPremium})">Gói</button>
+                            <button class="btn btn-reset" onclick="window.resetDevice('${uid}')">Reset</button>
+                            <button class="btn ${data.status === 'banned' ? 'btn-unban' : 'btn-ban'}" 
+                                    onclick="window.toggleStatus('${uid}', '${data.status === 'banned' ? 'active' : 'banned'}')">
+                                ${data.status === 'banned' ? 'Mở' : 'Khóa'}
+                            </button>
+                        </div>
                     </td>
                 </tr>`;
             userList.innerHTML += row;
         });
     }
 
-    // 4. LẮNG NGHE TÌM KIẾM
     document.getElementById('adminSearchInput').addEventListener('input', (e) => {
         const keyword = e.target.value.toLowerCase().trim();
         const filtered = allUsers.filter(user => 
@@ -200,11 +221,10 @@
         renderTable(filtered);
     });
 
-    // 5. CÁC THAO TÁC CƠ SỞ DỮ LIỆU
     window.changeGroup = async (uid, newGroup) => {
         if (confirm(`Chuyển sang Nhóm ${newGroup}?`)) {
             await updateDoc(doc(db, "users", uid), { group: newGroup });
-            fetchUsers(); // Tải lại danh sách không cần F5
+            fetchUsers();
         }
     };
 

@@ -565,7 +565,20 @@ window.PRACTICE_SETS["g3_7"] = {
     "vi": "Khi gia công ống đồng bọc bảo ôn dùng cho môi chất lạnh, sau khi cắt ống đồng và trước khi nong tròn lại ống thì phải làm việc gì? Hãy chọn đáp án đúng.",
     "explain": "Sau khi cắt ống đồng, miệng cắt sẽ bị sắc và gồ ghề (ba via), do đó phải tiến hành gọt ba via バリ取(と)り trước khi nong tròn lại miệng ống để tránh mạt đồng lọt vào trong.\n\nTừ vựng:\n冷媒用被覆銅管(れいばいようひふくどうかん): Ống đồng bọc bảo ôn dùng cho môi chất lạnh\n加工(かこう): Gia công\n銅管(どうかん): Ống đồng\n切断後(せつだんご): Sau khi cắt\n真円修正(しんえんしゅうせい): Sửa độ tròn xoe\n前(まえ): Trước khi\n行(おこな)う: Thực hiện\n選(えら)べ: Hãy chọn\n付(づ)け: Hàn vảy cứng\n保温材(ほおんざい): Vật liệu bảo ôn\n接続(せつぞく): Kết nối\n取(と)り: Lấy đi\n切断(せつだん): Cắt",
     "tip": "Ghi nhớ: Sau khi 切断(せつだん) Cắt ống thì thao tác phải làm là バリ取(と)り Gọt ba via."
-  }
+  },
+    {
+    "q": "49、ポリエチレン管（かん）の接合（せつごう）は電熱線（でんねつせん）を発熱（はつねつ）させる方法（ほうほう）は何（なん）というか。",
+    "options": [
+        "ろう",
+        "フレア",
+        "ガス溶接（ようせつ）",
+        "EF"
+    ],
+    "answer": 3,
+    "vi": "Phương pháp nối ống Polyethylene bằng cách làm nóng dây điện trở được gọi là gì?",
+    "explain": "Phương pháp EF viết tắt của Electrofusion là kỹ thuật nối ống nhựa bằng cách sử dụng các phụ kiện có sẵn dây điện trở bên trong. Khi cấp điện, dây dẫn sẽ nóng lên làm nóng chảy bề mặt tiếp xúc để gắn kết ống.\n\nTừ vựng:\n管(かん): Ống\n接合(せつごう): Nối/Liên kết\n電熱線(でんねつせん): Dây điện trở/Dây nhiệt\n発熱(はつねつ): Phát nhiệt\n方法(ほうほう): Phương pháp",
+    "tip": "💡 Ghi nhớ: Khi thấy cụm từ ポリエチレン管(かん) (Ống Polyethylene) đi kèm với 電熱線(でんねつせん) (Dây điện trở) thì chọn ngay đáp án EF."
+}
     ]
     
   };

@@ -3,7 +3,7 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 window.PRACTICE_SETS["g3_6"] = {
   shuffle: true,
   questions: [
- [
+ 
   {
     "id": 50,
     "q": "50、マンホール作業（さぎょう）を始（はじ）める前（まえ）に、必ずしも（かならずしも）実施（じっし）しなくてもいいものを選（えら）べ。『156』",

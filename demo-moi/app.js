@@ -20,6 +20,22 @@ function catTotal(cat) { return BANK[cat].sets.reduce((a, s) => a + s.questions.
 function allTotal() { return Object.keys(BANK).reduce((a, c) => a + catTotal(c), 0); }
 function allSets() { return Object.keys(BANK).reduce((a, c) => a + BANK[c].sets.length, 0); }
 function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function shuffleOn() { try { return localStorage.getItem('user_shuffle') === 'true'; } catch (e) { return false; } }
+function toggleShuffle(on) {
+  try { localStorage.setItem('user_shuffle', on ? 'true' : 'false'); } catch (e) { }
+  if (!S) return;
+  if (S.mode === 'practice') startPractice(S.cat, S.setId);
+  else if (S.mode === 'exam') startExam(S.group);
+}
+function prepQuestions(list, on) {
+  if (!on) return list;
+  const qs = list.map(q => {
+    const pairs = q.options.map((t, i) => ({ t, ok: i === q.answer }));
+    shuffle(pairs);
+    return { ...q, options: pairs.map(p => p.t), answer: pairs.findIndex(p => p.ok) };
+  });
+  return shuffle(qs);
+}
 
 const HAT = '<svg width="25" height="25" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 3h5.6v4H9.2z" fill="#ff7a1a"/><path d="M6.3 14.2v-1.4C6.3 9.4 8.9 6.9 12 6.9s5.7 2.5 5.7 5.9v1.4" fill="#ff8c3a"/><rect x="2.6" y="14" width="18.8" height="2.8" rx="1.4" fill="#ff7a1a"/><rect x="2.6" y="19.4" width="18.8" height="1.6" rx=".8" fill="#2a3c5f"/></svg>';
 
@@ -28,7 +44,7 @@ function topbar(back) {
     return '<div class="hazard"></div><div class="topbar compact">' +
       '<button class="iconbtn" onclick="history.back()">\u2039 Quay l\u1EA1i</button>' +
       '<div class="logo"><div class="mark">' + HAT + '</div><div><div class="name">TOKUTEI <b>X\u00C2Y D\u1EF0NG</b></div></div></div>' +
-      '<div class="userchip"><span class="badge">\u2B50 PREMIUM</span></div></div>';
+      '<button class="iconbtn homebtn" onclick="location.hash=\'#/home\'">🏠 Trang chủ</button></div>';
   }
   return '<div class="hazard"></div><div class="topbar">' +
     '<div class="logo"><div class="mark">' + HAT + '</div><div><div class="name">TOKUTEI <b>X\u00C2Y D\u1EF0NG</b></div>' +
@@ -125,13 +141,15 @@ function stopTimer() { if (timerInt) { clearInterval(timerInt); timerInt = null;
 
 function startPractice(cat, setId) {
   const set = BANK[cat].sets.find(s => s.id === setId);
-  S = { mode: 'practice', title: BANK[cat].label + ' — ' + set.title, qs: set.questions, idx: 0, picked: -1, checked: false, answers: [] };
+  S = { mode: 'practice', cat, setId, title: BANK[cat].label + ' — ' + set.title, qs: prepQuestions(set.questions, shuffleOn()), idx: 0, picked: -1, checked: false, answers: [] };
   location.hash = '#/quiz';
   vQuiz();
 }
 function startExam(group) {
   const pool = BANK.theory.sets.flatMap(s => s.questions).concat(BANK[group].sets.flatMap(s => s.questions));
-  S = { mode: 'exam', title: 'Thi thử mô phỏng — ' + GNAME[group], qs: shuffle(pool).slice(0, 40), idx: 0, picked: -1, checked: true, answers: [], remain: 60 * 60 };
+  const picked40 = shuffle(pool).slice(0, 40);
+  const qs = shuffleOn() ? picked40.map(q => { const pairs = q.options.map((t, i) => ({ t, ok: i === q.answer })); shuffle(pairs); return { ...q, options: pairs.map(p => p.t), answer: pairs.findIndex(p => p.ok) }; }) : picked40;
+  S = { mode: 'exam', group, title: 'Thi thử mô phỏng — ' + GNAME[group], qs, idx: 0, picked: -1, checked: true, answers: [], remain: 60 * 60 };
   location.hash = '#/quiz';
   vQuiz();
 }
@@ -189,6 +207,7 @@ function vQuiz() {
     '<div class="qhead"><div class="qmeta"><span class="qn">Câu ' + (S.idx + 1) + '/' + S.qs.length + '</span>' +
     (isExam ? '<span class="timer" id="timer">⏱ ' + fmtTime(S.remain) + '</span>' : '<span class="timer static">' + esc(S.title) + '</span>') + '</div>' +
     '<div class="progress"><i style="width:' + pct + '%"></i></div></div>' +
+    '<div class="quizctl"><span class="shlabel">🔄 Đảo câu</span><label class="switch"><input type="checkbox" ' + (shuffleOn() ? 'checked' : '') + ' onchange="toggleShuffle(this.checked)"><span class="slider"></span></label><span class="shstate">' + (shuffleOn() ? 'Đang bật' : 'Đang tắt') + '</span></div>' +
     '<div class="qcard"><div class="qstem">' + ruby(q.q) + '</div>' +
     (q.img ? '<div class="qimg"><img src="' + esc(q.img) + '" alt="Hình minh họa" onerror="this.parentNode.style.display=\'none\'"></div>' : '') +
     '</div>' +

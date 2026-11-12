@@ -167,5 +167,8 @@ button{font-family:inherit;cursor:pointer}
 .switch .slider:before{content:"";position:absolute;width:18px;height:18px;border-radius:50%;left:2px;top:2px;background:#94a7c4;transition:.2s}
 .switch input:checked + .slider{background:var(--acc-soft);border-color:var(--acc)}
 .switch input:checked + .slider:before{transform:translateX(20px);background:var(--acc)}
+.opt .mark{margin-left:auto;flex:0 0 auto;font-size:15px}
+.quizctl .submitmini{margin-left:auto;width:auto;padding:9px 16px;font-size:14px;border-radius:11px}
+.qactions .btn{font-size:14.5px;padding:13px 6px;white-space:nowrap}
 .sharedtag{margin-left:auto;flex:0 0 auto;background:var(--acc);color:#181002;font-weight:800;
   font-size:11px;letter-spacing:.8px;padding:4px 9px;border-radius:999px}

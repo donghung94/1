@@ -141,7 +141,8 @@ function stopTimer() { if (timerInt) { clearInterval(timerInt); timerInt = null;
 
 function startPractice(cat, setId) {
   const set = BANK[cat].sets.find(s => s.id === setId);
-  S = { mode: 'practice', cat, setId, title: BANK[cat].label + ' — ' + set.title, qs: prepQuestions(set.questions, shuffleOn()), idx: 0, picked: -1, checked: false, answers: [] };
+  const pqs = prepQuestions(set.questions, shuffleOn());
+  S = { mode: 'practice', cat, setId, title: BANK[cat].label + ' — ' + set.title, qs: pqs, idx: 0, answers: new Array(pqs.length).fill(-1), explainVis: null };
   location.hash = '#/quiz';
   vQuiz();
 }
@@ -149,7 +150,7 @@ function startExam(group) {
   const pool = BANK.theory.sets.flatMap(s => s.questions).concat(BANK[group].sets.flatMap(s => s.questions));
   const picked40 = shuffle(pool).slice(0, 40);
   const qs = shuffleOn() ? picked40.map(q => { const pairs = q.options.map((t, i) => ({ t, ok: i === q.answer })); shuffle(pairs); return { ...q, options: pairs.map(p => p.t), answer: pairs.findIndex(p => p.ok) }; }) : picked40;
-  S = { mode: 'exam', group, title: 'Thi thử mô phỏng — ' + GNAME[group], qs, idx: 0, picked: -1, checked: true, answers: [], remain: 60 * 60 };
+  S = { mode: 'exam', group, title: 'Thi thử mô phỏng — ' + GNAME[group], qs, idx: 0, answers: new Array(qs.length).fill(-1), explainVis: null, remain: 60 * 60 };
   location.hash = '#/quiz';
   vQuiz();
 }
@@ -166,26 +167,26 @@ function vQuiz() {
   const q = S.qs[S.idx];
   const isExam = S.mode === 'exam';
   const pct = Math.round(((S.idx) / S.qs.length) * 100);
+  const ans = (S.answers[S.idx] == null ? -1 : S.answers[S.idx]);
   let opts = q.options.map((op, i) => {
-    let cls = 'opt';
-    if (isExam) { if (S.answers[S.idx] === i) cls += ' sel'; }
-    else {
-      if (S.picked === i && !S.checked) cls += ' sel';
-      if (S.checked) {
-        cls += ' locked';
-        if (i === q.answer) cls += ' correct';
-        else if (S.picked === i) cls += ' wrong';
-      }
+    let cls = 'opt', mark = '';
+    if (isExam) { if (ans === i) cls += ' sel'; }
+    else if (ans >= 0) {
+      cls += ' locked';
+      if (i === q.answer) { cls += ' correct'; mark = '<span class="mark">✅</span>'; }
+      else if (ans === i) { cls += ' wrong'; mark = '<span class="mark">❌</span>'; }
     }
-    return '<button class="' + cls + '" onclick="pick(' + i + ')"><span class="k">' + LETTERS[i] + '</span><span>' + ruby(op) + '</span></button>';
+    return '<button class="' + cls + '" onclick="pick(' + i + ')"><span class="k">' + LETTERS[i] + '</span><span>' + ruby(op) + '</span>' + mark + '</button>';
   }).join('');
 
+  const answered = !isExam && ans >= 0;
+  const expVis = isExam ? false : ((S.explainVis === true || S.explainVis === false) ? S.explainVis : answered);
   let explainHtml = '';
-  if (!isExam && S.checked) {
-    const ok = S.picked === q.answer;
+  if (!isExam && expVis) {
+    const ok = ans === q.answer;
     const ex = splitExplain(q.explain);
-    explainHtml = '<div class="explain"><div class="verdict ' + (ok ? 'ok' : 'bad') + '">' +
-      (ok ? '✅ Chính xác!' : '❌ Chưa đúng — đáp án đúng là ' + LETTERS[q.answer]) + '</div>' +
+    explainHtml = '<div class="explain">' +
+      (answered ? '<div class="verdict ' + (ok ? 'ok' : 'bad') + '">' + (ok ? '✅ Chính xác!' : '❌ Chưa đúng — đáp án đúng là ' + LETTERS[q.answer]) + '</div>' : '') +
       (q.vi ? '<div class="body" style="margin-bottom:4px"><b>Dịch nghĩa câu hỏi:</b> ' + esc(q.vi) + '</div>' : '') +
       (ex.body ? '<h4>Giải thích</h4><div class="body">' + esc(ex.body) + '</div>' : '') +
       (ex.vocab ? '<h4>Từ vựng</h4><div class="vocab">' + esc(ex.vocab) + '</div>' : '') +
@@ -195,19 +196,20 @@ function vQuiz() {
   const last = S.idx === S.qs.length - 1;
   let actions;
   if (isExam) {
-    actions = (S.idx > 0 ? '<button class="btn btn-ghost" onclick="prevQ()">‹ Câu trước</button>' : '') +
-      (last ? '<button class="btn btn-acc" onclick="finish()">Nộp bài</button>' : '<button class="btn btn-acc" onclick="nextQ()">Câu tiếp theo ›</button>');
-  } else if (!S.checked) {
-    actions = '<button class="btn btn-acc" id="checkBtn" ' + (S.picked < 0 ? 'disabled' : '') + ' onclick="check()">Kiểm tra đáp án</button>';
+    actions = '<button class="btn btn-ghost" ' + (S.idx === 0 ? 'disabled' : '') + ' onclick="prevQ()">⬅️ Quay lại</button>' +
+      '<button class="btn btn-acc" ' + (last ? 'disabled' : '') + ' onclick="nextQ()">➡️ Tiếp theo</button>';
   } else {
-    actions = last ? '<button class="btn btn-acc" onclick="finish()">Xem kết quả ›</button>' : '<button class="btn btn-acc" onclick="nextQ()">Câu tiếp theo ›</button>';
+    actions = '<button class="btn btn-ghost" ' + (S.idx === 0 ? 'disabled' : '') + ' onclick="prevQ()">⬅️ Quay lại</button>' +
+      '<button class="btn btn-ghost" onclick="toggleExplain()">📘 Giải thích</button>' +
+      '<button class="btn btn-acc" ' + (last ? 'disabled' : '') + ' onclick="nextQ()">➡️ Tiếp theo</button>';
   }
 
   $app.innerHTML = topbar(true) +
     '<div class="qhead"><div class="qmeta"><span class="qn">Câu ' + (S.idx + 1) + '/' + S.qs.length + '</span>' +
     (isExam ? '<span class="timer" id="timer">⏱ ' + fmtTime(S.remain) + '</span>' : '<span class="timer static">' + esc(S.title) + '</span>') + '</div>' +
     '<div class="progress"><i style="width:' + pct + '%"></i></div></div>' +
-    '<div class="quizctl"><span class="shlabel">🔄 Đảo câu</span><label class="switch"><input type="checkbox" ' + (shuffleOn() ? 'checked' : '') + ' onchange="toggleShuffle(this.checked)"><span class="slider"></span></label><span class="shstate">' + (shuffleOn() ? 'Đang bật' : 'Đang tắt') + '</span></div>' +
+    '<div class="quizctl"><span class="shlabel">🔄 Đảo câu</span><label class="switch"><input type="checkbox" ' + (shuffleOn() ? 'checked' : '') + ' onchange="toggleShuffle(this.checked)"><span class="slider"></span></label><span class="shstate">' + (shuffleOn() ? 'Đang bật' : 'Đang tắt') + '</span>' +
+    '<button class="btn btn-acc submitmini" onclick="finish()">Nộp bài</button></div>' +
     '<div class="qcard"><div class="qstem">' + ruby(q.q) + '</div>' +
     (q.img ? '<div class="qimg"><img src="' + esc(q.img) + '" alt="Hình minh họa" onerror="this.parentNode.style.display=\'none\'"></div>' : '') +
     '</div>' +
@@ -223,23 +225,30 @@ function vQuiz() {
     }, 1000);
   }
   // Screenshot helper: ?shot=expl auto-answers the current question correctly and shows the explanation
-  if (!isExam && window.__shot === 'expl' && !S.checked) {
-    S.picked = q.answer; check();
+  if (!isExam && window.__shot === 'expl' && ans < 0) {
+    S.answers[S.idx] = q.answer; vQuiz(); return;
   }
   window.scrollTo(0, 0);
 }
 function pick(i) {
   if (!S) return;
   if (S.mode === 'exam') { S.answers[S.idx] = i; vQuiz(); return; }
-  if (S.checked) return;
-  S.picked = i; vQuiz();
+  if (S.answers[S.idx] >= 0) return;
+  S.answers[S.idx] = i; S.explainVis = null; vQuiz();
 }
-function check() {
-  if (!S || S.picked < 0) return;
-  S.answers[S.idx] = S.picked; S.checked = true; vQuiz();
+function toggleExplain() {
+  if (!S || S.mode === 'exam') return;
+  const answered = S.answers[S.idx] >= 0;
+  const cur = (S.explainVis === true || S.explainVis === false) ? S.explainVis : answered;
+  S.explainVis = !cur; vQuiz();
 }
-function nextQ() { if (S && S.idx < S.qs.length - 1) { S.idx++; S.picked = -1; S.checked = S.mode === 'exam'; vQuiz(); } }
-function prevQ() { if (S && S.idx > 0) { S.idx--; vQuiz(); } }
+function nextQ() {
+  if (!S || S.idx >= S.qs.length - 1) return;
+  if (S.mode === 'practice' && !(S.answers[S.idx] >= 0)) return;
+  S.idx++; S.explainVis = null; vQuiz();
+}
+function prevQ() { if (S && S.idx > 0) { S.idx--; S.explainVis = null; vQuiz(); } }
+
 function finish() {
   stopTimer();
   const items = S.qs.map((q, i) => ({ q: q.q, options: q.options, answer: q.answer, picked: (S.answers[i] == null ? -1 : S.answers[i]), explain: q.explain, tip: q.tip, vi: q.vi }));

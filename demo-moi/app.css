@@ -156,3 +156,6 @@ button{font-family:inherit;cursor:pointer}
 .topbar.compact .logo .mark{display:none}
 .topbar.compact .logo .name{font-size:15px}
 .topbar.compact .badge{font-size:10px;padding:2px 7px}
+.cat.shared{border-color:rgba(255,122,26,.5)}
+.sharedtag{margin-left:auto;flex:0 0 auto;background:var(--acc);color:#181002;font-weight:800;
+  font-size:11px;letter-spacing:.8px;padding:4px 9px;border-radius:999px}

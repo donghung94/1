@@ -56,11 +56,10 @@ function vLogin() {
 /* ---------------- HOME ---------------- */
 function vHome() {
   document.title = 'Trang chủ — Tokutei Xây Dựng (demo)';
-  const cats = [
-    ['theory', '🏗️', 'Lý thuyết chung', BANK.theory.sets.length + ' bộ đề · ' + catTotal('theory') + ' câu hỏi'],
-    ['g1', '🔩', 'Thực hành nhóm 1', BANK.g1.sets.length + ' bộ đề · ' + catTotal('g1') + ' câu hỏi'],
-    ['g2', '🪜', 'Thực hành nhóm 2', BANK.g2.sets.length + ' bộ đề · ' + catTotal('g2') + ' câu hỏi'],
-    ['g3', '🦺', 'Thực hành nhóm 3', BANK.g3.sets.length + ' bộ đề · ' + catTotal('g3') + ' câu hỏi']
+  const groups = [
+    ['g1', '🔩', 'Nhóm 1', 'Thực hành ' + BANK.g1.sets.length + ' bộ đề · ' + catTotal('g1') + ' câu hỏi'],
+    ['g2', '🪜', 'Nhóm 2', 'Thực hành ' + BANK.g2.sets.length + ' bộ đề · ' + catTotal('g2') + ' câu hỏi'],
+    ['g3', '🦺', 'Nhóm 3', 'Thực hành ' + BANK.g3.sets.length + ' bộ đề · ' + catTotal('g3') + ' câu hỏi']
   ];
   $app.innerHTML = topbar(false) + '<div class="wrap">' +
     '<div class="promo"><div class="k">⭐ PREMIUM</div><h3>Mở khóa toàn bộ ' + allTotal() + ' câu hỏi</h3>' +
@@ -69,10 +68,11 @@ function vHome() {
     '<div class="stats">' +
     '<div class="stat"><div class="n">' + allTotal() + '</div><div class="l">Câu hỏi</div></div>' +
     '<div class="stat"><div class="n">' + allSets() + '</div><div class="l">Bộ đề</div></div>' +
-    '<div class="stat"><div class="n"><em>4</em> nhóm</div><div class="l">Hạng mục thi</div></div></div>' +
+    '<div class="stat"><div class="n"><em>3</em> nhóm</div><div class="l">Nhóm thi</div></div></div>' +
     '<div class="notice">📢 <b>Thông báo từ Admin:</b> Chào mừng các học viên đến với hệ thống luyện đề <b>Tokutei Gino 2 Xây dựng</b> cấp tốc. Các bạn học nhóm 3 chỉ cần học 2 đề tinh gọn mới nhất nhé.</div>' +
-    '<div class="sec-title">Chọn hạng mục luyện thi</div>' +
-    cats.map(c => '<button class="cat" onclick="location.hash=\'#/sets/' + c[0] + '\'"><span class="ic">' + c[1] + '</span><span><span class="tt">' + c[2] + '</span><div class="ds">' + c[3] + '</div></span><span class="chev">›</span></button>').join('') +
+    '<div class="sec-title">Chọn nhóm thi của bạn</div>' +
+    groups.map(c => '<button class="cat" onclick="location.hash=\'#/group/' + c[0] + '\'"><span class="ic">' + c[1] + '</span><span><span class="tt">' + c[2] + '</span><div class="ds">' + c[3] + '</div></span><span class="chev">›</span></button>').join('') +
+    '<button class="cat shared" onclick="location.hash=\'#/sets/theory\'"><span class="ic">📘</span><span><span class="tt">Lý thuyết chung</span><div class="ds">Đề chung cho cả 3 nhóm · ' + BANK.theory.sets.length + ' bộ đề · ' + catTotal('theory') + ' câu hỏi</div></span><span class="sharedtag">CHUNG</span></button>' +
     '<button class="cat hot" onclick="location.hash=\'#/exam\'"><span class="ic">⏱️</span><span><span class="tt">Thi thử mô phỏng</span><div class="ds">40 câu ngẫu nhiên · bấm giờ 60 phút · giống kỳ thi thật</div></span><span class="chev">›</span></button>' +
     '<div class="foot-ver">Giao diện mới — bản test thử · Dữ liệu: ngân hàng đề thật của app</div></div>';
 }
@@ -91,14 +91,30 @@ function vSets(cat) {
     rows + '</div>';
 }
 
+/* ---------------- GROUP SCREEN ---------------- */
+const GNAME = { g1: 'Nhóm 1', g2: 'Nhóm 2', g3: 'Nhóm 3' };
+function vGroup(g) {
+  const C = BANK[g]; if (!C) return vHome();
+  document.title = GNAME[g] + ' — Tokutei Xây Dựng (demo)';
+  const rows = C.sets.map((s, i) =>
+    '<button class="setrow" onclick="startPractice(\'' + g + '\',\'' + s.id + '\')">' +
+    '<span class="no">' + (i + 1) + '</span><span><span class="tt">' + esc(s.title) + '</span>' +
+    '<div class="ds">' + s.questions.length + ' câu hỏi</div></span><span class="chev">›</span></button>').join('');
+  $app.innerHTML = topbar(true) + '<div class="wrap">' +
+    '<div class="sec-title" style="margin-top:6px">' + GNAME[g] + '</div>' +
+    '<button class="cat shared" onclick="location.hash=\'#/sets/theory\'"><span class="ic">📘</span><span><span class="tt">Lý thuyết chung</span><div class="ds">Đề chung cho cả 3 nhóm · ' + BANK.theory.sets.length + ' bộ đề · ' + catTotal('theory') + ' câu hỏi</div></span><span class="sharedtag">CHUNG</span></button>' +
+    '<div class="sec-title">Bộ đề thực hành — ' + GNAME[g] + '</div>' +
+    rows + '</div>';
+}
+
 /* ---------------- EXAM SCOPE PICKER ---------------- */
 function vExam() {
   document.title = 'Thi thử mô phỏng';
-  const scopes = [['theory', 'Lý thuyết chung'], ['g1', 'Thực hành nhóm 1'], ['g2', 'Thực hành nhóm 2'], ['g3', 'Thực hành nhóm 3']];
+  const scopes = [['g1', 'Nhóm 1'], ['g2', 'Nhóm 2'], ['g3', 'Nhóm 3']];
   $app.innerHTML = topbar(true) + '<div class="wrap">' +
     '<div class="sec-title" style="margin-top:6px">Thi thử mô phỏng</div>' +
-    '<p class="muted small" style="margin:0 2px 14px">Đề thi thử gồm <b style="color:var(--txt)">40 câu ngẫu nhiên</b>, bấm giờ <b style="color:var(--txt)">60 phút</b>. Chỉ xem đáp án sau khi nộp bài — giống kỳ thi thật.</p>' +
-    scopes.map(s => '<button class="cat" onclick="startExam(\'' + s[0] + '\')"><span class="ic">⏱️</span><span><span class="tt">' + s[1] + '</span><div class="ds">40 câu · 60 phút · kho ' + catTotal(s[0]) + ' câu</div></span><span class="chev">›</span></button>').join('') +
+    '<p class="muted small" style="margin:0 2px 14px">Đề thi thử theo nhóm gồm <b style="color:var(--txt)">lý thuyết chung + thực hành của nhóm</b> — <b style="color:var(--txt)">40 câu ngẫu nhiên</b>, bấm giờ <b style="color:var(--txt)">60 phút</b>. Chỉ xem đáp án sau khi nộp bài — giống kỳ thi thật.</p>' +
+    scopes.map(s => '<button class="cat" onclick="startExam(\'' + s[0] + '\')"><span class="ic">⏱️</span><span><span class="tt">Thi thử — ' + s[1] + '</span><div class="ds">Lý thuyết chung + thực hành ' + s[1].toLowerCase() + ' · 40 câu · 60 phút</div></span><span class="chev">›</span></button>').join('') +
     '</div>';
 }
 
@@ -113,9 +129,9 @@ function startPractice(cat, setId) {
   location.hash = '#/quiz';
   vQuiz();
 }
-function startExam(cat) {
-  const pool = BANK[cat].sets.flatMap(s => s.questions);
-  S = { mode: 'exam', title: 'Thi thử — ' + BANK[cat].label, qs: shuffle(pool).slice(0, 40), idx: 0, picked: -1, checked: true, answers: [], remain: 60 * 60 };
+function startExam(group) {
+  const pool = BANK.theory.sets.flatMap(s => s.questions).concat(BANK[group].sets.flatMap(s => s.questions));
+  S = { mode: 'exam', title: 'Thi thử mô phỏng — ' + GNAME[group], qs: shuffle(pool).slice(0, 40), idx: 0, picked: -1, checked: true, answers: [], remain: 60 * 60 };
   location.hash = '#/quiz';
   vQuiz();
 }
@@ -258,6 +274,7 @@ function route() {
   const h = location.hash.split('?')[0] || '#/login';
   const parts = h.replace(/^#\//, '').split('/');
   if (parts[0] === 'home') vHome();
+  else if (parts[0] === 'group') vGroup(parts[1]);
   else if (parts[0] === 'sets') vSets(parts[1]);
   else if (parts[0] === 'exam') vExam();
   else if (parts[0] === 'quiz') { if (!S && parts[1] && BANK[parts[1]] && parts[2]) startPractice(parts[1], parts[2]); else vQuiz(); }

@@ -16,6 +16,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 1,
     vi: "Cờ an toàn vệ sinh 安全（あんぜん）衛生（えいせい） có ý nghĩa là gì?",
     explain: "Cờ có nền trắng và dấu thập xanh là **biểu tượng cho an toàn và vệ sinh lao động 安全（あんぜん）衛生（えいせい）.",
+    "explain_id": "Bendera dengan latar putih dan tanda palang hijau adalah **simbol keselamatan dan kesehatan kerja 安全（あんぜん）衛生（えいせい）.",
+    "explain_en": "A flag with a white background and a green cross is the **symbol for occupational safety and health 安全（あんぜん）衛生（えいせい）.",
     tip: "💡 Nhớ: 緑＝an toàn, 十字＝biểu tượng y tế → tượng trưng cho an toàn & sức khỏe."
   },
 
@@ -31,6 +33,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Dụng cụ trong hình là gì, và mô tả nào đúng?",
     explain: "Đây là **ポンチ (punch)** – dùng búa gõ tạo vết lõm hoặc đục lỗ tròn nhỏ trên kim loại, da, vải…",
+    "explain_id": "Ini adalah **ポンチ (punch / penitik)** – dipukul dengan palu untuk membuat lekukan atau melubangi lubang bulat kecil pada logam, kulit, kain, dan sebagainya.",
+    "explain_en": "This is a **ポンチ (punch)** – struck with a hammer to make a dent or punch a small round hole in metal, leather, fabric, etc.",
     tip: "💡 Nhớ: ポンチ＝Punch → dụng cụ đục dấu, tạo vết lõm tròn nhỏ."
   },
 
@@ -45,6 +49,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 1,
     vi: "Trong công việc đào đất 掘削（くっさく）作業（さぎょう）, loại tai nạn nào dễ xảy ra nhất ở vách đất?",
     explain: "Trong khi đào đất, vách đất dễ **崩壊（ほうかい）– sụp đổ hoặc sạt lở**, đặc biệt khi không có gia cố.",
+    "explain_id": "Saat menggali tanah, dinding tanah mudah **崩壊（ほうかい）– runtuh atau longsor**, terutama jika tidak ada perkuatan.",
+    "explain_en": "While excavating soil, the soil wall can easily **崩壊（ほうかい）– collapse or slide**, especially when there is no reinforcement.",
     tip: "💡 Nhớ: 掘削（くっさく）＝đào đất → đất yếu dễ sụp = 崩壊（ほうかい）."
   },
    {
@@ -58,6 +64,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Trong công trình cầu 橋梁（きょうりょう）工事（こうじ）, loại tai nạn nào dễ xảy ra nhất?",
     explain: "Công trình cầu thường thi công trên cao → dễ xảy ra **rơi vật 飛来（ひらい） hoặc rơi người 落下（らっか）**.",
+    "explain_id": "Pekerjaan jembatan biasanya dilakukan di ketinggian → mudah terjadi **benda jatuh/terlempar 飛来（ひらい） atau orang jatuh 落下（らっか）**.",
+    "explain_en": "Bridge work is usually carried out at height → **flying/falling objects 飛来（ひらい） or people falling 落下（らっか）** are likely to occur.",
     tip: "💡 Nhớ: cầu = trên cao → nguy cơ rơi vật, rơi người cao nhất."
   },
   {
@@ -72,6 +80,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Trắc đạc bằng トランシット Transit là gì?",
     explain: "**トランシット (Transit)** là thiết bị có kính ngắm, dùng để **đo góc ngang và dọc** trong công tác trắc địa.",
+    "explain_id": "**トランシット (Transit)** adalah alat yang dilengkapi teleskop, digunakan untuk **mengukur sudut horizontal dan vertikal** dalam pekerjaan survei.",
+    "explain_en": "**トランシット (Transit)** is a device with a telescope, used to **measure horizontal and vertical angles** in surveying work.",
     tip: "💡 Transit = đo góc (ngang, dọc); Level = đo cao → đừng nhầm nhé!"
   },
 
@@ -87,6 +97,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Trong công tác bảo vệ mái dốc 法面（のりめん）保護（ほご）工事（こうじ）, thao tác nào là **không đúng**?",
     explain: "Phun vữa (モルタル吹付) phải thực hiện **từ trên xuống dưới**, không phải từ dưới lên. Làm ngược dễ gây bong tróc.",
+    "explain_id": "Penyemprotan mortar (モルタル吹付) harus dilakukan **dari atas ke bawah**, bukan dari bawah ke atas. Melakukan sebaliknya mudah menyebabkan pengelupasan.",
+    "explain_en": "Mortar spraying (モルタル吹付) must be done **from top to bottom**, not from bottom to top. Doing it the other way easily causes peeling.",
     tip: "💡 Nhớ: Làm mái dốc = luôn từ trên xuống dưới để tránh trôi vật liệu."
   },
   {
@@ -100,6 +112,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 1,
     vi: "Trong công trình công trình biển 海洋（かいよう）土木（どぼく）工事（こうじ）, ai là người chỉ huy các tàu làm việc?",
     explain: "Người **船団長（せんだんちょう）** là người chỉ huy, ra chỉ thị cho từng tàu trong nhóm làm việc.",
+    "explain_id": "**船団長（せんだんちょう）** adalah orang yang memimpin dan memberi instruksi kepada setiap kapal dalam kelompok kerja.",
+    "explain_en": "The **船団長（せんだんちょう）** is the person who commands and gives instructions to each vessel in the working group.",
     tip: "💡 Nhớ: 団 (だん) = nhóm → 船団長（せんだんちょう） = trưởng nhóm tàu, người ra lệnh."
   },
 
@@ -115,6 +129,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Hình này là loại công việc gì?",
     explain: "Hình cho thấy đang vận hành **クレーン（cần cẩu）**, nên đây là **クレーン作業（さぎょう）**.",
+    "explain_id": "Gambar menunjukkan **クレーン（derek / crane）** sedang dioperasikan, jadi ini adalah **クレーン作業（さぎょう）**.",
+    "explain_en": "The image shows a **クレーン（crane）** being operated, so this is **クレーン作業（さぎょう）**.",
     tip: "💡 Nhớ: クレーン＝cần cẩu, 玉掛＝móc cáp → khác nhau nhé!"
   },
 
@@ -129,6 +145,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Khi lên xuống máy công trình, cách nào là đúng?",
     explain: "Phải **tắt máy và khóa cần an toàn (セーフティレバー)** trước khi lên hoặc xuống.",
+    "explain_id": "Harus **mematikan mesin dan mengunci tuas pengaman (セーフティレバー)** sebelum naik atau turun.",
+    "explain_en": "You must **turn off the engine and lock the safety lever (セーフティレバー)** before getting on or off.",
     tip: "💡 Nhớ: lên/xuống máy → luôn 切エンジン + ロックレバー."
   },
 
@@ -143,6 +161,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 3,
     vi: "Trong các thao tác sau về máy móc công trình, điều nào là **không phù hợp**?",
     explain: "Sau khi kết thúc công việc **không được tắt máy ngay**, cần kiểm tra và làm nguội động cơ trước.",
+    "explain_id": "Setelah selesai bekerja, **jangan langsung mematikan mesin**; perlu memeriksa dan mendinginkan mesin terlebih dahulu.",
+    "explain_en": "After finishing work, **do not turn off the engine immediately**; you need to check and cool down the engine first.",
     tip: "💡 Nhớ: Không bao giờ 'tắt máy rồi về ngay' → phải kiểm tra và ghi chép trước."
   },
   {
@@ -156,6 +176,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Dụng cụ dùng để siết chặt hoặc nới lỏng form tie là gì?",
     explain: "**フォームタイ回し** là dụng cụ chuyên dùng để **vặn/siết hoặc tháo form tie** (thanh cố định khuôn bê tông).",
+    "explain_id": "**フォームタイ回し** adalah alat khusus yang digunakan untuk **memutar/mengencangkan atau melepas form tie** (batang pengunci cetakan beton).",
+    "explain_en": "**フォームタイ回し** is a special tool used to **turn/tighten or remove a form tie** (the bar that fixes a concrete form).",
     tip: "💡 Nhớ: có chữ 回す＝vặn → dụng cụ để vặn form tie."
   },
 
@@ -170,6 +192,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 1,
     vi: "Khi làm cốp pha đổ bê tông, dùng loại búa nào?",
     explain: "**木づち** là búa gỗ, thường dùng khi đóng cốp pha để tránh làm hỏng vật liệu.",
+    "explain_id": "**木づち** adalah palu kayu, biasanya digunakan saat memasang bekisting agar tidak merusak material.",
+    "explain_en": "**木づち** is a wooden mallet, usually used when assembling formwork to avoid damaging the material.",
     tip: "💡 Nhớ: 木 (gỗ) → dùng để đóng nhẹ, không làm trầy vật liệu."
   },
 {
@@ -183,6 +207,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 2,
   vi: "Khi quá tập trung vào một điểm mà không để ý xung quanh, lỗi con người đó là gì?",
   explain: "Đó là **場面行動本能（ばめんこうどうほんのう）**, tức là khi hành động theo bản năng trong tình huống, quá tập trung vào một việc mà không quan sát toàn cảnh xung quanh.",
+  "explain_id": "Itu adalah **場面行動本能（ばめんこうどうほんのう）**, yaitu saat bertindak secara naluriah dalam suatu situasi, terlalu fokus pada satu hal dan tidak mengamati keseluruhan keadaan di sekitar.",
+  "explain_en": "That is **場面行動本能（ばめんこうどうほんのう）**, i.e. when acting instinctively in a situation, focusing too much on one thing and not observing the whole surroundings.",
   tip: "💡 Nhớ: tập trung quá mức vào một điểm → hành động bản năng 場面（ばめん）行動（こうどう）本能（ほんのう）."
 },
 
@@ -197,6 +223,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Khi tập trung quá vào một việc, giảm chú ý xung quanh dẫn đến tai nạn — lỗi này gọi là gì?",
     explain: "Đây là **不注意（ふちゅうい）**, nghĩa là thiếu chú ý, nguyên nhân phổ biến của tai nạn lao động.",
+    "explain_id": "Ini adalah **不注意（ふちゅうい）**, artinya kurang perhatian, penyebab umum kecelakaan kerja.",
+    "explain_en": "This is **不注意（ふちゅうい）**, meaning lack of attention, a common cause of work accidents.",
     tip: "💡 Nhớ: 注意 thiếu → 不注意 → lỗi bất cẩn, thiếu tập trung."
   },
 
@@ -212,6 +240,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Dụng cụ trong hình là gì, mô tả nào đúng?",
     explain: "Đây là **やっとこ (kẹp sắt)** – dùng để **kẹp hoặc cầm thanh sắt đang nung nóng** khi rèn hoặc hàn.",
+    "explain_id": "Ini adalah **やっとこ (tang penjepit besi)** – digunakan untuk **menjepit atau memegang batang besi yang sedang dipanaskan** saat menempa atau mengelas.",
+    "explain_en": "This is **やっとこ (pliers/tongs)** – used to **grip or hold a hot steel bar** during forging or welding.",
     tip: "💡 Nhớ: やっとこ = kẹp sắt → dùng để gắp vật kim loại nóng."
   },
   {
@@ -225,6 +255,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Loại mũ bảo hộ có tấm che mặt シールド面（めん）付きヘルメット phù hợp cho công việc nào?",
     explain: "Mũ có tấm che mặt dùng để **bảo vệ khỏi tia lửa, nhiệt, sáng chói khi hàn**, nên phù hợp với 溶接（ようせつ）工事（こうじ） (công việc hàn)**.",
+    "explain_id": "Helm dengan pelindung wajah digunakan untuk **melindungi dari percikan api, panas, dan silau saat mengelas**, sehingga cocok untuk 溶接（ようせつ）工事（こうじ） (pekerjaan pengelasan)**.",
+    "explain_en": "A helmet with a face shield is used to **protect against sparks, heat, and glare when welding**, so it is suitable for 溶接（ようせつ）工事（こうじ） (welding work)**.",
     tip: "💡 Nhớ: シールド面＝tấm chắn → dùng khi hàn để bảo vệ mặt."
   },
 
@@ -240,6 +272,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 1,
     vi: "Thiết bị trong hình là gì?",
     explain: "Hình cho thấy **ラムシリンダ (Ram Cylinder)** – thiết bị thủy lực tạo lực ép, dùng trong hàn nối hoặc nén thép.",
+    "explain_id": "Gambar menunjukkan **ラムシリンダ (Ram Cylinder)** – alat hidrolik yang menghasilkan gaya tekan, digunakan dalam pengelasan tekan atau penekanan baja.",
+    "explain_en": "The image shows a **ラムシリンダ (Ram Cylinder)** – a hydraulic device that creates pressing force, used in pressure welding or compressing steel.",
     tip: "💡 Nhớ: シリンダ＝ống xi lanh → thiết bị ép thủy lực."
   },
 
@@ -254,6 +288,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Hopper (ホッパ) là gì?",
     explain: "ホッパ là **phễu nhận bê tông tươi 生コン（なまこん）** từ xe trộn, trước khi bơm vào khuôn.",
+    "explain_id": "ホッパ adalah **corong penampung yang menerima beton segar 生コン（なまこん）** dari truk mixer, sebelum dipompa ke dalam cetakan.",
+    "explain_en": "ホッパ is a **hopper that receives fresh concrete 生コン（なまこん）** from a mixer truck, before it is pumped into the form.",
     tip: "💡 Nhớ: Hopper = phễu → chỗ nhận bê tông từ xe trộn."
   },
   {
@@ -268,6 +304,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 0,
     vi: "Dụng cụ trong hình là gì?",
     explain: "Đây là **ワイヤーブラシ (bàn chải sắt)** – dùng để chà rỉ sét, sơn cũ, hoặc làm sạch bề mặt kim loại.",
+    "explain_id": "Ini adalah **ワイヤーブラシ (sikat kawat)** – digunakan untuk menggosok karat, cat lama, atau membersihkan permukaan logam.",
+    "explain_en": "This is a **ワイヤーブラシ (wire brush)** – used to scrub off rust, old paint, or clean metal surfaces.",
     tip: "💡 Nhớ: ブラシ = brush → ワイヤーブラシ = bàn chải kim loại."
   },
 
@@ -282,6 +320,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Công việc 玉掛（たまがけ）作業（さぎょう） là gì?",
     explain: "*玉掛（たまがけ）作業（さぎょう）** là việc **móc hoặc tháo dây cáp vào hàng hóa khi dùng cần cẩu nâng hạ**.",
+    "explain_id": "*玉掛（たまがけ）作業（さぎょう）** adalah pekerjaan **memasang atau melepas tali kawat pada muatan saat mengangkat dan menurunkan dengan derek**.",
+    "explain_en": "*玉掛（たまがけ）作業（さぎょう）** is the work of **attaching or removing slings/wire ropes to a load when lifting and lowering it with a crane**.",
     tip: "💡 Nhớ: 玉掛（たまがけ） = gắn/móc vật → dùng khi làm việc với cần cẩu."
   },
   {
@@ -295,6 +335,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Trong công trình khoan giếng, việc ngăn nước bẩn thấm vào giếng gọi là gì?",
     explain: "**遮水（しゃすい）** nghĩa là **chống thấm nước**, dùng để ngăn không cho nước bẩn hoặc nước tầng xấu vào giếng.",
+    "explain_id": "**遮水（しゃすい）** berarti **kedap air / penahan air**, digunakan untuk mencegah air kotor atau air dari lapisan yang buruk masuk ke dalam sumur.",
+    "explain_en": "**遮水（しゃすい）** means **waterproofing / water cutoff**, used to prevent dirty water or water from a poor layer from entering a well.",
     tip: "💡 Nhớ: 遮 (しゃ) = chặn, 水 = nước → 遮水 = ngăn nước vào."
   },
   {
@@ -308,6 +350,8 @@ window.PRACTICE_SETS["g1_2"] = {
     answer: 2,
     vi: "Trong công trình lát đường 舗装（ほそう）工事（こうじ）, 路床（ろしょう）工事（こうじ） là gì?",
     explain: "**路床（ろしょう）** là **lớp nền thấp nhất của mặt đường**, thường dày khoảng 1m, dùng để chịu lực và làm nền cho lớp trên.",
+    "explain_id": "**路床（ろしょう）** adalah **lapisan dasar paling bawah dari permukaan jalan**, biasanya setebal sekitar 1m, digunakan untuk menahan beban dan menjadi dasar bagi lapisan di atasnya.",
+    "explain_en": "**路床（ろしょう）** is the **lowest foundation layer of a road surface**, usually about 1m thick, used to bear loads and serve as the base for the layer above.",
     tip: "💡 Nhớ: 床 = sàn → 路床 = nền đường (phần thấp nhất)."
   },
   {
@@ -321,6 +365,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 1,
   vi: "Vật liệu dùng để làm phẳng bề mặt gồ ghề là gì?",
   explain: "“パテ” là bột trét, được dùng để làm phẳng bề mặt tường, trần hoặc vật liệu trước khi sơn hoặc hoàn thiện. Nó giúp loại bỏ các chỗ lõm, gồ ghề để tạo mặt phẳng đẹp.",
+  "explain_id": "“パテ” adalah dempul, digunakan untuk meratakan permukaan dinding, plafon, atau material sebelum pengecatan atau finishing. Dempul membantu menghilangkan lekukan dan ketidakrataan untuk menciptakan permukaan yang rata dan bagus.",
+  "explain_en": "“パテ” is putty/dempul, used to level the surface of walls, ceilings, or materials before painting or finishing. It helps remove dents and unevenness to create a nice flat surface.",
   tip: "💡 Nhớ: パテ = bột trét → dùng để làm phẳng 平（たい）らにする."
 },
 {
@@ -334,6 +380,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 0,
   vi: "Trong công việc sơn, Scraper (dao cạo) là gì?",
   explain: "スクレーパー là dụng cụ dùng để cạo bỏ sơn cũ, bụi bẩn hoặc chất bám dính trên bề mặt trước khi sơn mới. Giúp làm sạch bề mặt để sơn bám tốt hơn.",
+  "explain_id": "スクレーパー adalah alat yang digunakan untuk mengikis cat lama, kotoran, atau zat perekat pada permukaan sebelum pengecatan baru. Alat ini membantu membersihkan permukaan agar cat menempel lebih baik.",
+  "explain_en": "スクレーパー is a tool used to scrape off old paint, dirt, or adhesive substances on a surface before new painting. It helps clean the surface so the paint adheres better.",
   tip: "💡 Nhớ: スクレーパー = cạo (scrape) → cạo bỏ sơn hoặc vết bẩn."
 },
 {
@@ -347,6 +395,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 1,
   vi: "Máy cưa reciprocating (レシプロソー) là gì?",
   explain: "レシプロソー là **máy cưa điện** có lưỡi dao dài di chuyển **qua lại 前後（ぜんご）に動（うご）** để cắt vật liệu như gỗ, ống, hoặc kim loại.",
+  "explain_id": "レシプロソー adalah **gergaji listrik** dengan mata pisau panjang yang bergerak **bolak-balik 前後（ぜんご）に動（うご）** untuk memotong material seperti kayu, pipa, atau logam.",
+  "explain_en": "レシプロソー is an **electric saw** with a long blade that moves **back and forth 前後（ぜんご）に動（うご）** to cut materials such as wood, pipes, or metal.",
   tip: "💡 Nhớ: レシプロ＝reciprocate＝chuyển động qua lại → cưa qua lại để cắt vật liệu."
 },
   {
@@ -360,6 +410,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 1,
   vi: "Khi hít phải trong quá trình hàn, chất nào gây ra các triệu chứng như đau đầu, sốt, ớn lạnh, đau cơ, khát cổ, mệt mỏi?",
   explain: "Khi hàn, sinh ra **ヒューム (khói hàn – hạt kim loại siêu nhỏ)**. Nếu hít phải nhiều sẽ gây **sốt khói kim loại (Metal Fume Fever)** với các triệu chứng như đau đầu, sốt, mệt mỏi.",
+  "explain_id": "Saat mengelas, dihasilkan **ヒューム (asap las – partikel logam yang sangat halus)**. Jika banyak terhirup akan menyebabkan **demam asap logam (Metal Fume Fever)** dengan gejala seperti sakit kepala, demam, dan kelelahan.",
+  "explain_en": "When welding, **ヒューム (welding fume – extremely fine metal particles)** is generated. Inhaling a lot of it causes **Metal Fume Fever** with symptoms such as headache, fever, and fatigue.",
   tip: "💡 Nhớ: ヒューム＝khói hàn kim loại → gây mệt, sốt, đau đầu."
 },
 {
@@ -374,6 +426,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 1,
   vi: "Đây là loại máy gì?",
   explain: "Hình minh họa là **スクレーパー (Scraper)** — máy dùng để cào, san, và vận chuyển đất trong công trình san lấp.",
+  "explain_id": "Ilustrasi ini adalah **スクレーパー (Scraper)** — mesin yang digunakan untuk mengeruk, meratakan, dan mengangkut tanah dalam pekerjaan penimbunan.",
+  "explain_en": "The illustration is a **スクレーパー (Scraper)** — a machine used to scrape, level, and transport soil in earth-filling work.",
   tip: "💡 Nhớ: スクレーパー = máy cào đất (scrape = cào, nạo)."
 },
 
@@ -388,6 +442,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 3,
   vi: "Máy nào được dùng để làm phẳng bề mặt đất hoặc đá nghiền trong thi công mặt đường?",
   explain: "**モーターグレーダー (Motor Grader)** là máy chuyên dùng để san phẳng, tạo độ dốc và hoàn thiện mặt đường.",
+  "explain_id": "**モーターグレーダー (Motor Grader)** adalah mesin khusus yang digunakan untuk meratakan, membuat kemiringan, dan menyelesaikan permukaan jalan.",
+  "explain_en": "**モーターグレーダー (Motor Grader)** is a machine specially used to level, create slopes, and finish road surfaces.",
   tip: "💡 Nhớ: グレーダー → grade = san phẳng."
 },
 
@@ -403,6 +459,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 0,
   vi: "Khối vuông (caramel block) trong hình được sử dụng với mục đích gì?",
   explain: "**キャラメルブロック** là khối vữa (mortar block) đặt dưới cốt thép sàn để giữ **độ dày lớp bê tông bảo vệ かぶり厚(あつ)さ** đúng tiêu chuẩn.",
+  "explain_id": "**キャラメルブロック** adalah blok mortar yang diletakkan di bawah tulangan lantai untuk menjaga **ketebalan selimut beton かぶり厚(あつ)さ** sesuai standar.",
+  "explain_en": "**キャラメルブロック** is a mortar block placed under slab reinforcement to keep the **concrete cover thickness かぶり厚(あつ)さ** up to standard.",
   tip: "💡 キャラメルブロック = khối đỡ thép, giúp giữ khoảng cách giữa cốt thép và sàn bê tông."
 },
 
@@ -417,6 +475,8 @@ window.PRACTICE_SETS["g1_2"] = {
   answer: 1,
   vi: "Dụng cụ dùng để buộc chặt và cố định các thanh thép là gì?",
   explain: "**ハッカー (Hacker)** là móc buộc thép, dùng để xoắn và cố định dây buộc (結束線)けっそくせん quanh các thanh thép.",
+  "explain_id": "**ハッカー (Hacker)** adalah pengait pengikat tulangan, digunakan untuk memuntir dan mengencangkan kawat pengikat (結束線)けっそくせん di sekitar batang baja.",
+  "explain_en": "**ハッカー (Hacker)** is a rebar tying hook, used to twist and fix binding wire (結束線)けっそくせん around steel bars.",
   tip: "💡 ハッカー = móc buộc thép (xoắn dây thép)."
 }
 ]

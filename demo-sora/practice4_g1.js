@@ -15,6 +15,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Loại xe lu cỡ nhỏ điều khiển bằng tay được gọi là gì?",
   explain: "**ハンドガイドローラー（Hand guide roller）** là xe lu nhỏ điều khiển bằng tay, dùng để nén mặt đường hoặc nền đất chặt hơn trong không gian hẹp.",
+  "explain_id": "**ハンドガイドローラー（Hand guide roller）** adalah mesin pemadat kecil yang dikendalikan dengan tangan, digunakan untuk memadatkan permukaan jalan atau dasar tanah agar lebih padat di ruang yang sempit.",
+  "explain_en": "**ハンドガイドローラー（Hand guide roller）** is a small hand-guided roller, used to compact a road surface or soil base more tightly in narrow spaces.",
   tip: "💡 '手押し型' = loại đẩy bằng tay, thường thấy khi làm đường nhỏ hoặc vỉa hè."
 },
 {
@@ -29,6 +31,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Hình này là công việc gì?",
   explain: "Hình mô tả **クレーン作業（công việc vận hành cần cẩu）**, sử dụng cần trục để nâng và di chuyển vật nặng.",
+  "explain_id": "Gambar menggambarkan **クレーン作業（pekerjaan pengoperasian derek）**, menggunakan derek untuk mengangkat dan memindahkan benda berat.",
+  "explain_en": "The image describes **クレーン作業（crane operation work）**, using a crane to lift and move heavy objects.",
   tip: "💡 クレーン = cần cẩu, dùng để nâng – hạ vật nặng."
 },
 
@@ -44,6 +48,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Công việc trong hình này được gọi là gì?",
   explain: "Đây là **玉掛け作業（たまかけさぎょう）**, tức là công việc móc buộc vật nặng (ở đây là khối bê tông lớn) để cẩu lên bằng cần cẩu.",
+  "explain_id": "Ini adalah **玉掛け作業（たまかけさぎょう）**, yaitu pekerjaan mengikat benda berat (di sini blok beton besar) untuk diangkat dengan derek.",
+  "explain_en": "This is **玉掛け作業（たまかけさぎょう）**, i.e. the work of slinging a heavy object (here a large concrete block) to be lifted by a crane.",
   tip: "💡 玉掛け = móc, treo vật nặng vào móc cẩu, thường có người hướng dẫn ra hiệu."
 },
 {
@@ -57,6 +63,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Khi xây đê chắn sóng hoặc bờ cảng, hộp bê tông lớn được dùng gọi là gì?",
   explain: "**ケーソン（Caisson）** là kết cấu hộp bê tông lớn, dùng làm nền hoặc thân cho cảng, đê chắn sóng, bến tàu…",
+  "explain_id": "**ケーソン（Caisson）** adalah struktur kotak beton besar, digunakan sebagai fondasi atau badan untuk pelabuhan, pemecah gelombang, dermaga, dan sebagainya.",
+  "explain_en": "**ケーソン（Caisson）** is a large concrete box structure, used as a foundation or body for ports, breakwaters, wharves, etc.",
   tip: "💡 ケーソン thường được chế tạo sẵn rồi kéo ra biển để đặt xuống đáy."
 },
 
@@ -72,6 +80,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Công việc trong hình là gì?",
   explain: "Hình cho thấy công nhân đang **vặn chặt フォームタイ (form tie)** – thanh nối cốp pha. Đây là công việc **フォームタイの締め付け作業**.",
+  "explain_id": "Gambar menunjukkan pekerja sedang **mengencangkan フォームタイ (form tie)** – batang penghubung bekisting. Ini adalah pekerjaan **フォームタイの締め付け作業**.",
+  "explain_en": "The image shows a worker **tightening a フォームタイ (form tie)** – a bar connecting formwork. This is the work **フォームタイの締め付け作業**.",
   tip: "💡 フォームタイ là thanh kim loại dùng để cố định khoảng cách giữa hai ván khuôn (型枠)."
 },
 
@@ -86,6 +96,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Công việc bơm ép bê tông là loại công trình nào?",
   explain: "**コンクリート圧送工事** là công trình bơm bê tông tươi (生コン) từ xe trộn bằng xe bơm (ポンプ車) vào khuôn cốp pha.",
+  "explain_id": "**コンクリート圧送工事** adalah pekerjaan memompa beton segar (生コン) dari truk mixer dengan truk pompa (ポンプ車) ke dalam cetakan bekisting.",
+  "explain_en": "**コンクリート圧送工事** is work to pump fresh concrete (生コン) from a mixer truck with a pump truck (ポンプ車) into the formwork.",
   tip: "💡 '圧送' nghĩa là 'bơm bằng áp lực' — thường thấy khi đổ bê tông tầng cao hoặc xa."
 },
 
@@ -101,6 +113,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Bức ảnh dưới đây là loại công việc nào?",
   explain: "Đây là **剪定作業（せんていさぎょう）** – công việc cắt tỉa cây cảnh trong công trình sân vườn hoặc công viên.",
+  "explain_id": "Ini adalah **剪定作業（せんていさぎょう）** – pekerjaan memangkas pohon hias dalam proyek taman atau taman kota.",
+  "explain_en": "This is **剪定作業（せんていさぎょう）** – the work of pruning ornamental trees in garden or park projects.",
   tip: "💡 剪定 = tỉa cành, chỉnh dáng cây cho gọn và đẹp."
 },
 {
@@ -114,6 +128,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Định nghĩa của nhựa đường (asphalt) là gì?",
   explain: "**アスファルト** là chất còn lại khi chưng cất dầu mỏ, được gọi là **残留物（ざんりゅうぶつ）** sau khi tách xăng và dầu nhẹ.",
+  "explain_id": "**アスファルト** adalah zat yang tersisa saat minyak bumi disuling, disebut **残留物（ざんりゅうぶつ）** setelah bensin dan minyak ringan dipisahkan.",
+  "explain_en": "**アスファルト** is the substance remaining when petroleum is distilled, called **残留物（ざんりゅうぶつ）** after gasoline and light oil are separated.",
   tip: "💡 Dùng làm vật liệu chính trong舗装（ほそう）工事 – công trình lát đường."
 },
 
@@ -128,6 +144,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Trong ba loại tai nạn lao động lớn, tai nạn thường xảy ra nhất khi làm việc trên cao là gì?",
   explain: "Tai nạn thường gặp nhất khi làm việc trên cao là **墜落・転落（ついらく・てんらく）**, tức là té ngã hoặc rơi từ trên cao.",
+  "explain_id": "Kecelakaan yang paling sering terjadi saat bekerja di ketinggian adalah **墜落・転落（ついらく・てんらく）**, yaitu terjatuh atau jatuh dari ketinggian.",
+  "explain_en": "The most common accident when working at height is **墜落・転落（ついらく・てんらく）**, i.e. falling from a height.",
   tip: "💡 Cần sử dụng フルハーネス để phòng tránh ngã."
 },
 
@@ -142,6 +160,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Trong công trình lát đường, máy dùng để san phẳng nhựa đường là gì?",
   explain: "**アスファルトフィニッシャー（asphalt finisher）** là máy chuyên để rải và san đều lớp nhựa đường trong công trình舗装（ほそう）.",
+  "explain_id": "**アスファルトフィニッシャー（asphalt finisher）** adalah mesin khusus untuk menghamparkan dan meratakan lapisan aspal dalam pekerjaan 舗装（ほそう）.",
+  "explain_en": "**アスファルトフィニッシャー（asphalt finisher）** is a machine specially used to spread and level the asphalt layer in 舗装（ほそう） work.",
   tip: "💡 Sau khi rải, dùng ロードローラー để nén chặt."
 },
 
@@ -156,6 +176,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Khi làm việc ở độ cao trên 5m, để đảm bảo an toàn, cần sử dụng thiết bị nào?",
   explain: "Phải sử dụng **フルハーネス（full harness）** – dây đai an toàn toàn thân để phòng chống rơi ngã.",
+  "explain_id": "Harus menggunakan **フルハーネス（full harness）** – sabuk pengaman seluruh tubuh untuk mencegah jatuh.",
+  "explain_en": "You must use a **フルハーネス（full harness）** – a full-body safety harness to prevent falls.",
   tip: "💡 Từ 2m trở lên nên dùng dây an toàn; từ 5m trở lên bắt buộc dùng **full harness** theo quy định an toàn lao động."
 },
 {
@@ -169,6 +191,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 3,
   vi: "Nếu công việc sơn không được thực hiện đúng cách thì sẽ xảy ra hiện tượng nào là không phù hợp?",
   explain: "Khi thi công sơn không đúng cách, lớp sơn (**塗膜**) có thể bị **ひび割れ（nứt）**, **剝がれ（bong tróc）**, hoặc **mất độ bóng（光沢を失う）**. Trong các đáp án, mất độ bóng là hiện tượng **không phù hợp nhất (不適切)**.",
+  "explain_id": "Ketika pekerjaan pengecatan dilakukan dengan cara yang salah, lapisan cat (**塗膜**) dapat **ひび割れ（retak）**, **剝がれ（mengelupas）**, atau **kehilangan kilapnya（光沢を失う）**. Di antara jawaban, kehilangan kilap adalah fenomena yang **paling tidak sesuai (不適切)**.",
+  "explain_en": "When painting work is done incorrectly, the paint film (**塗膜**) can **ひび割れ（crack）**, **剝がれ（peel）**, or **lose its gloss（光沢を失う）**. Among the answers, loss of gloss is the **most inappropriate (不適切)** phenomenon.",
   tip: "💡 Đảm bảo điều kiện độ ẩm, nhiệt độ và lớp lót đúng quy trình để tránh lỗi bề mặt."
 },
 
@@ -183,6 +207,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Định nghĩa đúng của xe xúc lật (Wheel Loader) là gì?",
   explain: "**ホイールローダ** là máy có bánh xe và gầu xúc ở phía trước, dùng để xúc, bốc, vận chuyển vật liệu như đất, cát, đá vụn.",
+  "explain_id": "**ホイールローダ** adalah mesin dengan roda dan bucket di bagian depan, digunakan untuk mengeruk, memuat, dan mengangkut material seperti tanah, pasir, dan batu pecah.",
+  "explain_en": "**ホイールローダ** is a machine with wheels and a bucket at the front, used to scoop, load, and transport materials such as soil, sand, and crushed stone.",
   tip: "💡 Wheel loader = máy xúc lật bánh lốp (dạng có thể chạy bằng bánh xe, không phải xích)."
 },
 
@@ -197,6 +223,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Công trình tạo cảnh quan (造園工事) là gì?",
   explain: "**造園工事（ぞうえんこうじ）** là công việc sắp đặt đá, cây, hoa… để tạo không gian cảnh quan tự nhiên và đẹp mắt.",
+  "explain_id": "**造園工事（ぞうえんこうじ）** adalah pekerjaan menata batu, pohon, bunga, dan sebagainya untuk menciptakan ruang lanskap yang alami dan indah.",
+  "explain_en": "**造園工事（ぞうえんこうじ）** is the work of arranging stones, trees, flowers, etc. to create a natural and beautiful landscape space.",
   tip: "💡 Thường gặp trong công viên, khu vườn hoặc khu đô thị."
 },
 
@@ -211,6 +239,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Trước khi tiến hành công việc phá dỡ (解体工事), cần phải làm gì?",
   explain: "Phải **確認する（xác nhận）** rằng **ライフライン（điện, nước, ga）đã được ngắt (止めている)** trước khi bắt đầu phá dỡ.",
+  "explain_id": "Harus **確認する（memastikan）** bahwa **ライフライン（listrik, air, gas）sudah dimatikan (止めている)** sebelum memulai pembongkaran.",
+  "explain_en": "You must **確認する（confirm）** that the **ライフライン（electricity, water, gas）have been shut off (止めている)** before starting demolition.",
   tip: "💡 Nếu không ngắt, rất dễ xảy ra tai nạn cháy nổ, điện giật hoặc ngập nước."
 },
 {
@@ -224,6 +254,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Trong các mô tả về công việc phá dỡ (解体工事), điều nào là sai?",
   explain: "Đáp án sai là **①** vì trước khi phá dỡ phải **ngắt (止める)** chứ không phải **mở (開通)** các đường điện, nước, ga (ライフライン).",
+  "explain_id": "Jawaban yang salah adalah **①** karena sebelum pembongkaran harus **mematikan (止める)**, bukan **membuka (開通)**, saluran listrik, air, dan gas (ライフライン).",
+  "explain_en": "The wrong answer is **①** because before demolition you must **shut off (止める)**, not **open/connect (開通)**, the electricity, water, and gas lines (ライフライン).",
   tip: "💡 Khi解体工事, cần cắt nguồn điện, nước, gas trước để tránh tai nạn."
 },
 
@@ -238,6 +270,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 3,
   vi: "Trong các loại tai nạn gây tử vong tại công trường xây dựng, loại nào xảy ra nhiều nhất?",
   explain: "Tai nạn gây chết người nhiều nhất trong xây dựng là **墜落（ついらく）– té ngã từ trên cao**.",
+  "explain_id": "Kecelakaan yang paling banyak menyebabkan kematian dalam konstruksi adalah **墜落（ついらく）– jatuh dari ketinggian**.",
+  "explain_en": "The accident that causes the most deaths in construction is **墜落（ついらく）– falling from a height**.",
   tip: "💡 Luôn sử dụngフルハーネス khi làm việc ở độ cao để tránh墜落事故."
 },
 
@@ -253,6 +287,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Bộ phận được khoanh đỏ trong ảnh là loại vật liệu nào?",
   explain: "Đây là **腕木（うでぎ）**, là thanh kim loại dùng để **đỡ tấm sàn giàn giáo (足場板)** từ phía dưới.",
+  "explain_id": "Ini adalah **腕木（うでぎ）**, batang logam yang digunakan untuk **menopang papan lantai perancah (足場板)** dari bawah.",
+  "explain_en": "This is a **腕木（うでぎ）**, a metal bar used to **support a scaffolding deck board (足場板)** from below.",
   tip: "💡 腕木 thường gắn ở khung giàn giáo, giúp chịu tải trọng của sàn thao tác."
 },
 
@@ -267,6 +303,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Tấm ván布板（ぬのいた）được móc và cố định vào đâu?",
   explain: "布板 được **móc vào 腕木（うでぎ）**, là thanh ngang của giàn giáo để cố định và giữ vững vị trí sàn làm việc.",
+  "explain_id": "布板 **dikaitkan pada 腕木（うでぎ）**, batang horizontal perancah untuk mengunci dan menjaga posisi lantai kerja agar kokoh.",
+  "explain_en": "布板 is **hooked onto a 腕木（うでぎ）**, a horizontal bar of the scaffolding to fix and secure the position of the working platform.",
   tip: "💡 腕木（うでぎ）＝ thanh đỡ ngang giúp cố định板 (ván) trong giàn giáo."
 },
 {
@@ -280,6 +318,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Về công trình bê tông cốt thép, hãy chọn điều **không thích hợp**.",
   explain: "Câu sai là **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — Thực tế, **bê tông mạnh về nén**, yếu về kéo, nên chèn thép để chịu lực kéo chứ không phải vì yếu nén.",
+  "explain_id": "Pernyataan yang salah adalah **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — Kenyataannya, **beton kuat terhadap tekanan**, lemah terhadap tarikan, sehingga baja dimasukkan untuk menahan gaya tarik, bukan karena lemah terhadap tekanan.",
+  "explain_en": "The wrong statement is **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — In reality, **concrete is strong in compression** and weak in tension, so steel is inserted to bear tensile force, not because it is weak in compression.",
   tip: "💡 Bê tông mạnh khi bị nén, yếu khi bị kéo → dùng thép để bù lực kéo, không phải lực nén."
 },
 {
@@ -295,6 +335,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Công việc hàn hồ quang (アーク溶接) là loại kỹ thuật gì?",
   explain: "Là kỹ thuật **dùng dòng điện để hàn chảy kim loại**, thường thấy trong xây dựng, cầu, giàn thép.",
+  "explain_id": "Adalah teknik **menggunakan arus listrik untuk melelehkan dan mengelas logam**, yang umum ditemukan dalam konstruksi, jembatan, dan rangka baja.",
+  "explain_en": "It is a technique that **uses electric current to melt and weld metal**, commonly seen in construction, bridges, and steel frames.",
   tip: "💡 溶接（ようせつ）＝ hàn kim loại bằng điện."
 },
 {
@@ -308,6 +350,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Dụng cụ dùng để ngăn công nhân giàn giáo rơi từ trên cao gọi là gì?",
   explain: "Là **安全ブロック (あんぜんブロック)** – thiết bị an toàn chống rơi, nối với dây an toàn.",
+  "explain_id": "Adalah **安全ブロック (あんぜんブロック)** – alat pengaman pencegah jatuh, yang dihubungkan dengan tali pengaman.",
+  "explain_en": "It is a **安全ブロック (あんぜんブロック)** – a fall prevention safety device, connected to a safety rope.",
   tip: "💡 安全ブロック = thiết bị hãm rơi khi làm việc trên cao."
 },
 {
@@ -321,6 +365,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Máy trộn vữa (モルタルミキサ) là gì?",
   explain: "モルタルミキサ là **máy trộn xi măng, nước và cát để tạo ra vữa (モルタル)** – được dùng trong xây dựng tường, trát, lát.",
+  "explain_id": "モルタルミキサ adalah **mesin yang mencampur semen, air, dan pasir untuk membuat mortar (モルタル)** – digunakan dalam pembangunan dinding, plesteran, dan pemasangan ubin.",
+  "explain_en": "モルタルミキサ is a **machine that mixes cement, water, and sand to make mortar (モルタル)** – used in wall construction, plastering, and tiling.",
   tip: "💡 モルタル = vữa, ミキサ = máy trộn → máy trộn vữa."
 },
 
@@ -335,6 +381,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Trước khi bắt đầu công trình đóng cọc (杭工事), cần xác nhận điều gì để tránh xảy ra tai nạn?",
   explain: "Cần xác nhận **vị trí các đường ống ngầm như gas, nước, điện, điện thoại (ガス・水道・電気・電話などの管)** để tránh làm hư hỏng gây cháy nổ hoặc tai nạn.",
+  "explain_id": "Perlu memastikan **posisi pipa bawah tanah seperti gas, air, listrik, dan telepon (ガス・水道・電気・電話などの管)** untuk menghindari kerusakan yang menyebabkan kebakaran, ledakan, atau kecelakaan.",
+  "explain_en": "You need to confirm the **location of underground pipes such as gas, water, electricity, and telephone (ガス・水道・電気・電話などの管)** to avoid damaging them and causing fire, explosion, or accidents.",
   tip: "💡 Trước khi đào, luôn kiểm tra bản đồ hạ tầng ngầm."
 },
 
@@ -349,6 +397,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 3,
   vi: "Trong các công việc sau, điều nào không phù hợp với khảo sát địa chất (地盤調査)?",
   explain: "地盤調査 nhằm khảo sát **tính chất đất, độ bền, mực nước ngầm**, nhưng **không liên quan đến khảo cổ (遺跡)**.",
+  "explain_id": "地盤調査 bertujuan untuk menyelidiki **sifat tanah, kekuatan, dan muka air tanah**, tetapi **tidak berkaitan dengan arkeologi (遺跡)**.",
+  "explain_en": "地盤調査 aims to survey **soil properties, strength, and groundwater level**, but is **not related to archaeology (遺跡)**.",
   tip: "💡 遺跡調査 là khảo cổ học, không phải địa chất."
 },
 {
@@ -362,6 +412,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Phương pháp cố định giữa cột và dầm bằng cách chia dầm thành 3 phần và hàn cố định sẵn tại nhà máy gọi là gì?",
   explain: "Đây là **ブラケット工法（Bracket method）**, phương pháp hàn cố định phần giao giữa cột và dầm bằng giá đỡ, thường dùng trong kết cấu thép.",
+  "explain_id": "Ini adalah **ブラケット工法（Bracket method）**, metode mengelas dan mengencangkan bagian pertemuan antara kolom dan balok dengan bracket, yang umum digunakan dalam struktur baja.",
+  "explain_en": "This is the **ブラケット工法（Bracket method）**, a method of welding and fixing the junction between a column and a beam with a bracket, commonly used in steel structures.",
   tip: "💡 ブラケット = bracket = giá đỡ nối cột và dầm."
 },
 
@@ -376,6 +428,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Thùng bền dùng để cho vật liệu vào trộn bê tông hoặc vữa được gọi là gì?",
   explain: "**トロ箱（とろばこ）** là thùng kim loại hoặc nhựa dày, dùng để trộn và chứa vật liệu như xi măng, cát, nước trong khi làm vữa.",
+  "explain_id": "**トロ箱（とろばこ）** adalah kotak logam atau plastik tebal, digunakan untuk mencampur dan menampung material seperti semen, pasir, dan air saat membuat mortar.",
+  "explain_en": "**トロ箱（とろばこ）** is a thick metal or plastic box, used to mix and contain materials such as cement, sand, and water when making mortar.",
   tip: "💡 ふるい = rây, バケット = gầu, ホッパ = phễu chứa."
 },
 {
@@ -389,6 +443,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Trong khái niệm QCDSE của quản lý thi công (施工管理), chữ D biểu thị việc quản lý gì?",
   explain: "Trong QCDSE: Q = Quality (chất lượng), C = Cost (chi phí), D = Delivery (tiến độ). Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn công trình (工期内完成)**.",
+  "explain_id": "Dalam QCDSE: Q = Quality (kualitas), C = Cost (biaya), D = Delivery (jadwal). Oleh karena itu D adalah **manajemen jadwal untuk menyelesaikan dalam masa pelaksanaan (工期内完成)**.",
+  "explain_en": "In QCDSE: Q = Quality, C = Cost, D = Delivery. Therefore D is **schedule management to complete within the construction period (工期内完成)**.",
   tip: "💡 D = Delivery (納期 / 工期)."
 },
 
@@ -403,6 +459,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Khi tháo dỡ khuôn bê tông (型枠), công cụ nào là phù hợp nhất?",
   explain: "Công cụ phù hợp là **バール (xà beng)** để tháo ván khuôn, cạy nhẹ các mối nối mà không làm hỏng khuôn hoặc bê tông.",
+  "explain_id": "Alat yang cocok adalah **バール (linggis)** untuk melepas bekisting, mencongkel sambungan dengan ringan tanpa merusak cetakan atau beton.",
+  "explain_en": "The suitable tool is a **バール (pry bar / crowbar)** to remove formwork and gently pry joints without damaging the form or the concrete.",
   tip: "💡 バール = xà beng (crowbar)."
 },
 
@@ -417,6 +475,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Trong thi công đường hầm kiểu đẩy (推進トンネル工事), máy掘進機（くっしんき）được dùng để làm gì?",
   explain: "掘進機 là **máy đào đất (máy khoan đường hầm)** dùng để đào đất ở phía trước, phục vụ thi công đường hầm kiểu đẩy (推進工法).",
+  "explain_id": "掘進機 adalah **mesin penggali tanah (mesin bor terowongan)** yang digunakan untuk menggali tanah di bagian depan, untuk konstruksi terowongan metode dorong (推進工法).",
+  "explain_en": "掘進機 is a **soil excavating machine (tunnel boring machine)** used to excavate soil at the front, serving pipe-jacking tunnel construction (推進工法).",
   tip: "💡 掘進機（くっしんき）＝ máy đào hầm."
 },
 
@@ -432,6 +492,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Tàu bơm hút bùn (ポンプ浚渫船) là loại tàu gì?",
   explain: "**ポンプ浚渫船（しゅんせつせん）** là tàu dùng máy bơm hút bùn đất ở đáy biển lên, hút cả bùn và nước cùng lúc.",
+  "explain_id": "**ポンプ浚渫船（しゅんせつせん）** adalah kapal yang menggunakan pompa untuk menghisap lumpur dan tanah dari dasar laut, menghisap lumpur dan air secara bersamaan.",
+  "explain_en": "**ポンプ浚渫船（しゅんせつせん）** is a vessel that uses a pump to suck up mud and soil from the seabed, sucking up both mud and water at the same time.",
   tip: "💡 浚渫（しゅんせつ）= nạo vét (hút bùn)."
 },
 {
@@ -445,6 +507,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Máy パイルドライバー (Pile Driver) là loại máy gì?",
   explain: "**パイルドライバー** là máy **khoan, đóng cọc bê tông sẵn (既製杭)** xuống đất để làm móng cho công trình.",
+  "explain_id": "**パイルドライバー** adalah mesin yang **memancang tiang pancang beton pracetak (既製杭)** ke dalam tanah untuk membuat fondasi bangunan.",
+  "explain_en": "**パイルドライバー** is a machine that **drives precast concrete piles (既製杭)** into the ground to make a foundation for a structure.",
   tip: "💡 パイル (pile) = cọc; ドライバー (driver) = máy đóng cọc."
 },
 
@@ -459,6 +523,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Để tăng cường độ vững và tránh cho giàn giáo bị đổ do gió, cần dùng bộ phận nào?",
   explain: "**筋交（すじかい）** là thanh chéo gia cố, giúp giàn giáo không bị đổ do lực gió hoặc rung động.",
+  "explain_id": "**筋交（すじかい）** adalah batang penguat diagonal, yang membantu perancah agar tidak roboh akibat gaya angin atau getaran.",
+  "explain_en": "**筋交（すじかい）** is a diagonal bracing bar that helps scaffolding not collapse due to wind force or vibration.",
   tip: "💡 筋交 = thanh giằng chéo, chống nghiêng cho khung."
 },
 
@@ -473,6 +539,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Loại máy có bánh xe, phía trước có gầu lớn để xúc, chất và vận chuyển vật liệu là gì?",
   explain: "**ホイールローダ（Wheel Loader）** là xe xúc bánh lốp, dùng để xúc và vận chuyển vật liệu như đất, cát, sỏi.",
+  "explain_id": "**ホイールローダ（Wheel Loader）** adalah kendaraan pemuat beroda, digunakan untuk mengeruk dan mengangkut material seperti tanah, pasir, dan kerikil.",
+  "explain_en": "**ホイールローダ（Wheel Loader）** is a wheeled loader vehicle, used to scoop and transport materials such as soil, sand, and gravel.",
   tip: "💡 ホイール (wheel) = bánh xe; ローダ (loader) = máy xúc."
 },
 
@@ -487,6 +555,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Trong các dụng cụ kim loại sau, cái nào có thể dùng làm đòn bẩy (てこ)?",
   explain: "**バール（Bar）** là xà beng bằng kim loại, dùng làm đòn bẩy để cạy hoặc nâng vật nặng.",
+  "explain_id": "**バール（Bar）** adalah linggis logam, digunakan sebagai tuas untuk mencongkel atau mengangkat benda berat.",
+  "explain_en": "**バール（Bar）** is a metal pry bar, used as a lever to pry or lift heavy objects.",
   tip: "💡 てこ = đòn bẩy; バール = xà beng."
 },
 {
@@ -500,6 +570,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Việc đánh dấu vị trí và độ cao của cấu kiện trên công trường được gọi là gì?",
   explain: "**墨出し（すみだし）** là công việc đánh dấu (marking) vị trí hoặc cao độ thực tế dựa trên bản vẽ để thi công chính xác.",
+  "explain_id": "**墨出し（すみだし）** adalah pekerjaan menandai (marking) posisi atau ketinggian aktual berdasarkan gambar untuk pelaksanaan yang akurat.",
+  "explain_en": "**墨出し（すみだし）** is the work of marking the actual position or elevation based on drawings for accurate construction.",
   tip: "💡 墨出し = marking, layout work."
 },
 
@@ -514,6 +586,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Máy モーターグレーダー là loại máy gì?",
   explain: "**モーターグレーダー** là máy san phẳng bề mặt đất hoặc lớp đá dăm, giúp mặt đường phẳng mịn trước khi rải nhựa hoặc bê tông.",
+  "explain_id": "**モーターグレーダー** adalah mesin yang meratakan permukaan tanah atau lapisan batu pecah, membuat permukaan jalan rata dan halus sebelum menghamparkan aspal atau beton.",
+  "explain_en": "**モーターグレーダー** is a machine that levels the surface of soil or a crushed stone layer, making the road surface flat and smooth before spreading asphalt or concrete.",
   tip: "💡 Motor Grader = máy san ủi mặt đường chính xác."
 },
 
@@ -528,6 +602,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Trong thi công hầm kiểu đẩy (推進トンネル), 'ストラット' là gì?",
   explain: "**ストラット（Strut）** là thanh chống phụ trợ giúp truyền lực đẩy từ xy lanh thủy lực và hỗ trợ trong quá trình đẩy ống (推進).",
+  "explain_id": "**ストラット（Strut）** adalah batang penopang bantu yang membantu menyalurkan gaya dorong dari silinder hidrolik dan membantu selama proses pendorongan pipa (推進).",
+  "explain_en": "**ストラット（Strut）** is an auxiliary support bar that helps transmit thrust from a hydraulic cylinder and assists during pipe jacking (推進).",
   tip: "💡 Strut = thanh chống / thanh truyền lực hỗ trợ trong công trình ngầm."
 },
 
@@ -542,6 +618,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 1,
   vi: "Định nghĩa của ソナー (sonar) là gì?",
   explain: "**ソナー（sonar）** là thiết bị đo hình dạng hoặc độ sâu đáy biển bằng sóng âm – giúp phát hiện vật thể dưới nước.",
+  "explain_id": "**ソナー（sonar）** adalah alat yang mengukur bentuk atau kedalaman dasar laut dengan gelombang suara – membantu mendeteksi benda di bawah air.",
+  "explain_en": "**ソナー（sonar）** is a device that measures the shape or depth of the seabed using sound waves – helping to detect objects underwater.",
   tip: "💡 Sonar = Sound Navigation and Ranging (định vị bằng sóng âm)."
 },
 {
@@ -555,6 +633,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 2,
   vi: "Phần lớp thấp nhất của kết cấu đường gọi là gì?",
   explain: "Phần thấp nhất của đường gọi là **路床（ろしょう）**, nghĩa là lớp nền tự nhiên (đất nền) – nơi chịu tải trọng đầu tiên của kết cấu mặt đường.",
+  "explain_id": "Bagian paling bawah dari jalan disebut **路床（ろしょう）**, artinya lapisan fondasi alami (tanah dasar) – tempat beban struktur perkerasan jalan pertama kali ditahan.",
+  "explain_en": "The lowest part of a road is called **路床（ろしょう）**, meaning the natural foundation layer (subgrade soil) – where the load of the road pavement structure is first borne.",
   tip: "💡 路床 = lớp nền (subgrade)."
 },
 
@@ -569,6 +649,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "Tính chất của bê tông là gì?",
   explain: "Bê tông **chịu nén tốt nhưng chịu kéo kém**. Vì vậy, trong kết cấu thường phải dùng **thép chịu kéo (鉄筋コンクリート)** để bù lại điểm yếu này.",
+  "explain_id": "Beton **tahan terhadap tekanan dengan baik tetapi tahan terhadap tarikan dengan buruk**. Oleh karena itu, dalam struktur biasanya harus menggunakan **baja penahan tarik (鉄筋コンクリート)** untuk mengimbangi kelemahan ini.",
+  "explain_en": "Concrete **resists compression well but resists tension poorly**. Therefore, in structures, **tensile steel (鉄筋コンクリート)** must usually be used to compensate for this weakness.",
   tip: "💡 コンクリート: 強い→圧縮 / 弱い→引っ張り."
 },
 
@@ -584,6 +666,8 @@ window.PRACTICE_SETS["g1_4"] = {
   answer: 0,
   vi: "WBGT dùng để đo chỉ số gì?",
   explain: "**WBGT** (Wet Bulb Globe Temperature) là **chỉ số đo mức độ nóng bức (暑さ指数)**, giúp đánh giá nguy cơ say nắng và mệt mỏi do nhiệt trên công trường.",
+  "explain_id": "**WBGT** (Wet Bulb Globe Temperature) adalah **indeks yang mengukur tingkat panas (暑さ指数)**, yang membantu menilai risiko serangan panas dan kelelahan akibat panas di lokasi konstruksi.",
+  "explain_en": "**WBGT** (Wet Bulb Globe Temperature) is an **index measuring the degree of heat (暑さ指数)**, which helps assess the risk of heatstroke and heat fatigue on a construction site.",
   tip: "💡 WBGT = chỉ số nhiệt kết hợp độ ẩm, nhiệt độ và bức xạ mặt trời."
 }
 ]

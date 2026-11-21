@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chọn ngôn ngữ / Choose language</title>
+  <link rel="icon" href="../icon-192.png">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="i18n.js"></script>
+</head>
+<body class="mono">
+  <main class="lang-wrap">
+    <div class="lang-head">
+      <div class="hero-logo lang-logo"><img src="../icon-192.png" alt="Quiz APP"></div>
+      <h1 class="lang-title" data-i18n="lang_heading">🌐 Chọn ngôn ngữ của bạn</h1>
+      <p class="lang-sub">Pilih bahasa Anda • Choose your language</p>
+    </div>
+
+    <button type="button" class="lang-card-opt" data-lang="vi" onclick="pickLang('vi')">
+      <span class="lang-flag">🇻🇳</span>
+      <span class="lang-texts">
+        <span class="lang-name">Tiếng Việt</span>
+        <span class="lang-desc">Luyện thi Kỹ năng đặc định số 2</span>
+      </span>
+      <span class="lang-code">VI</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-lang="id" onclick="pickLang('id')">
+      <span class="lang-flag">🇮🇩</span>
+      <span class="lang-texts">
+        <span class="lang-name">Bahasa Indonesia</span>
+        <span class="lang-desc">Latihan ujian Keterampilan Khusus No. 2</span>
+      </span>
+      <span class="lang-code">ID</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-lang="en" onclick="pickLang('en')">
+      <span class="lang-flag">🇬🇧</span>
+      <span class="lang-texts">
+        <span class="lang-name">English</span>
+        <span class="lang-desc">Specified Skilled Worker No. 2 exam practice</span>
+      </span>
+      <span class="lang-code">EN</span>
+    </button>
+
+    <p class="lang-note" data-i18n="lang_note">Bạn có thể đổi ngôn ngữ bất cứ lúc nào ở trang chủ.</p>
+  </main>
+
+  <script>
+    // Highlight the currently active language
+    (function () {
+      var cur = (window.I18N && I18N.getLang()) || 'vi';
+      document.querySelectorAll('.lang-card-opt').forEach(function (el) {
+        if (el.getAttribute('data-lang') === cur) el.classList.add('selected');
+      });
+    })();
+  </script>
+
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    let currentUser = null;
+    const authReady = new Promise((resolve) => {
+      onAuthStateChanged(auth, (u) => { currentUser = u; resolve(u); });
+    });
+
+    window.pickLang = async function (code) {
+      try { localStorage.setItem('app_lang', code); } catch (e) {}
+      // Wait briefly for auth state so we can also persist to Firestore
+      const user = currentUser || await Promise.race([
+        authReady,
+        new Promise((r) => setTimeout(() => r(null), 1500))
+      ]);
+      if (user) {
+        try {
+          await setDoc(doc(db, "users", user.uid), { lang: code }, { merge: true });
+        } catch (e) { console.warn("Không lưu được ngôn ngữ lên Firestore:", e); }
+      }
+      location.href = "index.html";
+    };
+  </script>
+</body>
+</html>

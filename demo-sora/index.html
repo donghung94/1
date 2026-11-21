@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js"></script>
 
   <script>
     const quizFiles = [
@@ -42,13 +43,23 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
+
+                    // 0. Ngôn ngữ: nhận từ Firestore nếu máy chưa có; chưa có ở đâu -> trang chọn ngôn ngữ
+                    if (!localStorage.getItem('app_lang')) {
+                        if (data.lang && window.I18N) {
+                            I18N.setLang(data.lang);
+                        } else if (!data.lang) {
+                            location.href = "language.html";
+                            return;
+                        }
+                    }
                     const isAdmin = data.role === 'admin';
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 
                     // 1. Kiểm tra thiết bị
                     if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
-                        alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
+                        alert(t("alert_device_index"));
                         await signOut(auth);
                         location.href = "login.html";
                         return;
@@ -72,13 +83,13 @@
                     // 4. Hiển thị Header
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
-                        const userName = data.name || "Học viên";
+                        const userName = data.name || t("default_student");
                         nameDisplay.textContent = userName;
                         const avatarEl = document.getElementById('user-avatar');
                         if (avatarEl) avatarEl.textContent = userName.trim().charAt(0).toUpperCase() || "H";
                         const chipEl = document.getElementById('user-status-chip');
                         if (chipEl) {
-                            chipEl.textContent = isPremium ? `⭐ PREMIUM - G${userGroup}` : "Học thử";
+                            chipEl.textContent = isPremium ? `⭐ PREMIUM - G${userGroup}` : t("chip_trial");
                             chipEl.classList.toggle('is-premium-chip', isPremium);
                         }
                         document.getElementById('welcome-section').style.setProperty('display', 'flex', 'important');
@@ -137,7 +148,7 @@
                                 if (!isPremium) {
                                     document.getElementById('premium-modal').style.display = 'flex';
                                 } else {
-                                    alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
+                                    alert(t("alert_wrong_group", {g: userGroup}));
                                 }
                             });
                         }
@@ -160,17 +171,18 @@
     <div class="hero-titles">
       <div class="hero-eyebrow">TOKUTEI GINO 2 • XÂY DỰNG</div>
       <div class="hero-brand">Quiz APP</div>
-      <div class="hero-tagline">Luyện đề cấp tốc — bám sát kỳ thi thật</div>
+      <div class="hero-tagline" data-i18n="hero_tagline">Luyện đề cấp tốc — bám sát kỳ thi thật</div>
     </div>
   </div>
   <div id="welcome-section" class="welcome-card">
     <div class="welcome-avatar" id="user-avatar">H</div>
     <div class="welcome-text">
-      <span class="welcome-hi">Chào bạn,</span>
+      <span class="welcome-hi" data-i18n="welcome_hi">Chào bạn,</span>
       <strong id="user-display-name">Học viên</strong>
     </div>
     <span id="user-status-chip" class="status-chip"></span>
   </div>
+  <a href="language.html" class="lang-switch" data-i18n="lang_switch">🌐 Ngôn ngữ</a>
 </header>
 
 
@@ -201,36 +213,36 @@
      code thông báo giá khóa học
 ============================ -->
         <button onclick="document.getElementById('premium-modal').style.display='flex'" 
-                style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">
+                style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;" data-i18n="btn_unlock_now">
             Mở khóa toàn bộ ngay
         </button>
     </div>
 </div>
   <!-- 📢 KHỐI THÔNG BÁO CHUNG (Ai cũng nhìn thấy) -->
   <div class="global-notice-banner">
-    <div style="font-size: 20px; margin-bottom: 5px;">📢 <b>THÔNG BÁO TỪ ADMIN</b></div>
-    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6;">
+    <div style="font-size: 20px; margin-bottom: 5px;" data-i18n-html="notice_title_html">📢 <b>THÔNG BÁO TỪ ADMIN</b></div>
+    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6;" data-i18n-html="notice_body_html">
       Chào mừng các học viên đến với hệ thống luyện đề <b>Tokutei Gino 2 Xây dựng</b> cấp tốc. 
       📢 thông báo dành riêng cho các bạn đang học nhóm 3, phần thực hành đã được tinh gọn lại chỉ còn 2 đề nên mọi người chỉ cần học 2 đề đó thôi nhé.
     </p>
   </div>
 
   <div class="card">
-    <h2>Chọn đề thi lý thuyết chung</h2>
+    <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
     <ul id="exam-list" class="exam-list">
-      <li><a href="exam.html?set=1">Lý thuyết chung – (問1〜問30) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=2">Lý thuyết chung – (問31〜問60) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=3">Lý thuyết chung – (問61〜問90) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=4">Lý thuyết chung – (問91〜問120)</a></li>
-      <li><a href="exam.html?set=5">Lý thuyết chung – (問121〜問150)</a></li>
-      <li><a href="exam.html?set=6">Lý thuyết chung – (問151〜問180)</a></li>
-      <li><a href="exam.html?set=7">👉 Những câu lý thuyết hay thi phần 1</a></li>
-      <li><a href="exam.html?set=8">👉 Những câu lý thuyết hay thi phần 2</a></li>
-      <li><a href="exam.html?set=9">👉 Câu hỏi cập nhật</a></li>
-      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#C8102E;">
+      <li><a href="exam.html?set=1" data-i18n-html="set_1_html">Lý thuyết chung – (問1〜問30) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=2" data-i18n-html="set_2_html">Lý thuyết chung – (問31〜問60) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=3" data-i18n-html="set_3_html">Lý thuyết chung – (問61〜問90) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=4" data-i18n-html="set_4_html">Lý thuyết chung – (問91〜問120)</a></li>
+      <li><a href="exam.html?set=5" data-i18n-html="set_5_html">Lý thuyết chung – (問121〜問150)</a></li>
+      <li><a href="exam.html?set=6" data-i18n-html="set_6_html">Lý thuyết chung – (問151〜問180)</a></li>
+      <li><a href="exam.html?set=7" data-i18n-html="set_7_html">👉 Những câu lý thuyết hay thi phần 1</a></li>
+      <li><a href="exam.html?set=8" data-i18n-html="set_8_html">👉 Những câu lý thuyết hay thi phần 2</a></li>
+      <li><a href="exam.html?set=9" data-i18n-html="set_9_html">👉 Câu hỏi cập nhật</a></li>
+      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#C8102E;" data-i18n-html="set_random_html">
         🎲 Đề tổng hợp lý thuyết chung đảo ngẫu nhiên
       </a></li>
-      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a>
+      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;" data-i18n-html="prometric_link_html">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a>
         </li>
     </ul>
   </div>
@@ -238,35 +250,35 @@
   <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 1 -->
   <!-- ========================= -->
   <div class="card">
-    <h2>🧰 Đề thực hành nhóm 1</h2>
+    <h2 data-i18n="practice_g1">🧰 Đề thực hành nhóm 1</h2>
     <ul class="exam-list">
-      <li><a href="exam.html?practice=g1_1">Thực hành nhóm 1 – (問1〜問30)</a></li>
-      <li><a href="exam.html?practice=g1_2">Thực hành nhóm 1 – (問31〜問60)</a></li>
-      <li><a href="exam.html?practice=g1_3">Thực hành nhóm 1 – (問61〜問90)</a></li>
-      <li><a href="exam.html?practice=g1_4">Thực hành nhóm 1 – (問91〜問132)</a></li>
-      <li><a href="exam.html?practice=g1_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 1</a></li>
+      <li><a href="exam.html?practice=g1_1" data-i18n-html="prac_1_1_html">Thực hành nhóm 1 – (問1〜問30)</a></li>
+      <li><a href="exam.html?practice=g1_2" data-i18n-html="prac_1_2_html">Thực hành nhóm 1 – (問31〜問60)</a></li>
+      <li><a href="exam.html?practice=g1_3" data-i18n-html="prac_1_3_html">Thực hành nhóm 1 – (問61〜問90)</a></li>
+      <li><a href="exam.html?practice=g1_4" data-i18n-html="prac_1_4_html">Thực hành nhóm 1 – (問91〜問132)</a></li>
+      <li><a href="exam.html?practice=g1_random" style="font-weight:bold;color:#C8102E;" data-i18n-html="prac_1_random_html">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 1</a></li>
     </ul>
   </div>
   <!-- ========================= -->
   <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 2 -->
   <!-- ========================= -->
   <div class="card">
-    <h2>🧰 Đề thực hành nhóm 2</h2>
+    <h2 data-i18n="practice_g2">🧰 Đề thực hành nhóm 2</h2>
     <ul class="exam-list">
-      <li><a href="exam.html?practice=g2_1">Thực hành nhóm 2 – (問1〜問30)</a></li>
-      <li><a href="exam.html?practice=g2_2">Thực hành nhóm 2 – (問31〜問60)</a></li>
-      <li><a href="exam.html?practice=g2_3">Thực hành nhóm 2 – (問61〜問90)</a></li>
-      <li><a href="exam.html?practice=g2_4">Thực hành nhóm 2 – (問91〜問130)</a></li>
-       <li><a href="exam.html?practice=g2_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 2</a></li>
+      <li><a href="exam.html?practice=g2_1" data-i18n-html="prac_2_1_html">Thực hành nhóm 2 – (問1〜問30)</a></li>
+      <li><a href="exam.html?practice=g2_2" data-i18n-html="prac_2_2_html">Thực hành nhóm 2 – (問31〜問60)</a></li>
+      <li><a href="exam.html?practice=g2_3" data-i18n-html="prac_2_3_html">Thực hành nhóm 2 – (問61〜問90)</a></li>
+      <li><a href="exam.html?practice=g2_4" data-i18n-html="prac_2_4_html">Thực hành nhóm 2 – (問91〜問130)</a></li>
+       <li><a href="exam.html?practice=g2_random" style="font-weight:bold;color:#C8102E;" data-i18n-html="prac_2_random_html">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 2</a></li>
     </ul>
   </div>
     <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 3 -->
   <!-- ========================= -->
   <div class="card">
-    <h2>🧰 Đề thực hành nhóm 3</h2>
+    <h2 data-i18n="practice_g3">🧰 Đề thực hành nhóm 3</h2>
     <ul class="exam-list">
-       <a href="exam.html?practice=g3_6">Thực hành nhóm 3 – (đề tinh gọn mới nhất 1)</a>
-       <a href="exam.html?practice=g3_7">Thực hành nhóm 3 – (đề tinh gọn mới nhất 2)</a>
+       <a href="exam.html?practice=g3_6" data-i18n-html="prac_3_6_html">Thực hành nhóm 3 – (đề tinh gọn mới nhất 1)</a>
+       <a href="exam.html?practice=g3_7" data-i18n-html="prac_3_7_html">Thực hành nhóm 3 – (đề tinh gọn mới nhất 2)</a>
      
     </ul>
   </div>
@@ -274,7 +286,7 @@
 
 <footer>
   <div class="admin-contact-section">
-    <p>💡<b> Cần hỗ trợ  </b>? Liên hệ Admin:</p>
+    <p data-i18n-html="support_html">💡<b> Cần hỗ trợ  </b>? Liên hệ Admin:</p>
   
        
           
@@ -415,33 +427,33 @@
         
         <div style="font-size: 60px; margin-bottom: 10px;">🔒</div>
         
-        <h2 style="color:#C8102E; margin: 0 0 10px 0; font-size: 22px;">Mở Khóa Toàn Bộ</h2>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0; font-size: 22px;" data-i18n="modal_title">Mở Khóa Toàn Bộ</h2>
         
        <div style="color:#64748b; font-size:14px; line-height:1.8; margin-bottom:25px; text-align: left; background: #FBEFD2; padding: 15px; border-radius: 10px; border: 1px dashed #C9A24B;">
-    <p style="margin: 0; color: #e74c3c; font-weight: bold;">Giảm giá kịch sàn sale 50% -!</p>
+    <p style="margin: 0; color: #e74c3c; font-weight: bold;" data-i18n="modal_sale">Giảm giá kịch sàn sale 50% -!</p>
     
     <p style="margin: 10px 0 5px 0;">
-          =>> <span style="text-decoration: line-through; color: #94a3b8;">Hãy liên hệ chúng tôi</span>
+          =>> <span style="text-decoration: line-through; color: #94a3b8;" data-i18n="modal_contact_us">Hãy liên hệ chúng tôi</span>
     </p>
     
     <p style="margin: 0; font-weight: bold; color: #C8102E;">
          
-      =>> <span style="font-size: 18px; color: #e74c3c;"> Để nhận ưu đãi ngay hôm nay</span> <br>
-        <span style="font-size: 12px; color: #059669;">(Đừng tốn tiền cho các khóa học đắt tiền nữa!)</span>
+      =>> <span style="font-size: 18px; color: #e74c3c;" data-i18n="modal_get_offer"> Để nhận ưu đãi ngay hôm nay</span> <br>
+        <span style="font-size: 12px; color: #059669;" data-i18n="modal_save_money">(Đừng tốn tiền cho các khóa học đắt tiền nữa!)</span>
     </p>
     
-    <p style="margin-top: 10px; font-size: 13px; font-style: italic; border-top: 1px solid #fee2e2; padding-top: 10px;">
+    <p style="margin-top: 10px; font-size: 13px; font-style: italic; border-top: 1px solid #fee2e2; padding-top: 10px;" data-i18n-html="modal_duration_html">
         ⏳ Thời gian áp dụng: Mãi mãi
     </p>
 </div>
         
         <div style="display: flex; flex-direction: column; gap: 12px;">
-            <a href="#" id="modal-zalo" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+            <a href="#" id="modal-zalo" target="_blank" data-i18n-html="modal_zalo_html" style="background:#0068ff; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="24" height="24" style="border-radius:4px;">
                 Zalo số nhật 07090778422
             </a>
 
-            <a href="#" id="modal-fb" target="_blank" style="background:#1877f2; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+            <a href="#" id="modal-fb" target="_blank" data-i18n-html="modal_fb_html" style="background:#1877f2; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
                 <img src="../fb.webp" width="40" height="40" alt="Facebook">
                 Liên hệ Facebook
             </a>
@@ -451,7 +463,7 @@
                 ID line :  nongaphao
             </a>
             
-            <button onclick="document.getElementById('premium-modal').style.display='none'" style="margin-top:10px; background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;">Để sau</button>
+            <button onclick="document.getElementById('premium-modal').style.display='none'" style="margin-top:10px; background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
         </div>
     </div>
 </div>

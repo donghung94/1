@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký học viên - Toukutei 2</title>
+    <title data-i18n-title="reg_title">Đăng ký học viên - Toukutei 2</title>
     <style>
         body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: #F4F4F1; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
         .register-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
@@ -16,22 +16,23 @@
         .login-link { text-align: center; margin-top: 15px; font-size: 13px; }
         .login-link a { color: #C8102E; text-decoration: none; font-weight: bold; }
     </style>
+    <script src="i18n.js"></script>
 </head>
 <body>
 
 <div class="register-card">
-    <h2>Đăng Ký Thành Viên</h2>
+    <h2 data-i18n="reg_heading">Đăng Ký Thành Viên</h2>
     <div class="form-group">
-        <label>Họ và tên</label>
-        <input type="text" id="reg-name" placeholder="Nhập tên của bạn">
+        <label data-i18n="label_name">Họ và tên</label>
+        <input type="text" id="reg-name" data-i18n-ph="ph_name" placeholder="Nhập tên của bạn">
     </div>
 
     <div class="form-group">
-        <label>Bạn thuộc nhóm nào?</label>
+        <label data-i18n="label_group">Bạn thuộc nhóm nào?</label>
         <select id="reg-group">
-            <option value="1">Nhóm 1 (doboku)</option>
-            <option value="2">Nhóm 2 (kenchiku)</option>
-            <option value="3">Nhóm 3 (setsubi)</option>
+            <option value="1" data-i18n="group_1">Nhóm 1 (doboku)</option>
+            <option value="2" data-i18n="group_2">Nhóm 2 (kenchiku)</option>
+            <option value="3" data-i18n="group_3">Nhóm 3 (setsubi)</option>
         </select>
     </div>
 
@@ -40,13 +41,13 @@
         <input type="email" id="reg-email" placeholder="example@gmail.com">
     </div>
     <div class="form-group">
-        <label>Mật khẩu</label>
-        <input type="password" id="reg-password" placeholder="Tối thiểu 6 ký tự">
+        <label data-i18n="label_password">Mật khẩu</label>
+        <input type="password" id="reg-password" data-i18n-ph="ph_password_min" placeholder="Tối thiểu 6 ký tự">
     </div>
-    <button class="btn-register" id="btn-submit">Đăng ký ngay</button>
+    <button class="btn-register" id="btn-submit" data-i18n="btn_register_now">Đăng ký ngay</button>
 
     <div class="login-link">
-        Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+        <span data-i18n="have_account">Đã có tài khoản?</span> <a href="login.html" data-i18n="btn_login">Đăng nhập</a>
     </div>
 </div>
 
@@ -77,7 +78,7 @@
         const group = document.getElementById('reg-group').value;
 
         if (!name || !email || !password) {
-            alert("Vui lòng điền đầy đủ thông tin!");
+            alert(t("err_fill_all"));
             return;
         }
 
@@ -101,14 +102,14 @@
                 createdAt: new Date().toISOString()
             });
 
-            alert("Đăng ký thành công! Bạn có thể học thử 90 câu miễn phí.");
-            window.location.href = "index.html";
+            alert(t("reg_success"));
+            window.location.href = "language.html";
 
         } catch (error) {
             console.error("Lỗi đăng ký:", error);
-            let msg = "Lỗi không xác định.";
-            if (error.code === 'auth/email-already-in-use') msg = "Email này đã được đăng ký!";
-            if (error.code === 'auth/weak-password') msg = "Mật khẩu quá yếu (tối thiểu 6 ký tự)!";
+            let msg = t("err_unknown");
+            if (error.code === 'auth/email-already-in-use') msg = t("err_email_in_use");
+            if (error.code === 'auth/weak-password') msg = t("err_weak_password");
             alert(msg);
         }
     });

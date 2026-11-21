@@ -85,12 +85,13 @@
         .result-header { position: sticky; top: 0; background: var(--pro-dark); padding: 10px; display: flex; justify-content: space-between; z-index: 10001; }
         ruby rt { font-size: 10px; color: #191919; }
     </style>
+    <script src="i18n.js"></script>
 </head>
 <body>
 
 <div class="app-container" id="exam-ui">
     <header class="pro-header">
-        <div style="font-size:12px;"> <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;">🏠 Trang chủ</button></div>
+        <div style="font-size:12px;"> <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;" data-i18n="pro_home">🏠 Trang chủ</button></div>
         <div id="pro-timer" style="font-size:22px; font-weight:bold; color:#ffdd00;">60:00</div>
         <button onclick="submitExam()" style="background:#cc0000; color:white; border:none; padding:6px 15px; border-radius:4px; font-weight:bold;">終了</button>
     </header>
@@ -111,7 +112,7 @@
 
     <footer class="pro-footer">
         <div class="footer-left">
-            <button class="btn-icon" onclick="alert('HD: 🚩 Đánh dấu, 戻る Quay lại, 次へ Tiếp theo')">?</button>
+            <button class="btn-icon" onclick="alert(t('pro_help'))">?</button>
             <button class="btn-icon" onclick="toggleFlag()">🚩</button>
         </div>
         <div class="footer-right">
@@ -123,8 +124,8 @@
 
 <div id="result-screen">
     <div class="result-header">
-        <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;">🏠 Trang chủ</button>
-        <button onclick="location.reload()" style="background:var(--pro-green); color:white; border:none; padding:8px 15px; border-radius:4px;">🔄 Làm lại</button>
+        <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;" data-i18n="pro_home">🏠 Trang chủ</button>
+        <button onclick="location.reload()" style="background:var(--pro-green); color:white; border:none; padding:8px 15px; border-radius:4px;" data-i18n="pro_redo">🔄 Làm lại</button>
     </div>
     <div style="padding: 20px;">
         <div id="score-percent" style="text-align:center; font-size:50px; color:red; font-weight:bold; margin:20px 0;">0%</div>
@@ -143,6 +144,7 @@
 <script src="questions8.js"></script>
 <script src="questions9.js"></script>
 <script>
+    const t = (k, v) => (window.I18N && window.I18N.t) ? window.I18N.t(k, v) : k;
     let currentQuestions = [];
     let currentIdx = 0;
     let answers = [];
@@ -248,9 +250,9 @@ function loadData() {
             if(answers[i] === q.answer) correct++;
             else {
                 html += `<div style="padding:15px 0; border-bottom:1px solid #eee;">
-                    <p><b>Câu ${i+1}:</b> ${convertFurigana(q.q)}</p>
-                    <p style="color:red">Sai: ${answers[i] !== null ? convertFurigana(q.options[answers[i]]) : 'Bạn chưa chọn'}</p>
-                    <p style="color:green">Câu Đúng: ${convertFurigana(q.options[q.answer])}</p>
+                    <p><b>${t('pro_q_label', {n: i+1})}</b> ${convertFurigana(q.q)}</p>
+                    <p style="color:red">${t('pro_wrong')} ${answers[i] !== null ? convertFurigana(q.options[answers[i]]) : t('pro_not_chosen')}</p>
+                    <p style="color:green">${t('pro_correct')} ${convertFurigana(q.options[q.answer])}</p>
                 </div>`;
             }
         });

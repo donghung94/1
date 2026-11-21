@@ -3,8 +3,6 @@ window.PRACTICE_SETS = window.PRACTICE_SETS || {};
 window.PRACTICE_SETS["g3_2"] = {
   shuffle: true,
   questions: [
-  shuffle: true,
-  questions: [
   {
   "id": 1,
   "q": "問(もん)題(だい)1. タイヤローラ(たいやろーら)の主(おも)な用途(ようと)として正(ただ)しいものはどれですか？",

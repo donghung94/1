@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quiz APP CENTER</title>
   <link rel="icon" href="icon-192.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <script>
@@ -155,10 +157,10 @@
       <div class="subtitle"><b>Luyện đề toukutei gino2 xây dựng cấp tốc</b></div>
     </div>
   </div>
-  <div id="welcome-section" style="padding: 12px 20px; background: #fff; border-bottom: 2px solid #1e40af; display: none; display: flex; justify-content: space-between; align-items: center;">
+  <div id="welcome-section" style="padding: 12px 20px; background: #fff; border-bottom: 2px solid #C9A24B; display: none; display: flex; justify-content: space-between; align-items: center;">
     <div>
       <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
-      <strong id="user-display-name" style="color: #1e40af; font-size: 16px;">Học viên</strong>
+      <strong id="user-display-name" style="color: #C8102E; font-size: 16px;">Học viên</strong>
     </div>
   
   </div>
@@ -167,7 +169,7 @@
 
 <style>
 .logout-btn {
-  background:#ef4444;
+  background:#C8102E;
   color:white;
   border:none;
   padding:6px 12px;
@@ -175,7 +177,7 @@
   font-weight:bold;
   cursor:pointer;
 }
-.logout-btn:hover { background:#dc2626; }
+.logout-btn:hover { background:#A50D26; }
 /* ... Các style khác giữ nguyên ... */
 </style>
 
@@ -192,7 +194,7 @@
      code thông báo giá khóa học
 ============================ -->
         <button onclick="document.getElementById('premium-modal').style.display='flex'" 
-                style="background: #1e40af; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">
+                style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">
             Mở khóa toàn bộ ngay
         </button>
     </div>
@@ -209,19 +211,19 @@
   <div class="card">
     <h2>Chọn đề thi lý thuyết chung</h2>
     <ul id="exam-list" class="exam-list">
-      <li><a href="exam.html?set=1">Lý thuyết chung – (問1〜問30) <span style="color: #ffcc00; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=2">Lý thuyết chung – (問31〜問60) <span style="color: #ffcc00; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=3">Lý thuyết chung – (問61〜問90) <span style="color: #ffcc00; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=1">Lý thuyết chung – (問1〜問30) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=2">Lý thuyết chung – (問31〜問60) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=3">Lý thuyết chung – (問61〜問90) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
       <li><a href="exam.html?set=4">Lý thuyết chung – (問91〜問120)</a></li>
       <li><a href="exam.html?set=5">Lý thuyết chung – (問121〜問150)</a></li>
       <li><a href="exam.html?set=6">Lý thuyết chung – (問151〜問180)</a></li>
       <li><a href="exam.html?set=7">👉 Những câu lý thuyết hay thi phần 1</a></li>
       <li><a href="exam.html?set=8">👉 Những câu lý thuyết hay thi phần 2</a></li>
       <li><a href="exam.html?set=9">👉 Câu hỏi cập nhật</a></li>
-      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#1e40af;">
+      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#C8102E;">
         🎲 Đề tổng hợp lý thuyết chung đảo ngẫu nhiên
       </a></li>
-      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#1e40af;">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #ffcc00; font-weight: bold;">(miễn phí)</span></a>
+      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a>
         </li>
     </ul>
   </div>
@@ -235,7 +237,7 @@
       <li><a href="exam.html?practice=g1_2">Thực hành nhóm 1 – (問31〜問60)</a></li>
       <li><a href="exam.html?practice=g1_3">Thực hành nhóm 1 – (問61〜問90)</a></li>
       <li><a href="exam.html?practice=g1_4">Thực hành nhóm 1 – (問91〜問132)</a></li>
-      <li><a href="exam.html?practice=g1_random" style="font-weight:bold;color:#1e40af;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 1</a></li>
+      <li><a href="exam.html?practice=g1_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 1</a></li>
     </ul>
   </div>
   <!-- ========================= -->
@@ -248,7 +250,7 @@
       <li><a href="exam.html?practice=g2_2">Thực hành nhóm 2 – (問31〜問60)</a></li>
       <li><a href="exam.html?practice=g2_3">Thực hành nhóm 2 – (問61〜問90)</a></li>
       <li><a href="exam.html?practice=g2_4">Thực hành nhóm 2 – (問91〜問130)</a></li>
-       <li><a href="exam.html?practice=g2_random" style="font-weight:bold;color:#1e40af;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 2</a></li>
+       <li><a href="exam.html?practice=g2_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 2</a></li>
     </ul>
   </div>
     <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 3 -->
@@ -281,7 +283,7 @@
 <!-- 💅 Style bổ sung -->
 <style>
 .logout-btn {
-  background:#ef4444;
+  background:#C8102E;
   color:white;
   border:none;
   padding:6px 12px;
@@ -289,7 +291,7 @@
   font-weight:bold;
   cursor:pointer;
 }
-.logout-btn:hover { background:#dc2626; }
+.logout-btn:hover { background:#A50D26; }
 
 .video-section {
   background: #fff;
@@ -302,7 +304,7 @@
 
 .video-btn {
   display: inline-block;
-  background: #1e40af;
+  background: #C8102E;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
@@ -310,27 +312,27 @@
   text-decoration: none;
   transition: 0.2s;
 }
-.video-btn:hover { background: #2563eb; }
+.video-btn:hover { background: #A50D26; }
 
 .exam-list li { list-style:none; margin:8px 0; }
 .exam-list a {
   display:block;
-  background:#f8fafc;
-  border:1px solid #cbd5e1;
+  background:linear-gradient(160deg,#FFF9EE,#FDEFD2);
+  border:1.5px solid #C9A24B;
   padding:10px 14px;
   border-radius:8px;
-  color:#1e293b;
+  color:#191919;
   text-decoration:none;
   transition:.2s;
 }
-.exam-list a:hover { background:#e0e7ff; color:#1e40af; }
+.exam-list a:hover { background:#FDEFD2; color:#A50D26; }
   .admin-contact-section {
-    background: #f8fafc;
+    background: linear-gradient(160deg,#FFF9EE,#FDEFD2);
     padding: 20px;
     margin: 20px 16px;
     border-radius: 12px;
     text-align: center;
-    border: 1px dashed #cbd5e1;
+    border: 1px dashed #C9A24B;
 }
 .contact-icons {
     display: flex;
@@ -373,18 +375,18 @@
     right: 10px;
     top: 50%;
     transform: translateY(-35%);
-    background: #64748b;
+    background: #2A2118;
     color: white;
     font-size: 10px;
     padding: 2px 6px;
     border-radius: 4px;
 }
   .promo-banner {
-    background: #fff5f5;
+    background: #FBEFD2;
     margin: 15px;
     padding: 15px;
     border-radius: 12px;
-    border: 1px dashed #e74c3c;
+    border: 1px dashed #C9A24B;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 /* Style này giúp ẩn hiện mượt mà */
@@ -392,12 +394,12 @@
     display: none !important;
 }
   .global-notice-banner {
-    background: #eff6ff; /* Màu xanh dương nhạt dịu mắt */
+    background: #FBF0DA; /* Màu xanh dương nhạt dịu mắt */
     margin: 15px;
     padding: 15px 20px;
     border-radius: 12px;
-    border: 1px solid #bfdbfe;
-    color: #1e3a8a;
+    border: 1px solid #C9A24B;
+    color: #2A2118;
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 </style>
@@ -406,16 +408,16 @@
         
         <div style="font-size: 60px; margin-bottom: 10px;">🔒</div>
         
-        <h2 style="color:#1e40af; margin: 0 0 10px 0; font-size: 22px;">Mở Khóa Toàn Bộ</h2>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0; font-size: 22px;">Mở Khóa Toàn Bộ</h2>
         
-       <div style="color:#64748b; font-size:14px; line-height:1.8; margin-bottom:25px; text-align: left; background: #fff5f5; padding: 15px; border-radius: 10px; border: 1px dashed #e74c3c;">
+       <div style="color:#64748b; font-size:14px; line-height:1.8; margin-bottom:25px; text-align: left; background: #FBEFD2; padding: 15px; border-radius: 10px; border: 1px dashed #C9A24B;">
     <p style="margin: 0; color: #e74c3c; font-weight: bold;">Giảm giá kịch sàn sale 50% -!</p>
     
     <p style="margin: 10px 0 5px 0;">
           =>> <span style="text-decoration: line-through; color: #94a3b8;">Hãy liên hệ chúng tôi</span>
     </p>
     
-    <p style="margin: 0; font-weight: bold; color: #1e40af;">
+    <p style="margin: 0; font-weight: bold; color: #C8102E;">
          
       =>> <span style="font-size: 18px; color: #e74c3c;"> Để nhận ưu đãi ngay hôm nay</span> <br>
         <span style="font-size: 12px; color: #059669;">(Đừng tốn tiền cho các khóa học đắt tiền nữa!)</span>

@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quiz APP luyện thi toukuteigino2 xây dựng cấp tốc</title>
   <link rel="icon" href="icon-192.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="module" src="firebase.js"></script>
 </head>
@@ -110,8 +112,8 @@
     </div>
     
     <div class="exam-status" style="display: flex; align-items: center; gap: 10px;">
-      <span id="timer" class="timer" style="font-size: 20px; font-weight: bold; color: #1e40af;">60:00</span>
-      <button id="submitBtn" class="btn" style="background: #ee0000; color: white;">Nộp bài</button>
+      <span id="timer" class="timer" style="font-size: 20px; font-weight: bold; color: #C8102E;">60:00</span>
+      <button id="submitBtn" class="btn" style="background: #C8102E; color: white; border:none;">Nộp bài</button>
     </div>
   </div>
 </header>
@@ -121,7 +123,7 @@
   <h3 style="color: #2c3e50; font-size: 1.1rem; margin-bottom: 10px;">🎥 Video giải đề</h3>
   <div class="video-link">
     <a id="videoBtn" href="#" target="_blank" rel="noopener noreferrer" 
-       style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: white; border-radius: 25px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       style="display: inline-block; padding: 10px 20px; background-color: #C8102E; color: white; border-radius: 25px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
        ▶️ Xem video
     </a>
   </div>
@@ -167,13 +169,13 @@
 
   <style>
     .hud { display: flex; align-items: center; gap: 10px; }
-    .btn.ghost { background: #f3f4f6; color: #1e40af; font-weight: bold; border: 1px solid #1e40af; }
-    .btn.ghost:hover { background: #e0e7ff; }
+    .btn.ghost { background: #FFF9EE; color: #C8102E; font-weight: bold; border: 1.5px solid #C9A24B; }
+    .btn.ghost:hover { background: #FDEFD2; }
 
     .shuffle-wrapper {
-        display: flex; align-items: center; gap: 5px; background: rgba(30, 64, 175, 0.1); padding: 4px 8px; border-radius: 20px;
+        display: flex; align-items: center; gap: 5px; background: rgba(227, 160, 8, 0.15); padding: 4px 8px; border-radius: 20px;
     }
-    .shuffle-label { font-size: 11px; font-weight: bold; color: #1e40af; }
+    .shuffle-label { font-size: 11px; font-weight: bold; color: #2A2118; }
     .switch-small { position: relative; display: inline-block; width: 34px; height: 18px; }
     .switch-small input { opacity: 0; width: 0; height: 0; }
     .slider-small {
@@ -182,11 +184,11 @@
     .slider-small:before {
         position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;
     }
-    input:checked + .slider-small { background-color: #1e40af; }
+    input:checked + .slider-small { background-color: #E3A008; }
     input:checked + .slider-small:before { transform: translateX(16px); }
     
     .header {
-        display: flex !important; flex-direction: column !important; padding: 10px 15px !important; background: #fff; border-bottom: 2px solid #7fb069; align-items: stretch !important; 
+        display: flex !important; flex-direction: column !important; padding: 10px 15px !important; background: rgba(244,244,241,.97); border-bottom: 2px solid #C9A24B; align-items: stretch !important; 
     }
     .header-top, .header-bottom {
         display: flex !important; flex-direction: row !important; justify-content: space-between !important; align-items: center !important; width: 100% !important;
@@ -194,7 +196,7 @@
     .brand, .btn-home, .shuffle-wrapper, .exam-status { margin: 0 !important; }
     .exam-status { display: flex; align-items: center; gap: 10px; }
     .btn-red { background: #ee0000 !important; color: white !important; font-weight: bold; border: none; padding: 6px 15px; border-radius: 8px; }
-    .timer { font-size: 20px; font-weight: bold; color: #1e40af; }
+    .timer { font-size: 20px; font-weight: bold; color: #C8102E; }
     /* Ép các phần tử này hiển thị đúng dấu xuống dòng từ JSON */
 .explain-box, .q-text, .tip, .answer-line {
     white-space: pre-line !important;
@@ -205,7 +207,7 @@
   <div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
     <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center;">
         <div style="font-size: 50px; margin-bottom: 15px;">🔒</div>
-        <h2 style="color:#1e40af;">Mở Khóa Toàn Bộ</h2>
+        <h2 style="color:#C8102E;">Mở Khóa Toàn Bộ</h2>
         <p style="color:#64748b;">Nâng cấp Premium để học toàn bộ đề thi.</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
             <a href="https://zalo.me/09xxxxxxxx" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;">💬 Zalo Admin</a>

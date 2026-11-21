@@ -1,149 +1,145 @@
+/* ============================================================
+   DEMO-SORA (TEST BUILD) — real Tokutei app restyled with the
+   Sora Kanji design language. Visual layer only: every selector
+   and layout rule of the original style.css is preserved; only
+   colors, borders, radii, shadows and fonts changed.
+   Tokens: paper #F4F4F1, card #FFFFFF, line #E7E7E0,
+   ink #191919 / #5A5A55 / #8B8B84, vermillion #C8102E
+   (dark #A50D26, soft #FDECEF), gold #E3A008 / #F5C542 /
+   #F5D98A, bronze #C9A24B, cream #FFF9EE / #FDEFD2 / #FBEFD2,
+   brown #2A2118, good #1E7D46.
+   HARD RULE: furigana <rt> readings are BLACK #191919.
+   ============================================================ */
 :root{
-  --bg:#ffffff; --fg:#000000; --muted:#666; --border:#e5e5e5;
-  --ok:#0a7f2e; --bad:#c62828; --blue:#007BFF;
+  --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+  --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+  --fg:#191919; --muted:#5A5A55; --border:#E7E7E0;
+  --red:#C8102E; --red-dark:#A50D26; --red-soft:#FDECEF;
+  --gold:#E3A008; --gold-hi:#F5C542; --gold-pale:#F5D98A; --bronze:#C9A24B;
+  --cream:#FFF9EE; --cream-2:#FDEFD2; --cream-hero:#FBEFD2; --brown:#2A2118;
+  --amber:#B97A0B; --amber-soft:#FBF0DA;
+  --ok:#1E7D46; --ok-soft:#E6F4EC; --bad:#A50D26;
+  --blue:#C8102E;
+  --radius:18px;
 }
 *{box-sizing:border-box}
-body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-.header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:5}
+body.mono{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Be Vietnam Pro","Noto Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;
+  border-bottom:1px solid var(--line);background:rgba(244,244,241,.94);position:sticky;top:0;z-index:5;
+  border-top:4px solid var(--red);border-image:linear-gradient(90deg,var(--amber),var(--gold) 30%,var(--red) 72%,var(--red-dark)) 1}
 .brand{display:flex;align-items:center;gap:12px}
 .brand.small .brand-name{font-size:16px}
-.logo{width:36px;height:36px;border-radius:8px}
-.titles .brand-name{font-weight:700}
+.logo{width:38px;height:38px;border-radius:11px;padding:2px;
+  background:linear-gradient(160deg,#FFF9EE,#FDEFD2);border:1.5px solid var(--bronze)}
+.titles .brand-name{font-weight:800;letter-spacing:.3px}
 .titles .subtitle{font-size:14px;color:var(--muted)}
 .titles .demoline{font-size:12px;color:var(--muted)}
 
-/* --- SỬA: Giảm margin-bottom cho card để các câu hỏi gần nhau hơn --- */
+/* Furigana readings: BLACK ink, never amber (user rule) */
+ruby rt{color:var(--ink);font-size:.55em;font-weight:400}
+
 .container{max-width:960px;margin:18px auto;padding:0 16px}
-.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;margin-bottom:12px}
+.card h2{margin-top:2px}
 
 .exam-list{list-style:none;padding:0;margin:0}
 .exam-list li{margin:10px 0}
 .exam-list a{color:var(--fg);text-decoration:underline}
 
 .hud{display:flex;align-items:center;gap:10px}
-.timer{font-variant-numeric:tabular-nums;font-weight:700}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;color:var(--red)}
 
-.btn{border:1px solid var(--fg);background:#fff;color:var(--fg);padding:8px 14px;border-radius:10px;cursor:pointer}
-.btn.ghost{background:transparent}
+.btn{border:1.5px solid var(--line);background:var(--card);color:var(--fg);padding:9px 15px;border-radius:12px;cursor:pointer;font-weight:700;font-family:inherit}
+.btn.ghost{background:var(--cream);color:var(--red);border-color:var(--bronze)}
 .btn:active{transform:translateY(1px)}
 
 .q-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
-.q-index{font-weight:700}
-.q-text{font-weight:600;margin:10px 0;white-space:pre-wrap}
-.hira{font-size:14px;color:var(--muted);margin:4px 0 8px;white-space:pre-wrap}
+.q-index{font-weight:800}
+.q-text{font-weight:600;margin:10px 0;white-space:pre-wrap;line-height:1.8}
+.hira{font-size:14px;color:var(--ink-2);margin:4px 0 8px;white-space:pre-wrap}
 
-/* --- SỬA: Giảm khoảng cách đáp án và loại bỏ radio button khỏi bố cục --- */
-.options{display:grid;gap:6px; /* Giảm khoảng cách giữa các đáp án */ margin:10px 0}
+.options{display:grid;gap:8px;margin:10px 0}
 .opt{
-  display:block; /* Thay đổi flex thành block để không bị ảnh hưởng bởi radio */
-  border:1px solid var(--border);
-  padding:10px 12px; /* Giảm padding */
-  border-radius:8px; /* Giảm bo tròn */
+  display:block;
+  border:1.5px solid var(--line);
+  padding:12px 14px;
+  border-radius:13px;
   cursor:pointer;
   transition: all 0.15s ease;
+  background:var(--card);
+  line-height:1.7;
 }
 .opt:hover {
-    background-color: #f7f7f7;
+    border-color: var(--bronze);
+    background-color: var(--cream);
 }
-/* Ẩn hoàn toàn nút radio button */
 .opt input[type="radio"]{
     display:none !important;
 }
-/* --- THÊM MỚI: Style cho đáp án đã được chọn (Thay thế hiệu ứng radio button) --- */
+/* Selected answer in exam mode = Sora gold selected state */
 .opt.selected {
-    background-color: #e6f7ff;      /* Nền xanh nhạt */
-    border-color: var(--blue);      /* Viền màu xanh đậm */
-    font-weight: 500;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    background-color: rgba(227,160,8,.14);
+    border-color: var(--gold);
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(227,160,8,.25);
 }
 
 .nav{display:flex;gap:8px;margin-top:8px}
-.footer{text-align:center;color:var(--muted);padding:24px 0;border-top:1px solid var(--border)}
+.footer{text-align:center;color:var(--muted);padding:24px 0;border-top:1px solid var(--line)}
 
-.result-title{font-weight:700;margin-bottom:8px}
-.result-item{border-top:1px dashed var(--border);padding-top:10px;margin-top:10px}
+.result-title{font-weight:800;margin-bottom:8px}
+.result-item{border-top:1px dashed var(--line);padding-top:10px;margin-top:10px}
 .answer-line{margin:6px 0}
 .selected.correct{color:var(--ok);font-weight:700}
 .selected.incorrect{color:var(--bad);font-weight:700}
-.explain{color:#111;margin-top:6px}
+.explain{color:var(--ink);margin-top:6px}
 
-.floating{position:fixed;right:16px;bottom:16px;background:var(--blue);color:#fff;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;display:none}
+.floating{position:fixed;right:16px;bottom:16px;background:var(--red);color:#fff;border:none;border-radius:999px;padding:12px 18px;cursor:pointer;display:none;font-weight:700;box-shadow:0 4px 10px rgba(20,16,10,.18)}
 
-/* 💬 Khung hiển thị TỪ VỰNG / DỊCH NGHĨA / GIẢI THÍCH */
+/* Explanation / vocab / meaning panel: cream scroll with bronze frame */
 .meaning-box {
-  background: #eaf7e6;              /* nền xanh nhạt */
-  border-left: 4px solid #4CAF50;   /* viền xanh lá bên trái */
+  background: var(--cream);
+  border: 1.5px solid var(--bronze);
+  border-left: 4px solid var(--bronze);
   padding: 10px 14px;
   margin-top: 12px;
-  border-radius: 6px;
+  border-radius: 12px;
   line-height: 1.6;
   font-size: 14px;
-  color: #222;
-  white-space: pre-wrap;            /* giữ nguyên xuống dòng trong vocab */
+  color: var(--ink);
+  white-space: pre-wrap;
 }
 
 .meaning-box strong {
-  color: #1b5e20;                   /* chữ “TỪ VỰNG”, “DỊCH NGHĨA” đậm xanh đậm */
-  font-weight: 600;
+  color: var(--brown);
+  font-weight: 700;
 }
 
 .meaning-box + .meaning-box {
-  margin-top: 8px;                  /* tạo khoảng cách giữa các khung (nếu có nhiều phần) */
+  margin-top: 8px;
 }
 
-/* --- XÓA: Xóa đoạn "Làm đẹp phần lựa chọn" cũ vì đã được thay thế bên trên --- */
-/*
-.opt {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin: 6px 0;
-  padding: 8px 10px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.opt:hover {
-  background-color: #f5faff;
-}
-
-.opt input[type="radio"] {
-  margin-right: 10px;
-  accent-color: #2196f3;
-}
-
-.opt input[type="radio"]:checked + div {
-  background-color: #d0e8ff;
-  border-radius: 4px;
-  padding: 2px 6px;
-  transition: 0.2s;
-}
-*/
-/* 🧩 Hình ảnh câu hỏi */
 .q-img img {
   max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
   margin: 8px 0;
 }
 
-/* 🕓 Thanh thời gian */
-.timer {
-  font-weight: 700;
-  color: #1e88e5;
-}
 .video-section {
   margin-top: 30px;
   padding: 16px;
-  background: #f9fafb;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 3px 8px rgba(20,16,10,.08);
   text-align: center;
 }
 
 .video-section h3 {
-  color: #1e3a8a;
+  color: var(--brown);
   margin-bottom: 12px;
   font-size: 1.2rem;
 }
@@ -155,7 +151,7 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 3px 8px rgba(20,16,10,.15);
 }
 
 .video-wrapper video {
@@ -171,174 +167,156 @@ body.mono{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-a
 .note {
   margin-top: 10px;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--ink-2);
 }
 .result-explain-box {
-  background: #f5faff;
-  border-left: 4px solid #3b82f6;
+  background: var(--cream);
+  border: 1.5px solid var(--bronze);
+  border-left: 4px solid var(--bronze);
   padding: 12px 14px;
   margin-top: 10px;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
 .result-explain-box .explain-title {
   font-weight: bold;
   margin-bottom: 6px;
-  color: #1e3a8a;
+  color: var(--brown);
 }
 
 .result-explain-box .tip {
   margin-top: 8px;
-  background: #fffbe6;
-  border-left: 4px solid #facc15;
+  background: var(--amber-soft);
+  border-left: 4px solid var(--gold);
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 0.95em;
 }
-/* --- CSS THÊM VÀO ĐỂ TÔ MÀU ĐÁP ÁN VÀ ĐIỀU CHỈNH NÚT (DÀNH CHO PHẦN KẾT QUẢ) --- */
 
-/* 1. Đảm bảo lớp cơ bản cho các lựa chọn (Nếu chưa có) */
 .opt {
     position: relative;
-    /* Giữ nguyên font và bố cục khác của bạn */
 }
 
-/* 2. Thiết lập màu nền cho đáp án Đúng */
+/* Correct answer (results) */
 .opt.correct-answer {
-    background-color: #d4edda; /* Nền xanh nhạt */
-    border-color: #155724; /* Viền xanh đậm */
-    font-weight: 500;
+    background-color: var(--ok-soft);
+    border-color: var(--ok);
+    font-weight: 600;
 }
 
-/* 3. Thiết lập màu nền cho đáp án Sai do người dùng chọn */
+/* Wrong answer picked by user (results) */
 .opt.incorrect-picked {
-    background-color: #f8d7da; /* Nền đỏ nhạt */
-    border-color: #721c24; /* Viền đỏ đậm */
-    font-weight: 500;
-    opacity: 1; 
+    background-color: var(--red-soft);
+    border-color: var(--red-dark);
+    font-weight: 600;
+    opacity: 1;
 }
 
-/* 4. Định vị và căn chỉnh các nút điều hướng */
 .nav {
     display: flex;
-    justify-content: space-between; /* Đẩy 3 nút ra 2 bên và giữa */
+    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    gap: 10px; /* Khoảng cách giữa các nút */
+    gap: 10px;
     width: 100%;
 }
 
-/* 5. Đảm bảo nút Giải thích (ở giữa) có màu và kích thước phù hợp */
 #explainBtn {
-    background-color: #007bff; /* Màu xanh dương (tương đương khoanh đen) */
+    background-color: var(--red);
     color: white;
-    flex-grow: 1; /* Cho phép nút này giãn ra lấp đầy khoảng trống */
+    border-color: var(--red);
+    flex-grow: 1;
 }
 
-/* 6. Định vị Nút Làm Lại Câu Sai (fixed) */
 #floatingRedo {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #dc3545; /* Màu đỏ nổi bật */
+    background-color: var(--red);
     color: #fff;
     border: none;
     padding: 12px 24px;
-    border-radius: 9999px; /* Hình tròn */
+    border-radius: 9999px;
     cursor: pointer;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(20,16,10,.18);
     font-weight: bold;
     transition: all 0.2s ease;
 }
 
 #floatingRedo:hover {
-    background-color: #c82333;
+    background-color: var(--red-dark);
     transform: scale(1.05);
 }
 
-/* --- CSS MỚI: DÙNG CHO PHẦN KẾT QUẢ/GIẢI THÍCH (Ví dụ Ảnh 2) --- */
-
-/* 1. Nền vàng nhạt cho toàn bộ câu hỏi trong phần kết quả */
+/* Result item: cream panel (was pale yellow) */
 .result-item-container {
     padding: 15px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    background-color: #fffbe6; /* Màu vàng nhạt (giống Ảnh 2) */
-    border: 1px solid #fbd38d;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border-radius: 14px;
+    background-color: var(--cream);
+    border: 1px solid var(--bronze);
+    box-shadow: 0 1px 3px rgba(20,16,10,.05);
 }
 
-/* 2. Style cho đáp án sau khi nộp bài (áp dụng cho từng dòng đáp án) */
 .result-answer-line {
     padding: 8px 12px;
     margin: 5px 0;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 500;
 }
 
-/* 3. Khung màu xanh lá cây cho Đáp án ĐÚNG trong phần kết quả (giống lúc chọn đúng) */
 .result-answer-line.correct {
-    background-color: #d4edda; /* Nền xanh nhạt */
-    border: 1px solid #155724; /* Khung xanh đậm */
+    background-color: var(--ok-soft);
+    border: 1px solid var(--ok);
 }
 
-/* 4. Khung màu đỏ cho Đáp án SAI (của người dùng) trong phần kết quả */
 .result-answer-line.incorrect {
-    background-color: #f8d7da; /* Nền đỏ nhạt */
-    border: 1px solid #721c24; /* Khung đỏ đậm */
-}
-.opt {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  margin: 6px 0;
-  cursor: pointer;
+    background-color: var(--red-soft);
+    border: 1px solid var(--red-dark);
 }
 .opt.correct {
-  background: #dbeafe;  /* xanh dương nhạt */
-  border-color: #3b82f6;
-  color: #1e40af;
+  background: var(--ok-soft);
+  border-color: var(--ok);
+  color: var(--ok);
 }
 .opt.incorrect {
-  background: #fee2e2;  /* đỏ nhạt */
-  border-color: #ef4444;
-  color: #b91c1c;
+  background: var(--red-soft);
+  border-color: var(--red-dark);
+  color: var(--bad);
 }
 .opt .mark { margin-left: 6px; font-weight: bold; }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 12px;
-}
 .nav .btn {
   flex: 1;
   margin: 0 4px;
 }
-.tip { background:#f9fafb; border-left:4px solid #3b82f6; padding:6px 10px; margin-top:6px; }
-/* Màu xanh dương nhạt cho phần dịch tiếng Việt */
+.tip { background:var(--amber-soft); border-left:4px solid var(--gold); padding:6px 10px; margin-top:6px; border-radius:0 8px 8px 0; }
+/* Vietnamese translation line: secondary ink (was bright blue) */
 .question-vi {
-  color: #1976D2;
+  color: var(--ink-2);
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-/* Khung màu xanh dương rất nhạt cho phần giải thích */
+/* Explanation panel: cream with bronze frame */
 .question-explain {
-  background-color: #E3F2FD;
+  background-color: var(--cream);
   padding: 12px;
-  border-radius: 8px;
-  border-left: 4px solid #2196F3;
+  border-radius: 12px;
+  border: 1.5px solid var(--bronze);
+  border-left: 4px solid var(--bronze);
   line-height: 1.6;
-  white-space: pre-wrap; /* Giữ nguyên xuống dòng từ JSON */
+  white-space: pre-wrap;
 }
 
-/* Khung màu xanh lá nhạt cho phần mẹo (tip) */
+/* Tip panel: amber-soft with bronze dashed border */
 .question-tip {
   margin-top: 10px;
-  background-color: #E8F5E9;
-  color: #2E7D32;
+  background-color: var(--amber-soft);
+  color: var(--brown);
   padding: 10px;
-  border-radius: 8px;
-  border: 1px dashed #4CAF50;
+  border-radius: 12px;
+  border: 1px dashed var(--bronze);
 }
+
+input:focus, select:focus { outline: none; border-color: var(--gold) !important; }

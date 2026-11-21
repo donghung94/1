@@ -3,8 +3,8 @@
   "short_name": "DH Quiz",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "background_color": "#F4F4F1",
+  "theme_color": "#F4F4F1",
   "icons": [
     {
       "src": "icon-192.png",

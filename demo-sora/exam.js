@@ -40,16 +40,6 @@
   const redoBtn = $("#redoWrong");
   const timerEl = $("#timer");
 
-  // ================== XỬ LÝ HIỂN THỊ VIDEO ==================
-  const vContainer = $("#videoContainer");
-  const vBtn = $("#videoBtn"); // Bắt đúng ID của nút bấm
-  let videoUrl = DATA.videoUrl || null; 
-
-  // Gán link video vào thuộc tính href của nút bấm
-  if (vBtn && videoUrl) {
-    vBtn.href = videoUrl;
-  }
-
   // ---------------- TIMER ----------------
   let timeLeft = 3600;
   const tick = () => {
@@ -121,15 +111,6 @@
     if (!questions.length) {
       quizEl.innerHTML = "<p>" + t("no_data") + "</p>";
       return;
-    }
-
-    // --- LOGIC ẨN/HIỆN NÚT VIDEO THEO CÂU HỎI ---
-    if (vContainer) {
-      if (cur === 0 && videoUrl) {
-        vContainer.style.display = "block"; // Chỉ hiện ở câu đầu tiên
-      } else {
-        vContainer.style.display = "none";  // Ẩn đi ở các câu sau
-      }
     }
 
     const q = questions[cur];
@@ -230,9 +211,6 @@
     }).join("");
 
     quizEl.style.display="none";
-    
-    // Ẩn nút video khi nộp bài
-    if (vContainer) vContainer.style.display = "none"; 
     
     resEl.style.display="block";
     resEl.innerHTML = `

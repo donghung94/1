@@ -72,10 +72,15 @@
                     // 4. Hiển thị Header
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
-                        const statusBadge = isPremium 
-                            ? `<span style="color: #f59e0b; font-size: 12px;"> [⭐ Premium - G${userGroup}]</span>` 
-                            : `<span style="color: #64748b; font-size: 12px;"> [Học thử]</span>`;
-                        nameDisplay.innerHTML = (data.name || "Học viên") + statusBadge;
+                        const userName = data.name || "Học viên";
+                        nameDisplay.textContent = userName;
+                        const avatarEl = document.getElementById('user-avatar');
+                        if (avatarEl) avatarEl.textContent = userName.trim().charAt(0).toUpperCase() || "H";
+                        const chipEl = document.getElementById('user-status-chip');
+                        if (chipEl) {
+                            chipEl.textContent = isPremium ? `⭐ PREMIUM - G${userGroup}` : "Học thử";
+                            chipEl.classList.toggle('is-premium-chip', isPremium);
+                        }
                         document.getElementById('welcome-section').style.setProperty('display', 'flex', 'important');
                     }
 
@@ -149,20 +154,22 @@
 </script>
   
 
-<header class="header">
-  <div class="brand">
-    <img src="../icon-192.png" alt="H" class="logo">
-    <div class="titles">
-      <div class="brand-name">Quiz APP</div>
-      <div class="subtitle"><b>Luyện đề toukutei gino2 xây dựng cấp tốc</b></div>
+<header class="hero-header">
+  <div class="hero-top">
+    <div class="hero-logo"><img src="../icon-192.png" alt="H"></div>
+    <div class="hero-titles">
+      <div class="hero-eyebrow">TOKUTEI GINO 2 • XÂY DỰNG</div>
+      <div class="hero-brand">Quiz APP</div>
+      <div class="hero-tagline">Luyện đề cấp tốc — bám sát kỳ thi thật</div>
     </div>
   </div>
-  <div id="welcome-section" style="padding: 12px 20px; background: #fff; border-bottom: 2px solid #C9A24B; display: none; display: flex; justify-content: space-between; align-items: center;">
-    <div>
-      <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
-      <strong id="user-display-name" style="color: #C8102E; font-size: 16px;">Học viên</strong>
+  <div id="welcome-section" class="welcome-card">
+    <div class="welcome-avatar" id="user-avatar">H</div>
+    <div class="welcome-text">
+      <span class="welcome-hi">Chào bạn,</span>
+      <strong id="user-display-name">Học viên</strong>
     </div>
-  
+    <span id="user-status-chip" class="status-chip"></span>
   </div>
 </header>
 

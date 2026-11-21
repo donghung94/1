@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz APP CENTER</title>
+  <link rel="icon" href="../icon-192.png">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    const quizFiles = [
+      "questions.js","questions2.js","questions3.js",
+      "questions4.js","questions5.js","questions6.js","questions7.js","questions8.js","questions9.js",
+      "practice1.js","practice2.js","practice3.js","practice4.js","practice1_g1.js","practice2_g1.js","practice3_g1.js","practice4_g1.js","thn3_1.js","thn3_2.js","thn3_3.js","thn3_4.js","thn3_5.js","thn3_6.js","thn3_7.js"
+    ];
+    quizFiles.forEach(f => fetch(f).catch(()=>{}));
+  </script>
+
+  <script type="module" src="firebase.js"></script>
+</head>
+
+<body class="mono">
+
+<script type="module">
+    import { auth, logout, db } from "./firebase.js"; 
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            location.href = "login.html";
+        } else {
+            try {
+                const userDocRef = doc(db, "users", user.uid);
+                const userSnap = await getDoc(userDocRef);
+
+                if (userSnap.exists()) {
+                    const data = userSnap.data();
+                    const isAdmin = data.role === 'admin';
+                    const currentDeviceId = localStorage.getItem('my_device_id');
+                    const devices = data.devices || {};
+
+                    // 1. Kiểm tra thiết bị
+                    if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
+                        alert("🚫 Tài khoản chỉ được dùng trên 1 máy.");
+                        await signOut(auth);
+                        location.href = "login.html";
+                        return;
+                    }
+
+                    // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
+                    const isPremium = data.isPremium === true || isAdmin;
+                    const userGroup = data.group || "1";
+                    const allowedSets = ['1', '2', '3'];
+
+                    // 3. Điều khiển hiển thị Bảng thông báo ưu đãi
+                    const promoSection = document.getElementById('promo-section');
+                    if (isPremium) {
+                        if (promoSection) promoSection.style.display = 'none';
+                        document.body.classList.add('is-premium');
+                    } else {
+                        if (promoSection) promoSection.style.display = 'block';
+                        document.body.classList.remove('is-premium');
+                    }
+
+                    // 4. Hiển thị Header
+                    const nameDisplay = document.getElementById('user-display-name');
+                    if (nameDisplay) {
+                        const statusBadge = isPremium 
+                            ? `<span style="color: #f59e0b; font-size: 12px;"> [⭐ Premium - G${userGroup}]</span>` 
+                            : `<span style="color: #64748b; font-size: 12px;"> [Học thử]</span>`;
+                        nameDisplay.innerHTML = (data.name || "Học viên") + statusBadge;
+                        document.getElementById('welcome-section').style.setProperty('display', 'flex', 'important');
+                    }
+
+                    // 5. Cập nhật Link liên hệ
+                    const rawMsg = `Chào Admin, mình là ${data.name || 'Học viên'} (Nhóm ${userGroup}). Mình muốn hỗ trợ về khóa học.`;
+                    const msg = encodeURIComponent(rawMsg);
+                    
+                    const setLink = (id, url) => { if(document.getElementById(id)) document.getElementById(id).href = url; };
+                    setLink('zalo-link', `https://zalo.me/07090778422?text=${msg}`);
+                    setLink('fb-link', `https://www.facebook.com/61585194247868`);
+                    setLink('line-link', `https://line.me/ti/p/nongaphao`);
+                    setLink('modal-zalo', `https://zalo.me/07090778422?text=${msg}`);
+                    setLink('modal-fb', `https://www.facebook.com/61585194247868`);
+                    setLink('modal-line', `https://line.me/ti/p/nongaphao`);
+
+                    // 6. LOGIC KHÓA ĐỀ THI (Quan trọng nhất)
+                    document.querySelectorAll('.exam-list a').forEach(link => {
+                        const url = new URL(link.href, window.location.origin);
+                        const setParam = url.searchParams.get('set');
+                        const practiceParam = url.searchParams.get('practice');
+                        const isPrometric = link.href.includes('prometric.html');
+
+                        let isLocked = false;
+
+                        if (!isPremium) {
+                            if (isPrometric) {
+                                // Người dùng thường: Đổi link sang bản giới hạn 30 câu
+                                link.href = "prometric.html?set=questions.js&limit=30";
+                                isLocked = false; 
+                            } 
+                            else if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
+                                isLocked = true;
+                            }
+                        } 
+                        else {
+                            // Người dùng Premium: Kiểm tra nhóm thực hành
+                            if (practiceParam && !isAdmin) {
+                                const requiredG = "g" + userGroup;
+                                if (!practiceParam.includes(requiredG)) {
+                                    isLocked = true;
+                                }
+                            }
+                        }
+
+                        // Thực thi khóa nếu isLocked = true
+                        if (isLocked) {
+                            link.classList.add('exam-locked');
+                            // Loại bỏ các event cũ để tránh lặp
+                            const newLink = link.cloneNode(true);
+                            link.parentNode.replaceChild(newLink, link);
+                            
+                            newLink.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                if (!isPremium) {
+                                    document.getElementById('premium-modal').style.display = 'flex';
+                                } else {
+                                    alert(`🔒 Bạn đang thuộc Nhóm ${userGroup}. Đề này dành cho nhóm khác!`);
+                                }
+                            });
+                        }
+                    });
+
+                }
+            } catch (error) {
+                console.error("Lỗi hệ thống:", error);
+            }
+        }
+    });
+
+    window.logout = logout;
+</script>
+  
+
+<header class="header">
+  <div class="brand">
+    <img src="../icon-192.png" alt="H" class="logo">
+    <div class="titles">
+      <div class="brand-name">Quiz APP</div>
+      <div class="subtitle"><b>Luyện đề toukutei gino2 xây dựng cấp tốc</b></div>
+    </div>
+  </div>
+  <div id="welcome-section" style="padding: 12px 20px; background: #fff; border-bottom: 2px solid #C9A24B; display: none; display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <span style="color: #64748b; font-size: 14px;">Chào bạn, </span>
+      <strong id="user-display-name" style="color: #C8102E; font-size: 16px;">Học viên</strong>
+    </div>
+  
+  </div>
+</header>
+
+
+<style>
+.logout-btn {
+  background:#C8102E;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.logout-btn:hover { background:#A50D26; }
+/* ... Các style khác giữ nguyên ... */
+</style>
+
+</body>
+</html>
+
+<!-- ============================
+     📘 DANH SÁCH ĐỀ THI
+============================ -->
+<main class="container">
+  <div id="promo-section" class="promo-banner" style="display: none;">
+    <div class="promo-content">
+        <!-- ============================
+     code thông báo giá khóa học
+============================ -->
+        <button onclick="document.getElementById('premium-modal').style.display='flex'" 
+                style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">
+            Mở khóa toàn bộ ngay
+        </button>
+    </div>
+</div>
+  <!-- 📢 KHỐI THÔNG BÁO CHUNG (Ai cũng nhìn thấy) -->
+  <div class="global-notice-banner">
+    <div style="font-size: 20px; margin-bottom: 5px;">📢 <b>THÔNG BÁO TỪ ADMIN</b></div>
+    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6;">
+      Chào mừng các học viên đến với hệ thống luyện đề <b>Tokutei Gino 2 Xây dựng</b> cấp tốc. 
+      📢 thông báo dành riêng cho các bạn đang học nhóm 3, phần thực hành đã được tinh gọn lại chỉ còn 2 đề nên mọi người chỉ cần học 2 đề đó thôi nhé.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Chọn đề thi lý thuyết chung</h2>
+    <ul id="exam-list" class="exam-list">
+      <li><a href="exam.html?set=1">Lý thuyết chung – (問1〜問30) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=2">Lý thuyết chung – (問31〜問60) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=3">Lý thuyết chung – (問61〜問90) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=4">Lý thuyết chung – (問91〜問120)</a></li>
+      <li><a href="exam.html?set=5">Lý thuyết chung – (問121〜問150)</a></li>
+      <li><a href="exam.html?set=6">Lý thuyết chung – (問151〜問180)</a></li>
+      <li><a href="exam.html?set=7">👉 Những câu lý thuyết hay thi phần 1</a></li>
+      <li><a href="exam.html?set=8">👉 Những câu lý thuyết hay thi phần 2</a></li>
+      <li><a href="exam.html?set=9">👉 Câu hỏi cập nhật</a></li>
+      <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#C8102E;">
+        🎲 Đề tổng hợp lý thuyết chung đảo ngẫu nhiên
+      </a></li>
+      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a>
+        </li>
+    </ul>
+  </div>
+ <!-- ========================= -->
+  <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 1 -->
+  <!-- ========================= -->
+  <div class="card">
+    <h2>🧰 Đề thực hành nhóm 1</h2>
+    <ul class="exam-list">
+      <li><a href="exam.html?practice=g1_1">Thực hành nhóm 1 – (問1〜問30)</a></li>
+      <li><a href="exam.html?practice=g1_2">Thực hành nhóm 1 – (問31〜問60)</a></li>
+      <li><a href="exam.html?practice=g1_3">Thực hành nhóm 1 – (問61〜問90)</a></li>
+      <li><a href="exam.html?practice=g1_4">Thực hành nhóm 1 – (問91〜問132)</a></li>
+      <li><a href="exam.html?practice=g1_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 1</a></li>
+    </ul>
+  </div>
+  <!-- ========================= -->
+  <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 2 -->
+  <!-- ========================= -->
+  <div class="card">
+    <h2>🧰 Đề thực hành nhóm 2</h2>
+    <ul class="exam-list">
+      <li><a href="exam.html?practice=g2_1">Thực hành nhóm 2 – (問1〜問30)</a></li>
+      <li><a href="exam.html?practice=g2_2">Thực hành nhóm 2 – (問31〜問60)</a></li>
+      <li><a href="exam.html?practice=g2_3">Thực hành nhóm 2 – (問61〜問90)</a></li>
+      <li><a href="exam.html?practice=g2_4">Thực hành nhóm 2 – (問91〜問130)</a></li>
+       <li><a href="exam.html?practice=g2_random" style="font-weight:bold;color:#C8102E;">🎲 Đề thi thử đảo ngẫu nhiên 40 câu thực hành nhóm 2</a></li>
+    </ul>
+  </div>
+    <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 3 -->
+  <!-- ========================= -->
+  <div class="card">
+    <h2>🧰 Đề thực hành nhóm 3</h2>
+    <ul class="exam-list">
+       <a href="exam.html?practice=g3_6">Thực hành nhóm 3 – (đề tinh gọn mới nhất 1)</a>
+       <a href="exam.html?practice=g3_7">Thực hành nhóm 3 – (đề tinh gọn mới nhất 2)</a>
+     
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <div class="admin-contact-section">
+    <p>💡<b> Cần hỗ trợ  </b>? Liên hệ Admin:</p>
+  
+       
+          
+            <span>Zalo nhật 07090778422</span>
+ 
+     
+
+      <div lass="footer">© 2025 • Quiz APP  CENTER</div>
+</div>
+
+</footer>
+
+<!-- 💅 Style bổ sung -->
+<style>
+.logout-btn {
+  background:#C8102E;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:6px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.logout-btn:hover { background:#A50D26; }
+
+.video-section {
+  background: #fff;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.video-btn {
+  display: inline-block;
+  background: #C8102E;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.video-btn:hover { background: #A50D26; }
+
+.exam-list li { list-style:none; margin:8px 0; }
+.exam-list a {
+  display:block;
+  background:linear-gradient(160deg,#FFF9EE,#FDEFD2);
+  border:1.5px solid #C9A24B;
+  padding:10px 14px;
+  border-radius:8px;
+  color:#191919;
+  text-decoration:none;
+  transition:.2s;
+}
+.exam-list a:hover { background:#FDEFD2; color:#A50D26; }
+  .admin-contact-section {
+    background: linear-gradient(160deg,#FFF9EE,#FDEFD2);
+    padding: 20px;
+    margin: 20px 16px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px dashed #C9A24B;
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+.contact-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s;
+}
+.contact-item:hover { transform: translateY(-3px); }
+.contact-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.contact-item span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #1e293b;
+}
+.exam-locked {
+    opacity: 0.5 !important;
+    background: #f1f5f9 !important;
+    color: #94a3b8 !important;
+    border: 1px dashed #cbd5e1 !important;
+    cursor: not-allowed !important;
+    position: relative;
+    pointer-events: auto !important; /* Quan trọng: Để vẫn nhận được sự kiện Click hiện thông báo */
+}
+
+.exam-locked::after {
+    content: "🔒 Mở Khóa";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-35%);
+    background: #2A2118;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+  .promo-banner {
+    background: #FBEFD2;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px dashed #C9A24B;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+/* Style này giúp ẩn hiện mượt mà */
+.is-premium #promo-section {
+    display: none !important;
+}
+  .global-notice-banner {
+    background: #FBF0DA; /* Màu xanh dương nhạt dịu mắt */
+    margin: 15px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 1px solid #C9A24B;
+    color: #2A2118;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+</style>
+<div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; backdrop-filter: blur(4px);">
+    <div style="background:white; width:90%; max-width:380px; padding:30px; border-radius:20px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative;">
+        
+        <div style="font-size: 60px; margin-bottom: 10px;">🔒</div>
+        
+        <h2 style="color:#C8102E; margin: 0 0 10px 0; font-size: 22px;">Mở Khóa Toàn Bộ</h2>
+        
+       <div style="color:#64748b; font-size:14px; line-height:1.8; margin-bottom:25px; text-align: left; background: #FBEFD2; padding: 15px; border-radius: 10px; border: 1px dashed #C9A24B;">
+    <p style="margin: 0; color: #e74c3c; font-weight: bold;">Giảm giá kịch sàn sale 50% -!</p>
+    
+    <p style="margin: 10px 0 5px 0;">
+          =>> <span style="text-decoration: line-through; color: #94a3b8;">Hãy liên hệ chúng tôi</span>
+    </p>
+    
+    <p style="margin: 0; font-weight: bold; color: #C8102E;">
+         
+      =>> <span style="font-size: 18px; color: #e74c3c;"> Để nhận ưu đãi ngay hôm nay</span> <br>
+        <span style="font-size: 12px; color: #059669;">(Đừng tốn tiền cho các khóa học đắt tiền nữa!)</span>
+    </p>
+    
+    <p style="margin-top: 10px; font-size: 13px; font-style: italic; border-top: 1px solid #fee2e2; padding-top: 10px;">
+        ⏳ Thời gian áp dụng: Mãi mãi
+    </p>
+</div>
+        
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="#" id="modal-zalo" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="24" height="24" style="border-radius:4px;">
+                Zalo số nhật 07090778422
+            </a>
+
+            <a href="#" id="modal-fb" target="_blank" style="background:#1877f2; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+                <img src="../fb.webp" width="40" height="40" alt="Facebook">
+                Liên hệ Facebook
+            </a>
+
+            <a href="#" id="modal-line" target="_blank" style="background:#06c755; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" width="24" height="24">
+                ID line :  nongaphao
+            </a>
+            
+            <button onclick="document.getElementById('premium-modal').style.display='none'" style="margin-top:10px; background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;">Để sau</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

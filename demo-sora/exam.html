@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz APP luyện thi toukuteigino2 xây dựng cấp tốc</title>
+  <link rel="icon" href="../icon-192.png">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase.js"></script>
+</head>
+
+<body class="mono">
+<script type="module">
+    import { auth, db } from "./firebase.js"; 
+    import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            location.href = "login.html";
+        } else {
+            try {
+                const userDocRef = doc(db, "users", user.uid);
+                const userSnap = await getDoc(userDocRef);
+
+                if (userSnap.exists()) {
+                    const data = userSnap.data();
+                    const isAdmin = data.role === 'admin'; 
+                    const isPremium = data.isPremium === true || isAdmin; 
+                    localStorage.setItem('isPremium', isPremium);
+                    const currentDeviceId = localStorage.getItem('my_device_id');
+                    const devices = data.devices || {};
+
+                    if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
+                        alert("🚫 Thiết bị không hợp lệ. Bạn sẽ bị đăng xuất.");
+                        await signOut(auth);
+                        location.href = "login.html";
+                        return;
+                    }
+
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const setNum = urlParams.get('set');
+                    const practice = urlParams.get('practice');
+                    const allowedSets = ['1', '2', '3']; 
+
+                    if (!isPremium) {
+                        if ((setNum && !allowedSets.includes(setNum)) || practice || setNum === 'randomExam') {
+                            const modal = document.getElementById('premium-modal');
+                            if (modal) {
+                                modal.style.display = 'flex';
+                                document.querySelector('main.container').style.display = 'none';
+                                document.getElementById('timer').innerText = "🔒 Khóa";
+                            }
+                            return;
+                        }
+                    }
+
+                    const nameDisplay = document.getElementById('user-display-name');
+                    if (nameDisplay) {
+                        nameDisplay.innerText = isAdmin ? `(AD) ${data.name}` : (data.name || "Học viên");
+                    }
+
+                    initShuffleLogic();
+                }
+            } catch (error) {
+                console.error("Lỗi xác thực:", error);
+            }
+        }
+    });
+
+    function initShuffleLogic() {
+        const shuffleToggle = document.getElementById('shuffle-toggle-exam');
+        if (!shuffleToggle) return;
+
+        const isShuffle = localStorage.getItem('user_shuffle') === 'true';
+        shuffleToggle.checked = isShuffle;
+
+        shuffleToggle.onchange = () => {
+            localStorage.setItem('user_shuffle', shuffleToggle.checked);
+            const status = shuffleToggle.checked ? "Bật" : "Tắt";
+            if(confirm(`Hệ thống sẽ tải lại để ${status} chế độ đảo câu. Bạn đồng ý chứ?`)) {
+                location.reload();
+            } else {
+                shuffleToggle.checked = !shuffleToggle.checked;
+            }
+        };
+    }
+</script>
+
+ <header class="header">
+  <div class="header-top">
+    <div class="brand small">
+      <img src="../icon-192.png" alt="H" class="logo">
+      <div class="titles">
+        <div class="brand-name"> Quiz APP</div>
+        <div class="subtitle">Chào: <span id="user-display-name">...</span></div>
+      </div>
+    </div>
+    <a href="index.html" class="btn ghost btn-home">🏠 Trang chủ</a>
+  </div>
+  
+  <div class="header-bottom" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+    <div class="shuffle-wrapper">
+        <span class="shuffle-label">🔄 Đảo câu</span>
+        <label class="switch-small">
+            <input type="checkbox" id="shuffle-toggle-exam">
+            <span class="slider-small round"></span>
+        </label>
+    </div>
+    
+    <div class="exam-status" style="display: flex; align-items: center; gap: 10px;">
+      <span id="timer" class="timer" style="font-size: 20px; font-weight: bold; color: #C8102E;">60:00</span>
+      <button id="submitBtn" class="btn" style="background: #C8102E; color: white; border:none;">Nộp bài</button>
+    </div>
+  </div>
+</header>
+      
+  <main class="container">
+  <div id="videoContainer" style="display: none; margin-bottom: 20px; text-align: center;">
+  <h3 style="color: #2c3e50; font-size: 1.1rem; margin-bottom: 10px;">🎥 Video giải đề</h3>
+  <div class="video-link">
+    <a id="videoBtn" href="#" target="_blank" rel="noopener noreferrer" 
+       style="display: inline-block; padding: 10px 20px; background-color: #C8102E; color: white; border-radius: 25px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+       ▶️ Xem video
+    </a>
+  </div>
+</div>
+
+    <div id="quiz" class="card"></div>
+    <div id="result" class="card" style="display:none"></div>
+  </main>
+
+  <button id="redoWrong" class="floating">Làm lại những câu sai</button>
+
+  <footer class="footer">© 2025 • Quiz APP CENTER</footer>
+
+  <script src="questions.js"></script>
+  <script src="questions2.js"></script>
+  <script src="questions3.js"></script>
+  <script src="questions4.js"></script>
+  <script src="questions5.js"></script>
+  <script src="questions6.js"></script>
+  <script src="questions7.js"></script>
+  <script src="questions8.js"></script>
+  <script src="questions9.js"></script>
+  <script src="practice1_g1.js"></script>
+  <script src="practice2_g1.js"></script>
+  <script src="practice3_g1.js"></script>
+  <script src="practice4_g1.js"></script>
+  <script src="practice1.js"></script>
+  <script src="practice2.js"></script>
+  <script src="practice3.js"></script>
+  <script src="practice4.js"></script>
+  <script src="thn3_1.js"></script>
+  <script src="thn3_2.js"></script>
+  <script src="thn3_3.js"></script>
+  <script src="thn3_4.js"></script>
+  <script src="thn3_5.js"></script>
+  <script src="thn3_6.js"></script>
+  <script src="thn3_7.js"></script>
+  <script src="exam_random.js"></script>
+  <script src="practice_random_g1.js"></script>
+  <script src="practice_random_g2.js"></script>
+
+  <script src="exam.js"></script>
+
+  <style>
+    .hud { display: flex; align-items: center; gap: 10px; }
+    .btn.ghost { background: #FFF9EE; color: #C8102E; font-weight: bold; border: 1.5px solid #C9A24B; }
+    .btn.ghost:hover { background: #FDEFD2; }
+
+    .shuffle-wrapper {
+        display: flex; align-items: center; gap: 5px; background: rgba(227, 160, 8, 0.15); padding: 4px 8px; border-radius: 20px;
+    }
+    .shuffle-label { font-size: 11px; font-weight: bold; color: #2A2118; }
+    .switch-small { position: relative; display: inline-block; width: 34px; height: 18px; }
+    .switch-small input { opacity: 0; width: 0; height: 0; }
+    .slider-small {
+        position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 18px;
+    }
+    .slider-small:before {
+        position: absolute; content: ""; height: 12px; width: 12px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%;
+    }
+    input:checked + .slider-small { background-color: #E3A008; }
+    input:checked + .slider-small:before { transform: translateX(16px); }
+    
+    .header {
+        display: flex !important; flex-direction: column !important; padding: 10px 15px !important; background: rgba(244,244,241,.97); border-bottom: 2px solid #C9A24B; align-items: stretch !important; 
+    }
+    .header-top, .header-bottom {
+        display: flex !important; flex-direction: row !important; justify-content: space-between !important; align-items: center !important; width: 100% !important;
+    }
+    .brand, .btn-home, .shuffle-wrapper, .exam-status { margin: 0 !important; }
+    .exam-status { display: flex; align-items: center; gap: 10px; }
+    .btn-red { background: #ee0000 !important; color: white !important; font-weight: bold; border: none; padding: 6px 15px; border-radius: 8px; }
+    .timer { font-size: 20px; font-weight: bold; color: #C8102E; }
+    /* Ép các phần tử này hiển thị đúng dấu xuống dòng từ JSON */
+.explain-box, .q-text, .tip, .answer-line {
+    white-space: pre-line !important;
+}
+
+  </style>
+
+  <div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center;">
+        <div style="font-size: 50px; margin-bottom: 15px;">🔒</div>
+        <h2 style="color:#C8102E;">Mở Khóa Toàn Bộ</h2>
+        <p style="color:#64748b;">Nâng cấp Premium để học toàn bộ đề thi.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+            <a href="https://zalo.me/09xxxxxxxx" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;">💬 Zalo Admin</a>
+            <button onclick="location.href='index.html'" style="background:none; border:none; color:#94a3b8; cursor:pointer;">Quay lại Trang chủ</button>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

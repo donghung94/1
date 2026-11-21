@@ -165,7 +165,7 @@ window.PRACTICE_SETS["g1_3"] = {
 },
 {
   q: "問72　どんな工事（こうじ）ですか。【133】",
-  img: "images/72.png",
+  img: "images/0072.png",
   options: [
     "スランプ試験（しけん）",
     "引張（ひっぱり）試験（しけん）",

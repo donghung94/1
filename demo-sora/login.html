@@ -248,15 +248,31 @@
                         await signOut(auth);
                         throw new Error(t("err_device_limit_login"));
                     } else {
-                        // Chưa có máy nào (do admin reset) -> Cho phép đăng ký máy này
-                        await updateDoc(userDocRef, {
-                            [`devices.${currentDeviceId}`]: {
-                                name: currentDeviceName,
-                                addedAt: serverTimestamp(),
-                                last_login: serverTimestamp()
-                           },
-        device_count: isAdmin ? deviceCount : 1 // Admin thì giữ nguyên hoặc tăng, không ép về 1
-                        });
+                        // Chưa có máy nào (do admin reset) -> Cho phép đăng ký máy này.
+                        // Riêng ADMIN: THAY TOÀN BỘ map devices bằng máy hiện tại và
+                        // device_count = 1 — luật Firestore chặn devices.size() > 1,
+                        // cộng dồn thêm máy mới cho admin sẽ bị permission-denied.
+                        if (isAdmin) {
+                            await updateDoc(userDocRef, {
+                                devices: {
+                                    [currentDeviceId]: {
+                                        name: currentDeviceName,
+                                        addedAt: serverTimestamp(),
+                                        last_login: serverTimestamp()
+                                    }
+                                },
+                                device_count: 1
+                            });
+                        } else {
+                            await updateDoc(userDocRef, {
+                                [`devices.${currentDeviceId}`]: {
+                                    name: currentDeviceName,
+                                    addedAt: serverTimestamp(),
+                                    last_login: serverTimestamp()
+                                },
+                                device_count: 1
+                            });
+                        }
                     }
                 }
 

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bảng điều khiển Admin - Toukutei 2</title>
+    <link rel="icon" href="../icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+            --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+            --red:#C8102E; --red-dark:#A50D26; --red-soft:#FDECEF;
+            --gold-pale:#F5D98A; --bronze:#C9A24B;
+            --cream:#FFF9EE; --cream-2:#FDEFD2; --brown:#2A2118;
+            --amber:#B97A0B; --amber-soft:#FBF0DA;
+            --radius:18px;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: var(--bg); margin: 0; padding: 12px; color: var(--ink); }
+        .container { max-width: 640px; margin: auto; }
+
+        .dash-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 14px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 9px 13px; border-radius: 999px; background: var(--card); border: 1.5px solid var(--bronze); color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; }
+        .back-link:active { transform: translateY(1px); }
+        .dash-eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .14em; color: var(--red); }
+        .dash-title { font-size: 21px; font-weight: 800; margin: 2px 0 0; }
+
+        .panel { background: var(--card); border: 1.5px solid var(--bronze); border-radius: var(--radius); padding: 18px 16px; box-shadow: 0 3px 10px rgba(20,16,10,.06); }
+
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
+        @media (min-width: 560px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+        .stat { background: linear-gradient(160deg, var(--cream), var(--cream-2)); border: 1.5px solid var(--bronze); border-radius: 14px; padding: 12px 6px; text-align: center; }
+        .stat-num { font-size: 24px; font-weight: 800; color: var(--red); line-height: 1.1; }
+        .stat-num.gold { color: var(--amber); }
+        .stat-num.brown { color: var(--brown); }
+        .stat-label { font-size: 11px; font-weight: 700; color: var(--ink-2); margin-top: 3px; line-height: 1.3; }
+
+        #d-search { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; }
+        #d-search:focus { border-color: var(--bronze); }
+        .d-count { font-size: 12px; color: var(--ink-3); margin: 10px 2px 2px; }
+
+        .d-user { display: flex; align-items: center; gap: 10px; padding: 9px 2px; border-top: 1px dashed var(--line); }
+        .d-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--red); color: #fff; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; flex: none; }
+        .d-user-main { min-width: 0; flex: 1; }
+        .d-user-name { font-size: 13.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .d-user-name .code { color: var(--red); font-weight: 800; }
+        .d-user-email { font-size: 12px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .d-user-side { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; flex: none; }
+        .chip { font-size: 10px; font-weight: 800; letter-spacing: .05em; padding: 5px 9px; border-radius: 999px; background: var(--amber-soft); color: var(--amber); white-space: nowrap; }
+        .chip.premium { background: var(--brown); color: var(--gold-pale); }
+        .chip.banned { background: var(--red-soft); color: var(--red-dark); }
+        .d-user-date { font-size: 11px; color: var(--ink-3); }
+        .d-empty { padding: 18px 4px; text-align: center; color: var(--ink-3); font-size: 13px; }
+
+        .actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+        @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 11px 8px; border-radius: 12px; font-weight: 700; font-size: 13px; text-decoration: none; border: 1.5px solid var(--bronze); background: var(--cream); color: var(--red); }
+        .btn.primary { background: var(--red); border-color: var(--red); color: #fff; }
+        .btn:active { transform: translateY(1px); }
+
+        #dash-loading { text-align: center; padding: 50px 10px; font-weight: 700; color: var(--red); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="dash-head">
+        <a class="back-link" href="index.html">← Trang chủ</a>
+        <div>
+            <div class="dash-eyebrow">🛠️ QUẢN TRỊ VIÊN</div>
+            <h1 class="dash-title">Bảng điều khiển Admin</h1>
+        </div>
+    </div>
+
+    <div id="dash-loading">🔐 Đang kiểm tra quyền quản trị...</div>
+
+    <!-- Chỉ hiện sau khi đã xác thực role === 'admin'; không phải admin sẽ bị chuyển về index.html -->
+    <div id="dash-root" class="panel" style="display:none">
+        <div class="stats">
+            <div class="stat"><div class="stat-num" id="d-visits">–</div><div class="stat-label">Lượt truy cập</div></div>
+            <div class="stat"><div class="stat-num brown" id="d-total">–</div><div class="stat-label">Thành viên đã đăng ký</div></div>
+            <div class="stat"><div class="stat-num gold" id="d-premium">–</div><div class="stat-label">Tài khoản Premium</div></div>
+            <div class="stat"><div class="stat-num" id="d-trial">–</div><div class="stat-label">Học thử</div></div>
+        </div>
+
+        <input type="text" id="d-search" placeholder="🔍 Tìm theo tên, email hoặc mã thành viên (TV0123)...">
+        <div class="d-count" id="d-count"></div>
+        <div id="d-list"></div>
+
+        <div class="actions">
+            <a class="btn primary" href="admin.html">👥 Quản lý học viên</a>
+            <a class="btn" href="language.html">🌐 Đổi ngôn ngữ</a>
+            <a class="btn" href="https://donghung94.github.io/1/" target="_blank" rel="noopener">🚀 Mở bản live</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // ===== Hiển thị danh sách thành viên + tìm kiếm (dữ liệu do script module bên dưới nạp) =====
+    window.__dashUsers = [];
+    function dashEsc(s) {
+        return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+    function dashCreatedMillis(data) {
+        const v = data && data.createdAt;
+        if (!v) return 0;
+        if (typeof v === 'string') { const t = Date.parse(v); return Number.isNaN(t) ? 0 : t; }
+        if (typeof v === 'number') return v;
+        if (typeof v.toDate === 'function') { try { return v.toDate().getTime(); } catch (e) { return 0; } }
+        if (typeof v.seconds === 'number') return v.seconds * 1000;
+        return 0;
+    }
+    function dashMatch(user, kw) {
+        if (!kw) return true;
+        const name = (user.name || '').toLowerCase();
+        const email = (user.email || '').toLowerCase();
+        const code = (user.memberCode || '').toLowerCase();
+        if (name.includes(kw) || email.includes(kw) || code.includes(kw)) return true;
+        // Mã thành viên: khớp cả khi gõ có hoặc không có tiền tố "TV" (vd "0123" vẫn ra TV0123)
+        const kwDigits = kw.replace(/^tv\s*/, '');
+        const codeDigits = code.replace(/^tv/, '');
+        return kwDigits.length > 0 && codeDigits.includes(kwDigits);
+    }
+    function dashRender() {
+        const kw = (document.getElementById('d-search').value || '').trim().toLowerCase();
+        const filtered = window.__dashUsers.filter(u => dashMatch(u, kw));
+        const shown = filtered.slice(0, 50); // Vẽ tối đa 50 dòng; tìm kiếm vẫn quét toàn bộ danh sách đã nạp
+        document.getElementById('d-count').textContent =
+            'Hiển thị ' + shown.length + ' / ' + filtered.length + ' thành viên' + (kw ? ' khớp "' + kw + '"' : '');
+        if (!shown.length) {
+            document.getElementById('d-list').innerHTML = '<div class="d-empty">Không tìm thấy thành viên nào.</div>';
+            return;
+        }
+        document.getElementById('d-list').innerHTML = shown.map(u => {
+            const name = u.name || 'Học viên mới';
+            const initial = name.trim().charAt(0).toUpperCase() || 'H';
+            const ms = dashCreatedMillis(u);
+            const dateTxt = ms ? new Date(ms).toLocaleDateString('vi-VN') : '';
+            const chip = u.status === 'banned'
+                ? '<span class="chip banned">🚫 ĐÃ KHÓA</span>'
+                : (u.isPremium === true
+                    ? '<span class="chip premium">⭐ PREMIUM</span>'
+                    : '<span class="chip">HỌC THỬ</span>');
+            const codeHtml = u.memberCode ? ' <span class="code">(' + dashEsc(u.memberCode) + ')</span>' : '';
+            return '<div class="d-user">' +
+                '<div class="d-avatar">' + dashEsc(initial) + '</div>' +
+                '<div class="d-user-main">' +
+                    '<div class="d-user-name">' + dashEsc(name) + codeHtml + '</div>' +
+                    '<div class="d-user-email">' + dashEsc(u.email || '') + '</div>' +
+                '</div>' +
+                '<div class="d-user-side">' + chip + (dateTxt ? '<span class="d-user-date">' + dateTxt + '</span>' : '') + '</div>' +
+            '</div>';
+        }).join('');
+    }
+    document.getElementById('d-search').addEventListener('input', dashRender);
+</script>
+
+<script type="module">
+    // ===== Cổng Admin: chưa đăng nhập hoặc không có role 'admin' -> về trang chủ ngay, không hiện dữ liệu =====
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
+        authDomain: "donghung-3208d.firebaseapp.com",
+        projectId: "donghung-3208d",
+        storageBucket: "donghung-3208d.firebasestorage.app",
+        messagingSenderId: "753379492663",
+        appId: "1:753379492663:web:baff34f2c0bac00e02d0b2"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            window.location.href = "index.html";
+            return;
+        }
+        try {
+            const meSnap = await getDoc(doc(db, "users", user.uid));
+            if (!meSnap.exists() || meSnap.data().role !== 'admin') {
+                window.location.href = "index.html";
+                return;
+            }
+
+            // Lượt truy cập (đếm từ khi tính năng này hoạt động; chưa có dữ liệu thì là 0)
+            let visits = 0;
+            try {
+                const vSnap = await getDoc(doc(db, "stats", "visits"));
+                if (vSnap.exists() && typeof vSnap.data().total === 'number') visits = vSnap.data().total;
+            } catch (e) { /* Không đọc được bộ đếm: hiển thị 0 */ }
+
+            const snap = await getDocs(collection(db, "users"));
+            const users = [];
+            snap.forEach(d => users.push(d.data()));
+            // Mới đăng ký nhất lên đầu; hồ sơ thiếu ngày xếp cuối
+            users.sort((a, b) => dashCreatedMillis(b) - dashCreatedMillis(a));
+
+            const total = users.length;
+            const premium = users.filter(u => u.isPremium === true).length;
+            document.getElementById('d-visits').textContent = visits;
+            document.getElementById('d-total').textContent = total;
+            document.getElementById('d-premium').textContent = premium;
+            document.getElementById('d-trial').textContent = total - premium;
+
+            window.__dashUsers = users;
+            dashRender();
+
+            document.getElementById('dash-loading').style.display = 'none';
+            document.getElementById('dash-root').style.display = 'block';
+        } catch (e) {
+            console.error(e);
+            document.getElementById('dash-loading').textContent = "❌ Lỗi tải dữ liệu: " + e.message;
+        }
+    });
+</script>
+</body>
+</html>

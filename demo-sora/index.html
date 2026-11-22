@@ -54,6 +54,11 @@
                         }
                     }
                     const isAdmin = data.role === 'admin';
+                    // Nút Bảng điều khiển: chỉ admin mới thấy, dẫn sang trang dashboard.html riêng
+                    if (isAdmin) {
+                        const dashBtn = document.getElementById('admin-dash-btn');
+                        if (dashBtn) dashBtn.style.display = 'flex';
+                    }
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 
@@ -84,7 +89,7 @@
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
                         const userName = data.name || t("default_student");
-                        nameDisplay.textContent = userName;
+                        nameDisplay.textContent = data.memberCode ? `${userName} (${data.memberCode})` : userName;
                         const avatarEl = document.getElementById('user-avatar');
                         if (avatarEl) avatarEl.textContent = userName.trim().charAt(0).toUpperCase() || "H";
                         const chipEl = document.getElementById('user-status-chip');
@@ -207,6 +212,27 @@
      📘 DANH SÁCH ĐỀ THI
 ============================ -->
 <main class="container">
+  <!-- 🛠️ Nút Bảng điều khiển Admin — chỉ hiện khi role === 'admin' (mặc định ẩn;
+       script chính của trang chỉ bật lên sau khi kiểm tra Firestore users/{uid}.role).
+       Toàn bộ dashboard nằm ở trang riêng dashboard.html -->
+  <style>
+    .ap-dash-btn{align-items:center;justify-content:center;gap:8px;padding:13px 16px;margin-bottom:12px;border-radius:12px;background:var(--red);color:#fff;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 3px 10px rgba(20,16,10,.12)}
+    .ap-dash-btn:active{transform:translateY(1px)}
+  </style>
+  <a id="admin-dash-btn" class="ap-dash-btn" href="dashboard.html" style="display:none">🛠️ Bảng điều khiển Admin</a>
+  <script type="module">
+    // ===== Đếm lượt truy cập: stats/visits.total +1, tối đa 1 lần / phiên trình duyệt =====
+    import { db } from "./firebase.js";
+    import { doc, setDoc, increment } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    (async () => {
+        try {
+            if (sessionStorage.getItem('visitCounted')) return;
+            sessionStorage.setItem('visitCounted', '1');
+            await setDoc(doc(db, "stats", "visits"), { total: increment(1) }, { merge: true });
+        } catch (e) { /* Không ghi được (quyền/mạng): bỏ qua im lặng */ }
+    })();
+  </script>
+
   <div id="promo-section" class="promo-banner" style="display: none;">
     <div class="promo-content">
         <!-- ============================

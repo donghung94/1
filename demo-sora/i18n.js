@@ -144,7 +144,25 @@
       lang_note: 'Bạn có thể đổi ngôn ngữ bất cứ lúc nào ở trang chủ.',
       group_heading: '🏗️ Bạn thuộc nhóm ngành nào?',
       btn_continue: 'Tiếp tục',
-      change_group: '🔀 Đổi nhóm ngành'
+      change_group: '🔀 Đổi nhóm ngành',
+      /* tiến trình học */
+      progress_resumed: '🔖 Đã khôi phục tiến trình học của bạn — làm tiếp nhé!',
+      progress_in_progress: 'Đang làm: câu {x}/{y}',
+      progress_best: '✓ Điểm cao nhất: {a}/{b}',
+      /* trang hướng dẫn học */
+      guide_btn: '📖 Hướng dẫn học',
+      guide_title: '📖 Hướng dẫn học',
+      guide_s1_title: 'Bước 1 — Xem video bài giảng trước',
+      guide_s1_body: 'Trước khi làm bài, hãy xem video bài giảng của từng chủ đề để nắm ý chính. Xem video trước rồi mới luyện câu hỏi sẽ giúp bạn nhớ lâu hơn nhiều.',
+      guide_video_soon: '🎬 Video đang được cập nhật — video bài giảng sẽ xuất hiện tại đây sau khi sản xuất xong.',
+      guide_s2_title: 'Bước 2 — Làm bài theo thứ tự từ trên xuống dưới',
+      guide_s2_body: 'Làm các bộ đề theo đúng thứ tự trong danh sách: phần lý thuyết chung trước, rồi tới đề thực hành của nhóm ngành của bạn. Đừng nhảy cóc — các bộ đề được sắp xếp từ nền tảng tới nâng cao.',
+      guide_s3_title: 'Bước 3 — Sắp thi: ôn kỹ các câu hay ra',
+      guide_s3_body: 'Gần đến ngày thi, hãy tập trung ôn hai bộ "câu hay ra" dưới đây — đây là những câu xuất hiện thường xuyên nhất trong đề thi thật.',
+      guide_s3_btn1: '👉 Câu hay ra — Phần 1',
+      guide_s3_btn2: '👉 Câu hay ra — Phần 2',
+      guide_s4_title: 'Bước 4 — Thắc mắc? Liên hệ hỗ trợ',
+      guide_s4_body: 'Nếu có câu nào chưa hiểu, hoặc cần hỗ trợ về tài khoản và Premium, hãy nhắn cho Admin qua các kênh dưới đây.'
     },
     id: {
       app_tagline: 'Latihan ujian Keterampilan Khusus No. 2',
@@ -269,7 +287,23 @@
       lang_note: 'Anda dapat mengganti bahasa kapan saja di beranda.',
       group_heading: '🏗️ Pilih kelompok bidang Anda',
       btn_continue: 'Lanjutkan',
-      change_group: '🔀 Ganti kelompok'
+      change_group: '🔀 Ganti kelompok',
+      progress_resumed: '🔖 Progres belajar Anda telah dipulihkan — silakan lanjutkan!',
+      progress_in_progress: 'Sedang dikerjakan: soal {x}/{y}',
+      progress_best: '✓ Skor terbaik: {a}/{b}',
+      guide_btn: '📖 Panduan belajar',
+      guide_title: '📖 Panduan belajar',
+      guide_s1_title: 'Langkah 1 — Tonton video pelajaran dulu',
+      guide_s1_body: 'Sebelum mengerjakan soal, tontonlah video pelajaran untuk setiap topik agar memahami inti materinya. Menonton video dulu lalu berlatih soal akan membuat Anda mengingat lebih lama.',
+      guide_video_soon: '🎬 Video sedang diperbarui — video pelajaran akan muncul di sini setelah selesai diproduksi.',
+      guide_s2_title: 'Langkah 2 — Kerjakan soal dari atas ke bawah',
+      guide_s2_body: 'Kerjakan paket soal sesuai urutan dalam daftar: teori umum dulu, lalu soal praktik kelompok bidang Anda. Jangan melompat-lompat — paket soal disusun dari dasar hingga lanjutan.',
+      guide_s3_title: 'Langkah 3 — Menjelang ujian: ulangi soal yang sering keluar',
+      guide_s3_body: 'Saat hari ujian sudah dekat, fokuslah mengulang dua paket "soal yang sering keluar" di bawah ini — inilah soal yang paling sering muncul dalam ujian sebenarnya.',
+      guide_s3_btn1: '👉 Soal sering keluar — Bagian 1',
+      guide_s3_btn2: '👉 Soal sering keluar — Bagian 2',
+      guide_s4_title: 'Langkah 4 — Ada pertanyaan? Hubungi dukungan',
+      guide_s4_body: 'Jika ada soal yang belum Anda pahami, atau butuh bantuan soal akun dan Premium, silakan hubungi Admin melalui kanal di bawah ini.'
     },
     en: {
       app_tagline: 'Specified Skilled Worker No. 2 exam practice',
@@ -394,7 +428,23 @@
       lang_note: 'You can change the language anytime on the home page.',
       group_heading: '🏗️ Choose your industry group',
       btn_continue: 'Continue',
-      change_group: '🔀 Change group'
+      change_group: '🔀 Change group',
+      progress_resumed: '🔖 Your learning progress has been restored — pick up where you left off!',
+      progress_in_progress: 'In progress: question {x}/{y}',
+      progress_best: '✓ Best score: {a}/{b}',
+      guide_btn: '📖 Study guide',
+      guide_title: '📖 Study guide',
+      guide_s1_title: 'Step 1 — Watch the lesson videos first',
+      guide_s1_body: 'Before doing the exercises, watch the lesson video for each topic to grasp the main ideas. Watching first and practising afterwards will help you remember much longer.',
+      guide_video_soon: '🎬 Videos are being updated — lesson videos will appear here once production is finished.',
+      guide_s2_title: 'Step 2 — Work through the sets from top to bottom',
+      guide_s2_body: 'Do the exam sets in the exact order listed: general theory first, then the practice sets of your own industry group. Do not skip around — the sets are arranged from fundamentals to advanced.',
+      guide_s3_title: 'Step 3 — Near the exam: review the frequently-appearing questions',
+      guide_s3_body: 'As your exam day approaches, focus on the two "frequently-appearing questions" sets below — these are the questions that show up most often in the real exam.',
+      guide_s3_btn1: '👉 Frequently-appearing questions — Part 1',
+      guide_s3_btn2: '👉 Frequently-appearing questions — Part 2',
+      guide_s4_title: 'Step 4 — Questions? Contact support',
+      guide_s4_body: 'If any question is unclear, or you need help with your account or Premium, message the Admin through the channels below.'
     }
   };
 

@@ -74,7 +74,8 @@
   }
 
 // ================== KIỂM TRA CHẾ ĐỘ ĐẢO CÂU ==================
-  const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
+  // isShuffleActive được định nghĩa ở khối TẦNG NGƯỜI DÙNG bên dưới (sau khi biết tầng),
+  // vì đảo câu chỉ dành cho Premium/Admin.
   let sourceQuestions = DATA.questions || DATA; // Chú ý: Đổi const thành let ở đây
 
   // ================== GIỚI HẠN THEO TẦNG NGƯỜI DÙNG ==================
@@ -108,23 +109,167 @@
     else showUpgradeModal();
   }
 
+  // Đảo câu CHỈ dành cho Premium/Admin: khách & tài khoản free luôn làm bài theo
+  // thứ tự gốc của ngân hàng, bất kể trạng thái công tắc đã lưu trên máy (user_shuffle).
+  const isShuffleActive = isPremiumUser && localStorage.getItem('user_shuffle') === 'true';
+
   // ================== BUILD QUESTIONS ==================
-  const questions = sourceQuestions.map(q => {
+  const questions = sourceQuestions.map((q, bankIdx) => {
     const correctIndex = q.answer;
+    // Định danh ỔN ĐỊNH của câu hỏi trong ngân hàng (dùng để lưu/khôi phục tiến trình):
+    // ưu tiên field "id" của ngân hàng; câu nào thiếu id thì dùng vị trí gốc trong bộ đề.
+    // Nhờ qid + oi (vị trí gốc của đáp án), khôi phục không bao giờ tô nhầm đáp án
+    // sang câu khác — kể cả khi Premium bật đảo câu/đảo đáp án.
+    const qid = (q.id !== undefined && q.id !== null) ? ('id:' + q.id) : ('ix:' + bankIdx);
 
     let opts = q.options.map((t, i) => ({
       text: t,
-      correct: i === correctIndex
+      correct: i === correctIndex,
+      oi: i
     }));
 
     if (isShuffleActive) shuffle(opts);
-    return { ...q, options: opts };
+    return { ...q, qid, options: opts };
   });
 
   if (isShuffleActive) shuffle(questions);
 
   let cur = 0;
   const user = new Array(questions.length).fill(null);
+
+  // ================== LƯU TIẾN TRÌNH HỌC ==================
+  // - Đã đăng nhập: Firestore users/{uid}.exam_progress (qua cầu nối window.__progressStore
+  //   do exam.html cấp sau khi xác thực xong).
+  // - Khách: cùng cấu trúc trong localStorage của máy (exam_progress_guest).
+  // Cấu trúc: { sets: { <setKey>: { answers: {<qid>: <vị trí đáp án gốc>}, lastQid, lastPos,
+  //               totalQ, bestScore, bestTotal, completed, updatedAt } },
+  //             mockHistory: [ { at, score, total, mode } ] } — mới nhất trước, tối đa 20.
+  // Đề ngẫu nhiên (randomExam / *_random): mỗi lần mở là một tổ hợp câu khác nhau nên
+  // KHÔNG khôi phục giữa chừng — chỉ ghi điểm cao nhất + lịch sử thi thử khi nộp bài.
+  const SET_KEY = setId ? ('set_' + setId) : ('practice_' + (practiceId || ''));
+  const IS_MOCK = setId === 'randomExam' || (!!practiceId && practiceId.endsWith('_random'));
+  let PROG = { sets: {}, mockHistory: [] };
+  let progRec = null;
+  let progStore = null;
+  let progressReady = false;
+  let inRedo = false;
+  let saveTimer = null;
+
+  function normalizeProgress(raw) {
+    const out = { sets: {}, mockHistory: [] };
+    if (raw && typeof raw === 'object') {
+      if (raw.sets && typeof raw.sets === 'object') out.sets = raw.sets;
+      if (Array.isArray(raw.mockHistory)) out.mockHistory = raw.mockHistory;
+      // Hồ sơ cũ dạng khung {doboku: 0, kenchiku: 0} -> coi như chưa có tiến trình.
+    }
+    return out;
+  }
+
+  function ensureRec() {
+    if (!PROG.sets[SET_KEY]) {
+      PROG.sets[SET_KEY] = { answers: {}, lastQid: null, lastPos: 0, totalQ: questions.length, bestScore: null, bestTotal: null, completed: false, updatedAt: 0 };
+    }
+    progRec = PROG.sets[SET_KEY];
+    return progRec;
+  }
+
+  function flushProgress() {
+    if (!progStore) return;
+    try {
+      const r = progStore.save(JSON.parse(JSON.stringify(PROG)));
+      if (r && r.catch) r.catch(() => {});
+    } catch (e) {}
+  }
+
+  function saveProgress() {
+    if (!progressReady || inRedo) return;
+    if (saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(flushProgress, 500);
+  }
+
+  function recordPosition() {
+    if (!progressReady || IS_MOCK || inRedo || !questions.length) return;
+    const rec = ensureRec();
+    rec.lastQid = questions[cur].qid;
+    rec.lastPos = cur + 1;
+    rec.totalQ = questions.length;
+    rec.updatedAt = Date.now();
+    saveProgress();
+  }
+
+  function recordSubmit(correct, total) {
+    if (!progressReady || inRedo) return;
+    const rec = ensureRec();
+    if (rec.bestScore === null || rec.bestScore === undefined || correct > rec.bestScore) {
+      rec.bestScore = correct;
+      rec.bestTotal = total;
+    }
+    rec.completed = true;
+    rec.answers = {};
+    rec.lastQid = null;
+    rec.updatedAt = Date.now();
+    if (IS_MOCK) {
+      PROG.mockHistory.unshift({ at: Date.now(), score: correct, total: total, mode: SET_KEY });
+      if (PROG.mockHistory.length > 20) PROG.mockHistory.length = 20;
+    }
+    if (saveTimer) clearTimeout(saveTimer);
+    flushProgress();
+  }
+
+  function showResumeNotice() {
+    const main = document.querySelector('main.container');
+    if (!main || document.getElementById('resume-notice')) return;
+    const div = document.createElement('div');
+    div.id = 'resume-notice';
+    div.textContent = t('progress_resumed');
+    div.style.cssText = 'background:#FBF0DA;border:1.5px solid #C9A24B;color:#2A2118;padding:10px 14px;border-radius:10px;margin-bottom:12px;font-size:14px;font-weight:600;text-align:center;';
+    main.insertBefore(div, main.firstChild);
+    setTimeout(() => { div.style.transition = 'opacity .5s'; div.style.opacity = '0'; setTimeout(() => div.remove(), 550); }, 4500);
+  }
+
+  function applyRestore() {
+    if (IS_MOCK || !progRec || !progRec.answers) return;
+    // Người dùng đã kịp trả lời trong lúc chờ nạp tiến trình -> tôn trọng phiên hiện tại.
+    if (user.some(u => u !== null)) return;
+    const answers = progRec.answers;
+    let applied = 0;
+    questions.forEach((q, pos) => {
+      if (!Object.prototype.hasOwnProperty.call(answers, q.qid)) return;
+      // Free/khách: chỉ khôi phục trong FREE_LIMIT câu đầu — đáp án của các câu sau
+      // (vd còn sót từ thời Premium) không được hiển thị.
+      if (isFreeUser && pos >= FREE_LIMIT) return;
+      const j = q.options.findIndex(o => o.oi === answers[q.qid]);
+      if (j >= 0) { user[pos] = j; applied++; }
+    });
+    if (!applied) return;
+    let target = -1;
+    if (progRec.lastQid) target = questions.findIndex(q => q.qid === progRec.lastQid);
+    if (target < 0) {
+      const firstBlank = user.findIndex(u => u === null);
+      target = firstBlank >= 0 ? firstBlank : questions.length - 1;
+    }
+    if (isFreeUser && target >= FREE_LIMIT) target = FREE_LIMIT - 1;
+    cur = Math.max(0, target);
+    showResumeNotice();
+    render();
+  }
+
+  if (!window.__progressStore) {
+    // exam.js (script thường) chạy TRƯỚC module xác thực của exam.html (module bị defer),
+    // nên tự tạo promise chờ ở đây; module sẽ resolve nó qua window.__resolveProgressStore.
+    window.__progressStore = new Promise((resolve) => { window.__resolveProgressStore = resolve; });
+  }
+  if (window.__progressStore) {
+    window.__progressStore.then(async (store) => {
+      if (!store) return;
+      progStore = store;
+      try { PROG = normalizeProgress(await store.load()); }
+      catch (e) { PROG = { sets: {}, mockHistory: [] }; }
+      progRec = PROG.sets[SET_KEY] || null;
+      progressReady = true;
+      applyRestore();
+    }).catch(() => {});
+  }
 
   // ================== FURIGANA ==================
   function convertFurigana(text) {
@@ -191,6 +336,16 @@
         if (user[cur] !== null) return;
         const idx = parseInt(el.dataset.idx);
         user[cur] = idx;
+        // Lưu tiến trình: ghi đáp án theo qid + vị trí đáp án gốc (oi)
+        if (progressReady && !IS_MOCK && !inRedo) {
+          const rec = ensureRec();
+          rec.answers[questions[cur].qid] = questions[cur].options[idx].oi;
+          rec.lastQid = questions[cur].qid;
+          rec.lastPos = cur + 1;
+          rec.totalQ = questions.length;
+          rec.updatedAt = Date.now();
+          saveProgress();
+        }
         quizEl.querySelectorAll(".opt").forEach((optEl, j) => {
           const mark = optEl.querySelector(".mark");
           if (questions[cur].options[j].correct) {
@@ -207,8 +362,8 @@
       });
     });
 
-    $("#backBtn").onclick = () => { if (cur > 0) { cur--; render(); } };
-    
+    $("#backBtn").onclick = () => { if (cur > 0) { cur--; recordPosition(); render(); } };
+
     // Nút Tiếp theo
     $("#nextBtn").onclick = () => {
       if (user[cur] === null) return;
@@ -217,6 +372,7 @@
       if (isFreeUser && cur + 1 >= FREE_LIMIT) { showLimitWall(); return; }
       if (cur < questions.length - 1) {
         cur++;
+        recordPosition();
         render();
       }
     };
@@ -259,8 +415,12 @@
       `;
     }).join("");
 
+    // Ghi nhận kết quả vào tiến trình: điểm cao nhất + hoàn thành (+ lịch sử thi thử
+    // nếu là đề ngẫu nhiên). Đáp án dở dang được xóa để lần làm sau bắt đầu sạch.
+    recordSubmit(correct, scope.length);
+
     quizEl.style.display="none";
-    
+
     resEl.style.display="block";
     resEl.innerHTML = `
       <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
@@ -269,6 +429,7 @@
     applyFuriganaToPage();
     redoBtn.style.display = wrongs.length ? "block" : "none";
     redoBtn.onclick = () => {
+      inRedo = true; // Làm lại câu sai là chế độ riêng — không ghi đè tiến trình của bộ đề gốc
       shuffle(wrongs);
       questions.length = 0;
       wrongs.forEach(q=>questions.push(q));

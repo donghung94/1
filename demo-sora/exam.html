@@ -15,9 +15,28 @@
 
 <body class="mono">
 <script type="module">
-    import { auth, db } from "./firebase.js"; 
+    import { auth, db } from "./firebase.js";
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== Cầu nối LƯU TIẾN TRÌNH cho exam.js (script thường, chạy trước module này) =====
+    // exam.js tự tạo window.__progressStore + window.__resolveProgressStore và chờ;
+    // module này chỉ việc resolve bằng kho phù hợp khi xác thực xong:
+    // - Đã đăng nhập: đọc/ghi Firestore users/{uid}.exam_progress.
+    // - Khách: đọc/ghi localStorage 'exam_progress_guest' trên máy này.
+    const resolveProgressStore = (store) => {
+        if (window.__resolveProgressStore) {
+            const r = window.__resolveProgressStore;
+            window.__resolveProgressStore = null;
+            r(store);
+        } else if (!window.__progressStore) {
+            window.__progressStore = Promise.resolve(store);
+        }
+    };
+    const guestProgressStore = {
+        load: async () => { try { return JSON.parse(localStorage.getItem('exam_progress_guest') || 'null'); } catch (e) { return null; } },
+        save: async (obj) => { try { localStorage.setItem('exam_progress_guest', JSON.stringify(obj)); } catch (e) {} }
+    };
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
@@ -25,6 +44,7 @@
             // exam.js giới hạn 5 câu đầu và hiện BẢNG ĐĂNG NHẬP khi khách chạm câu thứ 6.
             localStorage.setItem('userTier', 'guest');
             localStorage.setItem('isPremium', 'false');
+            resolveProgressStore(guestProgressStore);
             const guestNameEl = document.getElementById('user-display-name');
             if (guestNameEl) guestNameEl.innerText = t("guest_name");
             initShuffleLogic();
@@ -44,10 +64,18 @@
 
                     if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
                         alert(t("alert_device_invalid"));
+                        resolveProgressStore(null);
                         await signOut(auth);
                         location.href = "login.html";
                         return;
                     }
+
+                    // Kho tiến trình trên Firestore của chính học viên này
+                    const savedProgress = data.exam_progress || null;
+                    resolveProgressStore({
+                        load: async () => savedProgress,
+                        save: async (obj) => { await setDoc(doc(db, "users", user.uid), { exam_progress: obj }, { merge: true }); }
+                    });
 
                     // Mọi đề đều mở cho tài khoản free — giới hạn 5 câu/đề
                     // được áp dụng trong exam.js (hiện bảng nâng cấp khi qua câu 6).
@@ -61,22 +89,41 @@
                 } else {
                     // Đã đăng nhập nhưng chưa có hồ sơ Firestore: coi như tài khoản free
                     // (không premium) — vẫn cho làm bài, giới hạn 5 câu như free, không lỗi trang.
+                    // Tiến trình tạm lưu trên máy theo uid (không tạo hồ sơ Firestore dở dang).
                     localStorage.setItem('isPremium', 'false');
                     localStorage.setItem('userTier', 'free');
+                    const lsKey = 'exam_progress_' + user.uid;
+                    resolveProgressStore({
+                        load: async () => { try { return JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) { return null; } },
+                        save: async (obj) => { try { localStorage.setItem(lsKey, JSON.stringify(obj)); } catch (e) {} }
+                    });
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) nameDisplay.innerText = "Học viên";
                     initShuffleLogic();
                 }
             } catch (error) {
                 console.error("Lỗi xác thực:", error);
+                resolveProgressStore(guestProgressStore);
             }
         }
     });
 
     function initShuffleLogic() {
+        const wrapper = document.getElementById('shuffle-wrapper');
         const shuffleToggle = document.getElementById('shuffle-toggle-exam');
         if (!shuffleToggle) return;
 
+        // Đảo câu CHỈ dành cho Premium/Admin: khách & tài khoản free KHÔNG thấy công tắc
+        // và luôn làm bài theo thứ tự gốc (exam.js cũng tự ép tắt ở phía nó).
+        const tier = localStorage.getItem('userTier');
+        const isPremiumTier = tier === 'premium' || (!tier && localStorage.getItem('isPremium') === 'true');
+        if (!isPremiumTier) {
+            if (wrapper) wrapper.style.display = 'none';
+            shuffleToggle.checked = false;
+            return;
+        }
+
+        if (wrapper) wrapper.style.display = 'flex';
         const isShuffle = localStorage.getItem('user_shuffle') === 'true';
         shuffleToggle.checked = isShuffle;
 
@@ -104,7 +151,7 @@
   </div>
   
   <div class="header-bottom" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-    <div class="shuffle-wrapper">
+    <div class="shuffle-wrapper" id="shuffle-wrapper" style="display:none">
         <span class="shuffle-label" data-i18n="shuffle_label">🔄 Đảo câu</span>
         <label class="switch-small">
             <input type="checkbox" id="shuffle-toggle-exam">

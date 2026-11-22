@@ -29,9 +29,50 @@
 <body class="mono">
 
 <script type="module">
-    import { auth, logout, db } from "./firebase.js"; 
+    import { auth, logout, db } from "./firebase.js";
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
     import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== Hiển thị TIẾN TRÌNH HỌC trên từng thẻ đề =====
+    // Nguồn: users/{uid}.exam_progress (đã đăng nhập) hoặc localStorage (khách).
+    // Cấu trúc do exam.js ghi: { sets: { <setKey>: {answers, lastPos, totalQ, bestScore,
+    // bestTotal, completed} }, mockHistory: [...] } — hồ sơ cũ dạng khung thì bỏ qua.
+    function progressKeyFromHref(href) {
+        try {
+            const url = new URL(href, window.location.origin);
+            if (!url.pathname.endsWith('exam.html')) return null;
+            const s = url.searchParams.get('set');
+            const p = url.searchParams.get('practice');
+            if (s) return 'set_' + s;
+            if (p) return 'practice_' + p;
+        } catch (e) {}
+        return null;
+    }
+    function annotateProgress(rawProgress) {
+        let sets = {};
+        if (rawProgress && typeof rawProgress === 'object' &&
+            rawProgress.sets && typeof rawProgress.sets === 'object') {
+            sets = rawProgress.sets;
+        }
+        document.querySelectorAll('.exam-list a').forEach(link => {
+            const key = progressKeyFromHref(link.getAttribute('href'));
+            if (!key) return;
+            const rec = sets[key];
+            if (!rec) return;
+            const answered = rec.answers ? Object.keys(rec.answers).length : 0;
+            let label = '';
+            if (answered > 0) {
+                label = t('progress_in_progress', { x: rec.lastPos || answered, y: rec.totalQ || '?' });
+            } else if (rec.completed && rec.bestScore !== null && rec.bestScore !== undefined) {
+                label = t('progress_best', { a: rec.bestScore, b: rec.bestTotal });
+            }
+            if (!label) return;
+            const span = document.createElement('span');
+            span.className = 'progress-badge';
+            span.textContent = label;
+            link.appendChild(span);
+        });
+    }
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
@@ -44,6 +85,8 @@
             if (wsGuest) wsGuest.style.setProperty('display', 'none', 'important');
             const ctaGuest = document.getElementById('guest-cta');
             if (ctaGuest) ctaGuest.style.display = 'flex';
+            // Tiến trình của khách lưu trên chính máy này
+            try { annotateProgress(JSON.parse(localStorage.getItem('exam_progress_guest') || 'null')); } catch (e) {}
         } else {
             try {
                 const userDocRef = doc(db, "users", user.uid);
@@ -172,6 +215,9 @@
                         }
                     });
 
+                    // 7. Tiến trình học của chính học viên (điểm cao nhất / đang làm dở)
+                    annotateProgress(data.exam_progress);
+
                 }
             } catch (error) {
                 console.error("Lỗi hệ thống:", error);
@@ -278,14 +324,33 @@
         <p style="margin: 10px 0 0 0; font-size: 13px; color: #5A5A55; text-align: center;" data-i18n="free_limit_note">Tài khoản miễn phí: làm được 5 câu mỗi đề. Nâng cấp Premium để làm trọn bộ đề.</p>
     </div>
 </div>
-  <!-- 📢 KHỐI THÔNG BÁO CHUNG (Ai cũng nhìn thấy) -->
-  <div class="global-notice-banner">
+  <!-- 📢 KHỐI THÔNG BÁO CHUNG: nội dung do Admin đăng trong Dashboard (Firestore
+       config/announcement), hiện cho TẤT CẢ mọi người kể cả khách. Chưa có thông báo
+       hoặc đọc lỗi -> banner ẩn hoàn toàn (mặc định ẩn, script dưới đây mới bật lên). -->
+  <div class="global-notice-banner" id="announcement-banner" style="display:none">
     <div style="font-size: 20px; margin-bottom: 5px;" data-i18n-html="notice_title_html">📢 <b>THÔNG BÁO TỪ ADMIN</b></div>
-    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6;" data-i18n-html="notice_body_html">
-      Chào mừng các học viên đến với hệ thống luyện đề <b>Tokutei Gino 2 Xây dựng</b> cấp tốc. 
-      📢 thông báo dành riêng cho các bạn đang học nhóm 3, phần thực hành đã được tinh gọn lại chỉ còn 2 đề nên mọi người chỉ cần học 2 đề đó thôi nhé.
-    </p>
+    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6; white-space: pre-line;" id="announcement-body"></p>
   </div>
+  <script type="module">
+    import { db } from "./firebase.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    (async () => {
+        const banner = document.getElementById('announcement-banner');
+        const body = document.getElementById('announcement-body');
+        if (!banner || !body) return;
+        try {
+            const snap = await getDoc(doc(db, "config", "announcement"));
+            const text = snap.exists() ? String(snap.data().text || '') : '';
+            if (text.trim()) {
+                body.textContent = text; // textContent: hiện chữ thuần, giữ xuống dòng, không chạy HTML
+                banner.style.display = 'block';
+            }
+        } catch (e) { /* Đọc lỗi -> giữ banner ẩn, không hiện chữ cũ */ }
+    })();
+  </script>
+
+  <!-- 📖 Nút HƯỚNG DẪN HỌC: ai cũng thấy, kể cả khách -->
+  <a href="guide.html" class="guide-btn" data-i18n="guide_btn">📖 Hướng dẫn học</a>
 
   <div class="card">
     <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
@@ -438,6 +503,34 @@
     font-weight: bold;
     color: #1e293b;
 }
+.progress-badge {
+    display: inline-block;
+    margin-left: 8px;
+    background: #2A2118;
+    color: #F5D98A;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.guide-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 16px;
+    margin: 0 15px 14px;
+    border-radius: 12px;
+    background: #C8102E;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(20,16,10,.12);
+}
+.guide-btn:active { transform: translateY(1px); }
 .exam-locked {
     opacity: 0.5 !important;
     background: #f1f5f9 !important;

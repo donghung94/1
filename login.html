@@ -95,6 +95,10 @@
     <input type="password" id="password" data-i18n-ph="ph_password" placeholder="Mật khẩu" required
         style="width:100%;padding:12px 12px;margin:8px 0;border:1.5px solid #E7E7E0;border-radius:12px;outline:none;" />
 
+    <div style="text-align:right;margin:0 0 2px;">
+        <a href="#" id="forgotLink" data-i18n="forgot_password_link" style="font-size:13px;color:#C8102E;font-weight:600;text-decoration:none;">Quên mật khẩu?</a>
+    </div>
+
     <button type="submit" id="loginBtn" data-i18n="btn_login">Đăng nhập</button>
     <!-- Nút Đăng ký ĐÃ BỎ: tài khoản mới chỉ tạo qua đăng nhập Google/Apple bên dưới -->
 </form>
@@ -118,7 +122,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithRedirect, signInWithPopup, sendPasswordResetEmail, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
       const firebaseConfig = {
@@ -313,17 +317,71 @@
             }
         });
 
-        // --- Đăng nhập bằng Google: dùng redirect cho an toàn trên mobile/PWA ---
+        // --- Quên mật khẩu: gửi email đặt lại mật khẩu qua Firebase ---
+        // Chưa nhập email -> nhắc nhập trước. Email không tồn tại -> thông báo
+        // trung tính (kiểm tra lại email hoặc đăng nhập bằng Google).
+        const forgotLink = document.getElementById("forgotLink");
+        if (forgotLink) {
+            forgotLink.addEventListener("click", async (e) => {
+                e.preventDefault();
+                const email = emailEl.value.trim();
+                if (!email) {
+                    msg.textContent = "⚠️ " + t("forgot_need_email");
+                    msg.style.color = "#b45309";
+                    emailEl.focus();
+                    return;
+                }
+                msg.textContent = t("forgot_sending");
+                msg.style.color = "#C8102E";
+                try {
+                    await sendPasswordResetEmail(auth, email);
+                    msg.textContent = t("forgot_sent");
+                    msg.style.color = "green";
+                } catch (err) {
+                    if (err.code === 'auth/user-not-found' || err.code === 'auth/invalid-email') {
+                        msg.textContent = "⚠️ " + t("forgot_not_found");
+                        msg.style.color = "#ef4444";
+                    } else {
+                        showLoginError(err);
+                    }
+                }
+            });
+        }
+
+        // --- Đăng nhập bằng Google: ƯU TIÊN popup (signInWithPopup) ---
+        // Redirect hay bị mất kết quả khi quay lại (trình duyệt trong ứng dụng,
+        // chặn cookie bên thứ ba...) khiến app im lặng ở trang đăng nhập.
+        // Popup bị chặn / môi trường không hỗ trợ -> MỚI lùi về redirect, và đặt
+        // cờ 'google_signin_attempt' để nếu quay lại tay trắng thì báo rõ (xem
+        // phần getRedirectResult ở dưới), không im lặng nữa.
         const googleBtn = document.getElementById("googleBtn");
         if (googleBtn) {
             googleBtn.addEventListener("click", async () => {
                 msg.textContent = t("msg_checking");
                 msg.style.color = "#C8102E";
                 googleBtn.disabled = true;
+                const provider = new GoogleAuthProvider();
                 try {
-                    await signInWithRedirect(auth, new GoogleAuthProvider());
+                    const result = await signInWithPopup(auth, provider);
+                    await finishLogin(result.user);
                 } catch (err) {
-                    showLoginError(err);
+                    const fallbackCodes = ['auth/popup-blocked', 'auth/operation-not-supported-in-this-environment', 'auth/cancelled-popup-request'];
+                    if (fallbackCodes.includes(err.code)) {
+                        try {
+                            sessionStorage.setItem('google_signin_attempt', '1');
+                            await signInWithRedirect(auth, provider);
+                        } catch (rErr) {
+                            sessionStorage.removeItem('google_signin_attempt');
+                            showLoginError(rErr);
+                        }
+                    } else if (err.code === 'auth/popup-closed-by-user') {
+                        // Người dùng tự đóng popup -> không phải lỗi, mở lại nút
+                        msg.textContent = "";
+                        googleBtn.disabled = false;
+                        btn.disabled = false;
+                    } else {
+                        showLoginError(err);
+                    }
                 }
             });
         }
@@ -353,7 +411,18 @@
 
         // Xử lý kết quả khi quay lại từ Google/Apple — chạy qua ĐÚNG quy trình completeLogin như mật khẩu
         getRedirectResult(auth).then(async (result) => {
-            if (!result || !result.user) return;
+            const wasGoogleAttempt = sessionStorage.getItem('google_signin_attempt') === '1';
+            sessionStorage.removeItem('google_signin_attempt');
+            if (!result || !result.user) {
+                // Quay lại từ redirect Google mà KHÔNG có kết quả (mất phiên do
+                // trình duyệt chặn): trước đây app im lặng đứng yên ở trang đăng
+                // nhập — nay báo rõ để người dùng biết mà thử lại đúng cách.
+                if (wasGoogleAttempt) {
+                    msg.textContent = t("google_redirect_incomplete");
+                    msg.style.color = "#ef4444";
+                }
+                return;
+            }
             sessionStorage.removeItem('apple_signin_attempt');
             msg.textContent = t("msg_checking");
             msg.style.color = "#C8102E";
@@ -366,6 +435,7 @@
         }).catch((err) => {
             const wasAppleAttempt = sessionStorage.getItem('apple_signin_attempt') === '1';
             sessionStorage.removeItem('apple_signin_attempt');
+            sessionStorage.removeItem('google_signin_attempt');
             // Email đã có tài khoản bằng mật khẩu -> giữ thông điệp riêng, không gộp vào lỗi Apple
             if (err && err.code === 'auth/account-exists-with-different-credential') {
                 showLoginError(err);

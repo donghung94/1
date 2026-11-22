@@ -24,6 +24,12 @@
 
   const setId = params.get("set");
   const practiceId = params.get("practice");
+  // 📕 CHẾ ĐỘ SỔ CÂU SAI (exam.html?wrong=1): danh sách câu lấy từ exam_progress.wrong
+  // sau khi tiến trình nạp xong (xem khối nạp tiến trình bên dưới) — không theo set/practice.
+  const IS_DECK = params.get("wrong") === "1";
+  // Giao diện SỔ CÂU SAI theo phương án B (thẻ gọn): mọi CSS riêng của buổi ôn
+  // được scope dưới body.deck-mode trong exam.html — chế độ thi thường không đổi.
+  if (IS_DECK) document.body.classList.add('deck-mode');
   let DATA = [];
 
   // ================== HỖ TRỢ g1_ & g2_ ==================
@@ -92,6 +98,10 @@
   const userTier = storedTier || (isPremiumUser ? 'premium' : 'guest');
   const isGuestUser = userTier === 'guest';
   const isFreeUser = !isPremiumUser; // cả guest lẫn free đều bị giới hạn FREE_LIMIT câu
+  // Riêng SỔ CÂU SAI thì KHÔNG áp trần FREE_LIMIT: sổ chỉ chứa các câu người dùng
+  // đã thực sự làm (với guest/free là trong 5 câu đầu của mỗi đề) nên ôn lại
+  // không hề rò rỉ đáp án của câu chưa từng làm.
+  const isCappedUser = isFreeUser && !IS_DECK;
 
   function showUpgradeModal() {
     const modal = document.getElementById('premium-modal');
@@ -114,12 +124,12 @@
   const isShuffleActive = isPremiumUser && localStorage.getItem('user_shuffle') === 'true';
 
   // ================== BUILD QUESTIONS ==================
-  const questions = sourceQuestions.map((q, bankIdx) => {
+  // Định danh ỔN ĐỊNH của câu hỏi trong ngân hàng (dùng để lưu/khôi phục tiến trình
+  // và cho Sổ câu sai): ưu tiên field "id" của ngân hàng; câu nào thiếu id thì dùng
+  // vị trí gốc trong bộ đề. Nhờ qid + oi (vị trí gốc của đáp án), khôi phục không
+  // bao giờ tô nhầm đáp án sang câu khác — kể cả khi Premium bật đảo câu/đảo đáp án.
+  function buildQ(q, bankIdx, noShuffle) {
     const correctIndex = q.answer;
-    // Định danh ỔN ĐỊNH của câu hỏi trong ngân hàng (dùng để lưu/khôi phục tiến trình):
-    // ưu tiên field "id" của ngân hàng; câu nào thiếu id thì dùng vị trí gốc trong bộ đề.
-    // Nhờ qid + oi (vị trí gốc của đáp án), khôi phục không bao giờ tô nhầm đáp án
-    // sang câu khác — kể cả khi Premium bật đảo câu/đảo đáp án.
     const qid = (q.id !== undefined && q.id !== null) ? ('id:' + q.id) : ('ix:' + bankIdx);
 
     let opts = q.options.map((t, i) => ({
@@ -128,14 +138,15 @@
       oi: i
     }));
 
-    if (isShuffleActive) shuffle(opts);
+    if (isShuffleActive && !noShuffle) shuffle(opts);
     return { ...q, qid, options: opts };
-  });
+  }
+  let questions = sourceQuestions.map((q, bankIdx) => buildQ(q, bankIdx, false));
 
-  if (isShuffleActive) shuffle(questions);
+  if (isShuffleActive && !IS_DECK) shuffle(questions);
 
   let cur = 0;
-  const user = new Array(questions.length).fill(null);
+  let user = new Array(questions.length).fill(null);
 
   // ================== LƯU TIẾN TRÌNH HỌC ==================
   // - Đã đăng nhập: Firestore users/{uid}.exam_progress (qua cầu nối window.__progressStore
@@ -146,9 +157,9 @@
   //             mockHistory: [ { at, score, total, mode } ] } — mới nhất trước, tối đa 20.
   // Đề ngẫu nhiên (randomExam / *_random): mỗi lần mở là một tổ hợp câu khác nhau nên
   // KHÔNG khôi phục giữa chừng — chỉ ghi điểm cao nhất + lịch sử thi thử khi nộp bài.
-  const SET_KEY = setId ? ('set_' + setId) : ('practice_' + (practiceId || ''));
+  const SET_KEY = IS_DECK ? 'wrong_deck' : (setId ? ('set_' + setId) : ('practice_' + (practiceId || '')));
   const IS_MOCK = setId === 'randomExam' || (!!practiceId && practiceId.endsWith('_random'));
-  let PROG = { sets: {}, mockHistory: [] };
+  let PROG = { sets: {}, mockHistory: [], wrong: {} };
   let progRec = null;
   let progStore = null;
   let progressReady = false;
@@ -156,10 +167,13 @@
   let saveTimer = null;
 
   function normalizeProgress(raw) {
-    const out = { sets: {}, mockHistory: [] };
+    const out = { sets: {}, mockHistory: [], wrong: {} };
     if (raw && typeof raw === 'object') {
       if (raw.sets && typeof raw.sets === 'object') out.sets = raw.sets;
       if (Array.isArray(raw.mockHistory)) out.mockHistory = raw.mockHistory;
+      // Sổ câu sai sống CÙNG object exam_progress (không thêm field Firestore mới):
+      // wrong: { <setKey>: { <qid>: { n: số lần sai, at: mốc sai gần nhất } } }
+      if (raw.wrong && typeof raw.wrong === 'object') out.wrong = raw.wrong;
       // Hồ sơ cũ dạng khung {doboku: 0, kenchiku: 0} -> coi như chưa có tiến trình.
     }
     return out;
@@ -188,7 +202,7 @@
   }
 
   function recordPosition() {
-    if (!progressReady || IS_MOCK || inRedo || !questions.length) return;
+    if (!progressReady || IS_MOCK || IS_DECK || inRedo || !questions.length) return;
     const rec = ensureRec();
     rec.lastQid = questions[cur].qid;
     rec.lastPos = cur + 1;
@@ -198,7 +212,7 @@
   }
 
   function recordSubmit(correct, total) {
-    if (!progressReady || inRedo) return;
+    if (!progressReady || inRedo || IS_DECK) return;
     const rec = ensureRec();
     if (rec.bestScore === null || rec.bestScore === undefined || correct > rec.bestScore) {
       rec.bestScore = correct;
@@ -214,6 +228,210 @@
     }
     if (saveTimer) clearTimeout(saveTimer);
     flushProgress();
+  }
+
+  // ================== SỔ ÔN CÂU SAI ==================
+  // Deck nằm trong PROG.wrong: { <setKey nguồn>: { <qid>: { n, at } } }.
+  // Mọi lần nộp bài đã chấm (đề thường / thực hành / thi thử / làm lại câu sai)
+  // đều cập nhật sổ: trả lời SAI -> thêm câu vào sổ (n+1); riêng trong buổi ôn sổ,
+  // trả lời ĐÚNG -> xóa câu khỏi sổ, sai -> ở lại (n+1).
+  function deckAdd(sk, qid) {
+    if (!PROG.wrong || typeof PROG.wrong !== 'object') PROG.wrong = {};
+    if (!PROG.wrong[sk]) PROG.wrong[sk] = {};
+    const prev = PROG.wrong[sk][qid];
+    PROG.wrong[sk][qid] = { n: (prev && prev.n ? prev.n : 0) + 1, at: Date.now() };
+  }
+
+  function deckRemove(sk, qid) {
+    if (PROG.wrong && PROG.wrong[sk]) {
+      delete PROG.wrong[sk][qid];
+      if (!Object.keys(PROG.wrong[sk]).length) delete PROG.wrong[sk];
+    }
+  }
+
+  function deckHas(sk, qid) {
+    return !!(PROG.wrong && PROG.wrong[sk] && PROG.wrong[sk][qid]);
+  }
+
+  function deckCount() {
+    let n = 0;
+    if (PROG.wrong) Object.keys(PROG.wrong).forEach(k => { n += Object.keys(PROG.wrong[k] || {}).length; });
+    return n;
+  }
+
+  // Đề thi thử/ngẫu nhiên gộp câu từ nhiều bộ nguồn mà KHÔNG gắn thẻ nguồn.
+  // Tìm lại nguồn của một câu bằng cách đối chiếu CHÍNH XÁC (nội dung câu + toàn bộ
+  // đáp án + vị trí đáp án đúng) với các bộ nguồn; chỉ ghi sổ khi khớp DUY NHẤT
+  // một câu nguồn (khớp 0 hoặc ≥2 -> bỏ qua, tránh ghi nhầm câu sang bộ khác).
+  function resolveMockIdentity(q) {
+    const regs = [];
+    if (setId === 'randomExam') {
+      Object.keys(window.QUESTION_SETS || {}).forEach(k => {
+        if (k !== 'randomExam') regs.push({ reg: window.QUESTION_SETS[k], key: 'set_' + k });
+      });
+    } else if (practiceId) {
+      const g = practiceId.split('_')[0]; // g1 / g2
+      Object.keys(window.PRACTICE_SETS || {}).forEach(k => {
+        if (k.startsWith(g + '_') && !k.endsWith('_random')) regs.push({ reg: window.PRACTICE_SETS[k], key: 'practice_' + k });
+      });
+    }
+    const correctOi = (q.options.find(o => o.correct) || {}).oi;
+    let found = null, count = 0;
+    regs.forEach(({ reg, key }) => {
+      const arr = (reg && (reg.questions || reg)) || [];
+      arr.forEach((sq, idx) => {
+        if (!sq || sq.q !== q.q) return;
+        if (!Array.isArray(sq.options) || sq.options.length !== q.options.length) return;
+        if (sq.answer !== correctOi) return;
+        let ok = true;
+        for (let i = 0; i < sq.options.length; i++) {
+          const o = q.options.find(x => x.oi === i);
+          if (!o || o.text !== sq.options[i]) { ok = false; break; }
+        }
+        if (!ok) return;
+        count++;
+        found = { setKey: key, qid: (sq.id !== undefined && sq.id !== null) ? ('id:' + sq.id) : ('ix:' + idx) };
+      });
+    });
+    return count === 1 ? found : null;
+  }
+
+  // Định danh sổ của một câu trong lần nộp bài hiện tại:
+  // - buổi ôn sổ: câu mang sẵn nguồn của nó (__deckSet/__deckQid gắn lúc dựng đề ôn);
+  // - đề thi thử: truy nguồn bằng resolveMockIdentity (có thể null -> bỏ qua);
+  // - đề thường/thực hành: chính SET_KEY + qid của câu.
+  function deckIdentityOf(q) {
+    if (IS_DECK) return (q.__deckSet && q.__deckQid) ? { setKey: q.__deckSet, qid: q.__deckQid } : null;
+    if (IS_MOCK) return resolveMockIdentity(q);
+    return { setKey: SET_KEY, qid: q.qid };
+  }
+
+  // Dựng danh sách câu ôn từ sổ: tra ngược setKey + qid về đúng câu trong ngân hàng.
+  // Câu nào không còn tra được (dữ liệu ngân hàng đã đổi) thì bỏ qua — buổi ôn
+  // CHỈ hiển thị đúng các câu có trong sổ, không bao giờ hiện câu ngoài sổ.
+  function resolveDeckItems() {
+    const items = [];
+    const wrong = (PROG && PROG.wrong) || {};
+    Object.keys(wrong).forEach(sk => {
+      let bank = null;
+      if (sk.startsWith('set_')) bank = (window.QUESTION_SETS || {})[sk.slice(4)];
+      else if (sk.startsWith('practice_')) bank = (window.PRACTICE_SETS || {})[sk.slice(9)];
+      const arr = bank ? (bank.questions || bank) : null;
+      if (!arr) return;
+      Object.keys(wrong[sk] || {}).forEach(qid => {
+        let bankIdx = -1;
+        if (qid.startsWith('id:')) {
+          const idv = qid.slice(3);
+          bankIdx = arr.findIndex(x => x && x.id !== undefined && x.id !== null && String(x.id) === idv);
+        } else if (qid.startsWith('ix:')) {
+          bankIdx = parseInt(qid.slice(3), 10);
+          if (!(bankIdx >= 0 && bankIdx < arr.length)) bankIdx = -1;
+        }
+        if (bankIdx >= 0 && arr[bankIdx]) {
+          items.push({ q: arr[bankIdx], bankIdx, setKey: sk, qid, at: (wrong[sk][qid] && wrong[sk][qid].at) || 0, n: (wrong[sk][qid] && wrong[sk][qid].n) || 1 });
+        }
+      });
+    });
+    items.sort((a, b) => a.at - b.at); // câu sai lâu nhất ôn trước
+    return items;
+  }
+
+  // ===== ĐẦU BUỔI ÔN (phương án B): thanh tiến độ mảnh + "Câu X/Y câu cần ôn"
+  // + thẻ "Đã sai N lần" của câu hiện tại — thay cho banner nâu cũ. =====
+  function ensureDeckHead() {
+    const main = document.querySelector('main.container');
+    if (!main) return null;
+    let head = document.getElementById('deck-head');
+    if (!head) {
+      head = document.createElement('div');
+      head.id = 'deck-head';
+      head.innerHTML = `
+        <div class="deck-head-row">
+          <div class="deck-head-label"></div>
+          <span class="deck-wrong-tag" style="display:none"></span>
+        </div>
+        <div class="deck-progress"><div class="deck-progress-fill"></div></div>`;
+      main.insertBefore(head, main.firstChild);
+    }
+    return head;
+  }
+
+  function updateDeckHead() {
+    if (!IS_DECK || !questions.length) return;
+    const head = ensureDeckHead();
+    if (!head) return;
+    head.style.display = '';
+    head.querySelector('.deck-head-label').innerHTML =
+      `<b>${t('deck_head_q', { a: cur + 1 })}</b> <span>${t('deck_head_total', { b: questions.length })}</span>`;
+    const tag = head.querySelector('.deck-wrong-tag');
+    const n = questions[cur] && questions[cur].__deckN;
+    if (n) { tag.textContent = t('deck_wrong_times', { n }); tag.style.display = ''; }
+    else tag.style.display = 'none';
+    head.querySelector('.deck-progress-fill').style.width = ((cur + 1) / questions.length * 100) + '%';
+  }
+
+  // Thẻ GIẢI THÍCH riêng (phương án B): nằm NGOÀI thẻ câu hỏi, ngay dưới #quiz.
+  // Vẫn mang id "explainBox" + class "explain-box" để dùng chung logic hiện/ẩn
+  // và chuyển furigana với chế độ thường.
+  function ensureDeckExplain() {
+    let el = document.getElementById('explainBox');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'explainBox';
+      el.className = 'card explain-box deck-explain';
+      el.style.display = 'none';
+      quizEl.after(el);
+    }
+    return el;
+  }
+
+  // Tách phần "Từ vựng:" đang nằm cuối field explain thành danh sách riêng để
+  // trình bày dạng bảng 2 cột (thuật ngữ — nghĩa) trong thẻ giải thích.
+  function splitVocab(explain) {
+    if (!explain) return { main: explain || "", vocab: null };
+    const lines = String(explain).split('\n');
+    const idx = lines.findIndex(l => /^Từ vựng\s*:/.test(l.trim()));
+    if (idx < 0) return { main: explain, vocab: null };
+    const main = lines.slice(0, idx).join('\n').trim();
+    const vocabLines = lines.slice(idx + 1).map(s => s.trim()).filter(Boolean);
+    const rest = lines[idx].trim().replace(/^Từ vựng\s*:\s*/, '');
+    if (rest && rest !== lines[idx].trim()) vocabLines.unshift(rest);
+    return { main, vocab: vocabLines.length ? vocabLines : null };
+  }
+
+  function vocabRowHTML(line) {
+    const m = line.match(/^(.+?)[:：]\s*(.+)$/);
+    if (!m) return `<div class="deck-vocab-row"><div class="deck-vocab-term">${line}</div><div></div></div>`;
+    return `<div class="deck-vocab-row"><div class="deck-vocab-term">${m[1].trim()}</div><div class="deck-vocab-mean">${m[2].trim()}</div></div>`;
+  }
+
+  // Khối dịch + giải thích + từ vựng + mẹo nhớ dùng cho thẻ giải thích của buổi ôn
+  // và từng thẻ kết quả câu sai (cùng một ngôn ngữ trình bày của phương án B).
+  function explainBlockHTML(q) {
+    const viPick = pickVi(q);
+    const tipText = pickTip(q);
+    const parts = splitVocab(pickExplain(q));
+    return `
+      ${viPick.text ? `<div class="deck-tr-line">${viPick.translated ? t("label_translate_plain") : t("label_translate")} ${viPick.text}</div>` : ""}
+      ${parts.main ? `<div class="deck-ex-text">${parts.main.replace(/\n/g, '<br>')}</div>` : ""}
+      ${parts.vocab ? `<div class="deck-vocab">${parts.vocab.map(vocabRowHTML).join("")}</div>` : ""}
+      ${tipText ? `<div class="tip">${tipText}</div>` : ""}
+    `;
+  }
+
+  function initDeck() {
+    const items = resolveDeckItems();
+    questions = items.map(it => {
+      const bq = buildQ(it.q, it.bankIdx, true); // buổi ôn giữ nguyên thứ tự đáp án gốc
+      bq.__deckSet = it.setKey;
+      bq.__deckQid = it.qid;
+      bq.__deckN = it.n || 1; // số lần đã sai — hiện ở thẻ "Đã sai N lần" trên đầu buổi ôn
+      return bq;
+    });
+    user = new Array(questions.length).fill(null);
+    cur = 0;
+    ensureDeckHead();
+    render();
   }
 
   function showResumeNotice() {
@@ -237,7 +455,7 @@
       if (!Object.prototype.hasOwnProperty.call(answers, q.qid)) return;
       // Free/khách: chỉ khôi phục trong FREE_LIMIT câu đầu — đáp án của các câu sau
       // (vd còn sót từ thời Premium) không được hiển thị.
-      if (isFreeUser && pos >= FREE_LIMIT) return;
+      if (isCappedUser && pos >= FREE_LIMIT) return;
       const j = q.options.findIndex(o => o.oi === answers[q.qid]);
       if (j >= 0) { user[pos] = j; applied++; }
     });
@@ -248,7 +466,7 @@
       const firstBlank = user.findIndex(u => u === null);
       target = firstBlank >= 0 ? firstBlank : questions.length - 1;
     }
-    if (isFreeUser && target >= FREE_LIMIT) target = FREE_LIMIT - 1;
+    if (isCappedUser && target >= FREE_LIMIT) target = FREE_LIMIT - 1;
     cur = Math.max(0, target);
     showResumeNotice();
     render();
@@ -264,10 +482,11 @@
       if (!store) return;
       progStore = store;
       try { PROG = normalizeProgress(await store.load()); }
-      catch (e) { PROG = { sets: {}, mockHistory: [] }; }
+      catch (e) { PROG = { sets: {}, mockHistory: [], wrong: {} }; }
       progRec = PROG.sets[SET_KEY] || null;
       progressReady = true;
-      applyRestore();
+      if (IS_DECK) initDeck();
+      else applyRestore();
     }).catch(() => {});
   }
 
@@ -289,33 +508,52 @@
   // ================== RENDER ================
   function render() {
     if (!questions.length) {
-      quizEl.innerHTML = "<p>" + t("no_data") + "</p>";
+      // Buổi ôn sổ mà sổ trống (hoặc chưa nạp xong tiến trình): hiện thông báo riêng.
+      quizEl.innerHTML = IS_DECK
+        ? "<p style='text-align:center;font-size:16px;line-height:1.7;'>" + t("deck_empty") + "</p>"
+        : "<p>" + t("no_data") + "</p>";
       return;
     }
 
     // Chốt an toàn: tài khoản free không bao giờ hiển thị câu quá FREE_LIMIT
-    if (isFreeUser && cur >= FREE_LIMIT) cur = FREE_LIMIT - 1;
+    // (buổi ôn sổ câu sai được miễn trần này — xem isCappedUser)
+    if (isCappedUser && cur >= FREE_LIMIT) cur = FREE_LIMIT - 1;
 
     const q = questions[cur];
     const hasAnswered = user[cur] !== null;
     const viPick = pickVi(q);
     const tipText = pickTip(q);
 
-    const html = `
+    // Buổi ôn (phương án B): đáp án có số thứ tự, dấu đúng/sai dạng chữ mảnh
+    // (✓ Đúng / ✗ Bạn chọn) thay cho emoji; chế độ thường giữ nguyên ✅/❌.
+    const optionsHTML = q.options.map((op,i)=>{
+      let cls="opt", mark="";
+      if(hasAnswered){
+        if(op.correct){ cls+=" correct"; mark = IS_DECK ? ("✓ " + t("deck_mark_correct")) : "✅"; }
+        else if(user[cur]===i){ cls+=" incorrect"; mark = IS_DECK ? ("✗ " + t("deck_mark_yours")) : "❌"; }
+      }
+      const num = IS_DECK ? `<span class="opt-num">${i+1}.</span> ` : "";
+      // Vài câu trong ngân hàng đã có sẵn số "1." ở đầu đáp án — buổi ôn tự đánh số
+      // nên gỡ tiền tố số cũ để không hiện trùng "1. 1.".
+      const opText = IS_DECK ? String(op.text).replace(/^\s*\d+\s*[.．、)]\s*/, '') : op.text;
+      return `<div class="${cls}" data-idx="${i}">${num}${opText} <span class="mark">${mark}</span></div>`;
+    }).join("");
+
+    const html = IS_DECK ? `
+      <div class="q-text">${q.q}</div>
+      ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
+      ${q.img ? `<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
+      <div class="options">${optionsHTML}</div>
+      <div class="nav">
+        <button class="btn" id="backBtn" ${cur===0?"disabled":""}>${t("btn_back")}</button>
+        <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>${t("btn_next")}</button>
+      </div>
+    ` : `
       <div class="q-head"><div class="q-index">${t("q_index", {a: cur+1, b: questions.length})}</div></div>
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
       ${q.img ? `<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
-      <div class="options">
-        ${q.options.map((op,i)=>{
-          let cls="opt", mark="";
-          if(hasAnswered){
-            if(op.correct){ cls+=" correct"; mark="✅"; }
-            else if(user[cur]===i){ cls+=" incorrect"; mark="❌"; }
-          }
-          return `<div class="${cls}" data-idx="${i}">${op.text} <span class="mark">${mark}</span></div>`;
-        }).join("")}
-      </div>
+      <div class="options">${optionsHTML}</div>
       <div class="nav">
         <button class="btn" id="backBtn" ${cur===0?"disabled":""}>${t("btn_back")}</button>
         <button class="btn" id="explainBtn">${t("btn_explain")}</button>
@@ -329,6 +567,13 @@
     `;
 
     quizEl.innerHTML = html;
+    if (IS_DECK) {
+      updateDeckHead();
+      // Thẻ giải thích riêng dưới thẻ câu hỏi — chỉ hiện sau khi đã trả lời.
+      const exCard = ensureDeckExplain();
+      exCard.innerHTML = `<div class="deck-explain-title">${t("deck_explain_title")}</div>` + explainBlockHTML(q);
+      exCard.style.display = hasAnswered ? "block" : "none";
+    }
     applyFuriganaToPage();
 
     quizEl.querySelectorAll(".opt").forEach(el => {
@@ -337,7 +582,7 @@
         const idx = parseInt(el.dataset.idx);
         user[cur] = idx;
         // Lưu tiến trình: ghi đáp án theo qid + vị trí đáp án gốc (oi)
-        if (progressReady && !IS_MOCK && !inRedo) {
+        if (progressReady && !IS_MOCK && !IS_DECK && !inRedo) {
           const rec = ensureRec();
           rec.answers[questions[cur].qid] = questions[cur].options[idx].oi;
           rec.lastQid = questions[cur].qid;
@@ -350,10 +595,10 @@
           const mark = optEl.querySelector(".mark");
           if (questions[cur].options[j].correct) {
             optEl.classList.add("correct");
-            mark.textContent = "✅";
+            mark.textContent = IS_DECK ? ("✓ " + t("deck_mark_correct")) : "✅";
           } else if (j === idx) {
             optEl.classList.add("incorrect");
-            mark.textContent = "❌";
+            mark.textContent = IS_DECK ? ("✗ " + t("deck_mark_yours")) : "❌";
           }
           optEl.style.pointerEvents = "none";
         });
@@ -369,7 +614,7 @@
       if (user[cur] === null) return;
       // Chưa Premium (guest/free): bấm qua câu thứ FREE_LIMIT + 1 -> hiện bức tường theo tầng
       // (khách: bảng đăng nhập; free: bảng nâng cấp), đứng yên ở câu cuối miễn phí
-      if (isFreeUser && cur + 1 >= FREE_LIMIT) { showLimitWall(); return; }
+      if (isCappedUser && cur + 1 >= FREE_LIMIT) { showLimitWall(); return; }
       if (cur < questions.length - 1) {
         cur++;
         recordPosition();
@@ -377,21 +622,28 @@
       }
     };
 
-    $("#explainBtn").onclick = () => {
-      const box = $("#explainBox");
-      box.style.display = (box.style.display === "none") ? "block" : "none";
-      applyFuriganaToPage();
-    };
+    // Buổi ôn không có nút Giải thích riêng (thẻ giải thích tự hiện sau khi trả lời)
+    const explainBtn = $("#explainBtn");
+    if (explainBtn) {
+      explainBtn.onclick = () => {
+        const box = $("#explainBox");
+        box.style.display = (box.style.display === "none") ? "block" : "none";
+        applyFuriganaToPage();
+      };
+    }
   }
 
   render();
   submitBtn.onclick = submitQuiz;
 
   function submitQuiz() {
+    if (IS_DECK && !questions.length) return; // sổ trống: không có gì để nộp
     // Chặn rò rỉ khi xem lại: tài khoản free chỉ được chấm & xem đáp án/giải thích
     // của FREE_LIMIT câu đầu — các câu sau không xuất hiện ở màn hình kết quả.
-    const scope = isFreeUser ? questions.slice(0, FREE_LIMIT) : questions;
+    // (Buổi ôn sổ câu sai miễn trần: scope = toàn bộ câu trong sổ.)
+    const scope = isCappedUser ? questions.slice(0, FREE_LIMIT) : questions;
     let correct = 0;
+    let deckCleared = 0;
     const wrongs = [];
     const html = scope.map((q,i)=>{
       const picked = user[i];
@@ -401,6 +653,20 @@
       wrongs.push(q);
       const viPick = pickVi(q);
       const tipText = pickTip(q);
+      if (IS_DECK) {
+        // Phương án B: mỗi câu sai là MỘT thẻ riêng, khối giải thích dùng chung
+        // ngôn ngữ trình bày với thẻ giải thích của buổi ôn.
+        return `
+        <div class="card deck-result-item explain-box">
+          <div class="q-text">${q.q}</div>
+          ${q.hira?`<div class="hira">${q.hira}</div>`:""}
+          ${q.img?`<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`:""}
+          <div class="answer-line">❌ <b>${t("label_you_chose")}</b> ${picked!==null?q.options[picked].text:t("label_not_chosen")}</div>
+          <div class="answer-line">✅ <b>${t("label_correct_answer")}</b> ${right.text}</div>
+          ${explainBlockHTML(q)}
+        </div>
+      `;
+      }
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
@@ -415,19 +681,68 @@
       `;
     }).join("");
 
+    // ===== Cập nhật SỔ CÂU SAI theo kết quả vừa chấm =====
+    // Câu đã trả lời mà SAI -> vào sổ (n+1, cập nhật mốc thời gian); câu CHƯA trả lời
+    // không tính. Riêng buổi ôn sổ: trả lời ĐÚNG -> xóa khỏi sổ (đếm vào deckCleared).
+    // Làm lại câu sai (inRedo) cũng cập nhật sổ y như lần nộp đầu.
+    if (progressReady) {
+      let deckChanged = false;
+      scope.forEach((q, i) => {
+        const picked = user[i];
+        if (picked === null || picked === undefined) return;
+        const idn = deckIdentityOf(q);
+        if (!idn) return; // câu thi thử không truy được nguồn duy nhất -> bỏ qua
+        const isRight = !!(q.options[picked] && q.options[picked].correct);
+        if (!isRight) { deckAdd(idn.setKey, idn.qid); deckChanged = true; }
+        else if (IS_DECK && deckHas(idn.setKey, idn.qid)) { deckRemove(idn.setKey, idn.qid); deckCleared++; deckChanged = true; }
+      });
+      if (deckChanged) { if (saveTimer) clearTimeout(saveTimer); flushProgress(); }
+    }
+
     // Ghi nhận kết quả vào tiến trình: điểm cao nhất + hoàn thành (+ lịch sử thi thử
     // nếu là đề ngẫu nhiên). Đáp án dở dang được xóa để lần làm sau bắt đầu sạch.
     recordSubmit(correct, scope.length);
 
     quizEl.style.display="none";
 
+    const deckLine = IS_DECK
+      ? (deckCount() === 0 && deckCleared > 0
+          ? `<div class="deck-result-line">${t("deck_all_cleared")}</div>`
+          : `<div class="deck-result-line">${t("deck_result", { a: deckCleared, b: deckCount() })}</div>`)
+      : "";
+
+    if (IS_DECK) {
+      // Ẩn đầu buổi ôn + thẻ giải thích (nằm ngoài #quiz); cứu nút Làm lại câu sai
+      // nếu lần nộp trước đã chuyển nó vào trong #result (ghi đè innerHTML sẽ xóa mất nút).
+      const dh = document.getElementById('deck-head');
+      if (dh) dh.style.display = 'none';
+      const eb = document.getElementById('explainBox');
+      if (eb) eb.style.display = 'none';
+      if (redoBtn && redoBtn.parentNode === resEl) {
+        document.body.appendChild(redoBtn);
+        redoBtn.classList.remove('deck-redo-static');
+      }
+      resEl.classList.add('deck-result');
+    }
+
     resEl.style.display="block";
-    resEl.innerHTML = `
+    resEl.innerHTML = IS_DECK ? `
+      <div class="card deck-result-head">
+        <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
+        ${deckLine}
+      </div>
+      ${wrongs.length?`<div class="deck-wrong-title">${t("result_wrong_list")}</div>${html}`:`<div class="card">${t("result_perfect")}</div>`}
+    ` : `
       <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
       ${wrongs.length?`<div><b>${t("result_wrong_list")}</b></div>${html}`:`<div>${t("result_perfect")}</div>`}
     `;
     applyFuriganaToPage();
     redoBtn.style.display = wrongs.length ? "block" : "none";
+    if (IS_DECK && wrongs.length) {
+      // Phương án B: nút làm lại nằm TĨNH cuối thẻ kết quả, không nổi đè lên chữ.
+      redoBtn.classList.add('deck-redo-static');
+      resEl.appendChild(redoBtn);
+    }
     redoBtn.onclick = () => {
       inRedo = true; // Làm lại câu sai là chế độ riêng — không ghi đè tiến trình của bộ đề gốc
       shuffle(wrongs);

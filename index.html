@@ -74,6 +74,22 @@
         });
     }
 
+    // ===== Số câu trong SỔ CÂU SAI — hiển thị trên nút 📕 Sổ câu sai =====
+    // Nguồn: exam_progress.wrong = { <setKey>: { <qid>: {...} } } (exam.js ghi).
+    function updateDeckCount(rawProgress) {
+        const el = document.getElementById('deck-count');
+        if (!el) return;
+        let n = 0;
+        if (rawProgress && typeof rawProgress === 'object' &&
+            rawProgress.wrong && typeof rawProgress.wrong === 'object') {
+            Object.keys(rawProgress.wrong).forEach(k => {
+                const bucket = rawProgress.wrong[k];
+                if (bucket && typeof bucket === 'object') n += Object.keys(bucket).length;
+            });
+        }
+        el.textContent = t('deck_count_unit', { n });
+    }
+
     // ===== BẢNG THÔNG BÁO KHÓA NHÓM (3 ngôn ngữ qua i18n) =====
     // Hiện khi học viên bấm vào bộ đề thực hành/thi thử của nhóm khác.
     function showGroupLockNotice(g) {
@@ -98,7 +114,11 @@
             const ctaGuest = document.getElementById('guest-cta');
             if (ctaGuest) ctaGuest.style.display = 'flex';
             // Tiến trình của khách lưu trên chính máy này
-            try { annotateProgress(JSON.parse(localStorage.getItem('exam_progress_guest') || 'null')); } catch (e) {}
+            try {
+                const guestProg = JSON.parse(localStorage.getItem('exam_progress_guest') || 'null');
+                annotateProgress(guestProg);
+                updateDeckCount(guestProg);
+            } catch (e) {}
             // Nút chat nổi cho khách: bấm vào -> trang đăng nhập (kèm ghi chú)
             const fabGuest = document.getElementById('chat-fab');
             if (fabGuest) { fabGuest.href = 'login.html'; fabGuest.title = t('chat_login_note'); }
@@ -249,6 +269,7 @@
 
                     // 7. Tiến trình học của chính học viên (điểm cao nhất / đang làm dở)
                     annotateProgress(data.exam_progress);
+                    updateDeckCount(data.exam_progress);
 
                 }
             } catch (error) {
@@ -383,6 +404,12 @@
 
   <!-- 📖 Nút HƯỚNG DẪN HỌC: ai cũng thấy, kể cả khách -->
   <a href="guide.html" class="guide-btn" data-i18n="guide_btn">📖 Hướng dẫn học</a>
+
+  <!-- 📕 Nút SỔ CÂU SAI: luôn hiện kèm tổng số câu đang có trong sổ (kể cả 0).
+       Số đếm do script chính điền từ exam_progress.wrong — khách tính từ
+       localStorage của máy, học viên tính từ hồ sơ Firestore của mình.
+       Bấm vào -> buổi ôn exam.html?wrong=1: đúng thì ra khỏi sổ, sai thì ở lại. -->
+  <a href="exam.html?wrong=1" class="deck-btn"><span data-i18n="deck_btn">📕 Sổ câu sai</span><span id="deck-count"></span><span class="deck-chevron" aria-hidden="true">›</span></a>
 
   <!-- 💬 Nút CHAT NỔI: mặc định trỏ trang đăng nhập (cho khách); module xác thực
        bên dưới sẽ đổi sang chat.html khi đã đăng nhập + hiện số tin chưa đọc -->
@@ -587,6 +614,36 @@
     box-shadow: 0 3px 10px rgba(20,16,10,.12);
 }
 .guide-btn:active { transform: translateY(1px); }
+/* Phương án B: hàng trắng gọn, viền trái đỏ, số câu dạng thẻ hồng ở bên phải */
+.deck-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    margin: 0 15px 14px;
+    border-radius: 14px;
+    background: #fff;
+    color: #191919;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1.5px solid #E7E7E0;
+    border-left: 6px solid #C8102E;
+    box-shadow: 0 2px 8px rgba(20,16,10,.06);
+}
+.deck-btn:active { transform: translateY(1px); }
+.deck-btn #deck-count {
+    margin-left: auto;
+    background: #FDECEF;
+    color: #C8102E;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.deck-btn #deck-count:empty { display: none; }
+.deck-chevron { color: #8B8B84; font-size: 20px; font-weight: 700; line-height: 1; }
 
 /* Nút chat nổi góc dưới phải — khách bấm vào sẽ sang trang đăng nhập,
    học viên đã đăng nhập vào thẳng chat.html; huy hiệu = số tin Admin chưa đọc */

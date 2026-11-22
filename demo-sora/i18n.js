@@ -162,7 +162,15 @@
       guide_s3_btn1: '👉 Câu hay ra — Phần 1',
       guide_s3_btn2: '👉 Câu hay ra — Phần 2',
       guide_s4_title: 'Bước 4 — Thắc mắc? Liên hệ hỗ trợ',
-      guide_s4_body: 'Nếu có câu nào chưa hiểu, hoặc cần hỗ trợ về tài khoản và Premium, hãy nhắn cho Admin qua các kênh dưới đây.'
+      guide_s4_body: 'Nếu có câu nào chưa hiểu, hoặc cần hỗ trợ về tài khoản và Premium, hãy nhắn cho Admin qua các kênh dưới đây.',
+      chat_title: '💬 Chat hỗ trợ',
+      chat_inapp: '💬 Chat trong app với Admin',
+      chat_placeholder: 'Nhập tin nhắn của bạn...',
+      chat_send: 'Gửi',
+      chat_empty: 'Chưa có tin nhắn nào. Hãy gửi câu hỏi đầu tiên của bạn, Admin sẽ trả lời ngay tại đây.',
+      chat_login_note: 'Đăng nhập để chat với Admin',
+      chat_admin: 'Admin',
+      chat_you: 'Bạn'
     },
     id: {
       app_tagline: 'Latihan ujian Keterampilan Khusus No. 2',
@@ -303,7 +311,15 @@
       guide_s3_btn1: '👉 Soal sering keluar — Bagian 1',
       guide_s3_btn2: '👉 Soal sering keluar — Bagian 2',
       guide_s4_title: 'Langkah 4 — Ada pertanyaan? Hubungi dukungan',
-      guide_s4_body: 'Jika ada soal yang belum Anda pahami, atau butuh bantuan soal akun dan Premium, silakan hubungi Admin melalui kanal di bawah ini.'
+      guide_s4_body: 'Jika ada soal yang belum Anda pahami, atau butuh bantuan soal akun dan Premium, silakan hubungi Admin melalui kanal di bawah ini.',
+      chat_title: '💬 Chat bantuan',
+      chat_inapp: '💬 Chat dengan Admin di aplikasi',
+      chat_placeholder: 'Tulis pesan Anda...',
+      chat_send: 'Kirim',
+      chat_empty: 'Belum ada pesan. Kirim pertanyaan pertama Anda, Admin akan membalas di sini.',
+      chat_login_note: 'Masuk untuk chat dengan Admin',
+      chat_admin: 'Admin',
+      chat_you: 'Anda'
     },
     en: {
       app_tagline: 'Specified Skilled Worker No. 2 exam practice',
@@ -444,7 +460,15 @@
       guide_s3_btn1: '👉 Frequently-appearing questions — Part 1',
       guide_s3_btn2: '👉 Frequently-appearing questions — Part 2',
       guide_s4_title: 'Step 4 — Questions? Contact support',
-      guide_s4_body: 'If any question is unclear, or you need help with your account or Premium, message the Admin through the channels below.'
+      guide_s4_body: 'If any question is unclear, or you need help with your account or Premium, message the Admin through the channels below.',
+      chat_title: '💬 Support chat',
+      chat_inapp: '💬 Chat with Admin in the app',
+      chat_placeholder: 'Type your message...',
+      chat_send: 'Send',
+      chat_empty: 'No messages yet. Send your first question and the Admin will reply right here.',
+      chat_login_note: 'Sign in to chat with the Admin',
+      chat_admin: 'Admin',
+      chat_you: 'You'
     }
   };
 

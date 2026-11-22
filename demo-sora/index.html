@@ -31,7 +31,7 @@
 <script type="module">
     import { auth, logout, db } from "./firebase.js";
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { doc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
     // ===== Hiển thị TIẾN TRÌNH HỌC trên từng thẻ đề =====
     // Nguồn: users/{uid}.exam_progress (đã đăng nhập) hoặc localStorage (khách).
@@ -87,6 +87,9 @@
             if (ctaGuest) ctaGuest.style.display = 'flex';
             // Tiến trình của khách lưu trên chính máy này
             try { annotateProgress(JSON.parse(localStorage.getItem('exam_progress_guest') || 'null')); } catch (e) {}
+            // Nút chat nổi cho khách: bấm vào -> trang đăng nhập (kèm ghi chú)
+            const fabGuest = document.getElementById('chat-fab');
+            if (fabGuest) { fabGuest.href = 'login.html'; fabGuest.title = t('chat_login_note'); }
         } else {
             try {
                 const userDocRef = doc(db, "users", user.uid);
@@ -94,6 +97,22 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
+
+                    // Nút chat nổi khi đã đăng nhập: vào thẳng chat.html +
+                    // huy hiệu số tin Admin chưa đọc (realtime theo doc luồng chat)
+                    const fab = document.getElementById('chat-fab');
+                    if (fab) {
+                        fab.href = 'chat.html';
+                        fab.title = t('chat_title');
+                        const badge = document.getElementById('chat-fab-badge');
+                        onSnapshot(doc(db, "chats", user.uid), (s) => {
+                            const n = s.exists() ? (s.data().unreadUser || 0) : 0;
+                            if (badge) {
+                                badge.textContent = n > 99 ? '99+' : String(n);
+                                badge.style.display = n > 0 ? 'flex' : 'none';
+                            }
+                        }, () => {});
+                    }
 
                     const isAdmin = data.role === 'admin';
                     // 0. Ngôn ngữ + nhóm ngành: nhận từ Firestore nếu máy chưa có.
@@ -352,6 +371,10 @@
   <!-- 📖 Nút HƯỚNG DẪN HỌC: ai cũng thấy, kể cả khách -->
   <a href="guide.html" class="guide-btn" data-i18n="guide_btn">📖 Hướng dẫn học</a>
 
+  <!-- 💬 Nút CHAT NỔI: mặc định trỏ trang đăng nhập (cho khách); module xác thực
+       bên dưới sẽ đổi sang chat.html khi đã đăng nhập + hiện số tin chưa đọc -->
+  <a id="chat-fab" href="login.html" class="chat-fab">💬<span id="chat-fab-badge" class="chat-fab-badge" style="display:none"></span></a>
+
   <div class="card">
     <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
     <ul id="exam-list" class="exam-list">
@@ -531,6 +554,12 @@
     box-shadow: 0 3px 10px rgba(20,16,10,.12);
 }
 .guide-btn:active { transform: translateY(1px); }
+
+/* Nút chat nổi góc dưới phải — khách bấm vào sẽ sang trang đăng nhập,
+   học viên đã đăng nhập vào thẳng chat.html; huy hiệu = số tin Admin chưa đọc */
+.chat-fab { position: fixed; right: 16px; bottom: 18px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: #C8102E; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 6px 18px rgba(120,10,30,.35); border: 2px solid #fff; }
+.chat-fab:active { transform: translateY(1px); }
+.chat-fab-badge { position: absolute; top: -4px; right: -4px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 999px; background: #191919; color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
 .exam-locked {
     opacity: 0.5 !important;
     background: #f1f5f9 !important;

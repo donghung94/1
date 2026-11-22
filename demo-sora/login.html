@@ -202,7 +202,9 @@
                 // TRƯỜNG HỢP 1: CHƯA CÓ HỒ SƠ (tài khoản mới / lần đầu đăng nhập bằng Google hoặc Apple)
                 const initialData = {
                     name: user.displayName || "Học viên",
-                    email: user.email,
+                    // Chỉ ghi email khi có thật: Apple có thể trả về user không có email
+                    // (email = null) — luật Firestore bắt email phải là chuỗi nên ghi null sẽ bị chặn.
+                    ...(user.email ? { email: user.email } : {}),
                     status: "active",
                     isPremium: false,
                     device_count: 1, // Ghi nhận 1 máy ngay
@@ -268,6 +270,7 @@
         function showLoginError(err) {
             let text = err.message;
             if (err.code === 'auth/invalid-credential') text = t("err_invalid_credential");
+            if (err.code === 'permission-denied' || (err.message && err.message.includes("insufficient permissions"))) text = t("err_permission");
             if (err.code === 'auth/account-exists-with-different-credential') text = "Email này đã đăng ký bằng mật khẩu. Hãy đăng nhập bằng mật khẩu như cũ nhé.";
             msg.textContent = "❌ " + text;
             msg.style.color = "#ef4444";

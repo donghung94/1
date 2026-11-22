@@ -15,9 +15,28 @@
 
 <body class="mono">
 <script type="module">
-    import { auth, db } from "./firebase.js"; 
+    import { auth, db } from "./firebase.js";
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== Cầu nối LƯU TIẾN TRÌNH cho exam.js (script thường, chạy trước module này) =====
+    // exam.js tự tạo window.__progressStore + window.__resolveProgressStore và chờ;
+    // module này chỉ việc resolve bằng kho phù hợp khi xác thực xong:
+    // - Đã đăng nhập: đọc/ghi Firestore users/{uid}.exam_progress.
+    // - Khách: đọc/ghi localStorage 'exam_progress_guest' trên máy này.
+    const resolveProgressStore = (store) => {
+        if (window.__resolveProgressStore) {
+            const r = window.__resolveProgressStore;
+            window.__resolveProgressStore = null;
+            r(store);
+        } else if (!window.__progressStore) {
+            window.__progressStore = Promise.resolve(store);
+        }
+    };
+    const guestProgressStore = {
+        load: async () => { try { return JSON.parse(localStorage.getItem('exam_progress_guest') || 'null'); } catch (e) { return null; } },
+        save: async (obj) => { try { localStorage.setItem('exam_progress_guest', JSON.stringify(obj)); } catch (e) {} }
+    };
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
@@ -25,6 +44,7 @@
             // exam.js giới hạn 5 câu đầu và hiện BẢNG ĐĂNG NHẬP khi khách chạm câu thứ 6.
             localStorage.setItem('userTier', 'guest');
             localStorage.setItem('isPremium', 'false');
+            resolveProgressStore(guestProgressStore);
             const guestNameEl = document.getElementById('user-display-name');
             if (guestNameEl) guestNameEl.innerText = t("guest_name");
             initShuffleLogic();
@@ -44,10 +64,42 @@
 
                     if (!isAdmin && data.device_count >= 1 && !devices[currentDeviceId]) {
                         alert(t("alert_device_invalid"));
+                        resolveProgressStore(null);
                         await signOut(auth);
                         location.href = "login.html";
                         return;
                     }
+
+                    // 🔒 CHẶN NHÓM NGÀNH: học viên ĐÃ CÓ NHÓM mà mở thẳng link đề thực hành /
+                    // thi thử của NHÓM KHÁC (practice=g1_* | g2_* | g3_*, gồm cả *_random)
+                    // -> ẩn bài thi, hiện BẢNG THÔNG BÁO KHÓA NHÓM rồi đưa về trang chủ.
+                    // Lý thuyết chung (set=*), đề đúng nhóm mình, khách và admin: không ảnh hưởng.
+                    const practiceParam = new URLSearchParams(location.search).get('practice');
+                    const practiceGroupMatch = practiceParam ? practiceParam.match(/^g([123])(?:_|$)/) : null;
+                    if (!isAdmin && data.group && practiceGroupMatch && practiceGroupMatch[1] !== String(data.group)) {
+                        resolveProgressStore(null);
+                        const quizEl = document.getElementById('quiz');
+                        const resultEl = document.getElementById('result');
+                        const redoBtn = document.getElementById('redoWrong');
+                        if (quizEl) quizEl.style.display = 'none';
+                        if (resultEl) resultEl.style.display = 'none';
+                        if (redoBtn) redoBtn.style.display = 'none';
+                        const glTitle = document.getElementById('group-lock-title');
+                        const glBody = document.getElementById('group-lock-body');
+                        if (glTitle) glTitle.textContent = t('group_lock_title');
+                        if (glBody) glBody.textContent = t('group_lock_body', { g: String(data.group) });
+                        const glModal = document.getElementById('group-lock-modal');
+                        if (glModal) glModal.style.display = 'flex';
+                        setTimeout(() => { location.href = "index.html"; }, 3500);
+                        return;
+                    }
+
+                    // Kho tiến trình trên Firestore của chính học viên này
+                    const savedProgress = data.exam_progress || null;
+                    resolveProgressStore({
+                        load: async () => savedProgress,
+                        save: async (obj) => { await setDoc(doc(db, "users", user.uid), { exam_progress: obj }, { merge: true }); }
+                    });
 
                     // Mọi đề đều mở cho tài khoản free — giới hạn 5 câu/đề
                     // được áp dụng trong exam.js (hiện bảng nâng cấp khi qua câu 6).
@@ -61,22 +113,41 @@
                 } else {
                     // Đã đăng nhập nhưng chưa có hồ sơ Firestore: coi như tài khoản free
                     // (không premium) — vẫn cho làm bài, giới hạn 5 câu như free, không lỗi trang.
+                    // Tiến trình tạm lưu trên máy theo uid (không tạo hồ sơ Firestore dở dang).
                     localStorage.setItem('isPremium', 'false');
                     localStorage.setItem('userTier', 'free');
+                    const lsKey = 'exam_progress_' + user.uid;
+                    resolveProgressStore({
+                        load: async () => { try { return JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) { return null; } },
+                        save: async (obj) => { try { localStorage.setItem(lsKey, JSON.stringify(obj)); } catch (e) {} }
+                    });
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) nameDisplay.innerText = "Học viên";
                     initShuffleLogic();
                 }
             } catch (error) {
                 console.error("Lỗi xác thực:", error);
+                resolveProgressStore(guestProgressStore);
             }
         }
     });
 
     function initShuffleLogic() {
+        const wrapper = document.getElementById('shuffle-wrapper');
         const shuffleToggle = document.getElementById('shuffle-toggle-exam');
         if (!shuffleToggle) return;
 
+        // Đảo câu CHỈ dành cho Premium/Admin: khách & tài khoản free KHÔNG thấy công tắc
+        // và luôn làm bài theo thứ tự gốc (exam.js cũng tự ép tắt ở phía nó).
+        const tier = localStorage.getItem('userTier');
+        const isPremiumTier = tier === 'premium' || (!tier && localStorage.getItem('isPremium') === 'true');
+        if (!isPremiumTier) {
+            if (wrapper) wrapper.style.display = 'none';
+            shuffleToggle.checked = false;
+            return;
+        }
+
+        if (wrapper) wrapper.style.display = 'flex';
         const isShuffle = localStorage.getItem('user_shuffle') === 'true';
         shuffleToggle.checked = isShuffle;
 
@@ -104,7 +175,7 @@
   </div>
   
   <div class="header-bottom" style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-    <div class="shuffle-wrapper">
+    <div class="shuffle-wrapper" id="shuffle-wrapper" style="display:none">
         <span class="shuffle-label" data-i18n="shuffle_label">🔄 Đảo câu</span>
         <label class="switch-small">
             <input type="checkbox" id="shuffle-toggle-exam">
@@ -208,6 +279,19 @@
     </div>
   </div>
 
+  <!-- 🔒 BẢNG KHÓA NHÓM: module xác thực hiện bảng này khi học viên mở thẳng link
+       đề thực hành/thi thử của nhóm khác; nút (hoặc tự động sau vài giây) đưa về trang chủ -->
+  <div id="group-lock-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 15px;">🔒</div>
+        <h2 id="group-lock-title" style="color:#C8102E; margin: 0 0 10px 0;"></h2>
+        <p id="group-lock-body" style="color:#64748b; line-height:1.6; margin: 0;"></p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+            <a href="index.html" style="background:#C8102E; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_home">🏠 Trang chủ</a>
+        </div>
+    </div>
+  </div>
+
   <!-- 🔐 BẢNG ĐĂNG NHẬP: exam.js hiện bảng này khi KHÁCH (chưa đăng nhập) chạm câu thứ 6 -->
   <div id="login-wall-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
     <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
@@ -216,7 +300,7 @@
         <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="login_wall_body">Đăng nhập hoặc đăng ký tài khoản miễn phí để tiếp tục làm bài và lưu lại tiến trình học của bạn.</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
             <a href="login.html" style="background:#C8102E; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_login">Đăng nhập</a>
-            <a href="register.html" style="background:#fff; color:#C8102E; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; border:1.5px solid #C9A24B;" data-i18n="btn_register">Đăng ký tài khoản</a>
+            <!-- Nút Đăng ký ĐÃ BỎ: tài khoản mới chỉ tạo qua đăng nhập Google/Apple ở trang login -->
             <button onclick="document.getElementById('login-wall-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
         </div>
     </div>

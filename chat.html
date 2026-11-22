@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chat hỗ trợ - Toukutei 2</title>
+    <link rel="icon" href="icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
+    <style>
+        :root{
+            --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+            --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+            --red:#C8102E; --red-dark:#A50D26; --red-soft:#FDECEF;
+            --bronze:#C9A24B; --cream:#FFF9EE;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: var(--bg); margin: 0; padding: 12px; color: var(--ink); }
+        .container { max-width: 640px; margin: auto; display: flex; flex-direction: column; min-height: calc(100vh - 24px); }
+        .c-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 12px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 9px 13px; border-radius: 999px; background: var(--card); border: 1.5px solid var(--bronze); color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .c-title { font-size: 20px; font-weight: 800; margin: 0; }
+        .chat-box { flex: 1; background: var(--card); border: 1.5px solid var(--bronze); border-radius: 18px; box-shadow: 0 3px 10px rgba(20,16,10,.06); padding: 14px 12px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .chat-empty { text-align: center; color: var(--ink-3); font-size: 13.5px; line-height: 1.6; padding: 26px 12px; margin: auto 0; }
+        .msg { max-width: 82%; padding: 9px 12px; border-radius: 14px; font-size: 14px; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+        .msg .msg-meta { display: block; font-size: 11px; font-weight: 700; opacity: .75; margin-bottom: 3px; }
+        .msg.me { align-self: flex-end; background: var(--red); color: #fff; border-bottom-right-radius: 4px; }
+        .msg.admin { align-self: flex-start; background: var(--cream); border: 1.5px solid var(--line); color: var(--ink); border-bottom-left-radius: 4px; }
+        .composer { display: flex; gap: 8px; margin-top: 10px; }
+        .composer textarea { flex: 1; padding: 11px 13px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; resize: none; max-height: 110px; }
+        .composer textarea:focus { border-color: var(--bronze); }
+        .composer button { padding: 0 20px; border: none; border-radius: 12px; background: var(--red); color: #fff; font-weight: 800; font-size: 14.5px; cursor: pointer; font-family: inherit; }
+        .composer button:active { transform: translateY(1px); }
+        .chat-loading { text-align: center; color: var(--ink-3); font-size: 13px; padding: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="c-head">
+        <a class="back-link" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        <h1 class="c-title" data-i18n="chat_title">💬 Chat hỗ trợ</h1>
+    </div>
+
+    <div class="chat-box" id="chat-box">
+        <div class="chat-loading" id="chat-loading">⏳ ...</div>
+    </div>
+
+    <div class="composer">
+        <textarea id="chat-input" rows="1" maxlength="1000" data-i18n-ph="chat_placeholder" placeholder="Nhập tin nhắn của bạn..."></textarea>
+        <button id="chat-send" type="button" data-i18n="chat_send">Gửi</button>
+    </div>
+</div>
+
+<script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc, setDoc, collection, addDoc, onSnapshot, query, orderBy, increment } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== CHAT HỖ TRỢ TRONG APP =====
+    // Mỗi học viên có 1 luồng chat: chats/{uid} (thông tin + bộ đếm chưa đọc)
+    // và subcollection chats/{uid}/messages/{autoId} { from, text, at }.
+    // Mọi nội dung tin nhắn đều render bằng textContent — không chèn HTML.
+    const box = document.getElementById('chat-box');
+    const input = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('chat-send');
+    let uid = null, profile = {}, sending = false;
+
+    function fmtTime(iso) {
+        try { return new Date(iso).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }); }
+        catch (e) { return ''; }
+    }
+
+    function renderMessages(msgs) {
+        box.innerHTML = '';
+        if (!msgs.length) {
+            const empty = document.createElement('div');
+            empty.className = 'chat-empty';
+            empty.textContent = t('chat_empty');
+            box.appendChild(empty);
+            return;
+        }
+        msgs.forEach(m => {
+            const div = document.createElement('div');
+            const mine = m.from !== 'admin';
+            div.className = 'msg ' + (mine ? 'me' : 'admin');
+            const meta = document.createElement('span');
+            meta.className = 'msg-meta';
+            meta.textContent = (mine ? t('chat_you') : t('chat_admin')) + ' · ' + fmtTime(m.at);
+            const body = document.createElement('span');
+            body.textContent = m.text || '';
+            div.appendChild(meta);
+            div.appendChild(body);
+            box.appendChild(div);
+        });
+        box.scrollTop = box.scrollHeight;
+    }
+
+    async function sendMessage() {
+        if (!uid || sending) return;
+        const text = input.value.trim().slice(0, 1000);
+        if (!text) return;
+        sending = true;
+        try {
+            const at = new Date().toISOString();
+            const threadRef = doc(db, "chats", uid);
+            await addDoc(collection(db, "chats", uid, "messages"), { from: 'user', text: text, at: at });
+            await setDoc(threadRef, {
+                userName: profile.name || '', userEmail: profile.email || '',
+                memberCode: profile.memberCode || '',
+                lastText: text, lastAt: at, unreadAdmin: increment(1)
+            }, { merge: true });
+            input.value = '';
+        } catch (e) {
+            console.error('Gửi tin nhắn lỗi:', e);
+        }
+        sending = false;
+        input.focus();
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+    });
+
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) { window.location.href = 'login.html'; return; }
+        uid = user.uid;
+        try {
+            const snap = await getDoc(doc(db, "users", uid));
+            if (snap.exists()) profile = snap.data() || {};
+        } catch (e) {}
+        if (!profile.email && user.email) profile.email = user.email;
+
+        const threadRef = doc(db, "chats", uid);
+        // Mở luồng chat = đã đọc hết tin của Admin -> unreadUser về 0;
+        // đồng thời cập nhật thông tin hiển thị của học viên lên doc luồng.
+        try {
+            await setDoc(threadRef, {
+                userName: profile.name || '', userEmail: profile.email || '',
+                memberCode: profile.memberCode || '', unreadUser: 0
+            }, { merge: true });
+        } catch (e) {}
+
+        const q = query(collection(db, "chats", uid, "messages"), orderBy('at', 'asc'));
+        onSnapshot(q, (snap) => {
+            const msgs = [];
+            snap.forEach(d => msgs.push(d.data()));
+            renderMessages(msgs);
+        }, (err) => {
+            console.error('Chat snapshot lỗi:', err);
+            renderMessages([]);
+        });
+    });
+</script>
+</body>
+</html>

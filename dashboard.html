@@ -56,6 +56,39 @@
 
         .actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
         @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } }
+
+        .editor-panel { margin-top: 14px; }
+        .editor-title { margin: 0 0 6px; font-size: 17px; font-weight: 800; }
+        .editor-desc { margin: 0 0 10px; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+        .editor-textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; resize: vertical; }
+        .editor-textarea:focus { border-color: var(--bronze); }
+        .editor-input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; }
+        .editor-input:focus { border-color: var(--bronze); }
+        .editor-field { margin-bottom: 10px; }
+        .editor-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--ink-2); margin-bottom: 5px; }
+        .editor-btns { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+        .editor-btns .btn { flex: 1; cursor: pointer; font-family: inherit; }
+        .editor-status { font-size: 13px; margin-top: 10px; min-height: 18px; }
+
+        /* ===== Hộp thư hỗ trợ (chat trong app) ===== */
+        .inbox-total { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px; background: #C8102E; color: #fff; font-size: 13px; font-weight: 800; vertical-align: middle; margin-left: 6px; }
+        .inbox-item { display: block; width: 100%; text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 13px; margin-bottom: 8px; cursor: pointer; font-family: inherit; }
+        .inbox-item:active { transform: translateY(1px); }
+        .inbox-item-head { display: flex; align-items: center; gap: 8px; }
+        .inbox-item-name { font-weight: 800; font-size: 14.5px; color: var(--ink); }
+        .inbox-item-code { font-size: 11px; font-weight: 800; background: #191919; color: #F5D98A; border-radius: 999px; padding: 2px 8px; }
+        .inbox-item-time { margin-left: auto; font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+        .inbox-item-last { font-size: 13px; color: var(--ink-2); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .inbox-unread { display: inline-flex; align-items: center; justify-content: center; min-width: 21px; height: 21px; padding: 0 6px; border-radius: 999px; background: #C8102E; color: #fff; font-size: 12px; font-weight: 800; }
+        .inbox-msgs { display: flex; flex-direction: column; gap: 8px; max-height: 420px; overflow-y: auto; padding: 4px 2px; }
+        .inbox-msg { max-width: 85%; padding: 8px 11px; border-radius: 13px; font-size: 13.5px; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+        .inbox-msg .msg-meta { display: block; font-size: 10.5px; font-weight: 700; opacity: .75; margin-bottom: 2px; }
+        .inbox-msg.from-user { align-self: flex-start; background: #FFF9EE; border: 1.5px solid var(--line); }
+        .inbox-msg.from-admin { align-self: flex-end; background: #C8102E; color: #fff; }
+        .inbox-reply { display: flex; gap: 8px; margin-top: 10px; }
+        .inbox-reply textarea { flex: 1; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; resize: none; }
+        .inbox-reply textarea:focus { border-color: var(--bronze); }
+        .inbox-reply .btn { cursor: pointer; font-family: inherit; }
         .btn { display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 11px 8px; border-radius: 12px; font-weight: 700; font-size: 13px; text-decoration: none; border: 1.5px solid var(--bronze); background: var(--cream); color: var(--red); }
         .btn.primary { background: var(--red); border-color: var(--red); color: #fff; }
         .btn:active { transform: translateY(1px); }
@@ -93,6 +126,62 @@
             <a class="btn primary" href="admin.html">👥 Quản lý học viên</a>
             <a class="btn" href="language.html">🌐 Đổi ngôn ngữ</a>
             <a class="btn" href="https://donghung94.github.io/1/" target="_blank" rel="noopener">🚀 Mở bản live</a>
+        </div>
+    </div>
+
+    <!-- 📢 Ô NHẬP THÔNG BÁO TRANG CHỦ — lưu vào Firestore config/announcement;
+         trang chủ đọc doc này và hiện banner cho tất cả mọi người (kể cả khách) -->
+    <div id="announce-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">📢 Thông báo trang chủ</h2>
+        <p class="editor-desc">Nội dung ở đây sẽ hiện trong banner "THÔNG BÁO TỪ ADMIN" ở đầu trang chủ — tất cả mọi người (kể cả khách chưa đăng nhập) đều thấy. Xuống dòng được giữ nguyên. Để trống rồi bấm "Đăng thông báo" = ẩn banner.</p>
+        <textarea id="ann-text" class="editor-textarea" rows="5" placeholder="Nhập nội dung thông báo..."></textarea>
+        <div class="editor-btns">
+            <button id="ann-publish" class="btn primary" type="button">Đăng thông báo</button>
+            <button id="ann-clear" class="btn" type="button">Xóa thông báo</button>
+        </div>
+        <div id="ann-status" class="editor-status"></div>
+    </div>
+
+    <!-- 📞 Ô NHẬP LIÊN HỆ HỖ TRỢ — lưu vào Firestore config/contacts;
+         trang Hướng dẫn học chỉ hiện nút của kênh nào có link, kênh để trống sẽ ẩn -->
+    <div id="contacts-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">📞 Liên hệ hỗ trợ</h2>
+        <p class="editor-desc">Dán link đầy đủ (bắt đầu bằng https://) cho từng kênh. Kênh nào để trống thì nút liên hệ tương ứng sẽ không hiện trong trang Hướng dẫn học.</p>
+        <div class="editor-field">
+            <label for="ct-fb">Facebook</label>
+            <input id="ct-fb" class="editor-input" type="url" placeholder="https://www.facebook.com/...">
+        </div>
+        <div class="editor-field">
+            <label for="ct-zalo">Zalo</label>
+            <input id="ct-zalo" class="editor-input" type="url" placeholder="https://zalo.me/...">
+        </div>
+        <div class="editor-field">
+            <label for="ct-line">LINE</label>
+            <input id="ct-line" class="editor-input" type="url" placeholder="https://line.me/...">
+        </div>
+        <div class="editor-btns">
+            <button id="ct-save" class="btn primary" type="button">Lưu liên hệ</button>
+        </div>
+        <div id="ct-status" class="editor-status"></div>
+    </div>
+
+    <!-- 💬 HỘP THƯ HỖ TRỢ — chat trong app của học viên (Firestore chats/{uid}).
+         Danh sách realtime, bấm vào 1 cuộc trò chuyện để xem + trả lời ngay tại đây. -->
+    <div id="inbox-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">💬 Hộp thư hỗ trợ<span id="inbox-total" class="inbox-total" style="display:none">0</span></h2>
+        <p class="editor-desc">Tin nhắn học viên gửi từ nút chat trong app. Số đỏ = tin chưa đọc. Mở cuộc trò chuyện là đánh dấu đã đọc; trả lời xong học viên sẽ thấy huy hiệu mới trên nút chat của họ.</p>
+        <div id="inbox-list"></div>
+        <div id="inbox-thread" style="display:none">
+            <div class="editor-btns" style="margin: 0 0 10px;">
+                <button id="inbox-back" class="btn" type="button">⬅ Danh sách</button>
+            </div>
+            <div id="inbox-thread-title" style="font-weight:800; font-size:15px; margin-bottom:8px;"></div>
+            <div id="inbox-messages" class="inbox-msgs"></div>
+            <div class="inbox-reply">
+                <textarea id="inbox-reply-text" rows="2" maxlength="1000" placeholder="Nhập câu trả lời..."></textarea>
+                <button id="inbox-send" class="btn primary" type="button">Gửi</button>
+            </div>
+            <div id="inbox-status" class="editor-status"></div>
         </div>
     </div>
 </div>
@@ -160,7 +249,7 @@
 <script type="module">
     // ===== Cổng Admin: chưa đăng nhập hoặc không có role 'admin' -> về trang chủ ngay, không hiện dữ liệu =====
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getFirestore, collection, getDocs, doc, getDoc, setDoc, addDoc, updateDoc, onSnapshot, query, orderBy, increment } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
     const firebaseConfig = {
@@ -213,6 +302,195 @@
 
             document.getElementById('dash-loading').style.display = 'none';
             document.getElementById('dash-root').style.display = 'block';
+
+            // ===== 📢 Ô nhập thông báo trang chủ (Firestore config/announcement) =====
+            const annPanel = document.getElementById('announce-panel');
+            const annText = document.getElementById('ann-text');
+            const annStatus = document.getElementById('ann-status');
+            annPanel.style.display = 'block';
+            try {
+                const aSnap = await getDoc(doc(db, "config", "announcement"));
+                if (aSnap.exists()) annText.value = aSnap.data().text || '';
+            } catch (e) {
+                annStatus.textContent = '⚠️ Không đọc được thông báo hiện tại: ' + e.message;
+            }
+            const saveAnnouncement = async (text) => {
+                await setDoc(doc(db, "config", "announcement"),
+                    { text: text, updatedAt: new Date().toISOString() }, { merge: true });
+            };
+            document.getElementById('ann-publish').addEventListener('click', async () => {
+                annStatus.textContent = '⏳ Đang đăng...';
+                try {
+                    await saveAnnouncement(annText.value);
+                    annStatus.textContent = annText.value.trim()
+                        ? '✅ Đã đăng thông báo — trang chủ sẽ hiện nội dung mới.'
+                        : '✅ Đã xóa thông báo — banner trang chủ sẽ ẩn.';
+                } catch (e) { annStatus.textContent = '❌ Đăng thất bại: ' + e.message; }
+            });
+            document.getElementById('ann-clear').addEventListener('click', async () => {
+                annStatus.textContent = '⏳ Đang xóa...';
+                try {
+                    await saveAnnouncement('');
+                    annText.value = '';
+                    annStatus.textContent = '✅ Đã xóa thông báo — banner trang chủ sẽ ẩn.';
+                } catch (e) { annStatus.textContent = '❌ Xóa thất bại: ' + e.message; }
+            });
+
+            // ===== 📞 Ô nhập liên hệ hỗ trợ (Firestore config/contacts) =====
+            const ctPanel = document.getElementById('contacts-panel');
+            const ctFb = document.getElementById('ct-fb');
+            const ctZalo = document.getElementById('ct-zalo');
+            const ctLine = document.getElementById('ct-line');
+            const ctStatus = document.getElementById('ct-status');
+            ctPanel.style.display = 'block';
+            try {
+                const cSnap = await getDoc(doc(db, "config", "contacts"));
+                if (cSnap.exists()) {
+                    const c = cSnap.data();
+                    ctFb.value = c.fb || '';
+                    ctZalo.value = c.zalo || '';
+                    ctLine.value = c.line || '';
+                }
+            } catch (e) {
+                ctStatus.textContent = '⚠️ Không đọc được liên hệ hiện tại: ' + e.message;
+            }
+            document.getElementById('ct-save').addEventListener('click', async () => {
+                ctStatus.textContent = '⏳ Đang lưu...';
+                try {
+                    await setDoc(doc(db, "config", "contacts"), {
+                        fb: ctFb.value.trim(),
+                        zalo: ctZalo.value.trim(),
+                        line: ctLine.value.trim(),
+                        updatedAt: new Date().toISOString()
+                    }, { merge: true });
+                    ctStatus.textContent = '✅ Đã lưu liên hệ — trang Hướng dẫn học sẽ dùng link mới.';
+                } catch (e) { ctStatus.textContent = '❌ Lưu thất bại: ' + e.message; }
+            });
+
+            // ===== 💬 HỘP THƯ HỖ TRỢ (Firestore chats/{uid} + messages con) =====
+            // Mọi nội dung tin nhắn render bằng textContent — không chèn HTML.
+            const inboxPanel = document.getElementById('inbox-panel');
+            const inboxList = document.getElementById('inbox-list');
+            const inboxTotal = document.getElementById('inbox-total');
+            const inboxThread = document.getElementById('inbox-thread');
+            const inboxMsgs = document.getElementById('inbox-messages');
+            const inboxTitle = document.getElementById('inbox-thread-title');
+            const inboxReplyText = document.getElementById('inbox-reply-text');
+            const inboxStatus = document.getElementById('inbox-status');
+            inboxPanel.style.display = 'block';
+            let inboxCurrentUid = null;
+            let inboxUnsubMsgs = null;
+
+            const inboxFmtTime = (iso) => {
+                try { return new Date(iso).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }); }
+                catch (e) { return ''; }
+            };
+
+            onSnapshot(query(collection(db, "chats"), orderBy('lastAt', 'desc')), (snap) => {
+                let totalUnread = 0;
+                inboxList.innerHTML = '';
+                if (snap.empty) {
+                    const p = document.createElement('p');
+                    p.className = 'editor-desc';
+                    p.textContent = 'Chưa có cuộc trò chuyện nào.';
+                    inboxList.appendChild(p);
+                }
+                snap.forEach(d => {
+                    const c = d.data() || {};
+                    const unread = c.unreadAdmin || 0;
+                    totalUnread += unread;
+                    const item = document.createElement('button');
+                    item.type = 'button';
+                    item.className = 'inbox-item';
+                    const head = document.createElement('div');
+                    head.className = 'inbox-item-head';
+                    const nm = document.createElement('span');
+                    nm.className = 'inbox-item-name';
+                    nm.textContent = c.userName || c.userEmail || d.id;
+                    head.appendChild(nm);
+                    if (c.memberCode) {
+                        const code = document.createElement('span');
+                        code.className = 'inbox-item-code';
+                        code.textContent = c.memberCode;
+                        head.appendChild(code);
+                    }
+                    if (unread > 0) {
+                        const b = document.createElement('span');
+                        b.className = 'inbox-unread';
+                        b.textContent = unread > 99 ? '99+' : String(unread);
+                        head.appendChild(b);
+                    }
+                    const tm = document.createElement('span');
+                    tm.className = 'inbox-item-time';
+                    tm.textContent = inboxFmtTime(c.lastAt);
+                    head.appendChild(tm);
+                    const last = document.createElement('div');
+                    last.className = 'inbox-item-last';
+                    last.textContent = c.lastText || '';
+                    item.appendChild(head);
+                    item.appendChild(last);
+                    item.addEventListener('click', () => inboxOpenThread(d.id, c));
+                    inboxList.appendChild(item);
+                });
+                inboxTotal.textContent = String(totalUnread);
+                inboxTotal.style.display = totalUnread > 0 ? 'inline-flex' : 'none';
+            }, (e) => { console.error('Inbox snapshot lỗi:', e); });
+
+            async function inboxMarkRead(uid) {
+                try { await updateDoc(doc(db, "chats", uid), { unreadAdmin: 0 }); } catch (e) {}
+            }
+
+            function inboxOpenThread(uid, c) {
+                inboxCurrentUid = uid;
+                inboxList.style.display = 'none';
+                inboxThread.style.display = 'block';
+                inboxStatus.textContent = '';
+                inboxReplyText.value = '';
+                inboxTitle.textContent = (c.userName || c.userEmail || uid) + (c.memberCode ? ' (' + c.memberCode + ')' : '');
+                inboxMarkRead(uid); // Mở luồng = đã đọc
+                if (inboxUnsubMsgs) inboxUnsubMsgs();
+                const q = query(collection(db, "chats", uid, "messages"), orderBy('at', 'asc'));
+                inboxUnsubMsgs = onSnapshot(q, (snap) => {
+                    inboxMsgs.innerHTML = '';
+                    snap.forEach(d => {
+                        const m = d.data() || {};
+                        const div = document.createElement('div');
+                        div.className = 'inbox-msg ' + (m.from === 'admin' ? 'from-admin' : 'from-user');
+                        const meta = document.createElement('span');
+                        meta.className = 'msg-meta';
+                        meta.textContent = (m.from === 'admin' ? 'Admin' : (c.userName || 'Học viên')) + ' · ' + inboxFmtTime(m.at);
+                        const body = document.createElement('span');
+                        body.textContent = m.text || '';
+                        div.appendChild(meta);
+                        div.appendChild(body);
+                        inboxMsgs.appendChild(div);
+                    });
+                    inboxMsgs.scrollTop = inboxMsgs.scrollHeight;
+                }, (e) => { console.error('Thread snapshot lỗi:', e); });
+            }
+
+            document.getElementById('inbox-back').addEventListener('click', () => {
+                inboxCurrentUid = null;
+                if (inboxUnsubMsgs) { inboxUnsubMsgs(); inboxUnsubMsgs = null; }
+                inboxThread.style.display = 'none';
+                inboxList.style.display = 'block';
+            });
+
+            document.getElementById('inbox-send').addEventListener('click', async () => {
+                if (!inboxCurrentUid) return;
+                const text = inboxReplyText.value.trim().slice(0, 1000);
+                if (!text) return;
+                inboxStatus.textContent = '⏳ Đang gửi...';
+                try {
+                    const at = new Date().toISOString();
+                    await addDoc(collection(db, "chats", inboxCurrentUid, "messages"), { from: 'admin', text: text, at: at });
+                    await setDoc(doc(db, "chats", inboxCurrentUid), {
+                        lastText: text, lastAt: at, unreadAdmin: 0, unreadUser: increment(1)
+                    }, { merge: true });
+                    inboxReplyText.value = '';
+                    inboxStatus.textContent = '✅ Đã gửi trả lời.';
+                } catch (e) { inboxStatus.textContent = '❌ Gửi thất bại: ' + e.message; }
+            });
         } catch (e) {
             console.error(e);
             document.getElementById('dash-loading').textContent = "❌ Lỗi tải dữ liệu: " + e.message;

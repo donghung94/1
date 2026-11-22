@@ -29,9 +29,62 @@
 <body class="mono">
 
 <script type="module">
-    import { auth, logout, db } from "./firebase.js"; 
+    import { auth, logout, db } from "./firebase.js";
     import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    import { doc, getDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== Hiển thị TIẾN TRÌNH HỌC trên từng thẻ đề =====
+    // Nguồn: users/{uid}.exam_progress (đã đăng nhập) hoặc localStorage (khách).
+    // Cấu trúc do exam.js ghi: { sets: { <setKey>: {answers, lastPos, totalQ, bestScore,
+    // bestTotal, completed} }, mockHistory: [...] } — hồ sơ cũ dạng khung thì bỏ qua.
+    function progressKeyFromHref(href) {
+        try {
+            const url = new URL(href, window.location.origin);
+            if (!url.pathname.endsWith('exam.html')) return null;
+            const s = url.searchParams.get('set');
+            const p = url.searchParams.get('practice');
+            if (s) return 'set_' + s;
+            if (p) return 'practice_' + p;
+        } catch (e) {}
+        return null;
+    }
+    function annotateProgress(rawProgress) {
+        let sets = {};
+        if (rawProgress && typeof rawProgress === 'object' &&
+            rawProgress.sets && typeof rawProgress.sets === 'object') {
+            sets = rawProgress.sets;
+        }
+        document.querySelectorAll('.exam-list a').forEach(link => {
+            const key = progressKeyFromHref(link.getAttribute('href'));
+            if (!key) return;
+            const rec = sets[key];
+            if (!rec) return;
+            const answered = rec.answers ? Object.keys(rec.answers).length : 0;
+            let label = '';
+            if (answered > 0) {
+                label = t('progress_in_progress', { x: rec.lastPos || answered, y: rec.totalQ || '?' });
+            } else if (rec.completed && rec.bestScore !== null && rec.bestScore !== undefined) {
+                label = t('progress_best', { a: rec.bestScore, b: rec.bestTotal });
+            }
+            if (!label) return;
+            const span = document.createElement('span');
+            span.className = 'progress-badge';
+            span.textContent = label;
+            link.appendChild(span);
+        });
+    }
+
+    // ===== BẢNG THÔNG BÁO KHÓA NHÓM (3 ngôn ngữ qua i18n) =====
+    // Hiện khi học viên bấm vào bộ đề thực hành/thi thử của nhóm khác.
+    function showGroupLockNotice(g) {
+        const modal = document.getElementById('group-lock-modal');
+        if (!modal) { alert(t("alert_wrong_group", { g })); return; }
+        const titleEl = document.getElementById('group-lock-title');
+        const bodyEl = document.getElementById('group-lock-body');
+        if (titleEl) titleEl.textContent = t('group_lock_title');
+        if (bodyEl) bodyEl.textContent = t('group_lock_body', { g });
+        modal.style.display = 'flex';
+    }
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
@@ -44,6 +97,11 @@
             if (wsGuest) wsGuest.style.setProperty('display', 'none', 'important');
             const ctaGuest = document.getElementById('guest-cta');
             if (ctaGuest) ctaGuest.style.display = 'flex';
+            // Tiến trình của khách lưu trên chính máy này
+            try { annotateProgress(JSON.parse(localStorage.getItem('exam_progress_guest') || 'null')); } catch (e) {}
+            // Nút chat nổi cho khách: bấm vào -> trang đăng nhập (kèm ghi chú)
+            const fabGuest = document.getElementById('chat-fab');
+            if (fabGuest) { fabGuest.href = 'login.html'; fabGuest.title = t('chat_login_note'); }
         } else {
             try {
                 const userDocRef = doc(db, "users", user.uid);
@@ -51,6 +109,22 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
+
+                    // Nút chat nổi khi đã đăng nhập: vào thẳng chat.html +
+                    // huy hiệu số tin Admin chưa đọc (realtime theo doc luồng chat)
+                    const fab = document.getElementById('chat-fab');
+                    if (fab) {
+                        fab.href = 'chat.html';
+                        fab.title = t('chat_title');
+                        const badge = document.getElementById('chat-fab-badge');
+                        onSnapshot(doc(db, "chats", user.uid), (s) => {
+                            const n = s.exists() ? (s.data().unreadUser || 0) : 0;
+                            if (badge) {
+                                badge.textContent = n > 99 ? '99+' : String(n);
+                                badge.style.display = n > 0 ? 'flex' : 'none';
+                            }
+                        }, () => {});
+                    }
 
                     const isAdmin = data.role === 'admin';
                     // 0. Ngôn ngữ + nhóm ngành: nhận từ Firestore nếu máy chưa có.
@@ -72,17 +146,16 @@
                         const dashBtn = document.getElementById('admin-dash-btn');
                         if (dashBtn) dashBtn.style.display = 'flex';
                     }
-                    // Link Đổi nhóm ngành (mở bảng gộp language.html): hiện cho tài khoản đã đăng nhập
-                    const cgLink = document.getElementById('change-group-link');
-                    if (cgLink) cgLink.style.display = 'inline-flex';
-                    // Lọc danh sách đề theo nhóm: tài khoản thường chỉ thấy lý thuyết chung
-                    // + thẻ thực hành (kèm đề thi thử trong thẻ) của đúng nhóm mình.
-                    // Admin và khách thấy toàn bộ như cũ.
+                    // KHÓA NHÓM NGÀNH: học viên đã có nhóm thì thẻ thực hành của 2 nhóm còn lại
+                    // VẪN HIỆN nhưng bị khóa (làm mờ + huy hiệu 🔒, bấm vào hiện thông báo —
+                    // xử lý ở mục 6 bên dưới). KHÔNG ẩn thẻ, KHÔNG còn link tự đổi nhóm:
+                    // chỉ Admin mới đổi được nhóm cho học viên (ở trang admin.html).
+                    // Admin và khách thấy toàn bộ, không khóa gì.
                     if (!isAdmin && savedGroup) {
                         ['1', '2', '3'].forEach((g) => {
                             if (g !== savedGroup) {
                                 const card = document.getElementById('practice-card-g' + g);
-                                if (card) card.style.display = 'none';
+                                if (card) card.classList.add('practice-card-locked');
                             }
                         });
                     }
@@ -142,35 +215,40 @@
                     setLink('modal-line', `https://line.me/ti/p/nongaphao`);
 
                     // 6. LOGIC MỞ ĐỀ THI
-                    // - Tài khoản FREE: mở TOÀN BỘ đề (lý thuyết + thực hành + thi thử),
-                    //   không khóa đề nào. Giới hạn 5 câu/đề nằm trong trang thi (exam.js).
-                    // - Premium (không phải admin): đề thực hành vẫn chỉ mở đúng nhóm của mình (giữ nguyên như cũ).
+                    // - Lý thuyết chung: mở cho mọi tài khoản. Giới hạn 5 câu/đề của free/khách
+                    //   nằm trong trang thi (exam.js), không đổi.
+                    // - Thực hành + thi thử: học viên ĐÃ CÓ NHÓM (free lẫn Premium) chỉ mở được
+                    //   đúng nhóm của mình; đề của 2 nhóm còn lại bị KHÓA (hiện mờ + 🔒,
+                    //   bấm vào hiện BẢNG THÔNG BÁO KHÓA NHÓM 3 ngôn ngữ). Chỉ Admin đổi được nhóm.
                     document.querySelectorAll('.exam-list a').forEach(link => {
                         const url = new URL(link.href, window.location.origin);
                         const practiceParam = url.searchParams.get('practice');
 
                         let isLocked = false;
 
-                        if (isPremium && !isAdmin && practiceParam) {
-                            const requiredG = "g" + userGroup;
-                            if (!practiceParam.includes(requiredG)) {
+                        if (!isAdmin && savedGroup && practiceParam) {
+                            const m = practiceParam.match(/^g([123])(?:_|$)/);
+                            if (m && m[1] !== savedGroup) {
                                 isLocked = true;
                             }
                         }
 
-                        // Thực thi khóa nếu isLocked = true (chỉ còn khóa nhóm thực hành của Premium)
                         if (isLocked) {
                             link.classList.add('exam-locked');
+                            link.classList.add('group-locked');
                             // Loại bỏ các event cũ để tránh lặp
                             const newLink = link.cloneNode(true);
                             link.parentNode.replaceChild(newLink, link);
 
                             newLink.addEventListener('click', (e) => {
                                 e.preventDefault();
-                                alert(t("alert_wrong_group", {g: userGroup}));
+                                showGroupLockNotice(userGroup);
                             });
                         }
                     });
+
+                    // 7. Tiến trình học của chính học viên (điểm cao nhất / đang làm dở)
+                    annotateProgress(data.exam_progress);
 
                 }
             } catch (error) {
@@ -216,11 +294,11 @@
     </div>
     <div class="guest-cta-btns">
       <a href="login.html" class="guest-btn-login" data-i18n="btn_login">Đăng nhập</a>
-      <a href="register.html" class="guest-btn-register" data-i18n="btn_register">Đăng ký tài khoản</a>
+      <!-- Nút Đăng ký ĐÃ BỎ: tài khoản mới chỉ tạo qua đăng nhập Google/Apple ở trang login -->
     </div>
   </div>
   <a href="language.html" class="lang-switch" data-i18n="lang_switch">🌐 Ngôn ngữ</a>
-  <a href="language.html" id="change-group-link" class="lang-switch" data-i18n="change_group" style="display:none">🔀 Đổi nhóm ngành</a>
+  <!-- 🔀 Link tự đổi nhóm ngành ĐÃ BỎ: nhóm ngành do Admin chốt, học viên không tự đổi được nữa -->
 </header>
 
 
@@ -278,14 +356,37 @@
         <p style="margin: 10px 0 0 0; font-size: 13px; color: #5A5A55; text-align: center;" data-i18n="free_limit_note">Tài khoản miễn phí: làm được 5 câu mỗi đề. Nâng cấp Premium để làm trọn bộ đề.</p>
     </div>
 </div>
-  <!-- 📢 KHỐI THÔNG BÁO CHUNG (Ai cũng nhìn thấy) -->
-  <div class="global-notice-banner">
+  <!-- 📢 KHỐI THÔNG BÁO CHUNG: nội dung do Admin đăng trong Dashboard (Firestore
+       config/announcement), hiện cho TẤT CẢ mọi người kể cả khách. Chưa có thông báo
+       hoặc đọc lỗi -> banner ẩn hoàn toàn (mặc định ẩn, script dưới đây mới bật lên). -->
+  <div class="global-notice-banner" id="announcement-banner" style="display:none">
     <div style="font-size: 20px; margin-bottom: 5px;" data-i18n-html="notice_title_html">📢 <b>THÔNG BÁO TỪ ADMIN</b></div>
-    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6;" data-i18n-html="notice_body_html">
-      Chào mừng các học viên đến với hệ thống luyện đề <b>Tokutei Gino 2 Xây dựng</b> cấp tốc. 
-      📢 thông báo dành riêng cho các bạn đang học nhóm 3, phần thực hành đã được tinh gọn lại chỉ còn 2 đề nên mọi người chỉ cần học 2 đề đó thôi nhé.
-    </p>
+    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6; white-space: pre-line;" id="announcement-body"></p>
   </div>
+  <script type="module">
+    import { db } from "./firebase.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+    (async () => {
+        const banner = document.getElementById('announcement-banner');
+        const body = document.getElementById('announcement-body');
+        if (!banner || !body) return;
+        try {
+            const snap = await getDoc(doc(db, "config", "announcement"));
+            const text = snap.exists() ? String(snap.data().text || '') : '';
+            if (text.trim()) {
+                body.textContent = text; // textContent: hiện chữ thuần, giữ xuống dòng, không chạy HTML
+                banner.style.display = 'block';
+            }
+        } catch (e) { /* Đọc lỗi -> giữ banner ẩn, không hiện chữ cũ */ }
+    })();
+  </script>
+
+  <!-- 📖 Nút HƯỚNG DẪN HỌC: ai cũng thấy, kể cả khách -->
+  <a href="guide.html" class="guide-btn" data-i18n="guide_btn">📖 Hướng dẫn học</a>
+
+  <!-- 💬 Nút CHAT NỔI: mặc định trỏ trang đăng nhập (cho khách); module xác thực
+       bên dưới sẽ đổi sang chat.html khi đã đăng nhập + hiện số tin chưa đọc -->
+  <a id="chat-fab" href="login.html" class="chat-fab">💬<span id="chat-fab-badge" class="chat-fab-badge" style="display:none"></span></a>
 
   <div class="card">
     <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
@@ -438,6 +539,40 @@
     font-weight: bold;
     color: #1e293b;
 }
+.progress-badge {
+    display: inline-block;
+    margin-left: 8px;
+    background: #2A2118;
+    color: #F5D98A;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.guide-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 16px;
+    margin: 0 15px 14px;
+    border-radius: 12px;
+    background: #C8102E;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(20,16,10,.12);
+}
+.guide-btn:active { transform: translateY(1px); }
+
+/* Nút chat nổi góc dưới phải — khách bấm vào sẽ sang trang đăng nhập,
+   học viên đã đăng nhập vào thẳng chat.html; huy hiệu = số tin Admin chưa đọc */
+.chat-fab { position: fixed; right: 16px; bottom: 18px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: #C8102E; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 6px 18px rgba(120,10,30,.35); border: 2px solid #fff; }
+.chat-fab:active { transform: translateY(1px); }
+.chat-fab-badge { position: absolute; top: -4px; right: -4px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 999px; background: #191919; color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
 .exam-locked {
     opacity: 0.5 !important;
     background: #f1f5f9 !important;
@@ -460,6 +595,14 @@
     padding: 2px 6px;
     border-radius: 4px;
 }
+/* Khóa NHÓM NGÀNH (khác khóa Premium): huy hiệu chỉ là ổ khóa, thẻ chứa cũng mờ đi */
+.exam-locked.group-locked::after {
+    content: "🔒";
+    font-size: 12px;
+    padding: 3px 8px;
+}
+.practice-card-locked { opacity: 0.8; }
+.practice-card-locked h2 { color: #8B8B84; }
   .promo-banner {
     background: #FBEFD2;
     margin: 15px;
@@ -482,6 +625,16 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 </style>
+<!-- 🔒 BẢNG THÔNG BÁO KHÓA NHÓM: script chính điền tiêu đề/nội dung theo ngôn ngữ
+     (group_lock_title / group_lock_body) khi học viên bấm vào đề của nhóm khác -->
+<div id="group-lock-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; backdrop-filter: blur(4px);">
+    <div style="background:white; width:90%; max-width:380px; padding:30px; border-radius:20px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 10px;">🔒</div>
+        <h2 id="group-lock-title" style="color:#C8102E; margin: 0 0 10px 0; font-size: 20px;"></h2>
+        <p id="group-lock-body" style="color:#64748b; font-size:14px; line-height:1.7; margin: 0 0 20px 0;"></p>
+        <button onclick="document.getElementById('group-lock-modal').style.display='none'" style="background:#C8102E; color:white; border:none; padding:10px 22px; border-radius:10px; font-weight:bold; cursor:pointer;" data-i18n="btn_later">Để sau</button>
+    </div>
+</div>
 <div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; backdrop-filter: blur(4px);">
     <div style="background:white; width:90%; max-width:380px; padding:30px; border-radius:20px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative;">
         

@@ -386,7 +386,27 @@
 
   <!-- 💬 Nút CHAT NỔI: mặc định trỏ trang đăng nhập (cho khách); module xác thực
        bên dưới sẽ đổi sang chat.html khi đã đăng nhập + hiện số tin chưa đọc -->
-  <a id="chat-fab" href="login.html" class="chat-fab">💬<span id="chat-fab-badge" class="chat-fab-badge" style="display:none"></span></a>
+  <a id="chat-fab" href="login.html" class="chat-fab">💬<span id="chat-fab-badge" class="chat-fab-badge" style="display:none"></span><span id="chat-fab-close" class="chat-fab-close" role="button" aria-label="Tắt nút chat">✕</span></a>
+  <script>
+    // ✕ nhỏ ở góc trên nút chat nổi: ai không thích thì tắt; lựa chọn được nhớ
+    // trên máy (localStorage 'chat_btn_dismissed'). Chat vẫn mở được từ trang Hướng dẫn học.
+    (function () {
+      var fab = document.getElementById('chat-fab');
+      if (!fab) return;
+      try {
+        if (localStorage.getItem('chat_btn_dismissed') === '1') { fab.style.display = 'none'; return; }
+      } catch (e) {}
+      var closeBtn = document.getElementById('chat-fab-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          ev.stopPropagation();
+          try { localStorage.setItem('chat_btn_dismissed', '1'); } catch (e) {}
+          fab.style.display = 'none';
+        });
+      }
+    })();
+  </script>
 
   <div class="card">
     <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
@@ -572,7 +592,8 @@
    học viên đã đăng nhập vào thẳng chat.html; huy hiệu = số tin Admin chưa đọc */
 .chat-fab { position: fixed; right: 16px; bottom: 18px; z-index: 900; width: 56px; height: 56px; border-radius: 50%; background: #C8102E; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 6px 18px rgba(120,10,30,.35); border: 2px solid #fff; }
 .chat-fab:active { transform: translateY(1px); }
-.chat-fab-badge { position: absolute; top: -4px; right: -4px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 999px; background: #191919; color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
+.chat-fab-badge { position: absolute; top: -4px; left: -4px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 999px; background: #191919; color: #fff; font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
+.chat-fab-close { position: absolute; top: -6px; right: -6px; width: 22px; height: 22px; border-radius: 50%; background: #fff; color: #666; font-size: 11px; font-weight: 700; line-height: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #ddd; box-shadow: 0 1px 4px rgba(0,0,0,.2); cursor: pointer; z-index: 2; }
 .exam-locked {
     opacity: 0.5 !important;
     background: #f1f5f9 !important;

@@ -264,6 +264,39 @@
     white-space: pre-line !important;
 }
 
+    /* ===== SỔ CÂU SAI — phương án B "thẻ gọn" (chỉ áp dụng khi body.deck-mode,
+       tức exam.html?wrong=1; chế độ thi thường không đổi) ===== */
+    #deck-head { margin-bottom: 14px; }
+    .deck-head-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .deck-head-label { font-size: 15px; color: #5A5A55; }
+    .deck-head-label b { color: #191919; font-size: 16px; }
+    .deck-wrong-tag { background: #FDECEF; color: #C8102E; font-weight: 700; font-size: 12.5px; padding: 4px 11px; border-radius: 999px; white-space: nowrap; }
+    .deck-progress { height: 6px; background: #E7E7E0; border-radius: 999px; overflow: hidden; }
+    .deck-progress-fill { height: 100%; background: #C8102E; border-radius: 999px; transition: width .25s ease; }
+    body.deck-mode .opt .mark { float: right; font-size: 13px; margin-left: 10px; }
+    body.deck-mode .opt.correct { background: #fff; border-color: #C8102E; color: #191919; }
+    body.deck-mode .opt.correct .mark { color: #C8102E; }
+    body.deck-mode .opt.incorrect { background: #FDECEF; border-color: #E8A0AE; color: #191919; }
+    body.deck-mode .opt.incorrect .mark { color: #C8102E; }
+    body.deck-mode .opt-num { color: #8B8B84; font-weight: 600; }
+    body.deck-mode #nextBtn { background: #C8102E; color: #fff; border-color: #C8102E; }
+    body.deck-mode #nextBtn:disabled { background: #E7E7E0; color: #8B8B84; border-color: #E7E7E0; }
+    body.deck-mode #backBtn:disabled { opacity: .45; }
+    .deck-explain-title { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 16px; margin-bottom: 10px; color: #191919; }
+    .deck-explain-title::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: #C8102E; flex: none; }
+    .deck-tr-line { color: #5A5A55; line-height: 1.7; margin-bottom: 10px; }
+    .deck-ex-text { line-height: 1.75; }
+    .deck-vocab { margin-top: 12px; border-top: 1px dashed #D8D8D0; padding-top: 12px; display: grid; gap: 9px; }
+    .deck-vocab-row { display: grid; grid-template-columns: 42% 1fr; gap: 12px; align-items: baseline; }
+    .deck-vocab-term { font-weight: 600; line-height: 1.6; }
+    .deck-vocab-mean { color: #3A3A35; line-height: 1.6; }
+    body.deck-mode #result.deck-result { background: transparent; border: none; padding: 0; box-shadow: none; }
+    .deck-result-head .result-title { margin-bottom: 4px; }
+    .deck-result-line { font-weight: 700; }
+    .deck-wrong-title { font-weight: 800; margin: 14px 2px 10px; }
+    .deck-result-item .deck-tr-line { margin-top: 8px; }
+    .deck-redo-static { position: static !important; width: 100%; margin-top: 4px; box-shadow: none; }
+
   </style>
 
   <!-- ⭐ BẢNG NÂNG CẤP: exam.js hiện bảng này khi tài khoản free chạm câu thứ 6 -->

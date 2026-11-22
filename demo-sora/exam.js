@@ -27,6 +27,9 @@
   // 📕 CHẾ ĐỘ SỔ CÂU SAI (exam.html?wrong=1): danh sách câu lấy từ exam_progress.wrong
   // sau khi tiến trình nạp xong (xem khối nạp tiến trình bên dưới) — không theo set/practice.
   const IS_DECK = params.get("wrong") === "1";
+  // Giao diện SỔ CÂU SAI theo phương án B (thẻ gọn): mọi CSS riêng của buổi ôn
+  // được scope dưới body.deck-mode trong exam.html — chế độ thi thường không đổi.
+  if (IS_DECK) document.body.classList.add('deck-mode');
   let DATA = [];
 
   // ================== HỖ TRỢ g1_ & g2_ ==================
@@ -325,7 +328,7 @@
           if (!(bankIdx >= 0 && bankIdx < arr.length)) bankIdx = -1;
         }
         if (bankIdx >= 0 && arr[bankIdx]) {
-          items.push({ q: arr[bankIdx], bankIdx, setKey: sk, qid, at: (wrong[sk][qid] && wrong[sk][qid].at) || 0 });
+          items.push({ q: arr[bankIdx], bankIdx, setKey: sk, qid, at: (wrong[sk][qid] && wrong[sk][qid].at) || 0, n: (wrong[sk][qid] && wrong[sk][qid].n) || 1 });
         }
       });
     });
@@ -333,14 +336,87 @@
     return items;
   }
 
-  function showDeckNote() {
+  // ===== ĐẦU BUỔI ÔN (phương án B): thanh tiến độ mảnh + "Câu X/Y câu cần ôn"
+  // + thẻ "Đã sai N lần" của câu hiện tại — thay cho banner nâu cũ. =====
+  function ensureDeckHead() {
     const main = document.querySelector('main.container');
-    if (!main || document.getElementById('deck-note')) return;
-    const div = document.createElement('div');
-    div.id = 'deck-note';
-    div.textContent = t('deck_title') + ' — ' + t('deck_remaining', { x: deckCount() });
-    div.style.cssText = 'background:#2A2118;border:1.5px solid #C9A24B;color:#F5D98A;padding:10px 14px;border-radius:10px;margin-bottom:12px;font-size:14px;font-weight:700;text-align:center;';
-    main.insertBefore(div, main.firstChild);
+    if (!main) return null;
+    let head = document.getElementById('deck-head');
+    if (!head) {
+      head = document.createElement('div');
+      head.id = 'deck-head';
+      head.innerHTML = `
+        <div class="deck-head-row">
+          <div class="deck-head-label"></div>
+          <span class="deck-wrong-tag" style="display:none"></span>
+        </div>
+        <div class="deck-progress"><div class="deck-progress-fill"></div></div>`;
+      main.insertBefore(head, main.firstChild);
+    }
+    return head;
+  }
+
+  function updateDeckHead() {
+    if (!IS_DECK || !questions.length) return;
+    const head = ensureDeckHead();
+    if (!head) return;
+    head.style.display = '';
+    head.querySelector('.deck-head-label').innerHTML =
+      `<b>${t('deck_head_q', { a: cur + 1 })}</b> <span>${t('deck_head_total', { b: questions.length })}</span>`;
+    const tag = head.querySelector('.deck-wrong-tag');
+    const n = questions[cur] && questions[cur].__deckN;
+    if (n) { tag.textContent = t('deck_wrong_times', { n }); tag.style.display = ''; }
+    else tag.style.display = 'none';
+    head.querySelector('.deck-progress-fill').style.width = ((cur + 1) / questions.length * 100) + '%';
+  }
+
+  // Thẻ GIẢI THÍCH riêng (phương án B): nằm NGOÀI thẻ câu hỏi, ngay dưới #quiz.
+  // Vẫn mang id "explainBox" + class "explain-box" để dùng chung logic hiện/ẩn
+  // và chuyển furigana với chế độ thường.
+  function ensureDeckExplain() {
+    let el = document.getElementById('explainBox');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'explainBox';
+      el.className = 'card explain-box deck-explain';
+      el.style.display = 'none';
+      quizEl.after(el);
+    }
+    return el;
+  }
+
+  // Tách phần "Từ vựng:" đang nằm cuối field explain thành danh sách riêng để
+  // trình bày dạng bảng 2 cột (thuật ngữ — nghĩa) trong thẻ giải thích.
+  function splitVocab(explain) {
+    if (!explain) return { main: explain || "", vocab: null };
+    const lines = String(explain).split('\n');
+    const idx = lines.findIndex(l => /^Từ vựng\s*:/.test(l.trim()));
+    if (idx < 0) return { main: explain, vocab: null };
+    const main = lines.slice(0, idx).join('\n').trim();
+    const vocabLines = lines.slice(idx + 1).map(s => s.trim()).filter(Boolean);
+    const rest = lines[idx].trim().replace(/^Từ vựng\s*:\s*/, '');
+    if (rest && rest !== lines[idx].trim()) vocabLines.unshift(rest);
+    return { main, vocab: vocabLines.length ? vocabLines : null };
+  }
+
+  function vocabRowHTML(line) {
+    const m = line.match(/^(.+?)[:：]\s*(.+)$/);
+    if (!m) return `<div class="deck-vocab-row"><div class="deck-vocab-term">${line}</div><div></div></div>`;
+    return `<div class="deck-vocab-row"><div class="deck-vocab-term">${m[1].trim()}</div><div class="deck-vocab-mean">${m[2].trim()}</div></div>`;
+  }
+
+  // Khối dịch + giải thích + từ vựng + mẹo nhớ dùng cho thẻ giải thích của buổi ôn
+  // và từng thẻ kết quả câu sai (cùng một ngôn ngữ trình bày của phương án B).
+  function explainBlockHTML(q) {
+    const viPick = pickVi(q);
+    const tipText = pickTip(q);
+    const parts = splitVocab(pickExplain(q));
+    return `
+      ${viPick.text ? `<div class="deck-tr-line">${viPick.translated ? t("label_translate_plain") : t("label_translate")} ${viPick.text}</div>` : ""}
+      ${parts.main ? `<div class="deck-ex-text">${parts.main.replace(/\n/g, '<br>')}</div>` : ""}
+      ${parts.vocab ? `<div class="deck-vocab">${parts.vocab.map(vocabRowHTML).join("")}</div>` : ""}
+      ${tipText ? `<div class="tip">${tipText}</div>` : ""}
+    `;
   }
 
   function initDeck() {
@@ -349,11 +425,12 @@
       const bq = buildQ(it.q, it.bankIdx, true); // buổi ôn giữ nguyên thứ tự đáp án gốc
       bq.__deckSet = it.setKey;
       bq.__deckQid = it.qid;
+      bq.__deckN = it.n || 1; // số lần đã sai — hiện ở thẻ "Đã sai N lần" trên đầu buổi ôn
       return bq;
     });
     user = new Array(questions.length).fill(null);
     cur = 0;
-    showDeckNote();
+    ensureDeckHead();
     render();
   }
 
@@ -447,21 +524,36 @@
     const viPick = pickVi(q);
     const tipText = pickTip(q);
 
-    const html = `
+    // Buổi ôn (phương án B): đáp án có số thứ tự, dấu đúng/sai dạng chữ mảnh
+    // (✓ Đúng / ✗ Bạn chọn) thay cho emoji; chế độ thường giữ nguyên ✅/❌.
+    const optionsHTML = q.options.map((op,i)=>{
+      let cls="opt", mark="";
+      if(hasAnswered){
+        if(op.correct){ cls+=" correct"; mark = IS_DECK ? ("✓ " + t("deck_mark_correct")) : "✅"; }
+        else if(user[cur]===i){ cls+=" incorrect"; mark = IS_DECK ? ("✗ " + t("deck_mark_yours")) : "❌"; }
+      }
+      const num = IS_DECK ? `<span class="opt-num">${i+1}.</span> ` : "";
+      // Vài câu trong ngân hàng đã có sẵn số "1." ở đầu đáp án — buổi ôn tự đánh số
+      // nên gỡ tiền tố số cũ để không hiện trùng "1. 1.".
+      const opText = IS_DECK ? String(op.text).replace(/^\s*\d+\s*[.．、)]\s*/, '') : op.text;
+      return `<div class="${cls}" data-idx="${i}">${num}${opText} <span class="mark">${mark}</span></div>`;
+    }).join("");
+
+    const html = IS_DECK ? `
+      <div class="q-text">${q.q}</div>
+      ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
+      ${q.img ? `<div class="q-img"><img src="../${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
+      <div class="options">${optionsHTML}</div>
+      <div class="nav">
+        <button class="btn" id="backBtn" ${cur===0?"disabled":""}>${t("btn_back")}</button>
+        <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>${t("btn_next")}</button>
+      </div>
+    ` : `
       <div class="q-head"><div class="q-index">${t("q_index", {a: cur+1, b: questions.length})}</div></div>
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
       ${q.img ? `<div class="q-img"><img src="../${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
-      <div class="options">
-        ${q.options.map((op,i)=>{
-          let cls="opt", mark="";
-          if(hasAnswered){
-            if(op.correct){ cls+=" correct"; mark="✅"; }
-            else if(user[cur]===i){ cls+=" incorrect"; mark="❌"; }
-          }
-          return `<div class="${cls}" data-idx="${i}">${op.text} <span class="mark">${mark}</span></div>`;
-        }).join("")}
-      </div>
+      <div class="options">${optionsHTML}</div>
       <div class="nav">
         <button class="btn" id="backBtn" ${cur===0?"disabled":""}>${t("btn_back")}</button>
         <button class="btn" id="explainBtn">${t("btn_explain")}</button>
@@ -475,6 +567,13 @@
     `;
 
     quizEl.innerHTML = html;
+    if (IS_DECK) {
+      updateDeckHead();
+      // Thẻ giải thích riêng dưới thẻ câu hỏi — chỉ hiện sau khi đã trả lời.
+      const exCard = ensureDeckExplain();
+      exCard.innerHTML = `<div class="deck-explain-title">${t("deck_explain_title")}</div>` + explainBlockHTML(q);
+      exCard.style.display = hasAnswered ? "block" : "none";
+    }
     applyFuriganaToPage();
 
     quizEl.querySelectorAll(".opt").forEach(el => {
@@ -496,10 +595,10 @@
           const mark = optEl.querySelector(".mark");
           if (questions[cur].options[j].correct) {
             optEl.classList.add("correct");
-            mark.textContent = "✅";
+            mark.textContent = IS_DECK ? ("✓ " + t("deck_mark_correct")) : "✅";
           } else if (j === idx) {
             optEl.classList.add("incorrect");
-            mark.textContent = "❌";
+            mark.textContent = IS_DECK ? ("✗ " + t("deck_mark_yours")) : "❌";
           }
           optEl.style.pointerEvents = "none";
         });
@@ -523,11 +622,15 @@
       }
     };
 
-    $("#explainBtn").onclick = () => {
-      const box = $("#explainBox");
-      box.style.display = (box.style.display === "none") ? "block" : "none";
-      applyFuriganaToPage();
-    };
+    // Buổi ôn không có nút Giải thích riêng (thẻ giải thích tự hiện sau khi trả lời)
+    const explainBtn = $("#explainBtn");
+    if (explainBtn) {
+      explainBtn.onclick = () => {
+        const box = $("#explainBox");
+        box.style.display = (box.style.display === "none") ? "block" : "none";
+        applyFuriganaToPage();
+      };
+    }
   }
 
   render();
@@ -550,6 +653,20 @@
       wrongs.push(q);
       const viPick = pickVi(q);
       const tipText = pickTip(q);
+      if (IS_DECK) {
+        // Phương án B: mỗi câu sai là MỘT thẻ riêng, khối giải thích dùng chung
+        // ngôn ngữ trình bày với thẻ giải thích của buổi ôn.
+        return `
+        <div class="card deck-result-item explain-box">
+          <div class="q-text">${q.q}</div>
+          ${q.hira?`<div class="hira">${q.hira}</div>`:""}
+          ${q.img?`<div class="q-img"><img src="../${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`:""}
+          <div class="answer-line">❌ <b>${t("label_you_chose")}</b> ${picked!==null?q.options[picked].text:t("label_not_chosen")}</div>
+          <div class="answer-line">✅ <b>${t("label_correct_answer")}</b> ${right.text}</div>
+          ${explainBlockHTML(q)}
+        </div>
+      `;
+      }
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
@@ -590,18 +707,42 @@
 
     const deckLine = IS_DECK
       ? (deckCount() === 0 && deckCleared > 0
-          ? `<div style="margin-top:8px;font-weight:700;">${t("deck_all_cleared")}</div>`
-          : `<div style="margin-top:8px;font-weight:700;">${t("deck_result", { a: deckCleared, b: deckCount() })}</div>`)
+          ? `<div class="deck-result-line">${t("deck_all_cleared")}</div>`
+          : `<div class="deck-result-line">${t("deck_result", { a: deckCleared, b: deckCount() })}</div>`)
       : "";
 
+    if (IS_DECK) {
+      // Ẩn đầu buổi ôn + thẻ giải thích (nằm ngoài #quiz); cứu nút Làm lại câu sai
+      // nếu lần nộp trước đã chuyển nó vào trong #result (ghi đè innerHTML sẽ xóa mất nút).
+      const dh = document.getElementById('deck-head');
+      if (dh) dh.style.display = 'none';
+      const eb = document.getElementById('explainBox');
+      if (eb) eb.style.display = 'none';
+      if (redoBtn && redoBtn.parentNode === resEl) {
+        document.body.appendChild(redoBtn);
+        redoBtn.classList.remove('deck-redo-static');
+      }
+      resEl.classList.add('deck-result');
+    }
+
     resEl.style.display="block";
-    resEl.innerHTML = `
+    resEl.innerHTML = IS_DECK ? `
+      <div class="card deck-result-head">
+        <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
+        ${deckLine}
+      </div>
+      ${wrongs.length?`<div class="deck-wrong-title">${t("result_wrong_list")}</div>${html}`:`<div class="card">${t("result_perfect")}</div>`}
+    ` : `
       <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
-      ${deckLine}
       ${wrongs.length?`<div><b>${t("result_wrong_list")}</b></div>${html}`:`<div>${t("result_perfect")}</div>`}
     `;
     applyFuriganaToPage();
     redoBtn.style.display = wrongs.length ? "block" : "none";
+    if (IS_DECK && wrongs.length) {
+      // Phương án B: nút làm lại nằm TĨNH cuối thẻ kết quả, không nổi đè lên chữ.
+      redoBtn.classList.add('deck-redo-static');
+      resEl.appendChild(redoBtn);
+    }
     redoBtn.onclick = () => {
       inRedo = true; // Làm lại câu sai là chế độ riêng — không ghi đè tiến trình của bộ đề gốc
       shuffle(wrongs);

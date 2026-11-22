@@ -87,7 +87,7 @@
                 if (bucket && typeof bucket === 'object') n += Object.keys(bucket).length;
             });
         }
-        el.textContent = ' (' + n + ')';
+        el.textContent = t('deck_count_unit', { n });
     }
 
     // ===== BẢNG THÔNG BÁO KHÓA NHÓM (3 ngôn ngữ qua i18n) =====
@@ -409,7 +409,7 @@
        Số đếm do script chính điền từ exam_progress.wrong — khách tính từ
        localStorage của máy, học viên tính từ hồ sơ Firestore của mình.
        Bấm vào -> buổi ôn exam.html?wrong=1: đúng thì ra khỏi sổ, sai thì ở lại. -->
-  <a href="exam.html?wrong=1" class="deck-btn"><span data-i18n="deck_btn">📕 Sổ câu sai</span><span id="deck-count"></span></a>
+  <a href="exam.html?wrong=1" class="deck-btn"><span data-i18n="deck_btn">📕 Sổ câu sai</span><span id="deck-count"></span><span class="deck-chevron" aria-hidden="true">›</span></a>
 
   <!-- 💬 Nút CHAT NỔI: mặc định trỏ trang đăng nhập (cho khách); module xác thực
        bên dưới sẽ đổi sang chat.html khi đã đăng nhập + hiện số tin chưa đọc -->
@@ -614,24 +614,36 @@
     box-shadow: 0 3px 10px rgba(20,16,10,.12);
 }
 .guide-btn:active { transform: translateY(1px); }
+/* Phương án B: hàng trắng gọn, viền trái đỏ, số câu dạng thẻ hồng ở bên phải */
 .deck-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 13px 16px;
+    gap: 10px;
+    padding: 14px 16px;
     margin: 0 15px 14px;
-    border-radius: 12px;
-    background: #2A2118;
-    color: #F5D98A;
+    border-radius: 14px;
+    background: #fff;
+    color: #191919;
     font-weight: 800;
     font-size: 15px;
     text-decoration: none;
-    border: 1.5px solid #C9A24B;
-    box-shadow: 0 3px 10px rgba(20,16,10,.12);
+    border: 1.5px solid #E7E7E0;
+    border-left: 6px solid #C8102E;
+    box-shadow: 0 2px 8px rgba(20,16,10,.06);
 }
 .deck-btn:active { transform: translateY(1px); }
-.deck-btn #deck-count { font-weight: 800; }
+.deck-btn #deck-count {
+    margin-left: auto;
+    background: #FDECEF;
+    color: #C8102E;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.deck-btn #deck-count:empty { display: none; }
+.deck-chevron { color: #8B8B84; font-size: 20px; font-weight: 700; line-height: 1; }
 
 /* Nút chat nổi góc dưới phải — khách bấm vào sẽ sang trang đăng nhập,
    học viên đã đăng nhập vào thẳng chat.html; huy hiệu = số tin Admin chưa đọc */

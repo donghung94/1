@@ -56,6 +56,19 @@
 
         .actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
         @media (max-width: 520px) { .actions { grid-template-columns: 1fr; } }
+
+        .editor-panel { margin-top: 14px; }
+        .editor-title { margin: 0 0 6px; font-size: 17px; font-weight: 800; }
+        .editor-desc { margin: 0 0 10px; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+        .editor-textarea { width: 100%; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; resize: vertical; }
+        .editor-textarea:focus { border-color: var(--bronze); }
+        .editor-input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--line); border-radius: 12px; outline: none; font-size: 14px; font-family: inherit; background: #fff; }
+        .editor-input:focus { border-color: var(--bronze); }
+        .editor-field { margin-bottom: 10px; }
+        .editor-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--ink-2); margin-bottom: 5px; }
+        .editor-btns { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+        .editor-btns .btn { flex: 1; cursor: pointer; font-family: inherit; }
+        .editor-status { font-size: 13px; margin-top: 10px; min-height: 18px; }
         .btn { display: flex; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 11px 8px; border-radius: 12px; font-weight: 700; font-size: 13px; text-decoration: none; border: 1.5px solid var(--bronze); background: var(--cream); color: var(--red); }
         .btn.primary { background: var(--red); border-color: var(--red); color: #fff; }
         .btn:active { transform: translateY(1px); }
@@ -94,6 +107,42 @@
             <a class="btn" href="language.html">🌐 Đổi ngôn ngữ</a>
             <a class="btn" href="https://donghung94.github.io/1/" target="_blank" rel="noopener">🚀 Mở bản live</a>
         </div>
+    </div>
+
+    <!-- 📢 Ô NHẬP THÔNG BÁO TRANG CHỦ — lưu vào Firestore config/announcement;
+         trang chủ đọc doc này và hiện banner cho tất cả mọi người (kể cả khách) -->
+    <div id="announce-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">📢 Thông báo trang chủ</h2>
+        <p class="editor-desc">Nội dung ở đây sẽ hiện trong banner "THÔNG BÁO TỪ ADMIN" ở đầu trang chủ — tất cả mọi người (kể cả khách chưa đăng nhập) đều thấy. Xuống dòng được giữ nguyên. Để trống rồi bấm "Đăng thông báo" = ẩn banner.</p>
+        <textarea id="ann-text" class="editor-textarea" rows="5" placeholder="Nhập nội dung thông báo..."></textarea>
+        <div class="editor-btns">
+            <button id="ann-publish" class="btn primary" type="button">Đăng thông báo</button>
+            <button id="ann-clear" class="btn" type="button">Xóa thông báo</button>
+        </div>
+        <div id="ann-status" class="editor-status"></div>
+    </div>
+
+    <!-- 📞 Ô NHẬP LIÊN HỆ HỖ TRỢ — lưu vào Firestore config/contacts;
+         trang Hướng dẫn học chỉ hiện nút của kênh nào có link, kênh để trống sẽ ẩn -->
+    <div id="contacts-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">📞 Liên hệ hỗ trợ</h2>
+        <p class="editor-desc">Dán link đầy đủ (bắt đầu bằng https://) cho từng kênh. Kênh nào để trống thì nút liên hệ tương ứng sẽ không hiện trong trang Hướng dẫn học.</p>
+        <div class="editor-field">
+            <label for="ct-fb">Facebook</label>
+            <input id="ct-fb" class="editor-input" type="url" placeholder="https://www.facebook.com/...">
+        </div>
+        <div class="editor-field">
+            <label for="ct-zalo">Zalo</label>
+            <input id="ct-zalo" class="editor-input" type="url" placeholder="https://zalo.me/...">
+        </div>
+        <div class="editor-field">
+            <label for="ct-line">LINE</label>
+            <input id="ct-line" class="editor-input" type="url" placeholder="https://line.me/...">
+        </div>
+        <div class="editor-btns">
+            <button id="ct-save" class="btn primary" type="button">Lưu liên hệ</button>
+        </div>
+        <div id="ct-status" class="editor-status"></div>
     </div>
 </div>
 
@@ -160,7 +209,7 @@
 <script type="module">
     // ===== Cổng Admin: chưa đăng nhập hoặc không có role 'admin' -> về trang chủ ngay, không hiện dữ liệu =====
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
     const firebaseConfig = {
@@ -213,6 +262,70 @@
 
             document.getElementById('dash-loading').style.display = 'none';
             document.getElementById('dash-root').style.display = 'block';
+
+            // ===== 📢 Ô nhập thông báo trang chủ (Firestore config/announcement) =====
+            const annPanel = document.getElementById('announce-panel');
+            const annText = document.getElementById('ann-text');
+            const annStatus = document.getElementById('ann-status');
+            annPanel.style.display = 'block';
+            try {
+                const aSnap = await getDoc(doc(db, "config", "announcement"));
+                if (aSnap.exists()) annText.value = aSnap.data().text || '';
+            } catch (e) {
+                annStatus.textContent = '⚠️ Không đọc được thông báo hiện tại: ' + e.message;
+            }
+            const saveAnnouncement = async (text) => {
+                await setDoc(doc(db, "config", "announcement"),
+                    { text: text, updatedAt: new Date().toISOString() }, { merge: true });
+            };
+            document.getElementById('ann-publish').addEventListener('click', async () => {
+                annStatus.textContent = '⏳ Đang đăng...';
+                try {
+                    await saveAnnouncement(annText.value);
+                    annStatus.textContent = annText.value.trim()
+                        ? '✅ Đã đăng thông báo — trang chủ sẽ hiện nội dung mới.'
+                        : '✅ Đã xóa thông báo — banner trang chủ sẽ ẩn.';
+                } catch (e) { annStatus.textContent = '❌ Đăng thất bại: ' + e.message; }
+            });
+            document.getElementById('ann-clear').addEventListener('click', async () => {
+                annStatus.textContent = '⏳ Đang xóa...';
+                try {
+                    await saveAnnouncement('');
+                    annText.value = '';
+                    annStatus.textContent = '✅ Đã xóa thông báo — banner trang chủ sẽ ẩn.';
+                } catch (e) { annStatus.textContent = '❌ Xóa thất bại: ' + e.message; }
+            });
+
+            // ===== 📞 Ô nhập liên hệ hỗ trợ (Firestore config/contacts) =====
+            const ctPanel = document.getElementById('contacts-panel');
+            const ctFb = document.getElementById('ct-fb');
+            const ctZalo = document.getElementById('ct-zalo');
+            const ctLine = document.getElementById('ct-line');
+            const ctStatus = document.getElementById('ct-status');
+            ctPanel.style.display = 'block';
+            try {
+                const cSnap = await getDoc(doc(db, "config", "contacts"));
+                if (cSnap.exists()) {
+                    const c = cSnap.data();
+                    ctFb.value = c.fb || '';
+                    ctZalo.value = c.zalo || '';
+                    ctLine.value = c.line || '';
+                }
+            } catch (e) {
+                ctStatus.textContent = '⚠️ Không đọc được liên hệ hiện tại: ' + e.message;
+            }
+            document.getElementById('ct-save').addEventListener('click', async () => {
+                ctStatus.textContent = '⏳ Đang lưu...';
+                try {
+                    await setDoc(doc(db, "config", "contacts"), {
+                        fb: ctFb.value.trim(),
+                        zalo: ctZalo.value.trim(),
+                        line: ctLine.value.trim(),
+                        updatedAt: new Date().toISOString()
+                    }, { merge: true });
+                    ctStatus.textContent = '✅ Đã lưu liên hệ — trang Hướng dẫn học sẽ dùng link mới.';
+                } catch (e) { ctStatus.textContent = '❌ Lưu thất bại: ' + e.message; }
+            });
         } catch (e) {
             console.error(e);
             document.getElementById('dash-loading').textContent = "❌ Lỗi tải dữ liệu: " + e.message;

@@ -14,7 +14,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Loại xe lu cỡ nhỏ điều khiển bằng tay được gọi là gì?",
-  explain: "**ハンドガイドローラー（Hand guide roller）** là xe lu nhỏ điều khiển bằng tay, dùng để nén mặt đường hoặc nền đất chặt hơn trong không gian hẹp.",
+  explain: "**ハンドガイドローラー（Hand guide roller）** là xe lu nhỏ điều khiển bằng tay, dùng để nén mặt đường hoặc nền đất chặt hơn trong không gian hẹp.\n\nTừ vựng:\n手押し型（ておしがた）: Loại đẩy, điều khiển bằng tay\n小型（こがた）: Cỡ nhỏ\nロードローラー: Xe lu\nハンドガイドローラー: Xe lu nhỏ điều khiển bằng tay\nアスファルトフィニッシャー: Máy rải nhựa đường\nコンクリートミキサー: Máy trộn bê tông",
   tip: "💡 '手押し型' = loại đẩy bằng tay, thường thấy khi làm đường nhỏ hoặc vỉa hè."
 },
 {
@@ -28,7 +28,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Hình này là công việc gì?",
-  explain: "Hình mô tả **クレーン作業（công việc vận hành cần cẩu）**, sử dụng cần trục để nâng và di chuyển vật nặng.",
+  explain: "Hình mô tả **クレーン作業（công việc vận hành cần cẩu）**, sử dụng cần trục để nâng và di chuyển vật nặng.\n\nTừ vựng:\n絵（え）: Hình vẽ, bức tranh\n作業（さぎょう）: Công việc, thao tác\nクレーン作業（さぎょう）: Công việc vận hành cần cẩu\n玉掛（たまかけ）作業（さぎょう）: Công việc móc buộc hàng để cẩu\nウインチ作業（さぎょう）: Công việc dùng tời kéo\n浚渫（しゅんせつ）作業（さぎょう）: Công việc nạo vét",
   tip: "💡 クレーン = cần cẩu, dùng để nâng – hạ vật nặng."
 },
 
@@ -43,7 +43,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Công việc trong hình này được gọi là gì?",
-  explain: "Đây là **玉掛け作業（たまかけさぎょう）**, tức là công việc móc buộc vật nặng (ở đây là khối bê tông lớn) để cẩu lên bằng cần cẩu.",
+  explain: "Đây là **玉掛け作業（たまかけさぎょう）**, tức là công việc móc buộc vật nặng (ở đây là khối bê tông lớn) để cẩu lên bằng cần cẩu.\n\nTừ vựng:\n玉掛（たまかけ）作業（さぎょう）: Công việc móc buộc hàng để cẩu\nクレーン作業（さぎょう）: Công việc vận hành cần cẩu\nウインチ作業（さぎょう）: Công việc dùng tời kéo\n固定（こてい）作業（さぎょう）: Công việc cố định vật\n呼（よ）ぶ: Gọi là, gọi tên",
   tip: "💡 玉掛け = móc, treo vật nặng vào móc cẩu, thường có người hướng dẫn ra hiệu."
 },
 {
@@ -56,7 +56,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Khi xây đê chắn sóng hoặc bờ cảng, hộp bê tông lớn được dùng gọi là gì?",
-  explain: "**ケーソン（Caisson）** là kết cấu hộp bê tông lớn, dùng làm nền hoặc thân cho cảng, đê chắn sóng, bến tàu…",
+  explain: "**ケーソン（Caisson）** là kết cấu hộp bê tông lớn, dùng làm nền hoặc thân cho cảng, đê chắn sóng, bến tàu…\n\nTừ vựng:\n防波堤（ぼうはてい）: Đê chắn sóng\n岸壁（がんぺき）: Bờ kè, bến cảng\n構造物（こうぞうぶつ）: Kết cấu, công trình\n大型（おおがた）: Cỡ lớn\n箱（はこ）: Hộp, thùng\nケーソン: Thùng chìm bê tông đúc sẵn (caisson)\n消波（しょうは）ブロック: Khối tiêu sóng\nアンカー: Neo",
   tip: "💡 ケーソン thường được chế tạo sẵn rồi kéo ra biển để đặt xuống đáy."
 },
 
@@ -71,7 +71,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Công việc trong hình là gì?",
-  explain: "Hình cho thấy công nhân đang **vặn chặt フォームタイ (form tie)** – thanh nối cốp pha. Đây là công việc **フォームタイの締め付け作業**.",
+  explain: "Hình cho thấy công nhân đang **vặn chặt フォームタイ (form tie)** – thanh nối cốp pha. Đây là công việc **フォームタイの締め付け作業**.\n\nTừ vựng:\n配管（はいかん）工事（こうじ）: Công trình đường ống\nフォームタイ: Thanh giằng cốp pha (form tie)\n締め付け（しめつけ）: Việc siết chặt, vặn chặt\n大工（だいく）工事（こうじ）: Công trình mộc\n外装（がいそう）仕上（しあ）げ: Hoàn thiện bề mặt ngoài\n型枠（かたわく）: Cốp pha, ván khuôn",
   tip: "💡 フォームタイ là thanh kim loại dùng để cố định khoảng cách giữa hai ván khuôn (型枠)."
 },
 
@@ -85,7 +85,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Công việc bơm ép bê tông là loại công trình nào?",
-  explain: "**コンクリート圧送工事** là công trình bơm bê tông tươi (生コン) từ xe trộn bằng xe bơm (ポンプ車) vào khuôn cốp pha.",
+  explain: "**コンクリート圧送工事** là công trình bơm bê tông tươi (生コン) từ xe trộn bằng xe bơm (ポンプ車) vào khuôn cốp pha.\n\nTừ vựng:\n圧送（あっそう）: Bơm ép bằng áp lực\n生（なま）コン: Bê tông tươi\nポンプ車（しゃ）: Xe bơm bê tông\n型枠（かたわく）: Cốp pha, ván khuôn\n流し込む（ながしこむ）: Đổ, rót (bê tông) vào khuôn\nトラックアジテーター: Xe trộn bê tông\n砥石（といし）: Đá mài\n切断（せつだん）: Cắt đứt",
   tip: "💡 '圧送' nghĩa là 'bơm bằng áp lực' — thường thấy khi đổ bê tông tầng cao hoặc xa."
 },
 
@@ -100,7 +100,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Bức ảnh dưới đây là loại công việc nào?",
-  explain: "Đây là **剪定作業（せんていさぎょう）** – công việc cắt tỉa cây cảnh trong công trình sân vườn hoặc công viên.",
+  explain: "Đây là **剪定作業（せんていさぎょう）** – công việc cắt tỉa cây cảnh trong công trình sân vườn hoặc công viên.\n\nTừ vựng:\n写真（しゃしん）: Bức ảnh\n剪定（せんてい）作業（さぎょう）: Công việc cắt tỉa cây\nとび作業（さぎょう）: Công việc trên cao của thợ giàn giáo\n解体（かいたい）作業（さぎょう）: Công việc phá dỡ\n公園（こうえん）: Công viên",
   tip: "💡 剪定 = tỉa cành, chỉnh dáng cây cho gọn và đẹp."
 },
 {
@@ -113,7 +113,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Định nghĩa của nhựa đường (asphalt) là gì?",
-  explain: "**アスファルト** là chất còn lại khi chưng cất dầu mỏ, được gọi là **残留物（ざんりゅうぶつ）** sau khi tách xăng và dầu nhẹ.",
+  explain: "**アスファルト** là chất còn lại khi chưng cất dầu mỏ, được gọi là **残留物（ざんりゅうぶつ）** sau khi tách xăng và dầu nhẹ.\n\nTừ vựng:\n定義（ていぎ）: Định nghĩa\n軽油（けいゆ）: Dầu nhẹ, dầu diesel\n残留物（ざんりゅうぶつ）: Chất cặn còn lại sau chưng cất\n塗装（とそう）: Sơn, công việc sơn\n高温（こうおん）: Nhiệt độ cao\n常温（じょうおん）: Nhiệt độ thường\n液状（えきじょう）: Dạng lỏng\n固（かた）まる: Đông cứng lại",
   tip: "💡 Dùng làm vật liệu chính trong舗装（ほそう）工事 – công trình lát đường."
 },
 
@@ -127,7 +127,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Trong ba loại tai nạn lao động lớn, tai nạn thường xảy ra nhất khi làm việc trên cao là gì?",
-  explain: "Tai nạn thường gặp nhất khi làm việc trên cao là **墜落・転落（ついらく・てんらく）**, tức là té ngã hoặc rơi từ trên cao.",
+  explain: "Tai nạn thường gặp nhất khi làm việc trên cao là **墜落・転落（ついらく・てんらく）**, tức là té ngã hoặc rơi từ trên cao.\n\nTừ vựng:\n三大（さんだい）災害（さいがい）: Ba loại tai nạn lao động lớn\n高所（こうしょ）: Nơi cao, trên cao\n労働（ろうどう）災害（さいがい）: Tai nạn lao động\n墜落（ついらく）: Rơi người từ trên cao xuống\n転落（てんらく）: Ngã rơi xuống\n転倒（てんとう）: Vấp ngã tại chỗ\n飛来（ひらい）: Vật bay tới\n交通（こうつう）事故（じこ）: Tai nạn giao thông",
   tip: "💡 Cần sử dụng フルハーネス để phòng tránh ngã."
 },
 
@@ -141,7 +141,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Trong công trình lát đường, máy dùng để san phẳng nhựa đường là gì?",
-  explain: "**アスファルトフィニッシャー（asphalt finisher）** là máy chuyên để rải và san đều lớp nhựa đường trong công trình舗装（ほそう）.",
+  explain: "**アスファルトフィニッシャー（asphalt finisher）** là máy chuyên để rải và san đều lớp nhựa đường trong công trình舗装（ほそう）.\n\nTừ vựng:\n舗装（ほそう）工事（こうじ）: Công trình lát mặt đường\n敷き均す（しきならす）: Rải đều và san phẳng\n機械（きかい）: Máy móc\nアスファルトフィニッシャー: Máy rải nhựa đường\nディストリビューター: Xe rải, phun nhựa đường\nブルドーザ: Xe ủi đất\nハンドガイドローラー: Xe lu nhỏ điều khiển bằng tay",
   tip: "💡 Sau khi rải, dùng ロードローラー để nén chặt."
 },
 
@@ -155,7 +155,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Khi làm việc ở độ cao trên 5m, để đảm bảo an toàn, cần sử dụng thiết bị nào?",
-  explain: "Phải sử dụng **フルハーネス（full harness）** – dây đai an toàn toàn thân để phòng chống rơi ngã.",
+  explain: "Phải sử dụng **フルハーネス（full harness）** – dây đai an toàn toàn thân để phòng chống rơi ngã.\n\nTừ vựng:\n装備（そうび）: Trang bị\n安全（あんぜん）: An toàn\nフルハーネス: Dây đai an toàn toàn thân\n保護（ほご）メガネ: Kính bảo hộ\n手袋（てぶくろ）: Găng tay\n高（たか）さ: Độ cao\n超（こ）える: Vượt quá",
   tip: "💡 Từ 2m trở lên nên dùng dây an toàn; từ 5m trở lên bắt buộc dùng **full harness** theo quy định an toàn lao động."
 },
 {
@@ -168,7 +168,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 3,
   vi: "Nếu công việc sơn không được thực hiện đúng cách thì sẽ xảy ra hiện tượng nào là không phù hợp?",
-  explain: "Khi thi công sơn không đúng cách, lớp sơn (**塗膜**) có thể bị **ひび割れ（nứt）**, **剝がれ（bong tróc）**, hoặc **mất độ bóng（光沢を失う）**. Trong các đáp án, mất độ bóng là hiện tượng **không phù hợp nhất (不適切)**.",
+  explain: "Khi thi công sơn không đúng cách, lớp sơn (**塗膜**) có thể bị **ひび割れ（nứt）**, **剝がれ（bong tróc）**, hoặc **mất độ bóng（光沢を失う）**. Trong các đáp án, mất độ bóng là hiện tượng **không phù hợp nhất (不適切)**.\n\nTừ vựng:\n塗装（とそう）工事（こうじ）: Công trình sơn\n適切（てきせつ）: Thích hợp, đúng cách\n不適切（ふてきせつ）: Không thích hợp\n塗膜（とまく）: Lớp màng sơn\nひび割（わ）れ: Vết nứt, nứt nẻ\n発生（はっせい）: Phát sinh, xảy ra\n光沢（こうたく）: Độ bóng\n失（うしな）う: Mất đi\n乾燥（かんそう）: Khô, sự khô",
   tip: "💡 Đảm bảo điều kiện độ ẩm, nhiệt độ và lớp lót đúng quy trình để tránh lỗi bề mặt."
 },
 
@@ -182,7 +182,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Định nghĩa đúng của xe xúc lật (Wheel Loader) là gì?",
-  explain: "**ホイールローダ** là máy có bánh xe và gầu xúc ở phía trước, dùng để xúc, bốc, vận chuyển vật liệu như đất, cát, đá vụn.",
+  explain: "**ホイールローダ** là máy có bánh xe và gầu xúc ở phía trước, dùng để xúc, bốc, vận chuyển vật liệu như đất, cát, đá vụn.\n\nTừ vựng:\n定義（ていぎ）: Định nghĩa\n車体（しゃたい）: Thân xe, thân máy\n前方（ぜんぽう）: Phía trước\n大型（おおがた）: Cỡ lớn\nバケット: Gầu xúc\n車輪（しゃりん）: Bánh xe\n走行（そうこう）: Di chuyển, chạy\n積み込み（つみこみ）: Việc xúc bốc vật liệu lên\n運搬（うんぱん）: Vận chuyển\n掘削（くっさく）: Đào, khai đào",
   tip: "💡 Wheel loader = máy xúc lật bánh lốp (dạng có thể chạy bằng bánh xe, không phải xích)."
 },
 
@@ -196,7 +196,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Công trình tạo cảnh quan (造園工事) là gì?",
-  explain: "**造園工事（ぞうえんこうじ）** là công việc sắp đặt đá, cây, hoa… để tạo không gian cảnh quan tự nhiên và đẹp mắt.",
+  explain: "**造園工事（ぞうえんこうじ）** là công việc sắp đặt đá, cây, hoa… để tạo không gian cảnh quan tự nhiên và đẹp mắt.\n\nTừ vựng:\n造園（ぞうえん）工事（こうじ）: Công trình tạo cảnh quan, làm vườn\n自然（しぜん）: Tự nhiên\n樹木（じゅもく）: Cây cối\n草花（くさばな）: Hoa cỏ\n配置（はいち）: Bố trí, sắp đặt\n空間（くうかん）: Không gian\n撤去（てっきょ）: Tháo dỡ, dọn bỏ\n水準（すいじゅん）測量（そくりょう）: Đo đạc thủy chuẩn, đo cao độ",
   tip: "💡 Thường gặp trong công viên, khu vườn hoặc khu đô thị."
 },
 
@@ -210,7 +210,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Trước khi tiến hành công việc phá dỡ (解体工事), cần phải làm gì?",
-  explain: "Phải **確認する（xác nhận）** rằng **ライフライン（điện, nước, ga）đã được ngắt (止めている)** trước khi bắt đầu phá dỡ.",
+  explain: "Phải **確認する（xác nhận）** rằng **ライフライン（điện, nước, ga）đã được ngắt (止めている)** trước khi bắt đầu phá dỡ.\n\nTừ vựng:\n解体（かいたい）工事（こうじ）: Công trình phá dỡ\nライフライン: Đường tiện ích (điện, nước, gas)\n確認（かくにん）: Xác nhận, kiểm tra\n足場（あしば）: Giàn giáo\n設置（せっち）: Lắp đặt\n防音（ぼうおん）パネル: Tấm cách âm\n内部（ないぶ）: Bên trong\n重機（じゅうき）: Máy móc hạng nặng",
   tip: "💡 Nếu không ngắt, rất dễ xảy ra tai nạn cháy nổ, điện giật hoặc ngập nước."
 },
 {
@@ -223,7 +223,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Trong các mô tả về công việc phá dỡ (解体工事), điều nào là sai?",
-  explain: "Đáp án sai là **①** vì trước khi phá dỡ phải **ngắt (止める)** chứ không phải **mở (開通)** các đường điện, nước, ga (ライフライン).",
+  explain: "Đáp án sai là **①** vì trước khi phá dỡ phải **ngắt (止める)** chứ không phải **mở (開通)** các đường điện, nước, ga (ライフライン).\n\nTừ vựng:\n建造物（けんぞうぶつ）: Công trình xây dựng\n開通（かいつう）: Đang thông, đang cấp (điện, nước, gas)\n撤去（てっきょ）: Tháo dỡ, dọn bỏ\n騒音（そうおん）: Tiếng ồn\n対策（たいさく）: Biện pháp xử lý\n粉じん（ふんじん）: Bụi mịn công trường\n飛散（ひさん）: Bay phát tán\n防止（ぼうし）: Phòng ngừa\n覆（おお）う: Che phủ, bao phủ",
   tip: "💡 Khi解体工事, cần cắt nguồn điện, nước, gas trước để tránh tai nạn."
 },
 
@@ -237,7 +237,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 3,
   vi: "Trong các loại tai nạn gây tử vong tại công trường xây dựng, loại nào xảy ra nhiều nhất?",
-  explain: "Tai nạn gây chết người nhiều nhất trong xây dựng là **墜落（ついらく）– té ngã từ trên cao**.",
+  explain: "Tai nạn gây chết người nhiều nhất trong xây dựng là **墜落（ついらく）– té ngã từ trên cao**.\n\nTừ vựng:\n建築（けんちく）現場（げんば）: Công trường xây dựng\n死亡（しぼう）災害（さいがい）: Tai nạn gây chết người\n墜落（ついらく）: Rơi người từ trên cao xuống\n転倒（てんとう）: Vấp ngã tại chỗ\n激突（げきとつ）: Va chạm mạnh\n倒壊（とうかい）: Sụp đổ",
   tip: "💡 Luôn sử dụngフルハーネス khi làm việc ở độ cao để tránh墜落事故."
 },
 
@@ -252,7 +252,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Bộ phận được khoanh đỏ trong ảnh là loại vật liệu nào?",
-  explain: "Đây là **腕木（うでぎ）**, là thanh kim loại dùng để **đỡ tấm sàn giàn giáo (足場板)** từ phía dưới.",
+  explain: "Đây là **腕木（うでぎ）**, là thanh kim loại dùng để **đỡ tấm sàn giàn giáo (足場板)** từ phía dưới.\n\nTừ vựng:\n部材（ぶざい）: Cấu kiện, bộ phận\n足場板（あしばいた）: Tấm sàn giàn giáo\n外側（そとがわ）: Phía ngoài\n取り付ける（とりつける）: Lắp vào, gắn vào\n支（ささ）える: Chống đỡ, đỡ lấy\n腕木（うでぎ）: Thanh đỡ ngang của giàn giáo\n防音（ぼうおん）: Cách âm, chống ồn\n土砂（どしゃ）: Đất cát",
   tip: "💡 腕木 thường gắn ở khung giàn giáo, giúp chịu tải trọng của sàn thao tác."
 },
 
@@ -266,7 +266,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Tấm ván布板（ぬのいた）được móc và cố định vào đâu?",
-  explain: "布板 được **móc vào 腕木（うでぎ）**, là thanh ngang của giàn giáo để cố định và giữ vững vị trí sàn làm việc.",
+  explain: "布板 được **móc vào 腕木（うでぎ）**, là thanh ngang của giàn giáo để cố định và giữ vững vị trí sàn làm việc.\n\nTừ vựng:\n布板（ぬのいた）: Tấm ván sàn giàn giáo\n引っ掛ける（ひっかける）: Móc vào, treo vào\n固定（こてい）: Cố định\n腕木（うでぎ）: Thanh đỡ ngang của giàn giáo\n足場板（あしばいた）: Tấm sàn giàn giáo\n単管（たんかん）パイプ: Ống thép đơn của giàn giáo",
   tip: "💡 腕木（うでぎ）＝ thanh đỡ ngang giúp cố định板 (ván) trong giàn giáo."
 },
 {
@@ -279,7 +279,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Về công trình bê tông cốt thép, hãy chọn điều **không thích hợp**.",
-  explain: "Câu sai là **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — Thực tế, **bê tông mạnh về nén**, yếu về kéo, nên chèn thép để chịu lực kéo chứ không phải vì yếu nén.",
+  explain: "Câu sai là **① コンクリートは圧縮力が弱いため、鉄筋をいれて補うことができる** — Thực tế, **bê tông mạnh về nén**, yếu về kéo, nên chèn thép để chịu lực kéo chứ không phải vì yếu nén.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép, thép cây\n圧縮力（あっしゅくりょく）: Lực nén\n補（おぎな）う: Bù đắp, bổ sung\n酸化（さんか）: Sự oxi hóa\n錆（さび）: Gỉ sét\n性質（せいしつ）: Tính chất\n守（まも）る: Bảo vệ, giữ gìn\n不適切（ふてきせつ）: Không thích hợp",
   tip: "💡 Bê tông mạnh khi bị nén, yếu khi bị kéo → dùng thép để bù lực kéo, không phải lực nén."
 },
 {
@@ -294,7 +294,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Công việc hàn hồ quang (アーク溶接) là loại kỹ thuật gì?",
-  explain: "Là kỹ thuật **dùng dòng điện để hàn chảy kim loại**, thường thấy trong xây dựng, cầu, giàn thép.",
+  explain: "Là kỹ thuật **dùng dòng điện để hàn chảy kim loại**, thường thấy trong xây dựng, cầu, giàn thép.\n\nTừ vựng:\nアーク溶接（ようせつ）: Hàn hồ quang điện\n技術（ぎじゅつ）: Kỹ thuật\n電気（でんき）: Điện\n金属（きんぞく）: Kim loại\n同士（どうし）: Với nhau, lẫn nhau\n検査（けんさ）: Kiểm tra\n隙間（すきま）: Khe hở\n加工（かこう）: Gia công\n建設工事（けんせつこうじ）: Công trình xây dựng",
   tip: "💡 溶接（ようせつ）＝ hàn kim loại bằng điện."
 },
 {
@@ -307,7 +307,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Dụng cụ dùng để ngăn công nhân giàn giáo rơi từ trên cao gọi là gì?",
-  explain: "Là **安全ブロック (あんぜんブロック)** – thiết bị an toàn chống rơi, nối với dây an toàn.",
+  explain: "Là **安全ブロック (あんぜんブロック)** – thiết bị an toàn chống rơi, nối với dây an toàn.\n\nTừ vựng:\n足場（あしば）: Giàn giáo\n作業員（さぎょういん）: Công nhân thi công\n高所（こうしょ）: Nơi cao, trên cao\n落下（らっか）: Rơi xuống\n防止（ぼうし）: Phòng ngừa\n器具（きぐ）: Dụng cụ, thiết bị\n安全（あんぜん）ブロック: Thiết bị hãm rơi an toàn\n番線（ばんせん）: Dây thép buộc",
   tip: "💡 安全ブロック = thiết bị hãm rơi khi làm việc trên cao."
 },
 {
@@ -320,7 +320,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Máy trộn vữa (モルタルミキサ) là gì?",
-  explain: "モルタルミキサ là **máy trộn xi măng, nước và cát để tạo ra vữa (モルタル)** – được dùng trong xây dựng tường, trát, lát.",
+  explain: "モルタルミキサ là **máy trộn xi măng, nước và cát để tạo ra vữa (モルタル)** – được dùng trong xây dựng tường, trát, lát.\n\nTừ vựng:\nモルタルミキサ: Máy trộn vữa\n塗料（とりょう）: Sơn, vật liệu sơn phủ\nかくはん機（かくはんき）: Máy khuấy trộn\n液体（えきたい）: Chất lỏng\n資材（しざい）: Vật tư, vật liệu xây dựng\n混（ま）ぜる: Trộn, trộn lẫn\n砂（すな）: Cát\n丈夫（じょうぶ）: Chắc chắn, bền\n練り混ぜる（ねりまぜる）: Nhào trộn kỹ",
   tip: "💡 モルタル = vữa, ミキサ = máy trộn → máy trộn vữa."
 },
 
@@ -334,7 +334,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Trước khi bắt đầu công trình đóng cọc (杭工事), cần xác nhận điều gì để tránh xảy ra tai nạn?",
-  explain: "Cần xác nhận **vị trí các đường ống ngầm như gas, nước, điện, điện thoại (ガス・水道・電気・電話などの管)** để tránh làm hư hỏng gây cháy nổ hoặc tai nạn.",
+  explain: "Cần xác nhận **vị trí các đường ống ngầm như gas, nước, điện, điện thoại (ガス・水道・電気・電話などの管)** để tránh làm hư hỏng gây cháy nổ hoặc tai nạn.\n\nTừ vựng:\n杭（くい）工事（こうじ）: Công trình đóng cọc\n開始（かいし）: Bắt đầu\n埋（う）まっている: Đang bị chôn ngầm dưới đất\n調査（ちょうさ）: Điều tra, khảo sát\n事故（じこ）: Tai nạn, sự cố\n可能性（かのうせい）: Khả năng xảy ra\n避（さ）ける: Tránh, né tránh\n水道（すいどう）: Đường ống nước máy\n管（かん）: Ống, đường ống\n遺跡（いせき）: Di tích",
   tip: "💡 Trước khi đào, luôn kiểm tra bản đồ hạ tầng ngầm."
 },
 
@@ -348,7 +348,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 3,
   vi: "Trong các công việc sau, điều nào không phù hợp với khảo sát địa chất (地盤調査)?",
-  explain: "地盤調査 nhằm khảo sát **tính chất đất, độ bền, mực nước ngầm**, nhưng **không liên quan đến khảo cổ (遺跡)**.",
+  explain: "地盤調査 nhằm khảo sát **tính chất đất, độ bền, mực nước ngầm**, nhưng **không liên quan đến khảo cổ (遺跡)**.\n\nTừ vựng:\n地盤調査（じばんちょうさ）: Khảo sát nền đất, địa chất\n地盤（じばん）: Nền đất\n土質（つちしつ）: Tính chất của đất\n強度（きょうど）: Cường độ, độ bền\n地下水位（ちかすいい）: Mực nước ngầm\n遺跡（いせき）: Di tích khảo cổ",
   tip: "💡 遺跡調査 là khảo cổ học, không phải địa chất."
 },
 {
@@ -361,7 +361,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Phương pháp cố định giữa cột và dầm bằng cách chia dầm thành 3 phần và hàn cố định sẵn tại nhà máy gọi là gì?",
-  explain: "Đây là **ブラケット工法（Bracket method）**, phương pháp hàn cố định phần giao giữa cột và dầm bằng giá đỡ, thường dùng trong kết cấu thép.",
+  explain: "Đây là **ブラケット工法（Bracket method）**, phương pháp hàn cố định phần giao giữa cột và dầm bằng giá đỡ, thường dùng trong kết cấu thép.\n\nTừ vựng:\n建地（たてじ）: Cột đứng, cột chính\n梁（はり）: Dầm\n固定（こてい）: Cố định\n分割（ぶんかつ）: Chia ra, phân chia\n両端（りょうたん）: Hai đầu\n柱（はしら）: Cột\n交差（こうさ）: Giao nhau, cắt nhau\n工場（こうじょう）: Nhà máy\n溶接（ようせつ）: Hàn\n工法（こうほう）: Phương pháp thi công",
   tip: "💡 ブラケット = bracket = giá đỡ nối cột và dầm."
 },
 
@@ -375,7 +375,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Thùng bền dùng để cho vật liệu vào trộn bê tông hoặc vữa được gọi là gì?",
-  explain: "**トロ箱（とろばこ）** là thùng kim loại hoặc nhựa dày, dùng để trộn và chứa vật liệu như xi măng, cát, nước trong khi làm vữa.",
+  explain: "**トロ箱（とろばこ）** là thùng kim loại hoặc nhựa dày, dùng để trộn và chứa vật liệu như xi măng, cát, nước trong khi làm vữa.\n\nTừ vựng:\n材料（ざいりょう）: Vật liệu\n練り混ぜる（ねりまぜる）: Nhào trộn kỹ\n丈夫（じょうぶ）: Chắc chắn, bền\n箱（はこ）: Hộp, thùng\nトロ箱（とろばこ）: Thùng dùng để trộn vữa, bê tông\nバケット: Gầu, xô đựng vật liệu\nふるい: Cái sàng, cái rây\nホッパ: Phễu chứa vật liệu",
   tip: "💡 ふるい = rây, バケット = gầu, ホッパ = phễu chứa."
 },
 {
@@ -388,7 +388,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Trong khái niệm QCDSE của quản lý thi công (施工管理), chữ D biểu thị việc quản lý gì?",
-  explain: "Trong QCDSE: Q = Quality (chất lượng), C = Cost (chi phí), D = Delivery (tiến độ). Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn công trình (工期内完成)**.",
+  explain: "Trong QCDSE: Q = Quality (chất lượng), C = Cost (chi phí), D = Delivery (tiến độ). Vì vậy D là **quản lý tiến độ để hoàn thành trong thời hạn công trình (工期内完成)**.\n\nTừ vựng:\n施工（せこう）管理（かんり）: Quản lý thi công\n発注者（はっちゅうしゃ）: Chủ đầu tư, bên đặt hàng\n要求（ようきゅう）: Yêu cầu\n品質（ひんしつ）: Chất lượng\n満（み）たす: Đáp ứng, thỏa mãn\n材料費（ざいりょうひ）: Chi phí vật liệu\n労務費（ろうむひ）: Chi phí nhân công\n予算（よさん）: Ngân sách, dự toán\n工程（こうてい）: Tiến độ thi công\n工期（こうき）: Thời hạn thi công\n完成（かんせい）: Hoàn thành",
   tip: "💡 D = Delivery (納期 / 工期)."
 },
 
@@ -402,7 +402,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Khi tháo dỡ khuôn bê tông (型枠), công cụ nào là phù hợp nhất?",
-  explain: "Công cụ phù hợp là **バール (xà beng)** để tháo ván khuôn, cạy nhẹ các mối nối mà không làm hỏng khuôn hoặc bê tông.",
+  explain: "Công cụ phù hợp là **バール (xà beng)** để tháo ván khuôn, cạy nhẹ các mối nối mà không làm hỏng khuôn hoặc bê tông.\n\nTừ vựng:\n型枠（かたわく）: Cốp pha, ván khuôn\n解体（かいたい）: Tháo dỡ\n工具（こうぐ）: Dụng cụ\n適切（てきせつ）: Phù hợp, thích hợp\nバール: Xà beng\nかけや: Búa vồ gỗ lớn\nゴムハンマー: Búa cao su\n木づち（きづち）: Búa gỗ",
   tip: "💡 バール = xà beng (crowbar)."
 },
 
@@ -416,7 +416,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Trong thi công đường hầm kiểu đẩy (推進トンネル工事), máy掘進機（くっしんき）được dùng để làm gì?",
-  explain: "掘進機 là **máy đào đất (máy khoan đường hầm)** dùng để đào đất ở phía trước, phục vụ thi công đường hầm kiểu đẩy (推進工法).",
+  explain: "掘進機 là **máy đào đất (máy khoan đường hầm)** dùng để đào đất ở phía trước, phục vụ thi công đường hầm kiểu đẩy (推進工法).\n\nTừ vựng:\n推進（すいしん）: Thi công kiểu đẩy ống\n掘進機（くっしんき）: Máy đào tiến, máy khoan hầm\n目的（もくてき）: Mục đích\n掘（ほ）る: Đào\n固（かた）める: Làm chặt, đầm chặt\n地下水（ちかすい）: Nước ngầm\n推進管（すいしんかん）: Ống đẩy thi công hầm\n立坑（たてこう）: Giếng đứng thi công\n吊（つ）る: Treo, cẩu lên",
   tip: "💡 掘進機（くっしんき）＝ máy đào hầm."
 },
 
@@ -431,7 +431,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Tàu bơm hút bùn (ポンプ浚渫船) là loại tàu gì?",
-  explain: "**ポンプ浚渫船（しゅんせつせん）** là tàu dùng máy bơm hút bùn đất ở đáy biển lên, hút cả bùn và nước cùng lúc.",
+  explain: "**ポンプ浚渫船（しゅんせつせん）** là tàu dùng máy bơm hút bùn đất ở đáy biển lên, hút cả bùn và nước cùng lúc.\n\nTừ vựng:\n浚渫（しゅんせつ）: Nạo vét\n浚渫船（しゅんせつせん）: Tàu nạo vét\n土砂（どしゃ）: Đất cát, bùn đất\n海底（かいてい）: Đáy biển\n作業船（さぎょうせん）: Tàu thi công trên biển\n吸（す）う: Hút vào\n打設（だせつ）: Đổ bê tông\n構造物（こうぞうぶつ）: Kết cấu, công trình",
   tip: "💡 浚渫（しゅんせつ）= nạo vét (hút bùn)."
 },
 {
@@ -444,7 +444,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Máy パイルドライバー (Pile Driver) là loại máy gì?",
-  explain: "**パイルドライバー** là máy **khoan, đóng cọc bê tông sẵn (既製杭)** xuống đất để làm móng cho công trình.",
+  explain: "**パイルドライバー** là máy **khoan, đóng cọc bê tông sẵn (既製杭)** xuống đất để làm móng cho công trình.\n\nTừ vựng:\nパイルドライバー: Máy đóng cọc\n既製杭（きせいくい）: Cọc đúc sẵn, cọc chế tạo sẵn\n掘削（くっさく）: Đào, khoan đào\n穴（あな）: Lỗ, hố\n立てる（たてる）: Dựng lên, đóng xuống\n地下水（ちかすい）: Nước ngầm\n推進管（すいしんかん）: Ống đẩy thi công hầm\n立坑（たてこう）: Giếng đứng thi công",
   tip: "💡 パイル (pile) = cọc; ドライバー (driver) = máy đóng cọc."
 },
 
@@ -458,7 +458,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Để tăng cường độ vững và tránh cho giàn giáo bị đổ do gió, cần dùng bộ phận nào?",
-  explain: "**筋交（すじかい）** là thanh chéo gia cố, giúp giàn giáo không bị đổ do lực gió hoặc rung động.",
+  explain: "**筋交（すじかい）** là thanh chéo gia cố, giúp giàn giáo không bị đổ do lực gió hoặc rung động.\n\nTừ vựng:\n構造（こうぞう）: Kết cấu\n補強（ほきょう）: Gia cố, tăng cường\n足場（あしば）: Giàn giáo\n倒（たお）れる: Bị đổ, ngã xuống\n部材（ぶざい）: Cấu kiện, bộ phận\n筋交（すじかい）: Thanh giằng chéo\nクランプ: Kẹp nối ống giàn giáo\n布板（ぬのいた）: Tấm ván sàn giàn giáo",
   tip: "💡 筋交 = thanh giằng chéo, chống nghiêng cho khung."
 },
 
@@ -472,7 +472,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Loại máy có bánh xe, phía trước có gầu lớn để xúc, chất và vận chuyển vật liệu là gì?",
-  explain: "**ホイールローダ（Wheel Loader）** là xe xúc bánh lốp, dùng để xúc và vận chuyển vật liệu như đất, cát, sỏi.",
+  explain: "**ホイールローダ（Wheel Loader）** là xe xúc bánh lốp, dùng để xúc và vận chuyển vật liệu như đất, cát, sỏi.\n\nTừ vựng:\n車体（しゃたい）: Thân xe, thân máy\n前方（ぜんぽう）: Phía trước\n大型（おおがた）: Cỡ lớn\nバケット: Gầu xúc\n車輪（しゃりん）: Bánh xe\n走行（そうこう）: Di chuyển, chạy\n積み込み（つみこみ）: Việc xúc bốc vật liệu lên\n運搬（うんぱん）: Vận chuyển\nホイールローダ: Xe xúc lật bánh lốp\nダンプトラック: Xe tải ben\n振動（しんどう）ローラー: Xe lu rung",
   tip: "💡 ホイール (wheel) = bánh xe; ローダ (loader) = máy xúc."
 },
 
@@ -486,7 +486,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Trong các dụng cụ kim loại sau, cái nào có thể dùng làm đòn bẩy (てこ)?",
-  explain: "**バール（Bar）** là xà beng bằng kim loại, dùng làm đòn bẩy để cạy hoặc nâng vật nặng.",
+  explain: "**バール（Bar）** là xà beng bằng kim loại, dùng làm đòn bẩy để cạy hoặc nâng vật nặng.\n\nTừ vựng:\n梃子（てこ）: Đòn bẩy\n金属製（きんぞくせい）: Làm bằng kim loại\nバール: Xà beng\nモンキーレンチ: Mỏ lết điều chỉnh\nドライバー: Tua vít\nダブルスコップ: Xẻng đôi",
   tip: "💡 てこ = đòn bẩy; バール = xà beng."
 },
 {
@@ -499,7 +499,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Việc đánh dấu vị trí và độ cao của cấu kiện trên công trường được gọi là gì?",
-  explain: "**墨出し（すみだし）** là công việc đánh dấu (marking) vị trí hoặc cao độ thực tế dựa trên bản vẽ để thi công chính xác.",
+  explain: "**墨出し（すみだし）** là công việc đánh dấu (marking) vị trí hoặc cao độ thực tế dựa trên bản vẽ để thi công chính xác.\n\nTừ vựng:\n施工（せこう）: Thi công\n構造物（こうぞうぶつ）: Kết cấu, công trình\n部材（ぶざい）: Cấu kiện, bộ phận\n位置（いち）: Vị trí\n現場（げんば）: Công trường, hiện trường\n墨出し（すみだし）: Đánh dấu vị trí, bật mực thi công\nケガキ: Vạch dấu, kẻ vạch trên vật liệu\n溶接（ようせつ）: Hàn\n配線（はいせん）: Đi dây điện",
   tip: "💡 墨出し = marking, layout work."
 },
 
@@ -513,7 +513,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Máy モーターグレーダー là loại máy gì?",
-  explain: "**モーターグレーダー** là máy san phẳng bề mặt đất hoặc lớp đá dăm, giúp mặt đường phẳng mịn trước khi rải nhựa hoặc bê tông.",
+  explain: "**モーターグレーダー** là máy san phẳng bề mặt đất hoặc lớp đá dăm, giúp mặt đường phẳng mịn trước khi rải nhựa hoặc bê tông.\n\nTừ vựng:\nモーターグレーダー: Máy san gạt mặt đường\n地表面（ちひょうめん）: Bề mặt mặt đất\n砕石（さいせき）: Đá dăm\n路盤（ろばん）: Lớp móng đường\n平坦（へいたん）: Bằng phẳng\n仕上げる（しあげる）: Hoàn thiện, làm phẳng\n振動（しんどう）: Rung, rung động\n締固め（しめかため）: Đầm nén chặt",
   tip: "💡 Motor Grader = máy san ủi mặt đường chính xác."
 },
 
@@ -527,7 +527,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Trong thi công hầm kiểu đẩy (推進トンネル), 'ストラット' là gì?",
-  explain: "**ストラット（Strut）** là thanh chống phụ trợ giúp truyền lực đẩy từ xy lanh thủy lực và hỗ trợ trong quá trình đẩy ống (推進).",
+  explain: "**ストラット（Strut）** là thanh chống phụ trợ giúp truyền lực đẩy từ xy lanh thủy lực và hỗ trợ trong quá trình đẩy ống (推進).\n\nTừ vựng:\n推進（すいしん）: Thi công kiểu đẩy ống\nストラット: Thanh chống phụ truyền lực\n油圧（ゆあつ）: Thủy lực, áp lực dầu\nジャッキ: Kích, con đội\nストローク: Hành trình của kích\n不足（ふそく）: Thiếu, không đủ\n補助（ほじょ）: Hỗ trợ, phụ trợ\n支柱（しちゅう）: Cột chống\n推進力（すいしんりょく）: Lực đẩy\n伝（つた）える: Truyền (lực, thông tin)",
   tip: "💡 Strut = thanh chống / thanh truyền lực hỗ trợ trong công trình ngầm."
 },
 
@@ -541,7 +541,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 1,
   vi: "Định nghĩa của ソナー (sonar) là gì?",
-  explain: "**ソナー（sonar）** là thiết bị đo hình dạng hoặc độ sâu đáy biển bằng sóng âm – giúp phát hiện vật thể dưới nước.",
+  explain: "**ソナー（sonar）** là thiết bị đo hình dạng hoặc độ sâu đáy biển bằng sóng âm – giúp phát hiện vật thể dưới nước.\n\nTừ vựng:\nソナー: Máy định vị bằng sóng âm (sonar)\n定義（ていぎ）: Định nghĩa\n位置（いち）: Vị trí\n固定（こてい）: Cố định\n海底（かいてい）: Đáy biển\n設置（せっち）: Lắp đặt, bố trí\n直接（ちょくせつ）: Trực tiếp\n測（はか）る: Đo, đo đạc",
   tip: "💡 Sonar = Sound Navigation and Ranging (định vị bằng sóng âm)."
 },
 {
@@ -554,7 +554,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 2,
   vi: "Phần lớp thấp nhất của kết cấu đường gọi là gì?",
-  explain: "Phần thấp nhất của đường gọi là **路床（ろしょう）**, nghĩa là lớp nền tự nhiên (đất nền) – nơi chịu tải trọng đầu tiên của kết cấu mặt đường.",
+  explain: "Phần thấp nhất của đường gọi là **路床（ろしょう）**, nghĩa là lớp nền tự nhiên (đất nền) – nơi chịu tải trọng đầu tiên của kết cấu mặt đường.\n\nTừ vựng:\n道路（どうろ）: Đường giao thông\n最下層（さいかそう）: Lớp dưới cùng\n部分（ぶぶん）: Phần, bộ phận\n路床（ろしょう）: Lớp nền đất dưới kết cấu đường\n路盤（ろばん）: Lớp móng đường\n基層（きそう）: Lớp đế của mặt đường\n表層（ひょうそう）: Lớp mặt đường trên cùng",
   tip: "💡 路床 = lớp nền (subgrade)."
 },
 
@@ -568,7 +568,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "Tính chất của bê tông là gì?",
-  explain: "Bê tông **chịu nén tốt nhưng chịu kéo kém**. Vì vậy, trong kết cấu thường phải dùng **thép chịu kéo (鉄筋コンクリート)** để bù lại điểm yếu này.",
+  explain: "Bê tông **chịu nén tốt nhưng chịu kéo kém**. Vì vậy, trong kết cấu thường phải dùng **thép chịu kéo (鉄筋コンクリート)** để bù lại điểm yếu này.\n\nTừ vựng:\n性質（せいしつ）: Tính chất\n圧縮（あっしゅく）: Sự nén, lực nén\n引っ張る（ひっぱる）: Kéo, chịu lực kéo\n強（つよ）い: Mạnh, chịu lực tốt\n弱（よわ）い: Yếu, chịu lực kém",
   tip: "💡 コンクリート: 強い→圧縮 / 弱い→引っ張り."
 },
 
@@ -583,7 +583,7 @@ window.PRACTICE_SETS["g1_4"] = {
   ],
   answer: 0,
   vi: "WBGT dùng để đo chỉ số gì?",
-  explain: "**WBGT** (Wet Bulb Globe Temperature) là **chỉ số đo mức độ nóng bức (暑さ指数)**, giúp đánh giá nguy cơ say nắng và mệt mỏi do nhiệt trên công trường.",
+  explain: "**WBGT** (Wet Bulb Globe Temperature) là **chỉ số đo mức độ nóng bức (暑さ指数)**, giúp đánh giá nguy cơ say nắng và mệt mỏi do nhiệt trên công trường.\n\nTừ vựng:\nWBGT: Chỉ số nóng bức WBGT (chỉ số nhiệt)\n測定（そくてい）: Đo lường, đo đạc\n暑さ指数（あつさしすう）: Chỉ số nóng bức\n風力（ふうりょく）: Sức gió, lực gió\n高温体（こうおんたい）: Vật thể có nhiệt độ cao\n酸素（さんそ）: Khí oxi\n濃度（のうど）: Nồng độ",
   tip: "💡 WBGT = chỉ số nhiệt kết hợp độ ẩm, nhiệt độ và bức xạ mặt trời."
 }
 ]

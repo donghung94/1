@@ -14,7 +14,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Loại máy móc nào có trang bị bánh xích (**クローラー式(しき)**), lắp một lưỡi ủi (**排土板(はいどばん)**) có thể di chuyển ở phía trước, và chủ yếu thực hiện các công việc đào (**掘削(くっさく)**) và vận chuyển (**運搬(うんぱん)**)?",
-  explain: "Đó là **ブルドーザー (Xe ủi đất)**. Đặc trưng của máy này là có bánh xích (**クローラー式(しき)**) và lưỡi ủi (**排土板(はいどばん)**) lớn ở phía trước, chuyên dùng để ủi đất, san lấp, và vận chuyển vật liệu trong cự ly ngắn.",
+  explain: "Đó là **ブルドーザー (Xe ủi đất)**. Đặc trưng của máy này là có bánh xích (**クローラー式(しき)**) và lưỡi ủi (**排土板(はいどばん)**) lớn ở phía trước, chuyên dùng để ủi đất, san lấp, và vận chuyển vật liệu trong cự ly ngắn.\n\nTừ vựng:\nクローラー式（しき）: Loại bánh xích\n走行（そうこう）: Di chuyển, chạy\n前面（ぜんめん）: Mặt trước, phía trước\n排土板（はいどばん）: Lưỡi ủi đất\n掘削（くっさく）: Đào, khai đào\n運搬（うんぱん）: Vận chuyển\n機械（きかい）: Máy móc\nブルドーザー: Xe ủi đất",
   tip: "💡 Nhớ: **ブルドーザー (Bulldozer)** = **クローラー式(しき)** (Bánh xích) + **排土板(はいどばん)** (Lưỡi ủi)."
 },
   {
@@ -28,7 +28,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Giàn giáo trong bức ảnh này là loại nào?",
-  explain: "Đó là **くさび緊結式(きんけつしき)足場(あしば) (Giàn giáo kiểu nêm)**. Đặc điểm nhận dạng là các cột chống có các túi để đóng nêm vào, và thanh giằng được kết nối bằng cách đóng nêm (くさび) chặt vào cột. Loại này rất phổ biến trong các công trình sửa chữa nhà ở hoặc tòa nhà thấp tầng.",
+  explain: "Đó là **くさび緊結式(きんけつしき)足場(あしば) (Giàn giáo kiểu nêm)**. Đặc điểm nhận dạng là các cột chống có các túi để đóng nêm vào, và thanh giằng được kết nối bằng cách đóng nêm (くさび) chặt vào cột. Loại này rất phổ biến trong các công trình sửa chữa nhà ở hoặc tòa nhà thấp tầng.\n\nTừ vựng:\n足場（あしば）: Giàn giáo\nくさび: Cái nêm, chốt nêm\n緊結（きんけつ）: Siết chặt, liên kết chặt\n単管（たんかん）: Ống thép đơn\n枠組（わくぐ）み: Dạng khung lắp ghép\n鉄骨（てっこつ）: Kết cấu thép, khung thép",
   tip: "💡 Nhớ: Nhìn thấy các chốt nêm đóng vào cột hoặc sàn lưới kim loại đặc trưng như hình → **くさび緊結式(きんけつしき)**."
 },
   {
@@ -42,7 +42,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Đây được gọi là gì?",
-  explain: "Đây là một đầu **バーナー (Burner)** chuyên dụng. Nó được thiết kế để tạo nhiều ngọn lửa cùng lúc, thường dùng để nung nóng ống thép hoặc các vật liệu kim loại có hình dạng cong một cách đồng đều.",
+  explain: "Đây là một đầu **バーナー (Burner)** chuyên dụng. Nó được thiết kế để tạo nhiều ngọn lửa cùng lúc, thường dùng để nung nóng ống thép hoặc các vật liệu kim loại có hình dạng cong một cách đồng đều.\n\nTừ vựng:\nバーナー: Đầu đốt (mỏ hàn, mỏ cắt)\n溶接棒（ようせつぼう）: Que hàn\n曲（ま）げ試験機（しけんき）: Máy thử uốn\nラムシリンダ: Xi lanh ram (kích thủy lực)",
   tip: "💡 Nhớ: Dụng cụ tạo ra lửa/nhiệt để nung nóng → **バーナー (Burner)**."
 },
 {
@@ -55,7 +55,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 3,
   vi: "Mũ bảo hiểm có tấm chắn (shield) bảo vệ toàn bộ khuôn mặt (**顔(かお)全体(ぜんたい)**) được tích hợp (**一体(いったい)になっている**) thành một khối được gọi là gì?",
-  explain: "Đó là **シールド面(めん)付き(つき)ヘルメット (Mũ bảo hiểm có tấm chắn)**. Đây là loại mũ bảo hiểm có thêm tấm chắn nhựa trong suốt (**シールド**) có thể nâng lên hạ xuống để bảo vệ mắt và mặt khỏi bụi, mảnh vỡ khi làm việc.",
+  explain: "Đó là **シールド面(めん)付き(つき)ヘルメット (Mũ bảo hiểm có tấm chắn)**. Đây là loại mũ bảo hiểm có thêm tấm chắn nhựa trong suốt (**シールド**) có thể nâng lên hạ xuống để bảo vệ mắt và mặt khỏi bụi, mảnh vỡ khi làm việc.\n\nTừ vựng:\n全体（ぜんたい）: Toàn bộ\n一体（いったい）: Liền thành một khối\n保護（ほご）: Bảo hộ, bảo vệ\n防塵（ぼうじん）: Chống bụi\nシールド: Tấm chắn bảo vệ mặt\nヘルメット: Mũ bảo hộ",
   tip: "💡 Nhớ: **シールド面(めん)付き(つき)** (có tấm chắn mặt) + **ヘルメット** (Mũ bảo hiểm) = Đúng như mô tả."
 },
 {
@@ -68,7 +68,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Dụng cụ được sử dụng trong công việc xếp/xây gạch block (**ブロック積(つ)み作業(さぎょう)**) là gì?",
-  explain: "Trong công việc xây gạch block, **こて (Bay/Cái trát)** là dụng cụ chính được sử dụng để trải vữa (mortar), cắt vữa, và hoàn thiện các mối nối (joint) giữa các viên gạch.",
+  explain: "Trong công việc xây gạch block, **こて (Bay/Cái trát)** là dụng cụ chính được sử dụng để trải vữa (mortar), cắt vữa, và hoàn thiện các mối nối (joint) giữa các viên gạch.\n\nTừ vựng:\nブロック積（つ）み: Xây, xếp gạch block\n作業（さぎょう）: Công việc, tác nghiệp\n道具（どうぐ）: Dụng cụ\nこて: Cái bay (dùng trát vữa)\nシノ: Cái đục, thanh nạy (shino)",
   tip: "💡 Nhớ: Xây gạch (**ブロック積(つ)み(つみ)**) = Phải dùng **こて (Bay)** để trát vữa."
 },
 {
@@ -82,7 +82,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 2,
   vi: "Tên của dụng cụ trong hình là gì?",
-  explain: "Đây là **げんのう（玄能）**, loại búa cán gỗ đầu thép nhỏ, được dùng để đóng đinh, chỉnh khớp, hoặc công việc lắp ván khuôn trong xây dựng.",
+  explain: "Đây là **げんのう（玄能）**, loại búa cán gỗ đầu thép nhỏ, được dùng để đóng đinh, chỉnh khớp, hoặc công việc lắp ván khuôn trong xây dựng.\n\nTừ vựng:\n工具（こうぐ）: Dụng cụ, công cụ\n写真（しゃしん）: Bức ảnh\n仮枠（かりわく）: Ván khuôn tạm\nげんのう: Búa genno (búa thợ mộc)\nクロスローラー: Con lăn chéo (cross roller)",
   tip: "💡 Nhớ: Khi thấy búa nhỏ, đầu thép hai mặt, cán gỗ → đó là 玄能（げんのう）."
 },
 {
@@ -96,7 +96,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Bộ phận hình tròn (**ドーナツ**) này dùng để làm gì?",
-  explain: "Bộ phận **Donut (ドーナツ)** này là một loại **Spacer (Chặn kê)**, được sử dụng để giữ khoảng cách giữa **cốt thép (鉄筋)** và **ván khuôn (型枠)**, nhằm mục đích **確保（かくほ）する (Đảm bảo)** **かぶり厚（あつ）さ (Chiều dày lớp bê tông bảo vệ)** cho các cấu kiện thẳng đứng hoặc mặt bên, như **柱（はしら）(Cột), 梁（はり）(Dầm), và 壁筋（かべすじ）(Thép tường)**.",
+  explain: "Bộ phận **Donut (ドーナツ)** này là một loại **Spacer (Chặn kê)**, được sử dụng để giữ khoảng cách giữa **cốt thép (鉄筋)** và **ván khuôn (型枠)**, nhằm mục đích **確保（かくほ）する (Đảm bảo)** **かぶり厚（あつ）さ (Chiều dày lớp bê tông bảo vệ)** cho các cấu kiện thẳng đứng hoặc mặt bên, như **柱（はしら）(Cột), 梁（はり）(Dầm), và 壁筋（かべすじ）(Thép tường)**.\n\nTừ vựng:\n柱（はしら）: Cột\n梁（はり）: Dầm\n壁筋（かべすじ）: Thép tường\nかぶり厚（あつ）さ: Chiều dày lớp bê tông bảo vệ\n確保（かくほ）: Đảm bảo\n鉄筋（てっきん）: Cốt thép\n型枠（かたわく）: Ván khuôn\nドーナツ: Miếng kê tròn (donut spacer)",
   tip: "💡 Mẹo nhớ: **ドーナツ** (Dạng hình tròn) dùng để bảo vệ lớp bê tông cho cấu kiện **thẳng đứng/mặt đứng** (Cột, Dầm, Tường)."
 },
 
@@ -111,7 +111,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Đây là loại công trình gì?",
-  explain: "Công nhân đang thi công **アスファルトシート防水工法（ぼうすいこうほう）**, tức là chống thấm bằng màng nhựa đường dán nóng. Phương pháp này được dùng để chống thấm mái và sàn bê tông.",
+  explain: "Công nhân đang thi công **アスファルトシート防水工法（ぼうすいこうほう）**, tức là chống thấm bằng màng nhựa đường dán nóng. Phương pháp này được dùng để chống thấm mái và sàn bê tông.\n\nTừ vựng:\n吹付（ふきつ）: Phun phủ\n防水（ぼうすい）: Chống thấm\n接着（せっちゃく）: Kết dính, dán dính\n工法（こうほう）: Phương pháp thi công\nタイル貼（は）り: Ốp, dán gạch tile\n塗装（とそう）: Sơn phủ\nアスファルト: Nhựa đường (asphalt)",
   tip: "💡 Nhớ: Thấy cuộn màng đen trải trên mái → đó là chống thấm bằng màng nhựa đường (アスファルトシート防水)（ぼうすい）."
 },
   {
@@ -124,7 +124,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   "answer": 0,
   "vi": "Trong ngành xây dựng, **Ba Loại Tai nạn Lớn (三大災害)(さんだい) là gì?",
-  "explain": "Ba loại tai nạn phổ biến và nghiêm trọng nhất (chiếm tỷ lệ lớn) trong ngành xây dựng là: **墜落・転落 (Ngã từ trên cao)**, **建設機械・クレーン (Tai nạn do Máy xây dựng/Cần cẩu)**, và **崩壊・倒壊 (Sập đổ/Đổ nát)**. (Lưu ý: Điện giật tuy nguy hiểm nhưng không nằm trong nhóm 'Tam đại' về số lượng vụ việc so với máy móc).",
+  "explain": "Ba loại tai nạn phổ biến và nghiêm trọng nhất (chiếm tỷ lệ lớn) trong ngành xây dựng là: **墜落・転落 (Ngã từ trên cao)**, **建設機械・クレーン (Tai nạn do Máy xây dựng/Cần cẩu)**, và **崩壊・倒壊 (Sập đổ/Đổ nát)**. (Lưu ý: Điện giật tuy nguy hiểm nhưng không nằm trong nhóm 'Tam đại' về số lượng vụ việc so với máy móc).\n\nTừ vựng:\n建設業（けんせつぎょう）: Ngành xây dựng\n災害（さいがい）: Tai nạn, thảm họa\n墜落（ついらく）: Rơi từ trên cao\n転落（てんらく）: Ngã, rơi xuống\n機械（きかい）: Máy móc\n崩壊（ほうかい）: Sụp đổ\n倒壊（とうかい）: Đổ sập\n感電（かんでん）: Bị điện giật\n漏電（ろうでん）: Rò rỉ điện",
   "tip": "💡 Nhớ: **Ngã (墜落)(ついらく)** + **Máy 、建設(けんせつ)機械(きかい)+ **Sập 崩壊(ほうかい)・倒壊(とうかい)災害(さいがい)."
 },
   {
@@ -137,7 +137,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 3,
   vi: "Trong quy định an toàn vệ sinh lao động, nội dung nào **không phù hợp** khi đào tạo an toàn cho người mới?",
-  explain: "Theo Luật an toàn vệ sinh lao động, nội dung huấn luyện cho người mới **không bao gồm vấn đề tiền lương（賃金）**, mà chỉ bao gồm các nội dung liên quan đến an toàn, vệ sinh, quy trình và trật tự công việc.",
+  explain: "Theo Luật an toàn vệ sinh lao động, nội dung huấn luyện cho người mới **không bao gồm vấn đề tiền lương（賃金）**, mà chỉ bao gồm các nội dung liên quan đến an toàn, vệ sinh, quy trình và trật tự công việc.\n\nTừ vựng:\n安全衛生（あんぜんえいせい）: An toàn và vệ sinh\n教育（きょういく）: Đào tạo, huấn luyện\n実施（じっし）: Triển khai, thực hiện\n労働（ろうどう）: Lao động\n規則（きそく）: Quy định, nội quy\n点検（てんけん）: Kiểm tra\n整理（せいり）: Sắp xếp gọn gàng\n整頓（せいとん）: Ngăn nắp, trật tự\n賃金（ちんぎん）: Tiền lương",
   tip: "💡 Mẹo nhớ: Đào tạo an toàn = nói về an toàn lao động, không nói về tiền lương → chọn **賃金（ちんぎん）**."
 },
 {
@@ -151,7 +151,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Bộ phận trong hình là gì?",
-  explain: "Đây là **外観（がいかん）測定用（そくていよう）器具（きぐ） (Gaikan Sokuteiyō Kigu - Dụng cụ đo kiểm tra ngoại quan)**. Dụng cụ này dùng để đo đạc và kiểm tra kích thước, khoảng cách và sự chính xác của việc lắp đặt cốt thép.",
+  explain: "Đây là **外観（がいかん）測定用（そくていよう）器具（きぐ） (Gaikan Sokuteiyō Kigu - Dụng cụ đo kiểm tra ngoại quan)**. Dụng cụ này dùng để đo đạc và kiểm tra kích thước, khoảng cách và sự chính xác của việc lắp đặt cốt thép.\n\nTừ vựng:\n部材（ぶざい）: Cấu kiện, bộ phận\n外観（がいかん）: Ngoại quan, bề ngoài\n測定（そくてい）: Đo lường\n器具（きぐ）: Dụng cụ, thiết bị\n引（ひ）っぱり試験（しけん）: Thí nghiệm kéo\n超音波（ちょうおんぱ）: Sóng siêu âm\n探傷（たんしょう）: Dò tìm khuyết tật",
   tip: "💡 Mẹo nhớ: Hình dạng giống thước đo dùng để kiểm tra chi tiết cốt thép → **外観測定用器具**."
 },
 {
@@ -165,7 +165,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Đây là loại **phụ kiện kim loại (金具)** nào?",
-  explain: "Đây là **シャックル（Shakkuru - Shackle)**. Đây là một loại phụ kiện kim loại hình chữ U có chốt vặn ngang, chuyên dùng để nối dây cáp, xích hoặc các vật nặng khác nhau trong công tác cẩu và nâng hạ.",
+  explain: "Đây là **シャックル（Shakkuru - Shackle)**. Đây là một loại phụ kiện kim loại hình chữ U có chốt vặn ngang, chuyên dùng để nối dây cáp, xích hoặc các vật nặng khác nhau trong công tác cẩu và nâng hạ.\n\nTừ vựng:\n金具（かなぐ）: Phụ kiện kim loại, đồ kim khí\nシャックル: Ma ní (móc nối cáp chữ U)\nワイヤロープ: Dây cáp thép\nチェーンブロック: Pa lăng xích kéo tay\nジャッキー: Kích, con đội",
   tip: "💡 Mẹo nhớ: Hình chữ U + chốt vặn → **シャックル** (Shackle)."
 },
   {
@@ -179,7 +179,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 3,
   vi: "Dụng cụ trong hình gọi là gì?",
-  explain: "Đây là **くい切り（くいきり）**, một loại kìm chuyên dùng để **cắt đầu đinh hoặc dây kim loại nhỏ**, thường được sử dụng trong thi công lắp đặt thép, ván khuôn, hoặc làm sạch đầu thép sau khi buộc.",
+  explain: "Đây là **くい切り（くいきり）**, một loại kìm chuyên dùng để **cắt đầu đinh hoặc dây kim loại nhỏ**, thường được sử dụng trong thi công lắp đặt thép, ván khuôn, hoặc làm sạch đầu thép sau khi buộc.\n\nTừ vựng:\n道具（どうぐ）: Dụng cụ\nはさみ: Cái kéo\nカッターナイフ: Dao rọc giấy\nくい切（き）り: Kìm cắt đinh, cắt dây",
   tip: "💡 Mẹo nhớ: くい切り = 'cắt đầu đinh' → phần miệng phẳng, cắt sát bề mặt."
 },
 {
@@ -192,7 +192,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Thiết bị nào có thể đóng mở khí oxy và axetylen cùng lúc?",
-  explain: "Đáp án đúng là **エコバルブ（eco valve）**, một thiết bị an toàn được thiết kế để có thể **mở và đóng đồng thời khí oxy và khí axetylen**, giúp ngăn ngừa cháy nổ hoặc rò rỉ khí trong quá trình hàn cắt kim loại.",
+  explain: "Đáp án đúng là **エコバルブ（eco valve）**, một thiết bị an toàn được thiết kế để có thể **mở và đóng đồng thời khí oxy và khí axetylen**, giúp ngăn ngừa cháy nổ hoặc rò rỉ khí trong quá trình hàn cắt kim loại.\n\nTừ vựng:\n酸素（さんそ）: Khí oxy\n同時（どうじ）: Cùng lúc, đồng thời\n開閉（かいへい）: Đóng và mở\n器具（きぐ）: Dụng cụ, thiết bị\n加圧（かあつ）: Tăng áp, nén áp\nエコバルブ: Van eco (đóng mở đồng thời hai khí)\nクランプ: Cái kẹp, vam kẹp\nバーナー: Đầu đốt, mỏ cắt",
   tip: "💡 Mẹo nhớ: 'eco' = tiết kiệm + an toàn → thiết bị điều phối hai bình khí cùng lúc."
 },
 {
@@ -206,7 +206,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Đây là thiết bị sử dụng **kính viễn vọng nhỏ (小型の望遠鏡)** làm điểm nhìn tham chiếu để **đo (測定)** **góc (角度)** theo hướng **ngang (水平方向)** và hướng **thẳng đứng (上下方向)**. Chọn thiết bị đúng.",
-  explain: "Thiết bị dùng để **đo góc ngang và góc đứng** bằng kính viễn vọng (không đo khoảng cách bằng laser) chính là **トランシット (Toranshitto - Máy kinh vĩ/Theodolite)**. Trong xây dựng, máy này được dùng để định vị các điểm và xác định phương hướng. **トータルステーション (Total Station)** là phiên bản hiện đại hơn, có thể đo cả khoảng cách.",
+  explain: "Thiết bị dùng để **đo góc ngang và góc đứng** bằng kính viễn vọng (không đo khoảng cách bằng laser) chính là **トランシット (Toranshitto - Máy kinh vĩ/Theodolite)**. Trong xây dựng, máy này được dùng để định vị các điểm và xác định phương hướng. **トータルステーション (Total Station)** là phiên bản hiện đại hơn, có thể đo cả khoảng cách.\n\nTừ vựng:\n小型（こがた）: Cỡ nhỏ\n望遠鏡（ぼうえんきょう）: Ống kính ngắm, kính viễn vọng\n基点（きてん）: Điểm mốc, điểm gốc\n水平（すいへい）: Phương ngang, nằm ngang\n角度（かくど）: Góc, góc độ\n測定（そくてい）: Đo đạc\nトランシット: Máy kinh vĩ (transit)\nレベル: Máy thủy bình (level)",
   tip: "💡 Nhớ: Đo **角度** (Góc) **上(じょう)下(げ)** (Đứng) và **水平(すいへい)** (Ngang) → **トランシット** ."
 },
 
@@ -220,7 +220,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 2,
   vi: "Dụng cụ bằng kim loại, gồm hai thanh nối bằng bản lề để kẹp sắt nung nóng, gọi là gì?",
-  explain: "Đáp án là **やっとこ**, kìm sắt chuyên dùng để **gắp hoặc giữ vật kim loại khi đang nung nóng** trong quá trình rèn, hàn hoặc tạo hình.",
+  explain: "Đáp án là **やっとこ**, kìm sắt chuyên dùng để **gắp hoặc giữ vật kim loại khi đang nung nóng** trong quá trình rèn, hàn hoặc tạo hình.\n\nTừ vựng:\n金属（きんぞく）: Kim loại\n蝶番（ちょうつがい）: Bản lề\n工具（こうぐ）: Dụng cụ\n溶接棒（ようせつぼう）: Que hàn\n石筆（せきひつ）: Bút phấn đá (vạch dấu)\nやっとこ: Kìm gắp vật nóng\nポンチ: Dùi đột, dụng cụ chấm dấu",
   tip: "💡 Mẹo nhớ: やっとこ = kìm kẹp kim loại nóng."
 },
 
@@ -234,7 +234,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 2,
   vi: "**Gia công (加工)** **đầu mút (端面)** của **thép thanh (鉄筋)** dùng loại máy nào?",
-  explain: "Để **gia công đầu mút (端面)** của thanh thép (thường trong công tác **hàn nối thép**), cần đảm bảo mặt cắt phải **vuông góc (直角)**. Do đó, người ta sử dụng **鉄筋（てっきん）冷間（れいかん）直角（ちょっかく）切断機（せつだんき） (Máy cắt lạnh vuông góc thanh thép)**. Máy này giúp cắt thanh thép một cách chính xác và không làm thay đổi tính chất vật lý của thép (cắt lạnh - 冷間), tạo ra mặt cắt lý tưởng để nối.",
+  explain: "Để **gia công đầu mút (端面)** của thanh thép (thường trong công tác **hàn nối thép**), cần đảm bảo mặt cắt phải **vuông góc (直角)**. Do đó, người ta sử dụng **鉄筋（てっきん）冷間（れいかん）直角（ちょっかく）切断機（せつだんき） (Máy cắt lạnh vuông góc thanh thép)**. Máy này giúp cắt thanh thép một cách chính xác và không làm thay đổi tính chất vật lý của thép (cắt lạnh - 冷間), tạo ra mặt cắt lý tưởng để nối.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép, thanh thép\n端面（たんめん）: Mặt đầu, mặt cắt ngang\n加工（かこう）: Gia công\n冷間（れいかん）: Trạng thái nguội (gia công nguội)\n直角（ちょっかく）: Góc vuông, vuông góc\n切断機（せつだんき）: Máy cắt\nサンダー: Máy mài góc cầm tay\nベンダー: Máy uốn (thép)",
   tip: "💡 Nhớ: Gia công **端面** (đầu mút/mặt cắt) → Cần **直角** (vuông góc) → **鉄筋冷間直角切断機** ."
 },
 {
@@ -247,7 +247,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Phương pháp thi công kết hợp cột, dầm và thanh chéo gọi là gì?",
-  explain: "Đây là 軸組（じくぐ）み工法（こうほう）, phương pháp thi công truyền thống của Nhật, dùng **cột, dầm và thanh chéo 「筋交（すじか）い」 để tăng độ vững của khung nhà.",
+  explain: "Đây là 軸組（じくぐ）み工法（こうほう）, phương pháp thi công truyền thống của Nhật, dùng **cột, dầm và thanh chéo 「筋交（すじか）い」 để tăng độ vững của khung nhà.\n\nTừ vựng:\n土台（どだい）: Dầm móng, bệ nền\n梁（はり）: Dầm\n柱（はしら）: Cột\n垂直（すいちょく）: Thẳng đứng, vuông góc\n筋交（すじか）い: Thanh giằng chéo\n斜（なな）め: Đường chéo, nghiêng\n強度（きょうど）: Cường độ, độ vững chắc\n工法（こうほう）: Phương pháp thi công\n軸組（じくぐ）み: Kết cấu khung trục",
   tip: "💡 Mẹo nhớ: 軸 = trục → 軸組（じくぐ）み = khung trục chính của ngôi nhà."
 },
 {
@@ -260,7 +260,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   "answer": 2,
   "vi": "Phương pháp hàn nào được sử dụng phổ biến nhất trong **hàn kim loại tấm (板金溶接)**?",
-  "explain": "Trong hàn kim loại tấm (板金溶接), phương pháp được sử dụng rộng rãi nhất là các kỹ thuật dựa trên **融接(ゆうせつ)法(ほう) (Yūsetsu Hō - Phương pháp Nóng chảy)**, trong đó có **アーク溶接(ようせつ)** (Hàn hồ quang) và **ガス溶接** (Hàn khí). Tuy nhiên, **融接(ゆうせつ)法(ほう)** là thuật ngữ tổng quát chỉ việc làm nóng chảy kim loại cơ bản tại điểm nối để tạo ra mối hàn. Cả hàn hồ quang (Arc) và hàn khí (Gas) đều thuộc phương pháp này và phổ biến trong hàn kim loại tấm.",
+  "explain": "Trong hàn kim loại tấm (板金溶接), phương pháp được sử dụng rộng rãi nhất là các kỹ thuật dựa trên **融接(ゆうせつ)法(ほう) (Yūsetsu Hō - Phương pháp Nóng chảy)**, trong đó có **アーク溶接(ようせつ)** (Hàn hồ quang) và **ガス溶接** (Hàn khí). Tuy nhiên, **融接(ゆうせつ)法(ほう)** là thuật ngữ tổng quát chỉ việc làm nóng chảy kim loại cơ bản tại điểm nối để tạo ra mối hàn. Cả hàn hồ quang (Arc) và hàn khí (Gas) đều thuộc phương pháp này và phổ biến trong hàn kim loại tấm.\n\nTừ vựng:\n板金（ばんきん）: Kim loại tấm\n溶接（ようせつ）: Hàn\n方法（ほうほう）: Phương pháp\n圧接（あっせつ）: Hàn ép, hàn áp lực\nアーク溶接（ようせつ）: Hàn hồ quang điện\n融接（ゆうせつ）: Hàn nóng chảy\nろう接（せつ）: Hàn vảy cứng",
   "tip": "💡 Nhớ: **板金(ばんきん)** (Kim loại tấm) $\rightarrow$ Hàn bằng cách làm **nóng chảy** $\rightarrow$ **融接(ゆうせつ)法(ほう)** ."
 },
 
@@ -274,7 +274,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Hiện tượng bong tróc và rơi xuống của vật liệu gọi là gì?",
-  explain: "Đó là **はく落（はくらく）**, chỉ hiện tượng lớp vật liệu (như sơn, gạch, bê tông phủ) bị bong và rơi xuống do yếu kết dính.",
+  explain: "Đó là **はく落（はくらく）**, chỉ hiện tượng lớp vật liệu (như sơn, gạch, bê tông phủ) bị bong và rơi xuống do yếu kết dính.\n\nTừ vựng:\nはく離（り）: Sự bong tróc, tách lớp\n落（お）ちる: Rơi xuống, rụng xuống\nはく落（らく）: Bong tróc và rơi xuống",
   tip: "💡 Nhớ: 落（らく） = rơi → はく落 = bong tróc và rơi xuống."
 },
 {
@@ -288,7 +288,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   "answer": 1,
   "vi": "Tên của **biểu tượng (マーク)** này là gì?",
-  "explain": "Đây là **緑(みどり)十字(じゅうじ) (Midori Jūji - Thập tự xanh)**. Đây là biểu tượng phổ biến nhất tại Nhật Bản để biểu thị **an toàn (安全)** và **vệ sinh (衛生)**. Nó thường được sử dụng trên cờ, mũ bảo hộ, và các biển báo an toàn.",
+  "explain": "Đây là **緑(みどり)十字(じゅうじ) (Midori Jūji - Thập tự xanh)**. Đây là biểu tượng phổ biến nhất tại Nhật Bản để biểu thị **an toàn (安全)** và **vệ sinh (衛生)**. Nó thường được sử dụng trên cờ, mũ bảo hộ, và các biển báo an toàn.\n\nTừ vựng:\n安全（あんぜん）: An toàn\n緑（みどり）: Màu xanh lá cây\n十字（じゅうじ）: Hình chữ thập\n第一（だいいち）: Trước tiên, số một\n衛生（えいせい）: Vệ sinh\nマーク: Biểu tượng, ký hiệu",
   "tip": "💡 Nhớ: Hình dấu thập màu **xanh lá (緑)** → **緑(みどり)十字(じゅうじ)**."
 },
 {
@@ -301,7 +301,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Hãy chọn trình tự đúng khi bố trí **thép sàn (土間配筋)**.",
-  explain: "Trình tự đúng là **主筋（しゅきん）の配筋（はいきん）→配力筋（はいりょくきん）の配筋（はいきん）→スペースの設置（せっち）**. Nghĩa là: lắp thép chính (chủ lực) trước → sau đó lắp thép phụ (phân phối lực) → và cuối cùng là đặt **Space (Spacer)** để đảm bảo chiều dày lớp bảo vệ và khoảng cách giữa hai lớp thép (nếu là thép hai lớp).",
+  explain: "Trình tự đúng là **主筋（しゅきん）の配筋（はいきん）→配力筋（はいりょくきん）の配筋（はいきん）→スペースの設置（せっち）**. Nghĩa là: lắp thép chính (chủ lực) trước → sau đó lắp thép phụ (phân phối lực) → và cuối cùng là đặt **Space (Spacer)** để đảm bảo chiều dày lớp bảo vệ và khoảng cách giữa hai lớp thép (nếu là thép hai lớp).\n\nTừ vựng:\n土間（どま）: Sàn nền bê tông\n配筋（はいきん）: Bố trí, lắp đặt cốt thép\n順（じゅん）: Trình tự, thứ tự\n主筋（しゅきん）: Thép chính, thép chủ lực\n配力筋（はいりょくきん）: Thép phân phối lực\n設置（せっち）: Đặt, lắp đặt\nスペーサー: Con kê (spacer)",
   tip: "💡 Mẹo nhớ: **Thép Chính** → **Thép Phụ** → **Spacer**."
 },
 
@@ -315,7 +315,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Do nội dung chỉ thị không được truyền đạt rõ ràng gây ra lỗi con người là gì?",
-  explain: "Đó là **連絡不足（れんらくぶそく）** – thiếu thông tin liên lạc. Khi chỉ thị không rõ ràng, dễ dẫn đến hiểu nhầm và sai sót trong thi công.",
+  explain: "Đó là **連絡不足（れんらくぶそく）** – thiếu thông tin liên lạc. Khi chỉ thị không rõ ràng, dễ dẫn đến hiểu nhầm và sai sót trong thi công.\n\nTừ vựng:\n指示（しじ）: Chỉ thị\n内容（ないよう）: Nội dung\n伝（つた）える: Truyền đạt, báo lại\n連絡（れんらく）: Liên lạc\n不足（ぶそく）: Thiếu, không đủ\n不注意（ふちゅうい）: Thiếu chú ý, bất cẩn\n経験（けいけん）: Kinh nghiệm\nヒューマンエラー: Lỗi con người",
   tip: "💡 Mẹo nhớ: ‘れんらく不足’ = liên lạc thiếu → dẫn đến nhầm lẫn."
 },
 
@@ -329,7 +329,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Dụng cụ có cán dài, đầu phẳng bằng kim loại, dùng để nén chặt bề mặt nhựa đường hoặc đất là gì?",
-  explain: "Đó là **タンパー（tamper）**, một dụng cụ nén thủ công dùng trong thi công nền hoặc trải nhựa đường.",
+  explain: "Đó là **タンパー（tamper）**, một dụng cụ nén thủ công dùng trong thi công nền hoặc trải nhựa đường.\n\nTừ vựng:\n柄（え）: Cán, tay cầm\n金属製（きんぞくせい）: Làm bằng kim loại\n板（いた）: Tấm, bản phẳng\n突（つ）く: Nện xuống, đâm xuống\n締固（しめかた）める: Đầm nén chặt\nタンパー: Cái đầm tay (tamper)\nレーキ: Cái cào san phẳng (rake)",
   tip: "💡 Mẹo nhớ: タンパー = 'tamper' (đầm tay, nén bề mặt phẳng)."
 },
   {
@@ -343,7 +343,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 2,
   vi: "Xẻng nào có thể dùng để **chọc (つく)** xuống mặt đất và **đào (ほる)** một cái hố **sâu (ふかい)**?",
-  explain: "Dụng cụ chuyên dụng để đào các hố **sâu (深(ふか)い)** và **hẹp (細(ほそ)い)**, thường dùng để chôn cọc hoặc lắp đặt đường ống, là **ダブルスコップ (Daburu Sukoppu - Xẻng đôi hay còn gọi là Xẻng đào hố)** . Nó hoạt động bằng cách chọc xuống đất và sau đó kẹp đất lại để đưa lên.",
+  explain: "Dụng cụ chuyên dụng để đào các hố **sâu (深(ふか)い)** và **hẹp (細(ほそ)い)**, thường dùng để chôn cọc hoặc lắp đặt đường ống, là **ダブルスコップ (Daburu Sukoppu - Xẻng đôi hay còn gọi là Xẻng đào hố)** . Nó hoạt động bằng cách chọc xuống đất và sau đó kẹp đất lại để đưa lên.\n\nTừ vựng:\n地面（じめん）: Mặt đất\n穴（あな）: Cái hố, lỗ\n掘（ほ）る: Đào\n深（ふか）い: Sâu\nスコップ: Cái xẻng\n剣（けん）スコップ: Xẻng đầu nhọn\n角（かく）スコップ: Xẻng đầu vuông\nダブルスコップ: Xẻng đôi đào hố",
   tip: "💡 Nhớ: **深(ふか)い穴(あな)を掘(ほ)る** (Đào hố sâu) → **ダブルスコップ** (Xẻng đôi)."
 },
 {
@@ -356,7 +356,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 3,
   vi: "Khi hoảng loạn hoặc giật mình, dễ xảy ra hành vi mất an toàn — loại lỗi con người này được gọi là gì?",
-  explain: "Đáp án đúng là **パニック（hoảng loạn）**. Khi con người bị bất ngờ hoặc lo sợ, họ dễ hành động sai hoặc ra lệnh sai, gây ra tai nạn lao động.",
+  explain: "Đáp án đúng là **パニック（hoảng loạn）**. Khi con người bị bất ngờ hoặc lo sợ, họ dễ hành động sai hoặc ra lệnh sai, gây ra tai nạn lao động.\n\nTừ vựng:\n急（きゅう）に: Đột ngột, bất ngờ\n驚（おどろ）く: Giật mình, ngạc nhiên\n慌（あわ）てる: Hoảng hốt, luống cuống\n不安全（ふあんぜん）: Không an toàn\n行動（こうどう）: Hành động\n不適切（ふてきせつ）: Không thích hợp\n心身（しんしん）: Thể chất và tinh thần\n疲労（ひろう）: Sự mệt mỏi\nパニック: Hoảng loạn (panic)",
   tip: "💡 Mẹo nhớ: パニック = panic = mất bình tĩnh → dễ hành động nguy hiểm."
 },
 
@@ -370,7 +370,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 1,
   vi: "Công việc đánh dấu vị trí và độ cao của kết cấu hoặc bộ phận tại công trường được gọi là gì?",
-  explain: "Đáp án đúng là **墨出し（すみだし）**, là quá trình vẽ dấu (marking) trực tiếp lên mặt bằng để chỉ vị trí, độ cao, hướng lắp đặt của kết cấu.",
+  explain: "Đáp án đúng là **墨出し（すみだし）**, là quá trình vẽ dấu (marking) trực tiếp lên mặt bằng để chỉ vị trí, độ cao, hướng lắp đặt của kết cấu.\n\nTừ vựng:\n施工（せこう）: Thi công\n構造物（こうぞうぶつ）: Kết cấu, công trình\n部材（ぶざい）: Cấu kiện, bộ phận\n位置（いち）: Vị trí\n高（たか）さ: Độ cao, chiều cao\n現場（げんば）: Công trường, hiện trường\n墨出（すみだ）し: Đánh dấu, vạch mực định vị\nケガキ: Vạch dấu (trên kim loại)",
   tip: "💡 Mẹo nhớ: 墨（すみ）= mực → 出（だ）す = vẽ ra → 墨出（すみだ）し = vẽ dấu xác định vị trí."
 },
 
@@ -384,7 +384,7 @@ window.PRACTICE_SETS["g2_2"] =  {
   ],
   answer: 0,
   vi: "Trong các mô tả sau về công việc thi công cốt thép, điều nào không đúng?",
-  explain: " Thực tế, **bê tông mạnh về lực nén 圧縮力（あっしゅくりょく） nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.",
+  explain: " Thực tế, **bê tông mạnh về lực nén 圧縮力（あっしゅくりょく） nhưng yếu khi kéo. Vì vậy mới cần thêm cốt thép để tăng khả năng chịu kéo.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép, thanh thép\n不適切（ふてきせつ）: Không phù hợp, không đúng\n圧縮力（あっしゅくりょく）: Lực nén\n補（おぎな）う: Bù đắp, bổ sung\n酸化（さんか）: Sự oxy hóa\n錆（さび）: Gỉ sét\n性質（せいしつ）: Tính chất\nアルカリ性（せい）: Tính kiềm\n引（ひ）っ張（ぱ）る力（ちから）: Lực kéo",
   tip: "💡 Mẹo nhớ: コンクリート = mạnh khi bị nén 圧縮力（あっしゅくりょく）, yếu khi bị kéo 引（ひ）っ張（ぱ）."
 }
 

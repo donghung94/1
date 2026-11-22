@@ -15,7 +15,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Phao 浮標（ふひょう） là thiết bị dùng để làm gì?",
-    explain: "浮標（ふひょう） là thiết bị được đặt xung quanh khu vực thi công trên biển để **báo hiệu cho tàu thuyền khác biết** về khu vực công trường.",
+    explain: "浮標（ふひょう） là thiết bị được đặt xung quanh khu vực thi công trên biển để **báo hiệu cho tàu thuyền khác biết** về khu vực công trường.\n\nTừ vựng:\n浮標（ふひょう）: Phao nổi báo hiệu\n定義（ていぎ）: Định nghĩa\n設置（せっち）: Lắp đặt, bố trí\n工事現場（こうじげんば）: Công trường thi công\n周（まわ）り: Xung quanh\n杭（くい）: Cọc\n海底（かいてい）: Đáy biển\n固定（こてい）: Cố định",
     tip: "💡 Nhớ: ‘浮’ = nổi, ‘標’ = dấu hiệu → vật nổi báo hiệu trên mặt nước."
   },
 {
@@ -28,7 +28,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   answer: 2,
   vi: "Bộ phận giữ khoảng cách cốp pha cố định và xiết ống là gì?",
-  explain: "**フォームタイ（Form tie）** là bộ phận dùng để cố định khoảng cách giữa hai tấm ván khuôn 型枠（かたわく） và siết chặt bằng ống (パイプ).",
+  explain: "**フォームタイ（Form tie）** là bộ phận dùng để cố định khoảng cách giữa hai tấm ván khuôn 型枠（かたわく） và siết chặt bằng ống (パイプ).\n\nTừ vựng:\n型枠（かたわく）: Cốp pha, ván khuôn\n間隔（かんかく）: Khoảng cách\n一定（いってい）: Nhất định, cố định\n保（たも）つ: Giữ, duy trì\n部材（ぶざい）: Cấu kiện, bộ phận\nフォームタイ: Thanh giằng cốp pha (form tie)\n丸（まる）セパレーター: Thanh định vị tròn",
   tip: "💡 Nhớ: フォームタイ = form tie = thanh giữ khoảng cách ván khuôn."
 },
 
@@ -43,7 +43,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Hình ảnh trên là loại công trình nào?",
-    explain: "Hình cho thấy máy lu lèn mặt đường → là 舗装（ほそう）工事（こうじ） (thi công lát đường, trải nhựa)**.",
+    explain: "Hình cho thấy máy lu lèn mặt đường → là 舗装（ほそう）工事（こうじ） (thi công lát đường, trải nhựa)**.\n\nTừ vựng:\n写真（しゃしん）: Bức ảnh\n舗装（ほそう）: Trải, lát mặt đường\n斜面（しゃめん）: Sườn dốc, mặt dốc\n橋梁（きょうりょう）: Cầu\n掘削（くっさく）: Đào đất\n工事（こうじ）: Công trình, thi công",
     tip: "💡 Nhớ:  舗装（ほそう）mặt đường; lu xe → trải nhựa."
   },
 
@@ -57,7 +57,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   answer: 1,
   vi: "Trong công trình sông ngòi 河川工事（かせんこうじ）, loại tai nạn dễ xảy ra nhất là gì?",
-  explain: "Ở công trình sông 河川工事（かせんこうじ）, mặt đất thường trơn trượt do nước, bùn nên dễ xảy ra **転倒（てんとう）– té ngã**.",
+  explain: "Ở công trình sông 河川工事（かせんこうじ）, mặt đất thường trơn trượt do nước, bùn nên dễ xảy ra **転倒（てんとう）– té ngã**.\n\nTừ vựng:\n河川工事（かせんこうじ）: Công trình sông ngòi\n事故（じこ）: Tai nạn\n墜落（ついらく）: Rơi từ trên cao\n転倒（てんとう）: Té ngã, trượt ngã\n飛来（ひらい）: Vật bay tới\n落下（らっか）: Vật rơi xuống\n崩壊（ほうかい）: Sụp đổ",
   tip: "💡 Nhớ: Công trình sông nước → bùn trơn → dễ 転倒（てんとう） (té ngã)."
 },
 {
@@ -70,7 +70,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   answer: 3,
   vi: "Khi dựng chống đỡ dầm 梁底（はりそこ）型枠（かたわく）, bộ phận gỗ dùng để kê ống đơn là gì?",
-  explain: "**トンボ端（ばた）** là thanh gỗ đặt ngang để đỡ ống đơn 単管（たんかん）パイプ và giúp cố định vị trí khi dựng chống.",
+  explain: "**トンボ端（ばた）** là thanh gỗ đặt ngang để đỡ ống đơn 単管（たんかん）パイプ và giúp cố định vị trí khi dựng chống.\n\nTừ vựng:\n梁底（はりそこ）: Đáy dầm\n型枠（かたわく）: Cốp pha\n単管（たんかん）: Ống đơn\n筋交い（すじかい）: Thanh giằng chéo\n端太角（ばたかく）: Thanh gỗ vuông kê đỡ\nトンボ端（ばた）: Thanh gỗ kê ngang đỡ ống\n部材（ぶざい）: Cấu kiện, bộ phận",
   tip: "💡 Nhớ: トンボ端 = thanh đỡ ngang ở chân chống để giữ ống đơn cố định."
 },
 
@@ -85,7 +85,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Đây là gì?",
-    explain: "Hình là **ケーソン (Caisson)** – khối bê tông rỗng lớn dùng trong công trình cảng, đê, neo giữ ở đáy biển.",
+    explain: "Hình là **ケーソン (Caisson)** – khối bê tông rỗng lớn dùng trong công trình cảng, đê, neo giữ ở đáy biển.\n\nTừ vựng:\nケーソン: Khối thùng chìm bê tông (caisson)\n消波（しょうは）: Tiêu sóng, giảm sóng\nブロック: Khối bê tông\nソナー: Máy sonar (đo sâu bằng sóng âm)",
     tip: "💡 Nhớ: ケーソン thường có ô vuông rỗng trên mặt, dùng làm chân móng ở biển."
   },
 
@@ -99,7 +99,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Tại công trường, loại tai nạn thường xảy ra khi máy xúc (バックホウ) làm việc trên sườn dốc là gì?",
-    explain: "Máy xúc trên dốc dễ bị 転倒（てんとう） (lật) do trọng tâm lệch khi quay hoặc di chuyển.",
+    explain: "Máy xúc trên dốc dễ bị 転倒（てんとう） (lật) do trọng tâm lệch khi quay hoặc di chuyển.\n\nTừ vựng:\n現場（げんば）: Công trường, hiện trường\n法面（のりめん）: Mái dốc, taluy\n事故（じこ）: Tai nạn\n墜落（ついらく）: Rơi từ trên cao\n転倒（てんとう）: Lật, đổ ngã\n崩壊（ほうかい）: Sụp đổ\n交通事故（こうつうじこ）: Tai nạn giao thông\nバックホウ: Máy xúc, máy đào",
     tip: "💡 Nhớ: 法面（のりめん）＝sườn dốc → máy xúc dễ bị lật = 転倒（てんとう）."
   },
 
@@ -113,7 +113,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   "answer": 3,
   "vi": "Trong Chu trình thi công an toàn 安全（あんぜん）施工（せこう）サイクル, lựa chọn nào là không phù hợp 不適切（ふてき）?",
-  "explain": "安全（あんぜん）靴（ぐつ） là trang bị cá nhân (bảo hộ lao động), không phải nội dung hoặc bước thuộc Chu trình kiểm soát an toàn (Anzen Sekou Cycle) như: Họp an toàn trước làm việc (朝礼), Kiểm tra trước khi bắt đầu công việc (点検), hoặc Tuần tra an toàn (パトロール).",
+  "explain": "安全（あんぜん）靴（ぐつ） là trang bị cá nhân (bảo hộ lao động), không phải nội dung hoặc bước thuộc Chu trình kiểm soát an toàn (Anzen Sekou Cycle) như: Họp an toàn trước làm việc (朝礼), Kiểm tra trước khi bắt đầu công việc (点検), hoặc Tuần tra an toàn (パトロール).\n\nTừ vựng:\n安全（あんぜん）: An toàn\n施工（せこう）: Thi công\n不適切（ふてきせつ）: Không phù hợp\n作業前（さぎょうまえ）: Trước khi làm việc\n朝礼（ちょうれい）: Buổi họp sáng đầu giờ\n点検（てんけん）: Kiểm tra\n安全靴（あんぜんぐつ）: Giày bảo hộ\nパトロール: Tuần tra (an toàn)",
   "tip": "💡 Chu trình (サイクル) kiểm soát an toàn thường bao gồm các hoạt động kiểm tra, họp, tuần tra/giám sát, không phải là trang bị cá nhân như Giày bảo hộ (安全靴)."
 },
 
@@ -127,7 +127,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Thiết bị nào dùng để di chuyển ống dẫn bê tông tới vị trí cần đổ?",
-    explain: "ブーム装置（そうち）là cánh tay cần của xe bơm bê tông, dùng để điều hướng ống dẫn.",
+    explain: "ブーム装置（そうち）là cánh tay cần của xe bơm bê tông, dùng để điều hướng ống dẫn.\n\nTừ vựng:\n輸送管（ゆそうかん）: Ống dẫn (bê tông)\n装置（そうち）: Thiết bị, cơ cấu\n旋回（せんかい）: Xoay, quay vòng\n場所（ばしょ）: Vị trí, nơi chốn\nブーム: Cần (của xe bơm bê tông)\nアウトリガー: Chân chống mở rộng (outrigger)",
     tip: "💡 Boom = cánh tay vươn → đưa ống đến chỗ đổ bê tông."
   },
 
@@ -141,7 +141,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Dụng cụ nào dùng để đo cao độ (thủy chuẩn)?",
-    explain: "**レベル (máy thủy bình)** dùng trong đo đạc để xác định độ cao, mặt phẳng ngang.",
+    explain: "**レベル (máy thủy bình)** dùng trong đo đạc để xác định độ cao, mặt phẳng ngang.\n\nTừ vựng:\n水準（すいじゅん）: Thủy chuẩn, cao độ\n測量（そくりょう）: Đo đạc, trắc địa\n機械（きかい）: Máy móc, thiết bị\nレベル: Máy thủy bình (level)\nトランシット: Máy kinh vĩ (transit)\n水糸（みずいと）: Dây căng định vị (dây mực nước)",
     tip: "💡 レベル = Level → dùng đo cao độ mặt đất."
   },
 
@@ -155,7 +155,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   "answer": 1,
   "vi": "Cọ sắt (Wire brush) dùng để làm gì? Chọn câu đúng.",
-  "explain": "ワイヤーブラシ (cọ sắt) là dụng cụ chuyên dùng để làm sạch gỉ sét, cặn bẩn, và đặc biệt là loại bỏ 目づまり (mùn/cặn) bám vào kẽ răng của やすり (dũa/giũa).",
+  "explain": "ワイヤーブラシ (cọ sắt) là dụng cụ chuyên dùng để làm sạch gỉ sét, cặn bẩn, và đặc biệt là loại bỏ 目づまり (mùn/cặn) bám vào kẽ răng của やすり (dũa/giũa).\n\nTừ vựng:\n金属（きんぞく）: Kim loại\n表面（ひょうめん）: Bề mặt\n研磨（けんま）: Mài, đánh bóng\nやすり: Cái dũa\n目（め）づまり: Cặn bám tắc vào răng dũa\n岩石（がんせき）: Đá, nham thạch\n切削（せっさく）: Cắt gọt\n玉掛（たまかけ）: Công tác móc treo tải",
   "tip": "💡 ワイヤーブラシ (Wire Brush) được dùng để làm sạch bề mặt hoặc làm sạch một dụng cụ khác, ví dụ như làm sạch やすり (dũa) bị 目づまり (bám cặn)."
 },
 {
@@ -168,7 +168,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   answer: 0,
   vi: "Trong công tác bơm bê tông, để tránh bị điện giật, cần làm gì?",
-  explain: "Khi thi công gần đường điện cao áp, điều quan trọng nhất là **xác nhận khoảng cách an toàn (安全距離)** giữa thiết bị bơm và dây điện để tránh cảm điện.",
+  explain: "Khi thi công gần đường điện cao áp, điều quan trọng nhất là **xác nhận khoảng cách an toàn (安全距離)** giữa thiết bị bơm và dây điện để tránh cảm điện.\n\nTừ vựng:\n圧送（あっそう）: Bơm áp lực\n電圧（でんあつ）: Điện áp\n電線（でんせん）: Dây điện\n感電（かんでん）: Điện giật\n確認（かくにん）: Xác nhận, kiểm tra\n輸送管（ゆそうかん）: Ống dẫn\n着用（ちゃくよう）: Mặc, đeo (trang bị bảo hộ)",
   tip: "💡 Nhớ: 感電＝bị điện giật → giữ **khoảng cách an toàn** với dây điện."
 },
 
@@ -182,7 +182,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 3,
     vi: "Để tránh bệnh phổi do hít bụi lâu dài, cần đeo gì?",
-    explain: "Phải **đeo khẩu trang bảo hộ (保護マスク)** để tránh hít bụi mịn và khí độc.",
+    explain: "Phải **đeo khẩu trang bảo hộ (保護マスク)** để tránh hít bụi mịn và khí độc.\n\nTừ vựng:\n長期（ちょうき）: Lâu dài, dài hạn\n肺（はい）: Phổi\n機能障害（きのうしょうがい）: Rối loạn chức năng\n着用（ちゃくよう）: Đeo, mặc\n保護（ほご）: Bảo hộ, bảo vệ\n保護（ほご）メガネ: Kính bảo hộ\n手袋（てぶくろ）: Găng tay\n保護（ほご）マスク: Khẩu trang bảo hộ",
     tip: "💡 Nhớ: 吸い続ける＝hít lâu → cần マスク bảo vệ hô hấp."
   },
 
@@ -196,7 +196,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 2,
     vi: "Khi nội dung chỉ thị không được truyền đạt rõ ràng, lỗi con người đó gọi là gì?",
-    explain: "Khi thông tin truyền đạt không đủ rõ ràng → **連絡不足 (thiếu liên lạc)** là nguyên nhân.",
+    explain: "Khi thông tin truyền đạt không đủ rõ ràng → **連絡不足 (thiếu liên lạc)** là nguyên nhân.\n\nTừ vựng:\n指示（しじ）: Chỉ thị\n内容（ないよう）: Nội dung\n不注意（ふちゅうい）: Thiếu chú ý, bất cẩn\n欠陥（けっかん）: Khiếm khuyết, lỗi\n連絡（れんらく）: Liên lạc, truyền đạt\n不足（ぶそく）: Thiếu, không đủ\n経験（けいけん）: Kinh nghiệm\nヒューマンエラー: Lỗi con người",
     tip: "💡 Nhớ: 指示が伝わらない＝thiếu liên lạc → 連絡不足."
   },
 
@@ -210,7 +210,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Van nào có thể mở và đóng đồng thời khí oxy và axetylen?",
-    explain: "**エコバルブ (eco valve)** dùng trong hàn, mở/đóng đồng thời 2 dòng khí để an toàn hơn.",
+    explain: "**エコバルブ (eco valve)** dùng trong hàn, mở/đóng đồng thời 2 dòng khí để an toàn hơn.\n\nTừ vựng:\n酸素（さんそ）: Khí oxy\n同時（どうじ）: Đồng thời, cùng lúc\n開閉（かいへい）: Đóng và mở\n吹管（ふきかん）: Ống thổi, mỏ hàn\nエコバルブ: Van eco (đóng mở đồng thời hai khí)\nバーナー: Đầu đốt, mỏ cắt",
     tip: "💡 エコ＝hiệu quả, tiết kiệm → điều khiển 2 khí cùng lúc."
   },
 
@@ -225,7 +225,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 2,
     vi: "Đây là dụng cụ gì?",
-    explain: "Đây là **バーナー (đầu đốt)** – dùng để hàn, gia nhiệt bằng ngọn lửa khí oxy + axetylen.",
+    explain: "Đây là **バーナー (đầu đốt)** – dùng để hàn, gia nhiệt bằng ngọn lửa khí oxy + axetylen.\n\nTừ vựng:\nエコバルブ: Van eco\n吸管（きゅうかん）: Ống hút\nバーナー: Đầu đốt (mỏ hàn, mỏ cắt)\nラムシリンダー: Xi lanh ram (kích thủy lực)",
     tip: "💡 Nhớ: バーナー＝burner → đầu đốt ngọn lửa."
   },
 
@@ -239,7 +239,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 2,
     vi: "Loại máy có tấm gạt đất ở phía trước, dùng để đào và đẩy đất là gì?",
-    explain: "**ブルドーザー (Bulldozer)** có tấm gạt phía trước, dùng để san phẳng hoặc đẩy đất.",
+    explain: "**ブルドーザー (Bulldozer)** có tấm gạt phía trước, dùng để san phẳng hoặc đẩy đất.\n\nTừ vựng:\nクローラ式（しき）: Loại bánh xích\n走行装置（そうこうそうち）: Hệ thống di chuyển\n前面（ぜんめん）: Phía trước\n排土板（はいどばん）: Lưỡi ủi đất\n装着（そうちゃく）: Lắp đặt, trang bị\n掘削（くっさく）: Đào đất\n運搬（うんぱん）: Vận chuyển\nブルドーザー: Xe ủi đất",
     tip: "💡 排土板 (tấm gạt) = dấu hiệu nhận biết ブルドーザー."
   },
 
@@ -253,7 +253,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 3,
     vi: "Lỗi con người do nhìn nhầm, nghe nhầm, hiểu sai gọi là gì?",
-    explain: "Đó là 認知（にんち）ミス (lỗi nhận thức)** – hiểu sai do chủ quan, nhìn/ nghe nhầm.",
+    explain: "Đó là 認知（にんち）ミス (lỗi nhận thức)** – hiểu sai do chủ quan, nhìn/ nghe nhầm.\n\nTừ vựng:\n思（おも）い込（こ）み: Ngộ nhận, chủ quan cho rằng\n見違（みちが）い: Nhìn nhầm\n聞（き）き違（ちが）い: Nghe nhầm\n原因（げんいん）: Nguyên nhân\n手抜（てぬ）き: Làm qua loa, cắt bớt bước\n連絡不足（れんらくぶそく）: Thiếu liên lạc\n認知（にんち）: Nhận thức",
     tip: "💡 Nhớ: 認知（にんち）＝nhận thức → lỗi do hiểu sai, nhìn sai."
   },
 {
@@ -266,7 +266,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   "answer": 1,
   "vi": "丸(まる)セパレーター (Maru Separator) là gì?",
-  "explain": "Maru Separator là một linh kiện quan trọng trong lắp đặt cốp pha. Nhiệm vụ của nó là **確保(かくほ) (đảm bảo)** sao cho **厚(あつ)み (độ dày)** của **コンクリート (bê tông)** được thực hiện chính xác theo đúng **施工(せこう)図(ず) (bản vẽ thi công)**.",
+  "explain": "Maru Separator là một linh kiện quan trọng trong lắp đặt cốp pha. Nhiệm vụ của nó là **確保(かくほ) (đảm bảo)** sao cho **厚(あつ)み (độ dày)** của **コンクリート (bê tông)** được thực hiện chính xác theo đúng **施工(せこう)図(ず) (bản vẽ thi công)**.\n\nTừ vựng:\n丸（まる）セパレーター: Thanh định vị tròn\n先端（せんたん）: Phần đầu, đầu mút\n部品（ぶひん）: Bộ phận, linh kiện\n厚（あつ）み: Độ dày\n施工図（せこうず）: Bản vẽ thi công\n確保（かくほ）: Đảm bảo\n型枠（かたわく）: Cốp pha\n間隔（かんかく）: Khoảng cách",
   "tip": "💡 Nhớ: **セパレーター** = Đảm bảo **厚(あつ)み** (độ dày) bê tông."
 },
 
@@ -280,7 +280,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 2,
     vi: "Bộ phận được gắn vào ván khuôn để tạo rãnh (溝) trong bê tông gọi là gì?",
-    explain: "**欠き込み材** là vật chèn để tạo khe, rãnh trong bê tông, ví dụ quanh cửa sổ.",
+    explain: "**欠き込み材** là vật chèn để tạo khe, rãnh trong bê tông, ví dụ quanh cửa sổ.\n\nTừ vựng:\n窓枠（まどわく）: Khung cửa sổ\n溝（みぞ）: Rãnh, khe\n型枠（かたわく）: Cốp pha\n部材（ぶざい）: Cấu kiện, bộ phận\n端太角（ばたかく）: Thanh gỗ vuông kê đỡ\n根太（ねだ）: Thanh đà ngang đỡ sàn\n欠（か）き込（こ）み材（ざい）: Vật chèn tạo rãnh, khe",
     tip: "💡 欠き込み＝khoét lõm → vật tạo rãnh."
   },
   {
@@ -294,7 +294,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Dụng cụ trong hình là gì?",
-    explain: "Đây là フォームタイ回（まわ）し – dụng cụ chuyên dùng để siết hoặc tháo thanh form-tie trong cốp pha.",
+    explain: "Đây là フォームタイ回（まわ）し – dụng cụ chuyên dùng để siết hoặc tháo thanh form-tie trong cốp pha.\n\nTừ vựng:\n道具（どうぐ）: Dụng cụ\nフォームタイ回（まわ）し: Dụng cụ vặn form tie\n仮枠（かりわく）: Cốp pha tạm\nハンマー: Cái búa\nターンバックル: Tăng đơ (khóa cáp)",
     tip: "💡 Nhớ: ‘回（まわ）し’ = vặn → dụng cụ để vặn thanh tie (フォームタイ)."
   },
 
@@ -308,7 +308,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Dụng cụ có lưới dùng để sàng vật liệu theo kích thước là gì?",
-    explain: "**ふるい (rây, sàng)** dùng để phân loại vật liệu như cát, sỏi theo kích thước hạt.",
+    explain: "**ふるい (rây, sàng)** dùng để phân loại vật liệu như cát, sỏi theo kích thước hạt.\n\nTừ vựng:\n材料（ざいりょう）: Vật liệu\n仕分（しわ）ける: Phân loại, sàng lọc\n網（あみ）: Lưới\nふるい: Cái sàng, cái rây\nスコップ: Cái xẻng\n養生（ようじょう）: Bảo dưỡng (bê tông)",
     tip: "💡 Nhớ: ふるい = sàng lọc, lưới sàng vật liệu."
   },
 {
@@ -321,7 +321,7 @@ window.PRACTICE_SETS["g1_1"] = {
   ],
   answer: 0,
   vi: "Máy trộn cầm tay (ハンドミキサ) là gì?",
-  explain: "**ハンドミキサ** là máy khuấy cầm tay dùng để **trộn sơn, vữa, bê tông nhẹ** – thường dùng trong các công trình nhỏ hoặc khi cần trộn nhanh lượng ít vật liệu.",
+  explain: "**ハンドミキサ** là máy khuấy cầm tay dùng để **trộn sơn, vữa, bê tông nhẹ** – thường dùng trong các công trình nhỏ hoặc khi cần trộn nhanh lượng ít vật liệu.\n\nTừ vựng:\nハンドミキサ: Máy trộn cầm tay\n塗料（とりょう）: Sơn\nかくはん機（き）: Máy khuấy, máy trộn\n混（ま）ぜる: Trộn, khuấy\n材料（ざいりょう）: Vật liệu\n練（ね）り混（ま）ぜる: Nhào trộn kỹ",
   tip: "💡 ハンド = tay, ミキサ = mixer → máy trộn cầm tay (dạng khuấy)."
 },
 
@@ -335,7 +335,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Khối kê thép sàn dạng lập phương dùng để đảm bảo chiều dày lớp bảo vệ bê tông gọi là gì?",
-    explain: "Đó là **キャラメル** – khối kê bê tông nhỏ dạng hình lập phương đặt dưới thép sàn để giữ khoảng cách lớp phủ.",
+    explain: "Đó là **キャラメル** – khối kê bê tông nhỏ dạng hình lập phương đặt dưới thép sàn để giữ khoảng cách lớp phủ.\n\nTừ vựng:\n床筋（ゆかきん）: Cốt thép sàn\nかぶり厚（あつ）さ: Chiều dày lớp bê tông bảo vệ\n確保（かくほ）: Đảm bảo\nモルタル: Vữa xi măng\nキャラメル: Khối kê thép (caramel)\n折尺（おりじゃく）: Thước gấp\nハッカー: Dụng cụ móc buộc thép",
     tip: "💡 Nhớ: キャラメル giống viên kẹo → khối kê bê tông nhỏ hình vuông."
   },
  {
@@ -348,7 +348,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 3,
     vi: "Khi bị hoảng loạn hoặc giật mình dẫn đến hành động không an toàn hoặc chỉ thị sai, lỗi con người đó gọi là gì?",
-    explain: "Đây là **パニック (hoảng loạn)** – trạng thái mất bình tĩnh, dễ dẫn đến hành động sai hoặc thiếu an toàn.",
+    explain: "Đây là **パニック (hoảng loạn)** – trạng thái mất bình tĩnh, dễ dẫn đến hành động sai hoặc thiếu an toàn.\n\nTừ vựng:\n驚（おどろ）く: Giật mình, bất ngờ\n慌（あわ）てる: Hoảng hốt, luống cuống\n不安全行動（ふあんぜんこうどう）: Hành vi không an toàn\n不適切（ふてきせつ）: Không thích hợp\n心身（しんしん）: Thể chất và tinh thần\n機能低下（きのうていか）: Suy giảm chức năng\n疲労（ひろう）: Mệt mỏi\n意識（いしき）: Ý thức\nパニック: Hoảng loạn",
     tip: "💡 Nhớ: パニック = panic → lỗi do hoảng sợ, không kiểm soát hành vi."
   },
 
@@ -363,7 +363,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Dụng cụ trong hình dùng để làm gì?",
-    explain: "Đây là **thiết bị đo kích thước phần mối nối hàn áp lực 圧接部（あっせつぶ） – dùng để đo đường kính và bề rộng chỗ nối thép.",
+    explain: "Đây là **thiết bị đo kích thước phần mối nối hàn áp lực 圧接部（あっせつぶ） – dùng để đo đường kính và bề rộng chỗ nối thép.\n\nTừ vựng:\n圧接（あっせつ）: Hàn áp lực, nối áp lực\n直径（ちょっけい）: Đường kính\n幅（はば）: Chiều rộng\n測定（そくてい）: Đo đạc\n検査器具（けんさきぐ）: Dụng cụ kiểm tra\n鉄筋（てっきん）: Thanh thép, cốt thép\n強度（きょうど）: Cường độ\n酸化（さんか）: Sự oxy hóa",
     tip: "💡 Nhớ: 圧接部（あっせつぶ）のふくらみの直径（ちょっけい）→ thiết bị đo kích thước mối hàn."
   },
 
@@ -377,7 +377,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Quản lý chất lượng 品質（ひんしつ）管理（かんり） là gì?",
-    explain: "品質（ひんしつ）管理（かんり） là **đảm bảo chất lượng công trình đáp ứng yêu cầu của chủ đầu tư 発注者（はっちゅうしゃ）**.",
+    explain: "品質（ひんしつ）管理（かんり） là **đảm bảo chất lượng công trình đáp ứng yêu cầu của chủ đầu tư 発注者（はっちゅうしゃ）**.\n\nTừ vựng:\n品質（ひんしつ）: Chất lượng\n管理（かんり）: Quản lý\n発注者（はっちゅうしゃ）: Chủ đầu tư, bên đặt hàng\n要求（ようきゅう）: Yêu cầu\n満（み）たす: Đáp ứng, thỏa mãn\n建設物（けんせつぶつ）: Công trình xây dựng\n事故防止（じこぼうし）: Phòng ngừa tai nạn\n騒音（そうおん）: Tiếng ồn\n振動（しんどう）: Rung động",
     tip: "💡 品質＝chất lượng; 管理＝quản lý → quản lý để đảm bảo chất lượng đạt yêu cầu."
   },
  {
@@ -405,7 +405,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 1,
     vi: "Biện pháp thích hợp để phòng tránh say nắng là gì?",
-    explain: "Phải **mặc quần áo làm việc thông thoáng 通気性（つうきせい）の良（よ）い作業服（さぎょうふく）** để cơ thể không bị tích nhiệt và mất nước.",
+    explain: "Phải **mặc quần áo làm việc thông thoáng 通気性（つうきせい）の良（よ）い作業服（さぎょうふく）** để cơ thể không bị tích nhiệt và mất nước.\n\nTừ vựng:\n熱中症（ねっちゅうしょう）: Say nắng, sốc nhiệt\n対策（たいさく）: Biện pháp phòng chống\n適切（てきせつ）: Phù hợp, thích hợp\n水分（すいぶん）: Nước\n塩分（えんぶん）: Muối, chất điện giải\n通気性（つうきせい）: Tính thông thoáng\n作業服（さぎょうふく）: Quần áo làm việc\n休憩（きゅうけい）: Nghỉ giải lao",
     tip: "💡 熱中症＝say nắng; 通気性＝thông thoáng → quần áo mát là quan trọng nhất."
   },
 
@@ -419,7 +419,7 @@ window.PRACTICE_SETS["g1_1"] = {
     ],
     answer: 0,
     vi: "Do muốn làm nhanh, bỏ qua bước cần thiết gây ra lỗi — lỗi con người này gọi là gì?",
-    explain: "Đó là 近道行動（ちかみちこうどう）・省略行動（しょうりゃくこうどう）, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.",
+    explain: "Đó là 近道行動（ちかみちこうどう）・省略行動（しょうりゃくこうどう）, tức là hành vi bỏ bớt công đoạn vì muốn tiết kiệm thời gian, dễ dẫn đến tai nạn.\n\nTừ vựng:\n効率的（こうりてき）: Có hiệu quả\n本来（ほんらい）: Vốn dĩ, theo đúng quy định\n省略（しょうりゃく）: Bỏ bớt, lược bỏ\n近道行動（ちかみちこうどう）: Hành vi đi đường tắt\n認知（にんち）: Nhận thức\n不注意（ふちゅうい）: Thiếu chú ý\n本能（ほんのう）: Bản năng",
     tip: "💡 省略＝rút gọn, 近道＝đi đường tắt → bỏ bước = hành vi nguy hiểm."
   }
 ]

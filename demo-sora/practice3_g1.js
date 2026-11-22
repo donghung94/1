@@ -14,7 +14,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 3,
   vi: "Bộ phận nào dùng để đảm bảo khoảng cách (khoảng hở) giữa cốt thép và ván khuôn?",
-  explain: "**スペーサー (spacer)** là miếng đệm bằng nhựa hoặc bê tông, đặt giữa thép và ván khuôn để giữ **độ dày lớp bê tông bảo vệ かぶり厚(あつ)さ đúng quy định.",
+  explain: "**スペーサー (spacer)** là miếng đệm bằng nhựa hoặc bê tông, đặt giữa thép và ván khuôn để giữ **độ dày lớp bê tông bảo vệ かぶり厚(あつ)さ đúng quy định.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép\n型枠（かたわく）: Ván khuôn\n確保（かくほ）: Đảm bảo, giữ đúng\n部材（ぶざい）: Bộ phận, cấu kiện\n結束線（けっそくせん）: Dây buộc thép\n折尺（おりじゃく）: Thước gấp\nスペーサー: Miếng đệm giữ lớp bê tông bảo vệ",
   "explain_id": "**スペーサー (spacer)** adalah ganjal dari plastik atau beton, diletakkan di antara tulangan dan bekisting untuk menjaga **ketebalan selimut beton かぶり厚(あつ)さ sesuai ketentuan.",
   "explain_en": "**スペーサー (spacer)** is a plastic or concrete shim placed between the reinforcement and the formwork to keep the **concrete cover thickness かぶり厚(あつ)さ as specified.",
   tip: "💡 Nhớ: スペーサー = miếng đệm → giữ khoảng cách cố định."
@@ -30,7 +30,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Bộ phận nào tạo thành mặt sàn làm việc của giàn giáo?",
-  explain: "**布板（ぬのいた）** là tấm sàn của giàn giáo – nơi công nhân đứng làm việc.",
+  explain: "**布板（ぬのいた）** là tấm sàn của giàn giáo – nơi công nhân đứng làm việc.\n\nTừ vựng:\n足場（あしば）: Giàn giáo\n作業床（さぎょうゆか）: Sàn làm việc\n布板（ぬのいた）: Tấm sàn giàn giáo\n防音（ぼうおん）: Cách âm, chống ồn\n幅木（はばき）: Tấm chắn chân giàn giáo\n壁つなぎ（かべつなぎ）: Thanh giằng nối giàn giáo với tường\n部材（ぶざい）: Bộ phận, cấu kiện",
   "explain_id": "**布板（ぬのいた）** adalah papan lantai perancah – tempat pekerja berdiri untuk bekerja.",
   "explain_en": "**布板（ぬのいた）** is the deck board of scaffolding – where workers stand to work.",
   tip: "💡 布板 = tấm sàn giàn giáo (nơi đứng khi làm việc)."
@@ -47,7 +47,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 1,
   vi: "Công cụ uốn thép trong hình có chức năng gì?",
-  explain: "**鉄筋ベンダー (Rebar Bender)** là dụng cụ dùng để **uốn cong thép 曲（ま）げる** theo thiết kế.",
+  explain: "**鉄筋ベンダー (Rebar Bender)** là dụng cụ dùng để **uốn cong thép 曲（ま）げる** theo thiết kế.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép\n切断（せつだん）: Cắt đứt\n曲げる（まげる）: Uốn cong\n工具（こうぐ）: Dụng cụ\n結束（けっそく）: Buộc, liên kết\n電動（でんどう）: Chạy điện\n説明（せつめい）: Giải thích",
   "explain_id": "**鉄筋ベンダー (Rebar Bender)** adalah alat yang digunakan untuk **menekuk baja 曲（ま）げる** sesuai desain.",
   "explain_en": "**鉄筋ベンダー (Rebar Bender)** is a tool used to **bend steel 曲（ま）げる** according to the design.",
   tip: "💡 ベンダー = từ 'bender' (uốn cong) → công cụ uốn thép."
@@ -63,7 +63,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Máy cắt thép điện (鉄筋カッター) là gì?",
-  explain: "**電動（でんどう）鉄筋（てっきん）カッター** dùng **áp lực dầu 油圧（ゆあつ）** để di chuyển lưỡi cắt, giúp **cắt thép nhanh và an toàn**.",
+  explain: "**電動（でんどう）鉄筋（てっきん）カッター** dùng **áp lực dầu 油圧（ゆあつ）** để di chuyển lưỡi cắt, giúp **cắt thép nhanh và an toàn**.\n\nTừ vựng:\n油圧（ゆあつ）: Thủy lực, áp lực dầu\n刃（は）: Lưỡi cắt\n動かす（うごかす）: Di chuyển, làm chuyển động\n切断（せつだん）: Cắt đứt\n定義（ていぎ）: Định nghĩa\n電気（でんき）: Điện\n曲げる（まげる）: Uốn cong",
   "explain_id": "**電動（でんどう）鉄筋（てっきん）カッター** menggunakan **tekanan oli 油圧（ゆあつ）** untuk menggerakkan mata pisau pemotong, membantu **memotong baja dengan cepat dan aman**.",
   "explain_en": "**電動（でんどう）鉄筋（てっきん）カッター** uses **oil pressure 油圧（ゆあつ）** to move the cutting blade, helping to **cut steel quickly and safely**.",
   tip: "💡 カッター = cắt, dùng dầu ép (油圧) → cắt thép."
@@ -78,7 +78,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 1,
   vi: "Trong sơn 塗装（とそう）, phương pháp đúng là chia làm mấy giai đoạn?",
-  explain: "Công việc sơn cơ bản gồm **3 lớp**: sơn lót 下塗（したぬ）り, sơn giữa 中塗（なかぬ）り, và sơn phủ 上塗（うわぬ）. Điều này giúp bề mặt bền và đều màu hơn.",
+  explain: "Công việc sơn cơ bản gồm **3 lớp**: sơn lót 下塗（したぬ）り, sơn giữa 中塗（なかぬ）り, và sơn phủ 上塗（うわぬ）. Điều này giúp bề mặt bền và đều màu hơn.\n\nTừ vựng:\n塗装（とそう）: Sơn, công tác sơn\n下塗り（したぬり）: Sơn lót\n中塗り（なかぬり）: Sơn lớp giữa\n上塗り（うわぬり）: Sơn phủ, lớp hoàn thiện\n工程（こうてい）: Công đoạn\n表面（ひょうめん）: Bề mặt\n層（そう）: Lớp",
   "explain_id": "Pekerjaan pengecatan dasar terdiri dari **3 lapisan**: lapisan dasar 下塗（したぬ）り, lapisan tengah 中塗（なかぬ）り, dan lapisan atas 上塗（うわぬ）. Hal ini membantu permukaan menjadi tahan lama dan warnanya merata.",
   "explain_en": "Basic painting work consists of **3 coats**: primer coat 下塗（したぬ）り, middle coat 中塗（なかぬ）り, and top coat 上塗（うわぬ）. This helps the surface be durable and have an even color.",
   tip: "💡 Nhớ: 下塗り → 中塗り → 上塗り (3 bước sơn)."
@@ -94,7 +94,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 2,
   vi: "Trước khi đổ bê tông tươi, cần cho gì vào ống dẫn để giúp bê tông trượt dễ dàng hơn?",
-  explain: "**先送り材 (さきおくりざい)** là vật liệu (thường là vữa xi măng loãng hoặc nước xi) được bơm vào trước để làm trơn ống, giúp bê tông tươi chảy dễ hơn.",
+  explain: "**先送り材 (さきおくりざい)** là vật liệu (thường là vữa xi măng loãng hoặc nước xi) được bơm vào trước để làm trơn ống, giúp bê tông tươi chảy dễ hơn.\n\nTừ vựng:\n生コン（なまコン）: Bê tông tươi\n打設（だせつ）: Đổ bê tông\n輸送管（ゆそうかん）: Ống vận chuyển bê tông\n内側（うちがわ）: Mặt trong, phía trong\n滑り（すべり）: Độ trơn, sự trượt\n先送り材（さきおくりざい）: Vật liệu bơm mồi làm trơn ống\n送る（おくる）: Bơm vào, đưa vào",
   "explain_id": "**先送り材 (さきおくりざい)** adalah material (biasanya mortar semen encer atau air semen) yang dipompa terlebih dahulu untuk melumasi pipa, membantu beton segar mengalir lebih mudah.",
   "explain_en": "**先送り材 (さきおくりざい)** is a material (usually thin cement mortar or cement water) pumped in first to lubricate the pipe, helping fresh concrete flow more easily.",
   tip: "💡 Nhớ: 打設前 → bơm trước → 先送り材."
@@ -110,7 +110,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 3,
   vi: "Khi nào thì việc dùng bay nhựa 樹脂（じゅし）ベラ là không thích hợp?",
-  explain: "**樹脂（じゅし）ベラ** dùng cho trét bột, bôi keo, hoặc miết sơn — **không dùng trong công việc xây trát 左官（さかん）の作業（さぎょう）** vì loại đó cần bay kim loại.",
+  explain: "**樹脂（じゅし）ベラ** dùng cho trét bột, bôi keo, hoặc miết sơn — **không dùng trong công việc xây trát 左官（さかん）の作業（さぎょう）** vì loại đó cần bay kim loại.\n\nTừ vựng:\n樹脂（じゅし）: Nhựa resin\nパテ: Bột trét, bột bả\n接着剤（せっちゃくざい）: Keo dán, chất kết dính\n塗り広げ（ぬりひろげ）: Bôi, trét trải rộng\n圧着（あっちゃく）: Ép chặt, miết dính\n左官（さかん）: Công tác trát, thợ trát\n不適切（ふてきせつ）: Không phù hợp",
   "explain_id": "**樹脂（じゅし）ベラ** digunakan untuk mengaplikasikan dempul, mengoleskan lem, atau meratakan cat — **tidak digunakan dalam pekerjaan plesteran 左官（さかん）の作業（さぎょう）** karena pekerjaan itu membutuhkan sekop/trowel logam.",
   "explain_en": "**樹脂（じゅし）ベラ** is used for applying putty, spreading glue, or smoothing paint — **it is not used in plastering work 左官（さかん）の作業（さぎょう）** because that work requires a metal trowel.",
   tip: "💡 Nhớ: 左官 = trát vữa → không dùng bay nhựa."
@@ -126,7 +126,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Máy hút bụi công nghiệp 集塵機（しゅうじんき） là gì?",
-  explain: "**集塵機 (しゅうじんき)** là thiết bị dùng để **hút và thu gom bụi 粉塵（ふんじん）** sinh ra trong quá trình cắt, mài, khoan vật liệu.",
+  explain: "**集塵機 (しゅうじんき)** là thiết bị dùng để **hút và thu gom bụi 粉塵（ふんじん）** sinh ra trong quá trình cắt, mài, khoan vật liệu.\n\nTừ vựng:\n集塵機（しゅうじんき）: Máy hút bụi công nghiệp\n切削（せっさく）: Cắt gọt\n粉塵（ふんじん）: Bụi mịn công nghiệp\n定義（ていぎ）: Định nghĩa\n電動工具（でんどうこうぐ）: Dụng cụ điện\n切断（せつだん）: Cắt đứt\n地面（じめん）: Mặt đất\n掘る（ほる）: Đào",
   "explain_id": "**集塵機 (しゅうじんき)** adalah alat yang digunakan untuk **menghisap dan mengumpulkan debu 粉塵（ふんじん）** yang dihasilkan selama pemotongan, penggerindaan, dan pengeboran material.",
   "explain_en": "**集塵機 (しゅうじんき)** is a device used to **suck up and collect dust 粉塵（ふんじん）** generated during cutting, grinding, and drilling of materials.",
   tip: "💡 集 = gom, 塵 = bụi → máy hút bụi công nghiệp."
@@ -142,7 +142,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 2,
   vi: "Loại cờ lê có hai đầu khác đường kính (một đầu vòng, một đầu hở) là loại nào?",
-  explain: "**コンビネーションレンチ (Combination wrench)** có một đầu mở (スパナ) và một đầu vòng (めがねレンチ), dùng cho các kích thước bulong khác nhau.",
+  explain: "**コンビネーションレンチ (Combination wrench)** có một đầu mở (スパナ) và một đầu vòng (めがねレンチ), dùng cho các kích thước bulong khác nhau.\n\nTừ vựng:\n両側（りょうがわ）: Hai phía, hai đầu\n直径（ちょっけい）: Đường kính\n異なる（ことなる）: Khác nhau\n口部（こうぶ）: Phần miệng của cờ lê\nコンビネーションレンチ: Cờ lê kết hợp (một đầu hở, một đầu vòng)\nインパクトレンチ: Cờ lê siết va đập\nめがねレンチ: Cờ lê vòng\nスパナ: Cờ lê hở",
   "explain_id": "**コンビネーションレンチ (kunci kombinasi / kunci pas-ring)** memiliki satu ujung terbuka (スパナ) dan satu ujung ring (めがねレンチ), digunakan untuk berbagai ukuran baut.",
   "explain_en": "**コンビネーションレンチ (Combination wrench)** has an open end (スパナ) and a ring end (めがねレンチ), used for different bolt sizes.",
   tip: "💡 Combination = kết hợp → một đầu mở + một đầu vòng."
@@ -158,7 +158,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 1,
   vi: "Dụng cụ nào dùng để vặn chặt hoặc nới lỏng bulong và đai ốc?",
-  explain: "**スパナ (spanner)** là cờ lê thường dùng để siết hoặc mở ốc, bulong bằng tay.",
+  explain: "**スパナ (spanner)** là cờ lê thường dùng để siết hoặc mở ốc, bulong bằng tay.\n\nTừ vựng:\nボルト: Bu lông\nナット: Đai ốc\n回転（かいてん）: Xoay, quay\n締め付ける（しめつける）: Siết chặt\n緩める（ゆるめる）: Nới lỏng\n利用（りよう）: Sử dụng\n工具（こうぐ）: Dụng cụ\nスパナ: Cờ lê hở",
   "explain_id": "**スパナ (kunci pas)** adalah kunci yang biasanya digunakan untuk mengencangkan atau membuka mur dan baut dengan tangan.",
   "explain_en": "**スパナ (spanner)** is a wrench usually used to tighten or loosen nuts and bolts by hand.",
   tip: "💡 スパナ = cờ lê → dùng để vặn bulong/ốc."
@@ -174,7 +174,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Đây là loại thí nghiệm gì?",
-  explain: "Hình ảnh cho thấyスランプ試験（しけん） – dùng để kiểm tra **độ sệt và tính lưu động của bê tông tươi (生コン)**.",
+  explain: "Hình ảnh cho thấyスランプ試験（しけん） – dùng để kiểm tra **độ sệt và tính lưu động của bê tông tươi (生コン)**.\n\nTừ vựng:\nスランプ試験（スランプしけん）: Thí nghiệm độ sụt bê tông\n引張試験（ひっぱりしけん）: Thí nghiệm kéo\n曲げ試験（まげしけん）: Thí nghiệm uốn\n探傷試験（たんしょうしけん）: Thí nghiệm dò khuyết tật\n生コン（なまコン）: Bê tông tươi\n工事（こうじ）: Công trình, thi công",
   "explain_id": "Gambar menunjukkan スランプ試験（しけん） – digunakan untuk memeriksa **kekentalan dan daya alir beton segar (生コン)**.",
   "explain_en": "The image shows a スランプ試験（しけん） – used to check the **consistency and flowability of fresh concrete (生コン)**.",
   tip: "💡 Đo độ sụt của bê tông để xác định độ linh động khi đổ khuôn."
@@ -191,7 +191,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Cái búa trong hình có tên là gì?",
-  explain: "**ゴムハンマー (Búa cao su)** dùng để gõ nhẹ khi cần điều chỉnh vật liệu mà không làm hỏng bề mặt.",
+  explain: "**ゴムハンマー (Búa cao su)** dùng để gõ nhẹ khi cần điều chỉnh vật liệu mà không làm hỏng bề mặt.\n\nTừ vựng:\n絵（え）: Hình vẽ, hình ảnh\n道具（どうぐ）: Dụng cụ\nゴムハンマー: Búa cao su\n仮枠（かりわく）: Ván khuôn tạm\n木づち（きづち）: Búa gỗ\nかけや: Vồ gỗ lớn đóng cọc",
   "explain_id": "**ゴムハンマー (Palu karet)** digunakan untuk mengetuk ringan saat perlu menyesuaikan material tanpa merusak permukaan.",
   "explain_en": "**ゴムハンマー (Rubber hammer)** is used to tap lightly when adjusting a material without damaging the surface.",
   tip: "💡 ゴム = cao su → búa đầu cao su, dùng khi cần lực nhẹ."
@@ -208,7 +208,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 2,
   vi: "Hình dưới đây là thiết bị gì?",
-  explain: "**安全（あんぜん）ブロック (Thiết bị an toàn rơi)** là thiết bị chống rơi khi làm việc trên cao – nếu người rơi, dây sẽ tự khóa lại để ngăn ngã.",
+  explain: "**安全（あんぜん）ブロック (Thiết bị an toàn rơi)** là thiết bị chống rơi khi làm việc trên cao – nếu người rơi, dây sẽ tự khóa lại để ngăn ngã.\n\nTừ vựng:\n写真（しゃしん）: Ảnh, hình ảnh\n以下（いか）: Sau đây, dưới đây\n安全（あんぜん）: An toàn\nシノ: Dùi sắt căn chỉnh lỗ bu lông\nウィンチ: Tời kéo\n安全ブロック: Thiết bị chống rơi tự khóa\n幅木（はばき）: Tấm chắn chân giàn giáo",
   "explain_id": "**安全（あんぜん）ブロック (Alat pengaman jatuh)** adalah alat pencegah jatuh saat bekerja di ketinggian – jika orang terjatuh, tali akan terkunci otomatis untuk mencegah jatuh.",
   "explain_en": "**安全（あんぜん）ブロック (Fall safety device)** is a fall prevention device when working at height – if a person falls, the rope locks automatically to prevent the fall.",
   tip: "💡 安全 = an toàn → dùng trong công tác trên cao (高所作業)."
@@ -224,7 +224,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 1,
   vi: "Dụng cụ điện dùng lực va đập bên trong để siết bulong được gọi là gì?",
-  explain: "**インパクトレンチ (Impact Wrench)** là cờ lê điện có cơ chế búa bên trong, giúp siết chặt ốc vít nhanh bằng lực xoắn + va đập.",
+  explain: "**インパクトレンチ (Impact Wrench)** là cờ lê điện có cơ chế búa bên trong, giúp siết chặt ốc vít nhanh bằng lực xoắn + va đập.\n\nTừ vựng:\n内蔵（ないぞう）: Tích hợp bên trong\n打撃力（だげきりょく）: Lực va đập\n締め付ける（しめつける）: Siết chặt\n電動工具（でんどうこうぐ）: Dụng cụ điện\n名前（なまえ）: Tên gọi\nインパクトレンチ: Cờ lê va đập (súng siết bu lông)\nめがねレンチ: Cờ lê vòng",
   "explain_id": "**インパクトレンチ (Impact Wrench)** adalah kunci listrik dengan mekanisme palu di dalamnya, yang membantu mengencangkan sekrup dengan cepat menggunakan torsi + gaya benturan.",
   "explain_en": "**インパクトレンチ (Impact Wrench)** is an electric wrench with an internal hammer mechanism, which helps tighten screws quickly with torque + impact force.",
   tip: "💡 インパクト = va đập → công cụ siết ốc mạnh, nhanh."
@@ -239,7 +239,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Tai nạn lao động do mất thăng bằng và ngã được gọi là gì?",
-  explain: "Khi người lao động **mất thăng bằng và ngã** → đó là tai nạn **転倒（てんとう）**.",
+  explain: "Khi người lao động **mất thăng bằng và ngã** → đó là tai nạn **転倒（てんとう）**.\n\nTừ vựng:\n転ぶ（ころぶ）: Ngã, té\n崩す（くずす）: Làm mất, phá vỡ\n労働災害（ろうどうさいがい）: Tai nạn lao động\n転倒（てんとう）: Vấp ngã trên mặt phẳng\n墜落（ついらく）: Rơi từ trên cao\n飛来（ひらい）: Vật bay tới\n落下（らっか）: Rơi xuống\n激突（げきとつ）: Va chạm mạnh",
   "explain_id": "Ketika pekerja **kehilangan keseimbangan dan jatuh** → itu adalah kecelakaan **転倒（てんとう）**.",
   "explain_en": "When a worker **loses balance and falls** → that is a **転倒（てんとう）** accident.",
   tip: "💡 Nhớ: 転倒 = ngã do trượt hoặc mất thăng bằng."
@@ -254,7 +254,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 2,
   vi: "Trong nội dung huấn luyện cho người mới vào công trường, điều nào dưới đây là **không phù hợp**?",
-  explain: "Huấn luyện cho người mới 　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく） liên quan đến **an toàn lao động**, **trình tự công việc**, **vệ sinh 5S**,… không bao gồm vấn đề **tiền lương (賃金)**.",
+  explain: "Huấn luyện cho người mới 　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく） liên quan đến **an toàn lao động**, **trình tự công việc**, **vệ sinh 5S**,… không bao gồm vấn đề **tiền lương (賃金)**.\n\nTừ vựng:\n新規（しんき）: Mới\n入場者（にゅうじょうしゃ）: Người vào công trường\n教育（きょういく）: Đào tạo, huấn luyện\n実施（じっし）: Thực hiện, triển khai\n不適切（ふてきせつ）: Không phù hợp\n賃金（ちんぎん）: Tiền lương\n整理（せいり）: Sắp xếp, chỉnh đốn\n整頓（せいとん）: Ngăn nắp, gọn gàng\n清潔（せいけつ）: Sạch sẽ",
   "explain_id": "Pelatihan untuk orang baru 　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく） berkaitan dengan **keselamatan kerja**, **urutan pekerjaan**, **kebersihan 5S**, dan sebagainya, tidak termasuk masalah **upah (賃金)**.",
   "explain_en": "Training for newcomers 　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく） relates to **occupational safety**, **work procedures**, **5S hygiene**, etc., and does not include the issue of **wages (賃金)**.",
   tip: "💡 Nhớ:　新規（しんき）入場者（にゅうじょうしゃ）教育（きょういく） = huấn luyện an toàn → không nói về lương."
@@ -270,7 +270,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 1,
   vi: "Xe đẩy (台車 – daisha) là gì?",
-  explain: "**台車（だいしゃ）** là xe có 4 bánh nhỏ (キャスター) để **vận chuyển vật nặng hoặc hàng hóa** trong công trường hay kho hàng.",
+  explain: "**台車（だいしゃ）** là xe có 4 bánh nhỏ (キャスター) để **vận chuyển vật nặng hoặc hàng hóa** trong công trường hay kho hàng.\n\nTừ vựng:\n台車（だいしゃ）: Xe đẩy hàng\n鉄製（てっせい）: Làm bằng sắt thép\n運ぶ（はこぶ）: Vận chuyển, mang\n道具（どうぐ）: Dụng cụ\n前方（ぜんぽう）: Phía trước\nキャスター: Bánh xe đẩy nhỏ\n移動（いどう）: Di chuyển\n丸太（まるた）: Khúc gỗ tròn",
   "explain_id": "**台車（だいしゃ）** adalah kereta dorong dengan 4 roda kecil (キャスター) untuk **mengangkut benda berat atau barang** di lokasi konstruksi atau gudang.",
   "explain_en": "**台車（だいしゃ）** is a cart with 4 small wheels (キャスター) for **transporting heavy objects or goods** on a construction site or in a warehouse.",
   tip: "💡 キャスター = bánh xe nhỏ → xe đẩy hàng."
@@ -286,7 +286,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 2,
   vi: "Máy thổi (ブロアー) là gì?",
-  explain: "**ブロアー (blower)** là **máy thổi gió** dùng để gom lá cây, bụi hoặc rác nhẹ bằng luồng gió mạnh.",
+  explain: "**ブロアー (blower)** là **máy thổi gió** dùng để gom lá cây, bụi hoặc rác nhẹ bằng luồng gió mạnh.\n\nTừ vựng:\n掃除（そうじ）: Vệ sinh, quét dọn\nほうき: Chổi\n送風機（そうふうき）: Máy thổi gió\n落葉（おちば）: Lá rụng\n軽い（かるい）: Nhẹ\n空気（くうき）: Không khí\n粉塵（ふんじん）: Bụi mịn công nghiệp\n切削（せっさく）: Cắt gọt\nブロアー: Máy thổi lá, thổi bụi",
   "explain_id": "**ブロアー (blower)** adalah **mesin peniup angin** yang digunakan untuk mengumpulkan daun, debu, atau sampah ringan dengan aliran angin yang kuat.",
   "explain_en": "**ブロアー (blower)** is a **blowing machine** used to gather leaves, dust, or light trash with a strong air stream.",
   tip: "💡 送風機（そうふうき）= máy thổi gió."
@@ -302,7 +302,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 3,
   vi: "Khi lập kế hoạch thi công, điều nào là không phù hợp?",
-  explain: "Khi lập kế hoạch 施工（せこう）計画（けいかく） phải xem xét chất lượng, an toàn, môi trường, ngân sách, tiến độ… Việc **điều tra tình hình cá nhân của công nhân** không liên quan đến kế hoạch thi công.",
+  explain: "Khi lập kế hoạch 施工（せこう）計画（けいかく） phải xem xét chất lượng, an toàn, môi trường, ngân sách, tiến độ… Việc **điều tra tình hình cá nhân của công nhân** không liên quan đến kế hoạch thi công.\n\nTừ vựng:\n施工（せこう）: Thi công\n計画（けいかく）: Kế hoạch\n作成（さくせい）: Lập, soạn thảo\n品質（ひんしつ）: Chất lượng\n予算（よさん）: Ngân sách, dự toán\n工程（こうてい）: Tiến độ\n環境保全（かんきょうほぜん）: Bảo vệ môi trường\n総合的（そうごうてき）: Tổng hợp, toàn diện\n労働者（ろうどうしゃ）: Người lao động",
   "explain_id": "Saat membuat rencana pelaksanaan 施工（せこう）計画（けいかく） harus mempertimbangkan kualitas, keselamatan, lingkungan, anggaran, jadwal, dan sebagainya. **Menyelidiki keadaan pribadi pekerja** tidak berkaitan dengan rencana pelaksanaan.",
   "explain_en": "When making a construction plan 施工（せこう）計画（けいかく） you must consider quality, safety, environment, budget, schedule, etc. **Investigating the personal circumstances of workers** is not related to the construction plan.",
   tip: "💡 不適切 = không phù hợp → đáp án 4."
@@ -319,7 +319,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Phần kim loại cố định chân giàn giáo (ベース金具) được đóng đinh cố định ở đâu?",
-  explain: "ベース金具（かなぐ） được cố định bằng đinh **trên tấm ván (敷板) đặt trên mặt đất 地面（じめん）の上（うえ）** để tạo nền phẳng và vững cho giàn giáo.",
+  explain: "ベース金具（かなぐ） được cố định bằng đinh **trên tấm ván (敷板) đặt trên mặt đất 地面（じめん）の上（うえ）** để tạo nền phẳng và vững cho giàn giáo.\n\nTừ vựng:\n金具（かなぐ）: Phụ kiện kim loại\n釘（くぎ）: Đinh\n固定（こてい）: Cố định\n地面（じめん）: Mặt đất\n敷板（しきいた）: Tấm ván lót chân giàn giáo\n敷く（しく）: Trải, lót\n斜め（ななめ）: Chéo, nghiêng",
   "explain_id": "ベース金具（かなぐ） dipasang dengan paku **di atas papan (敷板) yang diletakkan di atas tanah 地面（じめん）の上（うえ）** untuk menciptakan dasar yang rata dan kokoh untuk perancah.",
   "explain_en": "ベース金具（かなぐ） is fixed with nails **on a board (敷板) placed on the ground 地面（じめん）の上（うえ）** to create a flat and firm base for scaffolding.",
   tip: "💡 ベース金具（かなぐ） = bộ phận kim loại dưới chân giàn giáo."
@@ -334,7 +334,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 3,
   vi: "Phương pháp cố định giữa cột và dầm bằng cách nối trực tiếp tại công trường gọi là gì?",
-  explain: "**ノンブラケット工法 (Non-bracket)** là phương pháp **nối trực tiếp cột và dầm mà không dùng giá đỡ (bracket)**, nên gọi là 'non-bracket'.",
+  explain: "**ノンブラケット工法 (Non-bracket)** là phương pháp **nối trực tiếp cột và dầm mà không dùng giá đỡ (bracket)**, nên gọi là 'non-bracket'.\n\nTừ vựng:\n建地（たてじ）: Cột đứng\n梁（はり）: Dầm\n柱（はしら）: Cột\n現場（げんば）: Công trường\n直接（ちょくせつ）: Trực tiếp\n接合（せつごう）: Nối, liên kết\n工法（こうほう）: Phương pháp thi công\nブラケット: Giá đỡ, bát đỡ\nノンブラケット: Không dùng giá đỡ, nối trực tiếp",
   "explain_id": "**ノンブラケット工法 (Non-bracket)** adalah metode **menyambung kolom dan balok secara langsung tanpa menggunakan penyangga (bracket)**, sehingga disebut 'non-bracket'.",
   "explain_en": "**ノンブラケット工法 (Non-bracket)** is a method of **connecting columns and beams directly without using a support (bracket)**, hence it is called 'non-bracket'.",
   tip: "💡 ノン = không, ブラケット = giá đỡ → nối trực tiếp không cần giá đỡ."
@@ -351,7 +351,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Công trình trong hình gọi là gì?",
-  explain: "Đây là **ウェルポイント工事（こうじ） (Well point work)** – công trình hạ mực nước ngầm bằng cách hút nước ra khỏi đất trước khi thi công móng hoặc nền.",
+  explain: "Đây là **ウェルポイント工事（こうじ） (Well point work)** – công trình hạ mực nước ngầm bằng cách hút nước ra khỏi đất trước khi thi công móng hoặc nền.\n\nTừ vựng:\n工事（こうじ）: Công trình, thi công\n空調設備（くうちょうせつび）: Thiết bị điều hòa không khí\n舗装（ほそう）: Lát, trải mặt đường\n基礎（きそ）: Móng, nền móng\nウェルポイント工事（こうじ）: Công trình hạ mực nước ngầm",
   "explain_id": "Ini adalah **ウェルポイント工事（こうじ） (Well point work)** – pekerjaan menurunkan muka air tanah dengan cara menghisap air keluar dari tanah sebelum membangun fondasi atau dasar.",
   "explain_en": "This is **ウェルポイント工事（こうじ） (Well point work)** – work to lower the groundwater level by sucking water out of the soil before constructing a foundation or base.",
   tip: "💡 Well point = hệ thống ống hút nước ngầm."
@@ -367,7 +367,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Công trình Well point là loại công trình như thế nào?",
-  explain: "Đây là **công trình hạ mực nước ngầm 地下水（ちかすい）の水位（すいい）を低下（ていか）させ** để làm cho nền móng vững chắc hơn.",
+  explain: "Đây là **công trình hạ mực nước ngầm 地下水（ちかすい）の水位（すいい）を低下（ていか）させ** để làm cho nền móng vững chắc hơn.\n\nTừ vựng:\n地層（ちそう）: Tầng đất, địa tầng\n地下水（ちかすい）: Nước ngầm\n水位（すいい）: Mực nước\n低下（ていか）: Hạ thấp, giảm xuống\n強固（きょうこ）: Vững chắc\n基礎地盤（きそじばん）: Nền móng, địa bàn móng\n井戸（いど）: Giếng\n泥水（どろみず）: Nước bùn\n温泉（おんせん）: Suối nước nóng",
   "explain_id": "Ini adalah **pekerjaan menurunkan muka air tanah 地下水（ちかすい）の水位（すいい）を低下（ていか）させ** untuk membuat fondasi lebih kokoh.",
   "explain_en": "This is **work to lower the groundwater level 地下水（ちかすい）の水位（すいい）を低下（ていか）させ** to make the foundation firmer.",
   tip: "💡 Dùng để thi công trong đất yếu hoặc nơi có nước ngầm."
@@ -383,7 +383,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Trong công trình đào hầm 推進（すいしん）トンネル工事（こうじ）, phần đầu tiên ở phía khởi đầu công trình gọi là gì?",
-  explain: "Trong công trình hầm, **立坑（たてこう）** là **hố đứng (shaft)** dùng để nối mặt đất và đường hầm – là nơi bắt đầu thi công.",
+  explain: "Trong công trình hầm, **立坑（たてこう）** là **hố đứng (shaft)** dùng để nối mặt đất và đường hầm – là nơi bắt đầu thi công.\n\nTừ vựng:\n推進（すいしん）: Đẩy tới, thi công đẩy ống\n始点（してん）: Điểm bắt đầu\n基地（きち）: Căn cứ, trạm thi công\n地上部（ちじょうぶ）: Phần trên mặt đất\n連絡部（れんらくぶ）: Phần liên lạc, đoạn nối tiếp\n立坑（たてこう）: Hố đứng, giếng đứng\n推進管（すいしんかん）: Ống đẩy\n掘進機（くっしんき）: Máy đào đẩy ống",
   "explain_id": "Dalam pekerjaan terowongan, **立坑（たてこう）** adalah **lubang vertikal (shaft)** yang digunakan untuk menghubungkan permukaan tanah dan terowongan – merupakan tempat dimulainya konstruksi.",
   "explain_en": "In tunnel work, **立坑（たてこう）** is a **vertical pit (shaft)** used to connect the ground surface and the tunnel – it is where construction begins.",
   tip: "💡 立坑 = hố đào đứng, điểm khởi đầu thi công hầm."
@@ -398,7 +398,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 3,
   vi: "Trong công trình thủy (biển), điều nào dưới đây là không thích hợp?",
-  explain: "Đạp lên dây thừng trên tàu ロープを踏（ふ）みます là hành vi nguy hiểm, có thể gây trượt ngã. Vì vậy đây là lựa chọn **不適切（ふてきせつ）**.",
+  explain: "Đạp lên dây thừng trên tàu ロープを踏（ふ）みます là hành vi nguy hiểm, có thể gây trượt ngã. Vì vậy đây là lựa chọn **不適切（ふてきせつ）**.\n\nTừ vựng:\n海洋（かいよう）: Biển, hải dương\n土木（どぼく）: Xây dựng dân dụng\n救命胴衣（きゅうめいどうい）: Áo phao cứu sinh\n歩み板（あゆみいた）: Ván cầu đi lại\n作業船（さぎょうせん）: Tàu công tác\n係留（けいりゅう）: Neo đậu, buộc giữ tàu\n補助（ほじょ）: Phụ trợ, hỗ trợ\n踏む（ふむ）: Giẫm, đạp lên",
   "explain_id": "Menginjak tali di atas kapal ロープを踏（ふ）みます adalah perilaku berbahaya, yang dapat menyebabkan terpeleset dan jatuh. Oleh karena itu ini adalah pilihan **不適切（ふてきせつ）**.",
   "explain_en": "Stepping on a rope on a ship ロープを踏（ふ）みます is dangerous behavior, which can cause slipping and falling. Therefore this is the **不適切（ふてきせつ）** choice.",
   tip: "💡 Ở công trình biển, luôn chú ý an toàn và không giẫm lên dây thừng hoặc thiết bị."
@@ -414,7 +414,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   "answer": 2,
   "vi": "Trong công trình thủy (biển), cần chú ý điều gì để đảm bảo an toàn?",
-  "explain": "Trong công trình trên biển 海洋(かいよう)土木(どぼく)工事(こうじ), quy định an toàn quan trọng nhất là **かならず救命(きゅうめい)胴衣(どうい)を着用(ちゃくよう)する (Luôn luôn mặc áo phao)**. Điều này giúp bảo vệ tính mạng trong trường hợp không may bị rơi xuống nước. Ngoài ra, việc không nhảy lên/xuống tàu cũng là một quy tắc bổ trợ.",
+  "explain": "Trong công trình trên biển 海洋(かいよう)土木(どぼく)工事(こうじ), quy định an toàn quan trọng nhất là **かならず救命(きゅうめい)胴衣(どうい)を着用(ちゃくよう)する (Luôn luôn mặc áo phao)**. Điều này giúp bảo vệ tính mạng trong trường hợp không may bị rơi xuống nước. Ngoài ra, việc không nhảy lên/xuống tàu cũng là một quy tắc bổ trợ.\n\nTừ vựng:\n注意（ちゅうい）: Chú ý\n救命胴衣（きゅうめいどうい）: Áo phao cứu sinh\n着用（ちゃくよう）: Mặc, đeo trang bị\n荷物（にもつ）: Hàng hóa, hành lý\n渡り板（わたりいた）: Ván bắc qua, cầu ván\n一方（いっぽう）: Một phía, một đầu\n固定（こてい）: Cố định\n立ち入り禁止（たちいりきんし）: Cấm vào",
   "explain_id": "Dalam pekerjaan teknik sipil kelautan 海洋(かいよう)土木(どぼく)工事(こうじ), aturan keselamatan terpenting adalah **かならず救命(きゅうめい)胴衣(どうい)を着用(ちゃくよう)する (Selalu memakai jaket pelampung)**. Hal ini membantu melindungi nyawa jika tidak sengaja jatuh ke air. Selain itu, tidak melompat naik/turun kapal juga merupakan aturan tambahan.",
   "explain_en": "In marine civil engineering work 海洋(かいよう)土木(どぼく)工事(こうじ), the most important safety rule is **かならず救命(きゅうめい)胴衣(どうい)を着用(ちゃくよう)する (Always wear a life jacket)**. This helps protect lives in the unfortunate event of falling into the water. In addition, not jumping on/off a vessel is also a supplementary rule.",
   "tip": "💡 Nhớ: Cứ làm việc gần nước hoặc trên tàu → **救命胴衣 (Áo phao)** là vật bất ly thân!"
@@ -430,7 +430,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Trong công trình khoan giếng, phương pháp nào được dùng để kiểm tra lớp nước ngầm thích hợp?",
-  explain: "**電気検層（でんきけんそう）** là phương pháp đo điện trở của đất để xác định vị trí lớp nước ngầm (取水層).",
+  explain: "**電気検層（でんきけんそう）** là phương pháp đo điện trở của đất để xác định vị trí lớp nước ngầm (取水層).\n\nTừ vựng:\nさく井（い）: Khoan giếng\n取水層（しゅすいそう）: Lớp lấy nước, tầng chứa nước\n電気検層（でんきけんそう）: Đo điện trở suất giếng khoan\n満水試験（まんすいしけん）: Thí nghiệm đầy nước\n漏電（ろうでん）: Rò điện\n調査（ちょうさ）: Điều tra, khảo sát\nスランプ試験（しけん）: Thí nghiệm độ sụt bê tông",
   "explain_id": "**電気検層（でんきけんそう）** adalah metode mengukur tahanan listrik tanah untuk menentukan lokasi lapisan air tanah (取水層).",
   "explain_en": "**電気検層（でんきけんそう）** is a method of measuring the electrical resistance of the soil to determine the location of a groundwater layer (取水層).",
   tip: "💡 検層 = kiểm tra lớp đất / lớp nước ngầm bằng cảm biến điện."
@@ -446,7 +446,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Tấm kim loại mỏng có móc nối hai bên, ghép lại thành tường ngăn đất cát là gì?",
-  explain: "Đó là **鋼矢板（こうやいた）– cọc thép bản**. Dùng để ngăn sạt lở đất, chắn nước hoặc làm tường chống đỡ khi thi công dưới đất.",
+  explain: "Đó là **鋼矢板（こうやいた）– cọc thép bản**. Dùng để ngăn sạt lở đất, chắn nước hoặc làm tường chống đỡ khi thi công dưới đất.\n\nTừ vựng:\n薄い（うすい）: Mỏng\n板（いた）: Tấm, ván\n両方（りょうほう）: Cả hai phía\n継手（つぎて）: Mối nối, khớp nối\n土砂（どしゃ）: Đất cát\n壁（かべ）: Tường, vách\n鋼矢板（こうやいた）: Cọc ván thép, cừ thép\n鋼管杭（こうかんくい）: Cọc ống thép\n浮標（ふひょう）: Phao tiêu, phao nổi",
   "explain_id": "Itu adalah **鋼矢板（こうやいた）– turap baja lembaran**. Digunakan untuk mencegah longsor tanah, menahan air, atau sebagai dinding penahan saat bekerja di bawah tanah.",
   "explain_en": "That is **鋼矢板（こうやいた）– steel sheet pile**. Used to prevent soil collapse, block water, or serve as a retaining wall when working underground.",
   tip: "💡 鋼矢板 = Steel Sheet Pile – tấm thép ghép bằng móc khóa."
@@ -461,7 +461,7 @@ window.PRACTICE_SETS["g1_3"] = {
   ],
   answer: 0,
   vi: "Well point là gì? Hãy chọn đáp án đúng nhất.",
-  explain: "**ウェルポイント** là một **ống cấp nước 水給管（すいきゅうかん）* có gắn **lưới lọc 網（あみ）** để hút nước ngầm. Nó được sử dụng trong công trình hạ thấp mực nước ngầm (ウェルポイント工事).",
+  explain: "**ウェルポイント** là một **ống cấp nước 水給管（すいきゅうかん）* có gắn **lưới lọc 網（あみ）** để hút nước ngầm. Nó được sử dụng trong công trình hạ thấp mực nước ngầm (ウェルポイント工事).\n\nTừ vựng:\nろ過（ろか）: Lọc, lọc nước\n網（あみ）: Lưới, tấm lưới\n取り付ける（とりつける）: Lắp vào, gắn vào\n水給管（すいきゅうかん）: Ống cấp nước hút nước ngầm\n地下水（ちかすい）: Nước ngầm\n二重管（にじゅうかん）: Ống kép hai lớp\n地中（ちちゅう）: Trong lòng đất\n比較的（ひかくてき）: Tương đối\n小径（しょうけい）: Đường kính nhỏ",
   "explain_id": "**ウェルポイント** adalah **pipa suplai air 水給管（すいきゅうかん）* yang dilengkapi **saringan 網（あみ）** untuk menghisap air tanah. Alat ini digunakan dalam pekerjaan penurunan muka air tanah (ウェルポイント工事).",
   "explain_en": "**ウェルポイント** is a **water supply pipe 水給管（すいきゅうかん）* fitted with a **filter screen 網（あみ）** to suck up groundwater. It is used in groundwater lowering work (ウェルポイント工事).",
   tip: "💡 Dùng để hạ mực nước ngầm và làm khô nền đất trong thi công móng."

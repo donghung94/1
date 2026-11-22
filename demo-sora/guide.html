@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hướng dẫn học - Toukutei 2</title>
+    <link rel="icon" href="../icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
+    <style>
+        :root{
+            --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+            --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+            --red:#C8102E; --red-dark:#A50D26;
+            --bronze:#C9A24B; --cream:#FFF9EE; --cream-2:#FDEFD2;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: var(--bg); margin: 0; padding: 12px; color: var(--ink); }
+        .container { max-width: 640px; margin: auto; }
+        .g-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 14px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 9px 13px; border-radius: 999px; background: var(--card); border: 1.5px solid var(--bronze); color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .g-title { font-size: 21px; font-weight: 800; margin: 0; }
+        .step { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 18px; padding: 18px 16px; box-shadow: 0 3px 10px rgba(20,16,10,.06); margin-bottom: 14px; }
+        .step h2 { margin: 0 0 8px; font-size: 16.5px; font-weight: 800; color: var(--red-dark); line-height: 1.4; }
+        .step p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+        .video-slot { margin-top: 12px; border: 2px dashed var(--bronze); background: linear-gradient(160deg, var(--cream), var(--cream-2)); border-radius: 14px; padding: 22px 14px; text-align: center; font-size: 14px; font-weight: 700; color: var(--ink-2); line-height: 1.6; }
+        .step-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+        .step-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 14px; border-radius: 12px; background: var(--red); color: #fff; font-weight: 800; font-size: 14.5px; text-decoration: none; text-align: center; }
+        .step-btn:active { transform: translateY(1px); }
+        .contact-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 14px; border-radius: 12px; font-weight: 800; font-size: 14.5px; text-decoration: none; text-align: center; color: #fff; }
+        .contact-btn.zalo { background: #0068ff; }
+        .contact-btn.facebook { background: #1877f2; }
+        .contact-btn.line { background: #06c755; }
+        .contact-btn:active { transform: translateY(1px); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="g-head">
+        <a class="back-link" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        <h1 class="g-title" data-i18n="guide_title">📖 Hướng dẫn học</h1>
+    </div>
+
+    <!-- BƯỚC 1: VIDEO BÀI GIẢNG -->
+    <div class="step">
+        <h2 data-i18n="guide_s1_title">Bước 1 — Xem video bài giảng trước</h2>
+        <p data-i18n="guide_s1_body">Trước khi làm bài, hãy xem video bài giảng của từng chủ đề để nắm ý chính. Xem video trước rồi mới luyện câu hỏi sẽ giúp bạn nhớ lâu hơn nhiều.</p>
+        <!-- Ô chờ video: loạt video dạy Tokutei đang sản xuất; khi có link video,
+             chỉ cần thêm thẻ <a>/<iframe> vào khối .video-slot này -->
+        <div class="video-slot" data-i18n="guide_video_soon">🎬 Video đang được cập nhật — video bài giảng sẽ xuất hiện tại đây sau khi sản xuất xong.</div>
+    </div>
+
+    <!-- BƯỚC 2: LÀM BÀI THEO THỨ TỰ -->
+    <div class="step">
+        <h2 data-i18n="guide_s2_title">Bước 2 — Làm bài theo thứ tự từ trên xuống dưới</h2>
+        <p data-i18n="guide_s2_body">Làm các bộ đề theo đúng thứ tự trong danh sách: phần lý thuyết chung trước, rồi tới đề thực hành của nhóm ngành của bạn. Đừng nhảy cóc — các bộ đề được sắp xếp từ nền tảng tới nâng cao.</p>
+    </div>
+
+    <!-- BƯỚC 3: ÔN CÂU HAY RA (bộ lý thuyết 7 + 8 ở trang chủ) -->
+    <div class="step">
+        <h2 data-i18n="guide_s3_title">Bước 3 — Sắp thi: ôn kỹ các câu hay ra</h2>
+        <p data-i18n="guide_s3_body">Gần đến ngày thi, hãy tập trung ôn hai bộ "câu hay ra" dưới đây — đây là những câu xuất hiện thường xuyên nhất trong đề thi thật.</p>
+        <div class="step-btns">
+            <a class="step-btn" href="exam.html?set=7" data-i18n="guide_s3_btn1">👉 Câu hay ra — Phần 1</a>
+            <a class="step-btn" href="exam.html?set=8" data-i18n="guide_s3_btn2">👉 Câu hay ra — Phần 2</a>
+        </div>
+    </div>
+
+    <!-- BƯỚC 4: LIÊN HỆ HỖ TRỢ — link do Admin nhập trong Dashboard (Firestore
+         config/contacts). Kênh nào chưa có link thì nút đó không hiện.
+         Zalo chưa được nhập thì dùng link Zalo Admin mặc định của app. -->
+    <div class="step">
+        <h2 data-i18n="guide_s4_title">Bước 4 — Thắc mắc? Liên hệ hỗ trợ</h2>
+        <p data-i18n="guide_s4_body">Nếu có câu nào chưa hiểu, hoặc cần hỗ trợ về tài khoản và Premium, hãy nhắn cho Admin qua các kênh dưới đây.</p>
+        <div class="step-btns" id="guide-contacts"></div>
+    </div>
+</div>
+
+<script type="module">
+    import { db } from "./firebase.js";
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // Link Zalo Admin mặc định của app — dùng khi Dashboard chưa lưu link Zalo,
+    // hoặc khi đọc cấu hình thất bại (khi đó chỉ hiện nút Zalo này).
+    const DEFAULT_ZALO = "https://zalo.me/07090778422";
+    const CHANNELS = [
+        { key: 'zalo',     label: '💬 Zalo',     cls: 'zalo' },
+        { key: 'fb',       label: '📘 Facebook', cls: 'facebook' },
+        { key: 'line',     label: '💚 LINE',     cls: 'line' }
+    ];
+
+    function renderContacts(cfg) {
+        const wrap = document.getElementById('guide-contacts');
+        if (!wrap) return;
+        const contacts = cfg || {};
+        if (!contacts.zalo) contacts.zalo = DEFAULT_ZALO;
+        wrap.innerHTML = '';
+        CHANNELS.forEach(ch => {
+            const url = String(contacts[ch.key] || '').trim();
+            if (!url) return; // Chưa có link -> ẩn nút của kênh đó
+            const a = document.createElement('a');
+            a.className = 'contact-btn ' + ch.cls;
+            a.href = url;
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.textContent = ch.label;
+            wrap.appendChild(a);
+        });
+    }
+
+    (async () => {
+        try {
+            const snap = await getDoc(doc(db, "config", "contacts"));
+            renderContacts(snap.exists() ? snap.data() : null);
+        } catch (e) {
+            renderContacts(null); // Đọc lỗi -> chỉ hiện Zalo mặc định
+        }
+    })();
+</script>
+</body>
+</html>

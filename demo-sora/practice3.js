@@ -16,10 +16,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 3,
   vi: "Đây là loại công trình nào?",
+  vi_id: "Ini adalah jenis pekerjaan apa?",
+  vi_en: "What type of work is this?",
   explain: "Bức ảnh chụp máy bơm bê tông đang đổ bê tông vào khuôn. Công việc đổ bê tông tươi vào khuôn (formwork) được gọi là **打設(だせつ)工事(こうじ) (Công việc đổ/đặt bê tông)**.\n\nTừ vựng:\n工事（こうじ）: Công trình, thi công\n掘削（くっさく）: Đào đất\n杭（くい）: Cọc\n法面（のりめん）: Mái dốc\n打設（だせつ）: Đổ (bê tông)\n型枠（かたわく）: Ván khuôn",
   "explain_id": "Foto menunjukkan pompa beton sedang menuangkan beton ke dalam cetakan. Pekerjaan menuangkan beton segar ke dalam cetakan (bekisting) disebut **打設(だせつ)工事(こうじ) (Pekerjaan pengecoran beton)**.",
   "explain_en": "The photo shows a concrete pump pouring concrete into the formwork. The work of placing fresh concrete into the formwork (formwork) is called **打設(だせつ)工事(こうじ) (Concrete placing work)**.",
-  tip: "💡 Nhớ: Nhìn thấy ống bơm bê tông → **打設(だせつ)工事(こうじ)**."
+  tip: "💡 Nhớ: Nhìn thấy ống bơm bê tông → **打設(だせつ)工事(こうじ)**.",
+  tip_id: "💡 Ingat: Jika terlihat pipa pompa beton → **打設(だせつ)工事(こうじ)**.",
+  tip_en: "💡 Remember: Seeing a concrete pump pipe → **打設(だせつ)工事(こうじ)**."
 },
 {
   q: "問62. 柱(はしら)が垂直(すいちょく)を保(たも)ち、軸組(じくぐ)みの変形(へんけい)を防(ふせ)ぐために、斜(なな)めに材料(ざいりょう)を取(と)り付(つ)けるのは何(なん)というか。【163】",
@@ -31,10 +35,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 3,
   vi: "Vật liệu được lắp đặt chéo (**斜(なな)めに**) để giữ cho cột (**柱(はしら)**) thẳng đứng (**垂直(すいちょく)**) và ngăn biến dạng (**変形(へんけい)**) khung trục (**軸組(じくぐ)み**) được gọi là gì?",
+  vi_id: "Material yang dipasang secara diagonal (**斜(なな)めに**) untuk menjaga kolom (**柱(はしら)**) tetap vertikal (**垂直(すいちょく)**) dan mencegah deformasi (**変形(へんけい)**) rangka sumbu (**軸組(じくぐ)み**) disebut apa?",
+  vi_en: "What is the material installed diagonally (**斜(なな)めに**) to keep columns (**柱(はしら)**) vertical (**垂直(すいちょく)**) and prevent deformation (**変形(へんけい)**) of the axial frame (**軸組(じくぐ)み**) called?",
   explain: "Vật liệu được lắp đặt theo đường chéo (**斜(なな)めに**) nhằm mục đích ổn định và chống biến dạng khung được gọi là **筋交い(すじかい)** (Thanh giằng chéo). Trong xây dựng tạm thời, nó được gọi là **仮筋(かりすじ)交(か)い (Giằng chéo tạm thời)**.\n\nTừ vựng:\n柱（はしら）: Cột\n垂直（すいちょく）: Thẳng đứng\n保つ（たもつ）: Giữ, duy trì\n軸組（じくぐみ）: Khung trục, khung kết cấu\n変形（へんけい）: Biến dạng\n防ぐ（ふせぐ）: Ngăn chặn\n斜め（ななめ）: Chéo, nghiêng\n筋交い（すじかい）: Thanh giằng chéo\n仮筋交い（かりすじかい）: Giằng chéo tạm thời",
   "explain_id": "Material yang dipasang secara diagonal (**斜(なな)めに**) dengan tujuan menstabilkan dan mencegah deformasi rangka disebut **筋交い(すじかい)** (Batang penguat diagonal). Dalam konstruksi sementara, ini disebut **仮筋(かりすじ)交(か)い (Penguat diagonal sementara)**.",
   "explain_en": "Material installed diagonally (**斜(なな)めに**) for the purpose of stabilizing and preventing deformation of the frame is called **筋交い(すじかい)** (Diagonal brace). In temporary construction, it is called **仮筋(かりすじ)交(か)い (Temporary diagonal brace)**.",
-  tip: "💡 Nhớ: Vật liệu **斜(なな)めに** (chéo) để chống biến dạng (**変形(へんけい)**) → **筋交い(すじかい)** (Giằng chéo)."
+  tip: "💡 Nhớ: Vật liệu **斜(なな)めに** (chéo) để chống biến dạng (**変形(へんけい)**) → **筋交い(すじかい)** (Giằng chéo).",
+  tip_id: "💡 Ingat: Material **斜(なな)めに** (diagonal) untuk menahan deformasi (**変形(へんけい)**) → **筋交い(すじかい)** (Penguat diagonal).",
+  tip_en: "💡 Remember: Material placed **斜(なな)めに** (diagonally) to resist deformation (**変形(へんけい)**) → **筋交い(すじかい)** (Diagonal brace)."
 },
 {
   q: "問63. どんな工事(こうじ)か。【170】",
@@ -47,10 +55,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Đây là loại công trình nào?",
+  vi_id: "Ini adalah jenis pekerjaan apa?",
+  vi_en: "What type of work is this?",
   explain: "Bức ảnh mô tả công nhân đang cố định một góc tường bằng băng keo góc (corner tape). Công việc này được gọi là **コーナーテープによる出隅(でずみ)の処理(しょり) (Xử lý góc ngoài bằng băng keo góc)**, nhằm gia cố góc trước khi trát vữa **パテ (putty)**.\n\nTừ vựng:\n工事（こうじ）: Công trình\n出隅（でずみ）: Góc ngoài, góc lồi\n処理（しょり）: Xử lý\nコーナーテープ: Băng keo góc\nパテ: Bột trét\n吹付（ふきつけ）: Phun\nウレタン: Urethane (xốp cách nhiệt)\n防音（ぼうおん）: Cách âm\n張り（はり）: Việc dán, căng phủ",
   "explain_id": "Foto menggambarkan pekerja sedang memperbaiki sudut dinding dengan pita sudut (corner tape). Pekerjaan ini disebut **コーナーテープによる出隅(でずみ)の処理(しょり) (Penanganan sudut luar dengan pita sudut)**, untuk memperkuat sudut sebelum diplester dengan **パテ (dempul / putty)**.",
   "explain_en": "The photo describes a worker fixing a wall corner with corner tape. This work is called **コーナーテープによる出隅(でずみ)の処理(しょり) (Treatment of an external corner with corner tape)**, to reinforce the corner before applying **パテ (putty)**.",
-  tip: "💡 Nhớ: Dán băng keo vào góc lồi (**出隅(でずみ)**) → **コーナーテープ (Corner Tape)**."
+  tip: "💡 Nhớ: Dán băng keo vào góc lồi (**出隅(でずみ)**) → **コーナーテープ (Corner Tape)**.",
+  tip_id: "💡 Ingat: Menempelkan selotip ke sudut cembung (**出隅(でずみ)**) → **コーナーテープ (Corner Tape)**.",
+  tip_en: "💡 Remember: Taping an external corner (**出隅(でずみ)**) → **コーナーテープ (Corner Tape)**."
 },
 {
   q: "問65. 三大(さんだい)災害(さいがい)の中(なか)でも特(とく)に多(おお)いのは高所(こうしょ)での作業(さぎょう)中(ちゅう)に起(お)こる労働(ろうどう)災害(さいがい)は何(なに)というか【179】",   
@@ -62,10 +74,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Trong số **三大災害(さんだいさいがい) (Ba tai nạn lớn)**, loại tai nạn lao động (**労働災害(ろうどうさいがい)**) nào xảy ra nhiều nhất khi làm việc ở nơi **cao (**高所(こうしょ)**)?" ,
+  vi_id: "Di antara **三大災害(さんだいさいがい) (Tiga kecelakaan besar)**, jenis kecelakaan kerja (**労働災害(ろうどうさいがい)**) apa yang paling sering terjadi saat bekerja di tempat **tinggi (**高所(こうしょ)**)?",
+  vi_en: "Among the **三大災害(さんだいさいがい) (Three major accidents)**, which type of occupational accident (**労働災害(ろうどうさいがい)**) occurs most often when working at **high places (**高所(こうしょ)**)?",
   explain: "Tai nạn phổ biến nhất và nghiêm trọng nhất khi làm việc trên cao là **墜落(ついらく)・転落(てんらく) (Ngã/Rơi từ trên cao)**. Đây là một trong những nguyên nhân hàng đầu gây ra các tai nạn chết người trong ngành xây dựng.\n\nTừ vựng:\n三大災害（さんだいさいがい）: Ba tai nạn lớn\n高所（こうしょ）: Nơi cao, trên cao\n作業（さぎょう）: Công việc\n労働災害（ろうどうさいがい）: Tai nạn lao động\n墜落（ついらく）: Rơi từ trên cao\n転落（てんらく）: Ngã, rơi xuống\n交通事故（こうつうじこ）: Tai nạn giao thông\n転倒（てんとう）: Vấp ngã\n飛来（ひらい）: Vật bay tới",
   "explain_id": "Kecelakaan yang paling umum dan paling serius saat bekerja di ketinggian adalah **墜落(ついらく)・転落(てんらく) (Jatuh dari ketinggian)**. Ini adalah salah satu penyebab utama kecelakaan fatal dalam industri konstruksi.",
   "explain_en": "The most common and most serious accident when working at height is **墜落(ついらく)・転落(てんらく) (Falling from height)**. This is one of the leading causes of fatal accidents in the construction industry.",
-  tip: "💡 Nhớ: **高所(こうしょ)** (Nơi cao) = **墜落(ついらく)** (**Ngã cao**)."
+  tip: "💡 Nhớ: **高所(こうしょ)** (Nơi cao) = **墜落(ついらく)** (**Ngã cao**).",
+  tip_id: "💡 Ingat: **高所(こうしょ)** (Tempat tinggi) = **墜落(ついらく)** (**Jatuh dari ketinggian**).",
+  tip_en: "💡 Remember: **高所(こうしょ)** (High place) = **墜落(ついらく)** (**Fall from height**)."
 },
 {
   q: "問66.セパレーターに取り付け、型枠(かたわく)の間隔(かんかく)を一定(いってい)に保(たも)ち、通(とお)りをよくして、コンクリートの側圧(そくあつ)による型枠(かたわく)の変形(へんけい)を防(ふせ)ぐ部材(ぶざい)は何(なに)か。正(ただ)しいものをー(い)つ選(えら)べ。【111】",
@@ -77,10 +93,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Bộ phận nào được gắn vào thanh **セパレーター (separator)**, giúp giữ khoảng cách ván khuôn (**型枠(かたわく)**) ổn định, cải thiện độ thẳng và ngăn ván khuôn biến dạng (**変形(へんけい)**) do áp lực bên (**側圧(そくあつ)**) của bê tông?",
+  vi_id: "Komponen apa yang dipasang pada batang **セパレーター (separator)**, yang membantu menjaga jarak bekisting (**型枠(かたわく)**) tetap stabil, meningkatkan kelurusan, dan mencegah bekisting berubah bentuk (**変形(へんけい)**) akibat tekanan samping (**側圧(そくあつ)**) beton?",
+  vi_en: "Which part is attached to the **セパレーター (separator)** rod, helping keep the formwork (**型枠(かたわく)**) spacing stable, improving straightness, and preventing the formwork from deforming (**変形(へんけい)**) due to the lateral pressure (**側圧(そくあつ)**) of concrete?",
   explain: "Đó là **フォームタイ (Form Tie/Tăng đơ ván khuôn)**. **フォームタイ** là bộ phận kẹp bên ngoài (thường dùng đai ốc cánh) giúp cố định thanh **セパレーター** và nẹp (**端太角(はしだいかく)**) lại với nhau, chống lại áp lực bên (**側圧(そくあつ)**) của bê tông để ngăn ván khuôn bị biến dạng (**変形(へんけい)**).\n\nTừ vựng:\nセパレーター: Thanh giữ khoảng cách ván khuôn\n型枠（かたわく）: Ván khuôn\n間隔（かんかく）: Khoảng cách\n一定（いってい）: Cố định, nhất định\n側圧（そくあつ）: Áp lực bên của bê tông\n変形（へんけい）: Biến dạng\n防ぐ（ふせぐ）: Ngăn chặn\n部材（ぶざい）: Bộ phận, cấu kiện\nフォームタイ: Thanh giằng ván khuôn",
   "explain_id": "Itu adalah **フォームタイ (Form Tie / Pengikat bekisting)**. **フォームタイ** adalah bagian penjepit luar (biasanya menggunakan mur kuping) yang membantu mengencangkan batang **セパレーター** dan balok penahan (**端太角(はしだいかく)**) secara bersamaan, menahan tekanan samping (**側圧(そくあつ)**) beton untuk mencegah bekisting berubah bentuk (**変形(へんけい)**).",
   "explain_en": "That is a **フォームタイ (Form Tie)**. The **フォームタイ** is an external clamping part (usually using a wing nut) that helps fix the **セパレーター** rod and the waler (**端太角(はしだいかく)**) together, resisting the lateral pressure (**側圧(そくあつ)**) of the concrete to prevent the formwork from deforming (**変形(へんけい)**).",
-  tip: "💡 Nhớ: Chức năng **保(たも)ち (giữ)** khoảng cách và chống **変形(へんけい) (biến dạng)** → **フォームタイ (Form Tie)**."
+  tip: "💡 Nhớ: Chức năng **保(たも)ち (giữ)** khoảng cách và chống **変形(へんけい) (biến dạng)** → **フォームタイ (Form Tie)**.",
+  tip_id: "💡 Ingat: Fungsi **保(たも)ち (menjaga)** jarak dan menahan **変形(へんけい) (deformasi)** → **フォームタイ (Form Tie)**.",
+  tip_en: "💡 Remember: The function of **保(たも)ち (keeping)** the spacing and resisting **変形(へんけい) (deformation)** → **フォームタイ (Form Tie)**."
 },
 {
   q: "問67. この青(あお)い部分(ぶぶん)は何(なに)と言(い)うか。【109】",
@@ -93,10 +113,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Bộ phận màu xanh (**青(あお)い部分(ぶぶん)**) này được gọi là gì?",
+  vi_id: "Bagian yang berwarna biru (**青(あお)い部分(ぶぶん)**) ini disebut apa?",
+  vi_en: "What is this blue part (**青(あお)い部分(ぶぶん)**) called?",
   explain: "Bộ phận màu xanh là van điều khiển luồng khí **Oxy** trên mỏ hàn/cắt. Trong các bài kiểm tra an toàn, loại van tiết kiệm và điều chỉnh khí này thường được gọi là **エコバルブ (Eco Valve)**.\n\nTừ vựng:\n青い（あおい）: Màu xanh\n部分（ぶぶん）: Bộ phận, phần\nエコバルブ: Van tiết kiệm khí\nクランプ: Kẹp, vam kẹp\nバーナー: Đầu đốt, mỏ hàn\n電動式（でんどうしき）: Loại chạy điện\n加圧（かあつ）: Tăng áp\n装置（そうち）: Thiết bị",
   "explain_id": "Bagian berwarna biru adalah katup pengontrol aliran gas **Oksigen** pada obor las/potong. Dalam ujian keselamatan, jenis katup penghemat dan pengatur gas ini biasanya disebut **エコバルブ (Eco Valve)**.",
   "explain_en": "The blue part is the control valve for the **Oxygen** gas flow on the welding/cutting torch. In safety tests, this type of gas-saving and gas-regulating valve is usually called an **エコバルブ (Eco Valve)**.",
-  tip: "💡 Nhớ: Trên mỏ hàn, van điều khiển khí thường là **バルブ (Valve)**. **青(あお)い(aoi)** (Màu xanh) thường chỉ khí **Oxy**."
+  tip: "💡 Nhớ: Trên mỏ hàn, van điều khiển khí thường là **バルブ (Valve)**. **青(あお)い(aoi)** (Màu xanh) thường chỉ khí **Oxy**.",
+  tip_id: "💡 Ingat: Pada obor las, katup pengatur gas biasanya adalah **バルブ (Valve)**. **青(あお)い(aoi)** (Biru) biasanya menunjukkan gas **Oksigen**.",
+  tip_en: "💡 Remember: On a welding torch, the gas control valve is usually a **バルブ (Valve)**. **青(あお)い(aoi)** (Blue) usually indicates **Oxygen** gas."
 },
 {
   q: "問68.高層(こうそう)ビルなどの建築(けんちく)で使(つか)われるクレーンは以下(レか)の種類(しゅるい)から選(えら)べ。【100】",
@@ -108,10 +132,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Loại cần cẩu nào được sử dụng trong việc xây dựng các tòa nhà **cao tầng (**高層(こうそう)ビル**)**?",
+  vi_id: "Jenis derek apa yang digunakan dalam pembangunan gedung **bertingkat tinggi (**高層(こうそう)ビル**)**?",
+  vi_en: "Which type of crane is used in constructing **high-rise buildings (**高層(こうそう)ビル**)**?",
   explain: "Đó là **タワークレーン (Cần cẩu tháp)** . Loại cần cẩu này được thiết kế đặc biệt để vươn tới độ cao lớn và vận chuyển vật liệu lên các công trình **cao tầng (**高層(こうそう)ビル**)**.\n\nTừ vựng:\n高層（こうそう）: Cao tầng\n建築（けんちく）: Xây dựng, kiến trúc\nクレーン: Cần cẩu\n種類（しゅるい）: Loại, chủng loại\nタワークレーン: Cần cẩu tháp\nラフタークレーン: Cần cẩu bánh lốp địa hình\nクローラークレーン: Cần cẩu bánh xích\nトラッククレーン: Cần cẩu gắn trên xe tải",
   "explain_id": "Itu adalah **タワークレーン (Derek menara / Tower crane)**. Jenis derek ini dirancang khusus untuk mencapai ketinggian besar dan mengangkut material ke proyek konstruksi **gedung bertingkat tinggi (**高層(こうそう)ビル**)**.",
   "explain_en": "That is a **タワークレーン (Tower crane)**. This type of crane is specially designed to reach great heights and transport materials up to **high-rise (**高層(こうそう)ビル**)** construction projects.",
-  tip: "💡 Nhớ: Xây **高層(こうそう)ビル (Tòa nhà cao tầng)** = Phải dùng **タワークレーン (Cần cẩu tháp)**."
+  tip: "💡 Nhớ: Xây **高層(こうそう)ビル (Tòa nhà cao tầng)** = Phải dùng **タワークレーン (Cần cẩu tháp)**.",
+  tip_id: "💡 Ingat: Membangun **高層(こうそう)ビル (Gedung bertingkat tinggi)** = Harus menggunakan **タワークレーン (Derek menara)**.",
+  tip_en: "💡 Remember: Building a **高層(こうそう)ビル (High-rise building)** = Must use a **タワークレーン (Tower crane)**."
 },
 {
   q: "問69. ___ とは、門型(もんがた)の建枠(たてわく)を中心(ちゅうしん)にジャッキ・筋交(すじかい)・鋼製(こうせい)布板(ぬのいた)などの基本(きほん)部材(ぶざい)を組(く)み立(た)てるタイプか。正(ただ)しいものを\_\_\_に記入(きにゅう)しなさい。【102】",
@@ -123,10 +151,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Hãy điền vào chỗ trống: ___ là loại giàn giáo được lắp ráp bằng các bộ phận cơ bản như chân kích, thanh giằng chéo (**筋交(すじかい)**), và sàn thao tác bằng thép (**鋼製布板(こうせいぬのいた)**), tập trung vào khung đứng có hình **cổng (**門型(もんがた)**)?" ,
+  vi_id: "Isilah bagian yang kosong: ___ adalah jenis perancah yang dirakit dengan komponen dasar seperti kaki jack, batang penguat diagonal (**筋交(すじかい)**), dan lantai kerja baja (**鋼製布板(こうせいぬのいた)**), yang berpusat pada rangka tegak berbentuk **gerbang (**門型(もんがた)**)?",
+  vi_en: "Fill in the blank: ___ is a type of scaffold assembled from basic components such as jack bases, diagonal braces (**筋交(すじかい)**), and steel deck boards (**鋼製布板(こうせいぬのいた)**), centered on an upright frame shaped like a **gate (**門型(もんがた)**)?",
   explain: "Giàn giáo sử dụng khung đứng có hình **cổng (**門型(もんがた)**)** làm thành phần chính được gọi là **枠組(わくぐ)み足場(あしば) (Giàn giáo khung)** .\n\nTừ vựng:\n門型（もんがた）: Hình cổng\n建枠（たてわく）: Khung đứng\n筋交い（すじかい）: Thanh giằng chéo\n鋼製布板（こうせいぬのいた）: Tấm sàn thao tác bằng thép\n部材（ぶざい）: Cấu kiện, bộ phận\n組み立てる（くみたてる）: Lắp ráp, lắp dựng\n枠組み足場（わくぐみあしば）: Giàn giáo khung\n単管足場（たんかんあしば）: Giàn giáo ống đơn\nくさび緊結式足場（くさびきんけつしきあしば）: Giàn giáo nêm",
   "explain_id": "Perancah yang menggunakan rangka vertikal berbentuk **gerbang (**門型(もんがた)**)** sebagai komponen utamanya disebut **枠組(わくぐ)み足場(あしば) (Perancah rangka)**.",
   "explain_en": "Scaffolding that uses a **portal-shaped (**門型(もんがた)**)** vertical frame as its main component is called **枠組(わくぐ)み足場(あしば) (Frame scaffolding)**.",
-  tip: "💡 Nhớ: **門型(もんがた)** (Hình cổng/chữ H) = **枠組(わくぐ)み足場(あしば)** (Giàn giáo khung)."
+  tip: "💡 Nhớ: **門型(もんがた)** (Hình cổng/chữ H) = **枠組(わくぐ)み足場(あしば)** (Giàn giáo khung).",
+  tip_id: "💡 Ingat: **門型(もんがた)** (Berbentuk gerbang/huruf H) = **枠組(わくぐ)み足場(あしば)** (Perancah rangka).",
+  tip_en: "💡 Remember: **門型(もんがた)** (Gate/H shape) = **枠組(わくぐ)み足場(あしば)** (Frame scaffold)."
 },
 {
   q: "問70. これは何(なに)か。【121】",
@@ -139,10 +171,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Đây là cái gì?",
+  vi_id: "Ini adalah apa?",
+  vi_en: "What is this?",
   explain: "Đây là **金(かな)のこ (Cưa kim loại/Hacksaw)**. Đây là loại cưa cầm tay được thiết kế để cắt các vật liệu cứng như kim loại (**金(かな)**) hoặc nhựa cứng.\n\nTừ vựng:\nさしがね: Thước vuông thợ mộc\n金のこ（かなのこ）: Cưa kim loại\n板金ばさみ（ばんきんばさみ）: Kéo cắt tôn\n鉄筋（てっきん）: Cốt thép\nベンダー: Máy uốn",
   "explain_id": "Ini adalah **金(かな)のこ (Gergaji logam / Hacksaw)**. Ini adalah gergaji tangan yang dirancang untuk memotong material keras seperti logam (**金(かな)**) atau plastik keras.",
   "explain_en": "This is a **金(かな)のこ (Metal saw / Hacksaw)**. This is a hand saw designed to cut hard materials such as metal (**金(かな)**) or hard plastic.",
-  tip: "💡 Nhớ: Cưa có khung chữ C lớn và lưỡi mỏng dùng để cắt kim loại → **金(かな)のこ**."
+  tip: "💡 Nhớ: Cưa có khung chữ C lớn và lưỡi mỏng dùng để cắt kim loại → **金(かな)のこ**.",
+  tip_id: "💡 Ingat: Gergaji dengan rangka besar berbentuk C dan bilah tipis yang digunakan untuk memotong logam → **金(かな)のこ**.",
+  tip_en: "💡 Remember: A saw with a large C-shaped frame and a thin blade used to cut metal → **金(かな)のこ**."
 },
 {
   q: "問71. 内蔵(ないぞう)されているハンマーで、打撃力(だげきりょく)を加(くわ)えながらネジを締(し)めることができる電動(でんどう)ドライバーは何(なに)と言(い)うか。【128】",
@@ -154,10 +190,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Máy vặn vít điện (**電動(でんどう)ドライバー**) nào có thể siết vít (**ネジを締(し)める**) trong khi tạo lực đập (**打撃力(だげきりょく)**) bằng búa (**ハンマー**) được tích hợp (**内蔵(ないぞう)**) bên trong?",
+  vi_id: "Obeng listrik (**電動(でんどう)ドライバー**) mana yang dapat mengencangkan sekrup (**ネジを締(し)める**) sambil memberikan gaya pukul (**打撃力(だげきりょく)**) dengan palu (**ハンマー**) yang terpasang (**内蔵(ないぞう)**) di dalamnya?",
+  vi_en: "Which electric screwdriver (**電動(でんどう)ドライバー**) can tighten screws (**ネジを締(し)める**) while applying impact force (**打撃力(だげきりょく)**) with a built-in (**内蔵(ないぞう)**) hammer (**ハンマー**)?",
   explain: "Máy vặn vít hoạt động bằng cách tạo ra lực đập (**打撃力(だげきりょく)**) xoay chiều, giúp siết chặt vít vào vật liệu cứng, được gọi là **インパクトドライバー (Impact Driver)**.\n\nTừ vựng:\n内蔵（ないぞう）: Tích hợp sẵn bên trong\nハンマー: Búa\n打撃力（だげきりょく）: Lực đập\n加える（くわえる）: Tác dụng thêm vào\nネジ: Vít, ốc vít\n締める（しめる）: Siết chặt\n電動（でんどう）: Chạy điện\nインパクトドライバー: Máy vặn vít búa\n丸のこ（まるのこ）: Cưa đĩa tròn",
   "explain_id": "Obeng elektrik yang bekerja dengan menghasilkan gaya pukul berputar (**打撃力(だげきりょく)**), membantu mengencangkan sekrup ke material keras, disebut **インパクトドライバー (Impact Driver)**.",
   "explain_en": "A screwdriver that works by creating a rotating impact force (**打撃力(だげきりょく)**), helping to drive screws tightly into hard materials, is called an **インパクトドライバー (Impact Driver)**.",
-  tip: "💡 Nhớ: Có **ハンマー (Búa)** và **打撃力(だげきりょく) (Lực đập)** → **インパクトドライバー (Impact Driver)**."
+  tip: "💡 Nhớ: Có **ハンマー (Búa)** và **打撃力(だげきりょく) (Lực đập)** → **インパクトドライバー (Impact Driver)**.",
+  tip_id: "💡 Ingat: Ada **ハンマー (Palu)** dan **打撃力(だげきりょく) (Gaya pukul)** → **インパクトドライバー (Impact Driver)**.",
+  tip_en: "💡 Remember: It has a **ハンマー (Hammer)** and **打撃力(だげきりょく) (Impact force)** → **インパクトドライバー (Impact Driver)**."
 },
 {
   q: "問72. 杭(くい)を打(う)ち込(こ)むときに使(つか)う大型(おおがた)の木槌(きづち)は何(なに)か。【136】",
@@ -169,10 +209,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 2,
   vi: "Loại búa gỗ lớn (**大型(おおがた)の木槌(きづち)**) nào được sử dụng khi đóng cọc (**杭(くい)**)?" ,
+  vi_id: "Jenis palu kayu besar (**大型(おおがた)の木槌(きづち)**) apa yang digunakan saat memancang tiang (**杭(くい)**)?",
+  vi_en: "What is the large wooden mallet (**大型(おおがた)の木槌(きづち)**) used when driving piles (**杭(くい)**) called?",
   explain: "Đó là **かけや (Kakeya)** . Đây là loại búa gỗ lớn, nặng, thường dùng hai tay để đóng các vật liệu lớn như cọc, cột, hoặc nêm vào đất.\n\nTừ vựng:\n杭（くい）: Cọc\n打ち込む（うちこむ）: Đóng vào, đóng xuống\n大型（おおがた）: Cỡ lớn\n木槌（きづち）: Búa gỗ\nかけや: Búa gỗ lớn đóng cọc\nゴムハンマー: Búa cao su",
   "explain_id": "Itu adalah **かけや (Kakeya)**. Ini adalah palu kayu besar dan berat, biasanya digunakan dengan dua tangan untuk memukul material besar seperti tiang pancang, tiang, atau baji ke dalam tanah.",
   "explain_en": "That is a **かけや (Kakeya)**. This is a large, heavy wooden mallet, usually used with both hands to drive large materials such as piles, posts, or wedges into the ground.",
-  tip: "💡 Nhớ: **大型(おおがた)の木槌(きづち)** (Búa gỗ lớn) để đóng **杭(くい)** (cọc) → **かけや**."
+  tip: "💡 Nhớ: **大型(おおがた)の木槌(きづち)** (Búa gỗ lớn) để đóng **杭(くい)** (cọc) → **かけや**.",
+  tip_id: "💡 Ingat: **大型(おおがた)の木槌(きづち)** (Palu kayu besar) untuk memancang **杭(くい)** (tiang) → **かけや**.",
+  tip_en: "💡 Remember: A **大型(おおがた)の木槌(きづち)** (Large wooden mallet) for driving **杭(くい)** (piles) → **かけや**."
 },
 {
   q: "問73. 金属(きんぞく)のさび落(お)としや塗装(とそう)はがし、やすりの目詰(めづ)まりをとる工具(こうぐ)は何(なに)と言(い)うか。正(ただ)しいものをーつ選(えら)べ。【137】",
@@ -184,10 +228,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 3,
   vi: "Dụng cụ nào được dùng để loại bỏ gỉ sét (**さび落(お)とし**) hoặc sơn (**塗装(とそう)はがし**) khỏi kim loại (**金属(きんぞく)**), hoặc loại bỏ tắc nghẽn trên dũa (**やすりの目詰(めづ)まり**)?" ,
+  vi_id: "Alat apa yang digunakan untuk menghilangkan karat (**さび落(お)とし**) atau cat (**塗装(とそう)はがし**) dari logam (**金属(きんぞく)**), atau menghilangkan sumbatan pada kikir (**やすりの目詰(めづ)まり**)?",
+  vi_en: "Which tool is used to remove rust (**さび落(お)とし**) or paint (**塗装(とそう)はがし**) from metal (**金属(きんぞく)**), or to clear clogging on a file (**やすりの目詰(めづ)まり**)?",
   explain: "Đó là **ワイヤーブラシ (Bàn chải thép)** . Đây là dụng cụ có lông làm bằng dây thép cứng, chuyên dùng để cọ rửa, loại bỏ gỉ sét, sơn cũ hoặc cặn bẩn cứng đầu trên bề mặt kim loại.\n\nTừ vựng:\n金属（きんぞく）: Kim loại\nさび: Gỉ sét\nさび落とし（さびおとし）: Tẩy gỉ, đánh gỉ\n塗装（とそう）: Sơn\nやすり: Cái dũa\n目詰まり（めづまり）: Bị bám tắc (răng dũa)\n工具（こうぐ）: Dụng cụ\nワイヤーブラシ: Bàn chải thép\nはけ: Chổi quét, cọ",
   "explain_id": "Itu adalah **ワイヤーブラシ (Sikat kawat)**. Ini adalah alat dengan bulu yang terbuat dari kawat baja kaku, khusus digunakan untuk menggosok, menghilangkan karat, cat lama, atau kotoran membandel pada permukaan logam.",
   "explain_en": "That is a **ワイヤーブラシ (Wire brush)**. This is a tool with bristles made of stiff steel wire, specially used to scrub and remove rust, old paint, or stubborn dirt from metal surfaces.",
-  tip: "💡 Nhớ: Loại bỏ **さび (gỉ)** trên kim loại → **ワイヤーブラシ**."
+  tip: "💡 Nhớ: Loại bỏ **さび (gỉ)** trên kim loại → **ワイヤーブラシ**.",
+  tip_id: "💡 Ingat: Menghilangkan **さび (karat)** pada logam → **ワイヤーブラシ**.",
+  tip_en: "💡 Remember: Removing **さび (rust)** from metal → **ワイヤーブラシ**."
 },
 {
   q: "問74. 施工(せこう)管理(かんり)における工程(こうてい)管理(かんり)は何(なに)か。【147】",
@@ -199,10 +247,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Quản lý công đoạn (**工程(こうてい)管理(かんり)**) trong quản lý thi công (**施工(せこう)管理(かんり)**) là gì?",
+  vi_id: "Apa itu manajemen proses (**工程(こうてい)管理(かんり)**) dalam manajemen konstruksi (**施工(せこう)管理(かんり)**)?",
+  vi_en: "What is process/schedule management (**工程(こうてい)管理(かんり)**) in construction management (**施工(せこう)管理(かんり)**)?",
   explain: "Quản lý công đoạn là **quản lý nhằm mục đích hoàn thành công trình trong thời hạn quy định (工期内完成) để công đoạn thực hiện không bị chậm trễ (遅れが生じない)**. (Tương ứng với Lựa chọn 2)\n\nTừ vựng:\n施工管理（せこうかんり）: Quản lý thi công\n工程管理（こうていかんり）: Quản lý tiến độ\n発注者（はっちゅうしゃ）: Chủ đầu tư, bên đặt hàng\n品質（ひんしつ）: Chất lượng\n遅れ（おくれ）: Sự chậm trễ\n工期（こうき）: Thời hạn thi công\n完成（かんせい）: Hoàn thành\n材料費（ざいりょうひ）: Chi phí vật liệu\n予算（よさん）: Ngân sách, dự toán",
   "explain_id": "Manajemen proses adalah **manajemen yang bertujuan menyelesaikan proyek dalam jangka waktu yang ditentukan (工期内完成) agar proses pelaksanaan tidak mengalami keterlambatan (遅れが生じない)**. (Sesuai dengan Pilihan 2)",
   "explain_en": "Process management is **management aimed at completing the project within the prescribed period (工期内完成) so that the work process is not delayed (遅れが生じない)**. (Corresponding to Option 2)",
-  tip: "💡 Nhớ: **工程(こうてい)管理(かんり)** = Quản lý **工期(こうき)** (Thời hạn thi công)."
+  tip: "💡 Nhớ: **工程(こうてい)管理(かんり)** = Quản lý **工期(こうき)** (Thời hạn thi công).",
+  tip_id: "💡 Ingat: **工程(こうてい)管理(かんり)** = Mengelola **工期(こうき)** (Jadwal/durasi konstruksi).",
+  tip_en: "💡 Remember: **工程(こうてい)管理(かんり)** = Managing the **工期(こうき)** (Construction period/schedule)."
 },
 {
   q: "問75. 住宅(じゅうたく)の壁(かべ)や床(ゆか)、レンガやブロックを積(つ)み上(あ)げるときの接着剤(せっちゃくざい)などに使(つか)われる建築(けんちく)材料(ざいりょう)は何(なに)か【117】",
@@ -214,10 +266,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Vật liệu xây dựng nào được sử dụng làm keo kết dính (**接着剤(せっちゃくざい)**) khi xây tường (**壁(かべ)**), sàn (**床(ゆか)**) nhà, hoặc khi xếp gạch (レンガやブロックを積(つ)み上(あ)げる)?",
+  vi_id: "Material bangunan apa yang digunakan sebagai perekat (**接着剤(せっちゃくざい)**) saat membangun dinding (**壁(かべ)**), lantai (**床(ゆか)**) rumah, atau saat menyusun bata (レンガやブロックを積(つ)み上(あ)げる)?",
+  vi_en: "Which building material is used as a binder (**接着剤(せっちゃくざい)**) when building walls (**壁(かべ)**), floors (**床(ゆか)**) of houses, or when stacking bricks (レンガやブロックを積(つ)み上(あ)げる)?",
   explain: "Đó là **モルタル (Vữa/Mortar)**. Vữa là hỗn hợp của xi măng, cát và nước, được dùng làm chất kết dính khi xây gạch, khối bê tông và trát tường.\n\nTừ vựng:\n住宅（じゅうたく）: Nhà ở\n壁（かべ）: Tường\n床（ゆか）: Sàn\nレンガ: Gạch nề\nブロック: Gạch block, khối\n積み上げる（つみあげる）: Xếp chồng lên, xây lên\n接着剤（せっちゃくざい）: Chất kết dính, keo dán\n建築材料（けんちくざいりょう）: Vật liệu xây dựng\nモルタル: Vữa\n漆喰（しっくい）: Vữa vôi",
   "explain_id": "Itu adalah **モルタル (Mortar)**. Mortar adalah campuran semen, pasir, dan air, yang digunakan sebagai bahan pengikat saat memasang bata, blok beton, dan memplester dinding.",
   "explain_en": "That is **モルタル (Mortar)**. Mortar is a mixture of cement, sand, and water, used as a binder when laying bricks, concrete blocks, and plastering walls.",
-  tip: "💡 Nhớ: Dùng để **積(つ)み上(あ)げる (xây lên)** gạch block/レンガ → **モルタル**."
+  tip: "💡 Nhớ: Dùng để **積(つ)み上(あ)げる (xây lên)** gạch block/レンガ → **モルタル**.",
+  tip_id: "💡 Ingat: Digunakan untuk **積(つ)み上(あ)げる (menyusun ke atas)** bata blok/レンガ → **モルタル**.",
+  tip_en: "💡 Remember: Used to **積(つ)み上(あ)げる (stack up)** blocks/レンガ → **モルタル**."
 },
 {
   q: "問76. セメントに水(みず)と砂(すな)をまぜ合わせて作(つく)る建築(けんちく)材料(ざいりょう)を何(なに)か。【117】",
@@ -229,10 +285,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Vật liệu xây dựng được tạo ra bằng cách trộn xi măng (**セメント**), nước (**水(みず)**) và cát (**砂(すな)**) là gì?",
+  vi_id: "Material bangunan apa yang dibuat dengan mencampurkan semen (**セメント**), air (**水(みず)**), dan pasir (**砂(すな)**)?",
+  vi_en: "What building material is made by mixing cement (**セメント**), water (**水(みず)**), and sand (**砂(すな)**)?",
   explain: "Hỗn hợp của xi măng, nước và cát được gọi là **モルタル (Vữa/Mortar)**. Nếu thêm sỏi/đá dăm (**砂利(じゃり)**) vào hỗn hợp này, ta sẽ có **コンクリート (Bê tông)**.\n\nTừ vựng:\nセメント: Xi măng\n水（みず）: Nước\n砂（すな）: Cát\n混ぜる（まぜる）: Trộn\n建築材料（けんちくざいりょう）: Vật liệu xây dựng\nモルタル: Vữa\n漆喰（しっくい）: Vữa vôi\nコンクリート: Bê tông\nアスファルト: Nhựa đường\n砂利（じゃり）: Sỏi, đá dăm",
   "explain_id": "Campuran semen, air, dan pasir disebut **モルタル (Mortar)**. Jika kerikil (**砂利(じゃり)**) ditambahkan ke campuran ini, kita akan mendapatkan **コンクリート (Beton)**.",
   "explain_en": "A mixture of cement, water, and sand is called **モルタル (Mortar)**. If gravel (**砂利(じゃり)**) is added to this mixture, we get **コンクリート (Concrete)**.",
-  tip: "💡 Nhớ: Xi măng + Cát + Nước = **モルタル (Vữa)**."
+  tip: "💡 Nhớ: Xi măng + Cát + Nước = **モルタル (Vữa)**.",
+  tip_id: "💡 Ingat: Semen + Pasir + Air = **モルタル (Mortar)**.",
+  tip_en: "💡 Remember: Cement + Sand + Water = **モルタル (Mortar)**."
 },
 {
   q: "問77. 写真(しゃしん)の道具(どうぐ)の名前(なまえ)はどれか。【105】",
@@ -245,10 +305,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Tên của dụng cụ trong ảnh là gì?",
+  vi_id: "Apa nama alat pada foto ini?",
+  vi_en: "What is the name of the tool in the photo?",
   explain: "Dụng cụ trong ảnh là loại cờ lê có đầu mở (**オープンエンド**), được gọi là **スパナ (Spanner/Cờ lê)**. Cờ lê có đầu kín (khóa vòng) được gọi là **めがねレンチ (Megane renchi)**.\n\nTừ vựng:\n写真（しゃしん）: Bức ảnh\n道具（どうぐ）: Dụng cụ\n名前（なまえ）: Tên gọi\nスパナ: Cờ lê hở\nめがねレンチ: Cờ lê vòng (hai đầu kín)\nオープンエンド: Đầu mở (của cờ lê)",
   "explain_id": "Alat dalam foto adalah kunci pas dengan ujung terbuka (**オープンエンド**), disebut **スパナ (Kunci pas / Spanner)**. Kunci dengan ujung tertutup (ring) disebut **めがねレンチ (Megane renchi)**.",
   "explain_en": "The tool in the photo is a wrench with an open end (**オープンエンド**), called a **スパナ (Spanner / Open-end wrench)**. A wrench with a closed end (ring) is called a **めがねレンチ (Megane renchi)**.",
-  tip: "💡 Nhớ: Cờ lê đầu mở → **スパナ**."
+  tip: "💡 Nhớ: Cờ lê đầu mở → **スパナ**.",
+  tip_id: "💡 Ingat: Kunci pas ujung terbuka → **スパナ**.",
+  tip_en: "💡 Remember: Open-end wrench → **スパナ**."
 },
 {
   q: "問78. はしごについて、適切(てきせつ)なものを選(えら)べ。",
@@ -260,10 +324,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Chọn phát biểu thích hợp (**適切(てきせつ)**) về thang (**はしご**).",
+  vi_id: "Pilihlah pernyataan yang tepat (**適切(てきせつ)**) tentang tangga (**はしご**).",
+  vi_en: "Choose the appropriate statement (**適切(てきせつ)**) about ladders (**はしご**).",
   explain: "Quy tắc an toàn khi sử dụng thang (**はしご**) là: **立(た)てかけたときの角度(かくど)は約(やく) 75度(ど)とする (Góc nghiêng khi đặt thang phải là khoảng 75 độ)** để đảm bảo độ ổn định và an toàn khi leo. Các lựa chọn 2, 3 và 4 đều là hành vi nguy hiểm, không an toàn.\n\nTừ vựng:\nはしご: Thang\n適切（てきせつ）: Thích hợp, đúng\n立てかける（たてかける）: Dựng tựa (thang)\n角度（かくど）: Góc độ\n約（やく）: Khoảng, chừng\n天板（てんばん）: Tấm trên cùng của thang ghế\n座る（すわる）: Ngồi\n立つ（たつ）: Đứng\n補助者（ほじょしゃ）: Người hỗ trợ, người giữ thang",
   "explain_id": "Aturan keselamatan saat menggunakan tangga (**はしご**) adalah: **立(た)てかけたときの角度(かくど)は約(やく) 75度(ど)とする (Sudut kemiringan saat tangga disandarkan harus sekitar 75 derajat)** untuk memastikan stabilitas dan keselamatan saat memanjat. Pilihan 2, 3, dan 4 semuanya adalah perilaku berbahaya dan tidak aman.",
   "explain_en": "The safety rule when using a ladder (**はしご**) is: **立(た)てかけたときの角度(かくど)は約(やく) 75度(ど)とする (The leaning angle when a ladder is set up should be about 75 degrees)** to ensure stability and safety when climbing. Options 2, 3, and 4 are all dangerous, unsafe behaviors.",
-  tip: "💡 Nhớ: Góc đặt thang (**はしご**) an toàn = **75度(ど)**."
+  tip: "💡 Nhớ: Góc đặt thang (**はしご**) an toàn = **75度(ど)**.",
+  tip_id: "💡 Ingat: Sudut pemasangan tangga (**はしご**) yang aman = **75度(ど)**.",
+  tip_en: "💡 Remember: The safe angle for setting a ladder (**はしご**) = **75度(ど)**."
 },
 {
   q: "問79. 鉄筋(てっきん)のかぶりを確保(かくほ)するための部材(ぶざい)は何(なに)か。【107】",
@@ -275,10 +343,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 2,
   vi: "Bộ phận nào dùng để đảm bảo độ dày lớp bảo vệ bê tông (**かぶり**) của thép (**鉄筋(てっきん)**)?" ,
+  vi_id: "Komponen apa yang digunakan untuk memastikan ketebalan selimut beton (**かぶり**) pada baja (**鉄筋(てっきん)**)?",
+  vi_en: "Which part is used to ensure the concrete cover thickness (**かぶり**) of the steel bars (**鉄筋(てっきん)**)?",
   explain: "Đó là **スペーサー (Spacer)**. **スペーサー** (cục kê) được đặt giữa cốt thép và ván khuôn để giữ khoảng cách cố định, nhằm đảm bảo lớp bảo vệ bê tông (**かぶり**) đạt tiêu chuẩn, ngăn cốt thép bị ăn mòn.\n\nTừ vựng:\n鉄筋（てっきん）: Cốt thép\nかぶり: Lớp bê tông bảo vệ cốt thép\n確保（かくほ）: Đảm bảo\n部材（ぶざい）: Cấu kiện, bộ phận\nスペーサー: Cục kê\nドーナツ: Cục kê tròn\nキャラメル: Khối kê vuông\nプラキャップ: Nắp nhựa",
   "explain_id": "Itu adalah **スペーサー (Spacer)**. **スペーサー** (blok penjaga jarak) ditempatkan di antara tulangan baja dan bekisting untuk menjaga jarak tetap, guna memastikan selimut beton (**かぶり**) memenuhi standar dan mencegah tulangan baja berkarat.",
   "explain_en": "That is a **スペーサー (Spacer)**. A **スペーサー** (spacer block) is placed between the reinforcing steel and the formwork to maintain a fixed distance, in order to ensure the concrete cover (**かぶり**) meets the standard and prevent the reinforcing steel from corroding.",
-  tip: "💡 Nhớ: Đảm bảo lớp **かぶり** (Bảo vệ bê tông) → **スペーサー** (Cục kê)."
+  tip: "💡 Nhớ: Đảm bảo lớp **かぶり** (Bảo vệ bê tông) → **スペーサー** (Cục kê).",
+  tip_id: "💡 Ingat: Memastikan lapisan **かぶり** (Selimut beton) → **スペーサー** (Spacer).",
+  tip_en: "💡 Remember: Ensuring the **かぶり** (Concrete cover) layer → **スペーサー** (Spacer)."
 },
 {
   q: "問80. 圧接(あっせつ)部(ぶ)を熱(ねっ)するための炎(ほのお)を出(だ)す部分(ぶぶん)は何(なに)か。正(ただ)しいものをー(い)つ選(えら)べ。【109】",
@@ -290,10 +362,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 2,
   vi: "Bộ phận tạo ra lửa (**炎(ほのお)**) để nung nóng phần nối áp lực (**圧接部(あっせつぶ)**) là gì?",
+  vi_id: "Komponen apa yang menghasilkan api (**炎(ほのお)**) untuk memanaskan bagian sambungan tekanan (**圧接部(あっせつぶ)**)?",
+  vi_en: "Which part produces the flame (**炎(ほのお)**) to heat the pressure-welded joint (**圧接部(あっせつぶ)**)?",
   explain: "Bộ phận tạo ra ngọn lửa để nung nóng (hàn áp lực) là **バーナー (Burner)** . **バーナー** là đầu vòi phun giúp trộn khí và tạo ra ngọn lửa cần thiết. (Lưu ý: **吹管(ふきかん)** là tên gọi chung của toàn bộ thiết bị thổi/hàn khí.)\n\nTừ vựng:\n圧接部（あっせつぶ）: Phần nối ép nóng\n熱する（ねっする）: Nung nóng\n炎（ほのお）: Ngọn lửa\n部分（ぶぶん）: Bộ phận\n吹管（ふきかん）: Ống thổi, mỏ hàn khí\n高圧（こうあつ）: Áp suất cao\nホース: Ống mềm\nバーナー: Đầu đốt, mỏ phun lửa\nラムシリンダー: Xi lanh thủy lực",
   "explain_id": "Bagian yang menghasilkan api untuk pemanasan (pengelasan tekanan) adalah **バーナー (Burner)**. **バーナー** adalah kepala nosel yang membantu mencampur gas dan menghasilkan api yang diperlukan. (Catatan: **吹管(ふきかん)** adalah nama umum untuk seluruh perangkat tiup/las gas.)",
   "explain_en": "The part that creates a flame for heating (pressure welding) is the **バーナー (Burner)**. The **バーナー** is the nozzle head that helps mix gas and create the necessary flame. (Note: **吹管(ふきかん)** is the general name for the entire gas blowing/welding apparatus.)",
-  tip: "💡 Nhớ: Bộ phận **đốt lửa/phun lửa** (**炎(ほのお)**) → **バーナー**."
+  tip: "💡 Nhớ: Bộ phận **đốt lửa/phun lửa** (**炎(ほのお)**) → **バーナー**.",
+  tip_id: "💡 Ingat: Komponen **pembakar/penyembur api** (**炎(ほのお)**) → **バーナー**.",
+  tip_en: "💡 Remember: The part that **burns/blows the flame** (**炎(ほのお)**) → **バーナー**."
 },
 {
   q: "問81. 青(あお)い部分(ぶぶん)は何(なに)か。【111】",
@@ -306,10 +382,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 2,
   vi: "Bộ phận màu xanh (**青(あお)い部分(ぶぶん)**) là gì?",
+  vi_id: "Bagian yang berwarna biru (**青(あお)い部分(ぶぶん)**) adalah apa?",
+  vi_en: "What is the blue part (**青(あお)い部分(ぶぶん)**)?",
   explain: "Bộ phận màu xanh được khoanh tròn là **フォームタイ (Form Tie)** . Nó là bộ phận dùng để siết chặt ván khuôn (**型枠(かたわく)**) với thanh **セパレーター** bên trong để chống lại áp lực bê tông (**側圧(そくあつ)**).\n\nTừ vựng:\n青い（あおい）: Màu xanh\n単管パイプ（たんかんパイプ）: Ống thép đơn\n固定（こてい）: Cố định\nベース: Đế, chân đế\nフォームタイ: Thanh giằng ván khuôn\nPコン: Đầu nối nhựa hình nón\n型枠（かたわく）: Ván khuôn\nセパレーター: Thanh giữ khoảng cách ván khuôn",
   "explain_id": "Bagian berwarna biru yang dilingkari adalah **フォームタイ (Form Tie)**. Ini adalah bagian yang digunakan untuk mengencangkan bekisting (**型枠(かたわく)**) dengan batang **セパレーター** di dalamnya untuk menahan tekanan beton (**側圧(そくあつ)**).",
   "explain_en": "The blue part circled is a **フォームタイ (Form Tie)**. It is a part used to tighten the formwork (**型枠(かたわく)**) with the **セパレーター** rod inside to resist concrete pressure (**側圧(そくあつ)**).",
-  tip: "💡 Nhớ: Bộ phận kẹp bên ngoài ván khuôn, dùng để siết → **フォームタイ**."
+  tip: "💡 Nhớ: Bộ phận kẹp bên ngoài ván khuôn, dùng để siết → **フォームタイ**.",
+  tip_id: "💡 Ingat: Komponen yang menjepit bagian luar bekisting, digunakan untuk mengencangkan → **フォームタイ**.",
+  tip_en: "💡 Remember: A part that clamps the outside of the formwork, used for tightening → **フォームタイ**."
 },
 {
   q: "問82. とび工事(こうじ)における不適切(ふてきせつ)なものを選(えら)べ。",
@@ -321,10 +401,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Chọn câu **không thích hợp (**不適切(ふてきせつ)**) về công việc giàn giáo/thợ cốp pha (**とび工事(こうじ)**).",
+  vi_id: "Pilihlah kalimat yang **tidak tepat (**不適切(ふてきせつ)**) tentang pekerjaan perancah/tukang bekisting (**とび工事(こうじ)**).",
+  vi_en: "Choose the statement that is **inappropriate (**不適切(ふてきせつ)**) about scaffolding/formwork work (**とび工事(こうじ)**).",
   explain: "Phát biểu **không thích hợp** là Lựa chọn 1. **Không đội mũ bảo hiểm (ヘルメット)** và **không đi giày an toàn (安全靴)** là hành vi vi phạm nghiêm trọng quy tắc an toàn. Trang bị bảo hộ là **bắt buộc (必須)** trong **とび工事(こうじ)**.\n\nTừ vựng:\nとび工事（とびこうじ）: Công tác giàn giáo\n不適切（ふてきせつ）: Không thích hợp\nヘルメット: Mũ bảo hộ\n安全靴（あんぜんぐつ）: Giày an toàn\n着用（ちゃくよう）: Mặc, đeo, mang (trang bị)\n足場（あしば）: Giàn giáo\n倒れる（たおれる）: Đổ, ngã\n壁つなぎ（かべつなぎ）: Thanh giằng nối vào tường\n敷板（しきいた）: Tấm lót chân giàn giáo\n金具（かなぐ）: Phụ kiện kim loại",
   "explain_id": "Pernyataan yang **tidak tepat** adalah Pilihan 1. **Tidak memakai helm (ヘルメット)** dan **tidak memakai sepatu keselamatan (安全靴)** adalah pelanggaran serius terhadap aturan keselamatan. Alat pelindung diri adalah **wajib (必須)** dalam **とび工事(こうじ)**.",
   "explain_en": "The **inappropriate** statement is Option 1. **Not wearing a helmet (ヘルメット)** and **not wearing safety shoes (安全靴)** is a serious violation of safety rules. Protective equipment is **mandatory (必須)** in **とび工事(こうじ)**.",
-  tip: "💡 Nhớ: **とび工事(こうじ)** luôn phải **着用(ちゃくよう) (Mặc/Đội)** đầy đủ trang bị bảo hộ."
+  tip: "💡 Nhớ: **とび工事(こうじ)** luôn phải **着用(ちゃくよう) (Mặc/Đội)** đầy đủ trang bị bảo hộ.",
+  tip_id: "💡 Ingat: **とび工事(こうじ)** selalu harus **着用(ちゃくよう) (Memakai)** perlengkapan pelindung lengkap.",
+  tip_en: "💡 Remember: In **とび工事(こうじ)** you must always **着用(ちゃくよう) (Wear)** full protective equipment."
 },
 {
   q: "問83. 基準台(きじゅんだい)に対(たい)して簡単(かんたん)な平行(へいこう)な線(せん)を引(ひ)くことができる大工(だいく)道具(どうぐ)は何(なに)か。【116】",
@@ -336,10 +420,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 2,
   vi: "Dụng cụ thợ mộc (**大工(だいく)道具(どうぐ)**) nào có thể dễ dàng kẻ các đường **song song (**平行(へいこう)**) với một mặt chuẩn (**基準台(きじゅんだい)**)?" ,
+  vi_id: "Alat tukang kayu (**大工(だいく)道具(どうぐ)**) mana yang dapat dengan mudah menggambar garis **sejajar (**平行(へいこう)**) dengan bidang acuan (**基準台(きじゅんだい)**)?",
+  vi_en: "Which carpentry tool (**大工(だいく)道具(どうぐ)**) can easily draw lines **parallel (**平行(へいこう)**) to a reference surface (**基準台(きじゅんだい)**)?",
   explain: "Đó là **筋毛引(すじけび)き (Dụng cụ kẻ song song/Marking Gauge)** . Dụng cụ này dùng để kẻ một hoặc hai đường thẳng song song với cạnh của vật liệu bằng cách trượt phần chặn dọc theo cạnh đó.\n\nTừ vựng:\n基準台（きじゅんだい）: Mặt chuẩn, bàn chuẩn\n平行（へいこう）: Song song\n引く（ひく）: Kẻ, vạch\n大工（だいく）: Thợ mộc\n道具（どうぐ）: Dụng cụ\n筋毛引き（すじけびき）: Dụng cụ kẻ vạch song song\nきり: Mũi dùi\nかんな: Cái bào\nのみ: Cái đục",
   "explain_id": "Itu adalah **筋毛引(すじけび)き (Alat penanda garis sejajar / Marking Gauge)**. Alat ini digunakan untuk menggambar satu atau dua garis lurus yang sejajar dengan tepi material dengan cara menggeser bagian penahan di sepanjang tepi tersebut.",
   "explain_en": "That is a **筋毛引(すじけび)き (Marking Gauge)**. This tool is used to draw one or two straight lines parallel to the edge of a material by sliding the stop along that edge.",
-  tip: "💡 Nhớ: Dụng cụ kẻ **平行(へいこう)な線(せん)** (Đường song song) → **筋毛引(すじけび)き**."
+  tip: "💡 Nhớ: Dụng cụ kẻ **平行(へいこう)な線(せん)** (Đường song song) → **筋毛引(すじけび)き**.",
+  tip_id: "💡 Ingat: Alat untuk menggambar **平行(へいこう)な線(せん)** (Garis sejajar) → **筋毛引(すじけび)き**.",
+  tip_en: "💡 Remember: A tool for drawing **平行(へいこう)な線(せん)** (Parallel lines) → **筋毛引(すじけび)き**."
 },
 {
   q: "問84. この道具(どうぐ)は何(なん)というのか。【116】",
@@ -352,10 +440,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 0,
   vi: "Dụng cụ này được gọi là gì?",
+  vi_id: "Alat ini disebut apa?",
+  vi_en: "What is this tool called?",
   explain: "Dụng cụ trong ảnh là **きり (Mũi dùi/Awl)** . Nó được sử dụng để tạo lỗ nhỏ hoặc đánh dấu vị trí trước khi đóng đinh hoặc vặn vít.\n\nTừ vựng:\n道具（どうぐ）: Dụng cụ\nきり: Mũi dùi\n千枚通し（せんまいどおし）: Dùi nhọn\nげんのう: Búa thợ mộc\nはけ: Chổi quét, cọ",
   "explain_id": "Alat dalam foto adalah **きり (Penusuk / Awl)**. Alat ini digunakan untuk membuat lubang kecil atau menandai posisi sebelum memukul paku atau memasang sekrup.",
   "explain_en": "The tool in the photo is a **きり (Awl)**. It is used to create small holes or mark a position before driving a nail or driving a screw.",
-  tip: "💡 Nhớ: Dụng cụ có đầu kim nhọn, dùng để dùi lỗ → **きり**."
+  tip: "💡 Nhớ: Dụng cụ có đầu kim nhọn, dùng để dùi lỗ → **きり**.",
+  tip_id: "💡 Ingat: Alat dengan ujung jarum tajam, digunakan untuk menusuk lubang → **きり**.",
+  tip_en: "💡 Remember: A tool with a sharp needle-like point, used to pierce holes → **きり**."
 },
 {
   q: "問85. 以下(いか)の写真(しゃしん)のこては首(くび)の部分(ぶぶん)が枝(えだ)と平(ひら)たい面(めん)の根元(ねもと)について、細(こま)かい部分(ぶぶん)の作業(さぎょう)に適(てき)しています。何(なん)というこてか。【117】",
@@ -368,10 +460,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Cái bay (**こて**) trong ảnh có phần cổ (**首(くび)**) phẳng so với gốc tay cầm (**根元(ねもと)**), phù hợp cho các công việc **chi tiết (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**). Đó là loại bay gì?",
+  vi_id: "Bay (**こて**) pada foto memiliki leher (**首(くび)**) yang datar terhadap pangkal gagang (**根元(ねもと)**), cocok untuk pekerjaan **detail (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**). Bay jenis apa itu?",
+  vi_en: "The trowel (**こて**) in the photo has a neck (**首(くび)**) flat relative to the handle base (**根元(ねもと)**), suitable for **detailed work (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**). What type of trowel is it?",
   explain: "Đó là **柳刃(やなぎば)ごて (Bay lưỡi liễu)**. Bay này có lưỡi dài và hẹp, giống như lưỡi dao liễu, thường được sử dụng cho các công việc trát vữa thạch cao hoặc sơn trát ở các khu vực hẹp hoặc cần sự tinh tế, rất thích hợp cho công việc **chi tiết (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**).\n\nTừ vựng:\nこて: Cái bay trát\n首（くび）: Cổ (của bay)\n根元（ねもと）: Phần gốc\n平たい（ひらたい）: Phẳng, dẹt\n細かい（こまかい）: Nhỏ, tinh xảo, chi tiết\n柳刃ごて（やなぎばごて）: Bay lưỡi liễu\n中塗りごて（なかぬりごて）: Bay trát lớp giữa\nブロックごて: Bay xây block\n切り付けごて（きりつけごて）: Bay cắt góc",
   "explain_id": "Itu adalah **柳刃(やなぎば)ごて (Roskam daun willow)**. Roskam ini memiliki bilah yang panjang dan sempit, seperti pisau daun willow, biasanya digunakan untuk pekerjaan plesteran dengan plester gipsum atau plester akhir di area sempit atau yang membutuhkan ketelitian, sangat cocok untuk **pekerjaan detail (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**).",
   "explain_en": "That is a **柳刃(やなぎば)ごて (Willow-leaf trowel)**. This trowel has a long and narrow blade, like a willow-leaf knife, usually used for plastering work with gypsum plaster or finish plaster in narrow areas or where finesse is needed, very suitable for **detailed work (**細(こま)かい部分(ぶぶん)の作業(さぎょう)**).",
-  tip: "💡 Nhớ: Bay có lưỡi hẹp, dùng cho **細(こま)かい部分(ぶぶん) (Phần chi tiết)** → **柳刃(やなぎば)ごて**."
+  tip: "💡 Nhớ: Bay có lưỡi hẹp, dùng cho **細(こま)かい部分(ぶぶん) (Phần chi tiết)** → **柳刃(やなぎば)ごて**.",
+  tip_id: "💡 Ingat: Bay dengan bilah sempit, digunakan untuk **細(こま)かい部分(ぶぶん) (Bagian detail)** → **柳刃(やなぎば)ごて**.",
+  tip_en: "💡 Remember: A trowel with a narrow blade, used for **細(こま)かい部分(ぶぶん) (Detailed parts)** → **柳刃(やなぎば)ごて**."
 },
 {
   q: "問86. コンクリートは、圧縮(あっしゅく)する力(ちから)には強(つよ)いですが、(......) 力には弱(よわ)いという性質(せいしつ)があります【153】",
@@ -383,10 +479,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Bê tông (**コンクリート**) có đặc tính mạnh với lực nén (**圧縮(あっしゅく)する力(ちから)**) nhưng yếu với lực (......).",
+  vi_id: "Beton (**コンクリート**) memiliki sifat kuat terhadap gaya tekan (**圧縮(あっしゅく)する力(ちから)**) tetapi lemah terhadap gaya (......).",
+  vi_en: "Concrete (**コンクリート**) is strong against compressive force (**圧縮(あっしゅく)する力(ちから)**) but weak against (......) force.",
   explain: "Bê tông rất mạnh với lực nén, nhưng lại rất yếu với **引張(ひっぱ)り (Lực kéo/Lực căng)** . Đây là lý do thép cốt (**鉄筋(てっきん)**) được thêm vào để tạo thành bê tông cốt thép, chịu được lực kéo.\n\nTừ vựng:\nコンクリート: Bê tông\n圧縮（あっしゅく）: Nén, lực nén\n力（ちから）: Lực\n強い（つよい）: Mạnh, chịu lực tốt\n弱い（よわい）: Yếu\n性質（せいしつ）: Tính chất\n引張り（ひっぱり）: Lực kéo\n内力（ないりょく）: Nội lực\n遠心力（えんしんりょく）: Lực ly tâm",
   "explain_id": "Beton sangat kuat terhadap gaya tekan, tetapi sangat lemah terhadap **引張(ひっぱ)り (Gaya tarik)**. Inilah alasan tulangan baja (**鉄筋(てっきん)**) ditambahkan untuk membuat beton bertulang, yang dapat menahan gaya tarik.",
   "explain_en": "Concrete is very strong against compressive force, but very weak against **引張(ひっぱ)り (Tensile force)**. This is why reinforcing steel (**鉄筋(てっきん)**) is added to create reinforced concrete, which can withstand tensile force.",
-  tip: "💡 Nhớ: Bê tông **強(つよ)い** (Mạnh) với **圧縮(あっしゅく)** (Nén), **弱(よわ)い** (Yếu) với **引張(ひっぱ)り** (Kéo)."
+  tip: "💡 Nhớ: Bê tông **強(つよ)い** (Mạnh) với **圧縮(あっしゅく)** (Nén), **弱(よわ)い** (Yếu) với **引張(ひっぱ)り** (Kéo).",
+  tip_id: "💡 Ingat: Beton **強(つよ)い** (Kuat) terhadap **圧縮(あっしゅく)** (Tekanan), **弱(よわ)い** (Lemah) terhadap **引張(ひっぱ)り** (Tarikan).",
+  tip_en: "💡 Remember: Concrete is **強(つよ)い** (Strong) against **圧縮(あっしゅく)** (Compression), **弱(よわ)い** (Weak) against **引張(ひっぱ)り** (Tension)."
 },
 {
   q: "問87. 以下(いか)の器具(きぐ)について、不適切(ふてきせつ)なものを選(えら)べ。",
@@ -399,10 +499,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Chọn câu **không thích hợp (**不適切(ふてきせつ)**) về dụng cụ sau [Cưa đĩa/Cưa tròn].",
+  vi_id: "Pilihlah kalimat yang **tidak tepat (**不適切(ふてきせつ)**) tentang alat berikut [Gergaji cakram/Gergaji bundar].",
+  vi_en: "Choose the statement that is **inappropriate (**不適切(ふてきせつ)**) about the following tool [Disc saw/Circular saw].",
   explain: "Phát biểu **không thích hợp** là Lựa chọn 2. **Tuyệt đối không được tháo rời nắp an toàn (**安全(あんぜん)カバーを外(はず)す**) trước khi sử dụng**. Nắp an toàn là bộ phận bắt buộc để bảo vệ người dùng khỏi lưỡi cưa đang quay.\n\nTừ vựng:\n器具（きぐ）: Dụng cụ, thiết bị\n不適切（ふてきせつ）: Không thích hợp\n合板（ごうはん）: Ván ép, gỗ dán\n電動工具（でんどうこうぐ）: Dụng cụ điện\n安全カバー（あんぜんカバー）: Nắp bảo vệ an toàn\n外す（はずす）: Tháo ra\n定規（じょうぎ）: Thước dẫn, thước kê\n粉塵（ふんじん）: Bụi\n切断（せつだん）: Cắt",
   "explain_id": "Pernyataan yang **tidak tepat** adalah Pilihan 2. **Anda mutlak tidak boleh melepas penutup pengaman (**安全(あんぜん)カバーを外(はず)す**) sebelum digunakan**. Penutup pengaman adalah bagian wajib untuk melindungi pengguna dari mata gergaji yang berputar.",
   "explain_en": "The **inappropriate** statement is Option 2. **You must absolutely never remove the safety cover (**安全(あんぜん)カバーを外(はず)す**) before use**. The safety cover is a mandatory part to protect the user from the rotating saw blade.",
-  tip: "💡 Nhớ: **安全(あんぜん)カバー (Nắp an toàn)** → **Không bao giờ được tháo ra**."
+  tip: "💡 Nhớ: **安全(あんぜん)カバー (Nắp an toàn)** → **Không bao giờ được tháo ra**.",
+  tip_id: "💡 Ingat: **安全(あんぜん)カバー (Penutup pengaman)** → **Jangan pernah dilepas**.",
+  tip_en: "💡 Remember: **安全(あんぜん)カバー (Safety cover)** → **Never remove it**."
 },
 {
   q: "問88. 解体(かいたい)工事(こうじ)を行(おこな)う前(まえ)に何(なに)をしなければならないか。【177】",
@@ -414,10 +518,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Cần phải làm gì **trước khi** tiến hành công việc tháo dỡ (**解体工事(かいたいこうじ)**)?" ,
+  vi_id: "Apa yang harus dilakukan **sebelum** melakukan pekerjaan pembongkaran (**解体工事(かいたいこうじ)**)?",
+  vi_en: "What must be done **before** carrying out demolition work (**解体工事(かいたいこうじ)**)?",
   explain: "Điều quan trọng và bắt buộc nhất phải làm trước khi bắt đầu tháo dỡ là **Kiểm tra xem các đường dây tiện ích (**ライフライン**) như điện, nước, gas đã được ngắt hoàn toàn hay chưa (**確認(かくにん)する**).** Đây là bước an toàn cơ bản để ngăn ngừa các tai nạn nghiêm trọng (cháy nổ, điện giật).\n\nTừ vựng:\n解体（かいたい）: Tháo dỡ, phá dỡ\n工事（こうじ）: Công trình\n行う（おこなう）: Tiến hành, thực hiện\n足場（あしば）: Giàn giáo\n設置（せっち）: Lắp đặt\n防音（ぼうおん）: Cách âm, chống ồn\nパネル: Tấm panel\nライフライン: Đường dây tiện ích (điện, nước, gas)\n確認（かくにん）: Kiểm tra, xác nhận\n重機（じゅうき）: Máy hạng nặng",
   "explain_id": "Hal yang paling penting dan wajib dilakukan sebelum memulai pembongkaran adalah **Memeriksa apakah saluran utilitas (**ライフライン**) seperti listrik, air, dan gas sudah diputus sepenuhnya atau belum (**確認(かくにん)する**).** Ini adalah langkah keselamatan dasar untuk mencegah kecelakaan serius (kebakaran, ledakan, sengatan listrik).",
   "explain_en": "The most important and mandatory thing to do before starting demolition is to **Check whether utility lines (**ライフライン**) such as electricity, water, and gas have been completely disconnected (**確認(かくにん)する**).** This is a basic safety step to prevent serious accidents (fire, explosion, electric shock).",
-  tip: "💡 Nhớ: **解体工事(かいたいこうじ)** (Tháo dỡ) → An toàn tuyệt đối phải **確認(かくにん) (Kiểm tra)** **ライフライン (Đường tiện ích)** đã ngắt chưa."
+  tip: "💡 Nhớ: **解体工事(かいたいこうじ)** (Tháo dỡ) → An toàn tuyệt đối phải **確認(かくにん) (Kiểm tra)** **ライフライン (Đường tiện ích)** đã ngắt chưa.",
+  tip_id: "💡 Ingat: **解体工事(かいたいこうじ)** (Pembongkaran) → Keselamatan mutlak harus **確認(かくにん) (Memeriksa)** apakah **ライフライン (Jalur utilitas)** sudah diputus.",
+  tip_en: "💡 Remember: **解体工事(かいたいこうじ)** (Demolition) → For absolute safety you must **確認(かくにん) (Check)** whether the **ライフライン (Utility lines)** have been disconnected."
 },
 {
   q: "問89. 切断(せつだん)用(よう)の砥石(とちいし)を回転(かいてん)させて、金属(きんぞく)管(かん)や鉄筋(てっきん)、軽量(けいりょう)鉄骨(てっこつ)などを切断(せつだん)する電動(でんどう)工具(こうぐ)は、何(なに)と言(い)うか。【130】",
@@ -429,10 +537,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Dụng cụ điện (**電動工具**) nào dùng để cắt (**切断**) ống kim loại (**金属管**), thép cốt (**鉄筋**) hoặc khung thép nhẹ bằng cách xoay (**回転**) một **đĩa mài/đá cắt (**砥石**)?",
+  vi_id: "Alat listrik (**電動工具**) apa yang digunakan untuk memotong (**切断**) pipa logam (**金属管**), baja tulangan (**鉄筋**), atau rangka baja ringan dengan memutar (**回転**) **cakram gerinda/batu potong (**砥石**)?",
+  vi_en: "Which power tool (**電動工具**) is used to cut (**切断**) metal pipes (**金属管**), reinforcing bars (**鉄筋**), or light steel frames by rotating (**回転**) a **grinding wheel/cutting disc (**砥石**)?",
   explain: "Đó là **高速(こうそく)切断機(せつだんき) (Máy cắt tốc độ cao/High-speed cutting machine)** . Dụng cụ này sử dụng đĩa cắt bằng vật liệu mài mòn để cắt nhanh kim loại.\n\nTừ vựng:\n切断（せつだん）: Cắt\n砥石（とちいし）: Đá mài, đá cắt\n回転（かいてん）: Quay, xoay\n鉄筋（てっきん）: Cốt thép\n軽量鉄骨（けいりょうてっこつ）: Khung thép nhẹ\n電動工具（でんどうこうぐ）: Dụng cụ điện\n高速切断機（こうそくせつだんき）: Máy cắt tốc độ cao\nレシプロソー: Máy cưa kiếm\nくぎ打ち機（くぎうちき）: Máy bắn đinh",
   "explain_id": "Itu adalah **高速(こうそく)切断機(せつだんき) (Mesin pemotong kecepatan tinggi / High-speed cutting machine)**. Alat ini menggunakan cakram pemotong yang terbuat dari bahan abrasif untuk memotong logam dengan cepat.",
   "explain_en": "That is a **高速(こうそく)切断機(せつだんき) (High-speed cutting machine)**. This tool uses a cutting disc made of abrasive material to cut metal quickly.",
-  tip: "💡 Nhớ: **回転(かいてん)** (Xoay) **砥石(とちいし)** (Đá cắt) để cắt **金属(きんぞく)** (Kim loại) → **高速(こうそく)切断機(せつだんき)**."
+  tip: "💡 Nhớ: **回転(かいてん)** (Xoay) **砥石(とちいし)** (Đá cắt) để cắt **金属(きんぞく)** (Kim loại) → **高速(こうそく)切断機(せつだんき)**.",
+  tip_id: "💡 Ingat: **回転(かいてん)** (Berputar) **砥石(とちいし)** (Batu potong) untuk memotong **金属(きんぞく)** (Logam) → **高速(こうそく)切断機(せつだんき)**.",
+  tip_en: "💡 Remember: **回転(かいてん)** (Rotating) **砥石(とちいし)** (Cutting wheel) to cut **金属(きんぞく)** (Metal) → **高速(こうそく)切断機(せつだんき)**."
 },
 {
   q: "問90. 地面(じめん)を固(かた)めるための機械(きかい)は何(なに)か。【131】",
@@ -444,10 +556,14 @@ window.PRACTICE_SETS["g2_3"] = {
   ],
   answer: 1,
   vi: "Máy móc (**機械**) được sử dụng để làm **chắc (**固(かた)める**) mặt đất (**地面**) là gì?",
+  vi_id: "Mesin (**機械**) apa yang digunakan untuk memadatkan (**固(かた)める**) tanah (**地面**)?",
+  vi_en: "Which machine (**機械**) is used to harden/compact (**固(かた)める**) the ground (**地面**)?",
   explain: "Đó là **ランマ (Rammer/Máy đầm)** . Máy này tạo ra lực tác động thẳng đứng mạnh mẽ để nén và làm chắc đất, đặc biệt là trong các khu vực hẹp hoặc xung quanh cọc. (Lưu ý: **バイブレータ** dùng để đầm **bê tông**).\n\nTừ vựng:\n地面（じめん）: Mặt đất\n固める（かためる）: Làm chắc, đầm chặt\n機械（きかい）: Máy móc\nランマ: Máy đầm cóc\nレーキ: Cái cào đất\nたこ: Dụng cụ đầm đất thủ công\nバイブレータ: Máy đầm rung",
   "explain_id": "Itu adalah **ランマ (Rammer / Mesin pemadat)**. Mesin ini menghasilkan gaya tumbukan vertikal yang kuat untuk memadatkan dan mengeraskan tanah, terutama di area sempit atau di sekitar tiang pancang. (Catatan: **バイブレータ** digunakan untuk memadatkan **beton**.)",
   "explain_en": "That is a **ランマ (Rammer)**. This machine creates a strong vertical impact force to compact and firm up soil, especially in narrow areas or around piles. (Note: A **バイブレータ** is used to compact **concrete**.)" ,
-  tip: "💡 Nhớ: Máy làm **chắc đất (**地面(じめん)を固(かた)める**) → **ランマ**."
+  tip: "💡 Nhớ: Máy làm **chắc đất (**地面(じめん)を固(かた)める**) → **ランマ**.",
+  tip_id: "💡 Ingat: Mesin yang **memadatkan tanah (**地面(じめん)を固(かた)める**) → **ランマ**.",
+  tip_en: "💡 Remember: A machine that **compacts the ground (**地面(じめん)を固(かた)める**) → **ランマ**."
 }
 ]
 };

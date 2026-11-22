@@ -13,10 +13,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Chọn lý do không phù hợp khi không được xả nước thải xuống cống.",
+  "vi_id": "Pilih alasan yang tidak tepat mengenai mengapa air limbah tidak boleh dibuang ke saluran pembuangan.",
+  "vi_en": "Choose the reason that is NOT appropriate for why wastewater must not be discharged into the sewer.",
   "explain": "Đáp án đúng: 中性（ちゅうせい）の排水（はいすい）だから — Đây là lý do không hợp lý vì nước trung tính không gây hại nên không thể là lý do cấm xả.\n\nTừ vựng:\n排水（はいすい）: Nước thải\n下水道（げすいどう）: Hệ thống cống thoát nước\n流（なが）す: Xả / Cho chảy\n理由（りゆう）: Lý do\n不適切（ふてきせつ）: Không phù hợp\n有毒（ゆうどく）ガス: Khí độc\n発生（はっせい）: Phát sinh\n下水道管（げすいどうかん）: Ống cống thoát nước\n詰（つ）まる: Tắc nghẽn\n施設（しせつ）: Cơ sở / Công trình\n腐食（ふしょく）: Ăn mòn / Gỉ sét\n中性（ちゅうせい）: Trung tính",
   "explain_id": "Jawaban yang benar: 中性（ちゅうせい）の排水（はいすい）だから — Ini adalah alasan yang tidak masuk akal karena air netral tidak berbahaya sehingga tidak dapat menjadi alasan pelarangan pembuangan.\n\nKosakata:\n排水（はいすい）: Air limbah\n下水道（げすいどう）: Sistem saluran pembuangan air limbah\n流（なが）す: Membuang / Mengalirkan\n理由（りゆう）: Alasan\n不適切（ふてきせつ）: Tidak sesuai\n有毒（ゆうどく）ガス: Gas beracun\n発生（はっせい）: Timbul / Terjadi\n下水道管（げすいどうかん）: Pipa saluran pembuangan\n詰（つ）まる: Tersumbat\n施設（しせつ）: Fasilitas / Bangunan\n腐食（ふしょく）: Korosi / Berkarat\n中性（ちゅうせい）: Netral",
   "explain_en": "Correct answer: 中性（ちゅうせい）の排水（はいすい）だから — This is an unreasonable reason because neutral water is not harmful, so it cannot be a reason for prohibiting discharge.\n\nVocabulary:\n排水（はいすい）: Wastewater\n下水道（げすいどう）: Sewer system\n流（なが）す: To discharge / To let flow\n理由（りゆう）: Reason\n不適切（ふてきせつ）: Inappropriate\n有毒（ゆうどく）ガス: Toxic gas\n発生（はっせい）: Generation / Occurrence\n下水道管（げすいどうかん）: Sewer pipe\n詰（つ）まる: To become clogged\n施設（しせつ）: Facility / Installation\n腐食（ふしょく）: Corrosion / Rusting\n中性（ちゅうせい）: Neutral",
-  "tip": "💡 Mẹo nhớ: Câu hỏi hỏi lý do KHÔNG phù hợp → tìm lý do vô hại. 中性（ちゅうせい）（trung tính）= không gây 腐食（ふしょく）（ăn mòn）, không gây 詰（つ）まり（tắc nghẽn）, không tạo 有毒（ゆうどく）ガス（khí độc）→ đây là lý do SAI, nên là đáp án cần chọn."
+  "tip": "💡 Mẹo nhớ: Câu hỏi hỏi lý do KHÔNG phù hợp → tìm lý do vô hại. 中性（ちゅうせい）（trung tính）= không gây 腐食（ふしょく）（ăn mòn）, không gây 詰（つ）まり（tắc nghẽn）, không tạo 有毒（ゆうどく）ガス（khí độc）→ đây là lý do SAI, nên là đáp án cần chọn.",
+  "tip_id": "💡 Tips mengingat: Soal menanyakan alasan yang TIDAK tepat → cari alasan yang tidak berbahaya. 中性（ちゅうせい）(netral) = tidak menyebabkan 腐食（ふしょく）(korosi), tidak menyebabkan 詰（つ）まり (penyumbatan), tidak menghasilkan ガス 有毒（ゆうどく）(gas beracun) → ini adalah alasan yang SALAH, jadi itulah jawaban yang harus dipilih.",
+  "tip_en": "💡 Memory tip: The question asks for the reason that is NOT appropriate → look for the harmless reason. 中性（ちゅうせい）(neutral) = does not cause 腐食（ふしょく）(corrosion), does not cause 詰（つ）まり (clogging), does not create 有毒（ゆうどく）ガス (toxic gas) → this is the WRONG reason, so it is the answer to choose."
 },
 {
   "id": 32,
@@ -29,10 +33,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Rác thải phát sinh từ hoạt động kinh doanh được chia thành hai loại. Hãy chọn loại phân chia đúng.",
+  "vi_id": "Sampah yang dihasilkan dari kegiatan usaha dibagi menjadi dua jenis. Pilih pembagian yang benar.",
+  "vi_en": "Waste generated from business activities is divided into two types. Choose the correct classification.",
   "explain": "Rác thải trong hoạt động 事業（じぎょう）（kinh doanh）được chia thành hai loại: 産業（さんぎょう）廃棄物（はいきぶつ）（rác thải công nghiệp）và 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）（rác thải sinh hoạt từ hoạt động kinh doanh）.\n\nTừ vựng:\n事業（じぎょう）活動（かつどう）: Hoạt động kinh doanh\nごみ: Rác thải\n産業（さんぎょう）廃棄物（はいきぶつ）: Rác thải công nghiệp\n事業系（じぎょうけい）: Liên quan đến hoạt động kinh doanh\n一般（いっぱん）廃棄物（はいきぶつ）: Rác thải sinh hoạt thông thường\n家庭（かてい）廃棄物（はいきぶつ）: Rác thải hộ gia đình\n農業（のうぎょう）廃棄物（はいきぶつ）: Rác thải nông nghiệp",
   "explain_id": "Sampah dari kegiatan 事業（じぎょう） (usaha) dibagi menjadi dua jenis: 産業（さんぎょう）廃棄物（はいきぶつ） (limbah industri) dan 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ） (limbah umum dari kegiatan usaha).\n\nKosakata:\n事業（じぎょう）活動（かつどう）: Kegiatan usaha\nごみ: Sampah\n産業（さんぎょう）廃棄物（はいきぶつ）: Limbah industri\n事業系（じぎょうけい）: Terkait kegiatan usaha\n一般（いっぱん）廃棄物（はいきぶつ）: Limbah umum biasa\n家庭（かてい）廃棄物（はいきぶつ）: Limbah rumah tangga\n農業（のうぎょう）廃棄物（はいきぶつ）: Limbah pertanian",
   "explain_en": "Waste from 事業（じぎょう） (business) activities is divided into two types: 産業（さんぎょう）廃棄物（はいきぶつ） (industrial waste) and 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ） (general waste from business activities).\n\nVocabulary:\n事業（じぎょう）活動（かつどう）: Business activity\nごみ: Waste / Garbage\n産業（さんぎょう）廃棄物（はいきぶつ）: Industrial waste\n事業系（じぎょうけい）: Related to business activities\n一般（いっぱん）廃棄物（はいきぶつ）: Ordinary general waste\n家庭（かてい）廃棄物（はいきぶつ）: Household waste\n農業（のうぎょう）廃棄物（はいきぶつ）: Agricultural waste",
-  "tip": "💡 Mẹo nhớ: Rác từ 事業（じぎょう）活動（かつどう）（hoạt động kinh doanh）= 産業（さんぎょう）廃棄物（はいきぶつ）（rác công nghiệp）+ 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）（rác sinh hoạt từ kinh doanh）. Không có 家庭（かてい）（hộ gia đình）hay 農業（のうぎょう）（nông nghiệp）trong cặp đôi này."
+  "tip": "💡 Mẹo nhớ: Rác từ 事業（じぎょう）活動（かつどう）（hoạt động kinh doanh）= 産業（さんぎょう）廃棄物（はいきぶつ）（rác công nghiệp）+ 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）（rác sinh hoạt từ kinh doanh）. Không có 家庭（かてい）（hộ gia đình）hay 農業（のうぎょう）（nông nghiệp）trong cặp đôi này.",
+  "tip_id": "💡 Tips mengingat: Sampah dari 事業（じぎょう）活動（かつどう）(kegiatan usaha) = 産業（さんぎょう）廃棄物（はいきぶつ）(limbah industri) + 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）(limbah umum dari usaha). Tidak ada 家庭（かてい）(rumah tangga) atau 農業（のうぎょう）(pertanian) dalam pasangan ini.",
+  "tip_en": "💡 Memory tip: Waste from 事業（じぎょう）活動（かつどう）(business activities) = 産業（さんぎょう）廃棄物（はいきぶつ）(industrial waste) + 事業系（じぎょうけい）一般（いっぱん）廃棄物（はいきぶつ）(general business waste). There is no 家庭（かてい）(household) or 農業（のうぎょう）(agriculture) in this pair."
 },
 {
   "id": 33,
@@ -45,10 +53,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Điều chỉnh nhiệt độ và độ ẩm trong phòng gọi là điều hòa không khí.",
+  "vi_id": "Mengatur suhu dan kelembapan di dalam ruangan disebut pengkondisian udara (AC).",
+  "vi_en": "Adjusting the temperature and humidity in a room is called air conditioning.",
   "explain": "Đáp án đúng: 空調（くうちょう）— Hệ thống 空調（くうちょう）（điều hòa không khí）, điều chỉnh 温度（おんど）（nhiệt độ）và 湿度（しつど）（độ ẩm）trong 部屋（へや）（phòng）.\n\nTừ vựng:\nライフライン: Hệ thống tiện ích thiết yếu (điện, nước, gas...)\n設備（せつび）工事（こうじ）: Công trình lắp đặt thiết bị\n部屋（へや）: Phòng\n温度（おんど）: Nhiệt độ\n湿度（しつど）: Độ ẩm\n調整（ちょうせい）: Điều chỉnh\n空調（くうちょう）: Điều hòa không khí (Air Conditioning)\n排煙（はいえん）: Hút khói / Thải khói\n逆流（ぎゃくりゅう）: Chảy ngược / Dòng chảy ngược\n換気（かんき）: Thông gió / Thông khí",
   "explain_id": "Jawaban yang benar: 空調（くうちょう） — Sistem 空調（くうちょう） (tata udara / AC), yang mengatur 温度（おんど） (suhu) dan 湿度（しつど） (kelembapan) di dalam 部屋（へや） (ruangan).\n\nKosakata:\nライフライン: Sistem utilitas penting (listrik, air, gas...)\n設備（せつび）工事（こうじ）: Pekerjaan pemasangan peralatan\n部屋（へや）: Ruangan\n温度（おんど）: Suhu\n湿度（しつど）: Kelembapan\n調整（ちょうせい）: Pengaturan / Penyesuaian\n空調（くうちょう）: Tata udara (Air Conditioning)\n排煙（はいえん）: Pembuangan asap / Pengisapan asap\n逆流（ぎゃくりゅう）: Aliran balik\n換気（かんき）: Ventilasi / Pertukaran udara",
   "explain_en": "Correct answer: 空調（くうちょう） — The 空調（くうちょう） (air conditioning) system, which adjusts the 温度（おんど） (temperature) and 湿度（しつど） (humidity) in a 部屋（へや） (room).\n\nVocabulary:\nライフライン: Essential utility systems (electricity, water, gas...)\n設備（せつび）工事（こうじ）: Equipment installation work\n部屋（へや）: Room\n温度（おんど）: Temperature\n湿度（しつど）: Humidity\n調整（ちょうせい）: Adjustment\n空調（くうちょう）: Air conditioning\n排煙（はいえん）: Smoke exhaust / Smoke extraction\n逆流（ぎゃくりゅう）: Backflow / Reverse flow\n換気（かんき）: Ventilation / Air exchange",
-  "tip": "💡 Mẹo nhớ: Thấy cụm 温度（おんど）（nhiệt độ）+ 湿度（しつど）（độ ẩm）→ đây là 空調（くうちょう）（điều hòa）. 換気（かんき）（thông gió）chỉ lưu thông 空気（くうき）（không khí）, không 調整（ちょうせい）（điều chỉnh）nhiệt/ẩm."
+  "tip": "💡 Mẹo nhớ: Thấy cụm 温度（おんど）（nhiệt độ）+ 湿度（しつど）（độ ẩm）→ đây là 空調（くうちょう）（điều hòa）. 換気（かんき）（thông gió）chỉ lưu thông 空気（くうき）（không khí）, không 調整（ちょうせい）（điều chỉnh）nhiệt/ẩm.",
+  "tip_id": "💡 Tips mengingat: Jika melihat gabungan 温度（おんど）(suhu) + 湿度（しつど）(kelembapan) → itu adalah 空調（くうちょう）(AC/pengkondisian udara). 換気（かんき）(ventilasi) hanya mengalirkan 空気（くうき）(udara), tidak 調整（ちょうせい）(mengatur) suhu/kelembapan.",
+  "tip_en": "💡 Memory tip: When you see the combination 温度（おんど）(temperature) + 湿度（しつど）(humidity) → that is 空調（くうちょう）(air conditioning). 換気（かんき）(ventilation) only circulates 空気（くうき）(air); it does not 調整（ちょうせい）(adjust) temperature/humidity."
 },
 {
   "id": 34,
@@ -62,10 +74,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Dựa theo hình minh họa, đây là loại công trình nào?",
+  "vi_id": "Berdasarkan ilustrasi, ini termasuk jenis pekerjaan apa?",
+  "vi_en": "Based on the illustration, what type of work is this?",
   "explain": "Đây là 防波堤（ぼうはてい）工事（こうじ）– công trình 防波堤（ぼうはてい）（đê chắn sóng）, được xây dựng để ngăn 波（なみ）（sóng biển）và bảo vệ 港（みなと）（cảng）hoặc khu vực ven biển.\n\nTừ vựng:\n防波堤（ぼうはてい）: Đê chắn sóng / Đê phá sóng\n潜水（せんすい）: Lặn / Thợ lặn\n橋梁（きょうりょう）: Cầu / Kết cấu cầu\n防潮堤（ぼうちょうてい）: Đê chắn triều / Đê ngăn nước biển\n工事（こうじ）: Công trình / Thi công",
   "explain_id": "Ini adalah pekerjaan 防波堤（ぼうはてい）工事（こうじ） – pekerjaan 防波堤（ぼうはてい） (pemecah gelombang), yang dibangun untuk menahan 波（なみ） (gelombang laut) dan melindungi 港（みなと） (pelabuhan) atau kawasan pesisir.\n\nKosakata:\n防波堤（ぼうはてい）: Pemecah gelombang\n潜水（せんすい）: Menyelam / Penyelam\n橋梁（きょうりょう）: Jembatan / Struktur jembatan\n防潮堤（ぼうちょうてい）: Tanggul penahan pasang / Tanggul penahan air laut\n工事（こうじ）: Pekerjaan konstruksi / Konstruksi",
   "explain_en": "This is 防波堤（ぼうはてい）工事（こうじ） – breakwater construction work, a 防波堤（ぼうはてい） (breakwater) built to block 波（なみ） (sea waves) and protect a 港（みなと） (port) or coastal area.\n\nVocabulary:\n防波堤（ぼうはてい）: Breakwater\n潜水（せんすい）: Diving / Diver\n橋梁（きょうりょう）: Bridge / Bridge structure\n防潮堤（ぼうちょうてい）: Seawall / Tide embankment\n工事（こうじ）: Construction work / Construction",
-  "tip": "💡 Mẹo nhớ: 防波堤（ぼうはてい）= 防（ぼう）（ngăn）+ 波（なみ）（sóng）+ 堤（てい）（đê）→ đê ngăn 波（なみ）（sóng）. Khác với 防潮堤（ぼうちょうてい）= ngăn 潮（しお）（thủy triều）. Thấy hình đê ngoài 海（うみ）（biển）/港（みなと）（cảng）→ chọn 防波堤（ぼうはてい）."
+  "tip": "💡 Mẹo nhớ: 防波堤（ぼうはてい）= 防（ぼう）（ngăn）+ 波（なみ）（sóng）+ 堤（てい）（đê）→ đê ngăn 波（なみ）（sóng）. Khác với 防潮堤（ぼうちょうてい）= ngăn 潮（しお）（thủy triều）. Thấy hình đê ngoài 海（うみ）（biển）/港（みなと）（cảng）→ chọn 防波堤（ぼうはてい）.",
+  "tip_id": "💡 Tips mengingat: 防波堤（ぼうはてい）= 防（ぼう）(menahan) + 波（なみ）(gelombang) + 堤（てい）(tanggul) → tanggul penahan 波（なみ）(gelombang). Berbeda dengan 防潮堤（ぼうちょうてい）= menahan 潮（しお）(pasang air laut). Jika melihat gambar tanggul di 海（うみ）(laut)/港（みなと）(pelabuhan) → pilih 防波堤（ぼうはてい）.",
+  "tip_en": "💡 Memory tip: 防波堤（ぼうはてい）= 防（ぼう）(to block) + 波（なみ）(waves) + 堤（てい）(embankment) → an embankment that blocks 波（なみ）(waves). Different from 防潮堤（ぼうちょうてい）= blocks 潮（しお）(tides). When you see a picture of an embankment at the 海（うみ）(sea)/港（みなと）(port) → choose 防波堤（ぼうはてい）."
 },
 {
   "id": 35,
@@ -78,10 +94,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 2,
   "vi": "Nhiệm vụ của tổ trưởng trong hoạt động 5S không phải là đùn đẩy cho công nhân.",
+  "vi_id": "Tugas ketua tim dalam kegiatan 5S bukanlah menyerahkan semuanya kepada pekerja.",
+  "vi_en": "The team leader's duty in 5S activities is not to push everything onto the workers.",
   "explain": "Đáp án đúng (SAI): 職長（しょくちょう）は...できるだけ作業員（さぎょういん）に行（おこな）わせる — Tổ trưởng PHẢI 率先（そっせん）（gương mẫu）thực hiện 5S, không được đùn đẩy cho 作業員（さぎょういん）（công nhân）.\n\nTừ vựng:\n５Ｓ活動（かつどう）: Hoạt động 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)\n職長（しょくちょう）: Tổ trưởng / Đội trưởng\n役割（やくわり）: Vai trò\n不適切（ふてきせつ）: Không phù hợp\n必要性（ひつようせい）: Sự cần thiết\n指導（しどう）: Hướng dẫn / Chỉ đạo\n定期的（ていきてき）: Định kỳ\n評価（ひょうか）: Đánh giá\n危険（きけん）箇所（かしょ）: Khu vực nguy hiểm\n改善（かいぜん）: Cải thiện\n率先（そっせん）: Gương mẫu / Tiên phong\n生産性（せいさんせい）: Năng suất",
   "explain_id": "Jawaban yang benar (SALAH): 職長（しょくちょう）は...できるだけ作業員（さぎょういん）に行（おこな）わせる — Mandor HARUS 率先（そっせん） (memberi teladan) dalam melaksanakan 5S, tidak boleh melemparkannya kepada 作業員（さぎょういん） (pekerja).\n\nKosakata:\n５Ｓ活動（かつどう）: Kegiatan 5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)\n職長（しょくちょう）: Mandor / Kepala tim\n役割（やくわり）: Peran\n不適切（ふてきせつ）: Tidak sesuai\n必要性（ひつようせい）: Kebutuhan / Perlunya\n指導（しどう）: Bimbingan / Arahan\n定期的（ていきてき）: Secara berkala\n評価（ひょうか）: Penilaian\n危険（きけん）箇所（かしょ）: Area berbahaya\n改善（かいぜん）: Perbaikan\n率先（そっせん）: Memberi teladan / Memelopori\n生産性（せいさんせい）: Produktivitas",
   "explain_en": "Correct answer (WRONG statement): 職長（しょくちょう）は...できるだけ作業員（さぎょういん）に行（おこな）わせる — The foreman MUST 率先（そっせん） (lead by example) in carrying out 5S, and must not push it onto the 作業員（さぎょういん） (workers).\n\nVocabulary:\n５Ｓ活動（かつどう）: 5S activities (Seiri, Seiton, Seiso, Seiketsu, Shitsuke)\n職長（しょくちょう）: Foreman / Team leader\n役割（やくわり）: Role\n不適切（ふてきせつ）: Inappropriate\n必要性（ひつようせい）: Necessity\n指導（しどう）: Guidance / Instruction\n定期的（ていきてき）: Periodic / Regular\n評価（ひょうか）: Evaluation\n危険（きけん）箇所（かしょ）: Dangerous area\n改善（かいぜん）: Improvement\n率先（そっせん）: Leading by example / Taking the initiative\n生産性（せいさんせい）: Productivity",
-  "tip": "💡 Mẹo nhớ: 職長（しょくちょう）（tổ trưởng）trong 5S phải 率先（そっせん）（gương mẫu đi đầu）, không phải đùn cho 作業員（さぎょういん）（công nhân）làm hết. Thấy「できるだけ作業員（さぎょういん）に行（おこな）わせる」→ đây là đáp án SAI."
+  "tip": "💡 Mẹo nhớ: 職長（しょくちょう）（tổ trưởng）trong 5S phải 率先（そっせん）（gương mẫu đi đầu）, không phải đùn cho 作業員（さぎょういん）（công nhân）làm hết. Thấy「できるだけ作業員（さぎょういん）に行（おこな）わせる」→ đây là đáp án SAI.",
+  "tip_id": "💡 Tips mengingat: 職長（しょくちょう）(ketua tim/mandor) dalam 5S harus 率先（そっせん）(memberi teladan dan memimpin), bukan menyerahkan semuanya kepada 作業員（さぎょういん）(pekerja) untuk dikerjakan. Jika melihat 「できるだけ作業員（さぎょういん）に行（おこな）わせる」→ itu adalah jawaban yang SALAH.",
+  "tip_en": "💡 Memory tip: A 職長（しょくちょう）(team leader) in 5S must 率先（そっせん）(take the lead and set an example), not push everything onto the 作業員（さぎょういん）(workers). When you see 「できるだけ作業員（さぎょういん）に行（おこな）わせる」→ that is the WRONG answer."
 },
 {
   "id": 36,
@@ -94,10 +114,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Công trình không thuộc loại công trình hải dương là 造園工事 (làm vườn).",
+  "vi_id": "Pekerjaan yang tidak termasuk jenis pekerjaan kelautan adalah 造園工事 (pekerjaan pertamanan).",
+  "vi_en": "The work that does not belong to marine work is 造園工事 (landscaping work).",
   "explain": "Đáp án đúng: 造園（ぞうえん）工事（こうじ）— Công trình 造園（ぞうえん）（làm vườn）, không thuộc nhóm công trình 海洋（かいよう）（hải dương）.\n\nTừ vựng:\n海洋（かいよう）土木（どぼく）工事（こうじ）: Công trình dân dụng biển / Hải dương\n代表的（だいひょうてき）: Tiêu biểu / Đại diện\n防波堤（ぼうはてい）: Đê chắn sóng\n造園（ぞうえん）: Làm vườn / Cảnh quan\n浚渫（しゅんせつ）: Nạo vét (đáy sông, biển)\n岸壁（がんぺき）: Bờ kè / Cầu cảng",
   "explain_id": "Jawaban yang benar: 造園（ぞうえん）工事（こうじ） — Pekerjaan 造園（ぞうえん） (pertamanan), tidak termasuk kelompok pekerjaan 海洋（かいよう） (kelautan).\n\nKosakata:\n海洋（かいよう）土木（どぼく）工事（こうじ）: Pekerjaan teknik sipil kelautan / lepas pantai\n代表的（だいひょうてき）: Khas / Mewakili\n防波堤（ぼうはてい）: Pemecah gelombang\n造園（ぞうえん）: Pertamanan / Lanskap\n浚渫（しゅんせつ）: Pengerukan (dasar sungai, laut)\n岸壁（がんぺき）: Dinding dermaga / Kade",
   "explain_en": "Correct answer: 造園（ぞうえん）工事（こうじ） — 造園（ぞうえん） (landscaping) work, which does not belong to the 海洋（かいよう） (marine) construction group.\n\nVocabulary:\n海洋（かいよう）土木（どぼく）工事（こうじ）: Marine civil engineering work\n代表的（だいひょうてき）: Typical / Representative\n防波堤（ぼうはてい）: Breakwater\n造園（ぞうえん）: Landscaping / Gardening\n浚渫（しゅんせつ）: Dredging (riverbed, seabed)\n岸壁（がんぺき）: Quay wall / Wharf",
-  "tip": "💡 Mẹo nhớ: 海洋（かいよう）土木（どぼく）（hải dương）= 防波堤（ぼうはてい）（đê chắn sóng）、港（みなと）（cảng）、浚渫（しゅんせつ）（nạo vét）、岸壁（がんぺき）（bờ kè）— tất cả liên quan đến 海（うみ）（biển）. 造園（ぞうえん）（làm vườn）→ hoàn toàn không liên quan đến 海（うみ）→ đây là đáp án SAI."
+  "tip": "💡 Mẹo nhớ: 海洋（かいよう）土木（どぼく）（hải dương）= 防波堤（ぼうはてい）（đê chắn sóng）、港（みなと）（cảng）、浚渫（しゅんせつ）（nạo vét）、岸壁（がんぺき）（bờ kè）— tất cả liên quan đến 海（うみ）（biển）. 造園（ぞうえん）（làm vườn）→ hoàn toàn không liên quan đến 海（うみ）→ đây là đáp án SAI.",
+  "tip_id": "💡 Tips mengingat: 海洋（かいよう）土木（どぼく）(teknik sipil kelautan) = 防波堤（ぼうはてい）(pemecah gelombang), 港（みなと）(pelabuhan), 浚渫（しゅんせつ）(pengerukan), 岸壁（がんぺき）(dinding dermaga) — semuanya berkaitan dengan 海（うみ）(laut). 造園（ぞうえん）(pertamanan) → sama sekali tidak berkaitan dengan 海（うみ）→ ini jawaban yang SALAH.",
+  "tip_en": "💡 Memory tip: 海洋（かいよう）土木（どぼく）(marine civil engineering) = 防波堤（ぼうはてい）(breakwaters), 港（みなと）(ports), 浚渫（しゅんせつ）(dredging), 岸壁（がんぺき）(quay walls) — all related to the 海（うみ）(sea). 造園（ぞうえん）(landscaping) → completely unrelated to the 海（うみ）→ this is the WRONG answer."
 },
 {
   "id": 37,
@@ -111,10 +135,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Dựa theo hình minh họa, đây là loại công trình gì?",
+  "vi_id": "Berdasarkan ilustrasi, ini termasuk jenis pekerjaan apa?",
+  "vi_en": "Based on the illustration, what type of work is this?",
   "explain": "Hình cho thấy phần 鉄骨（てっこつ）（khung thép）của tòa nhà đang được lắp dựng phía trên mặt đất. Đây là 地上（ちじょう）躯体（くたい）工事（こうじ）– công trình kết cấu thân trên mặt đất. Công đoạn này bao gồm lắp 鉄骨（てっこつ）（khung thép）、柱（はしら）（cột）、梁（はり）（dầm）、床（ゆか）（sàn）sau khi phần 基礎（きそ）（móng）đã hoàn thành.\n\nTừ vựng:\n地上（ちじょう）: Trên mặt đất\n地下（ちか）: Dưới mặt đất\n躯体（くたい）: Kết cấu thân công trình (khung, cột, dầm, sàn)\n工事（こうじ）: Công trình / Thi công\n基礎（きそ）: Nền móng\n岸壁（がんぺき）: Bờ kè / Cầu cảng\n解体（かいたい）: Phá dỡ / Tháo dỡ",
   "explain_id": "Gambar menunjukkan bagian 鉄骨（てっこつ） (rangka baja) bangunan yang sedang dipasang di atas permukaan tanah. Ini adalah 地上（ちじょう）躯体（くたい）工事（こうじ） – pekerjaan struktur badan bangunan di atas tanah. Tahap ini meliputi pemasangan 鉄骨（てっこつ） (rangka baja), 柱（はしら） (kolom), 梁（はり） (balok), dan 床（ゆか） (lantai) setelah bagian 基礎（きそ） (fondasi) selesai.\n\nKosakata:\n地上（ちじょう）: Di atas tanah\n地下（ちか）: Di bawah tanah\n躯体（くたい）: Struktur badan bangunan (rangka, kolom, balok, lantai)\n工事（こうじ）: Pekerjaan konstruksi / Konstruksi\n基礎（きそ）: Fondasi\n岸壁（がんぺき）: Dinding dermaga / Kade\n解体（かいたい）: Pembongkaran",
   "explain_en": "The image shows the 鉄骨（てっこつ） (steel frame) part of a building being erected above ground level. This is 地上（ちじょう）躯体（くたい）工事（こうじ） – above-ground structural frame work. This stage includes erecting the 鉄骨（てっこつ） (steel frame), 柱（はしら） (columns), 梁（はり） (beams), and 床（ゆか） (floors) after the 基礎（きそ） (foundation) part has been completed.\n\nVocabulary:\n地上（ちじょう）: Above ground\n地下（ちか）: Underground\n躯体（くたい）: Building structural frame (frame, columns, beams, floors)\n工事（こうじ）: Construction work / Construction\n基礎（きそ）: Foundation\n岸壁（がんぺき）: Quay wall / Wharf\n解体（かいたい）: Demolition / Dismantling",
-  "tip": "💡 Mẹo nhớ: Thấy hình 鉄骨（てっこつ）（khung thép）đang dựng TRÊN MẶT ĐẤT → 地上（ちじょう）躯体（くたい）工事（こうじ）. Nếu đang làm DƯỚI ĐẤT → 地下（ちか）躯体（くたい）工事（こうじ）. 地上（ちじょう）= trên, 地下（ちか）= dưới."
+  "tip": "💡 Mẹo nhớ: Thấy hình 鉄骨（てっこつ）（khung thép）đang dựng TRÊN MẶT ĐẤT → 地上（ちじょう）躯体（くたい）工事（こうじ）. Nếu đang làm DƯỚI ĐẤT → 地下（ちか）躯体（くたい）工事（こうじ）. 地上（ちじょう）= trên, 地下（ちか）= dưới.",
+  "tip_id": "💡 Tips mengingat: Jika melihat gambar 鉄骨（てっこつ）(rangka baja) yang sedang didirikan DI ATAS TANAH → 地上（ちじょう）躯体（くたい）工事（こうじ）. Jika dikerjakan DI BAWAH TANAH → 地下（ちか）躯体（くたい）工事（こうじ）. 地上（ちじょう）= di atas, 地下（ちか）= di bawah.",
+  "tip_en": "💡 Memory tip: When you see a picture of 鉄骨（てっこつ）(steel framing) being erected ABOVE GROUND → 地上（ちじょう）躯体（くたい）工事（こうじ）. If it is being done UNDERGROUND → 地下（ちか）躯体（くたい）工事（こうじ）. 地上（ちじょう）= above, 地下（ちか）= below."
 },
 {
   "id": 38,
@@ -128,10 +156,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Thiết bị trong hình là loại nào sau đây?",
+  "vi_id": "Perangkat pada gambar termasuk jenis yang mana berikut ini?",
+  "vi_en": "Which of the following types is the device in the picture?",
   "explain": "Đây là 免震（めんしん）装置（そうち）– thiết bị cách chấn chống 地震（じしん）（động đất）, được lắp giữa phần 基礎（きそ）（móng）và kết cấu tòa nhà để hấp thụ 振動（しんどう）（chấn động）khi xảy ra 地震（じしん）（động đất）.\n\nTừ vựng:\n装置（そうち）: Thiết bị / Bộ máy\n防水（ぼうすい）: Chống thấm nước\n免震（めんしん）: Cách chấn / Chống động đất\n空調（くうちょう）: Điều hòa không khí\n自動（じどう）: Tự động\n加圧（かあつ）: Tăng áp / Gia áp",
   "explain_id": "Ini adalah 免震（めんしん）装置（そうち） – perangkat isolasi seismik untuk menahan 地震（じしん） (gempa bumi), yang dipasang di antara bagian 基礎（きそ） (fondasi) dan struktur bangunan untuk menyerap 振動（しんどう） (getaran) saat terjadi 地震（じしん） (gempa bumi).\n\nKosakata:\n装置（そうち）: Perangkat / Alat\n防水（ぼうすい）: Kedap air / Anti air\n免震（めんしん）: Isolasi seismik / Tahan gempa\n空調（くうちょう）: Tata udara\n自動（じどう）: Otomatis\n加圧（かあつ）: Pemberian tekanan / Penekanan",
   "explain_en": "This is a 免震（めんしん）装置（そうち） – a seismic isolation device against 地震（じしん） (earthquakes), installed between the 基礎（きそ） (foundation) part and the building structure to absorb 振動（しんどう） (vibration) when a 地震（じしん） (earthquake) occurs.\n\nVocabulary:\n装置（そうち）: Device / Apparatus\n防水（ぼうすい）: Waterproofing\n免震（めんしん）: Seismic isolation / Earthquake isolation\n空調（くうちょう）: Air conditioning\n自動（じどう）: Automatic\n加圧（かあつ）: Pressurization",
-  "tip": "💡 Mẹo nhớ: 免震（めんしん）= 免（めん）（miễn, tránh）+ 震（しん）（rung/動地震（じしん））→ 装置（そうち）（thiết bị）giúp 建物（たてもの）（công trình）TRÁNH tác động của 地震（じしん）（động đất）. Thường thấy dưới 柱（はしら）（chân cột）hoặc giữa 基礎（きそ）（móng）và 床（ゆか）（sàn）."
+  "tip": "💡 Mẹo nhớ: 免震（めんしん）= 免（めん）（miễn, tránh）+ 震（しん）（rung/動地震（じしん））→ 装置（そうち）（thiết bị）giúp 建物（たてもの）（công trình）TRÁNH tác động của 地震（じしん）（động đất）. Thường thấy dưới 柱（はしら）（chân cột）hoặc giữa 基礎（きそ）（móng）và 床（ゆか）（sàn）.",
+  "tip_id": "💡 Tips mengingat: 免震（めんしん）= 免（めん）(menghindari) + 震（しん）(getaran/gempa) → 装置（そうち）(perangkat) yang membantu 建物（たてもの）(bangunan) MENGHINDARI dampak 地震（じしん）(gempa bumi). Biasanya terlihat di bawah 柱（はしら）(kaki kolom) atau di antara 基礎（きそ）(fondasi) dan 床（ゆか）(lantai).",
+  "tip_en": "💡 Memory tip: 免震（めんしん）= 免（めん）(to avoid) + 震（しん）(shaking/earthquake) → a 装置（そうち）(device) that helps a 建物（たてもの）(building) AVOID the effects of a 地震（じしん）(earthquake). Usually seen under 柱（はしら）(column bases) or between the 基礎（きそ）(foundation) and 床（ゆか）(floor)."
 },
 {
   "id": 39,
@@ -145,10 +177,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Hình dưới đây là thiết bị gì?",
+  "vi_id": "Perangkat apa yang ditunjukkan pada gambar di bawah ini?",
+  "vi_en": "What device is shown in the picture below?",
   "explain": "Đây là スプリンクラー（sprinkler）– đầu phun nước chữa cháy tự động được lắp trên 天井（てんじょう）（trần nhà）. Khi 温度（おんど）（nhiệt độ）tăng cao do 火災（かさい）（cháy）, đầu 感知（かんち）（cảm ứng）sẽ kích hoạt và phun 水（みず）（nước）dập lửa.\n\nTừ vựng:\nスプリンクラー: Đầu phun nước chữa cháy tự動（じどう）(Sprinkler)\n火災（かさい）: Hỏa hoạn / Đám cháy\n受信機（じゅしんき）: Máy thu tín hiệu / Bảng điều khiển báo cháy\n消火（しょうか）ポンプ: Máy bơm chữa cháy\n保温（ほおん）: Giữ nhiệt\n保冷器（ほれいき）: Thiết bị giữ lạnh",
   "explain_id": "Ini adalah スプリンクラー (sprinkler) – kepala penyemprot air pemadam kebakaran otomatis yang dipasang di 天井（てんじょう） (plafon). Saat 温度（おんど） (suhu) naik tinggi karena 火災（かさい） (kebakaran), bagian 感知（かんち） (sensor) akan aktif dan menyemprotkan 水（みず） (air) untuk memadamkan api.\n\nKosakata:\nスプリンクラー: Kepala sprinkler pemadam kebakaran otomatis (Sprinkler)\n火災（かさい）: Kebakaran\n受信機（じゅしんき）: Penerima sinyal / Panel kontrol alarm kebakaran\n消火（しょうか）ポンプ: Pompa pemadam kebakaran\n保温（ほおん）: Penahan panas / Insulasi panas\n保冷器（ほれいき）: Alat penahan dingin",
   "explain_en": "This is a スプリンクラー (sprinkler) – an automatic fire sprinkler head installed on the 天井（てんじょう） (ceiling). When the 温度（おんど） (temperature) rises high due to a 火災（かさい） (fire), the 感知（かんち） (sensor) part activates and sprays 水（みず） (water) to put out the fire.\n\nVocabulary:\nスプリンクラー: Automatic fire sprinkler head (Sprinkler)\n火災（かさい）: Fire\n受信機（じゅしんき）: Signal receiver / Fire alarm control panel\n消火（しょうか）ポンプ: Fire pump\n保温（ほおん）: Heat insulation / Keeping warm\n保冷器（ほれいき）: Cold-retaining device",
-  "tip": "💡 Mẹo nhớ: スプリンクラー（Sprinkler）= đầu 噴水（ふんすい）（phun nước）自動（じどう）（tự động）gắn trên 天井（てんじょう）（trần nhà）. Khi có 火災（かさい）（hỏa hoạn）→ 自動（じどう）（tự động）phun 水（みず）（nước）→ chọn ngay スプリンクラー."
+  "tip": "💡 Mẹo nhớ: スプリンクラー（Sprinkler）= đầu 噴水（ふんすい）（phun nước）自動（じどう）（tự động）gắn trên 天井（てんじょう）（trần nhà）. Khi có 火災（かさい）（hỏa hoạn）→ 自動（じどう）（tự động）phun 水（みず）（nước）→ chọn ngay スプリンクラー.",
+  "tip_id": "💡 Tips mengingat: スプリンクラー (Sprinkler) = kepala 噴水（ふんすい）(penyemprot air) 自動（じどう）(otomatis) yang dipasang di 天井（てんじょう）(plafon). Ketika terjadi 火災（かさい）(kebakaran) → secara 自動（じどう）(otomatis) menyemprotkan 水（みず）(air) → langsung pilih スプリンクラー.",
+  "tip_en": "💡 Memory tip: スプリンクラー (Sprinkler) = an 自動（じどう）(automatic) 噴水（ふんすい）(water spraying) head attached to the 天井（てんじょう）(ceiling). When a 火災（かさい）(fire) occurs → it 自動（じどう）(automatically) sprays 水（みず）(water) → immediately choose スプリンクラー."
 },
 {
   "id": 40,
@@ -162,10 +198,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Đây là công việc gì? Hãy chọn đáp án đúng.",
+  "vi_id": "Ini pekerjaan apa? Pilih jawaban yang benar.",
+  "vi_en": "What work is this? Choose the correct answer.",
   "explain": "Ảnh cho thấy hai thanh 鉄筋（てっきん）（thép）được nối bằng phương pháp 溶接（ようせつ）継手（つぎて）（hàn nối bằng điện）, thường dùng trong thi công kết cấu 鉄筋（てっきん）（thép cốt）.\n\nTừ vựng:\n溶接（ようせつ）: Hàn / Hàn điện\n継手（つぎて）: Mối nối\nガス圧接（あっせつ）: Hàn ép bằng khí gas\n鉄筋（てっきん）: Thép cốt / Thanh cốt thép\n配筋（はいきん）: Bố trí thép / Buộc thép",
   "explain_id": "Foto menunjukkan dua batang 鉄筋（てっきん） (baja tulangan) yang disambung dengan metode 溶接（ようせつ）継手（つぎて） (sambungan las listrik), yang biasa digunakan dalam pekerjaan struktur 鉄筋（てっきん） (baja tulangan).\n\nKosakata:\n溶接（ようせつ）: Pengelasan / Las listrik\n継手（つぎて）: Sambungan\nガス圧接（あっせつ）: Pengelasan tekan gas\n鉄筋（てっきん）: Baja tulangan / Batang tulangan\n配筋（はいきん）: Penataan tulangan / Pemasangan tulangan",
   "explain_en": "The photo shows two 鉄筋（てっきん） (steel reinforcing bars) joined by the 溶接（ようせつ）継手（つぎて） (welded joint) method, commonly used in 鉄筋（てっきん） (reinforcing steel) structure work.\n\nVocabulary:\n溶接（ようせつ）: Welding / Electric welding\n継手（つぎて）: Joint / Connection\nガス圧接（あっせつ）: Gas pressure welding\n鉄筋（てっきん）: Reinforcing steel / Rebar\n配筋（はいきん）: Rebar arrangement / Placing reinforcement",
-  "tip": "💡 Mẹo nhớ: 溶接（ようせつ）継手（つぎて）= hàn nối bằng 電気（でんき）（điện）→ thấy 火花（ひばな）（tia lửa điện）hoặc mối 溶接（ようせつ）（hàn）điện → chọn 溶接（ようせつ）継手（つぎて）. Khác với ガス圧接（あっせつ）（dùng 火（ひ）gas + ép 軸（じく）trục, mối nối 膨（ふく）らむ（phình ra））."
+  "tip": "💡 Mẹo nhớ: 溶接（ようせつ）継手（つぎて）= hàn nối bằng 電気（でんき）（điện）→ thấy 火花（ひばな）（tia lửa điện）hoặc mối 溶接（ようせつ）（hàn）điện → chọn 溶接（ようせつ）継手（つぎて）. Khác với ガス圧接（あっせつ）（dùng 火（ひ）gas + ép 軸（じく）trục, mối nối 膨（ふく）らむ（phình ra））.",
+  "tip_id": "💡 Tips mengingat: 溶接（ようせつ）継手（つぎて）= sambungan las menggunakan 電気（でんき）(listrik) → jika melihat 火花（ひばな）(percikan api listrik) atau sambungan 溶接（ようせつ）(las) listrik → pilih 溶接（ようせつ）継手（つぎて）. Berbeda dengan ガス圧接（あっせつ）(menggunakan 火（ひ）gas + menekan 軸（じく）sumbu, sambungannya 膨（ふく）らむ (menggembung)).",
+  "tip_en": "💡 Memory tip: 溶接（ようせつ）継手（つぎて）= a welded joint using 電気（でんき）(electricity) → when you see 火花（ひばな）(electric sparks) or an electric 溶接（ようせつ）(weld) joint → choose 溶接（ようせつ）継手（つぎて）. Different from ガス圧接（あっせつ）(uses gas 火（ひ）+ pressing along the 軸（じく）axis, and the joint 膨（ふく）らむ (bulges))."
 },
 {
   "id": 41,
@@ -179,10 +219,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Bức ảnh thể hiện công trình nào đang được thực hiện?",
+  "vi_id": "Foto tersebut menunjukkan pekerjaan apa yang sedang dilakukan?",
+  "vi_en": "The photo shows what work being carried out?",
   "explain": "工（こう）員（いん）（Công nhân）đang đổ 生（なま）コンクリート（bê tông tươi）xuống 型枠（かたわく）（khuôn）– đây là コンクリート打設（だせつ）工事（こうじ）– công trình đổ 打設（だせつ）（đầm bê tông）, nhằm tạo 床（ゆか）（mặt sàn）hoặc nền 基礎（きそ）（bê tông）vững chắc.\n\nTừ vựng:\nコンクリート: Bê tông\n打設（だせつ）: Đổ bê tông / Đầm bê tông\n工事（こうじ）: Công trình / Thi công\n機械（きかい）土工事（どこうじ）: Công trình đất bằng máy\nサッシ工事（こうじ）: Công trình lắp khung cửa nhôm\n屋根（やね）工事（こうじ）: Công trình mái nhà",
   "explain_id": "工（こう）員（いん） (Pekerja) sedang menuang 生（なま）コンクリート (beton segar) ke dalam 型枠（かたわく） (bekisting) – ini adalah コンクリート打設（だせつ）工事（こうじ） – pekerjaan pengecoran 打設（だせつ） (beton), untuk membuat 床（ゆか） (permukaan lantai) atau dasar 基礎（きそ） (beton) yang kokoh.\n\nKosakata:\nコンクリート: Beton\n打設（だせつ）: Pengecoran beton\n工事（こうじ）: Pekerjaan konstruksi / Konstruksi\n機械（きかい）土工事（どこうじ）: Pekerjaan tanah dengan mesin\nサッシ工事（こうじ）: Pekerjaan pemasangan kusen aluminium\n屋根（やね）工事（こうじ）: Pekerjaan atap",
   "explain_en": "Workers 工（こう）員（いん） are pouring 生（なま）コンクリート (fresh concrete) into the 型枠（かたわく） (formwork) – this is コンクリート打設（だせつ）工事（こうじ） – concrete placing work, to create a solid 床（ゆか） (floor surface) or 基礎（きそ） (concrete) foundation base.\n\nVocabulary:\nコンクリート: Concrete\n打設（だせつ）: Concrete placing / Pouring concrete\n工事（こうじ）: Construction work / Construction\n機械（きかい）土工事（どこうじ）: Mechanical earthwork\nサッシ工事（こうじ）: Aluminium sash installation work\n屋根（やね）工事（こうじ）: Roofing work",
-  "tip": "💡 Mẹo nhớ: Thấy hình đổ 生（なま）コンクリート（bê tông tươi）từ 車（くるま）（xe）bơm hoặc 型枠（かたわく）（khuôn）→ コンクリート打設（だせつ）工事（こうじ）. 打設（だせつ）= đổ và 締（し）め固（かた）め（đầm）コンクリート（bê tông）vào 型枠（かたわく）（khuôn）."
+  "tip": "💡 Mẹo nhớ: Thấy hình đổ 生（なま）コンクリート（bê tông tươi）từ 車（くるま）（xe）bơm hoặc 型枠（かたわく）（khuôn）→ コンクリート打設（だせつ）工事（こうじ）. 打設（だせつ）= đổ và 締（し）め固（かた）め（đầm）コンクリート（bê tông）vào 型枠（かたわく）（khuôn）.",
+  "tip_id": "💡 Tips mengingat: Jika melihat gambar pengecoran 生（なま）コンクリート (beton segar) dari 車（くるま）(truk) pompa atau 型枠（かたわく）(bekisting) → コンクリート打設（だせつ）工事（こうじ）. 打設（だせつ）= menuang dan 締（し）め固（かた）め (memadatkan) コンクリート (beton) ke dalam 型枠（かたわく）(bekisting).",
+  "tip_en": "💡 Memory tip: When you see a picture of 生（なま）コンクリート (fresh concrete) being poured from a pump 車（くるま）(truck) or into 型枠（かたわく）(formwork) → コンクリート打設（だせつ）工事（こうじ）. 打設（だせつ）= pouring and 締（し）め固（かた）め (compacting) コンクリート (concrete) into 型枠（かたわく）(formwork)."
 },
 {
   "id": 42,
@@ -195,10 +239,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Công việc của thợ lắp thép kết cấu là dựng khung xương cho các tòa nhà cao tầng hoặc chung cư bằng các bộ phận thép.",
+  "vi_id": "Pekerjaan tukang baja struktural adalah mendirikan kerangka untuk gedung bertingkat tinggi atau apartemen menggunakan komponen baja.",
+  "vi_en": "The work of a structural steel worker is to erect the frame of high-rise buildings or apartments using steel components.",
   "explain": "Đáp án đúng: 鉄骨（てっこつ）部材（ぶざい）を使（つか）って高層（こうそう）ビルやマンションの骨組（ほねぐ）みを組（く）み上（あ）げていく作業（さぎょう）— Công việc lắp dựng 骨組（ほねぐ）み（khung thép）cho 高層（こうそう）ビル（công trình cao tầng）.\n\nTừ vựng:\n鉄骨（てっこつ）とび: Thợ lắp dựng thép kết cấu (Ironworker)\n足場（あしば）: Giàn giáo\n据（す）え付（つ）け: Lắp đặt cố định / Lắp máy\n橋（はし）: Cầu\n鉄塔（てっとう）: Cột thép / Tháp thép\n部材（ぶざい）: Bộ phận / Cấu kiện\n高層（こうそう）ビル: Tòa nhà cao tầng\nマンション: Chung cư\n骨組（ほねぐ）み: Khung xương / Kết cấu khung",
   "explain_id": "Jawaban yang benar: 鉄骨（てっこつ）部材（ぶざい）を使（つか）って高層（こうそう）ビルやマンションの骨組（ほねぐ）みを組（く）み上（あ）げていく作業（さぎょう） — Pekerjaan memasang 骨組（ほねぐ）み (rangka baja) untuk 高層（こうそう）ビル (bangunan bertingkat tinggi).\n\nKosakata:\n鉄骨（てっこつ）とび: Pekerja pemasangan baja struktur (Ironworker)\n足場（あしば）: Perancah\n据（す）え付（つ）け: Pemasangan tetap / Instalasi mesin\n橋（はし）: Jembatan\n鉄塔（てっとう）: Menara baja / Tiang baja\n部材（ぶざい）: Komponen / Elemen struktur\n高層（こうそう）ビル: Gedung bertingkat tinggi\nマンション: Apartemen\n骨組（ほねぐ）み: Rangka / Struktur rangka",
   "explain_en": "Correct answer: 鉄骨（てっこつ）部材（ぶざい）を使（つか）って高層（こうそう）ビルやマンションの骨組（ほねぐ）みを組（く）み上（あ）げていく作業（さぎょう） — The work of erecting a 骨組（ほねぐ）み (steel frame) for a 高層（こうそう）ビル (high-rise building).\n\nVocabulary:\n鉄骨（てっこつ）とび: Structural steel erector (Ironworker)\n足場（あしば）: Scaffolding\n据（す）え付（つ）け: Fixed installation / Machine installation\n橋（はし）: Bridge\n鉄塔（てっとう）: Steel tower / Steel pylon\n部材（ぶざい）: Member / Structural component\n高層（こうそう）ビル: High-rise building\nマンション: Apartment building / Condominium\n骨組（ほねぐ）み: Frame / Structural frame",
-  "tip": "💡 Mẹo nhớ: 鉄骨（てっこつ）とび = thợ LEO CAO lắp 鉄骨（てっこつ）（thép kết cấu）cho 高層（こうそう）ビル（nhà cao tầng）. Thấy 高層（こうそう）ビル・マンション + 骨組（ほねぐ）み（khung xương）→ chọn đáp án này."
+  "tip": "💡 Mẹo nhớ: 鉄骨（てっこつ）とび = thợ LEO CAO lắp 鉄骨（てっこつ）（thép kết cấu）cho 高層（こうそう）ビル（nhà cao tầng）. Thấy 高層（こうそう）ビル・マンション + 骨組（ほねぐ）み（khung xương）→ chọn đáp án này.",
+  "tip_id": "💡 Tips mengingat: 鉄骨（てっこつ）とび = tukang yang MEMANJAT TINGGI memasang 鉄骨（てっこつ）(baja struktural) untuk 高層（こうそう）ビル (gedung bertingkat tinggi). Jika melihat 高層（こうそう）ビル・マンション + 骨組（ほねぐ）み (kerangka) → pilih jawaban ini.",
+  "tip_en": "💡 Memory tip: 鉄骨（てっこつ）とび = a worker who CLIMBS HIGH to install 鉄骨（てっこつ）(structural steel) for 高層（こうそう）ビル (high-rise buildings). When you see 高層（こうそう）ビル・マンション + 骨組（ほねぐ）み (framework) → choose this answer."
 },
 {
   "id": 43,
@@ -211,10 +259,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Phương pháp nối thép bằng cách nung nóng và ép chặt theo trục gọi là hàn ép khí.",
+  "vi_id": "Metode menyambung baja dengan memanaskan dan menekannya rapat sepanjang sumbu disebut pengelasan tekan gas.",
+  "vi_en": "The method of joining steel by heating it and pressing it tightly along the axis is called gas pressure welding.",
   "explain": "Đáp án đúng: ガス圧接（あっせつ）継手（つぎて）— Phương pháp hàn nối 鉄筋（てっきん）（thép）bằng 圧力（あつりょく）（áp lực）và 熱（ねつ）（nhiệt）của 気体（きたい）gas.\n\nTừ vựng:\n鉄筋（てっきん）: Thép cốt / Thanh cốt thép\n加熱（かねつ）: Nung nóng\n軸方向（じくほうこう）: Theo chiều trục dọc\n圧力（あつりょく）: Áp lực\n接合（せつごう）する: Nối / Ghép\n工法（こうほう）: Phương pháp thi công\nガス圧接（あっせつ）: Hàn ép bằng khí gas\n継手（つぎて）: Mối nối\n溶接（ようせつ）: Hàn\n機械式（きかいしき）: Kiểu cơ khí / Dùng máy\n重（かさ）ね継手（つぎて）: Mối nối chồng / Buộc chồng",
   "explain_id": "Jawaban yang benar: ガス圧接（あっせつ）継手（つぎて） — Metode penyambungan las 鉄筋（てっきん） (baja tulangan) dengan 圧力（あつりょく） (tekanan) dan 熱（ねつ） (panas) dari 気体（きたい） gas.\n\nKosakata:\n鉄筋（てっきん）: Baja tulangan / Batang tulangan\n加熱（かねつ）: Pemanasan\n軸方向（じくほうこう）: Arah aksial / Sepanjang sumbu\n圧力（あつりょく）: Tekanan\n接合（せつごう）する: Menyambung / Menggabungkan\n工法（こうほう）: Metode konstruksi\nガス圧接（あっせつ）: Pengelasan tekan gas\n継手（つぎて）: Sambungan\n溶接（ようせつ）: Pengelasan\n機械式（きかいしき）: Tipe mekanis / Menggunakan mesin\n重（かさ）ね継手（つぎて）: Sambungan tumpang / Sambungan lewatan",
   "explain_en": "Correct answer: ガス圧接（あっせつ）継手（つぎて） — A method of welding 鉄筋（てっきん） (reinforcing bars) together using the 圧力（あつりょく） (pressure) and 熱（ねつ） (heat) of 気体（きたい） gas.\n\nVocabulary:\n鉄筋（てっきん）: Reinforcing steel / Rebar\n加熱（かねつ）: Heating\n軸方向（じくほうこう）: Axial direction\n圧力（あつりょく）: Pressure\n接合（せつごう）する: To join / To connect\n工法（こうほう）: Construction method\nガス圧接（あっせつ）: Gas pressure welding\n継手（つぎて）: Joint\n溶接（ようせつ）: Welding\n機械式（きかいしき）: Mechanical type / Machine-based\n重（かさ）ね継手（つぎて）: Lap joint / Overlap joint",
-  "tip": "💡 Mẹo nhớ: Thấy từ khoá 加熱（かねつ）（nung nóng）+ 軸方向（じくほうこう）（dọc 軸（じく）trục）+ 圧力（あつりょく）（ép）→ đây chính xác là ガス圧接（あっせつ）継手（つぎて）. Không nhầm với 溶接（ようせつ）（hàn điện, không ép 軸（じく）（trục））."
+  "tip": "💡 Mẹo nhớ: Thấy từ khoá 加熱（かねつ）（nung nóng）+ 軸方向（じくほうこう）（dọc 軸（じく）trục）+ 圧力（あつりょく）（ép）→ đây chính xác là ガス圧接（あっせつ）継手（つぎて）. Không nhầm với 溶接（ようせつ）（hàn điện, không ép 軸（じく）（trục））.",
+  "tip_id": "💡 Tips mengingat: Jika melihat kata kunci 加熱（かねつ）(memanaskan) + 軸方向（じくほうこう）(searah 軸（じく）sumbu) + 圧力（あつりょく）(menekan) → itu tepatnya adalah ガス圧接（あっせつ）継手（つぎて）. Jangan keliru dengan 溶接（ようせつ）(las listrik, tidak menekan 軸（じく）(sumbu)).",
+  "tip_en": "💡 Memory tip: When you see the keywords 加熱（かねつ）(heating) + 軸方向（じくほうこう）(along the 軸（じく）axis) + 圧力（あつりょく）(pressure) → that is exactly ガス圧接（あっせつ）継手（つぎて）. Do not confuse it with 溶接（ようせつ）(electric welding, which does not press along the 軸（じく）(axis))."
 },
 {
   "id": 44,
@@ -227,10 +279,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Trong các thiết bị thuộc hệ thống làm lạnh và điều hòa không khí, Handhole không phải là thiết bị trong nhóm này.",
+  "vi_id": "Di antara peralatan yang termasuk sistem pendingin dan pengkondisian udara, Handhole bukan peralatan dalam kelompok ini.",
+  "vi_en": "Among the equipment belonging to refrigeration and air conditioning systems, a handhole is not equipment in this group.",
   "explain": "Đáp án đúng: ハンドホール — Không thuộc nhóm 冷凍（れいとう）（làm lạnh）và 空気（くうき）調和（ちょうわ）（điều hòa không khí）. Handhole là 穴（あな）（hố）kỹ thuật nhỏ dùng trong hệ thống 電線（でんせん）（cáp）ngầm hoặc 管（くだ）（ống）dẫn.\n\nTừ vựng:\n冷凍（れいとう）: Làm lạnh / Đông lạnh\n空気（くうき）調和（ちょうわ）: Điều hòa không khí\n機器（きき）: Thiết bị / Máy móc\nハンドホール: Hố kỹ thuật nhỏ (Handhole)\n家庭用（かていよう）エアコン: Máy điều hòa gia dụng\n冷凍（れいとう）装置（そうち）: Thiết bị làm lạnh\n冷蔵（れいぞう）ショーケース: Tủ trưng bày làm lạnh",
   "explain_id": "Jawaban yang benar: ハンドホール — Tidak termasuk kelompok 冷凍（れいとう） (pendinginan) dan 空気（くうき）調和（ちょうわ） (tata udara). Handhole adalah 穴（あな） (lubang) teknis kecil yang digunakan dalam sistem 電線（でんせん） (kabel) bawah tanah atau 管（くだ） (pipa) saluran.\n\nKosakata:\n冷凍（れいとう）: Pendinginan / Pembekuan\n空気（くうき）調和（ちょうわ）: Tata udara\n機器（きき）: Peralatan / Mesin\nハンドホール: Lubang teknis kecil (Handhole)\n家庭用（かていよう）エアコン: AC rumah tangga\n冷凍（れいとう）装置（そうち）: Perangkat pendingin\n冷蔵（れいぞう）ショーケース: Etalase berpendingin",
   "explain_en": "Correct answer: ハンドホール — It does not belong to the 冷凍（れいとう） (refrigeration) and 空気（くうき）調和（ちょうわ） (air conditioning) group. A handhole is a small technical 穴（あな） (hole) used in underground 電線（でんせん） (cable) systems or conduit 管（くだ） (pipes).\n\nVocabulary:\n冷凍（れいとう）: Refrigeration / Freezing\n空気（くうき）調和（ちょうわ）: Air conditioning\n機器（きき）: Equipment / Machinery\nハンドホール: Small technical hole (Handhole)\n家庭用（かていよう）エアコン: Household air conditioner\n冷凍（れいとう）装置（そうち）: Refrigeration equipment\n冷蔵（れいぞう）ショーケース: Refrigerated showcase",
-  "tip": "💡 Mẹo nhớ: 冷凍（れいとう）・空調（くうちょう）機器（きき）= mọi thứ liên quan đến 冷（れい）（lạnh）và 空気（くうき）調和（ちょうわ）（điều hòa không khí）. ハンドホール = 穴（あな）（hố）kỹ thuật chôn dưới 地中（ちちゅう）（đất）→ hoàn toàn không liên quan → đây là đáp án cần chọn."
+  "tip": "💡 Mẹo nhớ: 冷凍（れいとう）・空調（くうちょう）機器（きき）= mọi thứ liên quan đến 冷（れい）（lạnh）và 空気（くうき）調和（ちょうわ）（điều hòa không khí）. ハンドホール = 穴（あな）（hố）kỹ thuật chôn dưới 地中（ちちゅう）（đất）→ hoàn toàn không liên quan → đây là đáp án cần chọn.",
+  "tip_id": "💡 Tips mengingat: 冷凍（れいとう）・空調（くうちょう）機器（きき）= segala sesuatu yang berkaitan dengan 冷（れい）(dingin) dan 空気（くうき）調和（ちょうわ）(pengkondisian udara). ハンドホール = 穴（あな）(lubang) teknis yang ditanam di 地中（ちちゅう）(bawah tanah) → sama sekali tidak berkaitan → ini jawaban yang harus dipilih.",
+  "tip_en": "💡 Memory tip: 冷凍（れいとう）・空調（くうちょう）機器（きき）= everything related to 冷（れい）(cold) and 空気（くうき）調和（ちょうわ）(air conditioning). ハンドホール = a technical 穴（あな）(hole) buried in the 地中（ちちゅう）(ground) → completely unrelated → this is the answer to choose."
 },
 {
   "id": 45,
@@ -243,10 +299,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Phát biểu sai là cho rằng nếu có tổ trưởng thì không cần lập ủy ban an toàn vệ sinh.",
+  "vi_id": "Pernyataan yang salah adalah anggapan bahwa jika ada ketua tim, tidak perlu membentuk komite keselamatan dan kesehatan kerja.",
+  "vi_en": "The incorrect statement is the claim that if there is a team leader, there is no need to establish a safety and health committee.",
   "explain": "Đáp án đúng (SAI): 事業（じぎょう）規模（きぼ）にかかわらず、職長（しょくちょう）がいれば、安全（あんぜん）衛生（えいせい）委員会（いいんかい）を選任（せんにん）しなくてもよい — Đây là phát biểu SAI, vì 法律（ほうりつ）（luật）vẫn yêu cầu thành lập 委員会（いいんかい）（ủy ban）khi đủ 規模（きぼ）（quy mô）.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Luật an toàn vệ sinh lao động\n事業場（じぎょうじょう）: Nơi làm việc / Cơ sở sản xuất\n規模（きぼ）: Quy mô\n安全管理者（あんぜんかんりしゃ）: Người quản lý an toàn\n衛生管理者（えいせいかんりしゃ）: Người quản lý vệ sinh\n選任（せんにん）: Bổ nhiệm / Chỉ định\n義務（ぎむ）: Nghĩa vụ / Bắt buộc\n兼務（けんむ）: Kiêm nhiệm\n安全衛生委員会（いいんかい）: Ủy ban an toàn vệ sinh",
   "explain_id": "Jawaban yang benar (SALAH): 事業（じぎょう）規模（きぼ）にかかわらず、職長（しょくちょう）がいれば、安全（あんぜん）衛生（えいせい）委員会（いいんかい）を選任（せんにん）しなくてもよい — Ini adalah pernyataan SALAH, karena 法律（ほうりつ） (undang-undang) tetap mewajibkan pembentukan 委員会（いいんかい） (komite) apabila 規模（きぼ） (skala) sudah memenuhi syarat.\n\nKosakata:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Undang-Undang Keselamatan dan Kesehatan Kerja\n事業場（じぎょうじょう）: Tempat kerja / Fasilitas usaha\n規模（きぼ）: Skala\n安全管理者（あんぜんかんりしゃ）: Manajer keselamatan\n衛生管理者（えいせいかんりしゃ）: Manajer kesehatan / higiene\n選任（せんにん）: Penunjukan / Pengangkatan\n義務（ぎむ）: Kewajiban / Keharusan\n兼務（けんむ）: Rangkap jabatan\n安全衛生委員会（いいんかい）: Komite keselamatan dan kesehatan",
   "explain_en": "Correct answer (WRONG statement): 事業（じぎょう）規模（きぼ）にかかわらず、職長（しょくちょう）がいれば、安全（あんぜん）衛生（えいせい）委員会（いいんかい）を選任（せんにん）しなくてもよい — This is a WRONG statement, because the 法律（ほうりつ） (law) still requires establishing a 委員会（いいんかい） (committee) when the 規模（きぼ） (scale) is large enough.\n\nVocabulary:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Occupational Safety and Health Act\n事業場（じぎょうじょう）: Workplace / Business site\n規模（きぼ）: Scale\n安全管理者（あんぜんかんりしゃ）: Safety manager\n衛生管理者（えいせいかんりしゃ）: Health manager\n選任（せんにん）: Appointment / Designation\n義務（ぎむ）: Obligation / Duty\n兼務（けんむ）: Holding an additional post\n安全衛生委員会（いいんかい）: Safety and health committee",
-  "tip": "💡 Mẹo nhớ: Thấy câu nói「職長（しょくちょう）がいれば委員会（いいんかい）を選任（せんにん）しなくてもよい」（có 職長（しょくちょう）（tổ trưởng）thì không cần 委員会（いいんかい）（ủy ban））→ đây là SAI. 法律（ほうりつ）（Luật）yêu cầu 委員会（いいんかい）（ủy ban）khi đủ 規模（きぼ）（quy mô）, 職長（しょくちょう）（tổ trưởng）không 代替（だいたい）（thay thế）được."
+  "tip": "💡 Mẹo nhớ: Thấy câu nói「職長（しょくちょう）がいれば委員会（いいんかい）を選任（せんにん）しなくてもよい」（có 職長（しょくちょう）（tổ trưởng）thì không cần 委員会（いいんかい）（ủy ban））→ đây là SAI. 法律（ほうりつ）（Luật）yêu cầu 委員会（いいんかい）（ủy ban）khi đủ 規模（きぼ）（quy mô）, 職長（しょくちょう）（tổ trưởng）không 代替（だいたい）（thay thế）được.",
+  "tip_id": "💡 Tips mengingat: Jika melihat kalimat 「職長（しょくちょう）がいれば委員会（いいんかい）を選任（せんにん）しなくてもよい」 (jika ada 職長（しょくちょう）(ketua tim) tidak perlu 委員会（いいんかい）(komite)) → itu SALAH. 法律（ほうりつ）(undang-undang) mewajibkan 委員会（いいんかい）(komite) bila 規模（きぼ）(skala) mencukupi; 職長（しょくちょう）(ketua tim) tidak dapat 代替（だいたい）(menggantikannya).",
+  "tip_en": "💡 Memory tip: When you see the statement 「職長（しょくちょう）がいれば委員会（いいんかい）を選任（せんにん）しなくてもよい」 (if there is a 職長（しょくちょう）(team leader), no 委員会（いいんかい）(committee) is needed) → that is WRONG. The 法律（ほうりつ）(law) requires a 委員会（いいんかい）(committee) when the 規模（きぼ）(scale) is large enough; a 職長（しょくちょう）(team leader) cannot 代替（だいたい）(replace) it."
 },
 {
   "id": 46,
@@ -259,10 +319,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Máy dùng để nén chặt cát và đá vụn trên mặt đường là xe lu.",
+  "vi_id": "Mesin yang digunakan untuk memadatkan pasir dan batu pecah di permukaan jalan adalah roller (mesin gilas).",
+  "vi_en": "The machine used to compact sand and crushed stone on the road surface is a roller.",
   "explain": "Đáp án đúng: ローラー — Xe lu, dùng để 締（し）め固（かた）め（đầm nén）bề mặt 道路（どうろ）（đường）hoặc 地盤（じばん）（nền đất）công trình.\n\nTừ vựng:\n路床（ろしょう）: Nền đất dưới lớp nền đường\n路盤（ろばん）: Lớp nền đường\n砂（すな）: Cát\n砕石（さいせき）: Đá dăm / Đá vụn\n締（し）め固（かた）める: Nén chặt / Đầm chặt\n重機（じゅうき）: Máy móc hạng nặng\nローラー: Xe lu (Road Roller)\nアスファルトフィニッシャー: Máy trải nhựa đường (Asphalt Finisher)\nブルドーザー: Xe ủi đất (Bulldozer)\n油圧（ゆあつ）ショベル: Máy xúc thủy lực",
   "explain_id": "Jawaban yang benar: ローラー — Roller / mesin gilas, digunakan untuk 締（し）め固（かた）め (memadatkan) permukaan 道路（どうろ） (jalan) atau 地盤（じばん） (tanah dasar) konstruksi.\n\nKosakata:\n路床（ろしょう）: Tanah dasar di bawah badan jalan\n路盤（ろばん）: Lapisan fondasi jalan\n砂（すな）: Pasir\n砕石（さいせき）: Batu pecah / Agregat batu\n締（し）め固（かた）める: Memadatkan\n重機（じゅうき）: Alat berat\nローラー: Mesin gilas jalan (Road Roller)\nアスファルトフィニッシャー: Mesin penghampar aspal (Asphalt Finisher)\nブルドーザー: Buldoser (Bulldozer)\n油圧（ゆあつ）ショベル: Ekskavator hidrolik",
   "explain_en": "Correct answer: ローラー — A road roller, used to 締（し）め固（かた）め (compact) the surface of a 道路（どうろ） (road) or the 地盤（じばん） (ground) of a construction site.\n\nVocabulary:\n路床（ろしょう）: Subgrade under the road base\n路盤（ろばん）: Road base layer\n砂（すな）: Sand\n砕石（さいせき）: Crushed stone\n締（し）め固（かた）める: To compact / To tamp down\n重機（じゅうき）: Heavy machinery\nローラー: Road roller\nアスファルトフィニッシャー: Asphalt finisher\nブルドーザー: Bulldozer\n油圧（ゆあつ）ショベル: Hydraulic excavator",
-  "tip": "💡 Mẹo nhớ: 締（し）め固（かた）める（nén chặt）→ ローラー（xe lu）. ローラー（xe lu）cán đi cán lại để 締（し）め固（かた）める（NÉN）路盤（ろばん）（lớp nền）. アスファルトフィニッシャー（máy trải nhựa）dùng để TRẢI 舗装（ほそう）（nhựa）, không phải 締（し）め固（かた）める（nén）."
+  "tip": "💡 Mẹo nhớ: 締（し）め固（かた）める（nén chặt）→ ローラー（xe lu）. ローラー（xe lu）cán đi cán lại để 締（し）め固（かた）める（NÉN）路盤（ろばん）（lớp nền）. アスファルトフィニッシャー（máy trải nhựa）dùng để TRẢI 舗装（ほそう）（nhựa）, không phải 締（し）め固（かた）める（nén）.",
+  "tip_id": "💡 Tips mengingat: 締（し）め固（かた）める (memadatkan) → ローラー (roller/mesin gilas). ローラー (roller) berjalan berulang kali untuk 締（し）め固（かた）める (MEMADATKAN) 路盤（ろばん）(lapisan pondasi jalan). アスファルトフィニッシャー (mesin penghampar aspal) digunakan untuk MENGHAMPAR 舗装（ほそう）(aspal), bukan untuk 締（し）め固（かた）める (memadatkan).",
+  "tip_en": "💡 Memory tip: 締（し）め固（かた）める (to compact) → ローラー (roller). A ローラー rolls back and forth to 締（し）め固（かた）める (COMPACT) the 路盤（ろばん）(road base layer). An アスファルトフィニッシャー (asphalt finisher) is used to SPREAD 舗装（ほそう）(asphalt paving), not to 締（し）め固（かた）める (compact)."
 },
 {
   "id": 47,
@@ -276,10 +340,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Hình dưới đây thể hiện công tác gì?",
+  "vi_id": "Gambar di bawah ini menunjukkan pekerjaan apa?",
+  "vi_en": "What work does the picture below show?",
   "explain": "Đây là công tác 法面（のりめん）整形（せいけい）– san gọt, tạo 形（かたち）（hình）mái 斜面（しゃめん）（taluy）bằng 機械（きかい）（máy）xúc. Mục đích là làm phẳng và chỉnh 傾斜（けいしゃ）（độ dốc）mái 法面（のりめん）（taluy）sau khi 盛土（もりど）（đắp）hoặc 掘削（くっさく）（đào）.\n\nTừ vựng:\n法面（のりめん）: Mái dốc / Mái taluy\n整形（せいけい）: Tạo hình / Chỉnh hình\n掘削（くっさく）: Đào đất\n積（つ）み込（こ）み: Xúc lên xe / Chất lên\n押土（おしど）: Đẩy đất / Ủi đất",
   "explain_id": "Ini adalah pekerjaan 法面（のりめん）整形（せいけい） – memotong dan membentuk 形（かたち） (bentuk) 斜面（しゃめん） (lereng) dengan 機械（きかい） (mesin) ekskavator. Tujuannya adalah meratakan dan menyesuaikan 傾斜（けいしゃ） (kemiringan) 法面（のりめん） (lereng) setelah 盛土（もりど） (penimbunan) atau 掘削（くっさく） (penggalian).\n\nKosakata:\n法面（のりめん）: Lereng / Talud\n整形（せいけい）: Pembentukan / Perapian bentuk\n掘削（くっさく）: Penggalian tanah\n積（つ）み込（こ）み: Pemuatan ke kendaraan / Pengangkutan naik\n押土（おしど）: Mendorong tanah / Menggusur tanah",
   "explain_en": "This is 法面（のりめん）整形（せいけい） work – trimming and shaping the 形（かたち） (shape) of a 斜面（しゃめん） (slope) with an excavator 機械（きかい） (machine). The purpose is to level and adjust the 傾斜（けいしゃ） (gradient) of the 法面（のりめん） (slope) after 盛土（もりど） (embankment) or 掘削（くっさく） (excavation).\n\nVocabulary:\n法面（のりめん）: Slope / Embankment slope\n整形（せいけい）: Shaping / Trimming\n掘削（くっさく）: Excavation\n積（つ）み込（こ）み: Loading onto a vehicle\n押土（おしど）: Pushing earth / Dozing",
-  "tip": "💡 Mẹo nhớ: 法面（のりめん）= 斜面（しゃめん）（mái dốc taluy）. 整形（せいけい）= tạo 形（かたち）（hình）/ chỉnh 形（かたち）（dáng）. Thấy hình 機械（きかい）（máy）xúc đang gọt/làm phẳng 傾斜面（けいしゃめん）（mái dốc nghiêng）→ chọn 法面（のりめん）整形（せいけい）."
+  "tip": "💡 Mẹo nhớ: 法面（のりめん）= 斜面（しゃめん）（mái dốc taluy）. 整形（せいけい）= tạo 形（かたち）（hình）/ chỉnh 形（かたち）（dáng）. Thấy hình 機械（きかい）（máy）xúc đang gọt/làm phẳng 傾斜面（けいしゃめん）（mái dốc nghiêng）→ chọn 法面（のりめん）整形（せいけい）.",
+  "tip_id": "💡 Tips mengingat: 法面（のりめん）= 斜面（しゃめん）(lereng talud). 整形（せいけい）= membuat 形（かたち）(bentuk) / merapikan 形（かたち）(bentuk). Jika melihat gambar 機械（きかい）(mesin) ekskavator yang sedang memotong/meratakan 傾斜面（けいしゃめん）(permukaan miring/lereng) → pilih 法面（のりめん）整形（せいけい）.",
+  "tip_en": "💡 Memory tip: 法面（のりめん）= 斜面（しゃめん）(a slope/talus). 整形（せいけい）= making a 形（かたち）(shape) / trimming a 形（かたち）(shape). When you see a picture of a 機械（きかい）(machine) excavator cutting/leveling a 傾斜面（けいしゃめん）(inclined slope) → choose 法面（のりめん）整形（せいけい）."
 },
 {
   "id": 48,
@@ -292,10 +360,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Phương pháp cọc đúc sẵn được chế tạo tại nhà máy và mang ra hiện trường để đóng xuống đất.",
+  "vi_id": "Metode tiang pracetak dibuat di pabrik dan dibawa ke lokasi untuk dipancang ke dalam tanah.",
+  "vi_en": "The precast pile method is manufactured at a factory and brought to the site to be driven into the ground.",
   "explain": "Đáp án đúng: 工場（こうじょう）で製作（せいさく）した杭（くい）を、現場（げんば）に運（はこ）んで打（う）ち込（こ）む工法（こうほう）— Phương pháp 杭（くい）（cọc）được 製作（せいさく）（đúc sẵn）tại 工場（こうじょう）（nhà máy）rồi vận chuyển đến 現場（げんば）（công trường）để 打（う）ち込（こ）む（đóng xuống）.\n\nTừ vựng:\n既成（きせい）杭（くい）: Cọc đúc sẵn / Cọc chế tạo sẵn\n工法（こうほう）: Phương pháp thi công\n工場（こうじょう）: Nhà máy / Xưởng sản xuất\n製作（せいさく）: Chế tạo / Sản xuất\n打（う）ち込（こ）む: Đóng xuống / Đóng cọc\n再利用（さいりよう）: Tái sử dụng\n生（なま）コンクリート: Bê tông tươi\n現場（げんば）: Công trường / Hiện trường",
   "explain_id": "Jawaban yang benar: 工場（こうじょう）で製作（せいさく）した杭（くい）を、現場（げんば）に運（はこ）んで打（う）ち込（こ）む工法（こうほう） — Metode di mana 杭（くい） (tiang pancang) 製作（せいさく） (dibuat pracetak) di 工場（こうじょう） (pabrik), lalu diangkut ke 現場（げんば） (lokasi konstruksi) untuk 打（う）ち込（こ）む (dipancang ke dalam tanah).\n\nKosakata:\n既成（きせい）杭（くい）: Tiang pancang pracetak / Tiang buatan pabrik\n工法（こうほう）: Metode konstruksi\n工場（こうじょう）: Pabrik / Bengkel produksi\n製作（せいさく）: Pembuatan / Produksi\n打（う）ち込（こ）む: Memancang / Menancapkan dengan pukulan\n再利用（さいりよう）: Penggunaan kembali\n生（なま）コンクリート: Beton segar\n現場（げんば）: Lokasi konstruksi / Lapangan",
   "explain_en": "Correct answer: 工場（こうじょう）で製作（せいさく）した杭（くい）を、現場（げんば）に運（はこ）んで打（う）ち込（こ）む工法（こうほう） — A method in which 杭（くい） (piles) are 製作（せいさく） (precast) at a 工場（こうじょう） (factory), then transported to the 現場（げんば） (construction site) to be 打（う）ち込（こ）む (driven in).\n\nVocabulary:\n既成（きせい）杭（くい）: Precast pile / Factory-made pile\n工法（こうほう）: Construction method\n工場（こうじょう）: Factory / Production plant\n製作（せいさく）: Manufacture / Production\n打（う）ち込（こ）む: To drive in / To drive piles\n再利用（さいりよう）: Reuse\n生（なま）コンクリート: Fresh concrete\n現場（げんば）: Construction site / Site",
-  "tip": "💡 Mẹo nhớ: 既成（きせい）= 既（すで）に成（な）した（đã làm sẵn）→ 既成（きせい）杭（くい）= 杭（くい）（cọc）LÀM SẴN ở 工場（こうじょう）（nhà máy）. Khác với 場所打（ばしょう）ち杭（くい）（đổ 生（なま）コンクリート（bê tông tươi）ngay tại 現場（げんば）（công trường））."
+  "tip": "💡 Mẹo nhớ: 既成（きせい）= 既（すで）に成（な）した（đã làm sẵn）→ 既成（きせい）杭（くい）= 杭（くい）（cọc）LÀM SẴN ở 工場（こうじょう）（nhà máy）. Khác với 場所打（ばしょう）ち杭（くい）（đổ 生（なま）コンクリート（bê tông tươi）ngay tại 現場（げんば）（công trường））.",
+  "tip_id": "💡 Tips mengingat: 既成（きせい）= 既（すで）に 成（な）した (sudah dibuat jadi) → 既成（きせい）杭（くい）= 杭（くい）(tiang) yang DIBUAT JADI di 工場（こうじょう）(pabrik). Berbeda dengan 場所打（ばしょう）ち杭（くい）(mengecor 生（なま）コンクリート (beton segar) langsung di 現場（げんば）(lokasi kerja)).",
+  "tip_en": "💡 Memory tip: 既成（きせい）= 既（すで）に 成（な）した (already made/finished) → 既成（きせい）杭（くい）= a 杭（くい）(pile) MADE READY at a 工場（こうじょう）(factory). Different from 場所打（ばしょう）ち杭（くい）(casting 生（なま）コンクリート (fresh concrete) directly at the 現場（げんば）(site))."
 },
 {
   "id": 49,
@@ -308,10 +380,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Công việc lắp dựng khung xương của công trình bằng thép gọi là thi công kết cấu thép.",
+  "vi_id": "Pekerjaan merakit kerangka bangunan dari baja disebut pekerjaan baja struktural.",
+  "vi_en": "The work of assembling a building's frame from steel is called structural steel work.",
   "explain": "Đáp án đúng: 鉄骨（てっこつ）工事（こうじ）— Công việc sử dụng 鉄骨（てっこつ）（thép hình）để dựng 骨組（ほねぐ）み（khung xương）: 柱（はしら）（cột）、梁（はり）（dầm）cho các công trình.\n\nTừ vựng:\n柱（はしら）: Cột\n梁（はり）: Dầm\n建物（たてもの）: Tòa nhà / Công trình\n骨組（ほねぐ）み: Khung xương / Kết cấu khung\n鉄骨（てっこつ）: Thép kết cấu / Thép hình\n組（く）み立（た）てる: Lắp ráp / Lắp dựng\n鉄筋（てっきん）: Thép cốt (dùng trong bê tông)\n型枠（かたわく）: Khuôn / Ván khuôn\n継手（つぎて）: Mối nối",
   "explain_id": "Jawaban yang benar: 鉄骨（てっこつ）工事（こうじ） — Pekerjaan menggunakan 鉄骨（てっこつ） (baja profil) untuk memasang 骨組（ほねぐ）み (rangka): 柱（はしら） (kolom), 梁（はり） (balok) untuk bangunan.\n\nKosakata:\n柱（はしら）: Kolom\n梁（はり）: Balok\n建物（たてもの）: Bangunan / Gedung\n骨組（ほねぐ）み: Rangka / Struktur rangka\n鉄骨（てっこつ）: Baja struktur / Baja profil\n組（く）み立（た）てる: Merakit / Memasang\n鉄筋（てっきん）: Baja tulangan (digunakan dalam beton)\n型枠（かたわく）: Bekisting\n継手（つぎて）: Sambungan",
   "explain_en": "Correct answer: 鉄骨（てっこつ）工事（こうじ） — Work using 鉄骨（てっこつ） (structural steel) to erect a 骨組（ほねぐ）み (frame): 柱（はしら） (columns) and 梁（はり） (beams) for buildings.\n\nVocabulary:\n柱（はしら）: Column\n梁（はり）: Beam\n建物（たてもの）: Building / Structure\n骨組（ほねぐ）み: Frame / Structural frame\n鉄骨（てっこつ）: Structural steel / Steel section\n組（く）み立（た）てる: To assemble / To erect\n鉄筋（てっきん）: Reinforcing steel (used in concrete)\n型枠（かたわく）: Formwork\n継手（つぎて）: Joint",
-  "tip": "💡 Mẹo nhớ: 鉄骨（てっこつ）工事（こうじ）= dùng 鉄骨（てっこつ）（thép HÌNH I, H, L...）để dựng 骨組（ほねぐ）み（KHUNG）nhà. 鉄筋（てっきん）工事（こうじ）= dùng 鉄筋（てっきん）（thép CỐT thanh tròn）cho コンクリート（bê tông）. Hai 種類（しゅるい）（loại）の鉄（てつ）（thép）khác nhau hoàn toàn."
+  "tip": "💡 Mẹo nhớ: 鉄骨（てっこつ）工事（こうじ）= dùng 鉄骨（てっこつ）（thép HÌNH I, H, L...）để dựng 骨組（ほねぐ）み（KHUNG）nhà. 鉄筋（てっきん）工事（こうじ）= dùng 鉄筋（てっきん）（thép CỐT thanh tròn）cho コンクリート（bê tông）. Hai 種類（しゅるい）（loại）の鉄（てつ）（thép）khác nhau hoàn toàn.",
+  "tip_id": "💡 Tips mengingat: 鉄骨（てっこつ）工事（こうじ）= menggunakan 鉄骨（てっこつ）(baja PROFIL I, H, L...) untuk mendirikan 骨組（ほねぐ）み (KERANGKA) rumah. 鉄筋（てっきん）工事（こうじ）= menggunakan 鉄筋（てっきん）(baja TULANGAN batang bulat) untuk コンクリート (beton). Dua 種類（しゅるい）(jenis) の 鉄（てつ）(baja) yang sama sekali berbeda.",
+  "tip_en": "💡 Memory tip: 鉄骨（てっこつ）工事（こうじ）= using 鉄骨（てっこつ）(steel SECTIONS I, H, L...) to build the 骨組（ほねぐ）み (FRAME) of a house. 鉄筋（てっきん）工事（こうじ）= using 鉄筋（てっきん）(round reinforcing BARS) for コンクリート (concrete). Two completely different 種類（しゅるい）(types) of 鉄（てつ）(steel)."
 },
 {
   "id": 50,
@@ -324,10 +400,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Hệ thống nâng cao năng lực không nhằm truy cứu trách nhiệm doanh nghiệp, mà để nâng cao kỹ năng và chất lượng công việc.",
+  "vi_id": "Sistem peningkatan kemampuan bukan untuk menuntut pertanggungjawaban perusahaan, melainkan untuk meningkatkan keterampilan dan kualitas pekerjaan.",
+  "vi_en": "The capability improvement system is not aimed at pursuing company responsibility, but at improving skills and work quality.",
   "explain": "Đáp án đúng (SAI): 事業（じぎょう）の責任（せきにん）を追及（ついきゅう）する — Đây là nội dung không phù hợp vì hệ thống CCUS không dùng để 追及（ついきゅう）（truy cứu）責任（せきにん）（trách nhiệm）.\n\nTừ vựng:\n建設（けんせつ）キャリアアップシステム: Hệ thống nâng cao năng lực ngành xây dựng (CCUS)\n責任（せきにん）を追及（ついきゅう）する: Truy cứu trách nhiệm\n技能（ぎのう）: Kỹ năng nghề\n公正（こうせい）: Công bằng / Công minh\n評価（ひょうか）: Đánh giá\n効率化（こうりつか）: Nâng cao hiệu quả / Hợp lý hóa\n品質向上（ひんしつこうじょう）: Nâng cao chất lượng",
   "explain_id": "Jawaban yang benar (SALAH): 事業（じぎょう）の責任（せきにん）を追及（ついきゅう）する — Ini adalah isi yang tidak sesuai karena sistem CCUS tidak digunakan untuk 追及（ついきゅう） (menuntut) 責任（せきにん） (tanggung jawab).\n\nKosakata:\n建設（けんせつ）キャリアアップシステム: Sistem peningkatan karier konstruksi (CCUS)\n責任（せきにん）を追及（ついきゅう）する: Menuntut tanggung jawab\n技能（ぎのう）: Keterampilan kerja\n公正（こうせい）: Adil / Jujur\n評価（ひょうか）: Penilaian\n効率化（こうりつか）: Peningkatan efisiensi / Rasionalisasi\n品質向上（ひんしつこうじょう）: Peningkatan kualitas",
   "explain_en": "Correct answer (WRONG statement): 事業（じぎょう）の責任（せきにん）を追及（ついきゅう）する — This is inappropriate content because the CCUS system is not used to 追及（ついきゅう） (pursue) 責任（せきにん） (responsibility / liability).\n\nVocabulary:\n建設（けんせつ）キャリアアップシステム: Construction Career Up System (CCUS)\n責任（せきにん）を追及（ついきゅう）する: To pursue responsibility / liability\n技能（ぎのう）: Occupational skill\n公正（こうせい）: Fair / Impartial\n評価（ひょうか）: Evaluation\n効率化（こうりつか）: Improving efficiency / Streamlining\n品質向上（ひんしつこうじょう）: Quality improvement",
-  "tip": "💡 Mẹo nhớ: CCUS 目的（もくてき）（mục đích）= 技能（ぎのう）評価（ひょうか）（đánh giá kỹ năng）và 品質向上（ひんしつこうじょう）（nâng cao chất lượng）, không phải để 責任追及（せきにんついきゅう）（truy cứu trách nhiệm）. Thấy 責任（せきにん）追及（ついきゅう）→ đây là đáp án SAI."
+  "tip": "💡 Mẹo nhớ: CCUS 目的（もくてき）（mục đích）= 技能（ぎのう）評価（ひょうか）（đánh giá kỹ năng）và 品質向上（ひんしつこうじょう）（nâng cao chất lượng）, không phải để 責任追及（せきにんついきゅう）（truy cứu trách nhiệm）. Thấy 責任（せきにん）追及（ついきゅう）→ đây là đáp án SAI.",
+  "tip_id": "💡 Tips mengingat: CCUS 目的（もくてき）(tujuan) = 技能（ぎのう）評価（ひょうか）(penilaian keterampilan) dan 品質向上（ひんしつこうじょう）(peningkatan kualitas), bukan untuk 責任追及（せきにんついきゅう）(menuntut pertanggungjawaban). Jika melihat 責任（せきにん）追及（ついきゅう）→ itu jawaban yang SALAH.",
+  "tip_en": "💡 Memory tip: The CCUS 目的（もくてき）(purpose) = 技能（ぎのう）評価（ひょうか）(skill evaluation) and 品質向上（ひんしつこうじょう）(quality improvement), not 責任追及（せきにんついきゅう）(pursuing responsibility). When you see 責任（せきにん）追及（ついきゅう）→ that is the WRONG answer."
 },
 {
   "id": 51,
@@ -340,10 +420,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Hệ thống này nhằm mục đích đánh giá công bằng kỹ năng của người lao động trong ngành xây dựng.",
+  "vi_id": "Sistem ini bertujuan untuk menilai keterampilan pekerja di industri konstruksi secara adil.",
+  "vi_en": "This system aims to fairly evaluate the skills of workers in the construction industry.",
   "explain": "Đáp án đúng: 技能（ぎのう）の公正（こうせい）な評価（ひょうか）— 技能（ぎのう）（Kỹ năng）の公正（こうせい）（công bằng）な評価（ひょうか）（Đánh giá）năng lực nghề nghiệp của 技能者（ぎのうしゃ）（người lao động）.\n\nTừ vựng:\n建設（けんせつ）キャリアアップシステム: Hệ thống nâng cao năng lực ngành xây dựng (CCUS)\n技能（ぎのう）: Kỹ năng nghề\n公正（こうせい）な評価（ひょうか）: Đánh giá công bằng\n事故（じこ）を防（ふせ）ぐ: Ngăn ngừa tai nạn\n企業（きぎょう）実績（じっせき）: Thành tích doanh nghiệp\n登録（とうろく）: Đăng ký\n安全（あんぜん）と健康（けんこう）: An toàn và sức khỏe\n確保（かくほ）: Đảm bảo",
   "explain_id": "Jawaban yang benar: 技能（ぎのう）の公正（こうせい）な評価（ひょうか） — 技能（ぎのう） (Keterampilan) の公正（こうせい） (adil) な評価（ひょうか） (Penilaian) terhadap kemampuan kerja 技能者（ぎのうしゃ） (pekerja terampil).\n\nKosakata:\n建設（けんせつ）キャリアアップシステム: Sistem peningkatan karier konstruksi (CCUS)\n技能（ぎのう）: Keterampilan kerja\n公正（こうせい）な評価（ひょうか）: Penilaian yang adil\n事故（じこ）を防（ふせ）ぐ: Mencegah kecelakaan\n企業（きぎょう）実績（じっせき）: Prestasi perusahaan\n登録（とうろく）: Pendaftaran\n安全（あんぜん）と健康（けんこう）: Keselamatan dan kesehatan\n確保（かくほ）: Menjamin / Memastikan",
   "explain_en": "Correct answer: 技能（ぎのう）の公正（こうせい）な評価（ひょうか） — A 公正（こうせい） (fair) 評価（ひょうか） (evaluation) of the 技能（ぎのう） (skills) and occupational ability of 技能者（ぎのうしゃ） (skilled workers).\n\nVocabulary:\n建設（けんせつ）キャリアアップシステム: Construction Career Up System (CCUS)\n技能（ぎのう）: Occupational skill\n公正（こうせい）な評価（ひょうか）: Fair evaluation\n事故（じこ）を防（ふせ）ぐ: To prevent accidents\n企業（きぎょう）実績（じっせき）: Company track record\n登録（とうろく）: Registration\n安全（あんぜん）と健康（けんこう）: Safety and health\n確保（かくほ）: To ensure / To secure",
-  "tip": "💡 Mẹo nhớ: CCUS = ghi lại 経験（けいけん）（kinh nghiệm）、技能（ぎのう）（kỹ năng）của 技能者（ぎのうしゃ）（công nhân）→ 目的（もくてき）（mục đích）chính là 技能（ぎのう）の公正（こうせい）な評価（ひょうか）（đánh giá kỹ năng công bằng）. Thấy 技能（ぎのう）+ 公正（こうせい）+ 評価（ひょうか）→ đây là đáp án ĐÚNG."
+  "tip": "💡 Mẹo nhớ: CCUS = ghi lại 経験（けいけん）（kinh nghiệm）、技能（ぎのう）（kỹ năng）của 技能者（ぎのうしゃ）（công nhân）→ 目的（もくてき）（mục đích）chính là 技能（ぎのう）の公正（こうせい）な評価（ひょうか）（đánh giá kỹ năng công bằng）. Thấy 技能（ぎのう）+ 公正（こうせい）+ 評価（ひょうか）→ đây là đáp án ĐÚNG.",
+  "tip_id": "💡 Tips mengingat: CCUS = mencatat 経験（けいけん）(pengalaman) dan 技能（ぎのう）(keterampilan) 技能者（ぎのうしゃ）(pekerja) → 目的（もくてき）(tujuan) utamanya adalah 技能（ぎのう）の公正（こうせい）な評価（ひょうか）(penilaian keterampilan yang adil). Jika melihat 技能（ぎのう）+ 公正（こうせい）+ 評価（ひょうか）→ itu jawaban yang BENAR.",
+  "tip_en": "💡 Memory tip: CCUS = records the 経験（けいけん）(experience) and 技能（ぎのう）(skills) of 技能者（ぎのうしゃ）(skilled workers) → its main 目的（もくてき）(purpose) is 技能（ぎのう）の公正（こうせい）な評価（ひょうか）(fair evaluation of skills). When you see 技能（ぎのう）+ 公正（こうせい）+ 評価（ひょうか）→ that is the CORRECT answer."
 },
 {
   "id": 52,
@@ -356,10 +440,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "段取り là việc lên kế hoạch và sắp xếp trước các bước thi công để tránh việc làm lại.",
+  "vi_id": "段取り adalah merencanakan dan mengatur langkah-langkah konstruksi sebelumnya untuk menghindari pekerjaan ulang.",
+  "vi_en": "段取り is planning and arranging the construction steps in advance to avoid rework.",
   "explain": "Đáp án đúng: 手戻（てもど）りがないように、あらかじめ施工（せこう）の方法（ほうほう）を考（かんが）え、その手順（てじゅん）を計画（けいかく）することです — Lập 計画（けいかく）（kế hoạch）thi công 手順（てじゅん）（trình tự）cẩn thận để tránh 手戻（てもど）り（sai sót phải làm lại）.\n\nTừ vựng:\n段取（だんど）り: Chuẩn bị / Sắp xếp kế hoạch trước\n手戻（てもど）り: Làm lại / Quay lại bước trước\nあらかじめ: Trước / Sẵn sàng từ trước\n施工（せこう）: Thi công\n手順（てじゅん）: Trình tự / Các bước\n計画（けいかく）: Kế hoạch\n修正（しゅうせい）: Sửa chữa / Chỉnh sửa\n余分（よぶん）: Dư / Thừa\n隙間（すきま）: Khe hở / Khoảng trống",
   "explain_id": "Jawaban yang benar: 手戻（てもど）りがないように、あらかじめ施工（せこう）の方法（ほうほう）を考（かんが）え、その手順（てじゅん）を計画（けいかく）することです — Membuat 計画（けいかく） (rencana) 手順（てじゅん） (urutan) pelaksanaan dengan cermat untuk menghindari 手戻（てもど）り (kesalahan yang harus dikerjakan ulang).\n\nKosakata:\n段取（だんど）り: Persiapan / Penataan rencana sebelumnya\n手戻（てもど）り: Pengerjaan ulang / Kembali ke langkah sebelumnya\nあらかじめ: Sebelumnya / Dari awal\n施工（せこう）: Pelaksanaan konstruksi\n手順（てじゅん）: Urutan / Langkah-langkah\n計画（けいかく）: Rencana\n修正（しゅうせい）: Perbaikan / Koreksi\n余分（よぶん）: Kelebihan / Berlebih\n隙間（すきま）: Celah / Ruang kosong",
   "explain_en": "Correct answer: 手戻（てもど）りがないように、あらかじめ施工（せこう）の方法（ほうほう）を考（かんが）え、その手順（てじゅん）を計画（けいかく）することです — Carefully making a 計画（けいかく） (plan) of the construction 手順（てじゅん） (sequence) to avoid 手戻（てもど）り (mistakes that require rework).\n\nVocabulary:\n段取（だんど）り: Preparation / Planning arrangements in advance\n手戻（てもど）り: Rework / Going back to a previous step\nあらかじめ: In advance / Beforehand\n施工（せこう）: Construction execution\n手順（てじゅん）: Sequence / Steps\n計画（けいかく）: Plan\n修正（しゅうせい）: Correction / Revision\n余分（よぶん）: Extra / Excess\n隙間（すきま）: Gap / Clearance",
-  "tip": "💡 Mẹo nhớ: 段取（だんど）り = chuẩn bị KẾ HOẠCH TRƯỚC để tránh 手戻（てもど）り（làm lại）. Thấy「あらかじめ」（từ trước）+「手順（てじゅん）を計画（けいかく）」（lập kế hoạch trình tự）→ đây là định nghĩa đúng của 段取（だんど）り."
+  "tip": "💡 Mẹo nhớ: 段取（だんど）り = chuẩn bị KẾ HOẠCH TRƯỚC để tránh 手戻（てもど）り（làm lại）. Thấy「あらかじめ」（từ trước）+「手順（てじゅん）を計画（けいかく）」（lập kế hoạch trình tự）→ đây là định nghĩa đúng của 段取（だんど）り.",
+  "tip_id": "💡 Tips mengingat: 段取（だんど）り = menyiapkan RENCANA SEBELUMNYA untuk menghindari 手戻（てもど）り (pekerjaan ulang). Jika melihat 「あらかじめ」(sebelumnya) + 「手順（てじゅん）を計画（けいかく）」(merencanakan urutan) → itu definisi yang benar dari 段取（だんど）り.",
+  "tip_en": "💡 Memory tip: 段取（だんど）り = preparing a PLAN IN ADVANCE to avoid 手戻（てもど）り (rework). When you see 「あらかじめ」(in advance) + 「手順（てじゅん）を計画（けいかく）」(planning the procedure) → that is the correct definition of 段取（だんど）り."
 },
 {
   "id": 53,
@@ -372,10 +460,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Theo luật an toàn lao động, phải bố trí người chỉ huy trực tiếp công việc tại hiện trường.",
+  "vi_id": "Menurut undang-undang keselamatan kerja, orang yang memimpin pekerjaan secara langsung harus ditempatkan di lokasi.",
+  "vi_en": "According to the occupational safety law, a person who directly supervises the work must be assigned at the site.",
   "explain": "Đáp án đúng: 作業（さぎょう）主任者（しゅにんしゃ）— Người 指揮（しき）（chỉ huy）công việc được 配置（はいち）（bố trí）tại 現場（げんば）（công trường）để 指導（しどう）（hướng dẫn）và đảm bảo 安全（あんぜん）（an toàn）.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Luật an toàn vệ sinh lao động\n定（さだ）める: Quy định\n労働者（ろうどうしゃ）: Người lao động\n指揮（しき）する: Chỉ huy / Điều phối\n配置（はいち）する: Bố trí / Sắp xếp vị trí\n作業主任者（さぎょうしゅにんしゃ）: Người phụ trách công việc / Trưởng ca\n主任技術者（しゅにんぎじゅつしゃ）: Kỹ thuật viên phụ trách\n職長（しょくちょう）: Tổ trưởng\n管理技術者（かんりぎじゅつしゃ）: Kỹ thuật viên quản lý",
   "explain_id": "Jawaban yang benar: 作業（さぎょう）主任者（しゅにんしゃ） — Orang yang 指揮（しき） (memimpin) pekerjaan, yang 配置（はいち） (ditempatkan) di 現場（げんば） (lokasi konstruksi) untuk 指導（しどう） (membimbing) dan memastikan 安全（あんぜん） (keselamatan).\n\nKosakata:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Undang-Undang Keselamatan dan Kesehatan Kerja\n定（さだ）める: Menetapkan / Mengatur\n労働者（ろうどうしゃ）: Pekerja\n指揮（しき）する: Memimpin / Mengoordinasikan\n配置（はいち）する: Menempatkan / Mengatur posisi\n作業主任者（さぎょうしゅにんしゃ）: Penanggung jawab pekerjaan / Kepala regu kerja\n主任技術者（しゅにんぎじゅつしゃ）: Teknisi penanggung jawab\n職長（しょくちょう）: Mandor\n管理技術者（かんりぎじゅつしゃ）: Teknisi pengelola / Manajer teknis",
   "explain_en": "Correct answer: 作業（さぎょう）主任者（しゅにんしゃ） — A person who 指揮（しき） (supervises) the work, 配置（はいち） (assigned) at the 現場（げんば） (construction site) to 指導（しどう） (guide) workers and ensure 安全（あんぜん） (safety).\n\nVocabulary:\n労働（ろうどう）安全（あんぜん）衛生法（えいせいほう）: Occupational Safety and Health Act\n定（さだ）める: To stipulate / To prescribe\n労働者（ろうどうしゃ）: Worker\n指揮（しき）する: To supervise / To direct\n配置（はいち）する: To assign / To arrange positions\n作業主任者（さぎょうしゅにんしゃ）: Operations chief / Work supervisor\n主任技術者（しゅにんぎじゅつしゃ）: Chief engineer\n職長（しょくちょう）: Foreman\n管理技術者（かんりぎじゅつしゃ）: Managing engineer",
-  "tip": "💡 Mẹo nhớ: 法律（ほうりつ）（luật）an toàn quy định phải có 作業（さぎょう）主任者（しゅにんしゃ）（người 指揮（しき）（chỉ huy）trực tiếp）tại 現場（げんば）（công trường）. Khác với 職長（しょくちょう）（tổ trưởng）— 作業（さぎょう）主任者（しゅにんしゃ）là 資格（しかく）（chức danh）quy định trong 法律（ほうりつ）（luật）, có 責任（せきにん）（trách nhiệm）pháp lý rõ ràng hơn."
+  "tip": "💡 Mẹo nhớ: 法律（ほうりつ）（luật）an toàn quy định phải có 作業（さぎょう）主任者（しゅにんしゃ）（người 指揮（しき）（chỉ huy）trực tiếp）tại 現場（げんば）（công trường）. Khác với 職長（しょくちょう）（tổ trưởng）— 作業（さぎょう）主任者（しゅにんしゃ）là 資格（しかく）（chức danh）quy định trong 法律（ほうりつ）（luật）, có 責任（せきにん）（trách nhiệm）pháp lý rõ ràng hơn.",
+  "tip_id": "💡 Tips mengingat: 法律（ほうりつ）(undang-undang) keselamatan menetapkan harus ada 作業（さぎょう）主任者（しゅにんしゃ）(penanggung jawab pekerjaan yang 指揮（しき）(memimpin) secara langsung) di 現場（げんば）(lokasi kerja). Berbeda dengan 職長（しょくちょう）(ketua tim) — 作業（さぎょう）主任者（しゅにんしゃ）adalah 資格（しかく）(jabatan/kualifikasi) yang diatur dalam 法律（ほうりつ）(undang-undang), dengan 責任（せきにん）(tanggung jawab) hukum yang lebih jelas.",
+  "tip_en": "💡 Memory tip: The safety 法律（ほうりつ）(law) requires a 作業（さぎょう）主任者（しゅにんしゃ）(work supervisor who 指揮（しき）(directly supervises)) at the 現場（げんば）(site). Different from a 職長（しょくちょう）(team leader) — 作業（さぎょう）主任者（しゅにんしゃ）is a 資格（しかく）(qualification/title) defined in the 法律（ほうりつ）(law), with clearer legal 責任（せきにん）(responsibility)."
 },
 {
   "id": 54,
@@ -388,10 +480,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "整頓 nghĩa là sắp xếp vật tư, dụng cụ một cách hợp lý, đúng vị trí và dễ lấy khi cần.",
+  "vi_id": "整頓 berarti menata material dan peralatan secara wajar, pada posisi yang benar, dan mudah diambil saat dibutuhkan.",
+  "vi_en": "整頓 means arranging materials and tools reasonably, in the right positions, and easy to take out when needed.",
   "explain": "Đáp án đúng: 資材（しざい）や道具（どうぐ）を作業（さぎょう）の流（なが）れを考（かんが）えて、適切（てきせつ）な位置（いち）に配置（はいち）すること — Sắp xếp hợp lý 資材（しざい）（vật liệu）và 道具（どうぐ）（dụng cụ）theo 流（なが）れ（quy trình）làm việc.\n\nTừ vựng:\n整頓（せいとん）: Sắp xếp / Ngăn nắp (chữ S thứ 2 trong 5S)\n定義（ていぎ）: Định nghĩa\n不要（ふよう）: Không cần thiết\n資材（しざい）: Vật liệu / Vật tư\n道具（どうぐ）: Dụng cụ\n廃材（はいざい）: Vật liệu phế thải\n撤去（てっきょ）: Dỡ bỏ / Loại bỏ\n流（なが）れ: Quy trình / Dòng chảy\n適切（てきせつ）な位置（いち）: Vị trí phù hợp\n配置（はいち）: Bố trí / Sắp xếp vị trí\n安全靴（あんぜんぐつ）: Giày bảo hộ\n塵（ちり）: Bụi / Bụi bẩn",
   "explain_id": "Jawaban yang benar: 資材（しざい）や道具（どうぐ）を作業（さぎょう）の流（なが）れを考（かんが）えて、適切（てきせつ）な位置（いち）に配置（はいち）すること — Menata 資材（しざい） (material) dan 道具（どうぐ） (peralatan) secara tepat sesuai 流（なが）れ (alur) pekerjaan.\n\nKosakata:\n整頓（せいとん）: Penataan / Kerapian (S ke-2 dalam 5S)\n定義（ていぎ）: Definisi\n不要（ふよう）: Tidak diperlukan\n資材（しざい）: Material / Bahan\n道具（どうぐ）: Peralatan / Alat\n廃材（はいざい）: Material sisa / Limbah bahan\n撤去（てっきょ）: Pembongkaran / Penghapusan\n流（なが）れ: Alur / Proses\n適切（てきせつ）な位置（いち）: Posisi yang tepat\n配置（はいち）: Penempatan / Penataan posisi\n安全靴（あんぜんぐつ）: Sepatu keselamatan\n塵（ちり）: Debu / Kotoran debu",
   "explain_en": "Correct answer: 資材（しざい）や道具（どうぐ）を作業（さぎょう）の流（なが）れを考（かんが）えて、適切（てきせつ）な位置（いち）に配置（はいち）すること — Arranging 資材（しざい） (materials) and 道具（どうぐ） (tools) appropriately according to the work 流（なが）れ (flow).\n\nVocabulary:\n整頓（せいとん）: Tidying / Orderliness (the 2nd S in 5S)\n定義（ていぎ）: Definition\n不要（ふよう）: Unnecessary\n資材（しざい）: Materials / Supplies\n道具（どうぐ）: Tools\n廃材（はいざい）: Waste material\n撤去（てっきょ）: Removal / Clearing away\n流（なが）れ: Flow / Process\n適切（てきせつ）な位置（いち）: Appropriate position\n配置（はいち）: Placement / Arrangement\n安全靴（あんぜんぐつ）: Safety shoes\n塵（ちり）: Dust / Dirt",
-  "tip": "💡 Mẹo nhớ: 5S: 整理（せいり）（loại bỏ thứ không cần）→ 整頓（せいとん）（SẮP XẾP đúng chỗ）→ 清掃（せいそう）（dọn sạch）→... Câu hỏi hỏi 整頓（せいとん）→ chọn đáp án nói về SẮP XẾP 位置（いち）（VỊ TRÍ）HỢP LÝ theo 流（なが）れ（quy trình）."
+  "tip": "💡 Mẹo nhớ: 5S: 整理（せいり）（loại bỏ thứ không cần）→ 整頓（せいとん）（SẮP XẾP đúng chỗ）→ 清掃（せいそう）（dọn sạch）→... Câu hỏi hỏi 整頓（せいとん）→ chọn đáp án nói về SẮP XẾP 位置（いち）（VỊ TRÍ）HỢP LÝ theo 流（なが）れ（quy trình）.",
+  "tip_id": "💡 Tips mengingat: 5S: 整理（せいり）(membuang yang tidak perlu) → 整頓（せいとん）(MENATA di tempatnya) → 清掃（せいそう）(membersihkan) → ... Soal menanyakan 整頓（せいとん）→ pilih jawaban yang berbicara tentang MENATA 位置（いち）(POSISI) secara WAJAR mengikuti 流（なが）れ (alur kerja).",
+  "tip_en": "💡 Memory tip: 5S: 整理（せいり）(removing what is unneeded) → 整頓（せいとん）(ARRANGING in place) → 清掃（せいそう）(cleaning) → ... The question asks about 整頓（せいとん）→ choose the answer about ARRANGING in a REASONABLE 位置（いち）(POSITION) following the 流（なが）れ (workflow)."
 },
 {
   "id": 55,
@@ -404,10 +500,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 1,
   "vi": "Quản lý chất lượng trong xây dựng là đảm bảo thi công đúng theo tiêu chuẩn thiết kế và bản vẽ.",
+  "vi_id": "Manajemen kualitas dalam konstruksi adalah memastikan pekerjaan dilaksanakan dengan benar sesuai standar desain dan gambar.",
+  "vi_en": "Quality management in construction means ensuring that construction is carried out correctly according to design standards and drawings.",
   "explain": "Đáp án đúng: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり）— Quản lý để đảm bảo 品質（ひんしつ）（chất lượng）đúng theo 設計（せっけい）図書（としょ）（bản vẽ thiết kế）.\n\nTừ vựng:\n品質（ひんしつ）管理（かんり）: Quản lý chất lượng\n設計（せっけい）図書（としょ）: Hồ sơ thiết kế / Bản vẽ thiết kế\n通（どお）りに: Theo đúng / Đúng như\n満（み）たす: Đáp ứng / Thỏa mãn\n目的（もくてき）: Mục đích\n教育（きょういく）: Giáo dục / Đào tạo\n仕様（しよう）: Thông số kỹ thuật / Tiêu chuẩn\n把握（はあく）: Nắm bắt / Hiểu rõ",
   "explain_id": "Jawaban yang benar: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり） — Pengelolaan untuk memastikan 品質（ひんしつ） (kualitas) sesuai dengan 設計（せっけい）図書（としょ） (dokumen gambar desain).\n\nKosakata:\n品質（ひんしつ）管理（かんり）: Manajemen kualitas\n設計（せっけい）図書（としょ）: Dokumen desain / Gambar desain\n通（どお）りに: Sesuai persis / Sebagaimana\n満（み）たす: Memenuhi\n目的（もくてき）: Tujuan\n教育（きょういく）: Pendidikan / Pelatihan\n仕様（しよう）: Spesifikasi teknis / Standar\n把握（はあく）: Memahami dengan jelas / Menguasai",
   "explain_en": "Correct answer: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり） — Management to ensure 品質（ひんしつ） (quality) exactly as specified in the 設計（せっけい）図書（としょ） (design documents / drawings).\n\nVocabulary:\n品質（ひんしつ）管理（かんり）: Quality management\n設計（せっけい）図書（としょ）: Design documents / Design drawings\n通（どお）りに: Exactly as / In accordance with\n満（み）たす: To satisfy / To meet\n目的（もくてき）: Purpose\n教育（きょういく）: Education / Training\n仕様（しよう）: Specifications / Standards\n把握（はあく）: To grasp / To understand clearly",
-  "tip": "💡 Mẹo nhớ: 品質（ひんしつ）管理（かんり）（quản lý chất lượng）= 施工（せこう）（thi công）ĐÚNG THEO 設計図書（せっけいとしょ）（bản vẽ）. Thấy「設計図書（せっけいとしょ）通（どお）りの品質（ひんしつ）」→ đây là định nghĩa chuẩn của 品質管理（ひんしつかんり）trong 建設（けんせつ）（xây dựng）."
+  "tip": "💡 Mẹo nhớ: 品質（ひんしつ）管理（かんり）（quản lý chất lượng）= 施工（せこう）（thi công）ĐÚNG THEO 設計図書（せっけいとしょ）（bản vẽ）. Thấy「設計図書（せっけいとしょ）通（どお）りの品質（ひんしつ）」→ đây là định nghĩa chuẩn của 品質管理（ひんしつかんり）trong 建設（けんせつ）（xây dựng）.",
+  "tip_id": "💡 Tips mengingat: 品質（ひんしつ）管理（かんり）(manajemen kualitas) = 施工（せこう）(pelaksanaan) BENAR SESUAI 設計図書（せっけいとしょ）(gambar desain). Jika melihat 「設計図書（せっけいとしょ）通（どお）りの品質（ひんしつ）」→ itu definisi standar 品質管理（ひんしつかんり）dalam 建設（けんせつ）(konstruksi).",
+  "tip_en": "💡 Memory tip: 品質（ひんしつ）管理（かんり）(quality management) = 施工（せこう）(construction) EXACTLY ACCORDING TO the 設計図書（せっけいとしょ）(design drawings). When you see 「設計図書（せっけいとしょ）通（どお）りの品質（ひんしつ）」→ that is the standard definition of 品質管理（ひんしつかんり）in 建設（けんせつ）(construction)."
 },
 {
   "id": 56,
@@ -420,10 +520,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 2,
   "vi": "Cần giám sát kỹ các công việc ảnh hưởng đến tiến độ hoặc an toàn của công việc khác.",
+  "vi_id": "Pekerjaan yang memengaruhi jadwal atau keselamatan pekerjaan lain perlu diawasi dengan cermat.",
+  "vi_en": "Work that affects the schedule or safety of other work needs to be monitored carefully.",
   "explain": "Đáp án đúng: 他（た）の作業（さぎょう）に影響（えいきょう）する作業（さぎょう）は重点的（じゅうてんてき）に進捗（しんちょく）を監視（かんし）する — 重点的（じゅうてんてき）（Trọng điểm）giám sát 進捗（しんちょく）（tiến độ）các 作業（さぎょう）（công việc）có 影響（えいきょう）（ảnh hưởng）chéo.\n\nTừ vựng:\n工程（こうてい）管理（かんり）: Quản lý tiến độ\n職種（しょくしゅ）: Nghề / Công việc\n進捗（しんちょく）状況（じょうきょう）: Tình trạng tiến độ\n影響（えいきょう）: Ảnh hưởng\n重点的（じゅうてんてき）に: Trọng điểm / Tập trung vào\n監視（かんし）する: Giám sát\n想定（そうてい）する: Giả định / Dự kiến\n搬入（はんにゅう）: Vận chuyển vào / Nhập vật liệu",
   "explain_id": "Jawaban yang benar: 他（た）の作業（さぎょう）に影響（えいきょう）する作業（さぎょう）は重点的（じゅうてんてき）に進捗（しんちょく）を監視（かんし）する — Secara 重点的（じゅうてんてき） (terfokus pada poin penting) memantau 進捗（しんちょく） (kemajuan) 作業（さぎょう） (pekerjaan) yang saling 影響（えいきょう） (berpengaruh).\n\nKosakata:\n工程（こうてい）管理（かんり）: Manajemen jadwal / kemajuan\n職種（しょくしゅ）: Jenis pekerjaan / Profesi\n進捗（しんちょく）状況（じょうきょう）: Status kemajuan\n影響（えいきょう）: Pengaruh\n重点的（じゅうてんてき）に: Secara terfokus / Dengan penekanan\n監視（かんし）する: Memantau / Mengawasi\n想定（そうてい）する: Mengasumsikan / Memperkirakan\n搬入（はんにゅう）: Pengangkutan masuk / Pengiriman material masuk",
   "explain_en": "Correct answer: 他（た）の作業（さぎょう）に影響（えいきょう）する作業（さぎょう）は重点的（じゅうてんてき）に進捗（しんちょく）を監視（かんし）する — Closely monitoring, as a priority, the 進捗（しんちょく） (progress) of 作業（さぎょう） (work) that has a cross-影響（えいきょう） (effect) on other work.\n\nVocabulary:\n工程（こうてい）管理（かんり）: Schedule / Progress management\n職種（しょくしゅ）: Occupation / Type of work\n進捗（しんちょく）状況（じょうきょう）: Progress status\n影響（えいきょう）: Effect / Influence\n重点的（じゅうてんてき）に: With priority focus\n監視（かんし）する: To monitor\n想定（そうてい）する: To assume / To anticipate\n搬入（はんにゅう）: Bringing in / Delivering materials in",
-  "tip": "💡 Mẹo nhớ: 工程（こうてい）管理（かんり）（quản lý tiến độ）tốt = phải 注意（ちゅうい）（chú ý）đặc biệt đến các 作業（さぎょう）（công việc）có 影響（えいきょう）（ảnh hưởng）đến 作業（さぎょう）（công việc）khác. Thấy「他（た）の作業（さぎょう）に影響（えいきょう）する」+「重点的（じゅうてんてき）に監視（かんし）」→ đây là phương pháp ĐÚNG."
+  "tip": "💡 Mẹo nhớ: 工程（こうてい）管理（かんり）（quản lý tiến độ）tốt = phải 注意（ちゅうい）（chú ý）đặc biệt đến các 作業（さぎょう）（công việc）có 影響（えいきょう）（ảnh hưởng）đến 作業（さぎょう）（công việc）khác. Thấy「他（た）の作業（さぎょう）に影響（えいきょう）する」+「重点的（じゅうてんてき）に監視（かんし）」→ đây là phương pháp ĐÚNG.",
+  "tip_id": "💡 Tips mengingat: 工程（こうてい）管理（かんり）(manajemen jadwal) yang baik = harus 注意（ちゅうい）(memperhatikan) secara khusus 作業（さぎょう）(pekerjaan) yang 影響（えいきょう）(berpengaruh) terhadap 作業（さぎょう）(pekerjaan) lain. Jika melihat 「他（た）の作業（さぎょう）に影響（えいきょう）する」+「重点的（じゅうてんてき）に監視（かんし）」→ itu metode yang BENAR.",
+  "tip_en": "💡 Memory tip: Good 工程（こうてい）管理（かんり）(schedule management) = paying special 注意（ちゅうい）(attention) to 作業（さぎょう）(work) that has 影響（えいきょう）(an effect) on other 作業（さぎょう）(work). When you see 「他（た）の作業（さぎょう）に影響（えいきょう）する」+「重点的（じゅうてんてき）に監視（かんし）」→ that is the CORRECT method."
 },
 {
   "id": 57,
@@ -436,10 +540,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Trong trường hợp có tai nạn do máy móc, không được cứu nạn nhân trước khi dừng máy để tránh tai nạn thứ cấp.",
+  "vi_id": "Dalam kasus kecelakaan akibat mesin, korban tidak boleh diselamatkan sebelum mesin dihentikan, untuk menghindari kecelakaan sekunder.",
+  "vi_en": "In the case of a machinery accident, the victim must not be rescued before stopping the machine, to avoid a secondary accident.",
   "explain": "Đáp án đúng (SAI): 機械（きかい）を停止（ていし）させる前（まえ）に、被災者（ひさいしゃ）を救出（きゅうしゅつ）する — Là hành động KHÔNG đúng 安全（あんぜん）（an toàn）quy trình. Phải 停止（ていし）（DỪNG）機械（きかい）（MÁY）trước, rồi mới 救出（きゅうしゅつ）（cứu）被災者（ひさいしゃ）（nạn nhân）.\n\nTừ vựng:\n災害（さいがい）: Tai nạn / Thảm họa\n事故（じこ）: Sự cố / Tai nạn\n緊急（きんきゅう）措置（そち）: Biện pháp khẩn cấp\n関係者（かんけいしゃ）: Người liên quan\n被災者（ひさいしゃ）: Nạn nhân\n救命（きゅうめい）処置（しょち）: Sơ cứu / Cứu thương\n応急（おうきゅう）手当（てあて）: Sơ cứu ban đầu\n初期（しょき）消火（しょうか）: Chữa cháy ban đầu\n爆発物（ばくはつぶつ）: Vật liệu nổ\n二次（にじ）災害（さいがい）: Tai nạn thứ cấp\n機械（きかい）を停止（ていし）: Dừng máy\n救出（きゅうしゅつ）: Giải cứu / Cứu ra",
   "explain_id": "Jawaban yang benar (SALAH): 機械（きかい）を停止（ていし）させる前（まえ）に、被災者（ひさいしゃ）を救出（きゅうしゅつ）する — Adalah tindakan yang TIDAK sesuai dengan prosedur 安全（あんぜん） (keselamatan). Harus 停止（ていし） (MENGHENTIKAN) 機械（きかい） (MESIN) terlebih dahulu, baru kemudian 救出（きゅうしゅつ） (menyelamatkan) 被災者（ひさいしゃ） (korban).\n\nKosakata:\n災害（さいがい）: Kecelakaan / Bencana\n事故（じこ）: Insiden / Kecelakaan\n緊急（きんきゅう）措置（そち）: Tindakan darurat\n関係者（かんけいしゃ）: Pihak terkait\n被災者（ひさいしゃ）: Korban\n救命（きゅうめい）処置（しょち）: Pertolongan penyelamatan jiwa / P3K penyelamatan\n応急（おうきゅう）手当（てあて）: Pertolongan pertama awal\n初期（しょき）消火（しょうか）: Pemadaman api tahap awal\n爆発物（ばくはつぶつ）: Bahan peledak\n二次（にじ）災害（さいがい）: Kecelakaan sekunder\n機械（きかい）を停止（ていし）: Menghentikan mesin\n救出（きゅうしゅつ）: Penyelamatan / Evakuasi korban",
   "explain_en": "Correct answer (WRONG statement): 機械（きかい）を停止（ていし）させる前（まえ）に、被災者（ひさいしゃ）を救出（きゅうしゅつ）する — This is an action that is NOT correct under 安全（あんぜん） (safety) procedures. You must 停止（ていし） (STOP) the 機械（きかい） (MACHINE) first, and only then 救出（きゅうしゅつ） (rescue) the 被災者（ひさいしゃ） (victim).\n\nVocabulary:\n災害（さいがい）: Accident / Disaster\n事故（じこ）: Incident / Accident\n緊急（きんきゅう）措置（そち）: Emergency measures\n関係者（かんけいしゃ）: Persons concerned / Related parties\n被災者（ひさいしゃ）: Victim\n救命（きゅうめい）処置（しょち）: Life-saving treatment / First aid\n応急（おうきゅう）手当（てあて）: Emergency first aid\n初期（しょき）消火（しょうか）: Initial firefighting\n爆発物（ばくはつぶつ）: Explosives\n二次（にじ）災害（さいがい）: Secondary accident\n機械（きかい）を停止（ていし）: To stop a machine\n救出（きゅうしゅつ）: Rescue / Extrication",
-  "tip": "💡 Mẹo nhớ: 機械（きかい）（máy móc）による 事故（じこ）（tai nạn）→ 機械（きかい）を停止（ていし）（DỪNG MÁY）TRƯỚC, SAU ĐÓ mới 救出（きゅうしゅつ）（cứu người）. Làm ngược lại có thể gây 二次（にじ）災害（さいがい）（tai nạn thứ cấp）. Thấy「停止（ていし）させる前（まえ）に救出（きゅうしゅつ）」→ đây là SAI."
+  "tip": "💡 Mẹo nhớ: 機械（きかい）（máy móc）による 事故（じこ）（tai nạn）→ 機械（きかい）を停止（ていし）（DỪNG MÁY）TRƯỚC, SAU ĐÓ mới 救出（きゅうしゅつ）（cứu người）. Làm ngược lại có thể gây 二次（にじ）災害（さいがい）（tai nạn thứ cấp）. Thấy「停止（ていし）させる前（まえ）に救出（きゅうしゅつ）」→ đây là SAI.",
+  "tip_id": "💡 Tips mengingat: 機械（きかい）(mesin) による 事故（じこ）(kecelakaan) → 機械（きかい）を停止（ていし）(HENTIKAN MESIN) TERLEBIH DAHULU, SETELAH ITU baru 救出（きゅうしゅつ）(menyelamatkan orang). Melakukan sebaliknya dapat menyebabkan 二次（にじ）災害（さいがい）(kecelakaan sekunder). Jika melihat 「停止（ていし）させる前（まえ）に救出（きゅうしゅつ）」→ itu SALAH.",
+  "tip_en": "💡 Memory tip: For a 機械（きかい）(machine) による 事故（じこ）(accident) → 機械（きかい）を停止（ていし）(STOP THE MACHINE) FIRST, THEN 救出（きゅうしゅつ）(rescue the person). Doing it in reverse can cause 二次（にじ）災害（さいがい）(a secondary accident). When you see 「停止（ていし）させる前（まえ）に救出（きゅうしゅつ）」→ that is WRONG."
 },
 {
   "id": 58,
@@ -452,10 +560,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Hãy chọn công việc không thuộc công tác đất.",
+  "vi_id": "Pilih pekerjaan yang tidak termasuk pekerjaan tanah.",
+  "vi_en": "Choose the work that does not belong to earthwork.",
   "explain": "Đáp án đúng: 組（く）み立（た）て — không thuộc nhóm 土工（どこう）（công việc đất）, vì đây là công tác 組（く）み立（た）て（lắp ráp）.\n\nTừ vựng:\n土工（どこう）工事（こうじ）: Công tác đất\n組（く）み立（た）て: Lắp ráp / Lắp ghép\n切土（きりど）: Đào cắt đất / Cắt taluy\n埋（う）め戻（もど）し: Lấp đất lại / Đắp lại\n埋設（まいせつ）: Chôn ngầm / Lắp đặt dưới đất",
   "explain_id": "Jawaban yang benar: 組（く）み立（た）て — tidak termasuk kelompok 土工（どこう） (pekerjaan tanah), karena ini adalah pekerjaan 組（く）み立（た）て (perakitan).\n\nKosakata:\n土工（どこう）工事（こうじ）: Pekerjaan tanah\n組（く）み立（た）て: Perakitan / Pemasangan\n切土（きりど）: Pemotongan tanah / Pemotongan lereng\n埋（う）め戻（もど）し: Penimbunan kembali\n埋設（まいせつ）: Penanaman di bawah tanah / Pemasangan bawah tanah",
   "explain_en": "Correct answer: 組（く）み立（た）て — it does not belong to the 土工（どこう） (earthwork) group, because this is 組（く）み立（た）て (assembly) work.\n\nVocabulary:\n土工（どこう）工事（こうじ）: Earthwork\n組（く）み立（た）て: Assembly / Erection\n切土（きりど）: Cutting earth / Slope cutting\n埋（う）め戻（もど）し: Backfilling\n埋設（まいせつ）: Burial underground / Underground installation",
-  "tip": "💡 Mẹo nhớ: 土工（どこう）工事（こうじ）（công tác đất）= 掘削（くっさく）（đào）、盛土（もりど）（đắp）、埋（う）め戻（もど）し（lấp lại）、埋設（まいせつ）（chôn ngầm）. 組（く）み立（た）て（lắp ráp）= công việc của 機械（きかい）（cơ khí）/構造（こうぞう）（kết cấu）→ KHÔNG phải 土工（どこう）（công tác đất）."
+  "tip": "💡 Mẹo nhớ: 土工（どこう）工事（こうじ）（công tác đất）= 掘削（くっさく）（đào）、盛土（もりど）（đắp）、埋（う）め戻（もど）し（lấp lại）、埋設（まいせつ）（chôn ngầm）. 組（く）み立（た）て（lắp ráp）= công việc của 機械（きかい）（cơ khí）/構造（こうぞう）（kết cấu）→ KHÔNG phải 土工（どこう）（công tác đất）.",
+  "tip_id": "💡 Tips mengingat: 土工（どこう）工事（こうじ）(pekerjaan tanah) = 掘削（くっさく）(penggalian), 盛土（もりど）(penimbunan), 埋（う）め戻（もど）し (penimbunan kembali), 埋設（まいせつ）(penanaman). 組（く）み立（た）て (perakitan) = pekerjaan 機械（きかい）(mekanik)/構造（こうぞう）(struktur) → BUKAN 土工（どこう）(pekerjaan tanah).",
+  "tip_en": "💡 Memory tip: 土工（どこう）工事（こうじ）(earthwork) = 掘削（くっさく）(excavation), 盛土（もりど）(embankment), 埋（う）め戻（もど）し (backfilling), 埋設（まいせつ）(burying). 組（く）み立（た）て (assembly) = 機械（きかい）(mechanical)/構造（こうぞう）(structural) work → NOT 土工（どこう）(earthwork)."
 },
 {
   "id": 59,
@@ -468,10 +580,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 0,
   "vi": "Hãy chọn hành vi không được xem là quấy rối quyền lực (power harassment).",
+  "vi_id": "Pilih perilaku yang tidak dianggap sebagai pelecehan kekuasaan (power harassment).",
+  "vi_en": "Choose the behavior that is not considered power harassment.",
   "explain": "Đáp án đúng: 適正（てきせい）な仕事（しごと）の指示（しじ）— 指示（しじ）（chỉ thị）công việc 適正（てきせい）（hợp lý）không được xem là 嫌がらせ（いやがらせ）（quấy rối）.\n\nTừ vựng:\nパワーハラスメント: Quấy rối quyền lực (Power Harassment / パワハラ)\n該当（がいとう）する: Thuộc về / Tương ứng\n適正（てきせい）: Hợp lý / Phù hợp\n指示（しじ）: Chỉ thị / Hướng dẫn\n雑用（ざつよう）: Việc linh tinh / Việc không liên quan\n暴言（ぼうげん）: Lời nói thô tục / Chửi bới\n無視（むし）: Phớt lờ / Coi thường",
   "explain_id": "Jawaban yang benar: 適正（てきせい）な仕事（しごと）の指示（しじ） — 指示（しじ） (instruksi) pekerjaan yang 適正（てきせい） (wajar) tidak dianggap sebagai 嫌がらせ（いやがらせ） (pelecehan).\n\nKosakata:\nパワーハラスメント: Pelecehan kekuasaan (Power Harassment / パワハラ)\n該当（がいとう）する: Termasuk / Sesuai dengan\n適正（てきせい）: Wajar / Tepat\n指示（しじ）: Instruksi / Arahan\n雑用（ざつよう）: Pekerjaan remeh / Pekerjaan tidak terkait\n暴言（ぼうげん）: Kata-kata kasar / Makian\n無視（むし）: Mengabaikan / Meremehkan",
   "explain_en": "Correct answer: 適正（てきせい）な仕事（しごと）の指示（しじ） — A reasonable 適正（てきせい） work 指示（しじ） (instruction) is not considered 嫌がらせ（いやがらせ） (harassment).\n\nVocabulary:\nパワーハラスメント: Power harassment (パワハラ)\n該当（がいとう）する: To fall under / To correspond to\n適正（てきせい）: Reasonable / Appropriate\n指示（しじ）: Instruction / Direction\n雑用（ざつよう）: Menial tasks / Unrelated chores\n暴言（ぼうげん）: Abusive language / Insults\n無視（むし）: Ignoring / Disregarding",
-  "tip": "💡 Mẹo nhớ: パワハラ = 権力（けんりょく）（quyền lực）を乱用（らんよう）（lạm dụng）して 他人（たにん）（người khác）に害（がい）（hại）を与（あた）える（gây ra）. 適正（てきせい）な指示（しじ）（chỉ thị hợp lý）= 通常（つうじょう）（bình thường）の 管理（かんり）（quản lý）→ không phải 嫌がらせ（いやがらせ）（quấy rối）. Thấy「適正（てきせい）」→ đây KHÔNG phải パワハラ."
+  "tip": "💡 Mẹo nhớ: パワハラ = 権力（けんりょく）（quyền lực）を乱用（らんよう）（lạm dụng）して 他人（たにん）（người khác）に害（がい）（hại）を与（あた）える（gây ra）. 適正（てきせい）な指示（しじ）（chỉ thị hợp lý）= 通常（つうじょう）（bình thường）の 管理（かんり）（quản lý）→ không phải 嫌がらせ（いやがらせ）（quấy rối）. Thấy「適正（てきせい）」→ đây KHÔNG phải パワハラ.",
+  "tip_id": "💡 Tips mengingat: パワハラ = 権力（けんりょく）(kekuasaan) を 乱用（らんよう）(menyalahgunakan) して 他人（たにん）(orang lain) に 害（がい）(kerugian) を 与（あた）える (menimbulkan). 適正（てきせい）な指示（しじ）(instruksi yang wajar) = 管理（かんり）(manajemen) yang 通常（つうじょう）(normal) → bukan 嫌がらせ（いやがらせ）(pelecehan). Jika melihat 「適正（てきせい）」→ itu BUKAN パワハラ.",
+  "tip_en": "💡 Memory tip: パワハラ = 権力（けんりょく）(power) を 乱用（らんよう）(abusing) して 他人（たにん）(others) に 害（がい）(harm) を 与（あた）える (causing). 適正（てきせい）な指示（しじ）(appropriate instructions) = 通常（つうじょう）(normal) 管理（かんり）(management) → not 嫌がらせ（いやがらせ）(harassment). When you see 「適正（てきせい）」→ that is NOT パワハラ."
 },
 {
   "id": 60,
@@ -484,10 +600,14 @@ window.QUESTION_SETS["2"] = {
   ],
   "answer": 3,
   "vi": "Trong ngành điện, 'bay' hoặc 'rơi' thường chỉ hiện tượng ngắt mạch do cầu dao tự động ngắt.",
+  "vi_id": "Dalam industri listrik, 'terbang' atau 'jatuh' biasanya merujuk pada fenomena pemutusan sirkuit akibat pemutus arus (breaker) yang bekerja otomatis.",
+  "vi_en": "In the electrical industry, 'flying' or 'dropping' usually refers to the phenomenon of a circuit being cut off because an automatic breaker trips.",
   "explain": "Đáp án đúng: ブレーカーが作動（さどう）して、回路（かいろ）が解放（かいほう）される — mô tả hiện tượng khi 遮断機（しゃだんき）（cầu dao）自動（じどう）（tự）ngắt 電気（でんき）（điện）回路（かいろ）（mạch điện）.\n\nTừ vựng:\n電気工事（でんきこうじ）: Công trình điện\n飛（と）ぶ: Bay / Nhảy (tiếng lóng = cầu dao ngắt)\n落（お）ちる: Rơi / Ngã (tiếng lóng = mất điện/ngắt)\nブレーカー: Cầu dao tự động / CB (Circuit Breaker)\n作動（さどう）する: Hoạt動（どう）（hoạt động）/ Kích hoạt\n回路（かいろ）: Mạch điện\n解放（かいほう）される: Được giải phóng / Bị ngắt\n電流（でんりゅう）: Dòng điện\n人体（じんたい）: Cơ thể người",
   "explain_id": "Jawaban yang benar: ブレーカーが作動（さどう）して、回路（かいろ）が解放（かいほう）される — menggambarkan fenomena ketika 遮断機（しゃだんき） (pemutus sirkuit) secara 自動（じどう） (otomatis) memutus 電気（でんき） (listrik) 回路（かいろ） (sirkuit listrik).\n\nKosakata:\n電気工事（でんきこうじ）: Pekerjaan listrik\n飛（と）ぶ: Terbang / Anjlok (bahasa slang = pemutus memutus)\n落（お）ちる: Jatuh (bahasa slang = listrik padam/memutus)\nブレーカー: Pemutus sirkuit otomatis / MCB (Circuit Breaker)\n作動（さどう）する: Bekerja / Aktif\n回路（かいろ）: Sirkuit listrik\n解放（かいほう）される: Dibebaskan / Diputus\n電流（でんりゅう）: Arus listrik\n人体（じんたい）: Tubuh manusia",
   "explain_en": "Correct answer: ブレーカーが作動（さどう）して、回路（かいろ）が解放（かいほう）される — describes the phenomenon when a 遮断機（しゃだんき） (circuit breaker) automatically 自動（じどう） disconnects an 電気（でんき） (electric) 回路（かいろ） (circuit).\n\nVocabulary:\n電気工事（でんきこうじ）: Electrical work\n飛（と）ぶ: To fly / To trip (slang = breaker trips)\n落（お）ちる: To fall (slang = power cuts out / trips)\nブレーカー: Circuit breaker (CB)\n作動（さどう）する: To operate / To activate\n回路（かいろ）: Electric circuit\n解放（かいほう）される: To be released / To be disconnected\n電流（でんりゅう）: Electric current\n人体（じんたい）: Human body",
-  "tip": "💡 Mẹo nhớ: 電気工事（でんきこうじ）（ngành điện）で、「飛（と）ぶ」「落（お）ちる」= 俗語（ぞくご）（tiếng lóng）chỉ ブレーカー（Cầu dao）が作動（さどう）（ngắt）→ 回路（かいろ）（mạch điện）が遮断（しゃだん）（ngắt mạch）. Không phải 漏電（ろうでん）（rò điện）hay 感電（かんでん）（điện giật）— đây là 専門用語（せんもんようご）（chuyên ngữ）đặc thù của 電気工事（でんきこうじ）（thợ điện）."
+  "tip": "💡 Mẹo nhớ: 電気工事（でんきこうじ）（ngành điện）で、「飛（と）ぶ」「落（お）ちる」= 俗語（ぞくご）（tiếng lóng）chỉ ブレーカー（Cầu dao）が作動（さどう）（ngắt）→ 回路（かいろ）（mạch điện）が遮断（しゃだん）（ngắt mạch）. Không phải 漏電（ろうでん）（rò điện）hay 感電（かんでん）（điện giật）— đây là 専門用語（せんもんようご）（chuyên ngữ）đặc thù của 電気工事（でんきこうじ）（thợ điện）.",
+  "tip_id": "💡 Tips mengingat: 電気工事（でんきこうじ）(industri listrik) で、「飛（と）ぶ」「落（お）ちる」= 俗語（ぞくご）(bahasa slang) untuk ブレーカー (breaker) が 作動（さどう）(bekerja/memutus) → 回路（かいろ）(sirkuit) が 遮断（しゃだん）(terputus). Bukan 漏電（ろうでん）(kebocoran listrik) atau 感電（かんでん）(kesetrum) — ini adalah 専門用語（せんもんようご）(istilah khusus) khas 電気工事（でんきこうじ）(tukang listrik).",
+  "tip_en": "💡 Memory tip: In 電気工事（でんきこうじ）(electrical work), 「飛（と）ぶ」「落（お）ちる」= 俗語（ぞくご）(slang) for a ブレーカー (breaker) が 作動（さどう）(tripping) → the 回路（かいろ）(circuit) が 遮断（しゃだん）(is cut off). Not 漏電（ろうでん）(leakage) or 感電（かんでん）(electric shock) — this is 専門用語（せんもんようご）(special terminology) unique to 電気工事（でんきこうじ）(electricians)."
 }
 ]
 };

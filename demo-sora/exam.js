@@ -7,6 +7,18 @@
     if (LANG === 'en' && q.explain_en) return q.explain_en;
     return q.explain || "";
   }
+  function pickVi(q) {
+    if (!q) return { text: "", translated: false };
+    if (LANG === 'id' && q.vi_id) return { text: q.vi_id, translated: true };
+    if (LANG === 'en' && q.vi_en) return { text: q.vi_en, translated: true };
+    return { text: q.vi || "", translated: false };
+  }
+  function pickTip(q) {
+    if (!q) return "";
+    if (LANG === 'id' && q.tip_id) return q.tip_id;
+    if (LANG === 'en' && q.tip_en) return q.tip_en;
+    return q.tip || "";
+  }
   const $ = (sel) => document.querySelector(sel);
   const params = new URLSearchParams(location.search);
 
@@ -115,6 +127,8 @@
 
     const q = questions[cur];
     const hasAnswered = user[cur] !== null;
+    const viPick = pickVi(q);
+    const tipText = pickTip(q);
 
     const html = `
       <div class="q-head"><div class="q-index">${t("q_index", {a: cur+1, b: questions.length})}</div></div>
@@ -137,9 +151,9 @@
         <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>${t("btn_next")}</button>
       </div>
       <div id="explainBox" class="explain-box" style="display:${hasAnswered?"block":"none"};">
-        ${q.vi ? `<div><b>${t("label_translate")}</b> ${q.vi}</div>` : ""}
+        ${viPick.text ? `<div><b>${viPick.translated ? t("label_translate_plain") : t("label_translate")}</b> ${viPick.text}</div>` : ""}
        ${pickExplain(q) ? `<div><b>${t("label_explain")}</b> ${pickExplain(q).replace(/\n/g, '<br>')}</div>` : ""}
-        ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
+        ${tipText ? `<div class="tip">${tipText}</div>` : ""}
       </div>
     `;
 
@@ -196,6 +210,8 @@
       const isRight = picked!==null && q.options[picked] && q.options[picked].correct;
       if(isRight){ correct++; return ""; }
       wrongs.push(q);
+      const viPick = pickVi(q);
+      const tipText = pickTip(q);
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
@@ -203,9 +219,9 @@
           ${q.img?`<div class="q-img"><img src="../${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`:""}
           <div class="answer-line">❌ <b>${t("label_you_chose")}</b> ${picked!==null?q.options[picked].text:t("label_not_chosen")}</div>
           <div class="answer-line">✅ <b>${t("label_correct_answer")}</b> ${right.text}</div>
-          ${q.vi?`<div><b>${t("label_translate")}</b> ${q.vi}</div>`:""}
+          ${viPick.text?`<div><b>${viPick.translated ? t("label_translate_plain") : t("label_translate")}</b> ${viPick.text}</div>`:""}
          ${pickExplain(q) ? `<div><b>${t("label_explain")}</b> ${pickExplain(q).replace(/\n/g, '<br>')}</div>` : ""}
-          ${q.tip?`<div class="tip">${q.tip}</div>`:""}
+          ${tipText?`<div class="tip">${tipText}</div>`:""}
         </div>
       `;
     }).join("");

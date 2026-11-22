@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chọn ngôn ngữ & nhóm ngành / Language & group</title>
+  <link rel="icon" href="icon-192.png">
+  <meta name="theme-color" content="#F4F4F1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="i18n.js"></script>
+</head>
+<body class="mono">
+  <main class="lang-wrap">
+    <div class="lang-head">
+      <div class="hero-logo lang-logo"><img src="icon-192.png" alt="Quiz APP"></div>
+      <h1 class="lang-title" data-i18n="lang_heading">🌐 Chọn ngôn ngữ của bạn</h1>
+      <p class="lang-sub">Pilih bahasa Anda • Choose your language</p>
+    </div>
+
+    <!-- ===== PHẦN 1: NGÔN NGỮ ===== -->
+    <button type="button" class="lang-card-opt" data-lang="vi" onclick="selectLang('vi')">
+      <span class="lang-flag">🇻🇳</span>
+      <span class="lang-texts">
+        <span class="lang-name">Tiếng Việt</span>
+        <span class="lang-desc">Luyện thi Kỹ năng đặc định số 2</span>
+      </span>
+      <span class="lang-code">VI</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-lang="id" onclick="selectLang('id')">
+      <span class="lang-flag">🇮🇩</span>
+      <span class="lang-texts">
+        <span class="lang-name">Bahasa Indonesia</span>
+        <span class="lang-desc">Latihan ujian Keterampilan Khusus No. 2</span>
+      </span>
+      <span class="lang-code">ID</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-lang="en" onclick="selectLang('en')">
+      <span class="lang-flag">🇬🇧</span>
+      <span class="lang-texts">
+        <span class="lang-name">English</span>
+        <span class="lang-desc">Specified Skilled Worker No. 2 exam practice</span>
+      </span>
+      <span class="lang-code">EN</span>
+    </button>
+
+    <!-- ===== PHẦN 2: NHÓM NGÀNH ===== -->
+    <h2 class="board-section-title" data-i18n="group_heading">🏗️ Bạn thuộc nhóm ngành nào?</h2>
+
+    <button type="button" class="lang-card-opt" data-group="1" onclick="selectGroup('1')">
+      <span class="lang-flag">🏗️</span>
+      <span class="lang-texts">
+        <span class="lang-name" data-i18n="group_1">Nhóm 1 (doboku)</span>
+        <span class="lang-desc">どぼく • 土木</span>
+      </span>
+      <span class="lang-code">G1</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-group="2" onclick="selectGroup('2')">
+      <span class="lang-flag">🏢</span>
+      <span class="lang-texts">
+        <span class="lang-name" data-i18n="group_2">Nhóm 2 (kenchiku)</span>
+        <span class="lang-desc">けんちく • 建築</span>
+      </span>
+      <span class="lang-code">G2</span>
+    </button>
+
+    <button type="button" class="lang-card-opt" data-group="3" onclick="selectGroup('3')">
+      <span class="lang-flag">🔧</span>
+      <span class="lang-texts">
+        <span class="lang-name" data-i18n="group_3">Nhóm 3 (setsubi)</span>
+        <span class="lang-desc">せつび • 設備</span>
+      </span>
+      <span class="lang-code">G3</span>
+    </button>
+
+    <!-- ===== NÚT TIẾP TỤC: chỉ bật khi đã chọn đủ ngôn ngữ + nhóm ngành ===== -->
+    <button type="button" id="btn-continue" class="board-continue" data-i18n="btn_continue" onclick="confirmBoard()" disabled>Tiếp tục</button>
+
+    <p class="lang-note" data-i18n="lang_note">Bạn có thể đổi ngôn ngữ bất cứ lúc nào ở trang chủ.</p>
+  </main>
+
+  <script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== BẢNG GỘP: chọn ngôn ngữ + nhóm ngành trong MỘT bảng, lưu một lần =====
+    let currentUser = null;
+    let selectedLang = (window.I18N && I18N.getLang()) || 'vi';
+    let selectedGroup = null;
+    try { selectedGroup = localStorage.getItem('app_group') || null; } catch (e) {}
+
+    const authReady = new Promise((resolve) => {
+      onAuthStateChanged(auth, async (u) => {
+        currentUser = u;
+        if (u) {
+          // Điền sẵn giá trị đã lưu trên Firestore (chỉ khi máy này chưa có lựa chọn)
+          try {
+            const snap = await getDoc(doc(db, "users", u.uid));
+            if (snap.exists()) {
+              const data = snap.data();
+              if (data.group && !selectedGroup) selectedGroup = String(data.group);
+              if (data.lang && !localStorage.getItem('app_lang')) {
+                selectedLang = data.lang;
+                if (window.I18N) I18N.setLang(data.lang);
+              }
+            }
+          } catch (e) { console.warn("Không đọc được hồ sơ:", e); }
+        }
+        renderSelections();
+        resolve(u);
+      });
+    });
+
+    function renderSelections() {
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.classList.toggle('selected', el.getAttribute('data-lang') === selectedLang);
+      });
+      document.querySelectorAll('[data-group]').forEach(function (el) {
+        el.classList.toggle('selected', el.getAttribute('data-group') === selectedGroup);
+      });
+      const btn = document.getElementById('btn-continue');
+      if (btn) btn.disabled = !(selectedLang && selectedGroup);
+    }
+
+    window.selectLang = function (code) {
+      selectedLang = code;
+      if (window.I18N) I18N.setLang(code);
+      renderSelections();
+    };
+
+    window.selectGroup = function (g) {
+      selectedGroup = g;
+      renderSelections();
+    };
+
+    window.confirmBoard = async function () {
+      if (!selectedLang || !selectedGroup) return;
+      try {
+        localStorage.setItem('app_lang', selectedLang);
+        localStorage.setItem('app_group', selectedGroup);
+      } catch (e) {}
+      // Chờ trạng thái đăng nhập để lưu cả hai lựa chọn lên Firestore trong MỘT lần ghi
+      const user = currentUser || await Promise.race([
+        authReady,
+        new Promise((r) => setTimeout(() => r(null), 1500))
+      ]);
+      if (user) {
+        try {
+          await setDoc(doc(db, "users", user.uid), { lang: selectedLang, group: selectedGroup }, { merge: true });
+        } catch (e) { console.warn("Không lưu được lựa chọn lên Firestore:", e); }
+      }
+      location.href = "index.html";
+    };
+
+    renderSelections();
+  </script>
+</body>
+</html>

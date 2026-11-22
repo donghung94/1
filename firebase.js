@@ -54,6 +54,11 @@ export async function loginUser(email, password) {
 }
 
 export async function logout() {
+  // Xóa dấu vết tầng/premium của phiên cũ: sau đăng xuất, người dùng là KHÁCH
+  // (tránh exam.js đọc nhầm userTier/isPremium còn sót trong localStorage)
+  localStorage.removeItem('userTier');
+  localStorage.removeItem('app_group');
+  localStorage.setItem('isPremium', 'false');
   await signOut(auth);
   location.href = "login.html";
 }

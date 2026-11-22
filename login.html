@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Đăng nhập – Toukutei Gino 2</title>
+    <title data-i18n-title="login_title">Đăng nhập – Toukutei Gino 2</title>
     <link rel="icon" href="icon-192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,15 +41,35 @@
 .btn-register:hover {
     background: #FDECEF !important;
 }
+
+/* Nút đăng nhập bằng Google */
+.login-box button.btn-google {
+    background: #ffffff !important;
+    color: #3c4043 !important;
+    border: 1.5px solid #dadce0 !important;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-top: 0 !important;
+}
+.login-box button.btn-google:hover { background: #f8f9fa !important; }
+.login-box button.btn-google:disabled { opacity: .6; cursor: wait; }
+.or-divider { display: flex; align-items: center; gap: 10px; margin: 16px 0 12px; }
+.or-divider::before, .or-divider::after { content: ""; flex: 1; height: 1px; background: #E7E7E0; }
+.or-divider span { font-size: 12px; color: #8B8B84; }
     </style>
+    <script src="i18n.js"></script>
 </head>
 
 <body>
 <div class="wrapper">
     <div class="login-box">
     <img src="icon-192.png" alt="Logo" />
-        <h2 style="margin:6px 0 12px;font-size:18px; color: #333;">🔒 Đăng nhập Quiz App</h2>
-        <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Luyện thi Kỹ năng đặc định số 2</p>
+        <h2 style="margin:6px 0 12px;font-size:18px; color: #333;" data-i18n="login_heading">🔒 Đăng nhập Quiz App</h2>
+        <p style="font-size: 13px; color: #666; margin-bottom: 20px;" data-i18n="app_tagline">Luyện thi Kỹ năng đặc định số 2</p>
 
 
 
@@ -57,25 +77,31 @@
     <input type="email" id="email" placeholder="Email" required
         style="width:100%;padding:12px 12px;margin:8px 0;border:1.5px solid #E7E7E0;border-radius:12px;outline:none;" />
     
-    <input type="password" id="password" placeholder="Mật khẩu" required
+    <input type="password" id="password" data-i18n-ph="ph_password" placeholder="Mật khẩu" required
         style="width:100%;padding:12px 12px;margin:8px 0;border:1.5px solid #E7E7E0;border-radius:12px;outline:none;" />
 
-    <button type="submit" id="loginBtn">Đăng nhập</button>
+    <button type="submit" id="loginBtn" data-i18n="btn_login">Đăng nhập</button>
     
-    <button type="button" onclick="location.href='register.html'" class="btn-register">Đăng ký tài khoản</button>
+    <button type="button" onclick="location.href='register.html'" class="btn-register" data-i18n="btn_register">Đăng ký tài khoản</button>
 </form>
+
+        <div class="or-divider"><span>hoặc</span></div>
+        <button type="button" id="googleBtn" class="btn-google">
+            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+            <span>Đăng nhập bằng Google</span>
+        </button>
 
         <p id="message" style="margin-top:12px;font-size:14px;min-height:18px; line-height: 1.4;"></p>
 
         <div style="margin-top:15px;font-size:12px;color:#6b7280; border-top: 1px solid #eee; padding-top: 10px;">
-            Lưu ý: Tài khoản chỉ sử dụng tối đa <strong>01 thiết bị</strong>.
+            <span data-i18n="login_note_pre">Lưu ý: Tài khoản chỉ sử dụng tối đa</span> <strong data-i18n="login_note_strong">01 thiết bị</strong>.
         </div>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
       const firebaseConfig = {
             apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
@@ -115,90 +141,161 @@
         const msg      = document.getElementById("message");
         const loginForm = document.getElementById("loginForm");
 
+        // --- Gán mã thành viên TVxxxx: transaction tăng meta/counters.memberSeq ---
+        // Có mã rồi thì giữ nguyên, KHÔNG bao giờ cấp lại mã khác.
+        async function assignMemberCode(uid) {
+            const counterRef = doc(db, "meta", "counters");
+            const userRef = doc(db, "users", uid);
+            let code = null;
+            await runTransaction(db, async (tx) => {
+                const uSnap = await tx.get(userRef);
+                if (uSnap.exists() && uSnap.data().memberCode) { code = uSnap.data().memberCode; return; }
+                const cSnap = await tx.get(counterRef);
+                const next = ((cSnap.exists() && cSnap.data().memberSeq) || 0) + 1;
+                code = "TV" + String(next).padStart(4, "0");
+                tx.set(counterRef, { memberSeq: next }, { merge: true });
+                tx.update(userRef, { memberCode: code });
+            });
+            return code;
+        }
+
+        // --- Quy trình SAU khi xác thực thành công — DÙNG CHUNG cho mật khẩu & Google ---
+        // Gồm: tạo hồ sơ nếu chưa có, chặn tài khoản bị khóa, khóa 1 thiết bị, bổ sung mã thành viên.
+        // Đăng nhập Google cũng đi qua đúng quy trình này (không bỏ qua khóa thiết bị / trạng thái banned).
+        async function completeLogin(user) {
+            const currentDeviceId = getDeviceId();
+            const currentDeviceName = getDeviceName();
+
+            const userDocRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userDocRef);
+
+            if (!userSnap.exists()) {
+                // TRƯỜNG HỢP 1: CHƯA CÓ HỒ SƠ (tài khoản mới / lần đầu đăng nhập bằng Google)
+                const initialData = {
+                    name: user.displayName || "Học viên",
+                    email: user.email,
+                    group: "1",
+                    status: "active",
+                    isPremium: false,
+                    device_count: 1, // Ghi nhận 1 máy ngay
+                    devices: {
+                        [currentDeviceId]: {
+                            name: currentDeviceName,
+                            addedAt: serverTimestamp(),
+                            last_login: serverTimestamp()
+                        }
+                    },
+                    createdAt: serverTimestamp()
+                };
+                await setDoc(userDocRef, initialData);
+                try { await assignMemberCode(user.uid); } catch (e) { console.warn("Gán mã thành viên:", e); }
+            } else {
+                // TRƯỜNG HỢP 2: ĐÃ CÓ HỒ SƠ
+                const userData = userSnap.data();
+                // Tạo biến kiểm tra Admin
+                const isAdmin = userData.role === 'admin';
+                if (userData.status === 'banned') {
+                    await signOut(auth);
+                    throw new Error(t("err_banned"));
+                }
+
+                const devices = userData.devices || {};
+                const deviceCount = userData.device_count || 0;
+
+                if (devices[currentDeviceId]) {
+                    // A. Nếu là máy cũ -> Cập nhật giờ đăng nhập
+                    await updateDoc(userDocRef, {
+                        [`devices.${currentDeviceId}.last_login`]: serverTimestamp()
+                    });
+                } else {
+                    // B. Nếu là máy mới hoàn toàn
+                    if (!isAdmin && deviceCount >= 1) {
+                        // Chặn ngay vì đã đủ 1 máy
+                        await signOut(auth);
+                        throw new Error(t("err_device_limit_login"));
+                    } else {
+                        // Chưa có máy nào (do admin reset) -> Cho phép đăng ký máy này
+                        await updateDoc(userDocRef, {
+                            [`devices.${currentDeviceId}`]: {
+                                name: currentDeviceName,
+                                addedAt: serverTimestamp(),
+                                last_login: serverTimestamp()
+                           },
+        device_count: isAdmin ? deviceCount : 1 // Admin thì giữ nguyên hoặc tăng, không ép về 1
+                        });
+                    }
+                }
+
+                // Bổ sung mã thành viên cho tài khoản cũ chưa có mã
+                if (!userData.memberCode) {
+                    try { await assignMemberCode(user.uid); } catch (e) { console.warn("Gán mã thành viên:", e); }
+                }
+            }
+        }
+
+        function showLoginError(err) {
+            let text = err.message;
+            if (err.code === 'auth/invalid-credential') text = t("err_invalid_credential");
+            if (err.code === 'auth/account-exists-with-different-credential') text = "Email này đã đăng ký bằng mật khẩu. Hãy đăng nhập bằng mật khẩu như cũ nhé.";
+            msg.textContent = "❌ " + text;
+            msg.style.color = "#ef4444";
+            btn.disabled = false;
+            const gBtn = document.getElementById("googleBtn");
+            if (gBtn) gBtn.disabled = false;
+        }
+
+        async function finishLogin(user) {
+            await completeLogin(user);
+            msg.textContent = t("msg_login_ok");
+            msg.style.color = "green";
+            setTimeout(() => location.href = "index.html", 500);
+        }
+
         loginForm.addEventListener("submit", async (e) => {
             e.preventDefault();
             const email = emailEl.value.trim();
             const password = passEl.value.trim();
-            const currentDeviceId = getDeviceId();
-            const currentDeviceName = getDeviceName();
 
-            msg.textContent = "⏳ Đang kiểm tra...";
+            msg.textContent = t("msg_checking");
             msg.style.color = "#C8102E"; 
             btn.disabled = true;
 
             try {
                 const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                const user = userCredential.user;
-
-                const userDocRef = doc(db, "users", user.uid);
-                const userSnap = await getDoc(userDocRef);
-
-                if (!userSnap.exists()) {
-                    // TRƯỜNG HỢP 1: TÀI KHOẢN MỚI TINH (Chưa có trong Firestore)
-                    const initialData = {
-                        name: user.displayName || "Học viên",
-                        email: user.email,
-                        device_count: 1, // Ghi nhận 1 máy ngay
-                        devices: {
-                            [currentDeviceId]: {
-                                name: currentDeviceName,
-                                addedAt: serverTimestamp(),
-                                last_login: serverTimestamp()
-                            }
-                        },
-                        status: "active",
-                        createdAt: serverTimestamp()
-                    };
-                    await setDoc(userDocRef, initialData);
-                } else {
-                    // TRƯỜNG HỢP 2: ĐÃ CÓ HỒ SƠ
-                    const userData = userSnap.data();
-                    // Tạo biến kiểm tra Admin
-                    const isAdmin = userData.role === 'admin';
-                    if (userData.status === 'banned') {
-                        await signOut(auth);
-                        throw new Error("Tài khoản đã bị khóa.");
-                    }
-
-                    const devices = userData.devices || {};
-                    const deviceCount = userData.device_count || 0;
-
-                    if (devices[currentDeviceId]) {
-                        // A. Nếu là máy cũ -> Cập nhật giờ đăng nhập
-                        await updateDoc(userDocRef, {
-                            [`devices.${currentDeviceId}.last_login`]: serverTimestamp()
-                        });
-                    } else {
-                        // B. Nếu là máy mới hoàn toàn
-                        if (!isAdmin && deviceCount >= 1) {
-                            // Chặn ngay vì đã đủ 1 máy
-                            await signOut(auth);
-                            throw new Error("🚫 Tài khoản chỉ được sử dụng trên 1 thiết bị. Vui lòng liên hệ Admin để Reset.");
-                        } else {
-                            // Chưa có máy nào (do admin reset) -> Cho phép đăng ký máy này
-                            await updateDoc(userDocRef, {
-                                [`devices.${currentDeviceId}`]: {
-                                    name: currentDeviceName,
-                                    addedAt: serverTimestamp(),
-                                    last_login: serverTimestamp()
-                               },
-            device_count: isAdmin ? deviceCount : 1 // Admin thì giữ nguyên hoặc tăng, không ép về 1
-                            });
-                        }
-                    }
-                }
-
-                msg.textContent = "✅ Đăng nhập thành công!";
-                msg.style.color = "green";
-                setTimeout(() => location.href = "index.html", 500);
-
+                await finishLogin(userCredential.user);
             } catch (err) {
-                let text = err.message;
-                if (err.code === 'auth/invalid-credential') text = "Sai email hoặc mật khẩu.";
-                msg.textContent = "❌ " + text;
-                msg.style.color = "#ef4444";
-                btn.disabled = false;
+                showLoginError(err);
             }
+        });
+
+        // --- Đăng nhập bằng Google: dùng redirect cho an toàn trên mobile/PWA ---
+        const googleBtn = document.getElementById("googleBtn");
+        if (googleBtn) {
+            googleBtn.addEventListener("click", async () => {
+                msg.textContent = t("msg_checking");
+                msg.style.color = "#C8102E";
+                googleBtn.disabled = true;
+                try {
+                    await signInWithRedirect(auth, new GoogleAuthProvider());
+                } catch (err) {
+                    showLoginError(err);
+                }
+            });
+        }
+
+        // Xử lý kết quả khi quay lại từ Google — chạy qua ĐÚNG quy trình completeLogin như mật khẩu
+        getRedirectResult(auth).then(async (result) => {
+            if (!result || !result.user) return;
+            msg.textContent = t("msg_checking");
+            msg.style.color = "#C8102E";
+            btn.disabled = true;
+            try {
+                await finishLogin(result.user);
+            } catch (err) {
+                showLoginError(err);
+            }
+        }).catch((err) => {
+            showLoginError(err);
         });
     </script>
 </body>

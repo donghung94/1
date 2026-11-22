@@ -1,4 +1,24 @@
 (function () {
+  const t = (k, v) => (window.I18N && window.I18N.t) ? window.I18N.t(k, v) : k;
+  const LANG = (window.I18N && window.I18N.getLang) ? window.I18N.getLang() : 'vi';
+  function pickExplain(q) {
+    if (!q) return "";
+    if (LANG === 'id' && q.explain_id) return q.explain_id;
+    if (LANG === 'en' && q.explain_en) return q.explain_en;
+    return q.explain || "";
+  }
+  function pickVi(q) {
+    if (!q) return { text: "", translated: false };
+    if (LANG === 'id' && q.vi_id) return { text: q.vi_id, translated: true };
+    if (LANG === 'en' && q.vi_en) return { text: q.vi_en, translated: true };
+    return { text: q.vi || "", translated: false };
+  }
+  function pickTip(q) {
+    if (!q) return "";
+    if (LANG === 'id' && q.tip_id) return q.tip_id;
+    if (LANG === 'en' && q.tip_en) return q.tip_en;
+    return q.tip || "";
+  }
   const $ = (sel) => document.querySelector(sel);
   const params = new URLSearchParams(location.search);
 
@@ -57,12 +77,35 @@
   const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
   let sourceQuestions = DATA.questions || DATA; // Chú ý: Đổi const thành let ở đây
 
-  // ================== KIỂM TRA BẢN QUYỀN ==================
-  const isPremiumUser = localStorage.getItem('isPremium') === 'true';
-  
-  // Nếu tài khoản KHÔNG phải Premium và đang làm Bộ đề 1 (Lý thuyết chung) -> Chỉ lấy 30 câu đầu
-  if (!isPremiumUser && setId === '1') {
-      sourceQuestions = sourceQuestions.slice(0, 30);
+  // ================== GIỚI HẠN THEO TẦNG NGƯỜI DÙNG ==================
+  // Mọi đề đều mở cho tất cả, nhưng mỗi đề chỉ làm được FREE_LIMIT câu đầu nếu chưa Premium.
+  // Chạm câu thứ FREE_LIMIT + 1 -> hiện "bức tường" theo tầng:
+  // - guest (chưa đăng nhập): BẢNG ĐĂNG NHẬP (mời đăng nhập / đăng ký để học tiếp).
+  // - free (đã đăng nhập): BẢNG NÂNG CẤP Premium.
+  // - Premium / Admin (exam.html đã gộp admin vào cờ isPremium): không giới hạn, không đổi hành vi.
+  // Tầng do exam.html / index.html ghi vào localStorage 'userTier'; thiếu thì suy ra:
+  // isPremium=true -> 'premium', ngược lại -> 'guest' (người mới chưa từng đăng nhập).
+  const FREE_LIMIT = 5;
+  const storedTier = localStorage.getItem('userTier');
+  const isPremiumUser = storedTier ? storedTier === 'premium' : (localStorage.getItem('isPremium') === 'true');
+  const userTier = storedTier || (isPremiumUser ? 'premium' : 'guest');
+  const isGuestUser = userTier === 'guest';
+  const isFreeUser = !isPremiumUser; // cả guest lẫn free đều bị giới hạn FREE_LIMIT câu
+
+  function showUpgradeModal() {
+    const modal = document.getElementById('premium-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function showLoginWall() {
+    const modal = document.getElementById('login-wall-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  // Chọn bức tường theo tầng người dùng
+  function showLimitWall() {
+    if (isGuestUser) showLoginWall();
+    else showUpgradeModal();
   }
 
   // ================== BUILD QUESTIONS ==================
@@ -101,15 +144,20 @@
   // ================== RENDER ================
   function render() {
     if (!questions.length) {
-      quizEl.innerHTML = "<p>Không có dữ liệu câu hỏi.</p>";
+      quizEl.innerHTML = "<p>" + t("no_data") + "</p>";
       return;
     }
 
+    // Chốt an toàn: tài khoản free không bao giờ hiển thị câu quá FREE_LIMIT
+    if (isFreeUser && cur >= FREE_LIMIT) cur = FREE_LIMIT - 1;
+
     const q = questions[cur];
     const hasAnswered = user[cur] !== null;
+    const viPick = pickVi(q);
+    const tipText = pickTip(q);
 
     const html = `
-      <div class="q-head"><div class="q-index">Câu ${cur+1}/${questions.length}</div></div>
+      <div class="q-head"><div class="q-index">${t("q_index", {a: cur+1, b: questions.length})}</div></div>
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
       ${q.img ? `<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
@@ -124,14 +172,14 @@
         }).join("")}
       </div>
       <div class="nav">
-        <button class="btn" id="backBtn" ${cur===0?"disabled":""}>⬅️ Quay lại</button>
-        <button class="btn" id="explainBtn">📘 Giải thích</button>
-        <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>➡️ Tiếp theo</button>
+        <button class="btn" id="backBtn" ${cur===0?"disabled":""}>${t("btn_back")}</button>
+        <button class="btn" id="explainBtn">${t("btn_explain")}</button>
+        <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>${t("btn_next")}</button>
       </div>
       <div id="explainBox" class="explain-box" style="display:${hasAnswered?"block":"none"};">
-        ${q.vi ? `<div><b>Dịch:</b> ${q.vi}</div>` : ""}
-       ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain.replace(/\n/g, '<br>')}</div>` : ""}
-        ${q.tip ? `<div class="tip">${q.tip}</div>` : ""}
+        ${viPick.text ? `<div><b>${viPick.translated ? t("label_translate_plain") : t("label_translate")}</b> ${viPick.text}</div>` : ""}
+       ${pickExplain(q) ? `<div><b>${t("label_explain")}</b> ${pickExplain(q).replace(/\n/g, '<br>')}</div>` : ""}
+        ${tipText ? `<div class="tip">${tipText}</div>` : ""}
       </div>
     `;
 
@@ -162,11 +210,15 @@
     $("#backBtn").onclick = () => { if (cur > 0) { cur--; render(); } };
     
     // Nút Tiếp theo
-    $("#nextBtn").onclick = () => { 
-      if (user[cur] !== null && cur < questions.length - 1) { 
-        cur++; 
-        render(); 
-      } 
+    $("#nextBtn").onclick = () => {
+      if (user[cur] === null) return;
+      // Chưa Premium (guest/free): bấm qua câu thứ FREE_LIMIT + 1 -> hiện bức tường theo tầng
+      // (khách: bảng đăng nhập; free: bảng nâng cấp), đứng yên ở câu cuối miễn phí
+      if (isFreeUser && cur + 1 >= FREE_LIMIT) { showLimitWall(); return; }
+      if (cur < questions.length - 1) {
+        cur++;
+        render();
+      }
     };
 
     $("#explainBtn").onclick = () => {
@@ -180,24 +232,29 @@
   submitBtn.onclick = submitQuiz;
 
   function submitQuiz() {
+    // Chặn rò rỉ khi xem lại: tài khoản free chỉ được chấm & xem đáp án/giải thích
+    // của FREE_LIMIT câu đầu — các câu sau không xuất hiện ở màn hình kết quả.
+    const scope = isFreeUser ? questions.slice(0, FREE_LIMIT) : questions;
     let correct = 0;
     const wrongs = [];
-    const html = questions.map((q,i)=>{
+    const html = scope.map((q,i)=>{
       const picked = user[i];
       const right = q.options.find(o=>o.correct);
       const isRight = picked!==null && q.options[picked] && q.options[picked].correct;
       if(isRight){ correct++; return ""; }
       wrongs.push(q);
+      const viPick = pickVi(q);
+      const tipText = pickTip(q);
       return `
         <div class="result-item">
           <div class="q-text">${q.q}</div>
           ${q.hira?`<div class="hira">${q.hira}</div>`:""}
           ${q.img?`<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`:""}
-          <div class="answer-line">❌ <b>Bạn chọn:</b> ${picked!==null?q.options[picked].text:"(chưa chọn)"}</div>
-          <div class="answer-line">✅ <b>Đáp án đúng:</b> ${right.text}</div>
-          ${q.vi?`<div><b>Dịch:</b> ${q.vi}</div>`:""}
-         ${q.explain ? `<div><b>📘 Giải thích:</b> ${q.explain.replace(/\n/g, '<br>')}</div>` : ""}
-          ${q.tip?`<div class="tip">${q.tip}</div>`:""}
+          <div class="answer-line">❌ <b>${t("label_you_chose")}</b> ${picked!==null?q.options[picked].text:t("label_not_chosen")}</div>
+          <div class="answer-line">✅ <b>${t("label_correct_answer")}</b> ${right.text}</div>
+          ${viPick.text?`<div><b>${viPick.translated ? t("label_translate_plain") : t("label_translate")}</b> ${viPick.text}</div>`:""}
+         ${pickExplain(q) ? `<div><b>${t("label_explain")}</b> ${pickExplain(q).replace(/\n/g, '<br>')}</div>` : ""}
+          ${tipText?`<div class="tip">${tipText}</div>`:""}
         </div>
       `;
     }).join("");
@@ -206,8 +263,8 @@
     
     resEl.style.display="block";
     resEl.innerHTML = `
-      <div class="result-title">✅ Bạn làm đúng ${correct}/${questions.length}</div>
-      ${wrongs.length?`<div><b>Bạn sai các câu sau:</b></div>${html}`:`<div>🎉 Bạn đúng hết!</div>`}
+      <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
+      ${wrongs.length?`<div><b>${t("result_wrong_list")}</b></div>${html}`:`<div>${t("result_perfect")}</div>`}
     `;
     applyFuriganaToPage();
     redoBtn.style.display = wrongs.length ? "block" : "none";

@@ -82,7 +82,7 @@
         </div>
         
         <div class="search-container">
-            <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên hoặc email...">
+            <input type="text" id="adminSearchInput" placeholder="🔍 Tìm tên, email hoặc mã thành viên (TV0123)...">
             <div class="count-box">
                 Tổng: <strong id="userCount" style="margin-left: 5px; color: #C8102E;">0</strong>
             </div>
@@ -176,7 +176,7 @@
             const row = `
                 <tr>
                     <td data-label="Học viên">
-                        <strong>${data.name || 'Học viên mới'}</strong><br>
+                        <strong>${data.name || 'Học viên mới'}${data.memberCode ? ` <span style="color:#C8102E">(${data.memberCode})</span>` : ''}</strong><br>
                         <small style="color: #64748b">${data.email}</small>
                     </td>
                     <td data-label="Phân Nhóm">
@@ -214,10 +214,15 @@
 
     document.getElementById('adminSearchInput').addEventListener('input', (e) => {
         const keyword = e.target.value.toLowerCase().trim();
-        const filtered = allUsers.filter(user => 
-            (user.name || "").toLowerCase().includes(keyword) || 
-            (user.email || "").toLowerCase().includes(keyword)
-        );
+        const kwDigits = keyword.replace(/^tv\s*/, "");
+        const filtered = allUsers.filter(user => {
+            const code = (user.memberCode || "").toLowerCase();
+            const codeDigits = code.replace(/^tv/, "");
+            return (user.name || "").toLowerCase().includes(keyword) || 
+                   (user.email || "").toLowerCase().includes(keyword) ||
+                   (keyword !== "" && code.includes(keyword)) ||
+                   (kwDigits !== "" && codeDigits.includes(kwDigits));
+        });
         renderTable(filtered);
     });
 

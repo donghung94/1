@@ -336,3 +336,32 @@ input:focus, select:focus { outline: none; border-color: var(--gold) !important;
 .status-chip{margin-left:auto;background:var(--amber-soft);color:var(--amber);font-size:10px;font-weight:800;letter-spacing:.06em;padding:5px 9px;border-radius:999px;white-space:nowrap}
 .status-chip.is-premium-chip{background:var(--brown);color:var(--gold-pale)}
 .status-chip:empty{display:none}
+
+/* --- Language switch entry (hero) --- */
+.lang-switch{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:#fff;border:1.5px solid var(--bronze);color:var(--red);font-weight:700;font-size:13px;padding:7px 12px;border-radius:999px;text-decoration:none}
+.lang-switch:active{transform:translateY(1px)}
+
+/* --- Language picker page --- */
+.lang-wrap{max-width:480px;margin:0 auto;padding:28px 16px 40px}
+.lang-head{text-align:center;margin-bottom:22px}
+.lang-logo{margin:0 auto 12px;width:64px;height:64px;border-radius:18px}
+.lang-logo img{width:54px;height:54px}
+.lang-title{font-size:22px;font-weight:800;color:var(--ink);margin:0 0 6px}
+.lang-sub{font-size:13px;color:var(--ink-2);margin:0}
+.lang-card-opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px;cursor:pointer;font-family:inherit;transition:all .15s ease}
+.lang-card-opt:hover{border-color:var(--bronze);background:var(--cream)}
+.lang-card-opt.selected{border-color:var(--gold);background:rgba(227,160,8,.12);box-shadow:0 0 6px rgba(227,160,8,.25)}
+.lang-flag{font-size:32px;line-height:1;flex:none}
+.lang-texts{display:flex;flex-direction:column;gap:2px;min-width:0}
+.lang-name{font-size:17px;font-weight:800;color:var(--ink)}
+.lang-desc{font-size:12.5px;color:var(--ink-2)}
+.lang-code{margin-left:auto;flex:none;background:var(--brown);color:var(--gold-pale);font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 9px;border-radius:999px}
+.lang-note{text-align:center;font-size:12.5px;color:var(--ink-3);margin-top:18px}
+.board-section-title{font-size:19px;font-weight:800;color:var(--ink);margin:26px 0 12px}
+.board-continue{display:block;width:100%;margin-top:22px;background:var(--red);color:#fff;border:none;font-family:inherit;font-size:16px;font-weight:800;padding:15px;border-radius:14px;cursor:pointer;transition:all .15s ease}
+.board-continue:disabled{background:#D8D8D0;color:#8B8B84;cursor:not-allowed}
+.board-continue:not(:disabled):active{transform:translateY(1px)}
+
+/* Locked-exam badge wording per language (base rule lives in index.html) */
+html[lang="id"] .exam-locked::after{content:"🔒 Buka Kunci"}
+html[lang="en"] .exam-locked::after{content:"🔒 Unlock"}

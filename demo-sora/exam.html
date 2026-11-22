@@ -42,22 +42,8 @@
                         return;
                     }
 
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const setNum = urlParams.get('set');
-                    const practice = urlParams.get('practice');
-                    const allowedSets = ['1', '2', '3']; 
-
-                    if (!isPremium) {
-                        if ((setNum && !allowedSets.includes(setNum)) || practice || setNum === 'randomExam') {
-                            const modal = document.getElementById('premium-modal');
-                            if (modal) {
-                                modal.style.display = 'flex';
-                                document.querySelector('main.container').style.display = 'none';
-                                document.getElementById('timer').innerText = t("locked_word");
-                            }
-                            return;
-                        }
-                    }
+                    // Mọi đề đều mở cho tài khoản free — giới hạn 5 câu/đề
+                    // được áp dụng trong exam.js (hiện bảng nâng cấp khi qua câu 6).
 
                     const nameDisplay = document.getElementById('user-display-name');
                     if (nameDisplay) {
@@ -194,14 +180,15 @@
 
   </style>
 
+  <!-- ⭐ BẢNG NÂNG CẤP: exam.js hiện bảng này khi tài khoản free chạm câu thứ 6 -->
   <div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
-    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center;">
-        <div style="font-size: 50px; margin-bottom: 15px;">🔒</div>
-        <h2 style="color:#C8102E;" data-i18n="modal_title">Mở Khóa Toàn Bộ</h2>
-        <p style="color:#64748b;" data-i18n="modal_sub_exam">Nâng cấp Premium để học toàn bộ đề thi.</p>
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 15px;">⭐</div>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0;" data-i18n="upgrade_title">Bạn đã làm hết 5 câu miễn phí</h2>
+        <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="upgrade_body">Mỗi đề thi được làm miễn phí 5 câu. Nâng cấp Premium để làm trọn bộ đề và mở khóa toàn bộ tính năng.</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-            <a href="https://zalo.me/09xxxxxxxx" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="modal_zalo_admin">💬 Zalo Admin</a>
-            <button onclick="location.href='index.html'" style="background:none; border:none; color:#94a3b8; cursor:pointer;" data-i18n="btn_back_home">Quay lại Trang chủ</button>
+            <a href="https://zalo.me/07090778422" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_upgrade_premium">⭐ Nâng cấp Premium</a>
+            <button onclick="document.getElementById('premium-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
         </div>
     </div>
   </div>

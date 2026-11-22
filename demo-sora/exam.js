@@ -77,12 +77,17 @@
   const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
   let sourceQuestions = DATA.questions || DATA; // Chú ý: Đổi const thành let ở đây
 
-  // ================== KIỂM TRA BẢN QUYỀN ==================
+  // ================== GIỚI HẠN TÀI KHOẢN FREE ==================
+  // Mọi đề đều mở cho tài khoản free, nhưng mỗi đề chỉ làm được FREE_LIMIT câu đầu.
+  // Chạm câu thứ FREE_LIMIT + 1 -> hiện bảng nâng cấp Premium, không cho làm tiếp.
+  // Premium / Admin (exam.html đã gộp admin vào cờ isPremium): không giới hạn, không đổi hành vi.
+  const FREE_LIMIT = 5;
   const isPremiumUser = localStorage.getItem('isPremium') === 'true';
-  
-  // Nếu tài khoản KHÔNG phải Premium và đang làm Bộ đề 1 (Lý thuyết chung) -> Chỉ lấy 30 câu đầu
-  if (!isPremiumUser && setId === '1') {
-      sourceQuestions = sourceQuestions.slice(0, 30);
+  const isFreeUser = !isPremiumUser;
+
+  function showUpgradeModal() {
+    const modal = document.getElementById('premium-modal');
+    if (modal) modal.style.display = 'flex';
   }
 
   // ================== BUILD QUESTIONS ==================
@@ -124,6 +129,9 @@
       quizEl.innerHTML = "<p>" + t("no_data") + "</p>";
       return;
     }
+
+    // Chốt an toàn: tài khoản free không bao giờ hiển thị câu quá FREE_LIMIT
+    if (isFreeUser && cur >= FREE_LIMIT) cur = FREE_LIMIT - 1;
 
     const q = questions[cur];
     const hasAnswered = user[cur] !== null;
@@ -184,11 +192,14 @@
     $("#backBtn").onclick = () => { if (cur > 0) { cur--; render(); } };
     
     // Nút Tiếp theo
-    $("#nextBtn").onclick = () => { 
-      if (user[cur] !== null && cur < questions.length - 1) { 
-        cur++; 
-        render(); 
-      } 
+    $("#nextBtn").onclick = () => {
+      if (user[cur] === null) return;
+      // Tài khoản free: bấm qua câu thứ FREE_LIMIT + 1 -> hiện bảng nâng cấp, đứng yên ở câu cuối miễn phí
+      if (isFreeUser && cur + 1 >= FREE_LIMIT) { showUpgradeModal(); return; }
+      if (cur < questions.length - 1) {
+        cur++;
+        render();
+      }
     };
 
     $("#explainBtn").onclick = () => {
@@ -202,9 +213,12 @@
   submitBtn.onclick = submitQuiz;
 
   function submitQuiz() {
+    // Chặn rò rỉ khi xem lại: tài khoản free chỉ được chấm & xem đáp án/giải thích
+    // của FREE_LIMIT câu đầu — các câu sau không xuất hiện ở màn hình kết quả.
+    const scope = isFreeUser ? questions.slice(0, FREE_LIMIT) : questions;
     let correct = 0;
     const wrongs = [];
-    const html = questions.map((q,i)=>{
+    const html = scope.map((q,i)=>{
       const picked = user[i];
       const right = q.options.find(o=>o.correct);
       const isRight = picked!==null && q.options[picked] && q.options[picked].correct;
@@ -230,7 +244,7 @@
     
     resEl.style.display="block";
     resEl.innerHTML = `
-      <div class="result-title">${t("result_score", {c: correct, n: questions.length})}</div>
+      <div class="result-title">${t("result_score", {c: correct, n: scope.length})}</div>
       ${wrongs.length?`<div><b>${t("result_wrong_list")}</b></div>${html}`:`<div>${t("result_perfect")}</div>`}
     `;
     applyFuriganaToPage();

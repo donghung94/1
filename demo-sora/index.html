@@ -73,7 +73,6 @@
                     // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
                     const isPremium = data.isPremium === true || isAdmin;
                     const userGroup = data.group || "1";
-                    const allowedSets = ['1', '2', '3'];
 
                     // 3. Điều khiển hiển thị Bảng thông báo ưu đãi
                     const promoSection = document.getElementById('promo-section');
@@ -112,49 +111,33 @@
                     setLink('modal-fb', `https://www.facebook.com/61585194247868`);
                     setLink('modal-line', `https://line.me/ti/p/nongaphao`);
 
-                    // 6. LOGIC KHÓA ĐỀ THI (Quan trọng nhất)
+                    // 6. LOGIC MỞ ĐỀ THI
+                    // - Tài khoản FREE: mở TOÀN BỘ đề (lý thuyết + thực hành + thi thử),
+                    //   không khóa đề nào. Giới hạn 5 câu/đề nằm trong trang thi (exam.js).
+                    // - Premium (không phải admin): đề thực hành vẫn chỉ mở đúng nhóm của mình (giữ nguyên như cũ).
                     document.querySelectorAll('.exam-list a').forEach(link => {
                         const url = new URL(link.href, window.location.origin);
-                        const setParam = url.searchParams.get('set');
                         const practiceParam = url.searchParams.get('practice');
-                        const isPrometric = link.href.includes('prometric.html');
 
                         let isLocked = false;
 
-                        if (!isPremium) {
-                            if (isPrometric) {
-                                // Người dùng thường: Đổi link sang bản giới hạn 30 câu
-                                link.href = "prometric.html?set=questions.js&limit=30";
-                                isLocked = false; 
-                            } 
-                            else if ((setParam && !allowedSets.includes(setParam)) || practiceParam || setParam === 'randomExam') {
+                        if (isPremium && !isAdmin && practiceParam) {
+                            const requiredG = "g" + userGroup;
+                            if (!practiceParam.includes(requiredG)) {
                                 isLocked = true;
-                            }
-                        } 
-                        else {
-                            // Người dùng Premium: Kiểm tra nhóm thực hành
-                            if (practiceParam && !isAdmin) {
-                                const requiredG = "g" + userGroup;
-                                if (!practiceParam.includes(requiredG)) {
-                                    isLocked = true;
-                                }
                             }
                         }
 
-                        // Thực thi khóa nếu isLocked = true
+                        // Thực thi khóa nếu isLocked = true (chỉ còn khóa nhóm thực hành của Premium)
                         if (isLocked) {
                             link.classList.add('exam-locked');
                             // Loại bỏ các event cũ để tránh lặp
                             const newLink = link.cloneNode(true);
                             link.parentNode.replaceChild(newLink, link);
-                            
+
                             newLink.addEventListener('click', (e) => {
                                 e.preventDefault();
-                                if (!isPremium) {
-                                    document.getElementById('premium-modal').style.display = 'flex';
-                                } else {
-                                    alert(t("alert_wrong_group", {g: userGroup}));
-                                }
+                                alert(t("alert_wrong_group", {g: userGroup}));
                             });
                         }
                     });
@@ -238,10 +221,11 @@
         <!-- ============================
      code thông báo giá khóa học
 ============================ -->
-        <button onclick="document.getElementById('premium-modal').style.display='flex'" 
+        <button onclick="document.getElementById('premium-modal').style.display='flex'"
                 style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;" data-i18n="btn_unlock_now">
             Mở khóa toàn bộ ngay
         </button>
+        <p style="margin: 10px 0 0 0; font-size: 13px; color: #5A5A55; text-align: center;" data-i18n="free_limit_note">Tài khoản miễn phí: làm được 5 câu mỗi đề. Nâng cấp Premium để làm trọn bộ đề.</p>
     </div>
 </div>
   <!-- 📢 KHỐI THÔNG BÁO CHUNG (Ai cũng nhìn thấy) -->
@@ -256,9 +240,9 @@
   <div class="card">
     <h2 data-i18n="theory_title">Chọn đề thi lý thuyết chung</h2>
     <ul id="exam-list" class="exam-list">
-      <li><a href="exam.html?set=1" data-i18n-html="set_1_html">Lý thuyết chung – (問1〜問30) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=2" data-i18n-html="set_2_html">Lý thuyết chung – (問31〜問60) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
-      <li><a href="exam.html?set=3" data-i18n-html="set_3_html">Lý thuyết chung – (問61〜問90) <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a></li>
+      <li><a href="exam.html?set=1" data-i18n-html="set_1_html">Lý thuyết chung – (問1〜問30)</a></li>
+      <li><a href="exam.html?set=2" data-i18n-html="set_2_html">Lý thuyết chung – (問31〜問60)</a></li>
+      <li><a href="exam.html?set=3" data-i18n-html="set_3_html">Lý thuyết chung – (問61〜問90)</a></li>
       <li><a href="exam.html?set=4" data-i18n-html="set_4_html">Lý thuyết chung – (問91〜問120)</a></li>
       <li><a href="exam.html?set=5" data-i18n-html="set_5_html">Lý thuyết chung – (問121〜問150)</a></li>
       <li><a href="exam.html?set=6" data-i18n-html="set_6_html">Lý thuyết chung – (問151〜問180)</a></li>
@@ -268,7 +252,7 @@
       <li><a href="exam.html?set=randomExam" style="font-weight:bold;color:#C8102E;" data-i18n-html="set_random_html">
         🎲 Đề tổng hợp lý thuyết chung đảo ngẫu nhiên
       </a></li>
-      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;" data-i18n-html="prometric_link_html">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật <span style="color: #1E7D46; font-weight: bold;">(miễn phí)</span></a>
+      <li><a href="prometric.html?set=randomExam" style="font-weight:bold;color:#C8102E;" data-i18n-html="prometric_link_html">🔥<b>HOT</b> Đề thi thử mô phỏng app prometric giống 100% kỳ thi thật</a>
         </li>
     </ul>
   </div>

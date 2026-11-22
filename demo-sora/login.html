@@ -57,6 +57,21 @@
 }
 .login-box button.btn-google:hover { background: #f8f9fa !important; }
 .login-box button.btn-google:disabled { opacity: .6; cursor: wait; }
+/* Nút đăng nhập bằng Apple (đen theo chuẩn Apple) */
+.login-box button.btn-apple {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1.5px solid #000000 !important;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-top: 10px !important;
+}
+.login-box button.btn-apple:hover { background: #1a1a1a !important; }
+.login-box button.btn-apple:disabled { opacity: .6; cursor: wait; }
 .or-divider { display: flex; align-items: center; gap: 10px; margin: 16px 0 12px; }
 .or-divider::before, .or-divider::after { content: ""; flex: 1; height: 1px; background: #E7E7E0; }
 .or-divider span { font-size: 12px; color: #8B8B84; }
@@ -81,14 +96,17 @@
         style="width:100%;padding:12px 12px;margin:8px 0;border:1.5px solid #E7E7E0;border-radius:12px;outline:none;" />
 
     <button type="submit" id="loginBtn" data-i18n="btn_login">Đăng nhập</button>
-    
-    <button type="button" onclick="location.href='register.html'" class="btn-register" data-i18n="btn_register">Đăng ký tài khoản</button>
+    <!-- Nút Đăng ký ĐÃ BỎ: tài khoản mới chỉ tạo qua đăng nhập Google/Apple bên dưới -->
 </form>
 
         <div class="or-divider"><span>hoặc</span></div>
         <button type="button" id="googleBtn" class="btn-google">
             <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
             <span>Đăng nhập bằng Google</span>
+        </button>
+        <button type="button" id="appleBtn" class="btn-apple">
+            <svg width="17" height="17" viewBox="0 0 384 512" aria-hidden="true" fill="#ffffff"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span>Đăng nhập bằng Apple</span>
         </button>
 
         <p id="message" style="margin-top:12px;font-size:14px;min-height:18px; line-height: 1.4;"></p>
@@ -100,7 +118,7 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, OAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
         import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
       const firebaseConfig = {
@@ -159,9 +177,16 @@
             return code;
         }
 
-        // --- Quy trình SAU khi xác thực thành công — DÙNG CHUNG cho mật khẩu & Google ---
+        // --- Quy trình SAU khi xác thực thành công — DÙNG CHUNG cho mật khẩu, Google & Apple ---
         // Gồm: tạo hồ sơ nếu chưa có, chặn tài khoản bị khóa, khóa 1 thiết bị, bổ sung mã thành viên.
-        // Đăng nhập Google cũng đi qua đúng quy trình này (không bỏ qua khóa thiết bị / trạng thái banned).
+        // Đăng nhập Google/Apple cũng đi qua đúng quy trình này (không bỏ qua khóa thiết bị / trạng thái banned).
+        // Vì KHÔNG còn đăng ký bằng email nữa, nhánh tạo hồ sơ ở đây là cửa vào DUY NHẤT của
+        // tài khoản mới — mẫu hồ sơ khớp đúng mẫu form đăng ký cũ (register.html) tạo ra:
+        // name/email/status/isPremium + khung exam_progress + mã thành viên TVxxxx, và
+        // KHÔNG gán sẵn nhóm ngành (nhóm do BẢNG GỘP language.html hỏi ngay sau đó,
+        // cổng ở index.html tự đưa người chưa có lang/group sang bảng). Khác biệt duy nhất
+        // so với mẫu đăng ký cũ: máy hiện tại được ghi nhận luôn (device_count = 1) vì
+        // người dùng đang đăng nhập trên chính máy này.
         async function completeLogin(user) {
             const currentDeviceId = getDeviceId();
             const currentDeviceName = getDeviceName();
@@ -170,11 +195,10 @@
             const userSnap = await getDoc(userDocRef);
 
             if (!userSnap.exists()) {
-                // TRƯỜNG HỢP 1: CHƯA CÓ HỒ SƠ (tài khoản mới / lần đầu đăng nhập bằng Google)
+                // TRƯỜNG HỢP 1: CHƯA CÓ HỒ SƠ (tài khoản mới / lần đầu đăng nhập bằng Google hoặc Apple)
                 const initialData = {
                     name: user.displayName || "Học viên",
                     email: user.email,
-                    group: "1",
                     status: "active",
                     isPremium: false,
                     device_count: 1, // Ghi nhận 1 máy ngay
@@ -184,6 +208,10 @@
                             addedAt: serverTimestamp(),
                             last_login: serverTimestamp()
                         }
+                    },
+                    exam_progress: {
+                        doboku: 0,
+                        kenchiku: 0
                     },
                     createdAt: serverTimestamp()
                 };
@@ -242,6 +270,23 @@
             btn.disabled = false;
             const gBtn = document.getElementById("googleBtn");
             if (gBtn) gBtn.disabled = false;
+            const aBtn = document.getElementById("appleBtn");
+            if (aBtn) aBtn.disabled = false;
+        }
+
+        // --- Lỗi riêng của luồng Apple: nhà cung cấp Apple CHƯA được bật trong Firebase
+        // (auth/operation-not-allowed / invalid-credential từ provider chưa cấu hình...)
+        // -> luôn dịch sang một câu tiếng Việt rõ ràng, không bao giờ hiện lỗi thô.
+        const APPLE_NOT_ENABLED_MSG = "Đăng nhập bằng Apple chưa được bật. Vui lòng dùng Google hoặc email/mật khẩu.";
+        function showAppleError(err) {
+            console.warn("Đăng nhập Apple chưa sẵn sàng:", err && err.code);
+            msg.textContent = "❌ " + APPLE_NOT_ENABLED_MSG;
+            msg.style.color = "#ef4444";
+            btn.disabled = false;
+            const gBtn = document.getElementById("googleBtn");
+            if (gBtn) gBtn.disabled = false;
+            const aBtn = document.getElementById("appleBtn");
+            if (aBtn) aBtn.disabled = false;
         }
 
         async function finishLogin(user) {
@@ -283,9 +328,33 @@
             });
         }
 
-        // Xử lý kết quả khi quay lại từ Google — chạy qua ĐÚNG quy trình completeLogin như mật khẩu
+        // --- Đăng nhập bằng Apple: OAuthProvider('apple.com'), redirect như Google,
+        // kết quả quay lại cũng chạy qua ĐÚNG quy trình completeLogin ở dưới.
+        // Cờ sessionStorage 'apple_signin_attempt' để phân biệt lỗi của luồng Apple
+        // (provider chưa bật) với lỗi Google khi getRedirectResult báo về.
+        const appleBtn = document.getElementById("appleBtn");
+        if (appleBtn) {
+            appleBtn.addEventListener("click", async () => {
+                msg.textContent = t("msg_checking");
+                msg.style.color = "#C8102E";
+                appleBtn.disabled = true;
+                try {
+                    sessionStorage.setItem('apple_signin_attempt', '1');
+                    const appleProvider = new OAuthProvider('apple.com');
+                    appleProvider.addScope('email');
+                    appleProvider.addScope('name');
+                    await signInWithRedirect(auth, appleProvider);
+                } catch (err) {
+                    sessionStorage.removeItem('apple_signin_attempt');
+                    showAppleError(err);
+                }
+            });
+        }
+
+        // Xử lý kết quả khi quay lại từ Google/Apple — chạy qua ĐÚNG quy trình completeLogin như mật khẩu
         getRedirectResult(auth).then(async (result) => {
             if (!result || !result.user) return;
+            sessionStorage.removeItem('apple_signin_attempt');
             msg.textContent = t("msg_checking");
             msg.style.color = "#C8102E";
             btn.disabled = true;
@@ -295,7 +364,16 @@
                 showLoginError(err);
             }
         }).catch((err) => {
-            showLoginError(err);
+            const wasAppleAttempt = sessionStorage.getItem('apple_signin_attempt') === '1';
+            sessionStorage.removeItem('apple_signin_attempt');
+            // Email đã có tài khoản bằng mật khẩu -> giữ thông điệp riêng, không gộp vào lỗi Apple
+            if (err && err.code === 'auth/account-exists-with-different-credential') {
+                showLoginError(err);
+            } else if (wasAppleAttempt) {
+                showAppleError(err);
+            } else {
+                showLoginError(err);
+            }
         });
     </script>
 </body>

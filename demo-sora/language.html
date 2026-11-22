@@ -77,6 +77,13 @@
       <span class="lang-code">G3</span>
     </button>
 
+    <!-- 🔒 Chỉ hiện khi học viên ĐÃ có nhóm: nhóm đã chốt, chỉ Admin mới đổi được -->
+    <p id="group-locked-note" data-i18n="group_locked_note" style="display:none; font-size:13px; color:#8B8B84; text-align:center; margin:10px 4px 0;">🔒 Nhóm ngành của bạn đã được chốt. Muốn đổi nhóm, hãy liên hệ Admin.</p>
+    <style>
+      .lang-card-opt.group-fixed { opacity: .5; cursor: not-allowed; }
+      .lang-card-opt.group-fixed.selected { opacity: .9; outline: 2px solid #C9A24B; }
+    </style>
+
     <!-- ===== NÚT TIẾP TỤC: chỉ bật khi đã chọn đủ ngôn ngữ + nhóm ngành ===== -->
     <button type="button" id="btn-continue" class="board-continue" data-i18n="btn_continue" onclick="confirmBoard()" disabled>Tiếp tục</button>
 
@@ -89,9 +96,13 @@
     import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
     // ===== BẢNG GỘP: chọn ngôn ngữ + nhóm ngành trong MỘT bảng, lưu một lần =====
+    // KHÓA NHÓM: học viên ĐÃ có nhóm trên Firestore thì phần nhóm bị chốt cứng
+    // (chỉ xem, không chọn lại được) — từ nay chỉ Admin mới đổi được nhóm.
+    // Học viên CHƯA có nhóm (lần đầu vào app) vẫn chọn nhóm ở bảng này như cũ.
     let currentUser = null;
     let selectedLang = (window.I18N && I18N.getLang()) || 'vi';
     let selectedGroup = null;
+    let groupLocked = false;
     try { selectedGroup = localStorage.getItem('app_group') || null; } catch (e) {}
 
     const authReady = new Promise((resolve) => {
@@ -103,7 +114,12 @@
             const snap = await getDoc(doc(db, "users", u.uid));
             if (snap.exists()) {
               const data = snap.data();
-              if (data.group && !selectedGroup) selectedGroup = String(data.group);
+              if (data.group) {
+                // Đã có nhóm -> CHỐT: nhóm lấy từ Firestore, không cho chọn lại
+                groupLocked = true;
+                selectedGroup = String(data.group);
+                try { localStorage.setItem('app_group', selectedGroup); } catch (e) {}
+              }
               if (data.lang && !localStorage.getItem('app_lang')) {
                 selectedLang = data.lang;
                 if (window.I18N) I18N.setLang(data.lang);
@@ -122,7 +138,11 @@
       });
       document.querySelectorAll('[data-group]').forEach(function (el) {
         el.classList.toggle('selected', el.getAttribute('data-group') === selectedGroup);
+        el.classList.toggle('group-fixed', groupLocked);
+        el.disabled = groupLocked;
       });
+      const note = document.getElementById('group-locked-note');
+      if (note) note.style.display = groupLocked ? 'block' : 'none';
       const btn = document.getElementById('btn-continue');
       if (btn) btn.disabled = !(selectedLang && selectedGroup);
     }
@@ -134,6 +154,7 @@
     };
 
     window.selectGroup = function (g) {
+      if (groupLocked) return; // Nhóm đã chốt — chỉ Admin đổi được
       selectedGroup = g;
       renderSelections();
     };
@@ -144,14 +165,16 @@
         localStorage.setItem('app_lang', selectedLang);
         localStorage.setItem('app_group', selectedGroup);
       } catch (e) {}
-      // Chờ trạng thái đăng nhập để lưu cả hai lựa chọn lên Firestore trong MỘT lần ghi
+      // Chờ trạng thái đăng nhập để lưu lựa chọn lên Firestore trong MỘT lần ghi.
+      // Nhóm đã chốt thì CHỈ ghi ngôn ngữ — không ghi đè nhóm của học viên.
       const user = currentUser || await Promise.race([
         authReady,
         new Promise((r) => setTimeout(() => r(null), 1500))
       ]);
       if (user) {
         try {
-          await setDoc(doc(db, "users", user.uid), { lang: selectedLang, group: selectedGroup }, { merge: true });
+          const payload = groupLocked ? { lang: selectedLang } : { lang: selectedLang, group: selectedGroup };
+          await setDoc(doc(db, "users", user.uid), payload, { merge: true });
         } catch (e) { console.warn("Không lưu được lựa chọn lên Firestore:", e); }
       }
       location.href = "index.html";

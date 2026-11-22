@@ -141,7 +141,10 @@
       pro_help: 'HD: 🚩 Đánh dấu, 戻る Quay lại, 次へ Tiếp theo',
       /* language page */
       lang_heading: '🌐 Chọn ngôn ngữ của bạn',
-      lang_note: 'Bạn có thể đổi ngôn ngữ bất cứ lúc nào ở trang chủ.'
+      lang_note: 'Bạn có thể đổi ngôn ngữ bất cứ lúc nào ở trang chủ.',
+      group_heading: '🏗️ Bạn thuộc nhóm ngành nào?',
+      btn_continue: 'Tiếp tục',
+      change_group: '🔀 Đổi nhóm ngành'
     },
     id: {
       app_tagline: 'Latihan ujian Keterampilan Khusus No. 2',
@@ -263,7 +266,10 @@
       pro_correct: 'Jawaban benar:',
       pro_help: 'Petunjuk: 🚩 Tandai, 戻る Kembali, 次へ Berikutnya',
       lang_heading: '🌐 Pilih bahasa Anda',
-      lang_note: 'Anda dapat mengganti bahasa kapan saja di beranda.'
+      lang_note: 'Anda dapat mengganti bahasa kapan saja di beranda.',
+      group_heading: '🏗️ Pilih kelompok bidang Anda',
+      btn_continue: 'Lanjutkan',
+      change_group: '🔀 Ganti kelompok'
     },
     en: {
       app_tagline: 'Specified Skilled Worker No. 2 exam practice',
@@ -385,7 +391,10 @@
       pro_correct: 'Correct answer:',
       pro_help: 'Help: 🚩 Flag, 戻る Back, 次へ Next',
       lang_heading: '🌐 Choose your language',
-      lang_note: 'You can change the language anytime on the home page.'
+      lang_note: 'You can change the language anytime on the home page.',
+      group_heading: '🏗️ Choose your industry group',
+      btn_continue: 'Continue',
+      change_group: '🔀 Change group'
     }
   };
 

@@ -33,14 +33,8 @@
         <input type="text" id="reg-name" data-i18n-ph="ph_name" placeholder="Nhập tên của bạn">
     </div>
 
-    <div class="form-group">
-        <label data-i18n="label_group">Bạn thuộc nhóm nào?</label>
-        <select id="reg-group">
-            <option value="1" data-i18n="group_1">Nhóm 1 (doboku)</option>
-            <option value="2" data-i18n="group_2">Nhóm 2 (kenchiku)</option>
-            <option value="3" data-i18n="group_3">Nhóm 3 (setsubi)</option>
-        </select>
-    </div>
+    <!-- Nhóm ngành: KHÔNG hỏi trong form nữa — ngay sau khi đăng ký, BẢNG GỘP
+         language.html sẽ hỏi ngôn ngữ + nhóm ngành trong cùng một bảng. -->
 
     <div class="form-group">
         <label>Email</label>
@@ -102,9 +96,6 @@
         const name = document.getElementById('reg-name').value;
         const email = document.getElementById('reg-email').value;
         const password = document.getElementById('reg-password').value;
-        
-        // VỊ TRÍ CHÈN 2: Lấy giá trị nhóm đã chọn
-        const group = document.getElementById('reg-group').value;
 
         if (!name || !email || !password) {
             alert(t("err_fill_all"));
@@ -115,11 +106,10 @@
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
 
-            // VỊ TRÍ CHÈN 3: Đưa thông tin group vào Firestore
+            // Hồ sơ tạo KHÔNG kèm group: nhóm ngành được chọn ở bảng gộp language.html ngay sau đăng ký
             await setDoc(doc(db, "users", user.uid), {
                 name: name,
                 email: email,
-                group: group,             // Lưu số nhóm (1 hoặc 2)
                 status: "active",
                 isPremium: false,
                 device_count: 0,
@@ -148,7 +138,6 @@
     // Tài khoản CHƯA có hồ sơ -> tạo hồ sơ đúng mẫu đăng ký + gán mã thành viên.
     // ĐÃ có hồ sơ -> không tạo trùng; mời đăng nhập ở login.html, nơi có đủ kiểm tra khóa máy/banned.
     document.getElementById('btn-google').addEventListener('click', async () => {
-        sessionStorage.setItem('reg_group', document.getElementById('reg-group').value);
         const gBtn = document.getElementById('btn-google');
         gBtn.disabled = true;
         try {
@@ -175,7 +164,6 @@
             await setDoc(userRef, {
                 name: user.displayName || "Học viên",
                 email: user.email,
-                group: sessionStorage.getItem('reg_group') || "1",
                 status: "active",
                 isPremium: false,
                 device_count: 0,

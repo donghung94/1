@@ -52,20 +52,39 @@
                 if (userSnap.exists()) {
                     const data = userSnap.data();
 
-                    // 0. Ngôn ngữ: nhận từ Firestore nếu máy chưa có; chưa có ở đâu -> trang chọn ngôn ngữ
-                    if (!localStorage.getItem('app_lang')) {
-                        if (data.lang && window.I18N) {
-                            I18N.setLang(data.lang);
-                        } else if (!data.lang) {
-                            location.href = "language.html";
-                            return;
-                        }
-                    }
                     const isAdmin = data.role === 'admin';
+                    // 0. Ngôn ngữ + nhóm ngành: nhận từ Firestore nếu máy chưa có.
+                    //    Thiếu 1 trong 2 (và không phải admin) -> sang BẢNG GỘP language.html
+                    //    (chọn ngôn ngữ + nhóm ngành trong cùng một bảng; giá trị đã có được chọn sẵn,
+                    //    người dùng chỉ bổ sung phần thiếu rồi bấm Tiếp tục). Admin được miễn cổng này.
+                    if (!localStorage.getItem('app_lang') && data.lang && window.I18N) {
+                        I18N.setLang(data.lang);
+                    }
+                    const knownLang = data.lang || localStorage.getItem('app_lang');
+                    const savedGroup = data.group ? String(data.group) : (localStorage.getItem('app_group') || null);
+                    if (savedGroup) { try { localStorage.setItem('app_group', savedGroup); } catch (e) {} }
+                    if (!isAdmin && (!knownLang || !savedGroup)) {
+                        location.href = "language.html";
+                        return;
+                    }
                     // Nút Bảng điều khiển: chỉ admin mới thấy, dẫn sang trang dashboard.html riêng
                     if (isAdmin) {
                         const dashBtn = document.getElementById('admin-dash-btn');
                         if (dashBtn) dashBtn.style.display = 'flex';
+                    }
+                    // Link Đổi nhóm ngành (mở bảng gộp language.html): hiện cho tài khoản đã đăng nhập
+                    const cgLink = document.getElementById('change-group-link');
+                    if (cgLink) cgLink.style.display = 'inline-flex';
+                    // Lọc danh sách đề theo nhóm: tài khoản thường chỉ thấy lý thuyết chung
+                    // + thẻ thực hành (kèm đề thi thử trong thẻ) của đúng nhóm mình.
+                    // Admin và khách thấy toàn bộ như cũ.
+                    if (!isAdmin && savedGroup) {
+                        ['1', '2', '3'].forEach((g) => {
+                            if (g !== savedGroup) {
+                                const card = document.getElementById('practice-card-g' + g);
+                                if (card) card.style.display = 'none';
+                            }
+                        });
                     }
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
@@ -80,7 +99,7 @@
 
                     // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
                     const isPremium = data.isPremium === true || isAdmin;
-                    const userGroup = data.group || "1";
+                    const userGroup = savedGroup || "1";
                     // Ghi tầng người dùng cho trang thi (exam.js): 'premium' | 'free' ('guest' ghi ở nhánh chưa đăng nhập)
                     localStorage.setItem('userTier', isPremium ? 'premium' : 'free');
                     localStorage.setItem('isPremium', String(isPremium));
@@ -201,6 +220,7 @@
     </div>
   </div>
   <a href="language.html" class="lang-switch" data-i18n="lang_switch">🌐 Ngôn ngữ</a>
+  <a href="language.html" id="change-group-link" class="lang-switch" data-i18n="change_group" style="display:none">🔀 Đổi nhóm ngành</a>
 </header>
 
 
@@ -289,7 +309,7 @@
  <!-- ========================= -->
   <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 1 -->
   <!-- ========================= -->
-  <div class="card">
+  <div class="card" id="practice-card-g1">
     <h2 data-i18n="practice_g1">🧰 Đề thực hành nhóm 1</h2>
     <ul class="exam-list">
       <li><a href="exam.html?practice=g1_1" data-i18n-html="prac_1_1_html">Thực hành nhóm 1 – (問1〜問30)</a></li>
@@ -302,7 +322,7 @@
   <!-- ========================= -->
   <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 2 -->
   <!-- ========================= -->
-  <div class="card">
+  <div class="card" id="practice-card-g2">
     <h2 data-i18n="practice_g2">🧰 Đề thực hành nhóm 2</h2>
     <ul class="exam-list">
       <li><a href="exam.html?practice=g2_1" data-i18n-html="prac_2_1_html">Thực hành nhóm 2 – (問1〜問30)</a></li>
@@ -314,7 +334,7 @@
   </div>
     <!-- ✅ KHU ĐỀ THỰC HÀNH NHÓM 3 -->
   <!-- ========================= -->
-  <div class="card">
+  <div class="card" id="practice-card-g3">
     <h2 data-i18n="practice_g3">🧰 Đề thực hành nhóm 3</h2>
     <ul class="exam-list">
        <a href="exam.html?practice=g3_6" data-i18n-html="prac_3_6_html">Thực hành nhóm 3 – (đề tinh gọn mới nhất 1)</a>

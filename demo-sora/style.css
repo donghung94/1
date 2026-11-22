@@ -357,6 +357,10 @@ input:focus, select:focus { outline: none; border-color: var(--gold) !important;
 .lang-desc{font-size:12.5px;color:var(--ink-2)}
 .lang-code{margin-left:auto;flex:none;background:var(--brown);color:var(--gold-pale);font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 9px;border-radius:999px}
 .lang-note{text-align:center;font-size:12.5px;color:var(--ink-3);margin-top:18px}
+.board-section-title{font-size:19px;font-weight:800;color:var(--ink);margin:26px 0 12px}
+.board-continue{display:block;width:100%;margin-top:22px;background:var(--red);color:#fff;border:none;font-family:inherit;font-size:16px;font-weight:800;padding:15px;border-radius:14px;cursor:pointer;transition:all .15s ease}
+.board-continue:disabled{background:#D8D8D0;color:#8B8B84;cursor:not-allowed}
+.board-continue:not(:disabled):active{transform:translateY(1px)}
 
 /* Locked-exam badge wording per language (base rule lives in index.html) */
 html[lang="id"] .exam-locked::after{content:"🔒 Buka Kunci"}

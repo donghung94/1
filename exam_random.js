@@ -5,7 +5,7 @@ window.QUESTION_SETS = window.QUESTION_SETS || {};
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[arr[j]]] = [arr[j], arr[i]]; // Cách viết cũ bạn hay dùng
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
   }

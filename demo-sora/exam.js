@@ -77,17 +77,35 @@
   const isShuffleActive = localStorage.getItem('user_shuffle') === 'true';
   let sourceQuestions = DATA.questions || DATA; // Chú ý: Đổi const thành let ở đây
 
-  // ================== GIỚI HẠN TÀI KHOẢN FREE ==================
-  // Mọi đề đều mở cho tài khoản free, nhưng mỗi đề chỉ làm được FREE_LIMIT câu đầu.
-  // Chạm câu thứ FREE_LIMIT + 1 -> hiện bảng nâng cấp Premium, không cho làm tiếp.
-  // Premium / Admin (exam.html đã gộp admin vào cờ isPremium): không giới hạn, không đổi hành vi.
+  // ================== GIỚI HẠN THEO TẦNG NGƯỜI DÙNG ==================
+  // Mọi đề đều mở cho tất cả, nhưng mỗi đề chỉ làm được FREE_LIMIT câu đầu nếu chưa Premium.
+  // Chạm câu thứ FREE_LIMIT + 1 -> hiện "bức tường" theo tầng:
+  // - guest (chưa đăng nhập): BẢNG ĐĂNG NHẬP (mời đăng nhập / đăng ký để học tiếp).
+  // - free (đã đăng nhập): BẢNG NÂNG CẤP Premium.
+  // - Premium / Admin (exam.html đã gộp admin vào cờ isPremium): không giới hạn, không đổi hành vi.
+  // Tầng do exam.html / index.html ghi vào localStorage 'userTier'; thiếu thì suy ra:
+  // isPremium=true -> 'premium', ngược lại -> 'guest' (người mới chưa từng đăng nhập).
   const FREE_LIMIT = 5;
-  const isPremiumUser = localStorage.getItem('isPremium') === 'true';
-  const isFreeUser = !isPremiumUser;
+  const storedTier = localStorage.getItem('userTier');
+  const isPremiumUser = storedTier ? storedTier === 'premium' : (localStorage.getItem('isPremium') === 'true');
+  const userTier = storedTier || (isPremiumUser ? 'premium' : 'guest');
+  const isGuestUser = userTier === 'guest';
+  const isFreeUser = !isPremiumUser; // cả guest lẫn free đều bị giới hạn FREE_LIMIT câu
 
   function showUpgradeModal() {
     const modal = document.getElementById('premium-modal');
     if (modal) modal.style.display = 'flex';
+  }
+
+  function showLoginWall() {
+    const modal = document.getElementById('login-wall-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  // Chọn bức tường theo tầng người dùng
+  function showLimitWall() {
+    if (isGuestUser) showLoginWall();
+    else showUpgradeModal();
   }
 
   // ================== BUILD QUESTIONS ==================
@@ -194,8 +212,9 @@
     // Nút Tiếp theo
     $("#nextBtn").onclick = () => {
       if (user[cur] === null) return;
-      // Tài khoản free: bấm qua câu thứ FREE_LIMIT + 1 -> hiện bảng nâng cấp, đứng yên ở câu cuối miễn phí
-      if (isFreeUser && cur + 1 >= FREE_LIMIT) { showUpgradeModal(); return; }
+      // Chưa Premium (guest/free): bấm qua câu thứ FREE_LIMIT + 1 -> hiện bức tường theo tầng
+      // (khách: bảng đăng nhập; free: bảng nâng cấp), đứng yên ở câu cuối miễn phí
+      if (isFreeUser && cur + 1 >= FREE_LIMIT) { showLimitWall(); return; }
       if (cur < questions.length - 1) {
         cur++;
         render();

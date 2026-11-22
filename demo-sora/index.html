@@ -35,7 +35,15 @@
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
-            location.href = "login.html";
+            // KHÁCH (chưa đăng nhập): KHÔNG ép sang trang login nữa.
+            // Khách xem được toàn bộ danh sách đề và vào làm thử — mỗi đề 5 câu,
+            // chạm câu 6 trang thi sẽ hiện BẢNG ĐĂNG NHẬP (xem exam.js).
+            localStorage.setItem('userTier', 'guest');
+            localStorage.setItem('isPremium', 'false');
+            const wsGuest = document.getElementById('welcome-section');
+            if (wsGuest) wsGuest.style.setProperty('display', 'none', 'important');
+            const ctaGuest = document.getElementById('guest-cta');
+            if (ctaGuest) ctaGuest.style.display = 'flex';
         } else {
             try {
                 const userDocRef = doc(db, "users", user.uid);
@@ -73,6 +81,9 @@
                     // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
                     const isPremium = data.isPremium === true || isAdmin;
                     const userGroup = data.group || "1";
+                    // Ghi tầng người dùng cho trang thi (exam.js): 'premium' | 'free' ('guest' ghi ở nhánh chưa đăng nhập)
+                    localStorage.setItem('userTier', isPremium ? 'premium' : 'free');
+                    localStorage.setItem('isPremium', String(isPremium));
 
                     // 3. Điều khiển hiển thị Bảng thông báo ưu đãi
                     const promoSection = document.getElementById('promo-section');
@@ -169,6 +180,25 @@
       <strong id="user-display-name">Học viên</strong>
     </div>
     <span id="user-status-chip" class="status-chip"></span>
+  </div>
+  <!-- 👋 KHỐI KHÁCH: chỉ hiện khi CHƯA đăng nhập (script chính bật lên ở nhánh khách);
+       người đã đăng nhập thấy thẻ chào cá nhân ở trên, khối này luôn ẩn -->
+  <style>
+    .guest-cta-btns{margin-left:auto;display:flex;gap:8px;flex:none;flex-wrap:wrap;justify-content:flex-end}
+    .guest-btn-login{background:var(--red);color:#fff;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;text-decoration:none;white-space:nowrap}
+    .guest-btn-register{background:#fff;color:var(--red);font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;text-decoration:none;border:1.5px solid var(--bronze);white-space:nowrap}
+  </style>
+  <div id="guest-cta" class="welcome-card" style="display:none;">
+    <div class="welcome-avatar">👤</div>
+    <div class="welcome-text">
+      <span class="welcome-hi" data-i18n="welcome_hi">Chào bạn,</span>
+      <strong style="display:block;font-size:15px;color:var(--ink);" data-i18n="guest_name">Khách</strong>
+      <div style="font-size:12px;" data-i18n="guest_note">Bạn đang học với tư cách khách — mỗi đề được làm thử 5 câu.</div>
+    </div>
+    <div class="guest-cta-btns">
+      <a href="login.html" class="guest-btn-login" data-i18n="btn_login">Đăng nhập</a>
+      <a href="register.html" class="guest-btn-register" data-i18n="btn_register">Đăng ký tài khoản</a>
+    </div>
   </div>
   <a href="language.html" class="lang-switch" data-i18n="lang_switch">🌐 Ngôn ngữ</a>
 </header>

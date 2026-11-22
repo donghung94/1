@@ -21,7 +21,13 @@
 
     onAuthStateChanged(auth, async (user) => {
         if (!user) {
-            location.href = "login.html";
+            // KHÁCH (chưa đăng nhập): cho vào làm bài với tầng 'guest' — KHÔNG đá về login nữa.
+            // exam.js giới hạn 5 câu đầu và hiện BẢNG ĐĂNG NHẬP khi khách chạm câu thứ 6.
+            localStorage.setItem('userTier', 'guest');
+            localStorage.setItem('isPremium', 'false');
+            const guestNameEl = document.getElementById('user-display-name');
+            if (guestNameEl) guestNameEl.innerText = t("guest_name");
+            initShuffleLogic();
         } else {
             try {
                 const userDocRef = doc(db, "users", user.uid);
@@ -32,6 +38,7 @@
                     const isAdmin = data.role === 'admin'; 
                     const isPremium = data.isPremium === true || isAdmin; 
                     localStorage.setItem('isPremium', isPremium);
+                    localStorage.setItem('userTier', isPremium ? 'premium' : 'free');
                     const currentDeviceId = localStorage.getItem('my_device_id');
                     const devices = data.devices || {};
 
@@ -50,6 +57,14 @@
                         nameDisplay.innerText = isAdmin ? `(AD) ${data.name}` : (data.name || "Học viên");
                     }
 
+                    initShuffleLogic();
+                } else {
+                    // Đã đăng nhập nhưng chưa có hồ sơ Firestore: coi như tài khoản free
+                    // (không premium) — vẫn cho làm bài, giới hạn 5 câu như free, không lỗi trang.
+                    localStorage.setItem('isPremium', 'false');
+                    localStorage.setItem('userTier', 'free');
+                    const nameDisplay = document.getElementById('user-display-name');
+                    if (nameDisplay) nameDisplay.innerText = "Học viên";
                     initShuffleLogic();
                 }
             } catch (error) {
@@ -189,6 +204,20 @@
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
             <a href="https://zalo.me/07090778422" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_upgrade_premium">⭐ Nâng cấp Premium</a>
             <button onclick="document.getElementById('premium-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
+        </div>
+    </div>
+  </div>
+
+  <!-- 🔐 BẢNG ĐĂNG NHẬP: exam.js hiện bảng này khi KHÁCH (chưa đăng nhập) chạm câu thứ 6 -->
+  <div id="login-wall-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 15px;">🔐</div>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0;" data-i18n="login_wall_title">Bạn đã làm hết 5 câu xem thử</h2>
+        <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="login_wall_body">Đăng nhập hoặc đăng ký tài khoản miễn phí để tiếp tục làm bài và lưu lại tiến trình học của bạn.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+            <a href="login.html" style="background:#C8102E; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_login">Đăng nhập</a>
+            <a href="register.html" style="background:#fff; color:#C8102E; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold; border:1.5px solid #C9A24B;" data-i18n="btn_register">Đăng ký tài khoản</a>
+            <button onclick="document.getElementById('login-wall-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
         </div>
     </div>
   </div>

@@ -15,8 +15,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Hãy chọn nguyên nhân không đúng gây ra việc 'chờ việc'.",
+  "vi_id": "Pilihlah penyebab yang tidak benar dari terjadinya 'waktu tunggu kerja'.",
+  "vi_en": "Choose the incorrect cause of 'waiting time' (idle waiting) in work.",
   "explain": "Đáp án sai: 作業（さぎょう）手順（てじゅん）の不徹底（ふてってい）— Đây không phải nguyên nhân trực tiếp gây 手待ち. Nguyên nhân thực sự gồm: chờ máy móc, thiếu vật tư, tiến độ trước bị chậm.\n\nTừ vựng:\n手待（てま）ち: Thời gian chờ việc / Ngồi không\n原因（げんいん）: Nguyên nhân\nクレーン: Cần cẩu\n使用（しよう）待（ま）ち: Chờ sử dụng\n材料（ざいりょう）: Vật liệu\n資機材（しきざい）: Máy móc và vật tư\n不足（ふそく）: Thiếu hụt\n作業（さぎょう）手順（てじゅん）: Trình tự công việc\n不徹底（ふてってい）: Không triệt để / Không thực hiện đầy đủ\n前工程（ぜんこうてい）: Công đoạn trước\n遅（おく）れ: Chậm trễ",
-  "tip": "💡 Mẹo nhớ: 手待ち = CHỜ vì thiếu vật tư, chờ máy, hoặc công đoạn trước bị chậm. 「作業手順の不徹底」(không tuân thủ trình tự）= gây lỗi, không phải gây CHỜ → đây là đáp án SAI."
+  "explain_id": "Jawaban salah: 作業（さぎょう）手順（てじゅん）の不徹底（ふてってい）— Ini bukan penyebab langsung dari 手待ち. Penyebab sebenarnya meliputi: menunggu mesin, kekurangan material, dan keterlambatan proses sebelumnya.\n\nKosakata:\n手待（てま）ち: Waktu menunggu pekerjaan / Menganggur\n原因（げんいん）: Penyebab\nクレーン: Derek\n使用（しよう）待（ま）ち: Menunggu untuk digunakan\n材料（ざいりょう）: Material\n資機材（しきざい）: Mesin dan material\n不足（ふそく）: Kekurangan\n作業（さぎょう）手順（てじゅん）: Urutan pekerjaan\n不徹底（ふてってい）: Tidak menyeluruh / Tidak dilaksanakan sepenuhnya\n前工程（ぜんこうてい）: Proses sebelumnya\n遅（おく）れ: Keterlambatan",
+  "explain_en": "Wrong answer: 作業（さぎょう）手順（てじゅん）の不徹底（ふてってい）— This is not a direct cause of 手待ち. The real causes include: waiting for machinery, shortage of materials, and delays in the preceding process.\n\nVocabulary:\n手待（てま）ち: Waiting time for work / Idle time\n原因（げんいん）: Cause\nクレーン: Crane\n使用（しよう）待（ま）ち: Waiting to be used\n材料（ざいりょう）: Materials\n資機材（しきざい）: Machinery and materials\n不足（ふそく）: Shortage\n作業（さぎょう）手順（てじゅん）: Work procedure / Work sequence\n不徹底（ふてってい）: Not thorough / Not fully implemented\n前工程（ぜんこうてい）: Preceding process\n遅（おく）れ: Delay",
+  "tip": "💡 Mẹo nhớ: 手待ち = CHỜ vì thiếu vật tư, chờ máy, hoặc công đoạn trước bị chậm. 「作業手順の不徹底」(không tuân thủ trình tự）= gây lỗi, không phải gây CHỜ → đây là đáp án SAI.",
+  "tip_id": "💡 Tips: 手待ち = MENUNGGU karena kekurangan material, menunggu mesin, atau proses sebelumnya terlambat. 「作業手順の不徹底」(tidak mematuhi urutan kerja) = menyebabkan kesalahan, bukan menyebabkan MENUNGGU → ini jawaban yang SALAH.",
+  "tip_en": "💡 Tip: 手待ち = WAITING because of a shortage of materials, waiting for machinery, or the previous process being delayed. 「作業手順の不徹底」(not thoroughly following the work procedure) = causes errors, not WAITING → this is the WRONG answer."
 },
 {
   "id": 122,
@@ -29,8 +35,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Trong 4 yếu tố cấu thành công việc, hãy chọn yếu tố không thuộc nhóm này.",
+  "vi_id": "Dari 4 faktor pembentuk pekerjaan, pilihlah faktor yang tidak termasuk dalam kelompok ini.",
+  "vi_en": "Among the 4 factors that make up a job, choose the factor that does not belong to this group.",
   "explain": "Đáp án sai: 発注者（はっちゅうしゃ）— Người đặt hàng không thuộc yếu tố cấu thành công việc mà là bên liên quan bên ngoài.\n\nTừ vựng:\n仕事（しごと）: Công việc\n構成（こうせい）する: Cấu thành / Tạo nên\n要素（ようそ）: Yếu tố\n作業方法（さぎょうほうほう）: Phương pháp thi công\n作業手順（さぎょうてじゅん）: Trình tự công việc\n設備（せつび）: Thiết bị\n材料等（ざいりょうとう）: Vật liệu và các thứ khác\n現場情報（げんばじょうほう）: Thông tin hiện trường\n発注者（はっちゅうしゃ）: Người đặt hàng / Chủ đầu tư",
-  "tip": "💡 Mẹo nhớ: 4 yếu tố cấu thành công việc = phương pháp + vật tư thiết bị + thông tin hiện trường + con người. 発注者（chủ đầu tư）là người NGOÀI, không phải yếu tố BÊN TRONG công việc → SAI."
+  "explain_id": "Jawaban salah: 発注者（はっちゅうしゃ）— Pemesan bukan merupakan unsur pembentuk pekerjaan, melainkan pihak terkait di luar.\n\nKosakata:\n仕事（しごと）: Pekerjaan\n構成（こうせい）する: Membentuk / Menyusun\n要素（ようそ）: Unsur\n作業方法（さぎょうほうほう）: Metode kerja\n作業手順（さぎょうてじゅん）: Urutan pekerjaan\n設備（せつび）: Peralatan\n材料等（ざいりょうとう）: Material dan lain-lain\n現場情報（げんばじょうほう）: Informasi lapangan\n発注者（はっちゅうしゃ）: Pemesan / Pemilik proyek",
+  "explain_en": "Wrong answer: 発注者（はっちゅうしゃ）— The client is not a constituent element of the work, but an external related party.\n\nVocabulary:\n仕事（しごと）: Work / Job\n構成（こうせい）する: To constitute / To make up\n要素（ようそ）: Element / Factor\n作業方法（さぎょうほうほう）: Work method\n作業手順（さぎょうてじゅん）: Work procedure\n設備（せつび）: Equipment / Facilities\n材料等（ざいりょうとう）: Materials and others\n現場情報（げんばじょうほう）: Site information\n発注者（はっちゅうしゃ）: Client / Project owner",
+  "tip": "💡 Mẹo nhớ: 4 yếu tố cấu thành công việc = phương pháp + vật tư thiết bị + thông tin hiện trường + con người. 発注者（chủ đầu tư）là người NGOÀI, không phải yếu tố BÊN TRONG công việc → SAI.",
+  "tip_id": "💡 Tips: 4 faktor pembentuk pekerjaan = metode + material & peralatan + informasi lapangan + manusia. 発注者 (pemberi kerja/pemilik proyek) adalah pihak LUAR, bukan faktor INTERNAL pekerjaan → SALAH.",
+  "tip_en": "💡 Tip: The 4 factors that make up a job = method + materials & equipment + site information + people. 発注者 (the client/orderer) is an OUTSIDE party, not an INTERNAL factor of the job → WRONG."
 },
 {
   "id": 123,
@@ -43,8 +55,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Trong các quy định của Luật tiêu chuẩn xây dựng, hãy chọn nội dung không phù hợp.",
+  "vi_id": "Di antara ketentuan Undang-Undang Standar Bangunan, pilihlah isi yang tidak sesuai.",
+  "vi_en": "Among the provisions of the Building Standards Act, choose the content that is not appropriate.",
   "explain": "Đáp án sai: インターネットの接続（せつぞく）品質（ひんしつ）— Chất lượng kết nối internet không thuộc quy định của Luật Xây dựng.\n\nTừ vựng:\n建築（けんちく）基準法（きじゅんほう）: Luật tiêu chuẩn xây dựng\n不適切（ふてきせつ）: Không phù hợp\n安全性（あんぜんせい）: Tính an toàn\n耐久性（たいきゅうせい）: Độ bền lâu\n耐震性（たいしんせい）: Khả năng chịu động đất\nインターネットの接続（せつぞく）品質（ひんしつ）: Chất lượng kết nối internet\n居室（きょしつ）: Phòng ở / Phòng sinh hoạt\n採光（さいこう）: Chiếu sáng tự nhiên\n換気（かんき）: Thông gió\n建ぺい率（けんぺいりつ）: Tỷ lệ che phủ mặt đất\n容積率（ようせきりつ）: Tỷ lệ tổng diện tích sàn",
-  "tip": "💡 Mẹo nhớ: Luật xây dựng quy định về AN TOÀN, ĐỘ BỀN, CHIẾU SÁNG, THÔNG GIÓ, TỶ LỆ XÂY DỰNG. インターネット（internet）= công nghệ thông tin → hoàn toàn không liên quan đến luật xây dựng → SAI."
+  "explain_id": "Jawaban salah: インターネットの接続（せつぞく）品質（ひんしつ）— Kualitas koneksi internet tidak termasuk dalam peraturan Undang-Undang Standar Bangunan.\n\nKosakata:\n建築（けんちく）基準法（きじゅんほう）: Undang-Undang Standar Bangunan\n不適切（ふてきせつ）: Tidak sesuai\n安全性（あんぜんせい）: Keselamatan\n耐久性（たいきゅうせい）: Daya tahan jangka panjang\n耐震性（たいしんせい）: Ketahanan terhadap gempa\nインターネットの接続（せつぞく）品質（ひんしつ）: Kualitas koneksi internet\n居室（きょしつ）: Ruang tinggal / Ruang hunian\n採光（さいこう）: Pencahayaan alami\n換気（かんき）: Ventilasi\n建ぺい率（けんぺいりつ）: Rasio cakupan bangunan\n容積率（ようせきりつ）: Rasio luas lantai total",
+  "explain_en": "Wrong answer: インターネットの接続（せつぞく）品質（ひんしつ）— Internet connection quality is not regulated by the Building Standards Act.\n\nVocabulary:\n建築（けんちく）基準法（きじゅんほう）: Building Standards Act\n不適切（ふてきせつ）: Inappropriate\n安全性（あんぜんせい）: Safety\n耐久性（たいきゅうせい）: Durability\n耐震性（たいしんせい）: Earthquake resistance\nインターネットの接続（せつぞく）品質（ひんしつ）: Internet connection quality\n居室（きょしつ）: Living room / Habitable room\n採光（さいこう）: Natural lighting / Daylighting\n換気（かんき）: Ventilation\n建ぺい率（けんぺいりつ）: Building coverage ratio\n容積率（ようせきりつ）: Floor area ratio",
+  "tip": "💡 Mẹo nhớ: Luật xây dựng quy định về AN TOÀN, ĐỘ BỀN, CHIẾU SÁNG, THÔNG GIÓ, TỶ LỆ XÂY DỰNG. インターネット（internet）= công nghệ thông tin → hoàn toàn không liên quan đến luật xây dựng → SAI.",
+  "tip_id": "💡 Tips: Undang-undang bangunan mengatur tentang KESELAMATAN, KEKUATAN, PENCAHAYAAN, VENTILASI, dan RASIO CAKUPAN BANGUNAN. インターネット (internet) = teknologi informasi → sama sekali tidak berkaitan dengan undang-undang bangunan → SALAH.",
+  "tip_en": "💡 Tip: The Building Standards Act regulates SAFETY, DURABILITY, LIGHTING, VENTILATION, and BUILDING COVERAGE RATIO. インターネット (internet) = information technology → completely unrelated to the Building Standards Act → WRONG."
 },
 {
   "id": 124,
@@ -57,8 +75,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Theo Luật bảo hiểm tai nạn lao động, chi phí điều trị được chi trả bởi ai?",
+  "vi_id": "Menurut Undang-Undang Asuransi Kecelakaan Kerja, biaya pengobatan ditanggung oleh siapa?",
+  "vi_en": "According to the Workers' Accident Compensation Insurance Act, who pays for the treatment costs?",
   "explain": "Đáp án đúng: 労災（ろうさい）保険（ほけん）— Toàn bộ chi phí điều trị do bảo hiểm tai nạn lao động chi trả, không do người lao động tự trả.\n\nTừ vựng:\n労働（ろうどう）災害（さいがい）補償（ほしょう）保険法（ほけんほう）: Luật bảo hiểm bồi thường tai nạn lao động\n病院（びょういん）: Bệnh viện\n治療費（ちりょうひ）: Chi phí điều trị\n全額（ぜんがく）: Toàn bộ / Tất cả\n支払（しはら）う: Thanh toán / Chi trả\n労災（ろうさい）保険（ほけん）: Bảo hiểm tai nạn lao động (Rousai)\n労働者（ろうどうしゃ）: Người lao động\n事業主（じぎょうぬし）: Chủ doanh nghiệp",
-  "tip": "💡 Mẹo nhớ: Bị tai nạn lao động → toàn bộ viện phí do 労災保険（bảo hiểm tai nạn lao động）chi trả. Không trừ vào lương công nhân, không do chủ doanh nghiệp tự bỏ tiền."
+  "explain_id": "Jawaban benar: 労災（ろうさい）保険（ほけん）— Seluruh biaya pengobatan ditanggung oleh asuransi kecelakaan kerja, bukan dibayar sendiri oleh pekerja.\n\nKosakata:\n労働（ろうどう）災害（さいがい）補償（ほしょう）保険法（ほけんほう）: Undang-Undang Asuransi Kompensasi Kecelakaan Kerja\n病院（びょういん）: Rumah sakit\n治療費（ちりょうひ）: Biaya pengobatan\n全額（ぜんがく）: Seluruhnya / Semua\n支払（しはら）う: Membayar\n労災（ろうさい）保険（ほけん）: Asuransi kecelakaan kerja (Rousai)\n労働者（ろうどうしゃ）: Pekerja\n事業主（じぎょうぬし）: Pemilik usaha / Pemberi kerja",
+  "explain_en": "Correct answer: 労災（ろうさい）保険（ほけん）— All treatment costs are paid by workers' accident compensation insurance, not paid by the worker themselves.\n\nVocabulary:\n労働（ろうどう）災害（さいがい）補償（ほしょう）保険法（ほけんほう）: Industrial Accident Compensation Insurance Act\n病院（びょういん）: Hospital\n治療費（ちりょうひ）: Treatment cost\n全額（ぜんがく）: Full amount / All\n支払（しはら）う: To pay\n労災（ろうさい）保険（ほけん）: Workers' accident compensation insurance (Rousai)\n労働者（ろうどうしゃ）: Worker\n事業主（じぎょうぬし）: Business owner / Employer",
+  "tip": "💡 Mẹo nhớ: Bị tai nạn lao động → toàn bộ viện phí do 労災保険（bảo hiểm tai nạn lao động）chi trả. Không trừ vào lương công nhân, không do chủ doanh nghiệp tự bỏ tiền.",
+  "tip_id": "💡 Tips: Jika terjadi kecelakaan kerja → seluruh biaya rumah sakit ditanggung oleh 労災保険 (asuransi kecelakaan kerja). Tidak dipotong dari gaji pekerja, dan tidak dibayar sendiri oleh pemilik usaha.",
+  "tip_en": "💡 Tip: If a work accident happens → all medical costs are covered by 労災保険 (workers' accident compensation insurance). They are not deducted from the worker's salary, and the business owner does not pay them out of pocket."
 },
 {
   "id": 125,
@@ -71,8 +95,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Công trình đê chắn sóng 防波堤（ぼうはてい）工事（こうじ）là loại công trình nào?",
+  "vi_id": "Pekerjaan pemecah gelombang 防波堤（ぼうはてい）工事（こうじ）termasuk jenis pekerjaan apa?",
+  "vi_en": "What type of work is breakwater work 防波堤（ぼうはてい）工事（こうじ）?",
   "explain": "Đáp án đúng: 防波堤工事 nhằm ngăn sóng biển tràn vào cảng để tàu thuyền cập bến an toàn.\n\nTừ vựng:\n防波堤（ぼうはてい）: Đê chắn sóng\n波（なみ）: Sóng biển\n港（みなと）: Cảng / Bến cảng\n船（ふね）: Tàu thuyền\n安全（あんぜん）にとまる: Đậu an toàn\n荷物（にもつ）を積（つ）む: Xếp hàng lên\n下（お）ろす: Dỡ hàng xuống\n土砂（どしゃ）を取（と）り除（のぞ）く: Nạo vét bùn cát\n土砂（どしゃ）を集（あつ）める: Tập hợp đất cát (san lấp)\n岸壁（がんぺき）: Bờ kè / Cầu tàu",
-  "tip": "💡 Mẹo nhớ: 防波堤（ぼうはてい）= 防（ngăn）+ 波（sóng）+ 堤（đê）→ ĐÊ NGĂN SÓNG để tàu vào cảng an toàn. Thấy 「波が港に入らないようにする」→ đây là định nghĩa ĐÚNG của 防波堤工事."
+  "explain_id": "Jawaban benar: 防波堤工事 bertujuan untuk mencegah gelombang laut masuk ke pelabuhan agar kapal dapat berlabuh dengan aman.\n\nKosakata:\n防波堤（ぼうはてい）: Pemecah gelombang / Tanggul penahan gelombang\n波（なみ）: Gelombang laut\n港（みなと）: Pelabuhan\n船（ふね）: Kapal\n安全（あんぜん）にとまる: Berlabuh dengan aman\n荷物（にもつ）を積（つ）む: Memuat barang ke atas\n下（お）ろす: Menurunkan barang\n土砂（どしゃ）を取（と）り除（のぞ）く: Mengeruk lumpur dan pasir\n土砂（どしゃ）を集（あつ）める: Mengumpulkan tanah dan pasir (reklamasi)\n岸壁（がんぺき）: Dermaga / Dinding dermaga",
+  "explain_en": "Correct answer: 防波堤工事 aims to prevent sea waves from entering the port so that ships can berth safely.\n\nVocabulary:\n防波堤（ぼうはてい）: Breakwater\n波（なみ）: Sea wave\n港（みなと）: Port / Harbor\n船（ふね）: Ship / Boat\n安全（あんぜん）にとまる: To berth safely\n荷物（にもつ）を積（つ）む: To load cargo\n下（お）ろす: To unload\n土砂（どしゃ）を取（と）り除（のぞ）く: To dredge mud and sand\n土砂（どしゃ）を集（あつ）める: To gather earth and sand (landfill)\n岸壁（がんぺき）: Quay / Wharf",
+  "tip": "💡 Mẹo nhớ: 防波堤（ぼうはてい）= 防（ngăn）+ 波（sóng）+ 堤（đê）→ ĐÊ NGĂN SÓNG để tàu vào cảng an toàn. Thấy 「波が港に入らないようにする」→ đây là định nghĩa ĐÚNG của 防波堤工事.",
+  "tip_id": "💡 Tips: 防波堤（ぼうはてい）= 防 (mencegah) + 波 (gelombang) + 堤 (tanggul) → TANGGUL PEMECAH GELOMBANG agar kapal dapat masuk pelabuhan dengan aman. Jika melihat 「波が港に入らないようにする」→ ini adalah definisi yang BENAR dari 防波堤工事.",
+  "tip_en": "💡 Tip: 防波堤（ぼうはてい）= 防 (to prevent) + 波 (wave) + 堤 (embankment) → a WAVE-BREAKING EMBANKMENT so ships can enter the port safely. If you see 「波が港に入らないようにする」→ this is the CORRECT definition of 防波堤工事."
 },
 {
   "id": 126,
@@ -85,8 +115,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Thiết bị thông tin hữu tuyến là thiết bị nào?",
+  "vi_id": "Manakah yang merupakan peralatan informasi berkabel?",
+  "vi_en": "Which one is wired information equipment?",
   "explain": "Đáp án đúng: PBX (Private Branch Exchange) — Là hệ thống tổng đài nội bộ, thuộc loại thiết bị thông tin có dây 有線（ゆうせん）設備（せつび）.\n\nTừ vựng:\n電気（でんき）通信（つうしん）設備（せつび）: Thiết bị điện – viễn thông\n有線（ゆうせん）設備（せつび）: Thiết bị hữu tuyến (có dây)\nとう道（どう）: Đường hầm cáp / Hào kỹ thuật\nマンホール: Hố kỹ thuật (Manhole)\nPBX: Tổng đài điện thoại nội bộ (Private Branch Exchange)\nアンテナ: Anten (vô tuyến, không dây)",
-  "tip": "💡 Mẹo nhớ: 有線（ゆうせん）= CÓ DÂY. PBX = tổng đài nối bằng dây điện thoại → có dây → 有線. アンテナ（anten）= thu sóng không khí → VÔ TUYẾN → không phải 有線."
+  "explain_id": "Jawaban benar: PBX (Private Branch Exchange) — Merupakan sistem sentral telepon internal, termasuk jenis peralatan informasi berkabel 有線（ゆうせん）設備（せつび）.\n\nKosakata:\n電気（でんき）通信（つうしん）設備（せつび）: Peralatan listrik dan telekomunikasi\n有線（ゆうせん）設備（せつび）: Peralatan berkabel (wired)\nとう道（どう）: Terowongan kabel / Parit teknis\nマンホール: Lubang inspeksi (Manhole)\nPBX: Sentral telepon internal (Private Branch Exchange)\nアンテナ: Antena (nirkabel, tanpa kabel)",
+  "explain_en": "Correct answer: PBX (Private Branch Exchange) — It is an internal telephone exchange system, classified as wired information equipment 有線（ゆうせん）設備（せつび）.\n\nVocabulary:\n電気（でんき）通信（つうしん）設備（せつび）: Electrical and telecommunications equipment\n有線（ゆうせん）設備（せつび）: Wired equipment\nとう道（どう）: Cable tunnel / Utility tunnel\nマンホール: Manhole\nPBX: Internal telephone exchange (Private Branch Exchange)\nアンテナ: Antenna (wireless)",
+  "tip": "💡 Mẹo nhớ: 有線（ゆうせん）= CÓ DÂY. PBX = tổng đài nối bằng dây điện thoại → có dây → 有線. アンテナ（anten）= thu sóng không khí → VÔ TUYẾN → không phải 有線.",
+  "tip_id": "💡 Tips: 有線（ゆうせん）= BERKABEL. PBX = sentral telepon yang dihubungkan dengan kabel telepon → berkabel → 有線. アンテナ (antena) = menangkap gelombang dari udara → NIRKABEL → bukan 有線.",
+  "tip_en": "💡 Tip: 有線（ゆうせん）= WIRED. PBX = a telephone switchboard connected by wires → wired → 有線. アンテナ (antenna) = receives waves through the air → WIRELESS → not 有線."
 },
 {
   "id": 127,
@@ -99,8 +135,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Công trình kết cấu tầng hầm gồm những gì?",
+  "vi_id": "Pekerjaan struktur basement (ruang bawah tanah) terdiri dari apa saja?",
+  "vi_en": "What does the underground structure work consist of?",
   "explain": "Đáp án đúng: 基礎（きそ）、柱（はしら）、梁（はり）、壁面（へきめん）、床（ゆか）などで構成（こうせい）される — 地下躯体工事 là phần thi công kết cấu chính của tầng hầm gồm nền, cột, dầm, tường, sàn.\n\nTừ vựng:\n地下（ちか）躯体（くたい）工事（こうじ）: Công trình kết cấu tầng hầm\n基礎（きそ）: Nền móng\n柱（はしら）: Cột\n梁（はり）: Dầm\n壁面（へきめん）: Mặt tường\n床（ゆか）: Sàn\n構成（こうせい）される: Được cấu thành từ\n防水（ぼうすい）: Chống thấm\n鈑金（ばんきん）: Tấm kim loại\n重量（じゅうりょう）鉄骨（てっこつ）: Thép kết cấu nặng\n杭（くい）: Cọc nền móng",
-  "tip": "💡 Mẹo nhớ: 地下躯体 = kết cấu TẦNG HẦM → gồm cột + dầm + tường + sàn (phần hầm). Khác với 基礎工事（móng cọc）= chôn cọc xuống đất trước khi xây hầm."
+  "explain_id": "Jawaban benar: 基礎（きそ）、柱（はしら）、梁（はり）、壁面（へきめん）、床（ゆか）などで構成（こうせい）される — 地下躯体工事 adalah pekerjaan struktur utama ruang bawah tanah yang terdiri dari fondasi, kolom, balok, dinding, dan lantai.\n\nKosakata:\n地下（ちか）躯体（くたい）工事（こうじ）: Pekerjaan struktur ruang bawah tanah\n基礎（きそ）: Fondasi\n柱（はしら）: Kolom\n梁（はり）: Balok\n壁面（へきめん）: Permukaan dinding\n床（ゆか）: Lantai\n構成（こうせい）される: Terdiri dari / Dibentuk dari\n防水（ぼうすい）: Kedap air / Waterproofing\n鈑金（ばんきん）: Pelat logam / Pekerjaan pelat logam\n重量（じゅうりょう）鉄骨（てっこつ）: Baja struktural berat\n杭（くい）: Tiang pancang fondasi",
+  "explain_en": "Correct answer: 基礎（きそ）、柱（はしら）、梁（はり）、壁面（へきめん）、床（ゆか）などで構成（こうせい）される — 地下躯体工事 is the construction of the main basement structure consisting of foundations, columns, beams, walls, and floors.\n\nVocabulary:\n地下（ちか）躯体（くたい）工事（こうじ）: Basement structural work\n基礎（きそ）: Foundation\n柱（はしら）: Column\n梁（はり）: Beam\n壁面（へきめん）: Wall surface\n床（ゆか）: Floor\n構成（こうせい）される: To be composed of\n防水（ぼうすい）: Waterproofing\n鈑金（ばんきん）: Sheet metal\n重量（じゅうりょう）鉄骨（てっこつ）: Heavy structural steel\n杭（くい）: Foundation pile",
+  "tip": "💡 Mẹo nhớ: 地下躯体 = kết cấu TẦNG HẦM → gồm cột + dầm + tường + sàn (phần hầm). Khác với 基礎工事（móng cọc）= chôn cọc xuống đất trước khi xây hầm.",
+  "tip_id": "💡 Tips: 地下躯体 = struktur BASEMENT → terdiri dari kolom + balok + dinding + lantai (bagian bawah tanah). Berbeda dengan 基礎工事 (pekerjaan fondasi) = memancangkan tiang ke dalam tanah sebelum membangun basement.",
+  "tip_en": "💡 Tip: 地下躯体 = the BASEMENT structure → includes columns + beams + walls + floors (the underground part). Different from 基礎工事 (foundation work) = driving piles into the ground before building the basement."
 },
 {
   "id": 128,
@@ -113,8 +155,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Hãy chọn loại đường không thuộc công trình đường bộ.",
+  "vi_id": "Pilihlah jenis jalan yang tidak termasuk dalam pekerjaan jalan.",
+  "vi_en": "Choose the type of road that does not belong to road construction work.",
   "explain": "Đáp án đúng: とう道（どう）— Là đường hầm dẫn cáp điện / hào kỹ thuật, không phải công trình đường bộ cho xe cộ đi lại.\n\nTừ vựng:\n道路（どうろ）工事（こうじ）: Công trình đường bộ\n林業用（りんぎょうよう）の道路（どうろ）: Đường lâm nghiệp\n高速（こうそく）道路（どうろ）: Đường cao tốc\n国道（こくどう）: Quốc lộ\nとう道（どう）: Hào kỹ thuật / Đường hầm cáp ngầm",
-  "tip": "💡 Mẹo nhớ: Đường bộ = xe đi → cao tốc, quốc lộ, đường lâm nghiệp đều cho xe đi. とう道（とうどう）= hầm kỹ thuật chôn cáp/ống → không phải đường cho xe → SAI."
+  "explain_id": "Jawaban benar: とう道（どう）— Merupakan terowongan untuk kabel listrik / parit teknis, bukan pekerjaan jalan untuk lalu lintas kendaraan.\n\nKosakata:\n道路（どうろ）工事（こうじ）: Pekerjaan jalan\n林業用（りんぎょうよう）の道路（どうろ）: Jalan kehutanan\n高速（こうそく）道路（どうろ）: Jalan tol / Jalan bebas hambatan\n国道（こくどう）: Jalan nasional\nとう道（どう）: Parit teknis / Terowongan kabel bawah tanah",
+  "explain_en": "Correct answer: とう道（どう）— It is a tunnel for electric cables / utility tunnel, not a road construction for vehicle traffic.\n\nVocabulary:\n道路（どうろ）工事（こうじ）: Road construction\n林業用（りんぎょうよう）の道路（どうろ）: Forestry road\n高速（こうそく）道路（どうろ）: Expressway / Highway\n国道（こくどう）: National road\nとう道（どう）: Utility tunnel / Underground cable tunnel",
+  "tip": "💡 Mẹo nhớ: Đường bộ = xe đi → cao tốc, quốc lộ, đường lâm nghiệp đều cho xe đi. とう道（とうどう）= hầm kỹ thuật chôn cáp/ống → không phải đường cho xe → SAI.",
+  "tip_id": "💡 Tips: Jalan = untuk kendaraan → jalan tol, jalan nasional, dan jalan hutan semuanya dilalui kendaraan. とう道（とうどう）= terowongan utilitas untuk mengubur kabel/pipa → bukan jalan untuk kendaraan → SALAH.",
+  "tip_en": "💡 Tip: Roads = for vehicles → expressways, national roads, and forest roads are all for vehicles. とう道（とうどう）= a utility tunnel for burying cables/pipes → not a road for vehicles → WRONG."
 },
 {
   "id": 129,
@@ -127,8 +175,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Câu nói thể hiện sự cảm ơn và biết ơn người khác là gì?",
+  "vi_id": "Kalimat apa yang menunjukkan rasa terima kasih dan penghargaan kepada orang lain?",
+  "vi_en": "What is the expression that shows thanks and appreciation to another person?",
   "explain": "Đáp án đúng: ご苦労（くろう）さま — Là lời cảm ơn, thể hiện sự trân trọng với công sức người khác (thường dùng khi cấp trên nói với cấp dưới).\n\nTừ vựng:\n相手（あいて）: Đối phương / Người kia\n感謝（かんしゃ）する: Cảm ơn / Biết ơn\n労（ねぎら）う: Ghi nhận công sức / Động viên\nご苦労（くろう）さま: Cảm ơn vì đã vất vả (cấp trên → cấp dưới)\nおつかれさまです: Cảm ơn vì đã vất vả (dùng với đồng nghiệp và cấp trên)\n失礼（しつれい）します: Xin phép / Xin lỗi làm phiền\nご安全（あんぜん）に: Chúc làm việc an toàn",
-  "tip": "💡 Mẹo nhớ: Thấy 「感謝して労う」(cảm ơn + ghi nhận công sức）→ đây là ご苦労さま. Lưu ý: ご苦労さま chỉ dùng khi CẤP TRÊN nói với CẤP DƯỚI, không dùng ngược lại."
+  "explain_id": "Jawaban benar: ご苦労（くろう）さま — Merupakan ucapan terima kasih yang menunjukkan penghargaan atas kerja keras orang lain (biasanya digunakan oleh atasan kepada bawahan).\n\nKosakata:\n相手（あいて）: Lawan bicara / Orang lain\n感謝（かんしゃ）する: Berterima kasih / Bersyukur\n労（ねぎら）う: Menghargai kerja keras / Memberi semangat\nご苦労（くろう）さま: Terima kasih atas kerja kerasnya (atasan → bawahan)\nおつかれさまです: Terima kasih atas kerja kerasnya (digunakan untuk rekan kerja dan atasan)\n失礼（しつれい）します: Permisi / Mohon maaf mengganggu\nご安全（あんぜん）に: Semoga bekerja dengan aman",
+  "explain_en": "Correct answer: ご苦労（くろう）さま — It is an expression of thanks showing appreciation for someone else's hard work (usually used by a superior to a subordinate).\n\nVocabulary:\n相手（あいて）: The other person / Partner\n感謝（かんしゃ）する: To thank / To be grateful\n労（ねぎら）う: To appreciate someone's efforts / To encourage\nご苦労（くろう）さま: Thank you for your hard work (superior → subordinate)\nおつかれさまです: Thank you for your hard work (used with colleagues and superiors)\n失礼（しつれい）します: Excuse me / Sorry to disturb you\nご安全（あんぜん）に: Work safely / Stay safe",
+  "tip": "💡 Mẹo nhớ: Thấy 「感謝して労う」(cảm ơn + ghi nhận công sức）→ đây là ご苦労さま. Lưu ý: ご苦労さま chỉ dùng khi CẤP TRÊN nói với CẤP DƯỚI, không dùng ngược lại.",
+  "tip_id": "💡 Tips: Jika melihat 「感謝して労う」(berterima kasih + menghargai jerih payah) → ini adalah ご苦労さま. Catatan: ご苦労さま hanya digunakan oleh ATASAN kepada BAWAHAN, tidak sebaliknya.",
+  "tip_en": "💡 Tip: If you see 「感謝して労う」(to thank + to appreciate someone's effort) → this is ご苦労さま. Note: ご苦労さま is only used by a SUPERIOR speaking to a SUBORDINATE, never the other way around."
 },
 {
   "id": 130,
@@ -141,8 +195,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Về luật tiền lương tối thiểu, hãy chọn điều không phù hợp.",
+  "vi_id": "Mengenai undang-undang upah minimum, pilihlah hal yang tidak sesuai.",
+  "vi_en": "Regarding the Minimum Wage Act, choose the statement that is not appropriate.",
   "explain": "Đáp án sai: 「適用されない雇用形態や職種である」— Sai vì Luật tiền lương tối thiểu áp dụng cho MỌI hình thức lao động và nghề nghiệp, không có loại trừ.\n\nTừ vựng:\n最低賃金法（さいていちんぎんほう）: Luật tiền lương tối thiểu\n不適切（ふてきせつ）: Không phù hợp\n事業（じぎょう）: Doanh nghiệp / Hoạt động kinh doanh\n公正（こうせい）な競争（きょうそう）: Cạnh tranh công bằng\n確保（かくほ）: Đảm bảo\n賃金（ちんぎん）: Tiền lương\n支払（しはら）う: Thanh toán / Trả\n都道府県労働局（とどうふけんろうどうきょく）: Cục lao động tỉnh/thành\n適用（てきよう）: Áp dụng\n雇用形態（こようけいたい）: Hình thức tuyển dụng\n職種（しょくしゅ）: Nghề nghiệp / Loại công việc",
-  "tip": "💡 Mẹo nhớ: Luật lương tối thiểu = áp dụng cho TẤT CẢ lao động, không phân biệt hình thức hay nghề. Thấy 「適用されない」(không áp dụng）→ đây là SAI vì luật không có ngoại lệ theo nghề."
+  "explain_id": "Jawaban salah: 「適用されない雇用形態や職種である」— Salah karena Undang-Undang Upah Minimum berlaku untuk SEMUA bentuk pekerjaan dan jenis pekerjaan, tanpa pengecualian.\n\nKosakata:\n最低賃金法（さいていちんぎんほう）: Undang-Undang Upah Minimum\n不適切（ふてきせつ）: Tidak sesuai\n事業（じぎょう）: Usaha / Kegiatan bisnis\n公正（こうせい）な競争（きょうそう）: Persaingan yang adil\n確保（かくほ）: Memastikan / Menjamin\n賃金（ちんぎん）: Upah / Gaji\n支払（しはら）う: Membayar\n都道府県労働局（とどうふけんろうどうきょく）: Biro Tenaga Kerja Prefektur\n適用（てきよう）: Penerapan / Berlaku\n雇用形態（こようけいたい）: Bentuk hubungan kerja\n職種（しょくしゅ）: Jenis pekerjaan / Profesi",
+  "explain_en": "Wrong answer: 「適用されない雇用形態や職種である」— Wrong because the Minimum Wage Act applies to ALL forms of employment and occupations, with no exclusions.\n\nVocabulary:\n最低賃金法（さいていちんぎんほう）: Minimum Wage Act\n不適切（ふてきせつ）: Inappropriate\n事業（じぎょう）: Business / Business activity\n公正（こうせい）な競争（きょうそう）: Fair competition\n確保（かくほ）: To ensure / To secure\n賃金（ちんぎん）: Wage\n支払（しはら）う: To pay\n都道府県労働局（とどうふけんろうどうきょく）: Prefectural Labour Bureau\n適用（てきよう）: Application / To apply\n雇用形態（こようけいたい）: Employment form\n職種（しょくしゅ）: Occupation / Job type",
+  "tip": "💡 Mẹo nhớ: Luật lương tối thiểu = áp dụng cho TẤT CẢ lao động, không phân biệt hình thức hay nghề. Thấy 「適用されない」(không áp dụng）→ đây là SAI vì luật không có ngoại lệ theo nghề.",
+  "tip_id": "💡 Tips: Undang-undang upah minimum = berlaku untuk SEMUA pekerja, tanpa membedakan bentuk pekerjaan atau jenis pekerjaan. Jika melihat 「適用されない」(tidak berlaku) → ini SALAH karena undang-undang tidak memiliki pengecualian berdasarkan jenis pekerjaan.",
+  "tip_en": "💡 Tip: The Minimum Wage Act = applies to ALL workers, regardless of employment type or occupation. If you see 「適用されない」(does not apply) → this is WRONG because the act has no exceptions based on occupation."
 },
 {
   "id": 131,
@@ -155,8 +215,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Khoan lỗ và cho thuốc nổ để phá đá gọi là gì?",
+  "vi_id": "Mengebor lubang dan memasukkan bahan peledak untuk memecahkan batu disebut apa?",
+  "vi_en": "What is it called when holes are drilled and explosives are loaded to blast rock?",
   "explain": "Đáp án đúng: 発破（はっぱ）— Là kỹ thuật nổ mìn phá đá, dùng trong khai thác hoặc thi công hầm.\n\nTừ vựng:\n岩石（がんせき）: Đá / Tảng đá\n穴（あな）をあける: Khoan lỗ\n火薬（かやく）: Thuốc nổ\n仕掛（しか）ける: Gài / Đặt\n爆破（ばくは）させる: Cho nổ / Kích nổ\n発破（はっぱ）: Nổ mìn / Phá nổ\n溶接（ようせつ）: Hàn\n砥石（といし）: Đá mài",
-  "tip": "💡 Mẹo nhớ: Thấy「岩石に穴をあけ + 火薬 + 爆破」(khoan đá + thuốc nổ + cho nổ）→ đây chính xác là 発破（はっぱ）. Không nhầm với 溶接（hàn）hay 砥石（mài đá）."
+  "explain_id": "Jawaban benar: 発破（はっぱ）— Merupakan teknik peledakan untuk menghancurkan batu, digunakan dalam pertambangan atau konstruksi terowongan.\n\nKosakata:\n岩石（がんせき）: Batu / Batuan\n穴（あな）をあける: Mengebor lubang\n火薬（かやく）: Bahan peledak\n仕掛（しか）ける: Memasang / Menempatkan\n爆破（ばくは）させる: Meledakkan / Mendetonasi\n発破（はっぱ）: Peledakan / Blasting\n溶接（ようせつ）: Pengelasan\n砥石（といし）: Batu gerinda",
+  "explain_en": "Correct answer: 発破（はっぱ）— It is a blasting technique to break rock, used in mining or tunnel construction.\n\nVocabulary:\n岩石（がんせき）: Rock\n穴（あな）をあける: To drill a hole\n火薬（かやく）: Explosive / Gunpowder\n仕掛（しか）ける: To set / To install\n爆破（ばくは）させる: To blast / To detonate\n発破（はっぱ）: Blasting\n溶接（ようせつ）: Welding\n砥石（といし）: Grindstone",
+  "tip": "💡 Mẹo nhớ: Thấy「岩石に穴をあけ + 火薬 + 爆破」(khoan đá + thuốc nổ + cho nổ）→ đây chính xác là 発破（はっぱ）. Không nhầm với 溶接（hàn）hay 砥石（mài đá）.",
+  "tip_id": "💡 Tips: Jika melihat 「岩石に穴をあけ + 火薬 + 爆破」(mengebor batu + bahan peledak + meledakkan) → ini tepat disebut 発破（はっぱ）. Jangan keliru dengan 溶接 (pengelasan) atau 砥石 (batu gerinda).",
+  "tip_en": "💡 Tip: If you see 「岩石に穴をあけ + 火薬 + 爆破」(drill holes in rock + explosives + blasting) → this is exactly 発破（はっぱ）. Do not confuse it with 溶接 (welding) or 砥石 (grindstone)."
 },
 {
   "id": 132,
@@ -169,8 +235,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Theo quy định của phòng nghỉ công nhân, điều nào là không phù hợp?",
+  "vi_id": "Menurut ketentuan ruang istirahat pekerja, hal manakah yang tidak sesuai?",
+  "vi_en": "According to the regulations for workers' rest rooms, which statement is not appropriate?",
   "explain": "Đáp án sai: ごみはどこにでも置いて良い — Hành động sai quy định – phải bỏ rác đúng nơi quy định.\n\nTừ vựng:\n作業員（さぎょういん）詰（つ）め所（しょ）: Phòng nghỉ công nhân / Phòng tập kết\n決（き）まり: Quy định / Nội quy\nふさわしくない: Không phù hợp\n私物（しぶつ）: Đồ vật cá nhân\nロッカー: Tủ khóa cá nhân (Locker)\nごみ: Rác\nどこにでも置（お）いて良（よ）い: Đặt ở bất kỳ đâu cũng được\n喫煙（きつえん）: Hút thuốc\nヘルメット: Mũ bảo hộ\n安全帯（あんぜんたい）: Dây an toàn",
-  "tip": "💡 Mẹo nhớ: Phòng nghỉ công nhân = phải gọn gàng, ngăn nắp. 「ごみはどこにでも置いて良い」(vứt rác bừa bãi）= vi phạm 5S và nội quy → SAI."
+  "explain_id": "Jawaban salah: ごみはどこにでも置いて良い — Tindakan yang melanggar peraturan – sampah harus dibuang di tempat yang ditentukan.\n\nKosakata:\n作業員（さぎょういん）詰（つ）め所（しょ）: Ruang istirahat pekerja / Ruang berkumpul\n決（き）まり: Peraturan / Tata tertib\nふさわしくない: Tidak sesuai\n私物（しぶつ）: Barang pribadi\nロッカー: Loker pribadi (Locker)\nごみ: Sampah\nどこにでも置（お）いて良（よ）い: Boleh diletakkan di mana saja\n喫煙（きつえん）: Merokok\nヘルメット: Helm pengaman\n安全帯（あんぜんたい）: Sabuk pengaman / Harness",
+  "explain_en": "Wrong answer: ごみはどこにでも置いて良い — An action against the rules – trash must be placed in the designated place.\n\nVocabulary:\n作業員（さぎょういん）詰（つ）め所（しょ）: Workers' rest room / Break room\n決（き）まり: Rule / Regulation\nふさわしくない: Inappropriate\n私物（しぶつ）: Personal belongings\nロッカー: Locker\nごみ: Trash / Garbage\nどこにでも置（お）いて良（よ）い: May be placed anywhere\n喫煙（きつえん）: Smoking\nヘルメット: Safety helmet\n安全帯（あんぜんたい）: Safety belt / Harness",
+  "tip": "💡 Mẹo nhớ: Phòng nghỉ công nhân = phải gọn gàng, ngăn nắp. 「ごみはどこにでも置いて良い」(vứt rác bừa bãi）= vi phạm 5S và nội quy → SAI.",
+  "tip_id": "💡 Tips: Ruang istirahat pekerja = harus rapi dan teratur. 「ごみはどこにでも置いて良い」(boleh membuang sampah sembarangan) = melanggar 5S dan peraturan internal → SALAH.",
+  "tip_en": "💡 Tip: Workers' rest rooms = must be neat and tidy. 「ごみはどこにでも置いて良い」(you may put trash anywhere) = violates 5S and the rules → WRONG."
 },
 {
   "id": 133,
@@ -183,8 +255,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Công trình nào là nạo vét bùn cát ở đáy biển hoặc sông?",
+  "vi_id": "Pekerjaan apa yang mengeruk lumpur dan pasir di dasar laut atau sungai?",
+  "vi_en": "What work removes mud and sand from the bottom of the sea or a river?",
   "explain": "Đáp án đúng: 浚渫（しゅんせつ）工事（こうじ）— Là công việc nạo vét lòng sông hoặc biển để đảm bảo độ sâu cho tàu thuyền đi lại.\n\nTừ vựng:\n海（うみ）: Biển\n川（かわ）: Sông\n底（そこ）: Đáy\n土砂（どしゃ）: Đất cát / Bùn cát\n取（と）り除（のぞ）く: Loại bỏ / Hút lên\n浚渫（しゅんせつ）工事（こうじ）: Công trình nạo vét\n岸壁（がんぺき）工事（こうじ）: Công trình bờ kè / Cầu tàu\n掘削（くっさく）工事（こうじ）: Công trình đào đất\n埋立（うめたて）工事（こうじ）: Công trình san lấp / Lấn biển",
-  "tip": "💡 Mẹo nhớ: Thấy 「海・川の底の土砂を取り除く」(lấy bùn cát ở đáy sông/biển lên）→ chọn 浚渫（しゅんせつ）工事. 埋立（うめたて）= LẤP ĐẤT vào biển (ngược lại với nạo vét)."
+  "explain_id": "Jawaban benar: 浚渫（しゅんせつ）工事（こうじ）— Merupakan pekerjaan pengerukan dasar sungai atau laut untuk memastikan kedalaman bagi lalu lintas kapal.\n\nKosakata:\n海（うみ）: Laut\n川（かわ）: Sungai\n底（そこ）: Dasar\n土砂（どしゃ）: Tanah dan pasir / Lumpur dan pasir\n取（と）り除（のぞ）く: Menghilangkan / Menyedot ke atas\n浚渫（しゅんせつ）工事（こうじ）: Pekerjaan pengerukan\n岸壁（がんぺき）工事（こうじ）: Pekerjaan dermaga / Dinding dermaga\n掘削（くっさく）工事（こうじ）: Pekerjaan penggalian tanah\n埋立（うめたて）工事（こうじ）: Pekerjaan reklamasi / Penimbunan",
+  "explain_en": "Correct answer: 浚渫（しゅんせつ）工事（こうじ）— It is work to dredge the bottom of a river or sea to ensure depth for ship navigation.\n\nVocabulary:\n海（うみ）: Sea\n川（かわ）: River\n底（そこ）: Bottom\n土砂（どしゃ）: Earth and sand / Mud and sand\n取（と）り除（のぞ）く: To remove / To dredge up\n浚渫（しゅんせつ）工事（こうじ）: Dredging work\n岸壁（がんぺき）工事（こうじ）: Quay / Wharf construction\n掘削（くっさく）工事（こうじ）: Excavation work\n埋立（うめたて）工事（こうじ）: Landfill / Reclamation work",
+  "tip": "💡 Mẹo nhớ: Thấy 「海・川の底の土砂を取り除く」(lấy bùn cát ở đáy sông/biển lên）→ chọn 浚渫（しゅんせつ）工事. 埋立（うめたて）= LẤP ĐẤT vào biển (ngược lại với nạo vét).",
+  "tip_id": "💡 Tips: Jika melihat 「海・川の底の土砂を取り除く」(mengangkat lumpur dan pasir dari dasar sungai/laut) → pilih 浚渫（しゅんせつ）工事. 埋立（うめたて）= MENIMBUN TANAH ke laut (kebalikan dari pengerukan).",
+  "tip_en": "💡 Tip: If you see 「海・川の底の土砂を取り除く」(removing earth and sand from the bottom of a river/sea) → choose 浚渫（しゅんせつ）工事. 埋立（うめたて）= RECLAIMING land by filling the sea (the opposite of dredging)."
 },
 {
   "id": 134,
@@ -197,8 +275,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Trong công trình thiết bị, 'vệ sinh' có nghĩa là gì?",
+  "vi_id": "Dalam pekerjaan peralatan, apa arti dari 'sanitasi'?",
+  "vi_en": "In equipment work, what does 'hygiene/sanitation' mean?",
   "explain": "Đáp án đúng: 人（ひと）の健康（けんこう）を守（まも）ることや、清潔（せいけつ）を保（たも）つこと — 衛生設備工事 là hệ thống duy trì sức khỏe, vệ sinh con người (nước sạch, thoát nước, vệ sinh...).\n\nTừ vựng:\n衛生（えいせい）: Vệ sinh / Sức khỏe\n設備（せつび）工事（こうじ）: Công trình lắp đặt thiết bị\n健康（けんこう）を守（まも）る: Bảo vệ sức khỏe\n清潔（せいけつ）を保（たも）つ: Duy trì sạch sẽ\n火災（かさい）: Hỏa hoạn\n煙（けむり）: Khói\n排出（はいしゅつ）: Thải ra\n温度（おんど）: Nhiệt độ\n湿度（しつど）: Độ ẩm\n調整（ちょうせい）: Điều chỉnh\n汚（よご）れた空気（くうき）: Không khí ô nhiễm\n入（い）れ替（か）え: Thay thế / Đổi",
-  "tip": "💡 Mẹo nhớ: 衛生（えいせい）= vệ sinh = bảo vệ SỨC KHỎE và GIỮ SẠCH. Thấy 「健康を守る・清潔を保つ」→ đây là định nghĩa ĐÚNG của 衛生. 空調（くうちょう）= điều hòa nhiệt độ/ẩm, khác với 衛生."
+  "explain_id": "Jawaban benar: 人（ひと）の健康（けんこう）を守（まも）ることや、清潔（せいけつ）を保（たも）つこと — 衛生設備工事 adalah sistem untuk menjaga kesehatan dan kebersihan manusia (air bersih, drainase, sanitasi...).\n\nKosakata:\n衛生（えいせい）: Sanitasi / Kesehatan\n設備（せつび）工事（こうじ）: Pekerjaan pemasangan peralatan\n健康（けんこう）を守（まも）る: Melindungi kesehatan\n清潔（せいけつ）を保（たも）つ: Menjaga kebersihan\n火災（かさい）: Kebakaran\n煙（けむり）: Asap\n排出（はいしゅつ）: Membuang keluar\n温度（おんど）: Suhu\n湿度（しつど）: Kelembapan\n調整（ちょうせい）: Penyesuaian / Pengaturan\n汚（よご）れた空気（くうき）: Udara kotor / tercemar\n入（い）れ替（か）え: Mengganti",
+  "explain_en": "Correct answer: 人（ひと）の健康（けんこう）を守（まも）ることや、清潔（せいけつ）を保（たも）つこと — 衛生設備工事 is a system to maintain human health and hygiene (clean water, drainage, sanitation...).\n\nVocabulary:\n衛生（えいせい）: Hygiene / Sanitation\n設備（せつび）工事（こうじ）: Equipment installation work\n健康（けんこう）を守（まも）る: To protect health\n清潔（せいけつ）を保（たも）つ: To maintain cleanliness\n火災（かさい）: Fire\n煙（けむり）: Smoke\n排出（はいしゅつ）: To discharge / To exhaust\n温度（おんど）: Temperature\n湿度（しつど）: Humidity\n調整（ちょうせい）: Adjustment\n汚（よご）れた空気（くうき）: Polluted air\n入（い）れ替（か）え: To replace / To exchange",
+  "tip": "💡 Mẹo nhớ: 衛生（えいせい）= vệ sinh = bảo vệ SỨC KHỎE và GIỮ SẠCH. Thấy 「健康を守る・清潔を保つ」→ đây là định nghĩa ĐÚNG của 衛生. 空調（くうちょう）= điều hòa nhiệt độ/ẩm, khác với 衛生.",
+  "tip_id": "💡 Tips: 衛生（えいせい）= sanitasi = melindungi KESEHATAN dan MENJAGA KEBERSIHAN. Jika melihat 「健康を守る・清潔を保つ」→ ini adalah definisi yang BENAR dari 衛生. 空調（くうちょう）= pengaturan suhu/kelembapan udara, berbeda dengan 衛生.",
+  "tip_en": "💡 Tip: 衛生（えいせい）= hygiene = protecting HEALTH and KEEPING CLEAN. If you see 「健康を守る・清潔を保つ」→ this is the CORRECT definition of 衛生. 空調（くうちょう）= air conditioning (temperature/humidity control), which is different from 衛生."
 },
 {
   "id": 135,
@@ -211,8 +295,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Về điều kiện lao động, hãy chọn mục không phù hợp.",
+  "vi_id": "Mengenai kondisi kerja, pilihlah item yang tidak sesuai.",
+  "vi_en": "Regarding working conditions, choose the item that is not appropriate.",
   "explain": "Đáp án sai: 休憩（きゅうけい）場所（ばしょ）— Địa điểm nghỉ không phải là điều kiện lao động được quy định trong hợp đồng lao động.\n\nTừ vựng:\n労働（ろうどう）条件（じょうけん）: Điều kiện lao động\nふさわしくない: Không phù hợp\n項目（こうもく）: Hạng mục / Mục\n解雇（かいこ）: Sa thải\n労働（ろうどう）時間（じかん）: Giờ làm việc\n休憩（きゅうけい）場所（ばしょ）: Địa điểm nghỉ ngơi\n賃金（ちんぎん）: Tiền lương",
-  "tip": "💡 Mẹo nhớ: Điều kiện lao động trong hợp đồng = lương + giờ làm + sa thải + phúc lợi. 休憩場所（nơi nghỉ）là tiện ích môi trường làm việc, không phải điều khoản HỢP ĐỒNG LAO ĐỘNG → SAI."
+  "explain_id": "Jawaban salah: 休憩（きゅうけい）場所（ばしょ）— Tempat istirahat bukan merupakan syarat kerja yang diatur dalam kontrak kerja.\n\nKosakata:\n労働（ろうどう）条件（じょうけん）: Syarat kerja\nふさわしくない: Tidak sesuai\n項目（こうもく）: Item / Poin\n解雇（かいこ）: Pemecatan\n労働（ろうどう）時間（じかん）: Jam kerja\n休憩（きゅうけい）場所（ばしょ）: Tempat istirahat\n賃金（ちんぎん）: Upah / Gaji",
+  "explain_en": "Wrong answer: 休憩（きゅうけい）場所（ばしょ）— The rest place is not a working condition stipulated in the labor contract.\n\nVocabulary:\n労働（ろうどう）条件（じょうけん）: Working conditions\nふさわしくない: Inappropriate\n項目（こうもく）: Item\n解雇（かいこ）: Dismissal\n労働（ろうどう）時間（じかん）: Working hours\n休憩（きゅうけい）場所（ばしょ）: Rest place\n賃金（ちんぎん）: Wage",
+  "tip": "💡 Mẹo nhớ: Điều kiện lao động trong hợp đồng = lương + giờ làm + sa thải + phúc lợi. 休憩場所（nơi nghỉ）là tiện ích môi trường làm việc, không phải điều khoản HỢP ĐỒNG LAO ĐỘNG → SAI.",
+  "tip_id": "💡 Tips: Kondisi kerja dalam kontrak = upah + jam kerja + pemecatan + tunjangan kesejahteraan. 休憩場所 (tempat istirahat) adalah fasilitas lingkungan kerja, bukan klausul KONTRAK KERJA → SALAH.",
+  "tip_en": "💡 Tip: Working conditions in a contract = wages + working hours + dismissal + welfare benefits. 休憩場所 (rest place) is a workplace facility, not a clause of the LABOR CONTRACT → WRONG."
 },
 {
   "id": 136,
@@ -225,8 +315,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Phí bảo hiểm tai nạn lao động do ai chi trả?",
+  "vi_id": "Premi asuransi kecelakaan kerja ditanggung oleh siapa?",
+  "vi_en": "Who bears the workers' accident compensation insurance premiums?",
   "explain": "Đáp án đúng: 全額（ぜんがく）事業主（じぎょうぬし）— Phí bảo hiểm lao động do doanh nghiệp chi trả toàn bộ, không trừ vào lương công nhân.\n\nTừ vựng:\n労働（ろうどう）災害（さいがい）: Tai nạn lao động\n保険料（ほけんりょう）: Phí bảo hiểm\n払（はら）う: Trả / Đóng\n全額（ぜんがく）: Toàn bộ\n事業主（じぎょうぬし）: Chủ doanh nghiệp\n国家（こっか）負担（ふたん）: Nhà nước chịu\n労働者（ろうどうしゃ）: Người lao động",
-  "tip": "💡 Mẹo nhớ: 労災（ろうさい）保険料（phí bảo hiểm tai nạn）= 全額（toàn bộ）事業主（chủ DN）trả. Người lao động KHÔNG đóng phí này. Khác với 雇用保険（bảo hiểm thất nghiệp）= cả hai bên cùng đóng."
+  "explain_id": "Jawaban benar: 全額（ぜんがく）事業主（じぎょうぬし）— Premi asuransi kecelakaan kerja dibayar sepenuhnya oleh perusahaan, tidak dipotong dari gaji pekerja.\n\nKosakata:\n労働（ろうどう）災害（さいがい）: Kecelakaan kerja\n保険料（ほけんりょう）: Premi asuransi\n払（はら）う: Membayar / Menyetor\n全額（ぜんがく）: Seluruhnya\n事業主（じぎょうぬし）: Pemilik usaha / Pemberi kerja\n国家（こっか）負担（ふたん）: Ditanggung negara\n労働者（ろうどうしゃ）: Pekerja",
+  "explain_en": "Correct answer: 全額（ぜんがく）事業主（じぎょうぬし）— The workers' insurance premium is paid in full by the employer, not deducted from the worker's salary.\n\nVocabulary:\n労働（ろうどう）災害（さいがい）: Industrial accident\n保険料（ほけんりょう）: Insurance premium\n払（はら）う: To pay\n全額（ぜんがく）: Full amount\n事業主（じぎょうぬし）: Business owner / Employer\n国家（こっか）負担（ふたん）: Borne by the state\n労働者（ろうどうしゃ）: Worker",
+  "tip": "💡 Mẹo nhớ: 労災（ろうさい）保険料（phí bảo hiểm tai nạn）= 全額（toàn bộ）事業主（chủ DN）trả. Người lao động KHÔNG đóng phí này. Khác với 雇用保険（bảo hiểm thất nghiệp）= cả hai bên cùng đóng.",
+  "tip_id": "💡 Tips: 労災（ろうさい）保険料 (premi asuransi kecelakaan kerja) = 全額 (seluruhnya) ditanggung 事業主 (pemilik usaha). Pekerja TIDAK membayar premi ini. Berbeda dengan 雇用保険 (asuransi ketenagakerjaan) = dibayar bersama oleh kedua pihak.",
+  "tip_en": "💡 Tip: 労災（ろうさい）保険料 (workers' accident insurance premiums) = paid IN FULL （全額） by the 事業主 (business owner). Workers do NOT pay this premium. Different from 雇用保険 (employment insurance) = paid jointly by both sides."
 },
 {
   "id": 137,
@@ -239,8 +335,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Khi người lao động bị thương trong lúc làm việc, ai trả tiền bảo hiểm?",
+  "vi_id": "Ketika seorang pekerja terluka saat bekerja, siapa yang membayar asuransinya?",
+  "vi_en": "When a worker is injured while working, who pays the insurance?",
   "explain": "Đáp án đúng: 全額（ぜんがく）事業主（じぎょうぬし）— Trong trường hợp tai nạn lao động, toàn bộ chi phí bảo hiểm do doanh nghiệp chi trả.\n\nTừ vựng:\n負傷（ふしょう）する: Bị thương\n使用（しよう）する保険料（ほけんりょう）: Phí bảo hiểm được dùng đến\n全額（ぜんがく）: Toàn bộ\n事業主（じぎょうぬし）: Chủ doanh nghiệp\n作業者（さぎょうしゃ）: Người thi công\n半分（はんぶん）ずつ: Mỗi người một nửa",
-  "tip": "💡 Mẹo nhớ: Công nhân bị thương → dùng 労災保険 → phí do 事業主（chủ DN）trả TOÀN BỘ. Người lao động không phải tự trả, không chia đôi với chủ → luôn chọn 全額事業主."
+  "explain_id": "Jawaban benar: 全額（ぜんがく）事業主（じぎょうぬし）— Dalam kasus kecelakaan kerja, seluruh biaya asuransi ditanggung oleh perusahaan.\n\nKosakata:\n負傷（ふしょう）する: Terluka / Cedera\n使用（しよう）する保険料（ほけんりょう）: Premi asuransi yang digunakan\n全額（ぜんがく）: Seluruhnya\n事業主（じぎょうぬし）: Pemilik usaha / Pemberi kerja\n作業者（さぎょうしゃ）: Pekerja / Pelaksana\n半分（はんぶん）ずつ: Masing-masing setengah",
+  "explain_en": "Correct answer: 全額（ぜんがく）事業主（じぎょうぬし）— In the case of an industrial accident, all insurance costs are borne by the employer.\n\nVocabulary:\n負傷（ふしょう）する: To be injured\n使用（しよう）する保険料（ほけんりょう）: Insurance premium used\n全額（ぜんがく）: Full amount\n事業主（じぎょうぬし）: Business owner / Employer\n作業者（さぎょうしゃ）: Worker\n半分（はんぶん）ずつ: Half each",
+  "tip": "💡 Mẹo nhớ: Công nhân bị thương → dùng 労災保険 → phí do 事業主（chủ DN）trả TOÀN BỘ. Người lao động không phải tự trả, không chia đôi với chủ → luôn chọn 全額事業主.",
+  "tip_id": "💡 Tips: Pekerja terluka → gunakan 労災保険 → premi dibayar SELURUHNYA oleh 事業主 (pemilik usaha). Pekerja tidak perlu membayar sendiri, dan tidak dibagi dua dengan pemilik usaha → selalu pilih 全額事業主.",
+  "tip_en": "💡 Tip: A worker is injured → use 労災保険 → the premiums are paid IN FULL by the 事業主 (business owner). The worker does not pay personally, and it is not split half-and-half with the owner → always choose 全額事業主."
 },
 {
   "id": 138,
@@ -253,8 +355,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Luật xúc tiến phát triển năng lực nghề nghiệp là luật nhằm nâng cao kỹ năng nghề của người lao động thông qua việc củng cố đào tạo nghề và kỳ thi đánh giá kỹ năng.",
+  "vi_id": "Undang-Undang Promosi Pengembangan Kemampuan Kerja adalah undang-undang yang bertujuan meningkatkan keterampilan kerja para pekerja melalui penguatan pelatihan kejuruan dan ujian penilaian keterampilan.",
+  "vi_en": "The Act on Promotion of Development of Occupational Ability is a law aimed at improving workers' vocational skills by strengthening vocational training and skills evaluation examinations.",
   "explain": "Đáp án đúng: 技能（ぎのう）検定（けんてい）— Luật này quy định việc đào tạo và đánh giá kỹ năng nghề (技能検定) để nâng cao năng lực của người lao động.\n\nTừ vựng:\n職業（しょくぎょう）能力（のうりょく）開発（かいはつ）促進（そくしん）法（ほう）: Luật xúc tiến phát triển năng lực nghề nghiệp\n職業（しょくぎょう）訓練（くんれん）: Đào tạo nghề\n充実（じゅうじつ）させる: Củng cố / Làm phong phú thêm\n労働者（ろうどうしゃ）: Người lao động\n目的（もくてき）: Mục đích\n技能（ぎのう）検定（けんてい）: Kỳ thi đánh giá kỹ năng nghề\n技能（ぎのう）講習（こうしゅう）: Khóa học kỹ năng\n特別（とくべつ）教育（きょういく）: Giáo dục đặc biệt\nCCUS: Hệ thống nâng cao năng lực xây dựng",
-  "tip": "💡 Mẹo nhớ: Luật phát triển năng lực nghề = đào tạo nghề + 技能検定（kỳ thi kỹ năng）. 技能検定 = thi đánh giá và CHỨNG NHẬN kỹ năng → phù hợp với mục đích của luật."
+  "explain_id": "Jawaban benar: 技能（ぎのう）検定（けんてい）— Undang-undang ini mengatur pelatihan dan penilaian keterampilan kerja (技能検定) untuk meningkatkan kemampuan pekerja.\n\nKosakata:\n職業（しょくぎょう）能力（のうりょく）開発（かいはつ）促進（そくしん）法（ほう）: Undang-Undang Promosi Pengembangan Kemampuan Kejuruan\n職業（しょくぎょう）訓練（くんれん）: Pelatihan kejuruan\n充実（じゅうじつ）させる: Memperkuat / Memperkaya\n労働者（ろうどうしゃ）: Pekerja\n目的（もくてき）: Tujuan\n技能（ぎのう）検定（けんてい）: Ujian penilaian keterampilan kerja\n技能（ぎのう）講習（こうしゅう）: Kursus keterampilan\n特別（とくべつ）教育（きょういく）: Pendidikan khusus\nCCUS: Sistem Peningkatan Karier Konstruksi",
+  "explain_en": "Correct answer: 技能（ぎのう）検定（けんてい）— This Act regulates vocational training and skill evaluation (技能検定) to improve workers' abilities.\n\nVocabulary:\n職業（しょくぎょう）能力（のうりょく）開発（かいはつ）促進（そくしん）法（ほう）: Human Resources Development Promotion Act\n職業（しょくぎょう）訓練（くんれん）: Vocational training\n充実（じゅうじつ）させる: To enhance / To enrich\n労働者（ろうどうしゃ）: Worker\n目的（もくてき）: Purpose\n技能（ぎのう）検定（けんてい）: Trade skill test\n技能（ぎのう）講習（こうしゅう）: Skill training course\n特別（とくべつ）教育（きょういく）: Special education\nCCUS: Construction Career Up System",
+  "tip": "💡 Mẹo nhớ: Luật phát triển năng lực nghề = đào tạo nghề + 技能検定（kỳ thi kỹ năng）. 技能検定 = thi đánh giá và CHỨNG NHẬN kỹ năng → phù hợp với mục đích của luật.",
+  "tip_id": "💡 Tips: Undang-undang pengembangan kemampuan kerja = pelatihan kejuruan + 技能検定 (ujian keterampilan). 技能検定 = ujian untuk menilai dan MENSERTIFIKASI keterampilan → sesuai dengan tujuan undang-undang ini.",
+  "tip_en": "💡 Tip: The occupational ability development act = vocational training + 技能検定 (skills examinations). 技能検定 = an exam that evaluates and CERTIFIES skills → matches the purpose of the act."
 },
 {
   "id": 139,
@@ -267,8 +375,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Trong trường hợp xảy ra tai nạn, điều quan trọng là xác nhận an toàn và ưu tiên cứu giúp người bị nạn.",
+  "vi_id": "Jika terjadi kecelakaan, hal yang penting adalah memastikan keselamatan dan mengutamakan pertolongan kepada korban.",
+  "vi_en": "In the event of an accident, what is important is to confirm safety and give priority to rescuing the victims.",
   "explain": "Đáp án đúng: 安全（あんぜん）を確認（かくにん）の上（うえ）、被災者（ひさいしゃ）の救助（きゅうじょ）が優先（ゆうせん）される — Khi có tai nạn lao động, nguyên tắc xử lý đầu tiên là đảm bảo an toàn hiện trường và ưu tiên cứu nạn người bị thương.\n\nTừ vựng:\n万（まん）が一（いち）: Trong trường hợp rủi ro / Lỡ như\n事故（じこ）が発生（はっせい）する: Xảy ra tai nạn\n対応（たいおう）: Xử lý / Ứng phó\n安全（あんぜん）を確認（かくにん）する: Xác nhận an toàn\n被災者（ひさいしゃ）: Nạn nhân\n救助（きゅうじょ）: Cứu hộ / Giải cứu\n優先（ゆうせん）される: Được ưu tiên\n非常（ひじょう）停止（ていし）: Dừng khẩn cấp\n慌（あわ）てて: Hoảng loạn / Vội vàng\n操作（そうさ）する: Vận hành / Thao tác",
-  "tip": "💡 Mẹo nhớ: Khi có tai nạn → TRÌNH TỰ: ①確認安全（xác nhận an toàn）→ ②救助被災者（cứu nạn nhân）→ ③報告（báo cáo）. KHÔNG vội vàng thao tác máy, không bỏ chạy."
+  "explain_id": "Jawaban benar: 安全（あんぜん）を確認（かくにん）の上（うえ）、被災者（ひさいしゃ）の救助（きゅうじょ）が優先（ゆうせん）される — Ketika terjadi kecelakaan kerja, prinsip penanganan pertama adalah memastikan keselamatan di lokasi dan memprioritaskan penyelamatan korban.\n\nKosakata:\n万（まん）が一（いち）: Jika terjadi hal yang tidak diinginkan / Seandainya\n事故（じこ）が発生（はっせい）する: Terjadi kecelakaan\n対応（たいおう）: Penanganan / Tanggapan\n安全（あんぜん）を確認（かくにん）する: Memastikan keselamatan\n被災者（ひさいしゃ）: Korban\n救助（きゅうじょ）: Penyelamatan / Pertolongan\n優先（ゆうせん）される: Diprioritaskan\n非常（ひじょう）停止（ていし）: Penghentian darurat\n慌（あわ）てて: Dengan panik / Terburu-buru\n操作（そうさ）する: Mengoperasikan",
+  "explain_en": "Correct answer: 安全（あんぜん）を確認（かくにん）の上（うえ）、被災者（ひさいしゃ）の救助（きゅうじょ）が優先（ゆうせん）される — When an industrial accident occurs, the first principle is to ensure site safety and prioritize rescuing the victim.\n\nVocabulary:\n万（まん）が一（いち）: In case of emergency / If by any chance\n事故（じこ）が発生（はっせい）する: An accident occurs\n対応（たいおう）: Response / Handling\n安全（あんぜん）を確認（かくにん）する: To confirm safety\n被災者（ひさいしゃ）: Victim\n救助（きゅうじょ）: Rescue\n優先（ゆうせん）される: To be prioritized\n非常（ひじょう）停止（ていし）: Emergency stop\n慌（あわ）てて: In a panic / Hurriedly\n操作（そうさ）する: To operate",
+  "tip": "💡 Mẹo nhớ: Khi có tai nạn → TRÌNH TỰ: ①確認安全（xác nhận an toàn）→ ②救助被災者（cứu nạn nhân）→ ③報告（báo cáo）. KHÔNG vội vàng thao tác máy, không bỏ chạy.",
+  "tip_id": "💡 Tips: Ketika terjadi kecelakaan → URUTAN: ①確認安全 (memastikan keselamatan) → ②救助被災者 (menyelamatkan korban) → ③報告 (melapor). JANGAN terburu-buru mengoperasikan mesin, dan jangan melarikan diri.",
+  "tip_en": "💡 Tip: When an accident occurs → ORDER: ①確認安全 (confirm safety) → ②救助被災者 (rescue the victims) → ③報告 (report). Do NOT rush to operate machinery, and do not run away."
 },
 {
   "id": 140,
@@ -281,8 +395,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Luật quy định điều kiện lao động tối thiểu là Luật Tiêu chuẩn Lao động 労働（ろうどう）基準（きじゅん）法（ほう）.",
+  "vi_id": "Undang-undang yang menetapkan kondisi kerja minimum adalah Undang-Undang Standar Tenaga Kerja 労働（ろうどう）基準（きじゅん）法（ほう）.",
+  "vi_en": "The law that sets the minimum working conditions is the Labor Standards Act 労働（ろうどう）基準（きじゅん）法（ほう）.",
   "explain": "Đáp án đúng: 労働（ろうどう）基準（きじゅん）法（ほう）— Quy định các tiêu chuẩn cơ bản về điều kiện làm việc như lương, giờ làm, nghỉ phép. Đây là luật cơ bản bảo vệ quyền lợi người lao động.\n\nTừ vựng:\n最低（さいてい）: Tối thiểu / Thấp nhất\n労働（ろうどう）条件（じょうけん）: Điều kiện lao động\n定（さだ）める: Quy định\n法律（ほうりつ）: Luật\n労働安全衛生法（ろうどうあんぜんえいせいほう）: Luật an toàn vệ sinh lao động\n労働災害補償保険法（ろうさいほけんほう）: Luật bảo hiểm tai nạn lao động\n労働基準法（ろうどうきじゅんほう）: Luật tiêu chuẩn lao động\n雇用保険法（こようほけんほう）: Luật bảo hiểm thất nghiệp",
-  "tip": "💡 Mẹo nhớ: 「最低の労働条件」(điều kiện lao động TỐI THIỂU）→ 労働基準法（Luật TIÊU CHUẨN lao động）. 基準（きじゅん）= tiêu chuẩn/chuẩn mực → đây là luật đặt ra MỨC TỐI THIỂU."
+  "explain_id": "Jawaban benar: 労働（ろうどう）基準（きじゅん）法（ほう）— Mengatur standar dasar mengenai syarat kerja seperti upah, jam kerja, dan cuti. Ini adalah undang-undang dasar yang melindungi hak-hak pekerja.\n\nKosakata:\n最低（さいてい）: Minimum / Terendah\n労働（ろうどう）条件（じょうけん）: Syarat kerja\n定（さだ）める: Menetapkan / Mengatur\n法律（ほうりつ）: Undang-undang / Hukum\n労働安全衛生法（ろうどうあんぜんえいせいほう）: Undang-Undang Keselamatan dan Kesehatan Kerja\n労働災害補償保険法（ろうさいほけんほう）: Undang-Undang Asuransi Kecelakaan Kerja\n労働基準法（ろうどうきじゅんほう）: Undang-Undang Standar Tenaga Kerja\n雇用保険法（こようほけんほう）: Undang-Undang Asuransi Ketenagakerjaan",
+  "explain_en": "Correct answer: 労働（ろうどう）基準（きじゅん）法（ほう）— It stipulates basic standards for working conditions such as wages, working hours, and leave. This is the basic law protecting workers' rights.\n\nVocabulary:\n最低（さいてい）: Minimum / Lowest\n労働（ろうどう）条件（じょうけん）: Working conditions\n定（さだ）める: To stipulate / To prescribe\n法律（ほうりつ）: Law\n労働安全衛生法（ろうどうあんぜんえいせいほう）: Industrial Safety and Health Act\n労働災害補償保険法（ろうさいほけんほう）: Industrial Accident Compensation Insurance Act\n労働基準法（ろうどうきじゅんほう）: Labor Standards Act\n雇用保険法（こようほけんほう）: Employment Insurance Act",
+  "tip": "💡 Mẹo nhớ: 「最低の労働条件」(điều kiện lao động TỐI THIỂU）→ 労働基準法（Luật TIÊU CHUẨN lao động）. 基準（きじゅん）= tiêu chuẩn/chuẩn mực → đây là luật đặt ra MỨC TỐI THIỂU.",
+  "tip_id": "💡 Tips: 「最低の労働条件」(kondisi kerja MINIMUM) → 労働基準法 (Undang-Undang STANDAR Tenaga Kerja). 基準（きじゅん）= standar/acuan → undang-undang ini menetapkan tingkat MINIMUM.",
+  "tip_en": "💡 Tip: 「最低の労働条件」(MINIMUM working conditions) → 労働基準法 (the Labor STANDARDS Act). 基準（きじゅん）= standard/criterion → this law sets the MINIMUM level."
 },
 {
   "id": 141,
@@ -295,8 +415,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Bảo hiểm thất nghiệp do cả người lao động, chủ doanh nghiệp và Nhà nước cùng chi trả.",
+  "vi_id": "Asuransi ketenagakerjaan (asuransi pengangguran) ditanggung bersama oleh pekerja, pemilik usaha, dan negara.",
+  "vi_en": "Employment insurance is borne jointly by the worker, the business owner, and the State.",
   "explain": "Đáp án đúng: 労働者（ろうどうしゃ）本人（ほんにん）と事業主（じぎょうぬし）と国庫（こっこ）負担（ふたん）— Phí bảo hiểm thất nghiệp được đóng bởi 3 bên: người lao động, người sử dụng lao động và nhà nước. Mục đích là hỗ trợ người lao động khi thất nghiệp.\n\nTừ vựng:\n雇用（こよう）保険法（ほけんほう）: Luật bảo hiểm thất nghiệp\n払（はら）う: Trả / Đóng\n労働者（ろうどうしゃ）本人（ほんにん）: Bản thân người lao động\n事業主（じぎょうぬし）: Chủ doanh nghiệp\n国庫（こっこ）負担（ふたん）: Ngân sách nhà nước chịu\n全額（ぜんがく）: Toàn bộ",
-  "tip": "💡 Mẹo nhớ: 雇用保険（bảo hiểm thất nghiệp）= 3 bên cùng đóng: người lao động + chủ DN + nhà nước. Khác với 労災保険（tai nạn lao động）= chỉ chủ DN đóng toàn bộ."
+  "explain_id": "Jawaban benar: 労働者（ろうどうしゃ）本人（ほんにん）と事業主（じぎょうぬし）と国庫（こっこ）負担（ふたん）— Premi asuransi pengangguran dibayar oleh 3 pihak: pekerja, pemberi kerja, dan negara. Tujuannya adalah untuk mendukung pekerja ketika menganggur.\n\nKosakata:\n雇用（こよう）保険法（ほけんほう）: Undang-Undang Asuransi Ketenagakerjaan\n払（はら）う: Membayar\n労働者（ろうどうしゃ）本人（ほんにん）: Pekerja itu sendiri\n事業主（じぎょうぬし）: Pemilik usaha / Pemberi kerja\n国庫（こっこ）負担（ふたん）: Ditanggung oleh kas negara\n全額（ぜんがく）: Seluruhnya",
+  "explain_en": "Correct answer: 労働者（ろうどうしゃ）本人（ほんにん）と事業主（じぎょうぬし）と国庫（こっこ）負担（ふたん）— Employment insurance premiums are paid by 3 parties: the worker, the employer, and the state. The purpose is to support workers when unemployed.\n\nVocabulary:\n雇用（こよう）保険法（ほけんほう）: Employment Insurance Act\n払（はら）う: To pay\n労働者（ろうどうしゃ）本人（ほんにん）: The worker themselves\n事業主（じぎょうぬし）: Business owner / Employer\n国庫（こっこ）負担（ふたん）: Borne by the national treasury\n全額（ぜんがく）: Full amount",
+  "tip": "💡 Mẹo nhớ: 雇用保険（bảo hiểm thất nghiệp）= 3 bên cùng đóng: người lao động + chủ DN + nhà nước. Khác với 労災保険（tai nạn lao động）= chỉ chủ DN đóng toàn bộ.",
+  "tip_id": "💡 Tips: 雇用保険 (asuransi ketenagakerjaan) = ditanggung bersama oleh 3 pihak: pekerja + pemilik usaha + negara. Berbeda dengan 労災保険 (asuransi kecelakaan kerja) = hanya pemilik usaha yang membayar seluruhnya.",
+  "tip_en": "💡 Tip: 雇用保険 (employment insurance) = paid jointly by 3 parties: the worker + the business owner + the State. Different from 労災保険 (workers' accident insurance) = paid in full by the business owner alone."
 },
 {
   "id": 142,
@@ -309,8 +435,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Việc lắp đặt đá granite hay đá cẩm thạch không phải là công tác chuẩn bị mà là phần hoàn thiện.",
+  "vi_id": "Pemasangan granit atau marmer bukanlah pekerjaan persiapan, melainkan bagian dari pekerjaan finishing.",
+  "vi_en": "Installing granite or marble is not preparatory work but part of the finishing work.",
   "explain": "Đáp án sai: 大理石（だいりせき）や御影石（みかげいし）の設置（せっち）— 準備工事 bao gồm khảo sát địa chất, dựng văn phòng tạm, đào thử. Việc lắp vật liệu hoàn thiện thuộc giai đoạn cuối thi công.\n\nTừ vựng:\n比較的（ひかくてき）: Tương đối\n規模（きぼ）: Quy mô\n建築（けんちく）工事（こうじ）: Công trình kiến trúc\n準備（じゅんび）工事（こうじ）: Công tác chuẩn bị\n地盤（じばん）調査（ちょうさ）: Khảo sát địa chất\n工事（こうじ）用（よう）事務所（じむしょ）: Văn phòng công trường\n仮設（かせつ）: Tạm thời / Lắp đặt tạm\n試掘（しっくつ）: Đào thử\n大理石（だいりせき）: Đá cẩm thạch\n御影石（みかげいし）: Đá granite\n設置（せっち）: Lắp đặt",
-  "tip": "💡 Mẹo nhớ: Chuẩn bị công trình = khảo sát + dựng văn phòng tạm + đào thử → làm TRƯỚC khi xây. 大理石・御影石（đá cẩm thạch/granite）= vật liệu hoàn thiện → lắp SAU khi xây xong → không phải chuẩn bị."
+  "explain_id": "Jawaban salah: 大理石（だいりせき）や御影石（みかげいし）の設置（せっち）— 準備工事 meliputi survei geologi, pembangunan kantor sementara, dan penggalian uji. Pemasangan material finishing termasuk dalam tahap akhir konstruksi.\n\nKosakata:\n比較的（ひかくてき）: Relatif / Cukup\n規模（きぼ）: Skala\n建築（けんちく）工事（こうじ）: Pekerjaan konstruksi bangunan\n準備（じゅんび）工事（こうじ）: Pekerjaan persiapan\n地盤（じばん）調査（ちょうさ）: Survei geologi / Penyelidikan tanah\n工事（こうじ）用（よう）事務所（じむしょ）: Kantor lapangan\n仮設（かせつ）: Sementara / Pemasangan sementara\n試掘（しっくつ）: Penggalian uji\n大理石（だいりせき）: Marmer\n御影石（みかげいし）: Granit\n設置（せっち）: Pemasangan",
+  "explain_en": "Wrong answer: 大理石（だいりせき）や御影石（みかげいし）の設置（せっち）— 準備工事 includes geological surveys, setting up a temporary office, and trial excavation. Installing finishing materials belongs to the final stage of construction.\n\nVocabulary:\n比較的（ひかくてき）: Relatively\n規模（きぼ）: Scale\n建築（けんちく）工事（こうじ）: Building construction work\n準備（じゅんび）工事（こうじ）: Preparatory work\n地盤（じばん）調査（ちょうさ）: Ground survey / Geological survey\n工事（こうじ）用（よう）事務所（じむしょ）: Site office\n仮設（かせつ）: Temporary / Temporary installation\n試掘（しっくつ）: Trial excavation\n大理石（だいりせき）: Marble\n御影石（みかげいし）: Granite\n設置（せっち）: Installation",
+  "tip": "💡 Mẹo nhớ: Chuẩn bị công trình = khảo sát + dựng văn phòng tạm + đào thử → làm TRƯỚC khi xây. 大理石・御影石（đá cẩm thạch/granite）= vật liệu hoàn thiện → lắp SAU khi xây xong → không phải chuẩn bị.",
+  "tip_id": "💡 Tips: Persiapan konstruksi = survei + membangun kantor sementara + penggalian percobaan → dilakukan SEBELUM pembangunan. 大理石・御影石 (marmer/granit) = material finishing → dipasang SETELAH pembangunan selesai → bukan persiapan.",
+  "tip_en": "💡 Tip: Construction preparation = surveying + setting up the temporary office + trial excavation → done BEFORE building. 大理石・御影石 (marble/granite) = finishing materials → installed AFTER the building is completed → not preparation."
 },
 {
   "id": 144,
@@ -323,8 +455,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Để vận chuyển và xử lý chất thải công nghiệp phải có giấy phép thu gom – vận chuyển chất thải.",
+  "vi_id": "Untuk mengangkut dan menangani limbah industri, diperlukan izin pengumpulan dan pengangkutan limbah.",
+  "vi_en": "To transport and handle industrial waste, a waste collection and transport license is required.",
   "explain": "Đáp án đúng: 産業（さんぎょう）廃棄物（はいきぶつ）収集（しゅうしゅう）運搬業（うんぱんぎょう）の許可（きょか）— Khi công trường phát sinh rác thải công nghiệp, việc thu gom và vận chuyển phải do đơn vị có giấy phép hợp pháp thực hiện.\n\nTừ vựng:\n工事（こうじ）現場（げんば）: Công trường\n産業（さんぎょう）廃棄物（はいきぶつ）: Chất thải công nghiệp\n排出（はいしゅつ）する: Thải ra\n許可（きょか）: Giấy phép\n収集（しゅうしゅう）: Thu gom\n運搬業（うんぱんぎょう）: Dịch vụ vận chuyển\n設計者（せっけいしゃ）: Người thiết kế\n発注者（はっちゅうしゃ）: Người đặt hàng / Chủ đầu tư\n建設業（けんせつぎょう）許可（きょか）: Giấy phép xây dựng",
-  "tip": "💡 Mẹo nhớ: Vận chuyển 産業廃棄物（rác công nghiệp）= phải có 収集運搬業の許可（giấy phép thu gom vận chuyển）. Không phải giấy phép xây dựng hay sự đồng ý của chủ đầu tư."
+  "explain_id": "Jawaban benar: 産業（さんぎょう）廃棄物（はいきぶつ）収集（しゅうしゅう）運搬業（うんぱんぎょう）の許可（きょか）— Ketika limbah industri dihasilkan di lokasi konstruksi, pengumpulan dan pengangkutannya harus dilakukan oleh pihak yang memiliki izin resmi.\n\nKosakata:\n工事（こうじ）現場（げんば）: Lokasi konstruksi\n産業（さんぎょう）廃棄物（はいきぶつ）: Limbah industri\n排出（はいしゅつ）する: Mengeluarkan / Membuang\n許可（きょか）: Izin\n収集（しゅうしゅう）: Pengumpulan\n運搬業（うんぱんぎょう）: Jasa pengangkutan\n設計者（せっけいしゃ）: Perancang / Desainer\n発注者（はっちゅうしゃ）: Pemesan / Pemilik proyek\n建設業（けんせつぎょう）許可（きょか）: Izin usaha konstruksi",
+  "explain_en": "Correct answer: 産業（さんぎょう）廃棄物（はいきぶつ）収集（しゅうしゅう）運搬業（うんぱんぎょう）の許可（きょか）— When industrial waste is generated at a construction site, its collection and transport must be carried out by a legally licensed operator.\n\nVocabulary:\n工事（こうじ）現場（げんば）: Construction site\n産業（さんぎょう）廃棄物（はいきぶつ）: Industrial waste\n排出（はいしゅつ）する: To discharge / To generate\n許可（きょか）: Permit / License\n収集（しゅうしゅう）: Collection\n運搬業（うんぱんぎょう）: Transport business\n設計者（せっけいしゃ）: Designer\n発注者（はっちゅうしゃ）: Client / Project owner\n建設業（けんせつぎょう）許可（きょか）: Construction business license",
+  "tip": "💡 Mẹo nhớ: Vận chuyển 産業廃棄物（rác công nghiệp）= phải có 収集運搬業の許可（giấy phép thu gom vận chuyển）. Không phải giấy phép xây dựng hay sự đồng ý của chủ đầu tư.",
+  "tip_id": "💡 Tips: Mengangkut 産業廃棄物 (limbah industri) = harus memiliki 収集運搬業の許可 (izin usaha pengumpulan dan pengangkutan). Bukan izin konstruksi atau persetujuan dari pemberi kerja.",
+  "tip_en": "💡 Tip: Transporting 産業廃棄物 (industrial waste) = requires a 収集運搬業の許可 (collection and transport business license). Not a construction permit or the client's consent."
 },
 {
   "id": 145,
@@ -338,8 +476,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "Trong lực lượng dân số lao động Nhật Bản năm 2022 phân theo độ tuổi, độ tuổi nào có số lượng đông nhất?",
+  "vi_id": "Dalam populasi tenaga kerja Jepang tahun 2022 menurut kelompok usia, kelompok usia manakah yang jumlahnya paling banyak?",
+  "vi_en": "In Japan's labor force population in 2022 by age group, which age group has the largest number?",
   "explain": "Dựa vào biểu đồ, nhóm tuổi 45～54歳(さい) có thanh ngang dài nhất với con số 1671 (vạn người), đây là nhóm chiếm tỷ trọng lớn nhất trong lực lượng lao động.\n\nTừ vựng:\n年代（ねんだい）別（べつ）: Theo từng nhóm tuổi\n労働力（ろうどうりょく）人口（じんこう）: Dân số trong độ tuổi lao động\n最（もっと）も: Nhất / Nhiều nhất\n多（おお）い: Nhiều\n歳（さい）: Tuổi\n65歳以上（いじょう）: Từ 65 tuổi trở lên\n15～24歳: 15 đến 24 tuổi\n45～54歳: 45 đến 54 tuổi\n35～44歳: 35 đến 44 tuổi",
-  "tip": "💡 Mẹo nhớ: Nhìn biểu đồ tìm thanh DÀI NHẤT → 45～54歳 có số 1671 vạn người là lớn nhất. Đây là nhóm lao động chủ lực của Nhật Bản năm 2022."
+  "explain_id": "Berdasarkan grafik, kelompok usia 45～54歳(さい) memiliki batang horizontal terpanjang dengan angka 1671 (puluh ribu orang), ini adalah kelompok dengan proporsi terbesar dalam angkatan kerja.\n\nKosakata:\n年代（ねんだい）別（べつ）: Menurut kelompok usia\n労働力（ろうどうりょく）人口（じんこう）: Populasi angkatan kerja\n最（もっと）も: Paling / Terbanyak\n多（おお）い: Banyak\n歳（さい）: Tahun (usia)\n65歳以上（いじょう）: 65 tahun ke atas\n15～24歳: 15 sampai 24 tahun\n45～54歳: 45 sampai 54 tahun\n35～44歳: 35 sampai 44 tahun",
+  "explain_en": "Based on the chart, the 45～54歳(さい) age group has the longest horizontal bar with the figure 1671 (ten thousand people), this is the group with the largest share of the labor force.\n\nVocabulary:\n年代（ねんだい）別（べつ）: By age group\n労働力（ろうどうりょく）人口（じんこう）: Labor force population\n最（もっと）も: Most\n多（おお）い: Many\n歳（さい）: Years old\n65歳以上（いじょう）: 65 years old and over\n15～24歳: 15 to 24 years old\n45～54歳: 45 to 54 years old\n35～44歳: 35 to 44 years old",
+  "tip": "💡 Mẹo nhớ: Nhìn biểu đồ tìm thanh DÀI NHẤT → 45～54歳 có số 1671 vạn người là lớn nhất. Đây là nhóm lao động chủ lực của Nhật Bản năm 2022.",
+  "tip_id": "💡 Tips: Lihat grafik dan cari batang yang PALING PANJANG → 45～54歳 dengan 16,71 juta orang adalah yang terbesar. Ini adalah kelompok tenaga kerja utama Jepang pada tahun 2022.",
+  "tip_en": "💡 Tip: Look at the chart and find the LONGEST bar → 45～54歳 with 16.71 million people is the largest. This was Japan's main labor force group in 2022."
 },
 {
   "id": 146,
@@ -352,8 +496,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Trong hồ sơ thiết kế có bao gồm tài liệu 質疑応答書（しつぎおうとうしょ）(văn bản hỏi – đáp kỹ thuật).",
+  "vi_id": "Dokumen desain mencakup dokumen tanya jawab teknis 質疑応答書（しつぎおうとうしょ）.",
+  "vi_en": "The design documents include the technical Q&A document 質疑応答書（しつぎおうとうしょ）.",
   "explain": "Đáp án đúng: 質疑応答書（しつぎおうとうしょ）— 設計図書 là tập hợp các tài liệu kỹ thuật gồm bản vẽ, chỉ dẫn thi công, biên bản hỏi – đáp, dùng để thực hiện và nghiệm thu công trình.\n\nTừ vựng:\n設計図書（せっけいとしょ）: Hồ sơ thiết kế\n含（ふく）む: Bao gồm\n書類（しょるい）: Tài liệu / Văn bản\n契約書（けいやくしょ）: Hợp đồng\n質疑応答書（しつぎおうとうしょ）: Văn bản hỏi và đáp kỹ thuật\n営業許可書（えいぎょうきょかしょ）: Giấy phép kinh doanh\n雇用契約書（こようけいやくしょ）: Hợp đồng lao động",
-  "tip": "💡 Mẹo nhớ: 設計図書（hồ sơ thiết kế）= bản vẽ + chỉ dẫn kỹ thuật + 質疑応答書（hỏi đáp kỹ thuật）. 契約書（hợp đồng）và 雇用契約書（hợp đồng lao động）là văn bản PHÁP LÝ, không phải hồ sơ kỹ thuật."
+  "explain_id": "Jawaban benar: 質疑応答書（しつぎおうとうしょ）— 設計図書 adalah kumpulan dokumen teknis yang meliputi gambar, petunjuk pelaksanaan, dan dokumen tanya-jawab, yang digunakan untuk melaksanakan dan memeriksa pekerjaan.\n\nKosakata:\n設計図書（せっけいとしょ）: Dokumen desain\n含（ふく）む: Meliputi / Termasuk\n書類（しょるい）: Dokumen\n契約書（けいやくしょ）: Kontrak\n質疑応答書（しつぎおうとうしょ）: Dokumen tanya-jawab teknis\n営業許可書（えいぎょうきょかしょ）: Izin usaha\n雇用契約書（こようけいやくしょ）: Kontrak kerja",
+  "explain_en": "Correct answer: 質疑応答書（しつぎおうとうしょ）— 設計図書 is a set of technical documents including drawings, construction instructions, and Q&A documents, used to carry out and inspect the work.\n\nVocabulary:\n設計図書（せっけいとしょ）: Design documents\n含（ふく）む: To include\n書類（しょるい）: Documents\n契約書（けいやくしょ）: Contract\n質疑応答書（しつぎおうとうしょ）: Q&A document / Technical inquiry and response sheet\n営業許可書（えいぎょうきょかしょ）: Business license\n雇用契約書（こようけいやくしょ）: Employment contract",
+  "tip": "💡 Mẹo nhớ: 設計図書（hồ sơ thiết kế）= bản vẽ + chỉ dẫn kỹ thuật + 質疑応答書（hỏi đáp kỹ thuật）. 契約書（hợp đồng）và 雇用契約書（hợp đồng lao động）là văn bản PHÁP LÝ, không phải hồ sơ kỹ thuật.",
+  "tip_id": "💡 Tips: 設計図書 (dokumen desain) = gambar + spesifikasi teknis + 質疑応答書 (tanya jawab teknis). 契約書 (kontrak) dan 雇用契約書 (kontrak kerja) adalah dokumen HUKUM, bukan dokumen teknis.",
+  "tip_en": "💡 Tip: 設計図書 (design documents) = drawings + technical specifications + 質疑応答書 (technical Q&A). 契約書 (contract) and 雇用契約書 (employment contract) are LEGAL documents, not technical documents."
 },
 {
   "id": 147,
@@ -366,8 +516,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 0,
   "vi": "Cải cách kinh doanh nhờ ứng dụng công nghệ số được gọi là DX (Digital Transformation).",
+  "vi_id": "Reformasi bisnis melalui pemanfaatan teknologi digital disebut DX (Digital Transformation).",
+  "vi_en": "Business reform through the use of digital technology is called DX (Digital Transformation).",
   "explain": "Đáp án đúng: DX = デジタルトランスフォーメーション — Chuyển đổi kỹ thuật số, dùng công nghệ để nâng cao năng suất, tối ưu quy trình trong doanh nghiệp.\n\nTừ vựng:\nデジタル技術（ぎじゅつ）: Công nghệ kỹ thuật số\n活用（かつよう）する: Tận dụng / Ứng dụng\n経営（けいえい）: Kinh doanh / Quản trị\n革新（かくしん）: Cải cách / Đổi mới\nDX: Digital Transformation = Chuyển đổi số\nEX: Employee Experience = Trải nghiệm nhân viên\nFX: Foreign Exchange = Ngoại hối\nGX: Green Transformation = Chuyển đổi xanh",
-  "tip": "💡 Mẹo nhớ: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation = chuyển đổi số). D = Digital = デジタル. Không nhầm với GX (Green = xanh) hay EX (Employee = nhân viên)."
+  "explain_id": "Jawaban benar: DX = デジタルトランスフォーメーション — Transformasi digital, menggunakan teknologi untuk meningkatkan produktivitas dan mengoptimalkan proses dalam perusahaan.\n\nKosakata:\nデジタル技術（ぎじゅつ）: Teknologi digital\n活用（かつよう）する: Memanfaatkan / Menerapkan\n経営（けいえい）: Bisnis / Manajemen\n革新（かくしん）: Reformasi / Inovasi\nDX: Digital Transformation = Transformasi digital\nEX: Employee Experience = Pengalaman karyawan\nFX: Foreign Exchange = Valuta asing\nGX: Green Transformation = Transformasi hijau",
+  "explain_en": "Correct answer: DX = デジタルトランスフォーメーション — Digital transformation, using technology to improve productivity and optimize processes in a company.\n\nVocabulary:\nデジタル技術（ぎじゅつ）: Digital technology\n活用（かつよう）する: To utilize / To apply\n経営（けいえい）: Business / Management\n革新（かくしん）: Reform / Innovation\nDX: Digital Transformation\nEX: Employee Experience\nFX: Foreign Exchange\nGX: Green Transformation",
+  "tip": "💡 Mẹo nhớ: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation = chuyển đổi số). D = Digital = デジタル. Không nhầm với GX (Green = xanh) hay EX (Employee = nhân viên).",
+  "tip_id": "💡 Tips: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation = transformasi digital). D = Digital = デジタル. Jangan keliru dengan GX (Green = hijau) atau EX (Employee = karyawan).",
+  "tip_en": "💡 Tip: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation). D = Digital = デジタル. Do not confuse with GX (Green) or EX (Employee)."
 },
 {
   "id": 148,
@@ -380,8 +536,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 2,
   "vi": "'しつけ' trong 5S nghĩa là giáo dục, rèn luyện thói quen tuân thủ quy định và hành động có kỷ luật.",
+  "vi_id": "'Shitsuke' dalam 5S berarti pendidikan, melatih kebiasaan mematuhi aturan dan bertindak dengan disiplin.",
+  "vi_en": "'Shitsuke' in 5S means education — training the habit of following rules and acting with discipline.",
   "explain": "Đáp án đúng: 5S活動を継続的に実施するためのルールやマナーを決め、それらを守って行動できるための教育を行う — Trong 5S, しつけ nghĩa là hình thành thói quen và ý thức tự giác tuân thủ nội quy.\n\nTừ vựng:\nしつけ（Shitsuke）: Rèn luyện / Kỷ luật (chữ S thứ 5 trong 5S)\n建設（けんせつ）現場（げんば）: Công trường xây dựng\n5S活動（かつどう）: Hoạt động 5S\n継続的（けいぞくてき）に: Liên tục / Bền vững\n実施（じっし）する: Thực hiện\nルール: Quy tắc\nマナー: Phép lịch sự / Quy tắc ứng xử\n守（まも）る: Tuân thủ / Giữ\n教育（きょういく）: Giáo dục / Đào tạo\n整理（せいり）: Phân loại (S1)\n整頓（せいとん）: Sắp xếp (S2)\n清掃（せいそう）: Dọn dẹp (S3)\n清潔（せいけつ）: Sạch sẽ (S4)",
-  "tip": "💡 Mẹo nhớ: 5S = 整理→整頓→清掃→清潔→しつけ. しつけ = chữ S cuối = GIÁO DỤC, rèn THÓI QUEN tuân thủ. Thấy「ルール・マナーを守って行動する教育」→ đây là しつけ."
+  "explain_id": "Jawaban benar: 5S活動を継続的に実施するためのルールやマナーを決め、それらを守って行動できるための教育を行う — Dalam 5S, しつけ berarti membentuk kebiasaan dan kesadaran untuk mematuhi peraturan secara mandiri.\n\nKosakata:\nしつけ（Shitsuke）: Disiplin / Pembinaan (S ke-5 dalam 5S)\n建設（けんせつ）現場（げんば）: Lokasi konstruksi\n5S活動（かつどう）: Kegiatan 5S\n継続的（けいぞくてき）に: Secara terus-menerus / Berkelanjutan\n実施（じっし）する: Melaksanakan\nルール: Aturan\nマナー: Tata krama / Aturan perilaku\n守（まも）る: Mematuhi / Menjaga\n教育（きょういく）: Pendidikan / Pelatihan\n整理（せいり）: Pemilahan (S1)\n整頓（せいとん）: Penataan (S2)\n清掃（せいそう）: Pembersihan (S3)\n清潔（せいけつ）: Kebersihan (S4)",
+  "explain_en": "Correct answer: 5S活動を継続的に実施するためのルールやマナーを決め、それらを守って行動できるための教育を行う — In 5S, しつけ means forming habits and self-discipline to follow the rules.\n\nVocabulary:\nしつけ（Shitsuke）: Discipline / Training (the 5th S in 5S)\n建設（けんせつ）現場（げんば）: Construction site\n5S活動（かつどう）: 5S activities\n継続的（けいぞくてき）に: Continuously / Sustainably\n実施（じっし）する: To implement / To carry out\nルール: Rule\nマナー: Manners / Code of conduct\n守（まも）る: To follow / To keep\n教育（きょういく）: Education / Training\n整理（せいり）: Sort (S1)\n整頓（せいとん）: Set in order (S2)\n清掃（せいそう）: Shine / Cleaning (S3)\n清潔（せいけつ）: Cleanliness / Standardize (S4)",
+  "tip": "💡 Mẹo nhớ: 5S = 整理→整頓→清掃→清潔→しつけ. しつけ = chữ S cuối = GIÁO DỤC, rèn THÓI QUEN tuân thủ. Thấy「ルール・マナーを守って行動する教育」→ đây là しつけ.",
+  "tip_id": "💡 Tips: 5S = 整理→整頓→清掃→清潔→しつけ. しつけ = huruf S terakhir = PENDIDIKAN, melatih KEBIASAAN untuk mematuhi aturan. Jika melihat 「ルール・マナーを守って行動する教育」→ ini adalah しつけ.",
+  "tip_en": "💡 Tip: 5S = 整理→整頓→清掃→清潔→しつけ. しつけ = the last S = EDUCATION, training the HABIT of following rules. If you see 「ルール・マナーを守って行動する教育」→ this is しつけ."
 },
 {
   "id": 149,
@@ -394,8 +556,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 1,
   "vi": "Biện pháp quản lý là việc xây dựng, hoàn thiện các quy trình – hướng dẫn công việc.",
+  "vi_id": "Tindakan pengendalian administratif adalah menyusun dan menyempurnakan prosedur dan panduan kerja.",
+  "vi_en": "Administrative control measures mean creating and improving work procedures and work instructions.",
   "explain": "Đáp án đúng: 作業（さぎょう）マニュアルの整備（せいび）— Trong mô hình kiểm soát rủi ro, 「管理的対策」bao gồm thiết lập quy trình làm việc, hướng dẫn thao tác, đào tạo và kiểm tra định kỳ.\n\nTừ vựng:\nリスク低減（ていげん）措置（そち）: Biện pháp giảm thiểu rủi ro\n検討（けんとう）: Xem xét / Nghiên cứu\n管理的（かんりてき）対策（たいさく）: Biện pháp quản lý\n廃止（はいし）: Loại bỏ / Bãi bỏ\n作業（さぎょう）マニュアル: Hướng dẫn thao tác / Quy trình làm việc\n整備（せいび）: Xây dựng / Hoàn thiện\n保護（ほご）手袋（てぶくろ）: Găng tay bảo hộ\n保護（ほご）用具（ようぐ）: Dụng cụ bảo hộ\n防護柵（ぼうごさく）: Hàng rào bảo vệ / Rào chắn",
-  "tip": "💡 Mẹo nhớ: Bậc kiểm soát rủi ro: ①廃止（loại bỏ công việc）→ ②工学的対策（thay đổi thiết bị）→ ③管理的対策（QUẢN LÝ: quy trình, hướng dẫn）→ ④保護具（đồ bảo hộ）. 管理的対策 = làm HƯỚNG DẪN/QUY TRÌNH."
+  "explain_id": "Jawaban benar: 作業（さぎょう）マニュアルの整備（せいび）— Dalam model pengendalian risiko, 「管理的対策」 meliputi penyusunan prosedur kerja, panduan operasi, pelatihan, dan pemeriksaan berkala.\n\nKosakata:\nリスク低減（ていげん）措置（そち）: Tindakan pengurangan risiko\n検討（けんとう）: Pertimbangan / Kajian\n管理的（かんりてき）対策（たいさく）: Tindakan manajerial / administratif\n廃止（はいし）: Penghapusan / Pembatalan\n作業（さぎょう）マニュアル: Manual kerja / Prosedur kerja\n整備（せいび）: Penyusunan / Penyempurnaan\n保護（ほご）手袋（てぶくろ）: Sarung tangan pelindung\n保護（ほご）用具（ようぐ）: Alat pelindung\n防護柵（ぼうごさく）: Pagar pelindung / Pembatas",
+  "explain_en": "Correct answer: 作業（さぎょう）マニュアルの整備（せいび）— In the risk control model, 「管理的対策」 includes establishing work procedures, operation manuals, training, and periodic inspections.\n\nVocabulary:\nリスク低減（ていげん）措置（そち）: Risk reduction measures\n検討（けんとう）: Consideration / Examination\n管理的（かんりてき）対策（たいさく）: Administrative controls\n廃止（はいし）: Abolition / Elimination\n作業（さぎょう）マニュアル: Work manual / Work procedure\n整備（せいび）: Development / Improvement\n保護（ほご）手袋（てぶくろ）: Protective gloves\n保護（ほご）用具（ようぐ）: Protective equipment\n防護柵（ぼうごさく）: Protective fence / Guardrail",
+  "tip": "💡 Mẹo nhớ: Bậc kiểm soát rủi ro: ①廃止（loại bỏ công việc）→ ②工学的対策（thay đổi thiết bị）→ ③管理的対策（QUẢN LÝ: quy trình, hướng dẫn）→ ④保護具（đồ bảo hộ）. 管理的対策 = làm HƯỚNG DẪN/QUY TRÌNH.",
+  "tip_id": "💡 Tips: Tingkat pengendalian risiko: ①廃止 (menghilangkan pekerjaan) → ②工学的対策 (mengubah peralatan) → ③管理的対策 (PENGELOLAAN: prosedur, panduan) → ④保護具 (alat pelindung diri). 管理的対策 = membuat PANDUAN/PROSEDUR.",
+  "tip_en": "💡 Tip: Risk control hierarchy: ①廃止 (eliminate the work) → ②工学的対策 (engineering measures — change the equipment) → ③管理的対策 (ADMINISTRATIVE measures: procedures, instructions) → ④保護具 (protective equipment). 管理的対策 = creating INSTRUCTIONS/PROCEDURES."
 },
 {
   "id": 150,
@@ -408,8 +576,14 @@ window.QUESTION_SETS["5"] = {
   ],
   "answer": 3,
   "vi": "Lò dùng để đốt rác thải sinh hoạt hoặc công nghiệp gọi là gì?",
+  "vi_id": "Furnace (tungku) yang digunakan untuk membakar sampah rumah tangga atau sampah industri disebut apa?",
+  "vi_en": "What is the furnace used to burn household or industrial waste called?",
   "explain": "Đáp án đúng: 焼却炉（しょうきゃくろ）— Là lò thiêu rác được dùng trong các nhà máy xử lý chất thải, giúp đốt rác ở nhiệt độ cao để giảm thể tích và ngăn ô nhiễm môi trường.\n\nTừ vựng:\n家庭（かてい）ごみ: Rác thải sinh hoạt\n産業（さんぎょう）廃棄物（はいきぶつ）: Chất thải công nghiệp\n燃（も）やす: Đốt\n炉（ろ）: Lò\n脱臭炉（だっしゅうろ）: Lò khử mùi\nキューポラ: Lò cao nấu gang (Cupola)\n焼鈍炉（しょうどんろ）: Lò ủ nhiệt / Lò luyện kim\n焼却炉（しょうきゃくろ）: Lò thiêu đốt rác",
-  "tip": "💡 Mẹo nhớ: 燃やす（đốt）+ ごみ/廃棄物（rác）→ 焼却炉（しょうきゃくろ）. 焼却（しょうきゃく）= thiêu đốt. Không nhầm với 焼鈍炉（ủ nhiệt kim loại）= dùng trong luyện kim, không đốt rác."
+  "explain_id": "Jawaban benar: 焼却炉（しょうきゃくろ）— Merupakan insinerator sampah yang digunakan di pabrik pengolahan limbah, membantu membakar sampah pada suhu tinggi untuk mengurangi volume dan mencegah pencemaran lingkungan.\n\nKosakata:\n家庭（かてい）ごみ: Sampah rumah tangga\n産業（さんぎょう）廃棄物（はいきぶつ）: Limbah industri\n燃（も）やす: Membakar\n炉（ろ）: Tungku / Furnace\n脱臭炉（だっしゅうろ）: Tungku penghilang bau\nキューポラ: Tungku peleburan besi (Cupola)\n焼鈍炉（しょうどんろ）: Tungku anil / Tungku perlakuan panas\n焼却炉（しょうきゃくろ）: Insinerator sampah",
+  "explain_en": "Correct answer: 焼却炉（しょうきゃくろ）— It is a waste incinerator used in waste treatment plants, helping to burn waste at high temperatures to reduce volume and prevent environmental pollution.\n\nVocabulary:\n家庭（かてい）ごみ: Household waste\n産業（さんぎょう）廃棄物（はいきぶつ）: Industrial waste\n燃（も）やす: To burn\n炉（ろ）: Furnace\n脱臭炉（だっしゅうろ）: Deodorizing furnace\nキューポラ: Cupola furnace for melting cast iron\n焼鈍炉（しょうどんろ）: Annealing furnace\n焼却炉（しょうきゃくろ）: Waste incinerator",
+  "tip": "💡 Mẹo nhớ: 燃やす（đốt）+ ごみ/廃棄物（rác）→ 焼却炉（しょうきゃくろ）. 焼却（しょうきゃく）= thiêu đốt. Không nhầm với 焼鈍炉（ủ nhiệt kim loại）= dùng trong luyện kim, không đốt rác.",
+  "tip_id": "💡 Tips: 燃やす (membakar) + ごみ/廃棄物 (sampah) → 焼却炉（しょうきゃくろ）. 焼却（しょうきゃく）= pembakaran. Jangan keliru dengan 焼鈍炉 (furnace anil logam) = digunakan dalam metalurgi, bukan untuk membakar sampah.",
+  "tip_en": "💡 Tip: 燃やす (to burn) + ごみ/廃棄物 (waste) → 焼却炉（しょうきゃくろ）. 焼却（しょうきゃく）= incineration. Do not confuse with 焼鈍炉 (metal annealing furnace) = used in metallurgy, not for burning waste."
 }
 ]
 };

@@ -7,8 +7,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["コーチング能力（のうりょく）","マネジメント能力（のうりょく）","コミュニケーション能力（のうりょく）","リーダーシップ能力（のうりょく）"],
   "answer": 2,
   "vi": "Năng lực nói sao cho ý kiến của bản thân được truyền đạt chính xác đến đối phương, đồng thời tiếp nhận và thấu hiểu chính xác những gì đối phương nói được gọi là gì?",
+  "vi_id": "Kemampuan berbicara agar pendapat sendiri tersampaikan secara akurat kepada lawan bicara, sekaligus menerima dan memahami secara akurat apa yang dikatakan lawan bicara, disebut apa?",
+  "vi_en": "What is the ability to speak so that one's own opinions are conveyed accurately to the other person, while also accurately receiving and understanding what the other person says, called?",
   "explain": "Đáp án đúng là コミュニケーション能力（のうりょく）. Đây là năng lực trao đổi thông tin, bao gồm việc truyền đạt suy nghĩ của bản thân（じぶん）và thấu hiểu ý kiến của đối phương（あいて）.\n\nTừ vựng:\n自分（じぶん）の考（かんが）え: Suy nghĩ của bản thân\n相手（あいて）: Đối phương\n正（ただ）しく伝（つた）わる: Được truyền đạt chính xác\n受（う）け止（と）める: Tiếp nhận / Lắng nghe\n理解（りかい）する: Hiểu\n能力（のうりょく）: Năng lực\nコミュニケーション能力: Kỹ năng giao tiếp\nコーチング能力: Kỹ năng huấn luyện (Coaching)\nマネジメント能力: Kỹ năng quản lý\nリーダーシップ能力: Kỹ năng lãnh đạo",
-  "tip": "💡 Mẹo nhớ: Thấy「自分の考えを伝える」+「相手の言ったことを受け止める」(truyền đạt và lắng nghe）→ đây là コミュニケーション能力（kỹ năng giao tiếp）."
+  "explain_id": "Jawaban yang benar adalah コミュニケーション能力（のうりょく）. Ini adalah kemampuan untuk bertukar informasi, termasuk menyampaikan pikiran diri sendiri（じぶん）dan memahami pendapat lawan bicara（あいて）.\n\nKosakata:\n自分（じぶん）の考（かんが）え: Pikiran diri sendiri\n相手（あいて）: Lawan bicara\n正（ただ）しく伝（つた）わる: Tersampaikan dengan tepat\n受（う）け止（と）める: Menerima / Mendengarkan\n理解（りかい）する: Memahami\n能力（のうりょく）: Kemampuan\nコミュニケーション能力: Kemampuan komunikasi\nコーチング能力: Kemampuan pelatihan (Coaching)\nマネジメント能力: Kemampuan manajemen\nリーダーシップ能力: Kemampuan kepemimpinan",
+  "explain_en": "The correct answer is コミュニケーション能力（のうりょく）. This is the ability to exchange information, including conveying your own thoughts（じぶん）and understanding the other person's opinions（あいて）.\n\nVocabulary:\n自分（じぶん）の考（かんが）え: One's own thoughts\n相手（あいて）: The other person\n正（ただ）しく伝（つた）わる: To be conveyed correctly\n受（う）け止（と）める: To receive / To listen and accept\n理解（りかい）する: To understand\n能力（のうりょく）: Ability\nコミュニケーション能力: Communication ability\nコーチング能力: Coaching ability\nマネジメント能力: Management ability\nリーダーシップ能力: Leadership ability",
+  "tip": "💡 Mẹo nhớ: Thấy「自分の考えを伝える」+「相手の言ったことを受け止める」(truyền đạt và lắng nghe）→ đây là コミュニケーション能力（kỹ năng giao tiếp）.",
+  "tip_id": "💡 Tips: Jika melihat 「自分の考えを伝える」+「相手の言ったことを受け止める」(menyampaikan dan mendengarkan) → ini adalah コミュニケーション能力 (kemampuan komunikasi).",
+  "tip_en": "💡 Tip: If you see 「自分の考えを伝える」+「相手の言ったことを受け止める」(conveying and listening) → this is コミュニケーション能力 (communication ability)."
 },
 {
   "id": "7-02",
@@ -16,8 +22,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["納得（なっとく）","共感（きょうかん）","認知（にんち）","価値観（かちかん）"],
   "answer": 2,
   "vi": "Hoạt động của tâm trí giúp con người tiếp nhận thông tin, hành động và hiểu được ý nghĩa của việc đó được gọi là gì?",
+  "vi_id": "Aktivitas pikiran yang membantu manusia menerima informasi, bertindak, dan memahami makna dari tindakan tersebut disebut apa?",
+  "vi_en": "What is the mental activity that helps people receive information, act, and understand the meaning of that action called?",
   "explain": "Đáp án đúng là 認知（にんち）(Nhận thức). Đây là quá trình tâm trí（こころ）tiếp nhận thông tin（じょうほう）và xử lý để hiểu（りかい）ý nghĩa（いみ）của hành động（こうどう）.\n\nTừ vựng:\n情報（じょうほう）: Thông tin\n受（う）け取（と）る: Tiếp nhận\n行動（こうどう）: Hành động\n意味（いみ）: Ý nghĩa\n心（こころ）の働（はたら）き: Hoạt động của tâm trí\n認知（にんち）: Nhận thức (Cognition)\n納得（なっとく）: Thỏa mãn / Chấp nhận sau khi hiểu\n共感（きょうかん）: Đồng cảm\n価値観（かちかん）: Quan niệm giá trị",
-  "tip": "💡 Mẹo nhớ: 認知（にんち）= tiếp nhận + hành động + hiểu ý nghĩa → NHẬN THỨC. Thấy ba yếu tố 「受け取り・行動・意味を理解」cùng nhau → chọn 認知."
+  "explain_id": "Jawaban yang benar adalah 認知（にんち）(Kognisi). Ini adalah proses di mana pikiran（こころ）menerima informasi（じょうほう）dan mengolahnya untuk memahami（りかい）makna（いみ）dari suatu tindakan（こうどう）.\n\nKosakata:\n情報（じょうほう）: Informasi\n受（う）け取（と）る: Menerima\n行動（こうどう）: Tindakan\n意味（いみ）: Makna\n心（こころ）の働（はたら）き: Cara kerja pikiran\n認知（にんち）: Kognisi (Cognition)\n納得（なっとく）: Puas / Menerima setelah memahami\n共感（きょうかん）: Empati\n価値観（かちかん）: Nilai-nilai / Pandangan nilai",
+  "explain_en": "The correct answer is 認知（にんち）(Cognition). This is the process by which the mind（こころ）receives information（じょうほう）and processes it to understand（りかい）the meaning（いみ）of an action（こうどう）.\n\nVocabulary:\n情報（じょうほう）: Information\n受（う）け取（と）る: To receive\n行動（こうどう）: Action\n意味（いみ）: Meaning\n心（こころ）の働（はたら）き: Working of the mind\n認知（にんち）: Cognition\n納得（なっとく）: Satisfaction / Acceptance after understanding\n共感（きょうかん）: Empathy\n価値観（かちかん）: Values / Sense of values",
+  "tip": "💡 Mẹo nhớ: 認知（にんち）= tiếp nhận + hành động + hiểu ý nghĩa → NHẬN THỨC. Thấy ba yếu tố 「受け取り・行動・意味を理解」cùng nhau → chọn 認知.",
+  "tip_id": "💡 Tips: 認知（にんち）= menerima + bertindak + memahami makna → KOGNISI (pengenalan). Jika melihat tiga faktor 「受け取り・行動・意味を理解」bersama-sama → pilih 認知.",
+  "tip_en": "💡 Tip: 認知（にんち）= receiving + acting + understanding meaning → COGNITION. If you see the three factors 「受け取り・行動・意味を理解」together → choose 認知."
 },
 {
   "id": "7-03",
@@ -25,8 +37,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["作業方法（さぎょうほうほう）、作業手順（さぎょうてじゅん）","設備（せつび）・材料等（ざいりょうなど）","現場情報（げんばじょうほう）","発注者（はっちゅうしゃ）"],
   "answer": 3,
   "vi": "Trong 4 yếu tố cấu thành công việc, hãy chọn yếu tố KHÔNG thuộc về?",
+  "vi_id": "Di antara 4 faktor pembentuk pekerjaan, pilihlah faktor yang BUKAN termasuk di dalamnya.",
+  "vi_en": "Among the 4 factors that make up a job, choose the factor that does NOT belong.",
   "explain": "Đáp án đúng là 発注者（はっちゅうしゃ）(Người đặt hàng). 4 yếu tố cấu thành công việc gồm: ①Con người, ②Thiết bị/Nguyên liệu, ③Phương pháp/Quy trình làm việc, và ④Thông tin hiện trường.\n\nTừ vựng:\n仕事（しごと）: Công việc\n構成（こうせい）する: Cấu thành\n要素（ようそ）: Yếu tố\n作業方法（さぎょうほうほう）: Phương pháp làm việc\n作業手順（さぎょうてじゅん）: Trình tự công việc\n設備（せつび）: Thiết bị\n材料等（ざいりょうなど）: Vật liệu và các thứ khác\n現場情報（げんばじょうほう）: Thông tin hiện trường\n発注者（はっちゅうしゃ）: Người đặt hàng / Chủ đầu tư",
-  "tip": "💡 Mẹo nhớ: 4 yếu tố cấu thành công việc = phương pháp + vật tư thiết bị + thông tin hiện trường + con người. 発注者（chủ đầu tư）là bên NGOÀI → không phải yếu tố BÊN TRONG → SAI."
+  "explain_id": "Jawaban yang benar adalah 発注者（はっちゅうしゃ）(Pemberi order). 4 unsur yang membentuk pekerjaan meliputi: ①Manusia, ②Peralatan/Bahan, ③Metode/Prosedur kerja, dan ④Informasi lapangan.\n\nKosakata:\n仕事（しごと）: Pekerjaan\n構成（こうせい）する: Membentuk / Menyusun\n要素（ようそ）: Unsur\n作業方法（さぎょうほうほう）: Metode kerja\n作業手順（さぎょうてじゅん）: Prosedur kerja\n設備（せつび）: Peralatan\n材料等（ざいりょうなど）: Bahan dan lain-lain\n現場情報（げんばじょうほう）: Informasi lapangan\n発注者（はっちゅうしゃ）: Pemberi order / Pemilik proyek",
+  "explain_en": "The correct answer is 発注者（はっちゅうしゃ）(Client / Orderer). The 4 elements that make up work are: ①People, ②Equipment/Materials, ③Work method/Procedure, and ④Site information.\n\nVocabulary:\n仕事（しごと）: Work\n構成（こうせい）する: To constitute / To make up\n要素（ようそ）: Element\n作業方法（さぎょうほうほう）: Work method\n作業手順（さぎょうてじゅん）: Work procedure\n設備（せつび）: Equipment\n材料等（ざいりょうなど）: Materials and other items\n現場情報（げんばじょうほう）: Site information\n発注者（はっちゅうしゃ）: Client / Project owner",
+  "tip": "💡 Mẹo nhớ: 4 yếu tố cấu thành công việc = phương pháp + vật tư thiết bị + thông tin hiện trường + con người. 発注者（chủ đầu tư）là bên NGOÀI → không phải yếu tố BÊN TRONG → SAI.",
+  "tip_id": "💡 Tips: 4 faktor pembentuk pekerjaan = metode + material & peralatan + informasi lapangan + manusia. 発注者 (pemberi kerja) adalah pihak LUAR → bukan faktor INTERNAL → SALAH.",
+  "tip_en": "💡 Tip: The 4 factors that make up a job = method + materials & equipment + site information + people. 発注者 (the client) is an OUTSIDE party → not an INTERNAL factor → WRONG."
 },
 {
   "id": "7-04",
@@ -34,8 +52,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["手違（てちが）い","手直（てなお）し","手遅（ておく）れ","手待（てま）ち"],
   "answer": 1,
   "vi": "Việc sửa chữa một phần của công đoạn làm việc đã hoàn thành được gọi là gì?",
+  "vi_id": "Memperbaiki sebagian dari tahap pekerjaan yang telah selesai disebut apa?",
+  "vi_en": "What is it called to repair a part of a work process that has already been completed?",
   "explain": "Đáp án đúng là 手直（てなお）し (Sửa lại). Đây là hành động sửa chữa（しゅうせい）lại một phần（いちぶ）của công đoạn（こうてい）công việc đã làm xong（すんだ）nhưng chưa đạt yêu cầu.\n\nTừ vựng:\n済（す）んだ: Đã xong / Đã hoàn thành\n作業工程（さぎょうこうてい）: Quy trình công việc\n修正（しゅうせい）する: Chỉnh sửa\n手直（てなお）し: Sửa lại / Làm lại phần chưa đạt\n手違（てちが）い: Nhầm lẫn / Sai sót\n手遅（ておく）れ: Quá muộn / Không kịp\n手待（てま）ち: Thời gian chờ đợi / Ngồi chờ việc",
-  "tip": "💡 Mẹo nhớ: 手直し（てなおし）= 直す（sửa）→ sửa lại việc đã làm xong nhưng chưa đúng. Thấy「済んだ工程の一部を修正」→ chọn 手直し."
+  "explain_id": "Jawaban yang benar adalah 手直（てなお）し (Perbaikan ulang). Ini adalah tindakan memperbaiki（しゅうせい）kembali sebagian（いちぶ）dari tahap pekerjaan（こうてい）yang telah selesai（すんだ）tetapi belum memenuhi persyaratan.\n\nKosakata:\n済（す）んだ: Sudah selesai / Sudah tuntas\n作業工程（さぎょうこうてい）: Proses kerja\n修正（しゅうせい）する: Memperbaiki\n手直（てなお）し: Perbaikan ulang / Mengerjakan ulang bagian yang belum memenuhi syarat\n手違（てちが）い: Kekeliruan / Kesalahan\n手遅（ておく）れ: Sudah terlambat / Tidak sempat\n手待（てま）ち: Waktu menunggu / Menunggu pekerjaan",
+  "explain_en": "The correct answer is 手直（てなお）し (Rework). This is the act of correcting（しゅうせい）part（いちぶ）of a work process（こうてい）that has been finished（すんだ）but does not yet meet the requirements.\n\nVocabulary:\n済（す）んだ: Finished / Completed\n作業工程（さぎょうこうてい）: Work process\n修正（しゅうせい）する: To correct\n手直（てなお）し: Rework / Redoing a part that does not meet requirements\n手違（てちが）い: Mistake / Error\n手遅（ておく）れ: Too late\n手待（てま）ち: Waiting time / Waiting for work",
+  "tip": "💡 Mẹo nhớ: 手直し（てなおし）= 直す（sửa）→ sửa lại việc đã làm xong nhưng chưa đúng. Thấy「済んだ工程の一部を修正」→ chọn 手直し.",
+  "tip_id": "💡 Tips: 手直し（てなおし）= 直す (memperbaiki) → memperbaiki pekerjaan yang sudah selesai tetapi belum benar. Jika melihat 「済んだ工程の一部を修正」→ pilih 手直し.",
+  "tip_en": "💡 Tip: 手直し（てなおし）= 直す (to fix) → redoing work that was finished but not correct. If you see 「済んだ工程の一部を修正」→ choose 手直し."
 },
 {
   "id": "7-05",
@@ -43,8 +67,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["クレーン等（とう）の使用待（しようま）ち","材料（ざいりょう）や資機材（しきざい）の不足（ふそく）","作業手順（さぎょうてじゅん）の不徹底（ふてってい）","前工程（まえこうてい）の遅（おく）れ"],
   "answer": 2,
   "vi": "Chọn điều KHÔNG đúng về nguyên nhân gây ra tình trạng chờ đợi (thời gian chết) trong công việc.",
+  "vi_id": "Pilihlah hal yang TIDAK benar mengenai penyebab terjadinya waktu tunggu (waktu mati) dalam pekerjaan.",
+  "vi_en": "Choose the statement that is NOT correct about the causes of waiting time (idle time) in work.",
   "explain": "Đáp án sai: 作業手順（さぎょうてじゅん）の不徹底（ふてってい）— Việc thực hiện quy trình không nghiêm túc thường gây ra tai nạn hoặc sai sót, không trực tiếp gây ra sự chờ đợi（てまち）. Nguyên nhân chờ đợi thực sự là chờ thiết bị, thiếu vật tư, công đoạn trước bị chậm.\n\nTừ vựng:\n手待（てま）ち: Thời gian chờ / Ngồi không\n原因（げんいん）: Nguyên nhân\nクレーン: Cần cẩu\n使用待（しようまち）ち: Chờ sử dụng\n材料（ざいりょう）: Vật liệu\n資機材（しきざい）: Máy móc và vật tư\n不足（ふそく）: Thiếu hụt\n作業手順（さぎょうてじゅん）: Trình tự công việc\n不徹底（ふてってい）: Không triệt để\n前工程（まえこうてい）: Công đoạn trước\n遅（おく）れ: Chậm trễ",
-  "tip": "💡 Mẹo nhớ: 手待ち = CHỜ vì thiếu vật tư, chờ máy, hoặc công đoạn trước bị chậm. 「作業手順の不徹底」(không tuân thủ trình tự）= gây lỗi, không phải gây CHỜ → SAI."
+  "explain_id": "Jawaban yang salah: 作業手順（さぎょうてじゅん）の不徹底（ふてってい）— Tidak melaksanakan prosedur secara sungguh-sungguh biasanya menyebabkan kecelakaan atau kesalahan, dan tidak secara langsung menyebabkan waktu menunggu（てまち）. Penyebab menunggu yang sebenarnya adalah menunggu peralatan, kekurangan bahan, atau tahap sebelumnya terlambat.\n\nKosakata:\n手待（てま）ち: Waktu menunggu / Menganggur menunggu\n原因（げんいん）: Penyebab\nクレーン: Derek\n使用待（しようまち）ち: Menunggu untuk menggunakan\n材料（ざいりょう）: Bahan\n資機材（しきざい）: Mesin dan bahan\n不足（ふそく）: Kekurangan\n作業手順（さぎょうてじゅん）: Prosedur kerja\n不徹底（ふてってい）: Tidak menyeluruh / Tidak sungguh-sungguh\n前工程（まえこうてい）: Tahap sebelumnya\n遅（おく）れ: Keterlambatan",
+  "explain_en": "The incorrect answer: 作業手順（さぎょうてじゅん）の不徹底（ふてってい）— Not following procedures thoroughly usually causes accidents or mistakes, and does not directly cause waiting time（てまち）. The real causes of waiting are waiting for equipment, shortage of materials, or delays in the previous process.\n\nVocabulary:\n手待（てま）ち: Waiting time / Idle waiting\n原因（げんいん）: Cause\nクレーン: Crane\n使用待（しようまち）ち: Waiting to use\n材料（ざいりょう）: Material\n資機材（しきざい）: Equipment and materials\n不足（ふそく）: Shortage\n作業手順（さぎょうてじゅん）: Work procedure\n不徹底（ふてってい）: Not thorough\n前工程（まえこうてい）: Previous process\n遅（おく）れ: Delay",
+  "tip": "💡 Mẹo nhớ: 手待ち = CHỜ vì thiếu vật tư, chờ máy, hoặc công đoạn trước bị chậm. 「作業手順の不徹底」(không tuân thủ trình tự）= gây lỗi, không phải gây CHỜ → SAI.",
+  "tip_id": "💡 Tips: 手待ち = MENUNGGU karena kekurangan material, menunggu mesin, atau proses sebelumnya terlambat. 「作業手順の不徹底」(tidak mematuhi urutan kerja) = menyebabkan kesalahan, bukan menyebabkan MENUNGGU → SALAH.",
+  "tip_en": "💡 Tip: 手待ち = WAITING due to a shortage of materials, waiting for machinery, or the previous process being delayed. 「作業手順の不徹底」(not thoroughly following procedures) = causes errors, not WAITING → WRONG."
 },
 {
   "id": "7-06",
@@ -52,8 +82,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["目標（もくひょう）設定（せってい）を 計画（けいかく）づくり","計画（けいかく）を実行（じっこう）する","実行（じっこう）した結果（けっか）を評価（ひょうか）し分析（ぶんせき）する","評価（ひょうか）結果（けっか）から改善（かいぜん）や対策（たいさく）を行（おこな）う"],
   "answer": 1,
   "vi": "Trong chu kỳ PDCA, 'D' nghĩa là gì?",
+  "vi_id": "Dalam siklus PDCA, apa arti 'D'?",
+  "vi_en": "In the PDCA cycle, what does 'D' mean?",
   "explain": "Đáp án đúng là 計画（けいかく）を実行（じっこう）する. Trong chu trình PDCA, chữ 'D' viết tắt của 'Do', mang ý nghĩa là thực hiện（じっこう）các công việc dựa trên kế hoạch（けいかく）đã lập ra.\n\nTừ vựng:\nPDCA: Plan（計画）→ Do（実行）→ Check（評価）→ Act（改善）\n目標（もくひょう）: Mục tiêu\n計画（けいかく）: Kế hoạch\n実行（じっこう）する: Thực hiện\n結果（けっか）: Kết quả\n評価（ひょうか）: Đánh giá\n分析（ぶんせき）: Phân tích\n改善（かいぜん）: Cải thiện\n対策（たいさく）: Biện pháp",
-  "tip": "💡 Mẹo nhớ: PDCA = Plan（lập kế hoạch）→ Do（THỰC HIỆN）→ Check（kiểm tra）→ Act（hành động cải thiện）. D = Do = 実行（じっこう）= THỰC HIỆN."
+  "explain_id": "Jawaban yang benar adalah 計画（けいかく）を実行（じっこう）する. Dalam siklus PDCA, huruf 'D' adalah singkatan dari 'Do', yang berarti melaksanakan（じっこう）pekerjaan berdasarkan rencana（けいかく）yang telah dibuat.\n\nKosakata:\nPDCA: Plan（計画）→ Do（実行）→ Check（評価）→ Act（改善）\n目標（もくひょう）: Target / Tujuan\n計画（けいかく）: Rencana\n実行（じっこう）する: Melaksanakan\n結果（けっか）: Hasil\n評価（ひょうか）: Evaluasi\n分析（ぶんせき）: Analisis\n改善（かいぜん）: Perbaikan\n対策（たいさく）: Langkah / Tindakan penanggulangan",
+  "explain_en": "The correct answer is 計画（けいかく）を実行（じっこう）する. In the PDCA cycle, the letter 'D' stands for 'Do', meaning to carry out（じっこう）the work based on the plan（けいかく）that has been made.\n\nVocabulary:\nPDCA: Plan（計画）→ Do（実行）→ Check（評価）→ Act（改善）\n目標（もくひょう）: Goal / Target\n計画（けいかく）: Plan\n実行（じっこう）する: To carry out / To execute\n結果（けっか）: Result\n評価（ひょうか）: Evaluation\n分析（ぶんせき）: Analysis\n改善（かいぜん）: Improvement\n対策（たいさく）: Countermeasure",
+  "tip": "💡 Mẹo nhớ: PDCA = Plan（lập kế hoạch）→ Do（THỰC HIỆN）→ Check（kiểm tra）→ Act（hành động cải thiện）. D = Do = 実行（じっこう）= THỰC HIỆN.",
+  "tip_id": "💡 Tips: PDCA = Plan (merencanakan) → Do (MELAKSANAKAN) → Check (memeriksa) → Act (tindakan perbaikan). D = Do = 実行（じっこう）= MELAKSANAKAN.",
+  "tip_en": "💡 Tip: PDCA = Plan → Do (EXECUTE) → Check → Act (improvement action). D = Do = 実行（じっこう）= to EXECUTE."
 },
 {
   "id": "7-07",
@@ -61,8 +97,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["上司（じょうし）や関係者（かんけいしゃ）、関係機関（かんけいきかん）に緊急連絡（きんきゅうれんらく）をする","被災者（ひさいしゃ）の救命処置（きゅうめいしょち）や応急手当（おうきゅうてあて）をする","火災（かさい）の場合（ばあい）、初期消火（しょきしょうか）を行（おこな）うとともに、爆発物（ばくはつぶつ）による二次災害（にじさいがい）の防止（ぼうし）を図（はか）る","事故（じこ）があった場合（ばあい）、上司（じょうし）に連絡（れんらく）してから、被災者（ひさいしゃ）を救出（きゅうしゅつ）する"],
   "answer": 3,
   "vi": "Trong quản lý an toàn, điều nào sau đây là KHÔNG phù hợp?",
+  "vi_id": "Dalam manajemen keselamatan, manakah yang TIDAK tepat?",
+  "vi_en": "In safety management, which of the following is NOT appropriate?",
   "explain": "Đáp án sai: 「事故があった場合、上司に連絡してから、被災者を救出する」— Trong tình huống khẩn cấp, việc cứu mạng（きゅうめい）và cứu hộ（きゅうしゅつ）người bị nạn phải được ưu tiên hàng đầu, sau đó mới tiến hành liên lạc（れんらく）.\n\nTừ vựng:\n安全管理（あんぜんかんり）: Quản lý an toàn\n不適切（ふてきせつ）: Không phù hợp\n上司（じょうし）: Cấp trên\n緊急連絡（きんきゅうれんらく）: Liên lạc khẩn cấp\n被災者（ひさいしゃ）: Nạn nhân\n救命処置（きゅうめいしょち）: Sơ cứu\n応急手当（おうきゅうてあて）: Sơ cứu ban đầu\n初期消火（しょきしょうか）: Chữa cháy ban đầu\n爆発物（ばくはつぶつ）: Vật liệu nổ\n二次災害（にじさいがい）: Tai nạn thứ cấp\n救出（きゅうしゅつ）: Giải cứu",
-  "tip": "💡 Mẹo nhớ: Nguyên tắc khi có tai nạn = CỨU NGƯỜI TRƯỚC, báo cáo sau. Thấy「上司に連絡してから救出」(báo cấp trên TRƯỚC RỒI MỚI cứu）→ đây là SAI."
+  "explain_id": "Jawaban yang salah: 「事故があった場合、上司に連絡してから、被災者を救出する」— Dalam keadaan darurat, menyelamatkan nyawa（きゅうめい）dan menolong（きゅうしゅつ）korban harus menjadi prioritas utama, baru setelah itu melakukan kontak（れんらく）.\n\nKosakata:\n安全管理（あんぜんかんり）: Manajemen keselamatan\n不適切（ふてきせつ）: Tidak tepat\n上司（じょうし）: Atasan\n緊急連絡（きんきゅうれんらく）: Kontak darurat\n被災者（ひさいしゃ）: Korban\n救命処置（きゅうめいしょち）: Tindakan penyelamatan nyawa\n応急手当（おうきゅうてあて）: Pertolongan pertama awal\n初期消火（しょきしょうか）: Pemadaman api tahap awal\n爆発物（ばくはつぶつ）: Bahan peledak\n二次災害（にじさいがい）: Bencana sekunder\n救出（きゅうしゅつ）: Penyelamatan / Evakuasi korban",
+  "explain_en": "The incorrect answer: 「事故があった場合、上司に連絡してから、被災者を救出する」— In an emergency, saving lives（きゅうめい）and rescuing（きゅうしゅつ）the victim must be the top priority, and only after that should contact（れんらく）be made.\n\nVocabulary:\n安全管理（あんぜんかんり）: Safety management\n不適切（ふてきせつ）: Inappropriate\n上司（じょうし）: Supervisor / Superior\n緊急連絡（きんきゅうれんらく）: Emergency contact\n被災者（ひさいしゃ）: Victim\n救命処置（きゅうめいしょち）: Life-saving treatment\n応急手当（おうきゅうてあて）: First aid\n初期消火（しょきしょうか）: Initial firefighting\n爆発物（ばくはつぶつ）: Explosive material\n二次災害（にじさいがい）: Secondary disaster\n救出（きゅうしゅつ）: Rescue",
+  "tip": "💡 Mẹo nhớ: Nguyên tắc khi có tai nạn = CỨU NGƯỜI TRƯỚC, báo cáo sau. Thấy「上司に連絡してから救出」(báo cấp trên TRƯỚC RỒI MỚI cứu）→ đây là SAI.",
+  "tip_id": "💡 Tips: Prinsip saat terjadi kecelakaan = MENYELAMATKAN ORANG TERLEBIH DAHULU, melapor kemudian. Jika melihat 「上司に連絡してから救出」(menghubungi atasan DULU BARU menyelamatkan) → ini SALAH.",
+  "tip_en": "💡 Tip: The principle when an accident occurs = RESCUE PEOPLE FIRST, report afterwards. If you see 「上司に連絡してから救出」(contact the boss FIRST and only then rescue) → this is WRONG."
 },
 {
   "id": "7-08",
@@ -70,8 +112,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["ガントチャート","バーチャート","グラフ式（しき）工程表（こうていひょう）","ネットワーク式（しき）工程表（こうていひょう）"],
   "answer": 3,
   "vi": "Loại bảng tiến độ nào có thể đọc được cả 4 yếu tố: trình tự, số ngày, mức độ tiến triển và công việc ảnh hưởng đến thời hạn?",
+  "vi_id": "Jenis diagram jadwal (schedule chart) apa yang dapat membaca keempat faktor: urutan, jumlah hari, tingkat kemajuan, dan pekerjaan yang memengaruhi tenggat waktu?",
+  "vi_en": "Which type of schedule chart lets you read all 4 factors: sequence, number of days, degree of progress, and work affecting the deadline?",
   "explain": "Đáp án đúng là ネットワーク式（しき）工程表（こうていひょう）. Loại bảng này cho phép quản lý chặt chẽ trình tự（てじゅん）, thời gian（にっすう）và xác định được các công việc trọng yếu ảnh hưởng trực tiếp đến thời hạn（こうき）hoàn thành dự án.\n\nTừ vựng:\n工程表（こうていひょう）: Biểu đồ tiến độ\n手順（てじゅん）: Trình tự\n日数（にっすう）: Số ngày\n進行（しんこう）の度合（どあい）: Mức độ tiến triển\n工期（こうき）: Thời hạn thi công\n影響（えいきょう）: Ảnh hưởng\nガントチャート: Biểu đồ Gantt\nバーチャート: Biểu đồ thanh\nネットワーク式（しき）: Dạng mạng lưới",
-  "tip": "💡 Mẹo nhớ: Thấy câu hỏi liệt kê cả 4 yếu tố, đặc biệt nhắc đến「工期に影響する作業」→ chọn ngay ネットワーク式工程表."
+  "explain_id": "Jawaban yang benar adalah ネットワーク式（しき）工程表（こうていひょう）. Jenis bagan ini memungkinkan pengelolaan urutan（てじゅん）dan waktu（にっすう）secara ketat, serta dapat menentukan pekerjaan penting yang berpengaruh langsung terhadap batas waktu（こうき）penyelesaian proyek.\n\nKosakata:\n工程表（こうていひょう）: Bagan jadwal / Jadwal pelaksanaan\n手順（てじゅん）: Urutan / Prosedur\n日数（にっすう）: Jumlah hari\n進行（しんこう）の度合（どあい）: Tingkat kemajuan\n工期（こうき）: Masa konstruksi / Batas waktu pelaksanaan\n影響（えいきょう）: Pengaruh\nガントチャート: Bagan Gantt\nバーチャート: Bagan batang\nネットワーク式（しき）: Tipe jaringan",
+  "explain_en": "The correct answer is ネットワーク式（しき）工程表（こうていひょう）. This type of chart allows close management of the sequence（てじゅん）and time（にっすう）, and can identify critical work that directly affects the deadline（こうき）for completing the project.\n\nVocabulary:\n工程表（こうていひょう）: Schedule chart\n手順（てじゅん）: Sequence / Procedure\n日数（にっすう）: Number of days\n進行（しんこう）の度合（どあい）: Degree of progress\n工期（こうき）: Construction period / Deadline\n影響（えいきょう）: Effect / Impact\nガントチャート: Gantt chart\nバーチャート: Bar chart\nネットワーク式（しき）: Network type",
+  "tip": "💡 Mẹo nhớ: Thấy câu hỏi liệt kê cả 4 yếu tố, đặc biệt nhắc đến「工期に影響する作業」→ chọn ngay ネットワーク式工程表.",
+  "tip_id": "💡 Tips: Jika pertanyaan menyebutkan keempat faktor, terutama menyebutkan 「工期に影響する作業」→ langsung pilih ネットワーク式工程表.",
+  "tip_en": "💡 Tip: If the question lists all 4 factors, especially mentioning 「工期に影響する作業」→ choose ネットワーク式工程表 right away."
 },
 {
   "id": "7-09",
@@ -79,8 +127,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["実施工程（じっしこうてい）に遅（おく）れが生（しょう）じないよう工期内完成（こうきないかんせい）を目指（めざ）した管理（かんり）のこと","工事（こうじ）による騒音（そうおん）や振動（しんどう）、水質汚濁（すいしつおだく）など環境（かんきょう）に与（あた）える影響（えいきょう）を最小限（さいしょうげん）にする管理（かんり）のこと","発注者（はっちゅうしゃ）が要求（ようきゅう）する品質（ひんしつ）を十分（じゅうぶん）に満（み）たす建設物（けんせつぶつ）を作（つく）るための管理（かんり）のこと","工事（こうじ）に関係（かんけい）する材料費（ざいりょうひ）、労務費（ろうむひ）、現場経費（げんばけいひ）などの、工事予算（こうじよさん）を超（こ）えないように管理（かんり）する"],
   "answer": 0,
   "vi": "Quản lý tiến độ (công trình) trong quản lý thi công là gì?",
+  "vi_id": "Apa itu manajemen jadwal (proyek) dalam manajemen konstruksi?",
+  "vi_en": "What is schedule (process) management in construction management?",
   "explain": "Đáp án đúng: 実施工程（じっしこうてい）に遅（おく）れが生（しょう）じないよう工期内完成（こうきないかんせい）を目指（めざ）した管理（かんり）のこと — Quản lý tiến độ là việc quản lý nhằm hoàn thành trong thời hạn thi công（こうきないかんせい）để không xảy ra sự chậm trễ（おくれ）.\n\nTừ vựng:\n施工管理（せこうかんり）: Quản lý thi công\n工程管理（こうていかんり）: Quản lý tiến độ\n実施工程（じっしこうてい）: Tiến độ thực hiện\n遅（おく）れ: Chậm trễ\n工期内完成（こうきないかんせい）: Hoàn thành trong thời hạn\n目指（めざ）す: Hướng đến\n騒音（そうおん）: Tiếng ồn\n品質（ひんしつ）: Chất lượng\n材料費（ざいりょうひ）: Chi phí vật liệu",
-  "tip": "💡 Mẹo nhớ: 工程管理（こうていかんり）= quản lý TIẾN ĐỘ → mục đích là hoàn thành ĐÚNG THỜI HẠN (工期内完成). Thấy「遅れが生じないよう工期内完成」→ đây là định nghĩa ĐÚNG."
+  "explain_id": "Jawaban yang benar: 実施工程（じっしこうてい）に遅（おく）れが生（しょう）じないよう工期内完成（こうきないかんせい）を目指（めざ）した管理（かんり）のこと — Manajemen jadwal adalah pengelolaan yang bertujuan menyelesaikan dalam masa konstruksi（こうきないかんせい）agar tidak terjadi keterlambatan（おくれ）.\n\nKosakata:\n施工管理（せこうかんり）: Manajemen konstruksi\n工程管理（こうていかんり）: Manajemen jadwal\n実施工程（じっしこうてい）: Jadwal pelaksanaan aktual\n遅（おく）れ: Keterlambatan\n工期内完成（こうきないかんせい）: Selesai dalam masa konstruksi\n目指（めざ）す: Bertujuan / Mengarah pada\n騒音（そうおん）: Kebisingan\n品質（ひんしつ）: Kualitas\n材料費（ざいりょうひ）: Biaya bahan",
+  "explain_en": "The correct answer: 実施工程（じっしこうてい）に遅（おく）れが生（しょう）じないよう工期内完成（こうきないかんせい）を目指（めざ）した管理（かんり）のこと — Schedule management is management aimed at completing within the construction period（こうきないかんせい）so that no delay（おくれ）occurs.\n\nVocabulary:\n施工管理（せこうかんり）: Construction management\n工程管理（こうていかんり）: Schedule management\n実施工程（じっしこうてい）: Actual implementation schedule\n遅（おく）れ: Delay\n工期内完成（こうきないかんせい）: Completion within the construction period\n目指（めざ）す: To aim for\n騒音（そうおん）: Noise\n品質（ひんしつ）: Quality\n材料費（ざいりょうひ）: Material cost",
+  "tip": "💡 Mẹo nhớ: 工程管理（こうていかんり）= quản lý TIẾN ĐỘ → mục đích là hoàn thành ĐÚNG THỜI HẠN (工期内完成). Thấy「遅れが生じないよう工期内完成」→ đây là định nghĩa ĐÚNG.",
+  "tip_id": "💡 Tips: 工程管理（こうていかんり）= manajemen JADWAL → tujuannya adalah menyelesaikan TEPAT WAKTU (工期内完成). Jika melihat 「遅れが生じないよう工期内完成」→ ini adalah definisi yang BENAR.",
+  "tip_en": "💡 Tip: 工程管理（こうていかんり）= SCHEDULE management → its purpose is to complete ON TIME (工期内完成). If you see 「遅れが生じないよう工期内完成」→ this is the CORRECT definition."
 },
 {
   "id": "7-10",
@@ -88,8 +142,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["材料費（ざいりょうひ）","外注費（がいちゅうひ）","労務費（ろうむひ）","経費（けいひ）"],
   "answer": 1,
   "vi": "Chi phí để thuê các đơn vị khác thực hiện một phần công đoạn khi thi công công trình được gọi là gì?",
+  "vi_id": "Biaya untuk menyewa pihak lain melaksanakan sebagian tahap pekerjaan saat membangun suatu proyek disebut apa?",
+  "vi_en": "What is the cost of hiring other parties to carry out part of the work processes when constructing a project called?",
   "explain": "Đáp án đúng là 外注費（がいちゅうひ）. Đây là khoản chi phí phát sinh khi giao khoán một 工程（こうてい）- công đoạn của dự án cho các 業者（ぎょうしゃ）- đơn vị/nhà thầu khác thực hiện.\n\nTừ vựng:\n施工（せこう）する: Thi công\n工程（こうてい）: Công đoạn / Quy trình\n業者（ぎょうしゃ）: Nhà thầu / Đơn vị thi công\n発注（はっちゅう）する: Đặt hàng\n費用（ひよう）: Chi phí\n外注費（がいちゅうひ）: Chi phí thuê ngoài\n材料費（ざいりょうひ）: Chi phí vật liệu\n労務費（ろうむひ）: Chi phí lao động\n経費（けいひ）: Chi phí chung",
-  "tip": "💡 Mẹo nhớ: 外注費（がいちゅうひ）= 外（ngoài）+ 注文（đặt hàng）→ chi phí đặt hàng nhà thầu phụ BÊN NGOÀI. Thấy「他の業者などに発注する費用」→ chọn 外注費."
+  "explain_id": "Jawaban yang benar adalah 外注費（がいちゅうひ）. Ini adalah biaya yang timbul ketika suatu 工程（こうてい）- tahap proyek diserahkan kepada 業者（ぎょうしゃ）- perusahaan/kontraktor lain untuk dilaksanakan.\n\nKosakata:\n施工（せこう）する: Melaksanakan konstruksi\n工程（こうてい）: Tahap / Proses\n業者（ぎょうしゃ）: Kontraktor / Perusahaan pelaksana\n発注（はっちゅう）する: Memesan / Memberi order\n費用（ひよう）: Biaya\n外注費（がいちゅうひ）: Biaya subkontrak / Biaya outsourcing\n材料費（ざいりょうひ）: Biaya bahan\n労務費（ろうむひ）: Biaya tenaga kerja\n経費（けいひ）: Biaya umum / Overhead",
+  "explain_en": "The correct answer is 外注費（がいちゅうひ）. This is the cost incurred when a 工程（こうてい）- process of a project is outsourced to other 業者（ぎょうしゃ）- companies/contractors to carry out.\n\nVocabulary:\n施工（せこう）する: To construct / To carry out construction\n工程（こうてい）: Process / Stage\n業者（ぎょうしゃ）: Contractor / Company\n発注（はっちゅう）する: To order / To place an order\n費用（ひよう）: Cost / Expense\n外注費（がいちゅうひ）: Outsourcing cost / Subcontracting cost\n材料費（ざいりょうひ）: Material cost\n労務費（ろうむひ）: Labor cost\n経費（けいひ）: General expenses / Overhead",
+  "tip": "💡 Mẹo nhớ: 外注費（がいちゅうひ）= 外（ngoài）+ 注文（đặt hàng）→ chi phí đặt hàng nhà thầu phụ BÊN NGOÀI. Thấy「他の業者などに発注する費用」→ chọn 外注費.",
+  "tip_id": "💡 Tips: 外注費（がいちゅうひ）= 外 (luar) + 注文 (pesanan) → biaya memesan subkontraktor dari LUAR. Jika melihat 「他の業者などに発注する費用」→ pilih 外注費.",
+  "tip_en": "💡 Tip: 外注費（がいちゅうひ）= 外 (outside) + 注文 (order) → the cost of ordering an OUTSIDE subcontractor. If you see 「他の業者などに発注する費用」→ choose 外注費."
 },
 {
   "id": "7-11",
@@ -97,8 +157,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["目的（もくてき）品質（ひんしつ）を得（え）るだけ管理（かんり）","設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり）","管理（かんり）品質（ひんしつ）は作業員（さぎょういん）の教育（きょういく）が必要（ひつよう）ではない","設計（せっけい）や仕様（しよう）を把握（はあく）しなくてもいい"],
   "answer": 1,
   "vi": "Hãy chọn phương án đúng về quản lý chất lượng trong xây dựng.",
+  "vi_id": "Pilihlah pernyataan yang benar tentang manajemen kualitas dalam konstruksi.",
+  "vi_en": "Choose the correct statement about quality management in construction.",
   "explain": "Đáp án đúng: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり）. Quản lý chất lượng là việc đảm bảo công trình đạt chất lượng theo đúng hồ sơ thiết kế.\n\nTừ vựng:\n建設（けんせつ）: Xây dựng\n品質（ひんしつ）管理（かんり）: Quản lý chất lượng\n設計（せっけい）図書（としょ）: Hồ sơ thiết kế\n通（どお）りに: Theo đúng\n満（み）たす: Đáp ứng\n目的（もくてき）: Mục đích\n教育（きょういく）: Đào tạo\n把握（はあく）: Nắm bắt\n仕様（しよう）: Thông số kỹ thuật",
-  "tip": "💡 Mẹo nhớ: Quản lý chất lượng = thi công ĐÚNG THEO BẢN VẼ (設計図書通り). Thấy「設計図書通りの品質を満たす」→ đây là định nghĩa ĐÚNG."
+  "explain_id": "Jawaban yang benar: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり）. Manajemen kualitas adalah memastikan bangunan mencapai kualitas sesuai dengan dokumen desain.\n\nKosakata:\n建設（けんせつ）: Konstruksi / Pembangunan\n品質（ひんしつ）管理（かんり）: Manajemen kualitas\n設計（せっけい）図書（としょ）: Dokumen desain\n通（どお）りに: Sesuai dengan\n満（み）たす: Memenuhi\n目的（もくてき）: Tujuan\n教育（きょういく）: Pendidikan / Pelatihan\n把握（はあく）: Memahami / Menguasai keadaan\n仕様（しよう）: Spesifikasi",
+  "explain_en": "The correct answer: 設計（せっけい）図書（としょ）通（どお）りの品質（ひんしつ）を満（み）たすための管理（かんり）. Quality management is ensuring that the work achieves quality in accordance with the design documents.\n\nVocabulary:\n建設（けんせつ）: Construction\n品質（ひんしつ）管理（かんり）: Quality management\n設計（せっけい）図書（としょ）: Design documents\n通（どお）りに: In accordance with\n満（み）たす: To satisfy / To meet\n目的（もくてき）: Purpose\n教育（きょういく）: Education / Training\n把握（はあく）: To grasp / To understand\n仕様（しよう）: Specifications",
+  "tip": "💡 Mẹo nhớ: Quản lý chất lượng = thi công ĐÚNG THEO BẢN VẼ (設計図書通り). Thấy「設計図書通りの品質を満たす」→ đây là định nghĩa ĐÚNG.",
+  "tip_id": "💡 Tips: Manajemen kualitas = melaksanakan pembangunan PERSIS SESUAI GAMBAR DESAIN (設計図書通り). Jika melihat 「設計図書通りの品質を満たす」→ ini adalah definisi yang BENAR.",
+  "tip_en": "💡 Tip: Quality management = building EXACTLY ACCORDING TO THE DESIGN DOCUMENTS (設計図書通り). If you see 「設計図書通りの品質を満たす」→ this is the CORRECT definition."
 },
 {
   "id": "7-12",
@@ -106,8 +172,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["ヒートアイランド","熱中症（ねっちゅうしょう）","地球（ちきゅう）温暖化（おんだんか）","地盤（じばん）沈下（ちんか）"],
   "answer": 0,
   "vi": "Hiện tượng nhiệt độ ở thành phố trở nên cao hơn nhiệt độ ở các vùng xung quanh do quá trình đô thị hóa được gọi là gì?",
+  "vi_id": "Fenomena suhu di kota menjadi lebih tinggi daripada suhu di daerah sekitarnya akibat urbanisasi disebut apa?",
+  "vi_en": "What is the phenomenon called where temperatures in a city become higher than in the surrounding areas due to urbanization?",
   "explain": "Hiện tượng này được gọi là ヒートアイランド- đảo nhiệt đô thị.\n\nTừ vựng:\n都市化（としか）: Đô thị hóa\n気温（きおん）: Nhiệt độ không khí\n周辺（しゅうへん）: Xung quanh\n現象（げんしょう）: Hiện tượng\nヒートアイランド: Hiệu ứng đảo nhiệt đô thị\n熱中症（ねっちゅうしょう）: Say nắng / Sốc nhiệt\n地球温暖化（おんだんか）: Nóng lên toàn cầu\n地盤（じばん）沈下（ちんか）: Sụt lún nền đất",
-  "tip": "💡 Mẹo nhớ: 都市化（đô thị hóa）→ nhiệt độ đô thị CAO HƠN xung quanh → ヒートアイランド (đảo nhiệt). Khác với 地球温暖化（nóng lên TOÀN CẦU）."
+  "explain_id": "Fenomena ini disebut ヒートアイランド- pulau panas perkotaan.\n\nKosakata:\n都市化（としか）: Urbanisasi\n気温（きおん）: Suhu udara\n周辺（しゅうへん）: Sekitar\n現象（げんしょう）: Fenomena\nヒートアイランド: Efek pulau panas perkotaan\n熱中症（ねっちゅうしょう）: Sengatan panas / Heatstroke\n地球温暖化（おんだんか）: Pemanasan global\n地盤（じばん）沈下（ちんか）: Penurunan tanah",
+  "explain_en": "This phenomenon is called ヒートアイランド- urban heat island.\n\nVocabulary:\n都市化（としか）: Urbanization\n気温（きおん）: Air temperature\n周辺（しゅうへん）: Surroundings\n現象（げんしょう）: Phenomenon\nヒートアイランド: Urban heat island effect\n熱中症（ねっちゅうしょう）: Heatstroke\n地球温暖化（おんだんか）: Global warming\n地盤（じばん）沈下（ちんか）: Ground subsidence",
+  "tip": "💡 Mẹo nhớ: 都市化（đô thị hóa）→ nhiệt độ đô thị CAO HƠN xung quanh → ヒートアイランド (đảo nhiệt). Khác với 地球温暖化（nóng lên TOÀN CẦU）.",
+  "tip_id": "💡 Tips: 都市化 (urbanisasi) → suhu kota LEBIH TINGGI daripada sekitarnya → ヒートアイランド (pulau panas / heat island). Berbeda dengan 地球温暖化 (pemanasan GLOBAL).",
+  "tip_en": "💡 Tip: 都市化 (urbanization) → city temperature HIGHER than the surroundings → ヒートアイランド (heat island). Different from 地球温暖化 (GLOBAL warming)."
 },
 {
   "id": "7-13",
@@ -115,8 +187,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["週（しゅう）休（きゅう）1日（にち）を確保（かくほ）する","職長（しょくちょう）だけは育成（いくせい）と確保（かくほ）をする必要（ひつよう）がある","職長（しょくちょう）は、有給（ゆうきゅう）取得（しゅとく）を言（い）い出（だ）しにくい環境（かんきょう）を作（つく）らないことが大切（たいせつ）","働（はたら）き方（かた）改革（かいかく）を取（と）り組（く）まない"],
   "answer": 2,
   "vi": "Hãy chọn phương án thích hợp về môi trường làm việc.",
+  "vi_id": "Pilihlah pernyataan yang tepat tentang lingkungan kerja.",
+  "vi_en": "Choose the appropriate statement about the work environment.",
   "explain": "Đáp án đúng:「職長は、有給取得を言い出しにくい環境を作らないことが大切」— Tổ trưởng cần tạo bầu không khí cởi mở, không để nhân viên khó khăn khi muốn xin nghỉ phép.\n\nTừ vựng:\n職場（しょくば）環境（かんきょう）: Môi trường làm việc\n適切（てきせつ）: Thích hợp\n確保（かくほ）: Bảo đảm\n有給（ゆうきゅう）取得（しゅとく）: Nghỉ phép có lương\n言（い）い出（だ）しにくい: Khó nói ra\n育成（いくせい）: Bồi dưỡng\n働（はたら）き方（かた）改革（かいかく）: Cải cách phương thức làm việc",
-  "tip": "💡 Mẹo nhớ: Thấy「有給取得を言い出しにくい環境を作らない」(KHÔNG tạo môi trường khó xin nghỉ）→ ĐÚNG. Môi trường tốt = thoải mái trao đổi."
+  "explain_id": "Jawaban yang benar:「職長は、有給取得を言い出しにくい環境を作らないことが大切」— Mandor perlu menciptakan suasana yang terbuka, agar karyawan tidak merasa sulit ketika ingin mengajukan cuti berbayar.\n\nKosakata:\n職場（しょくば）環境（かんきょう）: Lingkungan kerja\n適切（てきせつ）: Tepat / Sesuai\n確保（かくほ）: Menjamin / Memastikan\n有給（ゆうきゅう）取得（しゅとく）: Mengambil cuti berbayar\n言（い）い出（だ）しにくい: Sulit untuk diucapkan / Sulit untuk diajukan\n育成（いくせい）: Pembinaan / Pengembangan\n働（はたら）き方（かた）改革（かいかく）: Reformasi cara kerja",
+  "explain_en": "The correct answer:「職長は、有給取得を言い出しにくい環境を作らないことが大切」— It is important for the foreman not to create an environment where it is hard to ask for paid leave; the foreman needs to create an open atmosphere so employees do not find it difficult to request paid leave.\n\nVocabulary:\n職場（しょくば）環境（かんきょう）: Workplace environment\n適切（てきせつ）: Appropriate\n確保（かくほ）: To ensure / To secure\n有給（ゆうきゅう）取得（しゅとく）: Taking paid leave\n言（い）い出（だ）しにくい: Hard to bring up / Hard to say\n育成（いくせい）: Development / Training\n働（はたら）き方（かた）改革（かいかく）: Work-style reform",
+  "tip": "💡 Mẹo nhớ: Thấy「有給取得を言い出しにくい環境を作らない」(KHÔNG tạo môi trường khó xin nghỉ）→ ĐÚNG. Môi trường tốt = thoải mái trao đổi.",
+  "tip_id": "💡 Tips: Jika melihat 「有給取得を言い出しにくい環境を作らない」(TIDAK menciptakan lingkungan yang membuat sulit meminta cuti) → BENAR. Lingkungan yang baik = nyaman untuk berkomunikasi.",
+  "tip_en": "💡 Tip: If you see 「有給取得を言い出しにくい環境を作らない」(do NOT create an environment where it is hard to ask for paid leave) → CORRECT. A good environment = comfortable communication."
 },
 {
   "id": "7-14",
@@ -124,8 +202,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["健康（けんこう）に影響（えいきょう）を与える要因（よういん）の対策（たいさく）","休憩室（きゅうけいしつ）、更衣室（こういしつ）は作業（さぎょう）環境（かんきょう）ではない","温度計（おんどけい）・湿度計（しつどけい）の設置（せっち）","熱中症（ねっちゅうしょう）対策（たいさく）"],
   "answer": 1,
   "vi": "Hãy chọn phương án KHÔNG đúng về quản lý an toàn vệ sinh lao động.",
+  "vi_id": "Pilihlah pernyataan yang TIDAK benar tentang manajemen keselamatan dan kesehatan kerja.",
+  "vi_en": "Choose the statement that is NOT correct about occupational safety and health management.",
   "explain": "Đáp án sai:「休憩室、更衣室は作業環境ではない」— Phòng nghỉ và phòng thay đồ vẫn được tính là một phần của môi trường làm việc.\n\nTừ vựng:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）管理（かんり）: Quản lý an toàn vệ sinh lao động\n健康（けんこう）: Sức khỏe\n影響（えいきょう）: Ảnh hưởng\n要因（よういん）: Yếu tố / Nguyên nhân\n対策（たいさく）: Biện pháp\n休憩室（きゅうけいしつ）: Phòng nghỉ\n更衣室（こういしつ）: Phòng thay đồ\n作業（さぎょう）環境（かんきょう）: Môi trường làm việc",
-  "tip": "💡 Mẹo nhớ: Môi trường làm việc = TẤT CẢ nơi người lao động sử dụng, kể cả phòng nghỉ và phòng thay đồ. Thấy「作業環境ではない」→ SAI."
+  "explain_id": "Jawaban yang salah:「休憩室、更衣室は作業環境ではない」— Ruang istirahat dan ruang ganti tetap dihitung sebagai bagian dari lingkungan kerja.\n\nKosakata:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）管理（かんり）: Manajemen keselamatan dan kesehatan kerja\n健康（けんこう）: Kesehatan\n影響（えいきょう）: Pengaruh\n要因（よういん）: Faktor / Penyebab\n対策（たいさく）: Tindakan penanggulangan\n休憩室（きゅうけいしつ）: Ruang istirahat\n更衣室（こういしつ）: Ruang ganti\n作業（さぎょう）環境（かんきょう）: Lingkungan kerja",
+  "explain_en": "The incorrect answer:「休憩室、更衣室は作業環境ではない」— Break rooms and changing rooms are still counted as part of the work environment.\n\nVocabulary:\n労働（ろうどう）安全（あんぜん）衛生（えいせい）管理（かんり）: Occupational safety and health management\n健康（けんこう）: Health\n影響（えいきょう）: Effect / Impact\n要因（よういん）: Factor / Cause\n対策（たいさく）: Countermeasure\n休憩室（きゅうけいしつ）: Break room\n更衣室（こういしつ）: Changing room\n作業（さぎょう）環境（かんきょう）: Work environment",
+  "tip": "💡 Mẹo nhớ: Môi trường làm việc = TẤT CẢ nơi người lao động sử dụng, kể cả phòng nghỉ và phòng thay đồ. Thấy「作業環境ではない」→ SAI.",
+  "tip_id": "💡 Tips: Lingkungan kerja = SEMUA tempat yang digunakan pekerja, termasuk ruang istirahat dan ruang ganti. Jika melihat 「作業環境ではない」→ SALAH.",
+  "tip_en": "💡 Tip: The work environment = ALL places used by workers, including rest rooms and changing rooms. If you see 「作業環境ではない」→ WRONG."
 },
 {
   "id": "7-15",
@@ -133,8 +217,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["ドライミストを設置（せっち）する","作業用（さぎょうよう）大型（おおがた）扇風機（せんぷうき）","遮光（しゃこう）ネットを設置（せっち）する","風（かぜ）を遮断（しゃだん）"],
   "answer": 3,
   "vi": "Để làm giảm chỉ số độ nóng, điều nào sau đây là KHÔNG thích hợp?",
+  "vi_id": "Untuk menurunkan indeks panas, manakah yang TIDAK tepat?",
+  "vi_en": "To lower the heat index, which of the following is NOT appropriate?",
   "explain": "Đáp án sai: 風（かぜ）を遮断（しゃだん）— Chắn gió sẽ làm khu vực làm việc trở nên bí bách và nóng hơn.\n\nTừ vựng:\n暑（あつ）さ指数（しすう）: Chỉ số nóng bức (WBGT)\n低減（ていげん）: Làm giảm\n不適切（ふてきせつ）: Không thích hợp\nドライミスト: Phun sương khô\n扇風機（せんぷうき）: Quạt điện\n遮光（しゃこう）ネット: Lưới che nắng\n遮断（しゃだん）: Chắn / Cắt đứt",
-  "tip": "💡 Mẹo nhớ: Chống nóng = cần GIÓ + BÓNG RÂM. 「風を遮断する」(chặn gió）= làm nóng hơn → NGƯỢC chiều → SAI."
+  "explain_id": "Jawaban yang salah: 風（かぜ）を遮断（しゃだん）— Menghalangi angin akan membuat area kerja menjadi pengap dan lebih panas.\n\nKosakata:\n暑（あつ）さ指数（しすう）: Indeks panas (WBGT)\n低減（ていげん）: Mengurangi\n不適切（ふてきせつ）: Tidak tepat\nドライミスト: Semprotan kabut kering\n扇風機（せんぷうき）: Kipas angin listrik\n遮光（しゃこう）ネット: Jaring peneduh / Jaring anti sinar matahari\n遮断（しゃだん）: Menghalangi / Memutus",
+  "explain_en": "The incorrect answer: 風（かぜ）を遮断（しゃだん）— Blocking the wind will make the work area stuffy and hotter.\n\nVocabulary:\n暑（あつ）さ指数（しすう）: Heat index (WBGT)\n低減（ていげん）: To reduce\n不適切（ふてきせつ）: Inappropriate\nドライミスト: Dry mist spraying\n扇風機（せんぷうき）: Electric fan\n遮光（しゃこう）ネット: Shade net\n遮断（しゃだん）: To block / To cut off",
+  "tip": "💡 Mẹo nhớ: Chống nóng = cần GIÓ + BÓNG RÂM. 「風を遮断する」(chặn gió）= làm nóng hơn → NGƯỢC chiều → SAI.",
+  "tip_id": "💡 Tips: Melawan panas = membutuhkan ANGIN + TEMPAT TEDUH. 「風を遮断する」(menghalangi angin) = membuat lebih panas → BERLAWANAN arah → SALAH.",
+  "tip_en": "💡 Tip: Fighting heat = needs WIND + SHADE. 「風を遮断する」(blocking the wind) = makes it hotter → the OPPOSITE direction → WRONG."
 },
 {
   "id": "7-16",
@@ -142,8 +232,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["当日（とうじつ）の安全（あんぜん）パトロールをする時（とき）だけはしっかりを実施（じっし）する","作業員（さぎょういん）の声（こえ）を聴（き）く","安全（あんぜん）衛生（えいせい）教育（きょういく）を実施（じっし）する","作業（さぎょう）手順書（てじゅんしょ）を作成（さくせい）する"],
   "answer": 0,
   "vi": "Hãy chọn phương án SAI về hoạt động an toàn vệ sinh.",
+  "vi_id": "Pilihlah pernyataan yang SALAH tentang aktivitas keselamatan dan kesehatan.",
+  "vi_en": "Choose the WRONG statement about safety and health activities.",
   "explain": "Đáp án sai:「当日の安全パトロールをする時だけはしっかり実施する」— Hoạt động an toàn cần được thực hiện THƯỜNG XUYÊN và liên tục. Chỉ làm nghiêm túc khi có tuần tra an toàn là cách làm đối phó.\n\nTừ vựng:\n安全（あんぜん）衛生（えいせい）活動（かつどう）: Hoạt động an toàn vệ sinh\n当日（とうじつ）: Hôm đó / Ngày đó\n安全（あんぜん）パトロール: Tuần tra an toàn\n実施（じっし）する: Thực hiện\n声（こえ）を聴（き）く: Lắng nghe ý kiến\n手順書（てじゅんしょ）: Tài liệu hướng dẫn trình tự",
-  "tip": "💡 Mẹo nhớ: An toàn = phải thực hiện THƯỜNG XUYÊN, không chỉ khi có kiểm tra. Thấy「するときだけ」(chỉ khi...）→ tư tưởng ĐỐI PHÓ → SAI."
+  "explain_id": "Jawaban yang salah:「当日の安全パトロールをする時だけはしっかり実施する」— Kegiatan keselamatan perlu dilakukan SECARA RUTIN dan terus-menerus. Hanya melakukannya dengan serius saat ada patroli keselamatan adalah cara yang hanya untuk menghadapi pemeriksaan.\n\nKosakata:\n安全（あんぜん）衛生（えいせい）活動（かつどう）: Kegiatan keselamatan dan kesehatan\n当日（とうじつ）: Hari itu / Pada hari tersebut\n安全（あんぜん）パトロール: Patroli keselamatan\n実施（じっし）する: Melaksanakan\n声（こえ）を聴（き）く: Mendengarkan pendapat\n手順書（てじゅんしょ）: Dokumen panduan prosedur",
+  "explain_en": "The incorrect answer:「当日の安全パトロールをする時だけはしっかり実施する」— Safety activities need to be carried out REGULARLY and continuously. Only doing them properly when there is a safety patrol is just putting on a show.\n\nVocabulary:\n安全（あんぜん）衛生（えいせい）活動（かつどう）: Safety and health activities\n当日（とうじつ）: That day / On the day\n安全（あんぜん）パトロール: Safety patrol\n実施（じっし）する: To carry out / To implement\n声（こえ）を聴（き）く: To listen to opinions\n手順書（てじゅんしょ）: Procedure manual",
+  "tip": "💡 Mẹo nhớ: An toàn = phải thực hiện THƯỜNG XUYÊN, không chỉ khi có kiểm tra. Thấy「するときだけ」(chỉ khi...）→ tư tưởng ĐỐI PHÓ → SAI.",
+  "tip_id": "💡 Tips: Keselamatan = harus dilakukan secara TERUS-MENERUS, bukan hanya saat ada pemeriksaan. Jika melihat 「するときだけ」(hanya ketika...) → sikap SEKADAR FORMALITAS → SALAH.",
+  "tip_en": "💡 Tip: Safety = must be carried out REGULARLY, not only when there is an inspection. If you see 「するときだけ」(only when...) → a 'just for show' attitude → WRONG."
 },
 {
   "id": "7-17",
@@ -151,8 +247,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）では、事業場（じぎょうじょう）の規模（きぼ）が50人（にん）以上（いじょう）の場合（ばあい）、安全（あんぜん）管理者（かんりしゃ）および衛生（えいせい）管理者（かんりしゃ）を選任（せんにん）することが義務（ぎむ）付（づ）けられています","安全（あんぜん）管理者（かんりしゃ）に選任（せんにん）されなかった場合（ばあい）も、職長（しょくちょう）は現場（げんば）の安全（あんぜん）を保（たも）つための行動（こうどう）が求（もと）められます","安全（あんぜん）管理者（かんりしゃ）と衛生（えいせい）管理者（かんりしゃ）は職長（しょくちょう）が兼務（けんむ）することもあります","事業（じぎょう）規模（きぼ）にもかかわらず、職長（しょくちょう）がいれば、安全（あんぜん）衛生（えいせい）委員会（いいんかい）を選任（せんにん）しなくても良（よ）い"],
   "answer": 3,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về an toàn vệ sinh lao động.",
+  "vi_id": "Pilihlah pernyataan yang TIDAK tepat tentang keselamatan dan kesehatan kerja.",
+  "vi_en": "Choose the inappropriate statement about occupational safety and health.",
   "explain": "Đáp án sai:「事業規模にもかかわらず、職長がいれば、安全衛生委員会を選任しなくても良い」— Việc thành lập 安全衛生委員会（いいんかい）là bắt buộc theo quy định tùy thuộc quy mô doanh nghiệp.\n\nTừ vựng:\n事業場（じぎょうじょう）: Nơi làm việc\n規模（きぼ）: Quy mô\n50人（にん）以上（いじょう）: Từ 50 người trở lên\n義務（ぎむ）付（づ）け: Nghĩa vụ / Bắt buộc\n選任（せんにん）: Bổ nhiệm\n兼務（けんむ）: Kiêm nhiệm\n安全（あんぜん）衛生（えいせい）委員会（いいんかい）: Ủy ban an toàn vệ sinh",
-  "tip": "💡 Mẹo nhớ: Thấy「職長がいれば委員会を選任しなくてもよい」→ SAI. Luật yêu cầu ủy ban khi đủ quy mô, tổ trưởng không thay thế được."
+  "explain_id": "Jawaban yang salah:「事業規模にもかかわらず、職長がいれば、安全衛生委員会を選任しなくても良い」— Pembentukan 安全衛生委員会（いいんかい）wajib menurut peraturan, tergantung pada skala perusahaan.\n\nKosakata:\n事業場（じぎょうじょう）: Tempat kerja\n規模（きぼ）: Skala\n50人（にん）以上（いじょう）: 50 orang atau lebih\n義務（ぎむ）付（づ）け: Kewajiban / Diwajibkan\n選任（せんにん）: Penunjukan / Pengangkatan\n兼務（けんむ）: Rangkap jabatan\n安全（あんぜん）衛生（えいせい）委員会（いいんかい）: Komite keselamatan dan kesehatan",
+  "explain_en": "The incorrect answer:「事業規模にもかかわらず、職長がいれば、安全衛生委員会を選任しなくても良い」— Establishing a 安全衛生委員会（いいんかい）is mandatory by regulation depending on the size of the business.\n\nVocabulary:\n事業場（じぎょうじょう）: Workplace\n規模（きぼ）: Scale / Size\n50人（にん）以上（いじょう）: 50 people or more\n義務（ぎむ）付（づ）け: Obligation / Mandatory\n選任（せんにん）: Appointment / Selection\n兼務（けんむ）: Holding an additional post\n安全（あんぜん）衛生（えいせい）委員会（いいんかい）: Safety and health committee",
+  "tip": "💡 Mẹo nhớ: Thấy「職長がいれば委員会を選任しなくてもよい」→ SAI. Luật yêu cầu ủy ban khi đủ quy mô, tổ trưởng không thay thế được.",
+  "tip_id": "💡 Tips: Jika melihat 「職長がいれば委員会を選任しなくてもよい」→ SALAH. Undang-undang mewajibkan komite bila skalanya memenuhi syarat; ketua kelompok tidak dapat menggantikannya.",
+  "tip_en": "💡 Tip: If you see 「職長がいれば委員会を選任しなくてもよい」→ WRONG. The law requires a committee when the scale qualifies; a foreman cannot replace it."
 },
 {
   "id": "7-18",
@@ -160,8 +262,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["職場（しょくば）における労働者（ろうどうしゃ）の安全（あんぜん）と健康（けんこう）を確保（かくほ）すること","定められている内容（ないよう）を知（し）っておくことで、職長（しょくちょう）として、会社（かいしゃ）や上司（じょうし）に報告（ほうこく）すべき内容（ないよう）や改善（かいぜん）提案（ていあん）をするための視点（してん）を持（も）つことができます","賃金（ちんぎん）、労働（ろうどう）時間（じかん）はもちろん、解雇（かいこ）、災害（さいがい）補償（ほしょう）、安全（あんぜん）衛生（えいせい）、寄宿舎（きしゅくしゃ）等（とう）に関（かん）する条件（じょうけん）を含（ふく）む","職長（しょくちょう）としては、労働（ろうどう）安全（あんぜん）衛生（えいせい）法（ほう）の改正（かいせい）内容（ないよう）に関心（かんしん）を持（も）ち、自分（じぶん）たちの作業（さぎょう）現場（げんば）でも適用（てきよう）されるかどうかを考（かんが）える必要（ひつよう）があります"],
   "answer": 2,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về Luật An toàn vệ sinh lao động.",
+  "vi_id": "Pilihlah pernyataan yang TIDAK tepat tentang Undang-Undang Keselamatan dan Kesehatan Kerja.",
+  "vi_en": "Choose the inappropriate statement about the Industrial Safety and Health Act.",
   "explain": "Đáp án sai:「賃金、労働時間はもちろん、解雇、災害補償...」— Các vấn đề như tiền lương, giờ làm, sa thải thuộc phạm vi Luật Tiêu chuẩn lao động (労働基準法), không phải Luật An toàn vệ sinh.\n\nTừ vựng:\n確保（かくほ）: Bảo đảm\n改善（かいぜん）提案（ていあん）: Đề xuất cải tiến\n視点（してん）: Quan điểm\n賃金（ちんぎん）: Tiền lương\n解雇（かいこ）: Sa thải\n災害補償（さいがいほしょう）: Bồi thường tai nạn\n寄宿舎（きしゅくしゃ）: Ký túc xá\n改正（かいせい）: Sửa đổi",
-  "tip": "💡 Mẹo nhớ: 労働安全衛生法 = chỉ về AN TOÀN và SỨC KHỎE. Thấy 賃金（lương）・解雇（sa thải）→ đây là 労働基準法, không phải Luật an toàn vệ sinh → SAI."
+  "explain_id": "Jawaban yang salah:「賃金、労働時間はもちろん、解雇、災害補償...」— Masalah seperti upah, jam kerja, dan pemecatan termasuk dalam lingkup Undang-Undang Standar Tenaga Kerja (労働基準法), bukan Undang-Undang Keselamatan dan Kesehatan.\n\nKosakata:\n確保（かくほ）: Menjamin / Memastikan\n改善（かいぜん）提案（ていあん）: Usulan perbaikan\n視点（してん）: Sudut pandang\n賃金（ちんぎん）: Upah\n解雇（かいこ）: Pemecatan\n災害補償（さいがいほしょう）: Kompensasi kecelakaan\n寄宿舎（きしゅくしゃ）: Asrama\n改正（かいせい）: Revisi / Perubahan",
+  "explain_en": "The incorrect answer:「賃金、労働時間はもちろん、解雇、災害補償...」— Issues such as wages, working hours, and dismissal fall under the Labor Standards Act (労働基準法), not the Safety and Health Act.\n\nVocabulary:\n確保（かくほ）: To ensure / To secure\n改善（かいぜん）提案（ていあん）: Improvement proposal\n視点（してん）: Viewpoint\n賃金（ちんぎん）: Wages\n解雇（かいこ）: Dismissal\n災害補償（さいがいほしょう）: Accident compensation\n寄宿舎（きしゅくしゃ）: Dormitory\n改正（かいせい）: Revision / Amendment",
+  "tip": "💡 Mẹo nhớ: 労働安全衛生法 = chỉ về AN TOÀN và SỨC KHỎE. Thấy 賃金（lương）・解雇（sa thải）→ đây là 労働基準法, không phải Luật an toàn vệ sinh → SAI.",
+  "tip_id": "💡 Tips: 労働安全衛生法 = hanya tentang KESELAMATAN dan KESEHATAN. Jika melihat 賃金 (upah)・解雇 (pemecatan) → itu adalah 労働基準法, bukan Undang-Undang Keselamatan dan Kesehatan → SALAH.",
+  "tip_en": "💡 Tip: 労働安全衛生法 = only about SAFETY and HEALTH. If you see 賃金 (wages)・解雇 (dismissal) → that is the 労働基準法, not the Safety and Health Act → WRONG."
 },
 {
   "id": "7-19",
@@ -169,8 +277,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["危険性（きけんせい）または有害性（ゆうがいせい）の特定（とくてい）","リスク低減（ていげん）措置（そち）の実施（じっし）","リスク低減（ていげん）のための優先度（ゆうせんど）の設定（せってい）","リスクの見積（みつ）もり"],
   "answer": 3,
   "vi": "Trong các bước cơ bản của đánh giá rủi ro (Risk Assessment), bước thứ 2 là bước nào?",
+  "vi_id": "Dalam langkah-langkah dasar penilaian risiko (Risk Assessment), langkah manakah yang merupakan langkah ke-2?",
+  "vi_en": "In the basic steps of Risk Assessment, which step is the 2nd step?",
   "explain": "Đáp án đúng: リスクの見積（みつ）もり — Quy trình Risk Assessment: ①特定（xác định nguy cơ）→ ②見積もり（ƯỚC LƯỢNG mức độ）→ ③優先度設定（xếp ưu tiên）→ ④実施（thực hiện biện pháp）.\n\nTừ vựng:\nリスクアセスメント: Đánh giá rủi ro\n手順（てじゅん）: Trình tự\n特定（とくてい）: Xác định\n危険性（きけんせい）: Tính nguy hiểm\n有害性（ゆうがいせい）: Tính có hại\nリスク低減（ていげん）: Giảm thiểu rủi ro\n措置（そち）: Biện pháp\n実施（じっし）: Thực hiện\n優先度（ゆうせんど）: Mức độ ưu tiên\n見積（みつ）もり: Ước lượng",
-  "tip": "💡 Mẹo nhớ: Trình tự Risk Assessment: ①特定→ ②見積り（ƯỚC LƯỢNG）→ ③優先度→ ④実施. Bước 2 = 見積もり."
+  "explain_id": "Jawaban yang benar: リスクの見積（みつ）もり — Proses Risk Assessment: ①特定（mengidentifikasi bahaya）→ ②見積もり（MENGESTIMASI tingkatnya）→ ③優先度設定（menetapkan prioritas）→ ④実施（melaksanakan tindakan）.\n\nKosakata:\nリスクアセスメント: Penilaian risiko\n手順（てじゅん）: Prosedur / Urutan\n特定（とくてい）: Identifikasi\n危険性（きけんせい）: Tingkat bahaya\n有害性（ゆうがいせい）: Tingkat berbahayanya bagi kesehatan\nリスク低減（ていげん）: Pengurangan risiko\n措置（そち）: Tindakan / Langkah\n実施（じっし）: Pelaksanaan\n優先度（ゆうせんど）: Tingkat prioritas\n見積（みつ）もり: Estimasi",
+  "explain_en": "The correct answer: リスクの見積（みつ）もり — Risk Assessment process: ①特定（identifying hazards）→ ②見積もり（ESTIMATING the level）→ ③優先度設定（setting priorities）→ ④実施（implementing measures）.\n\nVocabulary:\nリスクアセスメント: Risk assessment\n手順（てじゅん）: Procedure\n特定（とくてい）: Identification\n危険性（きけんせい）: Danger / Hazardousness\n有害性（ゆうがいせい）: Harmfulness\nリスク低減（ていげん）: Risk reduction\n措置（そち）: Measure\n実施（じっし）: Implementation\n優先度（ゆうせんど）: Priority level\n見積（みつ）もり: Estimation",
+  "tip": "💡 Mẹo nhớ: Trình tự Risk Assessment: ①特定→ ②見積り（ƯỚC LƯỢNG）→ ③優先度→ ④実施. Bước 2 = 見積もり.",
+  "tip_id": "💡 Tips: Urutan Risk Assessment: ①特定 → ②見積り (ESTIMASI) → ③優先度 → ④実施. Langkah 2 = 見積もり.",
+  "tip_en": "💡 Tip: Risk Assessment sequence: ①特定 → ②見積り (ESTIMATION) → ③優先度 → ④実施. Step 2 = 見積もり."
 },
 {
   "id": "7-20",
@@ -178,8 +292,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["不要（ふよう）な資材（しざい）や道具（どうぐ）、建設（けんせつ）中（ちゅう）の廃材（はいざい）やごみなどを撤去（てっきょ）すること","資材（しざい）や道具（どうぐ）を置（お）き場所（ばしょ）を決（き）め、その場所（ばしょ）におくこと","安全靴（あんぜんぐつ）やヘルメットなどの労働者（ろうどうしゃ）の安全（あんぜん）装備品（そうびひん）を管理（かんり）すること","建設（けんせつ）中（ちゅう）に生（しょう）じたごみや塵（ちり）、建材（けんざい）の切（き）りくずを掃除（そうじ）すること"],
   "answer": 1,
   "vi": "Định nghĩa của 'Sắp xếp' (Seiton) là gì?",
+  "vi_id": "Apa definisi dari 'Penataan' (Seiton)?",
+  "vi_en": "What is the definition of 'Set in order' (Seiton)?",
   "explain": "Trong 5S, 整頓（せいとん）- Sắp xếp có nghĩa là quy định chỗ để cho từng loại vật tư và dụng cụ, sau đó luôn để chúng đúng vào vị trí đã định.\n\nTừ vựng:\n整頓（せいとん）: Sắp xếp đúng chỗ (S2 trong 5S)\n定義（ていぎ）: Định nghĩa\n資材（しざい）: Vật tư\n道具（どうぐ）: Dụng cụ\n置（お）き場所（ばしょ）: Vị trí để đồ\n撤去（てっきょ）: Dỡ bỏ\n廃材（はいざい）: Vật liệu phế thải\n安全靴（あんぜんぐつ）: Giày bảo hộ\n塵（ちり）: Bụi",
-  "tip": "💡 Mẹo nhớ: 整頓 = quyết định CHỖ ĐỂ và để đúng chỗ. Thấy「置き場所を決め、その場所におく」→ chọn 整頓."
+  "explain_id": "Dalam 5S, 整頓（せいとん）- Penataan berarti menentukan tempat penyimpanan untuk setiap jenis bahan dan alat, lalu selalu meletakkannya kembali tepat di posisi yang telah ditentukan.\n\nKosakata:\n整頓（せいとん）: Penataan pada tempatnya (S2 dalam 5S)\n定義（ていぎ）: Definisi\n資材（しざい）: Bahan / Material\n道具（どうぐ）: Alat / Perkakas\n置（お）き場所（ばしょ）: Tempat meletakkan barang\n撤去（てっきょ）: Pembongkaran / Penyingkiran\n廃材（はいざい）: Bahan sisa / Limbah bahan\n安全靴（あんぜんぐつ）: Sepatu keselamatan\n塵（ちり）: Debu",
+  "explain_en": "In 5S, 整頓（せいとん）- Set in order means deciding a place for each type of material and tool, and then always putting them back exactly in the designated position.\n\nVocabulary:\n整頓（せいとん）: Set in order (S2 in 5S)\n定義（ていぎ）: Definition\n資材（しざい）: Materials\n道具（どうぐ）: Tool\n置（お）き場所（ばしょ）: Place to put things\n撤去（てっきょ）: Removal\n廃材（はいざい）: Waste material\n安全靴（あんぜんぐつ）: Safety shoes\n塵（ちり）: Dust",
+  "tip": "💡 Mẹo nhớ: 整頓 = quyết định CHỖ ĐỂ và để đúng chỗ. Thấy「置き場所を決め、その場所におく」→ chọn 整頓.",
+  "tip_id": "💡 Tips: 整頓 = menentukan TEMPAT PENYIMPANAN dan meletakkan barang di tempat itu. Jika melihat 「置き場所を決め、その場所におく」→ pilih 整頓.",
+  "tip_en": "💡 Tip: 整頓 = deciding the PLACE to put things and putting them in that place. If you see 「置き場所を決め、その場所におく」→ choose 整頓."
 },
 {
   "id": "7-21",
@@ -187,8 +307,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["5S活動（かつどう）の必要性（ひつようせい）や方法（ほうほう）、ルールなどを指導（しどう）し、定期（ていき）的（てき）なチェックや評価（ひょうか）を行（おこな）う","現場（げんば）の危険（きけん）箇所（かしょ）や改善（かいぜん）点（てん）を指摘（してき）し、作業員（さぎょういん）と協力（きょうりょく）して改善（かいぜん）策（さく）を実施（じっし）する","職長（しょくちょう）は、作業（さぎょう）環境（かんきょう）の整備（せいび）や清掃（せいそう）、整頓（せいとん）、安全（あんぜん）意識（いしき）を率先（そっせん）して行（おこな）うのではなく、できるだけ作業員（さぎょういん）に行（おこな）う","生産性（せいさんせい）の向上（こうじょう）を促進（そくしん）させること"],
   "answer": 2,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về vai trò của quản đốc trong hoạt động 5S.",
+  "vi_id": "Pilihlah pernyataan yang TIDAK tepat tentang peran mandor dalam aktivitas 5S.",
+  "vi_en": "Choose the inappropriate statement about the role of the supervisor/foreman in 5S activities.",
   "explain": "Đáp án sai:「職長は...率先して行うのではなく、できるだけ作業員に行う」— Trong hoạt động 5S, tổ trưởng phải là người 率先（そっせん）- tiên phong, gương mẫu thực hiện.\n\nTừ vựng:\n5S活動（かつどう）: Hoạt động 5S\n役割（やくわり）: Vai trò\n不適切（ふてきせつ）: Không thích hợp\n指導（しどう）: Hướng dẫn / Chỉ đạo\n危険（きけん）箇所（かしょ）: Khu vực nguy hiểm\n指摘（してき）: Chỉ ra / Nhận xét\n率先（そっせん）: Tiên phong / Làm gương\n生産性（せいさんせい）: Năng suất\n促進（そくしん）: Thúc đẩy",
-  "tip": "💡 Mẹo nhớ: Tổ trưởng trong 5S phải 率先（そっせん）(gương mẫu đi đầu). Thấy「率先して行うのではなく、作業員に行う」→ SAI."
+  "explain_id": "Jawaban yang salah:「職長は...率先して行うのではなく、できるだけ作業員に行う」— Dalam kegiatan 5S, mandor harus menjadi orang yang 率先（そっせん）- mempelopori dan memberi teladan dalam melaksanakannya.\n\nKosakata:\n5S活動（かつどう）: Kegiatan 5S\n役割（やくわり）: Peran\n不適切（ふてきせつ）: Tidak tepat\n指導（しどう）: Bimbingan / Arahan\n危険（きけん）箇所（かしょ）: Area berbahaya\n指摘（してき）: Menunjukkan / Memberi catatan\n率先（そっせん）: Mempelopori / Memberi teladan\n生産性（せいさんせい）: Produktivitas\n促進（そくしん）: Mendorong / Memajukan",
+  "explain_en": "The incorrect answer:「職長は...率先して行うのではなく、できるだけ作業員に行う」— In 5S activities, the foreman must be the one to 率先（そっせん）- take the lead and set an example in carrying them out.\n\nVocabulary:\n5S活動（かつどう）: 5S activities\n役割（やくわり）: Role\n不適切（ふてきせつ）: Inappropriate\n指導（しどう）: Guidance / Instruction\n危険（きけん）箇所（かしょ）: Dangerous place / Area\n指摘（してき）: To point out\n率先（そっせん）: To take the lead / To set an example\n生産性（せいさんせい）: Productivity\n促進（そくしん）: To promote / To encourage",
+  "tip": "💡 Mẹo nhớ: Tổ trưởng trong 5S phải 率先（そっせん）(gương mẫu đi đầu). Thấy「率先して行うのではなく、作業員に行う」→ SAI.",
+  "tip_id": "💡 Tips: Ketua kelompok dalam 5S harus 率先（そっせん）(memberi teladan dan memimpin di depan). Jika melihat 「率先して行うのではなく、作業員に行う」→ SALAH.",
+  "tip_en": "💡 Tip: A team leader in 5S must 率先（そっせん）(take the lead and set an example). If you see 「率先して行うのではなく、作業員に行う」→ WRONG."
 },
 {
   "id": "7-22",
@@ -196,8 +322,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["危険（きけん）予知（よち）訓練（くんれん）","ハインリッヒの法則（ほうそく）","作業（さぎょう）場所（ばしょ）や作業（さぎょう）内容（ないよう）の危険（きけん）の洗（あら）い出（だ）し","KYT（ケーワイティー）基礎（きそ）4（よん）ラウンド法（ほう）"],
   "answer": 3,
   "vi": "Phương pháp cơ bản nào của KYT được biết đến như là một tiêu chuẩn?",
+  "vi_id": "Metode dasar KYT manakah yang dikenal sebagai standar?",
+  "vi_en": "Which basic KYT method is known as the standard?",
   "explain": "Đáp án đúng: KYT基礎（きそ）4ラウンド法（ほう）— Phương pháp 4 bước tiêu chuẩn và phổ biến nhất của KYT, giúp nhóm nhận diện và giải quyết các mối nguy tại hiện trường.\n\nTừ vựng:\nKYT: Kiken Yochi Training — Huấn luyện dự báo nguy hiểm\n基本（きほん）手法（しゅほう）: Phương pháp cơ bản\n標準（ひょうじゅん）的（てき）: Mang tính tiêu chuẩn\n危険（きけん）予知（よち）訓練（くんれん）: Huấn luyện dự báo nguy hiểm\nハインリッヒの法則（ほうそく）: Quy tắc Heinrich\n洗（あら）い出（だ）し: Liệt kê\n基礎（きそ）４ラウンド法（ほう）: Phương pháp 4 vòng cơ bản",
-  "tip": "💡 Mẹo nhớ: KYTの基本手法 → tìm đáp án có chữ「４ラウンド法」. Đây là phương pháp 4 bước TIÊU CHUẨN của KYT."
+  "explain_id": "Jawaban yang benar: KYT基礎（きそ）4ラウンド法（ほう）— Metode 4 langkah yang paling standar dan umum dari KYT, membantu kelompok mengenali dan mengatasi bahaya di lapangan.\n\nKosakata:\nKYT: Kiken Yochi Training — Pelatihan prediksi bahaya\n基本（きほん）手法（しゅほう）: Metode dasar\n標準（ひょうじゅん）的（てき）: Bersifat standar\n危険（きけん）予知（よち）訓練（くんれん）: Pelatihan prediksi bahaya\nハインリッヒの法則（ほうそく）: Hukum Heinrich\n洗（あら）い出（だ）し: Menginventarisasi / Menyebutkan satu per satu\n基礎（きそ）４ラウンド法（ほう）: Metode dasar 4 putaran",
+  "explain_en": "The correct answer: KYT基礎（きそ）4ラウンド法（ほう）— The most standard and common 4-step method of KYT, helping the group identify and deal with hazards on site.\n\nVocabulary:\nKYT: Kiken Yochi Training — Hazard prediction training\n基本（きほん）手法（しゅほう）: Basic method\n標準（ひょうじゅん）的（てき）: Standard\n危険（きけん）予知（よち）訓練（くんれん）: Hazard prediction training\nハインリッヒの法則（ほうそく）: Heinrich's law\n洗（あら）い出（だ）し: To list / To identify all\n基礎（きそ）４ラウンド法（ほう）: Basic 4-round method",
+  "tip": "💡 Mẹo nhớ: KYTの基本手法 → tìm đáp án có chữ「４ラウンド法」. Đây là phương pháp 4 bước TIÊU CHUẨN của KYT.",
+  "tip_id": "💡 Tips: KYTの基本手法 → cari jawaban yang mengandung 「４ラウンド法」. Ini adalah metode 4 langkah STANDAR dari KYT.",
+  "tip_en": "💡 Tip: KYTの基本手法 → look for the answer containing 「４ラウンド法」. This is the STANDARD 4-step method of KYT."
 },
 {
   "id": "7-23",
@@ -205,8 +337,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["不要（ふよう）な物（もの）を廃棄（はいき）する","これが危険（きけん）のポイントだ","どんな危険（きけん）が潜（ひそ）んでいるか","あなたならどうする？"],
   "answer": 0,
   "vi": "Hãy chọn một phương án KHÔNG đúng về 4 bước (4 rounds) cơ bản của KYT.",
+  "vi_id": "Pilihlah satu pernyataan yang TIDAK benar tentang 4 langkah (4 rounds) dasar KYT.",
+  "vi_en": "Choose one statement that is NOT correct about the basic 4 steps (4 rounds) of KYT.",
   "explain": "Đáp án sai: 不要（ふよう）な物（もの）を廃棄（はいき）する — Vứt bỏ đồ không cần thuộc về hoạt động 5S (整理), không nằm trong 4 bước của KYT. KYT４ラウンド: ①どんな危険が潜んでいるか→ ②これが危険のポイントだ→ ③あなたならどうする→ ④私はこうする.\n\nTừ vựng:\n廃棄（はいき）: Vứt bỏ / Thanh lý\n潜（ひそ）んでいる: Tiềm ẩn\n危険（きけん）のポイント: Điểm nguy hiểm trọng yếu",
-  "tip": "💡 Mẹo nhớ: KYT 4 bước = phát hiện → xác định trọng tâm → biện pháp → cam kết. 廃棄（vứt bỏ）= hoạt động 5S (整理), KHÔNG phải KYT → SAI."
+  "explain_id": "Jawaban yang salah: 不要（ふよう）な物（もの）を廃棄（はいき）する — Membuang barang yang tidak diperlukan termasuk dalam kegiatan 5S (整理), bukan termasuk dalam 4 langkah KYT. KYT４ラウンド: ①どんな危険が潜んでいるか→ ②これが危険のポイントだ→ ③あなたならどうする→ ④私はこうする.\n\nKosakata:\n廃棄（はいき）: Membuang / Memusnahkan\n潜（ひそ）んでいる: Tersembunyi / Mengintai\n危険（きけん）のポイント: Titik bahaya utama",
+  "explain_en": "The incorrect answer: 不要（ふよう）な物（もの）を廃棄（はいき）する — Disposing of unnecessary items belongs to 5S activities (整理), not to the 4 steps of KYT. KYT４ラウンド: ①どんな危険が潜んでいるか→ ②これが危険のポイントだ→ ③あなたならどうする→ ④私はこうする.\n\nVocabulary:\n廃棄（はいき）: To dispose of / To discard\n潜（ひそ）んでいる: Lurking / Hidden\n危険（きけん）のポイント: Key danger point",
+  "tip": "💡 Mẹo nhớ: KYT 4 bước = phát hiện → xác định trọng tâm → biện pháp → cam kết. 廃棄（vứt bỏ）= hoạt động 5S (整理), KHÔNG phải KYT → SAI.",
+  "tip_id": "💡 Tips: 4 langkah KYT = menemukan → menentukan fokus → tindakan penanggulangan → komitmen. 廃棄 (membuang) = aktivitas 5S (整理), BUKAN KYT → SALAH.",
+  "tip_en": "💡 Tip: The 4 KYT steps = detect → identify key points → countermeasures → commitment. 廃棄 (discarding) = a 5S activity (整理), NOT KYT → WRONG."
 },
 {
   "id": "7-24",
@@ -214,8 +352,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["作業員（さぎょういん）が経験（けいけん）したヒヤリ・ハットを全員（ぜんいん）で共有（きょうゆう）することによって、現場（げんば）の安全性（あんぜんせい）を高（たか）める","再（さい）発生（はっせい）しないため、ヒヤリ・ハットを経験（けいけん）したことを報告（ほうこく）した作業員（さぎょういん）の責任（せきにん）を追及（ついきゅう）し、反省（はんせい）を促（うなが）す","報告（ほうこく）された内容（ないよう）を分析（ぶんせき）して、同様（どうよう）の事故（じこ）やトラブルが起（お）こらないように改善（かいぜん）点（てん）を導（みち）き出（だ）すことができます","報告（ほうこく）されたヒヤリ・ハットを分析（ぶんせき）し、原因（げんいん）を特定（とくてい）し、改善（かいぜん）策（さく）を提案（ていあん）します"],
   "answer": 1,
   "vi": "Hãy chọn phương án KHÔNG thích hợp về hoạt động Hiyari-Hatto (suýt soát tai nạn).",
+  "vi_id": "Pilihlah pernyataan yang TIDAK tepat tentang aktivitas Hiyari-Hatto (nyaris celaka).",
+  "vi_en": "Choose the inappropriate statement about Hiyari-Hatto (near-miss) activities.",
   "explain": "Đáp án sai:「責任を追及し、反省を促す」— Mục tiêu của ヒヤリ・ハット là để chia sẻ kinh nghiệm và phòng ngừa tai nạn, không phải để truy cứu trách nhiệm cá nhân.\n\nTừ vựng:\nヒヤリ・ハット: Suýt tai nạn (near-miss)\n安全性（あんぜんせい）を高（たか）める: Nâng cao tính an toàn\n責任（せきにん）を追及（ついきゅう）: Truy cứu trách nhiệm\n反省（はんせい）を促（うなが）す: Thúc giục kiểm điểm\n分析（ぶんせき）: Phân tích\n改善（かいぜん）策（さく）を提案（ていあん）: Đề xuất biện pháp cải thiện",
-  "tip": "💡 Mẹo nhớ: Mục đích của ヒヤリ・ハット = CHIA SẺ và CẢI THIỆN, không phải ĐỔ LỖI. Thấy「責任を追及・反省を促す」→ SAI."
+  "explain_id": "Jawaban yang salah:「責任を追及し、反省を促す」— Tujuan ヒヤリ・ハット adalah untuk berbagi pengalaman dan mencegah kecelakaan, bukan untuk menuntut tanggung jawab individu.\n\nKosakata:\nヒヤリ・ハット: Nyaris celaka (near-miss)\n安全性（あんぜんせい）を高（たか）める: Meningkatkan keselamatan\n責任（せきにん）を追及（ついきゅう）: Menuntut tanggung jawab\n反省（はんせい）を促（うなが）す: Mendorong untuk introspeksi / mengakui kesalahan\n分析（ぶんせき）: Analisis\n改善（かいぜん）策（さく）を提案（ていあん）: Mengusulkan langkah perbaikan",
+  "explain_en": "The incorrect answer:「責任を追及し、反省を促す」— The purpose of ヒヤリ・ハット is to share experiences and prevent accidents, not to pursue individual responsibility.\n\nVocabulary:\nヒヤリ・ハット: Near-miss\n安全性（あんぜんせい）を高（たか）める: To improve safety\n責任（せきにん）を追及（ついきゅう）: To pursue responsibility\n反省（はんせい）を促（うなが）す: To urge reflection / To urge someone to reflect on their mistake\n分析（ぶんせき）: Analysis\n改善（かいぜん）策（さく）を提案（ていあん）: To propose improvement measures",
+  "tip": "💡 Mẹo nhớ: Mục đích của ヒヤリ・ハット = CHIA SẺ và CẢI THIỆN, không phải ĐỔ LỖI. Thấy「責任を追及・反省を促す」→ SAI.",
+  "tip_id": "💡 Tips: Tujuan dari ヒヤリ・ハット = BERBAGI dan PERBAIKAN, bukan MENYALAHKAN. Jika melihat 「責任を追及・反省を促す」→ SALAH.",
+  "tip_en": "💡 Tip: The purpose of ヒヤリ・ハット = SHARING and IMPROVEMENT, not BLAMING. If you see 「責任を追及・反省を促す」→ WRONG."
 },
 {
   "id": "7-25",
@@ -223,8 +367,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["適正（てきせい）な仕事（しごと）の指示（しじ）","仕事（しごと）に関係（かんけい）ない雑用（ざつよう）をさせる","暴言（ぼうげん）","無視（むし）"],
   "answer": 0,
   "vi": "Hãy chọn phương án KHÔNG thuộc về hành vi quấy rối quyền lực (Power Harassment).",
+  "vi_id": "Pilihlah pernyataan yang TIDAK termasuk perilaku pelecehan kekuasaan (Power Harassment).",
+  "vi_en": "Choose the statement that does NOT belong to power harassment behavior.",
   "explain": "Đáp án đúng: 適正（てきせい）な仕事（しごと）の指示（しじ）— Chỉ thị công việc đúng đắn, phù hợp là một phần của quản lý công việc bình thường, không phải là quấy rối.\n\nTừ vựng:\nパワーハラスメント: Quấy rối quyền lực\n該当（がいとう）しない: Không thuộc về\n適正（てきせい）: Đúng đắn / Phù hợp\n指示（しじ）: Chỉ thị\n雑用（ざつよう）: Việc vặt vãnh\n暴言（ぼうげん）: Lời lẽ thô bạo\n無視（むし）: Phớt lờ / Coi thường",
-  "tip": "💡 Mẹo nhớ: 適正な指示（chỉ thị HỢP LÝ）= quản lý BÌNH THƯỜNG, không phải quấy rối. Thấy「適正」→ đây KHÔNG phải パワハラ."
+  "explain_id": "Jawaban yang benar: 適正（てきせい）な仕事（しごと）の指示（しじ）— Instruksi kerja yang benar dan tepat adalah bagian dari manajemen pekerjaan normal, bukan pelecehan.\n\nKosakata:\nパワーハラスメント: Pelecehan kekuasaan (power harassment)\n該当（がいとう）しない: Tidak termasuk\n適正（てきせい）: Benar / Tepat\n指示（しじ）: Instruksi\n雑用（ざつよう）: Pekerjaan sepele / Tugas-tugas kecil\n暴言（ぼうげん）: Kata-kata kasar / Kekerasan verbal\n無視（むし）: Mengabaikan / Meremehkan",
+  "explain_en": "The correct answer: 適正（てきせい）な仕事（しごと）の指示（しじ）— Proper and appropriate work instructions are part of normal work management, not harassment.\n\nVocabulary:\nパワーハラスメント: Power harassment\n該当（がいとう）しない: Does not fall under / Does not apply\n適正（てきせい）: Proper / Appropriate\n指示（しじ）: Instruction\n雑用（ざつよう）: Menial tasks / Odd jobs\n暴言（ぼうげん）: Abusive language\n無視（むし）: Ignoring / Disregarding",
+  "tip": "💡 Mẹo nhớ: 適正な指示（chỉ thị HỢP LÝ）= quản lý BÌNH THƯỜNG, không phải quấy rối. Thấy「適正」→ đây KHÔNG phải パワハラ.",
+  "tip_id": "💡 Tips: 適正な指示 (instruksi yang WAJAR) = manajemen NORMAL, bukan pelecehan. Jika melihat 「適正」→ ini BUKAN パワハラ.",
+  "tip_en": "💡 Tip: 適正な指示 (APPROPRIATE instructions) = NORMAL management, not harassment. If you see 「適正」→ this is NOT パワハラ."
 },
 {
   "id": "7-26",
@@ -232,8 +382,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["相手（あいて）の成長（せいちょう）や発展（はってん）を促（うなが）すために、建設（けんせつ）的（てき）なアドバイスを行（おこな）う","相手（あいて）に対して不適切（ふてきせつ）な言動（げんどう）や行動（こうどう）をすること","作業員（さぎょういん）を職場（しょくば）以外（いがい）でも監視（かんし）する","個人（こじん）的（てき）な情報（じょうほう）を本人（ほんにん）の了解（りょうかい）を得（え）ないで他（た）の作業員（さぎょういん）に話（はな）す"],
   "answer": 0,
   "vi": "Chỉ đạo (hướng dẫn) có nghĩa là gì?",
+  "vi_id": "Apa arti dari pembinaan (bimbingan/pengarahan)?",
+  "vi_en": "What does instruction/guidance mean?",
   "explain": "Đáp án đúng: 相手の成長や発展を促すために、建設的なアドバイスを行う — 指導（しどう）là việc đưa ra lời khuyên mang tính xây dựng nhằm thúc đẩy sự trưởng thành và phát triển của đối phương.\n\nTừ vựng:\n指導（しどう）: Chỉ đạo / Hướng dẫn\n相手（あいて）: Đối phương\n成長（せいちょう）: Trưởng thành\n発展（はってん）: Phát triển\n促（うなが）す: Thúc đẩy\n建設（けんせつ）的（てき）: Mang tính xây dựng\nアドバイス: Lời khuyên\n言動（げんどう）: Lời nói và hành động\n監視（かんし）: Giám sát\n了解（りょうかい）を得（え）る: Có được sự đồng ý",
-  "tip": "💡 Mẹo nhớ: 指導（しどう）= giúp người khác PHÁT TRIỂN bằng lời khuyên XÂY DỰNG. Thấy「成長・発展を促す・建設的なアドバイス」→ định nghĩa ĐÚNG của 指導."
+  "explain_id": "Jawaban yang benar: 相手の成長や発展を促すために、建設的なアドバイスを行う — 指導（しどう）adalah memberikan saran yang membangun untuk mendorong pertumbuhan dan perkembangan lawan bicara.\n\nKosakata:\n指導（しどう）: Bimbingan / Arahan\n相手（あいて）: Lawan bicara\n成長（せいちょう）: Pertumbuhan\n発展（はってん）: Perkembangan\n促（うなが）す: Mendorong\n建設（けんせつ）的（てき）: Bersifat membangun / Konstruktif\nアドバイス: Saran\n言動（げんどう）: Kata-kata dan tindakan\n監視（かんし）: Pengawasan\n了解（りょうかい）を得（え）る: Mendapatkan persetujuan",
+  "explain_en": "The correct answer: 相手の成長や発展を促すために、建設的なアドバイスを行う — 指導（しどう）is giving constructive advice to promote the other person's growth and development.\n\nVocabulary:\n指導（しどう）: Guidance / Instruction\n相手（あいて）: The other person\n成長（せいちょう）: Growth\n発展（はってん）: Development\n促（うなが）す: To promote / To encourage\n建設（けんせつ）的（てき）: Constructive\nアドバイス: Advice\n言動（げんどう）: Words and actions\n監視（かんし）: Monitoring / Supervision\n了解（りょうかい）を得（え）る: To obtain consent / Understanding",
+  "tip": "💡 Mẹo nhớ: 指導（しどう）= giúp người khác PHÁT TRIỂN bằng lời khuyên XÂY DỰNG. Thấy「成長・発展を促す・建設的なアドバイス」→ định nghĩa ĐÚNG của 指導.",
+  "tip_id": "💡 Tips: 指導（しどう）= membantu orang lain BERKEMBANG dengan saran yang MEMBANGUN. Jika melihat 「成長・発展を促す・建設的なアドバイス」→ definisi yang BENAR dari 指導.",
+  "tip_en": "💡 Tip: 指導（しどう）= helping others GROW through CONSTRUCTIVE advice. If you see 「成長・発展を促す・建設的なアドバイス」→ the CORRECT definition of 指導."
 },
 {
   "id": "7-27",
@@ -241,8 +397,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["設計（せっけい）図（ず）","仕様（しよう）書（しょ）","契約（けいやく）書（しょ）","質疑（しつぎ）応答（おうとう）書（しょ）"],
   "answer": 2,
   "vi": "Hãy chọn loại hồ sơ KHÔNG bao gồm trong hồ sơ thiết kế (hồ sơ kỹ thuật).",
+  "vi_id": "Pilihlah jenis dokumen yang TIDAK termasuk dalam dokumen desain (dokumen teknis).",
+  "vi_en": "Choose the type of document that is NOT included in the design documents (technical documents).",
   "explain": "Đáp án đúng: 契約（けいやく）書（しょ）— 設計図書 bao gồm bản vẽ, thông số kỹ thuật (仕様書) và tài liệu hỏi đáp (質疑応答書). Hợp đồng là hồ sơ pháp lý, không nằm trong danh mục hồ sơ thiết kế.\n\nTừ vựng:\n設計（せっけい）図書（としょ）: Hồ sơ thiết kế\n含（ふく）む: Bao gồm\n書類（しょるい）: Tài liệu\n設計（せっけい）図（ず）: Bản vẽ thiết kế\n仕様（しよう）書（しょ）: Bản đặc tả\n契約（けいやく）書（しょ）: Hợp đồng\n質疑（しつぎ）応答（おうとう）書（しょ）: Văn bản hỏi đáp kỹ thuật",
-  "tip": "💡 Mẹo nhớ: 設計図書 = tài liệu KỸ THUẬT. 契約書（hợp đồng）= tài liệu PHÁP LÝ → không thuộc hồ sơ kỹ thuật → SAI."
+  "explain_id": "Jawaban yang benar: 契約（けいやく）書（しょ）— 設計図書 meliputi gambar, spesifikasi (仕様書) dan dokumen tanya jawab (質疑応答書). Kontrak adalah dokumen hukum, tidak termasuk dalam kategori dokumen desain.\n\nKosakata:\n設計（せっけい）図書（としょ）: Dokumen desain\n含（ふく）む: Termasuk / Meliputi\n書類（しょるい）: Dokumen\n設計（せっけい）図（ず）: Gambar desain\n仕様（しよう）書（しょ）: Dokumen spesifikasi\n契約（けいやく）書（しょ）: Kontrak\n質疑（しつぎ）応答（おうとう）書（しょ）: Dokumen tanya jawab teknis",
+  "explain_en": "The correct answer: 契約（けいやく）書（しょ）— 設計図書 includes drawings, specifications (仕様書) and Q&A documents (質疑応答書). A contract is a legal document and is not included in the design documents category.\n\nVocabulary:\n設計（せっけい）図書（としょ）: Design documents\n含（ふく）む: To include\n書類（しょるい）: Document\n設計（せっけい）図（ず）: Design drawing\n仕様（しよう）書（しょ）: Specification document\n契約（けいやく）書（しょ）: Contract\n質疑（しつぎ）応答（おうとう）書（しょ）: Technical Q&A document",
+  "tip": "💡 Mẹo nhớ: 設計図書 = tài liệu KỸ THUẬT. 契約書（hợp đồng）= tài liệu PHÁP LÝ → không thuộc hồ sơ kỹ thuật → SAI.",
+  "tip_id": "💡 Tips: 設計図書 = dokumen TEKNIS. 契約書 (kontrak) = dokumen HUKUM → tidak termasuk dokumen teknis → SALAH.",
+  "tip_en": "💡 Tip: 設計図書 = TECHNICAL documents. 契約書 (contract) = a LEGAL document → not part of the technical documents → WRONG."
 },
 {
   "id": "7-28",
@@ -250,8 +412,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["意匠（いしょう）図（ず）","構造（こうぞう）図（ず）","設備（せつび）図（ず）","外構（がいこう）図（ず）"],
   "answer": 0,
   "vi": "Bản vẽ nào được vẽ để cho thấy cấu trúc tổng thể, thiết kế và cách bố trí phòng (mặt bằng) của công trình?",
+  "vi_id": "Gambar apa yang digambar untuk menunjukkan struktur keseluruhan, desain, dan tata letak ruangan (denah) suatu bangunan?",
+  "vi_en": "Which drawing is drawn to show the overall structure, design, and room layout (floor plan) of a building?",
   "explain": "Đáp án đúng: 意匠（いしょう）図（ず）— Là bản vẽ tập trung vào hình dáng, cấu trúc tổng thể（こうせい）và cách bố trí không gian（まどり）của tòa nhà.\n\nTừ vựng:\n建築物（けんちくぶつ）: Công trình kiến trúc\n全体（ぜんたい）: Toàn bộ\n構成（こうせい）: Cấu trúc / Bố cục\nデザイン: Thiết kế\n間取（まど）り: Sơ đồ bố trí phòng\n意匠（いしょう）図（ず）: Bản vẽ kiến trúc\n構造（こうぞう）図（ず）: Bản vẽ kết cấu\n設備（せつび）図（ず）: Bản vẽ thiết bị\n外構（がいこう）図（ず）: Bản vẽ cảnh quan bên ngoài",
-  "tip": "💡 Mẹo nhớ: 意匠図（いしょうず）= bản vẽ KIẾN TRÚC → thể hiện hình dáng, bố cục, mặt bằng. Thấy「デザイン・間取り・全体の構成」→ chọn 意匠図."
+  "explain_id": "Jawaban yang benar: 意匠（いしょう）図（ず）— Ini adalah gambar yang berfokus pada bentuk, struktur keseluruhan（こうせい）dan penataan ruang（まどり）bangunan.\n\nKosakata:\n建築物（けんちくぶつ）: Bangunan / Struktur bangunan\n全体（ぜんたい）: Keseluruhan\n構成（こうせい）: Struktur / Tata letak\nデザイン: Desain\n間取（まど）り: Denah penataan ruangan\n意匠（いしょう）図（ず）: Gambar arsitektur\n構造（こうぞう）図（ず）: Gambar struktur\n設備（せつび）図（ず）: Gambar peralatan / MEP\n外構（がいこう）図（ず）: Gambar lansekap eksterior",
+  "explain_en": "The correct answer: 意匠（いしょう）図（ず）— This is a drawing that focuses on the shape, overall composition（こうせい）and spatial layout（まどり）of the building.\n\nVocabulary:\n建築物（けんちくぶつ）: Building / Structure\n全体（ぜんたい）: Whole / Entire\n構成（こうせい）: Composition / Layout\nデザイン: Design\n間取（まど）り: Floor plan / Room layout\n意匠（いしょう）図（ず）: Architectural drawing\n構造（こうぞう）図（ず）: Structural drawing\n設備（せつび）図（ず）: Equipment drawing\n外構（がいこう）図（ず）: Exterior / Landscape drawing",
+  "tip": "💡 Mẹo nhớ: 意匠図（いしょうず）= bản vẽ KIẾN TRÚC → thể hiện hình dáng, bố cục, mặt bằng. Thấy「デザイン・間取り・全体の構成」→ chọn 意匠図.",
+  "tip_id": "💡 Tips: 意匠図（いしょうず）= gambar ARSITEKTUR → menunjukkan bentuk, tata letak, denah. Jika melihat 「デザイン・間取り・全体の構成」→ pilih 意匠図.",
+  "tip_en": "💡 Tip: 意匠図（いしょうず）= ARCHITECTURAL drawing → shows the shape, layout, floor plan. If you see 「デザイン・間取り・全体の構成」→ choose 意匠図."
 },
 {
   "id": "7-29",
@@ -259,8 +427,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["標準（ひょうじゅん）仕様（しよう）書（しょ）","設計（せっけい）図書（としょ）","特記（とっき）仕様（しよう）書（しょ）","設計（せっけい）図（ず）"],
   "answer": 2,
   "vi": "Loại hồ sơ nào ghi chép các nội dung cụ thể hơn dưới dạng các hạng mục đặc biệt so với Bản mã tiêu chuẩn?",
+  "vi_id": "Jenis dokumen apa yang mencatat isi yang lebih spesifik dalam bentuk item-item khusus dibandingkan dengan Kode Standar?",
+  "vi_en": "What type of document records more specific contents in the form of special items compared with the Standard Code?",
   "explain": "Đáp án đúng: 特記（とっき）仕様（しよう）書（しょ）— Là hồ sơ ghi lại những yêu cầu, chỉ dẫn cụ thể và riêng biệt cho một công trình nhất định, vượt ra ngoài những quy định chung có trong 標準仕様書.\n\nTừ vựng:\n標準（ひょうじゅん）仕様（しよう）書（しょ）: Bản mã tiêu chuẩn\n具体（ぐたい）的（てき）: Cụ thể / Chi tiết\n特記（とっき）事項（じこう）: Các hạng mục ghi chú đặc biệt\n特記（とっき）仕様（しよう）書（しょ）: Bản mã đặc biệt\n設計（せっけい）図書（としょ）: Hồ sơ thiết kế\n設計（せっけい）図（ず）: Bản vẽ thiết kế",
-  "tip": "💡 Mẹo nhớ: 特記仕様書（とっきしようしょ）= 特記（đặc biệt）+ 仕様書（chỉ dẫn kỹ thuật）→ chỉ dẫn kỹ thuật ĐẶC BIỆT. Thấy「標準より具体的・特記事項」→ chọn 特記仕様書."
+  "explain_id": "Jawaban yang benar: 特記（とっき）仕様（しよう）書（しょ）— Ini adalah dokumen yang mencatat persyaratan dan petunjuk khusus dan tersendiri untuk suatu bangunan tertentu, di luar ketentuan umum yang ada dalam 標準仕様書.\n\nKosakata:\n標準（ひょうじゅん）仕様（しよう）書（しょ）: Dokumen spesifikasi standar\n具体（ぐたい）的（てき）: Konkret / Rinci\n特記（とっき）事項（じこう）: Hal-hal catatan khusus\n特記（とっき）仕様（しよう）書（しょ）: Dokumen spesifikasi khusus\n設計（せっけい）図書（としょ）: Dokumen desain\n設計（せっけい）図（ず）: Gambar desain",
+  "explain_en": "The correct answer: 特記（とっき）仕様（しよう）書（しょ）— This is a document that records specific and separate requirements and instructions for a particular project, beyond the general provisions in the 標準仕様書.\n\nVocabulary:\n標準（ひょうじゅん）仕様（しよう）書（しょ）: Standard specification document\n具体（ぐたい）的（てき）: Specific / Detailed\n特記（とっき）事項（じこう）: Special noted items\n特記（とっき）仕様（しよう）書（しょ）: Special specification document\n設計（せっけい）図書（としょ）: Design documents\n設計（せっけい）図（ず）: Design drawing",
+  "tip": "💡 Mẹo nhớ: 特記仕様書（とっきしようしょ）= 特記（đặc biệt）+ 仕様書（chỉ dẫn kỹ thuật）→ chỉ dẫn kỹ thuật ĐẶC BIỆT. Thấy「標準より具体的・特記事項」→ chọn 特記仕様書.",
+  "tip_id": "💡 Tips: 特記仕様書（とっきしようしょ）= 特記 (catatan khusus) + 仕様書 (spesifikasi) → spesifikasi KHUSUS. Jika melihat 「標準より具体的・特記事項」→ pilih 特記仕様書.",
+  "tip_en": "💡 Tip: 特記仕様書（とっきしようしょ）= 特記 (special notes) + 仕様書 (specifications) → SPECIAL specifications. If you see 「標準より具体的・特記事項」→ choose 特記仕様書."
 },
 {
   "id": "7-30",
@@ -268,8 +442,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["建築物（けんちくぶつ）の安全性（あんぜんせい）に関（かか）わる柱（はしら）や梁（はり）などの構造（こうぞう）部（ぶ）がわかるように書（か）かれたもの","どんな材料（ざいりょう）をどんな順番（じゅんばん）に、どう組（く）み合（あ）わせて使（つか）ったら良（よ）いかを作業者（さぎょうしゃ）にわかるように説明（せつめい）したもの","建築主（けんちくしゅ）が求（もと）める間取（まど）り、構造（こうぞう）、材料（ざいりょう）、設備（せつび）などを含（ふく）めて、建物（たてもの）全体（ぜんたい）の概要（がいよう）を示（しめ）したもの","現場（げんば）の位置（いち）や周囲（しゅうい）の状況（じょうきょう）、施工（せこう）や見積（みつもり）の条件（じょうけん）などが書（か）かれたもの"],
   "answer": 1,
   "vi": "Hãy chọn thuyết minh đúng về Bản vẽ thi công (Sekou-zu).",
+  "vi_id": "Pilihlah penjelasan yang benar tentang Gambar Pelaksanaan (Sekou-zu).",
+  "vi_en": "Choose the correct explanation of the Construction Drawing (Sekou-zu).",
   "explain": "Đáp án đúng:「どんな材料をどんな順番に、どう組み合わせて使ったら良いかを作業者にわかるように説明したもの」— 施工図 là bản vẽ hướng dẫn chi tiết cho người thợ về vật liệu, trình tự và cách lắp ráp.\n\nTừ vựng:\n施工（せこう）図（ず）: Bản vẽ thi công\n材料（ざいりょう）: Vật liệu\n順番（じゅんばん）: Trình tự\n組（く）み合（あ）わせ: Lắp ráp / Kết hợp\n作業者（さぎょうしゃ）: Người thi công\n構造（こうぞう）部（ぶ）: Phần kết cấu\n建築主（けんちくしゅ）: Chủ đầu tư\n概要（がいよう）: Tổng quan\n条件（じょうけん）: Điều kiện",
-  "tip": "💡 Mẹo nhớ: 施工図（せこうず）= bản vẽ THI CÔNG → giải thích cho công nhân cách LÀM. Thấy「材料・順番・組み合わせ・作業者にわかるよう」→ chọn 施工図."
+  "explain_id": "Jawaban yang benar:「どんな材料をどんな順番に、どう組み合わせて使ったら良いかを作業者にわかるように説明したもの」— 施工図 adalah gambar panduan rinci untuk pekerja tentang bahan, urutan, dan cara perakitan.\n\nKosakata:\n施工（せこう）図（ず）: Gambar kerja / Gambar pelaksanaan\n材料（ざいりょう）: Bahan\n順番（じゅんばん）: Urutan\n組（く）み合（あ）わせ: Perakitan / Penggabungan\n作業者（さぎょうしゃ）: Pekerja pelaksana\n構造（こうぞう）部（ぶ）: Bagian struktur\n建築主（けんちくしゅ）: Pemilik proyek\n概要（がいよう）: Gambaran umum\n条件（じょうけん）: Kondisi / Syarat",
+  "explain_en": "The correct answer:「どんな材料をどんな順番に、どう組み合わせて使ったら良いかを作業者にわかるように説明したもの」— 施工図 is a detailed guidance drawing for workers about materials, sequence, and how to assemble them.\n\nVocabulary:\n施工（せこう）図（ず）: Shop drawing / Construction drawing\n材料（ざいりょう）: Material\n順番（じゅんばん）: Order / Sequence\n組（く）み合（あ）わせ: Assembly / Combination\n作業者（さぎょうしゃ）: Worker\n構造（こうぞう）部（ぶ）: Structural part\n建築主（けんちくしゅ）: Project owner / Client\n概要（がいよう）: Overview\n条件（じょうけん）: Condition",
+  "tip": "💡 Mẹo nhớ: 施工図（せこうず）= bản vẽ THI CÔNG → giải thích cho công nhân cách LÀM. Thấy「材料・順番・組み合わせ・作業者にわかるよう」→ chọn 施工図.",
+  "tip_id": "💡 Tips: 施工図（せこうず）= gambar PELAKSANAAN → menjelaskan kepada pekerja cara MELAKSANAKANNYA. Jika melihat 「材料・順番・組み合わせ・作業者にわかるよう」→ pilih 施工図.",
+  "tip_en": "💡 Tip: 施工図（せこうず）= CONSTRUCTION drawing → explains to workers HOW TO BUILD. If you see 「材料・順番・組み合わせ・作業者にわかるよう」→ choose 施工図."
 },
 {
   "id": "7-31",
@@ -277,8 +457,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["施工（せこう）図（ず）に不備（ふび）があると、設計（せっけい）図（ず）で求（もと）めていた品質（ひんしつ）を実現（じつげん）できない","施工（せこう）図（ず）通（どお）りの完成（かんせい）物（ぶつ）ができるための工夫（くふう）をするのは、職長（しょくちょう）ではなく、現場（げんば）よく知（し）っている作業（さぎょう）する作業員（さぎょういん）の役割（やくわり）である","施工（せこう）図（ず）が無い場合（ばあい）、完成（かんせい）までに多（おお）くの手戻（てもど）りや手（て）直しが発生（はっせい）し、無駄（むだ）な時間と手間（てま）をかけることになる","施工（せこう）図（ず）と仕事（しごと）する時の工夫（くふう）が必要（ひつよう）"],
   "answer": 1,
   "vi": "Hãy chọn phương án SAI về Chất lượng thi công và Bản vẽ thi công.",
+  "vi_id": "Pilihlah pernyataan yang SALAH tentang Kualitas pelaksanaan dan Gambar Pelaksanaan.",
+  "vi_en": "Choose the WRONG statement about Construction Quality and Construction Drawings.",
   "explain": "Đáp án sai:「工夫をするのは、職長ではなく、作業員の役割である」— Việc đưa ra 工夫（くふう）- các sáng kiến để đảm bảo công trình hoàn thành đúng bản vẽ là trách nhiệm quan trọng của 職長（しょくちょう）- Quản đốc.\n\nTừ vựng:\n施工（せこう）品質（ひんしつ）: Chất lượng thi công\n不備（ふび）: Sai sót / Thiếu sót\n実現（じつげん）: Thực hiện / Đạt được\n工夫（くふう）: Sáng kiến / Cải tiến cách làm\n手戻（てもど）り: Quay lại làm lại bước trước\n無駄（むだ）: Lãng phí\n役割（やくわり）: Vai trò / Trách nhiệm",
-  "tip": "💡 Mẹo nhớ: 職長（tổ trưởng）= CHỊU TRÁCH NHIỆM kỹ thuật. Thấy「職長ではなく、作業員の役割」→ SAI."
+  "explain_id": "Jawaban yang salah:「工夫をするのは、職長ではなく、作業員の役割である」— Mengajukan 工夫（くふう）- inisiatif untuk memastikan bangunan selesai sesuai gambar adalah tanggung jawab penting dari 職長（しょくちょう）- Mandor.\n\nKosakata:\n施工（せこう）品質（ひんしつ）: Kualitas pelaksanaan\n不備（ふび）: Kekurangan / Ketidaksempurnaan\n実現（じつげん）: Mewujudkan / Mencapai\n工夫（くふう）: Inisiatif / Perbaikan cara kerja\n手戻（てもど）り: Kembali mengerjakan ulang langkah sebelumnya\n無駄（むだ）: Pemborosan / Sia-sia\n役割（やくわり）: Peran / Tanggung jawab",
+  "explain_en": "The incorrect answer:「工夫をするのは、職長ではなく、作業員の役割である」— Coming up with 工夫（くふう）- ideas to ensure the work is completed according to the drawings is an important responsibility of the 職長（しょくちょう）- Foreman.\n\nVocabulary:\n施工（せこう）品質（ひんしつ）: Construction quality\n不備（ふび）: Deficiency / Flaw\n実現（じつげん）: To realize / To achieve\n工夫（くふう）: Ingenuity / Improved way of working\n手戻（てもど）り: Going back and redoing a previous step\n無駄（むだ）: Waste\n役割（やくわり）: Role / Responsibility",
+  "tip": "💡 Mẹo nhớ: 職長（tổ trưởng）= CHỊU TRÁCH NHIỆM kỹ thuật. Thấy「職長ではなく、作業員の役割」→ SAI.",
+  "tip_id": "💡 Tips: 職長 (ketua kelompok) = BERTANGGUNG JAWAB atas hal teknis. Jika melihat 「職長ではなく、作業員の役割」→ SALAH.",
+  "tip_en": "💡 Tip: 職長 (foreman) = RESPONSIBLE for technical matters. If you see 「職長ではなく、作業員の役割」→ WRONG."
 },
 {
   "id": "7-32",
@@ -286,8 +472,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["高層（こうそう）ビルや大規模（だいきぼ）ショッピングモールの開発（かいはつ）で都市（とし）を発展（はってん）させる役割（やくわり）","住宅（じゅうたく）建設（けんせつ）によって、快適（かいてき）な生活（せいかつ）環境（かんきょう）と社会（しゃかい）福祉（ふくし）の向上（こうじょう）に貢献（こうけん）する役割（やくわり）","建設（けんせつ）工事（こうじ）によって自然（しぜん）環境（かんきょう）を破壊（はかい）する役割（やくわり）","災害（さいがい）時（じ）には、被災（ひさい）施設（しせつ）の修復（しゅうふく）や再建（さいけん）を行（おこな）う役割（やくわり）"],
   "answer": 2,
   "vi": "Hãy chọn phương án SAI về vai trò xã hội của ngành xây dựng.",
+  "vi_id": "Pilihlah pernyataan yang SALAH tentang peran sosial industri konstruksi.",
+  "vi_en": "Choose the WRONG statement about the social roles of the construction industry.",
   "explain": "Đáp án sai:「建設工事によって自然環境を破壊する役割」— 'Phá hoại môi trường tự nhiên' không phải là VAI TRÒ mà là hậu quả cần tránh.\n\nTừ vựng:\n建設業（けんせつぎょう）: Ngành xây dựng\n社会的（しゃかいてき）役割（やくわり）: Vai trò xã hội\n高層（こうそう）ビル: Tòa nhà cao tầng\n開発（かいはつ）: Phát triển\n快適（かいてき）: Thoải mái\n福祉（ふくし）: Phúc lợi xã hội\n貢献（こうけん）: Cống hiến\n自然（しぜん）環境（かんきょう）: Môi trường tự nhiên\n破壊（はかい）: Phá hoại\n被災（ひさい）施設（しせつ）: Cơ sở bị thiệt hại\n修復（しゅうふく）: Phục hồi\n再建（さいけん）: Tái thiết",
-  "tip": "💡 Mẹo nhớ: Vai trò XÃ HỘI của xây dựng = phát triển + cải thiện đời sống + tái thiết sau thiên tai.「自然環境を破壊する」= hậu quả TIÊU CỰC → không phải VAI TRÒ → SAI."
+  "explain_id": "Jawaban yang salah:「建設工事によって自然環境を破壊する役割」— 'Merusak lingkungan alam' bukanlah sebuah PERAN, melainkan akibat yang harus dihindari.\n\nKosakata:\n建設業（けんせつぎょう）: Industri konstruksi\n社会的（しゃかいてき）役割（やくわり）: Peran sosial\n高層（こうそう）ビル: Gedung bertingkat tinggi\n開発（かいはつ）: Pengembangan\n快適（かいてき）: Nyaman\n福祉（ふくし）: Kesejahteraan sosial\n貢献（こうけん）: Kontribusi\n自然（しぜん）環境（かんきょう）: Lingkungan alam\n破壊（はかい）: Perusakan\n被災（ひさい）施設（しせつ）: Fasilitas yang rusak akibat bencana\n修復（しゅうふく）: Pemulihan / Perbaikan\n再建（さいけん）: Pembangunan kembali",
+  "explain_en": "The incorrect answer:「建設工事によって自然環境を破壊する役割」— 'Destroying the natural environment' is not a ROLE, but a consequence that must be avoided.\n\nVocabulary:\n建設業（けんせつぎょう）: Construction industry\n社会的（しゃかいてき）役割（やくわり）: Social role\n高層（こうそう）ビル: High-rise building\n開発（かいはつ）: Development\n快適（かいてき）: Comfortable\n福祉（ふくし）: Social welfare\n貢献（こうけん）: Contribution\n自然（しぜん）環境（かんきょう）: Natural environment\n破壊（はかい）: Destruction\n被災（ひさい）施設（しせつ）: Disaster-damaged facility\n修復（しゅうふく）: Restoration\n再建（さいけん）: Reconstruction",
+  "tip": "💡 Mẹo nhớ: Vai trò XÃ HỘI của xây dựng = phát triển + cải thiện đời sống + tái thiết sau thiên tai.「自然環境を破壊する」= hậu quả TIÊU CỰC → không phải VAI TRÒ → SAI.",
+  "tip_id": "💡 Tips: Peran SOSIAL konstruksi = pembangunan + meningkatkan kehidupan + rekonstruksi pasca-bencana. 「自然環境を破壊する」= dampak NEGATIF → bukan PERAN → SALAH.",
+  "tip_en": "💡 Tip: The SOCIAL roles of construction = development + improving life + post-disaster reconstruction. 「自然環境を破壊する」= a NEGATIVE consequence → not a ROLE → WRONG."
 },
 {
   "id": "7-33",
@@ -296,8 +488,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["災害（さいがい）や事故（じこ）で死亡（しぼう）","労働力（ろうどうりょく）人口（じんこう）","在日外国人（ざいにちがいこくじん）","特定技能実習生（とくていぎのうじっしゅうせい）"],
   "answer": 1,
   "vi": "Biểu đồ này thể hiện kết quả khảo sát theo từng nhóm tuổi về dân số lao động (労働力人口).",
+  "vi_id": "Grafik ini menunjukkan hasil survei populasi tenaga kerja (労働力人口) menurut kelompok usia.",
+  "vi_en": "This chart shows the survey results of the labor force population (労働力人口) by age group.",
   "explain": "Đáp án đúng: 労働力（ろうどうりょく）人口（じんこう）— Dựa vào biểu đồ, số lượng tập trung ở nhóm tuổi 25–54, đây là biểu đồ về lực lượng lao động theo độ tuổi.\n\nTừ vựng:\n年代別（ねんだいべつ）: Theo từng nhóm tuổi\n調査（ちょうさ）結果（けっか）: Kết quả khảo sát\nグラフ: Biểu đồ\n労働力（ろうどうりょく）人口（じんこう）: Dân số trong độ tuổi lao động\n災害（さいがい）や事故（じこ）で死亡（しぼう）: Tử vong do tai nạn\n在日外国人（ざいにちがいこくじん）: Người nước ngoài sống tại Nhật\n特定技能実習生（とくていぎのうじっしゅうせい）: Thực tập sinh kỹ năng đặc định",
-  "tip": "💡 Mẹo nhớ: Biểu đồ theo 年代別（nhóm tuổi）với số liệu lớn nhất ở nhóm 25-54 → đây là 労働力人口（lực lượng lao động）."
+  "explain_id": "Jawaban yang benar: 労働力（ろうどうりょく）人口（じんこう）— Berdasarkan grafik, jumlahnya terkonsentrasi pada kelompok usia 25–54, ini adalah grafik tentang angkatan kerja menurut usia.\n\nKosakata:\n年代別（ねんだいべつ）: Menurut kelompok usia\n調査（ちょうさ）結果（けっか）: Hasil survei\nグラフ: Grafik\n労働力（ろうどうりょく）人口（じんこう）: Populasi usia kerja / Angkatan kerja\n災害（さいがい）や事故（じこ）で死亡（しぼう）: Meninggal karena bencana atau kecelakaan\n在日外国人（ざいにちがいこくじん）: Warga asing yang tinggal di Jepang\n特定技能実習生（とくていぎのうじっしゅうせい）: Peserta magang keterampilan khusus",
+  "explain_en": "The correct answer: 労働力（ろうどうりょく）人口（じんこう）— Based on the graph, the numbers are concentrated in the 25–54 age group; this is a graph about the labor force by age.\n\nVocabulary:\n年代別（ねんだいべつ）: By age group\n調査（ちょうさ）結果（けっか）: Survey results\nグラフ: Graph / Chart\n労働力（ろうどうりょく）人口（じんこう）: Working-age population / Labor force population\n災害（さいがい）や事故（じこ）で死亡（しぼう）: Death due to disaster or accident\n在日外国人（ざいにちがいこくじん）: Foreign residents in Japan\n特定技能実習生（とくていぎのうじっしゅうせい）: Specified skilled trainees",
+  "tip": "💡 Mẹo nhớ: Biểu đồ theo 年代別（nhóm tuổi）với số liệu lớn nhất ở nhóm 25-54 → đây là 労働力人口（lực lượng lao động）.",
+  "tip_id": "💡 Tips: Grafik menurut 年代別 (kelompok usia) dengan angka terbesar pada kelompok 25-54 → ini adalah 労働力人口 (angkatan kerja).",
+  "tip_en": "💡 Tip: A chart by 年代別 (age group) with the largest figures in the 25-54 groups → this is 労働力人口 (the labor force population)."
 },
 {
   "id": "7-34",
@@ -305,8 +503,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["休暇（きゅうか）がとれる","かっこいい","汚（きたな）くない","希望（きぼう）が持（も）つ"],
   "answer": 2,
   "vi": "Về các biện pháp giải quyết tình trạng giới trẻ rời bỏ ngành xây dựng, hãy chọn phương án KHÔNG đúng trong nội dung của 'Tân 4K'.",
+  "vi_id": "Mengenai langkah-langkah mengatasi fenomena generasi muda yang meninggalkan industri konstruksi, pilihlah pernyataan yang TIDAK benar dalam isi '4K Baru'.",
+  "vi_en": "Regarding measures to address young people leaving the construction industry, choose the statement that is NOT correct in the contents of the 'New 4K'.",
   "explain": "Đáp án sai: 汚くない (Không bẩn) — 'Tân 4K' bao gồm: かっこいい（ngầu）, 稼げる（kiếm được tiền）, 休暇がとれる（có ngày nghỉ）và 希望が持てる（có hy vọng）.「汚くない」không nằm trong bộ tiêu chuẩn chính thức.\n\nTừ vựng:\n若手（わかて）: Người trẻ\n建設業（けんせつぎょう）: Ngành xây dựng\n離（ばな）れ: Rời bỏ\n対策（たいさく）: Biện pháp\n新（しん）4K: 4K mới (tích cực)\nかっこいい: Ngầu\n休暇（きゅうか）: Nghỉ phép\n希望（きぼう）: Hy vọng\n汚（きたな）くない: Không bẩn",
-  "tip": "💡 Mẹo nhớ: 新4K = かっこいい・稼げる・休める・希望が持てる.「汚くない」không nằm trong danh sách 4K mới → SAI."
+  "explain_id": "Jawaban yang salah: 汚くない (Tidak kotor) — '4K Baru' meliputi: かっこいい（keren）, 稼げる（bisa menghasilkan uang）, 休暇がとれる（bisa mengambil cuti）dan 希望が持てる（memiliki harapan）.「汚くない」tidak termasuk dalam standar resmi tersebut.\n\nKosakata:\n若手（わかて）: Generasi muda / Pekerja muda\n建設業（けんせつぎょう）: Industri konstruksi\n離（ばな）れ: Meninggalkan / Berpaling\n対策（たいさく）: Tindakan penanggulangan\n新（しん）4K: 4K baru (positif)\nかっこいい: Keren\n休暇（きゅうか）: Cuti\n希望（きぼう）: Harapan\n汚（きたな）くない: Tidak kotor",
+  "explain_en": "The incorrect answer: 汚くない (Not dirty) — The 'New 4K' includes: かっこいい（cool）, 稼げる（can earn money）, 休暇がとれる（can take holidays）and 希望が持てる（can have hope）.「汚くない」is not part of the official standard set.\n\nVocabulary:\n若手（わかて）: Young people / Young workers\n建設業（けんせつぎょう）: Construction industry\n離（ばな）れ: Leaving / Turning away\n対策（たいさく）: Countermeasure\n新（しん）4K: New 4K (positive)\nかっこいい: Cool\n休暇（きゅうか）: Holiday / Leave\n希望（きぼう）: Hope\n汚（きたな）くない: Not dirty",
+  "tip": "💡 Mẹo nhớ: 新4K = かっこいい・稼げる・休める・希望が持てる.「汚くない」không nằm trong danh sách 4K mới → SAI.",
+  "tip_id": "💡 Tips: 新4K = かっこいい・稼げる・休める・希望が持てる. 「汚くない」tidak termasuk dalam daftar 4K baru → SALAH.",
+  "tip_en": "💡 Tip: 新4K = かっこいい・稼げる・休める・希望が持てる. 「汚くない」is not in the New 4K list → WRONG."
 },
 {
   "id": "7-35",
@@ -314,8 +518,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["DX","EX","FX","GX"],
   "answer": 0,
   "vi": "Việc đổi mới kinh doanh bằng cách sử dụng công nghệ kỹ thuật số được gọi là gì?",
+  "vi_id": "Inovasi bisnis dengan menggunakan teknologi digital disebut apa?",
+  "vi_en": "What is business innovation using digital technology called?",
   "explain": "Đáp án đúng: DX (Digital Transformation - Chuyển đổi số) là việc ứng dụng công nghệ số để thay đổi mô hình kinh doanh.\n\nTừ vựng:\nデジタル技術（ぎじゅつ）: Công nghệ kỹ thuật số\n活用（かつよう）: Tận dụng / Sử dụng\n経営（けいえい）: Kinh doanh / Quản trị\n革新（かくしん）: Đổi mới / Cải cách\nDX: Digital Transformation = Chuyển đổi số\nEX: Employee Experience = Trải nghiệm nhân viên\nFX: Foreign Exchange = Ngoại hối\nGX: Green Transformation = Chuyển đổi xanh",
-  "tip": "💡 Mẹo nhớ:「デジタル技術を活用した経営革新」→ DX (Digital Transformation). D = Digital = デジタル. Không nhầm với GX (Green = xanh)."
+  "explain_id": "Jawaban yang benar: DX (Digital Transformation - Transformasi Digital) adalah penerapan teknologi digital untuk mengubah model bisnis.\n\nKosakata:\nデジタル技術（ぎじゅつ）: Teknologi digital\n活用（かつよう）: Memanfaatkan / Menggunakan\n経営（けいえい）: Bisnis / Manajemen\n革新（かくしん）: Inovasi / Reformasi\nDX: Digital Transformation = Transformasi Digital\nEX: Employee Experience = Pengalaman Karyawan\nFX: Foreign Exchange = Valuta Asing\nGX: Green Transformation = Transformasi Hijau",
+  "explain_en": "The correct answer: DX (Digital Transformation) is applying digital technology to change the business model.\n\nVocabulary:\nデジタル技術（ぎじゅつ）: Digital technology\n活用（かつよう）: To make use of / To utilize\n経営（けいえい）: Business / Management\n革新（かくしん）: Innovation / Reform\nDX: Digital Transformation\nEX: Employee Experience\nFX: Foreign Exchange\nGX: Green Transformation",
+  "tip": "💡 Mẹo nhớ:「デジタル技術を活用した経営革新」→ DX (Digital Transformation). D = Digital = デジタル. Không nhầm với GX (Green = xanh).",
+  "tip_id": "💡 Tips: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation). D = Digital = デジタル. Jangan keliru dengan GX (Green = hijau).",
+  "tip_en": "💡 Tip: 「デジタル技術を活用した経営革新」→ DX (Digital Transformation). D = Digital = デジタル. Do not confuse with GX (Green)."
 },
 {
   "id": "7-36",
@@ -323,8 +533,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["作業員（さぎょういん）を指揮（しき）する","工程（こうてい）管理（かんり）、品質（ひんしつ）管理（かんり）、安全（あんぜん）管理（かんり）などの監督（かんとく）業務（ぎょうむ）をする","設計（せっけい）図（ず）を作成（さくせい）する","賃金（ちんぎん）の計算（けいさん）"],
   "answer": 1,
   "vi": "Kỹ thuật viên trưởng (Shunin Gijutsusha) thực hiện những công việc gì?",
+  "vi_id": "Pekerjaan apa saja yang dilakukan oleh Teknisi Kepala (Shunin Gijutsusha)?",
+  "vi_en": "What tasks does the Chief Engineer (Shunin Gijutsusha) perform?",
   "explain": "Đáp án đúng: 工程管理、品質管理、安全管理などの監督業務をする — 主任技術者 có trách nhiệm quản lý kỹ thuật tại công trường gồm quản lý tiến độ, chất lượng và an toàn.\n\nTừ vựng:\n主任（しゅにん）技術者（ぎじゅつしゃ）: Kỹ thuật viên trưởng\n業務（ぎょうむ）: Công việc\n作業員（さぎょういん）: Công nhân\n指揮（しき）する: Chỉ huy\n監督（かんとく）業務（ぎょうむ）: Nghiệp vụ giám sát\n工程（こうてい）管理（かんり）: Quản lý tiến độ\n品質（ひんしつ）管理（かんり）: Quản lý chất lượng\n安全（あんぜん）管理（かんり）: Quản lý an toàn\n賃金（ちんぎん）の計算（けいさん）: Tính toán tiền lương",
-  "tip": "💡 Mẹo nhớ: 主任技術者 = kỹ sư trưởng → lo về KỸ THUẬT: tiến độ + chất lượng + an toàn. KHÔNG tính lương, không chỉ huy trực tiếp công nhân."
+  "explain_id": "Jawaban yang benar: 工程管理、品質管理、安全管理などの監督業務をする — 主任技術者 bertanggung jawab atas manajemen teknis di lapangan, meliputi manajemen jadwal, kualitas, dan keselamatan.\n\nKosakata:\n主任（しゅにん）技術者（ぎじゅつしゃ）: Kepala teknisi / Teknisi utama\n業務（ぎょうむ）: Pekerjaan / Tugas\n作業員（さぎょういん）: Pekerja\n指揮（しき）する: Memimpin / Mengomando\n監督（かんとく）業務（ぎょうむ）: Tugas pengawasan\n工程（こうてい）管理（かんり）: Manajemen jadwal\n品質（ひんしつ）管理（かんり）: Manajemen kualitas\n安全（あんぜん）管理（かんり）: Manajemen keselamatan\n賃金（ちんぎん）の計算（けいさん）: Perhitungan upah",
+  "explain_en": "The correct answer: 工程管理、品質管理、安全管理などの監督業務をする — The 主任技術者 is responsible for technical management on site, including schedule, quality, and safety management.\n\nVocabulary:\n主任（しゅにん）技術者（ぎじゅつしゃ）: Chief engineer / Chief technician\n業務（ぎょうむ）: Work / Duties\n作業員（さぎょういん）: Worker\n指揮（しき）する: To direct / To command\n監督（かんとく）業務（ぎょうむ）: Supervisory work\n工程（こうてい）管理（かんり）: Schedule management\n品質（ひんしつ）管理（かんり）: Quality management\n安全（あんぜん）管理（かんり）: Safety management\n賃金（ちんぎん）の計算（けいさん）: Wage calculation",
+  "tip": "💡 Mẹo nhớ: 主任技術者 = kỹ sư trưởng → lo về KỸ THUẬT: tiến độ + chất lượng + an toàn. KHÔNG tính lương, không chỉ huy trực tiếp công nhân.",
+  "tip_id": "💡 Tips: 主任技術者 = insinyur kepala → menangani hal TEKNIS: jadwal + kualitas + keselamatan. TIDAK menghitung gaji, dan tidak memerintah pekerja secara langsung.",
+  "tip_en": "💡 Tip: 主任技術者 = chief engineer → handles TECHNICAL matters: schedule + quality + safety. Does NOT calculate wages, and does not directly command the workers."
 },
 {
   "id": "7-37",
@@ -332,8 +548,14 @@ window.QUESTION_SETS["7"] = {
   "options": ["賃金（ちんぎん）計算（けいさん）を行（おこな）う","施工（せこう）計画（けいかく）を作成（さくせい）","安全（あんぜん）管理（かんり）","品質（ひんしつ）管理（かんり）"],
   "answer": 0,
   "vi": "Hãy chọn công việc KHÔNG thuộc về Kỹ thuật viên trưởng (Shunin Gijutsusha).",
+  "vi_id": "Pilihlah pekerjaan yang BUKAN merupakan tugas Teknisi Kepala (Shunin Gijutsusha).",
+  "vi_en": "Choose the task that does NOT belong to the Chief Engineer (Shunin Gijutsusha).",
   "explain": "Đáp án đúng: 賃金（ちんぎん）計算（けいさん）を行（おこな）う — Kỹ thuật viên trưởng chịu trách nhiệm về kỹ thuật và quản lý thi công. Việc tính lương là nghiệp vụ thuộc bộ phận kế toán.\n\nTừ vựng:\n賃金（ちんぎん）計算（けいさん）: Tính toán tiền lương\n施工（せこう）計画（けいかく）: Kế hoạch thi công\n作成（さくせい）: Lập / Tạo\n安全（あんぜん）管理（かんり）: Quản lý an toàn\n品質（ひんしつ）管理（かんり）: Quản lý chất lượng",
-  "tip": "💡 Mẹo nhớ: 主任技術者 lo về 'Kỹ thuật' và 'Hiện trường'. Thấy 賃金計算（tính lương）→ đây là việc của KẾ TOÁN → không phải kỹ sư trưởng → SAI."
+  "explain_id": "Jawaban yang benar: 賃金（ちんぎん）計算（けいさん）を行（おこな）う — Kepala teknisi bertanggung jawab atas hal teknis dan manajemen pelaksanaan. Perhitungan upah adalah tugas bagian akuntansi.\n\nKosakata:\n賃金（ちんぎん）計算（けいさん）: Perhitungan upah\n施工（せこう）計画（けいかく）: Rencana pelaksanaan\n作成（さくせい）: Membuat / Menyusun\n安全（あんぜん）管理（かんり）: Manajemen keselamatan\n品質（ひんしつ）管理（かんり）: Manajemen kualitas",
+  "explain_en": "The correct answer: 賃金（ちんぎん）計算（けいさん）を行（おこな）う — The chief engineer is responsible for technical matters and construction management. Wage calculation is work belonging to the accounting department.\n\nVocabulary:\n賃金（ちんぎん）計算（けいさん）: Wage calculation\n施工（せこう）計画（けいかく）: Construction plan\n作成（さくせい）: To create / To prepare\n安全（あんぜん）管理（かんり）: Safety management\n品質（ひんしつ）管理（かんり）: Quality management",
+  "tip": "💡 Mẹo nhớ: 主任技術者 lo về 'Kỹ thuật' và 'Hiện trường'. Thấy 賃金計算（tính lương）→ đây là việc của KẾ TOÁN → không phải kỹ sư trưởng → SAI.",
+  "tip_id": "💡 Tips: 主任技術者 menangani 'Teknis' dan 'Lapangan'. Jika melihat 賃金計算 (perhitungan gaji) → itu pekerjaan AKUNTANSI → bukan insinyur kepala → SALAH.",
+  "tip_en": "💡 Tip: 主任技術者 handles 'Technical' matters and the 'Site'. If you see 賃金計算 (wage calculation) → that is ACCOUNTING's job → not the chief engineer → WRONG."
 }
 ]
 };

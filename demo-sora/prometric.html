@@ -10,12 +10,13 @@
             --pro-dark: #333;
             --pro-border: #ccc;
             --footer-height: 70px;
+            --vermillion: #C8102E;
         }
 
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        
-        html, body { 
-            margin: 0; padding: 0; width: 100%; height: 100%; 
+
+        html, body {
+            margin: 0; padding: 0; width: 100%; height: 100%;
             overflow: hidden; font-family: sans-serif; background: #fff;
         }
 
@@ -23,18 +24,18 @@
             display: flex; flex-direction: column; height: 100vh; position: relative;
         }
 
-        .pro-header { 
-            background: var(--pro-dark); color: white; padding: 10px; 
+        .pro-header {
+            background: var(--pro-dark); color: white; padding: 10px;
             display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;
         }
         .status-bar { background: var(--pro-green); color: white; padding: 6px 12px; font-size: 12px; display: flex; justify-content: space-between; flex-shrink: 0; }
 
-        .pro-main { 
+        .pro-main {
             flex: 1; display: flex; overflow: hidden; position: relative;
         }
 
         /* SIDEBAR: Có vùng đệm để cuộn qua câu 40 */
-        .pro-sidebar { 
+        .pro-sidebar {
             width: 55px; background: #f4f4f4; border-right: 1px solid var(--pro-border);
             overflow-y: auto !important;
             -webkit-overflow-scrolling: touch;
@@ -45,7 +46,7 @@
         .sidebar-space { min-height: 150px; width: 100%; }
 
         /* NỘI DUNG: Có vùng đệm để cuộn qua đáp án cuối */
-        .pro-content { 
+        .pro-content {
             flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
             padding: 15px; padding-bottom: 150px !important;
         }
@@ -56,9 +57,9 @@
             .sidebar-space { display: none; }
         }
 
-        .q-num { 
-            width: 40px; height: 40px; border: 1px solid #999; background: #fff; 
-            display: flex; align-items: center; justify-content: center; 
+        .q-num {
+            width: 40px; height: 40px; border: 1px solid #999; background: #fff;
+            display: flex; align-items: center; justify-content: center;
             cursor: pointer; border-radius: 4px; font-size: 13px; flex-shrink: 0;
         }
         .q-num.active { border: 2px solid var(--pro-green); background: #ffffd0; font-weight: bold; }
@@ -71,7 +72,7 @@
         .pro-opt.selected { background: #e9f5e6; border-color: var(--pro-green); font-weight: bold; }
 
         /* FOOTER CỐ ĐỊNH CHUẨN */
-        .pro-footer { 
+        .pro-footer {
             position: fixed; bottom: 0; left: 0; right: 0;
             height: var(--footer-height); background: #444; color: white; padding: 0 15px;
             display: flex; justify-content: space-between; align-items: center;
@@ -85,12 +86,58 @@
         #result-screen { display: none; position: fixed; inset: 0; background: #fff; z-index: 10000; overflow-y: auto; }
         .result-header { position: sticky; top: 0; background: var(--pro-dark); padding: 10px; display: flex; justify-content: space-between; z-index: 10001; }
         ruby rt { font-size: 10px; color: #191919; }
+
+        /* ===== MÀN HÌNH BẮT ĐẦU + THÔNG BÁO GIỮA HAI PHẦN (cấu trúc thi thật 2 phần) ===== */
+        .pro-overlay { position: fixed; inset: 0; background: #F4F4F1; z-index: 10000; overflow-y: auto; }
+        .pro-overlay-card { max-width: 560px; margin: 0 auto; padding: 28px 20px 40px; }
+        .pro-overlay h1 { font-size: 26px; margin: 18px 0 8px; color: #191919; }
+        .pro-overlay h2 { font-size: 22px; margin: 18px 0 8px; color: #191919; }
+        .pro-overlay p { color: #44443f; line-height: 1.65; }
+        .part-row { background: #fff; border: 1px solid #E7E7E0; border-left: 5px solid var(--vermillion); border-radius: 10px; padding: 14px 16px; margin: 12px 0; }
+        .part-row b { display: block; font-size: 17px; color: #191919; margin-bottom: 4px; }
+        .part-row span { color: #5A5A55; font-size: 15px; }
+        .group-line { background: #fff; border: 1px dashed var(--vermillion); border-radius: 10px; padding: 12px 16px; margin: 14px 0; font-size: 16px; color: #191919; }
+        .group-pick { display: block; width: 100%; text-align: left; background: #fff; border: 1px solid var(--pro-border); padding: 14px 16px; margin: 8px 0; cursor: pointer; border-radius: 8px; font-size: 16px; }
+        .group-pick.selected { border: 2px solid var(--vermillion); background: #fdf2f4; font-weight: bold; }
+        .btn-start-big { display: block; width: 100%; background: var(--vermillion); color: white; border: none; padding: 16px; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; margin-top: 22px; }
+        .btn-start-big:disabled { opacity: .45; cursor: not-allowed; }
+        .btn-home-plain { background: #555; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+        .part-chip { display: inline-block; background: var(--pro-dark); color: #fff; font-size: 12px; padding: 2px 8px; border-radius: 999px; vertical-align: middle; }
+        .src-label { color: #8B8B84; font-size: 13px; }
+        #score-parts { text-align: center; font-size: 17px; line-height: 1.9; margin-bottom: 8px; }
+        #pass-line { text-align: center; font-size: 17px; font-weight: bold; margin-bottom: 26px; }
     </style>
     <script src="i18n.js"></script>
+    <script type="module" src="firebase.js"></script>
 </head>
 <body>
 
-<div class="app-container" id="exam-ui">
+<!-- ===== MÀN HÌNH BẮT ĐẦU: giới thiệu cấu trúc 2 phần + nhóm thực hành ===== -->
+<div id="start-screen" class="pro-overlay">
+    <div class="pro-overlay-card">
+        <button class="btn-home-plain" onclick="location.href='index.html'" data-i18n="pro_home">🏠 Trang chủ</button>
+        <h1 data-i18n="pro_title">Thi thử Prometric</h1>
+        <p data-i18n="pro_start_intro">Bài thi thử mô phỏng kỳ thi thật, gồm 2 phần thi riêng biệt:</p>
+        <div class="part-row">
+            <b data-i18n="pro_part1_label">Phần 1 — Lý thuyết</b>
+            <span id="start-part1-desc"></span>
+        </div>
+        <div class="part-row">
+            <b data-i18n="pro_part2_label">Phần 2 — Thực hành</b>
+            <span id="start-part2-desc"></span>
+        </div>
+        <div id="start-group-known" class="group-line" style="display:none"></div>
+        <div id="start-group-picker" style="display:none">
+            <p data-i18n="pro_need_group">Bạn chưa chọn nhóm ngành. Hãy chọn nhóm của bạn để phần thực hành hiện đúng đề:</p>
+            <button type="button" class="group-pick" data-g="1" onclick="pickGroup('1')"></button>
+            <button type="button" class="group-pick" data-g="2" onclick="pickGroup('2')"></button>
+            <button type="button" class="group-pick" data-g="3" onclick="pickGroup('3')"></button>
+        </div>
+        <button id="btn-start" class="btn-start-big" disabled onclick="startExam()" data-i18n="pro_start">▶ Bắt đầu thi</button>
+    </div>
+</div>
+
+<div class="app-container" id="exam-ui" style="display:none;">
     <header class="pro-header">
         <div style="font-size:12px;"> <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;" data-i18n="pro_home">🏠 Trang chủ</button></div>
         <div id="pro-timer" style="font-size:22px; font-weight:bold; color:#ffdd00;">60:00</div>
@@ -123,6 +170,16 @@
     </footer>
 </div>
 
+<!-- ===== THÔNG BÁO GIỮA HAI PHẦN: xong lý thuyết -> chuẩn bị thực hành ===== -->
+<div id="inter-screen" class="pro-overlay" style="display:none;">
+    <div class="pro-overlay-card">
+        <h2 data-i18n="pro_inter_title">✅ Hoàn thành Phần 1 — Lý thuyết</h2>
+        <p id="inter-body"></p>
+        <p id="inter-next"></p>
+        <button id="btn-part2" class="btn-start-big" onclick="startPart2()" data-i18n="pro_start_part2">▶ Bắt đầu Phần 2</button>
+    </div>
+</div>
+
 <div id="result-screen">
     <div class="result-header">
         <button onclick="location.href='index.html'" style="background:#555; color:white; border:none; padding:8px 15px; border-radius:4px;" data-i18n="pro_home">🏠 Trang chủ</button>
@@ -131,6 +188,8 @@
     <div style="padding: 20px;">
         <div id="score-percent" style="text-align:center; font-size:50px; color:red; font-weight:bold; margin:20px 0;">0%</div>
         <div id="score-detail" style="text-align:center; font-size:18px; margin-bottom:30px;"></div>
+        <div id="score-parts"></div>
+        <div id="pass-line"></div>
         <div id="wrong-questions"></div>
     </div>
 </div>
@@ -173,6 +232,21 @@
 <script src="questions7.js"></script>
 <script src="questions8.js"></script>
 <script src="questions9.js"></script>
+<script src="practice1_g1.js"></script>
+<script src="practice2_g1.js"></script>
+<script src="practice3_g1.js"></script>
+<script src="practice4_g1.js"></script>
+<script src="practice1.js"></script>
+<script src="practice2.js"></script>
+<script src="practice3.js"></script>
+<script src="practice4.js"></script>
+<script src="thn3_1.js"></script>
+<script src="thn3_2.js"></script>
+<script src="thn3_3.js"></script>
+<script src="thn3_4.js"></script>
+<script src="thn3_5.js"></script>
+<script src="thn3_6.js"></script>
+<script src="thn3_7.js"></script>
 <script>
     const t = (k, v) => (window.I18N && window.I18N.t) ? window.I18N.t(k, v) : k;
 
@@ -181,13 +255,17 @@
     // chạm câu thứ FREE_LIMIT + 1 -> hiện "bức tường" theo tầng:
     // - guest (chưa đăng nhập): BẢNG ĐĂNG NHẬP. - free (đã đăng nhập): BẢNG NÂNG CẤP.
     // - Premium / Admin: không giới hạn. Tầng đọc từ localStorage 'userTier'
-    // (index.html / exam.html ghi); thiếu thì suy ra từ cờ 'isPremium'.
+    // (index.html / exam.html ghi); module xác thực bên dưới sẽ chốt lại theo
+    // hồ sơ Firestore trước khi bài thi bắt đầu (màn hình bắt đầu chờ xác thực).
     const FREE_LIMIT = 5;
-    const storedTier = localStorage.getItem('userTier');
-    const isPremiumUser = storedTier ? storedTier === 'premium' : (localStorage.getItem('isPremium') === 'true');
-    const userTier = storedTier || (isPremiumUser ? 'premium' : 'guest');
-    const isGuestUser = userTier === 'guest';
-    const isCappedUser = !isPremiumUser; // guest + free đều bị giới hạn FREE_LIMIT câu
+    let userTier, isPremiumUser, isGuestUser, isCappedUser;
+    function applyTier(tier) {
+        userTier = tier;
+        isPremiumUser = tier === 'premium';
+        isGuestUser = tier === 'guest';
+        isCappedUser = !isPremiumUser; // guest + free đều bị giới hạn FREE_LIMIT câu
+    }
+    applyTier(localStorage.getItem('userTier') || (localStorage.getItem('isPremium') === 'true' ? 'premium' : 'guest'));
 
     function showUpgradeModal() {
         const modal = document.getElementById('premium-modal');
@@ -202,83 +280,225 @@
         else showUpgradeModal();
     }
 
-    let currentQuestions = [];
-    let currentIdx = 0;
-    let answers = [];
-    let flags = [];
-    let timeLeft = 3600;
+    // ===== TIẾN TRÌNH HỌC (cùng cấu trúc exam.js ghi vào exam_progress) =====
+    // - Đã đăng nhập: Firestore users/{uid}.exam_progress (kho do module xác thực cấp).
+    // - Khách: localStorage 'exam_progress_guest'.
+    // Khi nộp bài (trọn 2 phần hoặc nộp sớm theo trần free): ghi 1 dòng mockHistory
+    // { at, score, total, mode: 'prometric' } + cập nhật Sổ câu sai theo setKey NGUỒN
+    // THẬT của từng câu (câu được gắn thẻ nguồn ngay lúc bốc đề — không truy vết mờ).
+    let PROG = { sets: {}, mockHistory: [], wrong: {} };
+    let progStore = null;
+    let progressReady = false;
 
-function loadData() {
-    const qSets = window.QUESTION_SETS || {};
-    const urlParams = new URLSearchParams(window.location.search);
-    const limit = urlParams.get('limit');
-    
-    currentQuestions = [];
-
-    // Danh sách các bộ đề bạn muốn load
-    let ids = limit ? ['1'] : ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
-    ids.forEach(id => { 
-        if (qSets[id]) {
-            // KIỂM TRA: Nếu là Object có chứa thuộc tính .questions thì lấy .questions
-            // Nếu là mảng thuần thì lấy luôn mảng đó
-            const data = Array.isArray(qSets[id]) ? qSets[id] : (qSets[id].questions || []);
-            currentQuestions = currentQuestions.concat(data);
+    function normalizeProgress(raw) {
+        const out = { sets: {}, mockHistory: [], wrong: {} };
+        if (raw && typeof raw === 'object') {
+            if (raw.sets && typeof raw.sets === 'object') out.sets = raw.sets;
+            if (Array.isArray(raw.mockHistory)) out.mockHistory = raw.mockHistory;
+            if (raw.wrong && typeof raw.wrong === 'object') out.wrong = raw.wrong;
         }
-    });
-
-    if (currentQuestions.length === 0) {
-        console.error("Không tìm thấy câu hỏi nào!");
-        return false;
+        return out;
     }
 
-    // Xáo trộn
-    currentQuestions = currentQuestions.sort(() => Math.random() - 0.5);
-
-    // Chặn số lượng
-    if (limit) {
-        currentQuestions = currentQuestions.slice(0, parseInt(limit));
-    } else {
-        currentQuestions = currentQuestions.slice(0, 40);
+    function deckAdd(sk, qid) {
+        if (!PROG.wrong || typeof PROG.wrong !== 'object') PROG.wrong = {};
+        if (!PROG.wrong[sk]) PROG.wrong[sk] = {};
+        const prev = PROG.wrong[sk][qid];
+        PROG.wrong[sk][qid] = { n: (prev && prev.n ? prev.n : 0) + 1, at: Date.now() };
     }
 
-    return currentQuestions.length > 0;
-}
+    function flushProgress() {
+        if (!progStore) return;
+        try {
+            const r = progStore.save(JSON.parse(JSON.stringify(PROG)));
+            if (r && r.catch) r.catch(() => {});
+        } catch (e) {}
+    }
 
+    // Ghi nhận 1 lần thi thử: điểm + lịch sử + sổ câu sai (chỉ các câu ĐÃ TRẢ LỜI mà sai,
+    // giống exam.js — câu bỏ trống không vào sổ).
+    function recordAttempt(score, total, wrongAnswered) {
+        if (!progressReady || !progStore) return;
+        PROG.mockHistory.unshift({ at: Date.now(), score: score, total: total, mode: 'prometric' });
+        if (PROG.mockHistory.length > 20) PROG.mockHistory.length = 20;
+        (wrongAnswered || []).forEach(q => deckAdd(q.__setKey, q.__qid));
+        flushProgress();
+    }
+
+    // ===== NHÓM NGÀNH + CỔNG XÁC THỰC =====
+    // Nguồn sự thật của nhóm: Firestore users/{uid}.group (module xác thực cấp);
+    // localStorage 'app_group' là phương án dự phòng (bảng chọn ngôn ngữ+nhóm ghi cả hai).
+    // Chưa có nhóm ở cả hai nơi -> màn hình bắt đầu BẮT chọn nhóm trước khi thi
+    // (không bao giờ tự mặc định một nhóm).
+    let examGroup = localStorage.getItem('app_group') || null;
+    if (examGroup && ['1', '2', '3'].indexOf(examGroup) < 0) examGroup = null;
+    let authSettled = false;
+    let examStarted = false;
+    let examFinished = false;
+
+    window.__prometricSettle = function (info) {
+        const firstSettle = !authSettled;
+        authSettled = true;
+        if (info && !examStarted) {
+            if (info.tier) {
+                applyTier(info.tier);
+                try {
+                    localStorage.setItem('userTier', info.tier);
+                    localStorage.setItem('isPremium', String(info.tier === 'premium'));
+                } catch (e) {}
+            }
+            if (info.group && ['1', '2', '3'].indexOf(String(info.group)) >= 0) {
+                examGroup = String(info.group);
+                try { localStorage.setItem('app_group', examGroup); } catch (e) {}
+            }
+            if (info.name) {
+                const el = document.getElementById('user-name');
+                if (el) el.textContent = '受験者名: ' + info.name;
+            }
+            if (info.store && !progStore) {
+                progStore = info.store;
+                progStore.load().then(raw => {
+                    PROG = normalizeProgress(raw);
+                    progressReady = true;
+                }).catch(() => { progressReady = true; });
+            }
+        }
+        if (firstSettle || !examStarted) refreshStartScreen();
+    };
+    // Phòng hờ module xác thực không tải được (mất mạng hẳn): sau 3 giây vẫn mở cổng
+    // bằng dữ liệu trên máy (nhóm ở localStorage / bảng chọn nhóm) để trang không treo.
+    setTimeout(() => { if (!authSettled) window.__prometricSettle(null); }, 3000);
+
+    function refreshStartScreen() {
+        document.getElementById('start-part1-desc').textContent = t('pro_part1_desc', { n: 40, m: 60 });
+        document.getElementById('start-part2-desc').textContent = t('pro_part2_desc', { n: 25, m: 60 });
+        const known = document.getElementById('start-group-known');
+        const picker = document.getElementById('start-group-picker');
+        if (examGroup) {
+            known.textContent = t('pro_practice_group', { g: t('group_' + examGroup) });
+            known.style.display = '';
+            picker.style.display = 'none';
+        } else {
+            known.style.display = 'none';
+            picker.style.display = '';
+            document.querySelectorAll('.group-pick').forEach(btn => {
+                btn.textContent = t('group_' + btn.getAttribute('data-g'));
+                btn.classList.toggle('selected', btn.getAttribute('data-g') === examGroup);
+            });
+        }
+        document.getElementById('btn-start').disabled = !(authSettled && examGroup);
+    }
+
+    window.pickGroup = function (g) {
+        examGroup = g;
+        try { localStorage.setItem('app_group', g); } catch (e) {}
+        refreshStartScreen();
+    };
+
+    // ===== BỐC ĐỀ: Phần 1 = 40 câu lý thuyết (bộ 1–9); Phần 2 = 25 câu thực hành
+    // của ĐÚNG nhóm học viên. Mỗi câu được gắn thẻ nguồn (__setKey + __qid) ngay
+    // tại đây để khâu ghi Sổ câu sai dùng nguồn thật, không phải đối chiếu mờ. =====
+    const THEORY_KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const PRACTICE_KEYS = {
+        '1': ['g1_1', 'g1_2', 'g1_3', 'g1_4'],
+        '2': ['g2_1', 'g2_2', 'g2_3', 'g2_4'],
+        '3': ['g3_1', 'g3_2', 'g3_3', 'g3_4', 'g3_5', 'g3_6', 'g3_7']
+    };
+
+    function fyShuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+        }
+        return arr;
+    }
+
+    function tagPool(setsObj, keys, part, keyPrefix) {
+        const pool = [];
+        keys.forEach(k => {
+            const reg = setsObj ? setsObj[k] : null;
+            const arr = reg ? (Array.isArray(reg) ? reg : (reg.questions || [])) : [];
+            arr.forEach((q, idx) => {
+                const copy = Object.assign({}, q);
+                copy.__part = part;
+                copy.__setKey = keyPrefix + k;
+                copy.__qid = (q.id !== undefined && q.id !== null) ? ('id:' + q.id) : ('ix:' + idx);
+                pool.push(copy);
+            });
+        });
+        return pool;
+    }
+
+    let partData = [null, null]; // [{questions, answers, flags}, ...] — 0: lý thuyết, 1: thực hành
+    let curPart = 0;
+    let currentIdx = 0;
+    let timeLeft = 3600;
+    let timerInt = null;
+
+    function buildExam() {
+        const theory = fyShuffle(tagPool(window.QUESTION_SETS || {}, THEORY_KEYS, 1, 'set_')).slice(0, 40);
+        const practice = fyShuffle(tagPool(window.PRACTICE_SETS || {}, PRACTICE_KEYS[examGroup] || [], 2, 'practice_')).slice(0, 25);
+        partData = [theory, practice].map(qs => ({
+            questions: qs,
+            answers: new Array(qs.length).fill(null),
+            flags: new Array(qs.length).fill(false)
+        }));
+    }
+
+    function cur() { return partData[curPart]; }
+
+    window.startExam = function () {
+        if (!examGroup || examStarted) return;
+        buildExam();
+        if (!partData[0].questions.length || !partData[1].questions.length) {
+            console.error('Không bốc được đủ câu hỏi cho bài thi!');
+            return;
+        }
+        examStarted = true;
+        curPart = 0;
+        currentIdx = 0;
+        document.getElementById('start-screen').style.display = 'none';
+        document.getElementById('exam-ui').style.display = '';
+        startTimer();
+        renderExam();
+    };
 
     function convertFurigana(text) {
         if (!text) return "";
-        return text.replace(/([一-龯々〆ヶ]+)\s*[（(]([^）)]+)[）)]/g, 
+        return text.replace(/([一-龯々〆ヶ]+)\s*[（(]([^）)]+)[）)]/g,
             (m, kanji, kana) => `<ruby>${kanji}<rt>${kana}</rt></ruby>`);
     }
 
+    function partLabel(p) { return t(p === 0 ? 'pro_part1_label' : 'pro_part2_label'); }
+
     function renderExam() {
-        const q = currentQuestions[currentIdx];
-        document.getElementById('q-title').innerText = `質問: ${currentIdx + 1} / ${currentQuestions.length}`;
-        
+        const P = cur();
+        const q = P.questions[currentIdx];
+        document.getElementById('q-title').innerText = t('pro_q_progress', { part: partLabel(curPart), i: currentIdx + 1, n: P.questions.length });
+
         document.getElementById('pro-quiz').innerHTML = `
             <div class="q-text"><b>問題 ${currentIdx + 1}:</b><br>${convertFurigana(q.q)}</div>
             ${q.img ? `<img src="../${q.img}" style="width:100%; border-radius:5px; margin-bottom:15px; max-height:250px; object-fit:contain;">` : ''}
             <div>
                 ${q.options.map((opt, i) => `
-                    <div class="pro-opt ${answers[currentIdx] === i ? 'selected' : ''}" onclick="selectOpt(${i})">
+                    <div class="pro-opt ${P.answers[currentIdx] === i ? 'selected' : ''}" onclick="selectOpt(${i})">
                         ${convertFurigana(opt)}
                     </div>
                 `).join('')}
             </div>
         `;
 
-        document.getElementById('q-grid').innerHTML = currentQuestions.map((_, i) => `
-            <div class="q-num ${currentIdx === i ? 'active' : ''} ${answers[i] !== null ? 'done' : ''} ${flags[i] ? 'flagged' : ''} ${isCappedUser && i >= FREE_LIMIT ? 'locked' : ''}" 
+        document.getElementById('q-grid').innerHTML = P.questions.map((_, i) => `
+            <div class="q-num ${currentIdx === i ? 'active' : ''} ${P.answers[i] !== null ? 'done' : ''} ${P.flags[i] ? 'flagged' : ''} ${isCappedUser && i >= FREE_LIMIT ? 'locked' : ''}"
                  onclick="goTo(${i})">${i + 1}</div>
         `).join('');
 
         document.getElementById('btn-prev').disabled = currentIdx === 0;
-        document.getElementById('btn-next').innerText = currentIdx === currentQuestions.length - 1 ? "終了" : "次へ";
+        document.getElementById('btn-next').innerText = currentIdx === P.questions.length - 1 ? "終了" : "次へ";
         document.getElementById('scroll-area').scrollTop = 0;
     }
 
-    window.selectOpt = (i) => { answers[currentIdx] = i; renderExam(); };
+    window.selectOpt = (i) => { cur().answers[currentIdx] = i; renderExam(); };
     window.goTo = (i) => {
         // Guest/free: bấm vào ô số câu quá FREE_LIMIT -> hiện bức tường theo tầng, không chuyển câu
         if (isCappedUser && i >= FREE_LIMIT) { showLimitWall(); return; }
@@ -287,53 +507,206 @@ function loadData() {
     window.nextQ = () => {
         // Guest/free: đang ở câu FREE_LIMIT mà bấm "Tiếp" -> hiện bức tường, không qua câu 6
         if (isCappedUser && currentIdx + 1 >= FREE_LIMIT) { showLimitWall(); return; }
-        if (currentIdx < currentQuestions.length - 1) { currentIdx++; renderExam(); }
-        else { submitExam(); }
+        if (currentIdx < cur().questions.length - 1) { currentIdx++; renderExam(); }
+        else { submitPart(false); }
     };
     window.prevQ = () => { if (currentIdx > 0) { currentIdx--; renderExam(); } };
-    window.toggleFlag = () => { flags[currentIdx] = !flags[currentIdx]; renderExam(); };
+    window.toggleFlag = () => { cur().flags[currentIdx] = !cur().flags[currentIdx]; renderExam(); };
 
     function startTimer() {
-        const timer = setInterval(() => {
+        stopTimer();
+        timeLeft = 3600;
+        const el = document.getElementById('pro-timer');
+        el.innerText = '60:00';
+        timerInt = setInterval(() => {
             timeLeft--;
-            let m = Math.floor(timeLeft / 60);
-            let s = timeLeft % 60;
-            document.getElementById('pro-timer').innerText = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-            if(timeLeft <= 0) { clearInterval(timer); submitExam(); }
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            el.innerText = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+            if (timeLeft <= 0) { stopTimer(); submitPart(true); }
         }, 1000);
     }
+    function stopTimer() { if (timerInt) { clearInterval(timerInt); timerInt = null; } }
 
-    window.submitExam = () => {
-        if(!confirm("終了しますか？")) return;
-        document.getElementById('exam-ui').style.display = "none";
-        document.getElementById('result-screen').style.display = "block";
-        // Guest/free: chấm điểm + xem lại CHỈ trong FREE_LIMIT câu đầu (x/5) —
-        // nội dung các câu sau không xuất hiện ở màn hình kết quả.
-        const scope = isCappedUser ? currentQuestions.slice(0, FREE_LIMIT) : currentQuestions;
-        let correct = 0;
-        let html = "";
-        scope.forEach((q, i) => {
-            if(answers[i] === q.answer) correct++;
-            else {
-                html += `<div style="padding:15px 0; border-bottom:1px solid #eee;">
-                    <p><b>${t('pro_q_label', {n: i+1})}</b> ${convertFurigana(q.q)}</p>
-                    <p style="color:red">${t('pro_wrong')} ${answers[i] !== null ? convertFurigana(q.options[answers[i]]) : t('pro_not_chosen')}</p>
-                    <p style="color:green">${t('pro_correct')} ${convertFurigana(q.options[q.answer])}</p>
-                </div>`;
-            }
-        });
-        document.getElementById('score-percent').innerText = Math.round(correct/scope.length*100) + "%";
-        document.getElementById('score-detail').innerText = `正解: ${correct} / ${scope.length}`;
-        document.getElementById('wrong-questions').innerHTML = html;
-        window.scrollTo(0,0);
-    };
+    // Nộp phần hiện tại. Người dùng trần free chỉ nộp được trong Phần 1 (chấm 5 câu
+    // đầu rồi kết thúc như trước). Premium/Admin: Phần 1 -> THÔNG BÁO chuyển phần
+    // (chưa hiện điểm, đúng thi thật); Phần 2 -> kết quả tổng.
+    window.submitExam = () => submitPart(false);
+    function submitPart(auto) {
+        if (!examStarted || examFinished) return;
+        if (!auto && !confirm("終了しますか？")) return;
+        stopTimer();
+        if (isCappedUser) { finishCapped(); return; }
+        if (curPart === 0) {
+            const P = partData[0];
+            const answered = P.answers.filter(a => a !== null).length;
+            document.getElementById('inter-body').textContent = t('pro_inter_body', { a: answered, n: P.questions.length });
+            document.getElementById('inter-next').textContent = t('pro_inter_next', { g: t('group_' + examGroup), n: partData[1].questions.length, m: 60 });
+            document.getElementById('exam-ui').style.display = 'none';
+            document.getElementById('inter-screen').style.display = '';
+            window.scrollTo(0, 0);
+        } else {
+            finishExam();
+        }
+    }
 
-    if (loadData()) {
-        answers = new Array(currentQuestions.length).fill(null);
-        flags = new Array(currentQuestions.length).fill(false);
+    window.startPart2 = function () {
+        curPart = 1;
+        currentIdx = 0;
+        document.getElementById('inter-screen').style.display = 'none';
+        document.getElementById('exam-ui').style.display = '';
         startTimer();
         renderExam();
+    };
+
+    function sourceLabel(q) {
+        let key = null;
+        if (q.__part === 1) key = 'set_' + q.__setKey.slice(4) + '_html';
+        else if (q.__part === 2) key = 'prac_' + q.__setKey.slice('practice_'.length).slice(1) + '_html';
+        if (key) {
+            const v = t(key);
+            if (v && v !== key) return v;
+        }
+        return q.__setKey;
     }
+
+    function wrongItemHTML(q, idxInPart) {
+        const P = partData[q.__part - 1];
+        const picked = P.answers[idxInPart];
+        return `<div style="padding:15px 0; border-bottom:1px solid #eee;">
+            <p><span class="part-chip">${partLabel(q.__part - 1)}</span> <b>${t('pro_q_label', { n: idxInPart + 1 })}</b> <span class="src-label">${sourceLabel(q)}</span><br>${convertFurigana(q.q)}</p>
+            ${q.img ? `<img src="../${q.img}" style="width:100%; border-radius:5px; margin-bottom:15px; max-height:250px; object-fit:contain;">` : ''}
+            <p style="color:red">${t('pro_wrong')} ${picked !== null ? convertFurigana(q.options[picked]) : t('pro_not_chosen')}</p>
+            <p style="color:green">${t('pro_correct')} ${convertFurigana(q.options[q.answer])}</p>
+        </div>`;
+    }
+
+    function gradePart(p) {
+        const P = partData[p];
+        let correct = 0;
+        const wrongAnswered = [];
+        P.questions.forEach((q, i) => {
+            if (P.answers[i] === q.answer) correct++;
+            else if (P.answers[i] !== null) wrongAnswered.push(q);
+        });
+        return { correct: correct, total: P.questions.length, wrongAnswered: wrongAnswered };
+    }
+
+    function showResults(percent, detail, partsHTML, passHTML, wrongHTML) {
+        document.getElementById('exam-ui').style.display = 'none';
+        document.getElementById('inter-screen').style.display = 'none';
+        document.getElementById('result-screen').style.display = 'block';
+        document.getElementById('score-percent').innerText = percent;
+        document.getElementById('score-detail').innerText = detail;
+        document.getElementById('score-parts').innerHTML = partsHTML || '';
+        document.getElementById('pass-line').innerHTML = passHTML || '';
+        document.getElementById('wrong-questions').innerHTML = wrongHTML || '';
+        window.scrollTo(0, 0);
+    }
+
+    // Kết thúc theo trần free (giữ nguyên hành vi cũ): chấm + xem lại CHỈ FREE_LIMIT
+    // câu đầu của Phần 1, bài thi kết thúc tại đây — không có đường sang Phần 2.
+    function finishCapped() {
+        examFinished = true;
+        const P = partData[0];
+        const scope = P.questions.slice(0, FREE_LIMIT);
+        let correct = 0;
+        let html = '';
+        const wrongAnswered = [];
+        scope.forEach((q, i) => {
+            if (P.answers[i] === q.answer) correct++;
+            else {
+                if (P.answers[i] !== null) wrongAnswered.push(q);
+                html += wrongItemHTML(q, i);
+            }
+        });
+        recordAttempt(correct, scope.length, wrongAnswered);
+        showResults(Math.round(correct / scope.length * 100) + '%', `正解: ${correct} / ${scope.length}`, '', '', html);
+    }
+
+    // Kết thúc trọn bài: điểm từng phần + tổng 65 câu + mốc đạt 60% (khớp Chặng 4
+    // của Lộ trình học) + xem lại câu sai của CẢ hai phần, ghi tiến trình 1 lần.
+    function finishExam() {
+        examFinished = true;
+        const g1 = gradePart(0);
+        const g2 = gradePart(1);
+        const totalCorrect = g1.correct + g2.correct;
+        const totalQ = g1.total + g2.total;
+        const pct = Math.round(totalCorrect / totalQ * 100);
+        recordAttempt(totalCorrect, totalQ, g1.wrongAnswered.concat(g2.wrongAnswered));
+        let html = '';
+        [0, 1].forEach(p => {
+            partData[p].questions.forEach((q, i) => {
+                if (partData[p].answers[i] !== q.answer) html += wrongItemHTML(q, i);
+            });
+        });
+        const partsHTML =
+            `${t('pro_result_theory', { a: g1.correct, n: g1.total })}<br>` +
+            `${t('pro_result_practice', { a: g2.correct, n: g2.total })}<br>` +
+            `<b>${t('pro_result_total', { a: totalCorrect, n: totalQ, p: pct })}</b>`;
+        const passHTML = `${t('pro_pass_mark', { p: 60 })} — ${pct >= 60 ? t('pro_pass') : t('pro_not_pass')}`;
+        showResults(pct + '%', `正解: ${totalCorrect} / ${totalQ}`, partsHTML, passHTML, html);
+    }
+
+    refreshStartScreen();
+</script>
+<script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // ===== Cầu nối XÁC THỰC + TIẾN TRÌNH cho trang thi thử Prometric =====
+    // Giống exam.html: chốt tầng người dùng + nhóm ngành + kho tiến trình theo phiên:
+    // - Đã đăng nhập: Firestore users/{uid} là nguồn sự thật (nhóm, Premium còn hạn,
+    //   exam_progress đọc/ghi trực tiếp trên hồ sơ).
+    // - Khách: tầng 'guest', tiến trình ở localStorage 'exam_progress_guest'.
+    const guestProgressStore = {
+        load: async () => { try { return JSON.parse(localStorage.getItem('exam_progress_guest') || 'null'); } catch (e) { return null; } },
+        save: async (obj) => { try { localStorage.setItem('exam_progress_guest', JSON.stringify(obj)); } catch (e) {} }
+    };
+    const settle = (info) => { if (window.__prometricSettle) window.__prometricSettle(info); };
+
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            settle({ tier: 'guest', store: guestProgressStore });
+            return;
+        }
+        try {
+            const userDocRef = doc(db, "users", user.uid);
+            const userSnap = await getDoc(userDocRef);
+            if (userSnap.exists()) {
+                const data = userSnap.data();
+                const isAdmin = data.role === 'admin';
+                // Premium hiệu lực: isPremium === true VÀ còn hạn (premiumUntil null = trọn đời).
+                const untilMs = !data.premiumUntil ? null
+                    : (typeof data.premiumUntil.toMillis === 'function' ? data.premiumUntil.toMillis()
+                    : (typeof data.premiumUntil.seconds === 'number' ? data.premiumUntil.seconds * 1000 : null));
+                const isPremium = (data.isPremium === true && (untilMs === null || untilMs > Date.now())) || isAdmin;
+                settle({
+                    tier: isPremium ? 'premium' : 'free',
+                    group: data.group ? String(data.group) : null,
+                    name: data.name || null,
+                    store: {
+                        load: async () => data.exam_progress || null,
+                        save: async (obj) => { await setDoc(doc(db, "users", user.uid), { exam_progress: obj }, { merge: true }); }
+                    }
+                });
+            } else {
+                // Đã đăng nhập nhưng chưa có hồ sơ Firestore: free, tiến trình tạm theo uid trên máy.
+                const lsKey = 'exam_progress_' + user.uid;
+                settle({
+                    tier: 'free',
+                    store: {
+                        load: async () => { try { return JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) { return null; } },
+                        save: async (obj) => { try { localStorage.setItem(lsKey, JSON.stringify(obj)); } catch (e) {} }
+                    }
+                });
+            }
+        } catch (error) {
+            console.error("Lỗi xác thực:", error);
+            settle({ store: guestProgressStore });
+        }
+    });
 </script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}</script>
 </body>

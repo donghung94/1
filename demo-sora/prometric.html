@@ -64,6 +64,7 @@
         .q-num.active { border: 2px solid var(--pro-green); background: #ffffd0; font-weight: bold; }
         .q-num.done { background: var(--pro-green); color: white; border-color: var(--pro-green); }
         .q-num.flagged { background: #facc15 !important; border-color: #eab308 !important; color: black; }
+        .q-num.locked { opacity: .45; cursor: not-allowed; }
 
         .q-text { background: #f5f5f5; padding: 15px; border-radius: 6px; border-left: 5px solid var(--pro-green); font-size: 18px; line-height: 1.6; margin-bottom: 20px; }
         .pro-opt { border: 1px solid var(--pro-border); padding: 15px; margin: 10px 0; cursor: pointer; border-radius: 8px; background: #fff; }
@@ -134,6 +135,32 @@
     </div>
 </div>
 
+<!-- ⭐ BẢNG NÂNG CẤP: hiện khi tài khoản free chạm câu thứ 6 (giống exam.html) -->
+<div id="premium-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:10005; justify-content:center; align-items:center;">
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 15px;">⭐</div>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0;" data-i18n="upgrade_title">Bạn đã làm hết 5 câu miễn phí</h2>
+        <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="upgrade_body">Mỗi đề thi được làm miễn phí 5 câu. Nâng cấp Premium để làm trọn bộ đề và mở khóa toàn bộ tính năng.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+            <a href="https://zalo.me/07090778422" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_upgrade_premium">⭐ Nâng cấp Premium</a>
+            <button onclick="document.getElementById('premium-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
+        </div>
+    </div>
+</div>
+
+<!-- 🔐 BẢNG ĐĂNG NHẬP: hiện khi KHÁCH (chưa đăng nhập) chạm câu thứ 6 (giống exam.html) -->
+<div id="login-wall-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:10005; justify-content:center; align-items:center;">
+    <div style="background:white; width:90%; max-width:400px; padding:25px; border-radius:15px; text-align:center; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 15px;">🔐</div>
+        <h2 style="color:#C8102E; margin: 0 0 10px 0;" data-i18n="login_wall_title">Bạn đã làm hết 5 câu xem thử</h2>
+        <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="login_wall_body">Đăng nhập hoặc đăng ký tài khoản miễn phí để tiếp tục làm bài và lưu lại tiến trình học của bạn.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+            <a href="login.html" style="background:#C8102E; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_login">Đăng nhập</a>
+            <button onclick="document.getElementById('login-wall-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
+        </div>
+    </div>
+</div>
+
 <script src="questions.js"></script>
 <script src="questions2.js"></script>
 <script src="questions3.js"></script>
@@ -145,6 +172,33 @@
 <script src="questions9.js"></script>
 <script>
     const t = (k, v) => (window.I18N && window.I18N.t) ? window.I18N.t(k, v) : k;
+
+    // ===== GIỚI HẠN THEO TẦNG NGƯỜI DÙNG (cùng cơ chế với exam.js) =====
+    // Khách & tài khoản free chỉ làm FREE_LIMIT câu đầu của bài thi Prometric;
+    // chạm câu thứ FREE_LIMIT + 1 -> hiện "bức tường" theo tầng:
+    // - guest (chưa đăng nhập): BẢNG ĐĂNG NHẬP. - free (đã đăng nhập): BẢNG NÂNG CẤP.
+    // - Premium / Admin: không giới hạn. Tầng đọc từ localStorage 'userTier'
+    // (index.html / exam.html ghi); thiếu thì suy ra từ cờ 'isPremium'.
+    const FREE_LIMIT = 5;
+    const storedTier = localStorage.getItem('userTier');
+    const isPremiumUser = storedTier ? storedTier === 'premium' : (localStorage.getItem('isPremium') === 'true');
+    const userTier = storedTier || (isPremiumUser ? 'premium' : 'guest');
+    const isGuestUser = userTier === 'guest';
+    const isCappedUser = !isPremiumUser; // guest + free đều bị giới hạn FREE_LIMIT câu
+
+    function showUpgradeModal() {
+        const modal = document.getElementById('premium-modal');
+        if (modal) modal.style.display = 'flex';
+    }
+    function showLoginWall() {
+        const modal = document.getElementById('login-wall-modal');
+        if (modal) modal.style.display = 'flex';
+    }
+    function showLimitWall() {
+        if (isGuestUser) showLoginWall();
+        else showUpgradeModal();
+    }
+
     let currentQuestions = [];
     let currentIdx = 0;
     let answers = [];
@@ -212,7 +266,7 @@ function loadData() {
         `;
 
         document.getElementById('q-grid').innerHTML = currentQuestions.map((_, i) => `
-            <div class="q-num ${currentIdx === i ? 'active' : ''} ${answers[i] !== null ? 'done' : ''} ${flags[i] ? 'flagged' : ''}" 
+            <div class="q-num ${currentIdx === i ? 'active' : ''} ${answers[i] !== null ? 'done' : ''} ${flags[i] ? 'flagged' : ''} ${isCappedUser && i >= FREE_LIMIT ? 'locked' : ''}" 
                  onclick="goTo(${i})">${i + 1}</div>
         `).join('');
 
@@ -222,8 +276,14 @@ function loadData() {
     }
 
     window.selectOpt = (i) => { answers[currentIdx] = i; renderExam(); };
-    window.goTo = (i) => { currentIdx = i; renderExam(); };
+    window.goTo = (i) => {
+        // Guest/free: bấm vào ô số câu quá FREE_LIMIT -> hiện bức tường theo tầng, không chuyển câu
+        if (isCappedUser && i >= FREE_LIMIT) { showLimitWall(); return; }
+        currentIdx = i; renderExam();
+    };
     window.nextQ = () => {
+        // Guest/free: đang ở câu FREE_LIMIT mà bấm "Tiếp" -> hiện bức tường, không qua câu 6
+        if (isCappedUser && currentIdx + 1 >= FREE_LIMIT) { showLimitWall(); return; }
         if (currentIdx < currentQuestions.length - 1) { currentIdx++; renderExam(); }
         else { submitExam(); }
     };
@@ -244,9 +304,12 @@ function loadData() {
         if(!confirm("終了しますか？")) return;
         document.getElementById('exam-ui').style.display = "none";
         document.getElementById('result-screen').style.display = "block";
+        // Guest/free: chấm điểm + xem lại CHỈ trong FREE_LIMIT câu đầu (x/5) —
+        // nội dung các câu sau không xuất hiện ở màn hình kết quả.
+        const scope = isCappedUser ? currentQuestions.slice(0, FREE_LIMIT) : currentQuestions;
         let correct = 0;
         let html = "";
-        currentQuestions.forEach((q, i) => {
+        scope.forEach((q, i) => {
             if(answers[i] === q.answer) correct++;
             else {
                 html += `<div style="padding:15px 0; border-bottom:1px solid #eee;">
@@ -256,8 +319,8 @@ function loadData() {
                 </div>`;
             }
         });
-        document.getElementById('score-percent').innerText = Math.round(correct/currentQuestions.length*100) + "%";
-        document.getElementById('score-detail').innerText = `正解: ${correct} / ${currentQuestions.length}`;
+        document.getElementById('score-percent').innerText = Math.round(correct/scope.length*100) + "%";
+        document.getElementById('score-detail').innerText = `正解: ${correct} / ${scope.length}`;
         document.getElementById('wrong-questions').innerHTML = html;
         window.scrollTo(0,0);
     };

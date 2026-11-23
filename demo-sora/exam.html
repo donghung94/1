@@ -55,8 +55,14 @@
 
                 if (userSnap.exists()) {
                     const data = userSnap.data();
-                    const isAdmin = data.role === 'admin'; 
-                    const isPremium = data.isPremium === true || isAdmin; 
+                    const isAdmin = data.role === 'admin';
+                    // Premium hiệu lực: isPremium === true VÀ còn hạn — premiumUntil
+                    // do webhook VietQR ghi (null/không có = trọn đời; Timestamp = hạn).
+                    // Nguồn sự thật DUY NHẤT là hồ sơ users/{uid} (web + app dùng chung).
+                    const untilMs = !data.premiumUntil ? null
+                        : (typeof data.premiumUntil.toMillis === 'function' ? data.premiumUntil.toMillis()
+                        : (typeof data.premiumUntil.seconds === 'number' ? data.premiumUntil.seconds * 1000 : null));
+                    const isPremium = (data.isPremium === true && (untilMs === null || untilMs > Date.now())) || isAdmin;
                     localStorage.setItem('isPremium', isPremium);
                     localStorage.setItem('userTier', isPremium ? 'premium' : 'free');
                     const currentDeviceId = localStorage.getItem('my_device_id');
@@ -306,7 +312,10 @@
         <h2 style="color:#C8102E; margin: 0 0 10px 0;" data-i18n="upgrade_title">Bạn đã làm hết 5 câu miễn phí</h2>
         <p style="color:#64748b; line-height:1.6; margin: 0;" data-i18n="upgrade_body">Mỗi đề thi được làm miễn phí 5 câu. Nâng cấp Premium để làm trọn bộ đề và mở khóa toàn bộ tính năng.</p>
         <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-            <a href="https://zalo.me/07090778422" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_upgrade_premium">⭐ Nâng cấp Premium</a>
+            <!-- Nút chính: trang mua Premium tự phục vụ bằng VietQR (premium.html).
+                 Zalo chỉ còn là kênh liên hệ phụ. -->
+            <a href="premium.html" style="background:#C8102E; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_buy_vietqr">⭐ Mua Premium — thanh toán VietQR</a>
+            <a href="https://zalo.me/07090778422" target="_blank" style="background:#0068ff; color:white; padding:12px; border-radius:8px; text-decoration:none; font-weight:bold;" data-i18n="btn_upgrade_zalo">💬 Hỏi Admin qua Zalo</a>
             <button onclick="document.getElementById('premium-modal').style.display='none'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:14px; text-decoration: underline;" data-i18n="btn_later">Để sau</button>
         </div>
     </div>

@@ -165,6 +165,14 @@
         <div id="ct-status" class="editor-status"></div>
     </div>
 
+    <!-- 🧾 ĐƠN VIETQR GẦN ĐÂY — đơn mua Premium Tokutei (Firestore tk_orders),
+         chỉ ĐỌC. Premium chỉ mở khi đơn thành "paid" do SePay webhook xác nhận. -->
+    <div id="orders-panel" class="panel editor-panel" style="display:none">
+        <h2 class="editor-title">🧾 Đơn VietQR gần đây</h2>
+        <p class="editor-desc">Đơn mua Premium qua VietQR (bộ sưu tập tk_orders), mới nhất trước, tối đa 20 đơn. Trạng thái "Đã thanh toán" do hệ thống SePay tự xác nhận khi tiền về — Premium của học viên tự mở theo hồ sơ, không cần thao tác tay.</p>
+        <div id="orders-list"></div>
+    </div>
+
     <!-- 💬 HỘP THƯ HỖ TRỢ — chat trong app của học viên (Firestore chats/{uid}).
          Danh sách realtime, bấm vào 1 cuộc trò chuyện để xem + trả lời ngay tại đây. -->
     <div id="inbox-panel" class="panel editor-panel" style="display:none">
@@ -201,6 +209,21 @@
         if (typeof v.seconds === 'number') return v.seconds * 1000;
         return 0;
     }
+    // Premium HIỆU LỰC (kể cả hạn premiumUntil do webhook VietQR ghi):
+    // isPremium === true và (premiumUntil trống/null = trọn đời, hoặc còn hạn).
+    function dashUntilMillis(v) {
+        if (v === null || v === undefined) return null;
+        if (typeof v === 'string') { const t = Date.parse(v); return Number.isNaN(t) ? null : t; }
+        if (typeof v === 'number') return v;
+        if (typeof v.toDate === 'function') { try { return v.toDate().getTime(); } catch (e) { return null; } }
+        if (typeof v.seconds === 'number') return v.seconds * 1000;
+        return null;
+    }
+    function dashPremiumActive(u) {
+        if (!u || u.isPremium !== true) return false;
+        const ms = dashUntilMillis(u.premiumUntil);
+        return ms === null || ms > Date.now();
+    }
     function dashMatch(user, kw) {
         if (!kw) return true;
         const name = (user.name || '').toLowerCase();
@@ -229,7 +252,7 @@
             const dateTxt = ms ? new Date(ms).toLocaleDateString('vi-VN') : '';
             const chip = u.status === 'banned'
                 ? '<span class="chip banned">🚫 ĐÃ KHÓA</span>'
-                : (u.isPremium === true
+                : (dashPremiumActive(u)
                     ? '<span class="chip premium">⭐ PREMIUM</span>'
                     : '<span class="chip">HỌC THỬ</span>');
             const codeHtml = u.memberCode ? ' <span class="code">(' + dashEsc(u.memberCode) + ')</span>' : '';
@@ -249,7 +272,7 @@
 <script type="module">
     // ===== Cổng Admin: chưa đăng nhập hoặc không có role 'admin' -> về trang chủ ngay, không hiện dữ liệu =====
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs, doc, getDoc, setDoc, addDoc, updateDoc, onSnapshot, query, orderBy, increment } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+    import { getFirestore, collection, getDocs, doc, getDoc, setDoc, addDoc, updateDoc, onSnapshot, query, orderBy, limit, increment } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
     const firebaseConfig = {
@@ -291,7 +314,7 @@
             users.sort((a, b) => dashCreatedMillis(b) - dashCreatedMillis(a));
 
             const total = users.length;
-            const premium = users.filter(u => u.isPremium === true).length;
+            const premium = users.filter(u => dashPremiumActive(u)).length;
             document.getElementById('d-visits').textContent = visits;
             document.getElementById('d-total').textContent = total;
             document.getElementById('d-premium').textContent = premium;
@@ -365,6 +388,65 @@
                     }, { merge: true });
                     ctStatus.textContent = '✅ Đã lưu liên hệ — trang Hướng dẫn học sẽ dùng link mới.';
                 } catch (e) { ctStatus.textContent = '❌ Lưu thất bại: ' + e.message; }
+            });
+
+            // ===== 🧾 ĐƠN VIETQR GẦN ĐÂY (Firestore tk_orders — chỉ đọc) =====
+            // Đơn do trang premium.html tạo; trạng thái paid do SePay webhook ghi.
+            // Nếu rules tk_orders chưa được phát hành, onSnapshot báo lỗi quyền —
+            // hiện ghi chú nhẹ trong panel thay vì làm hỏng cả Dashboard.
+            const ordersPanel = document.getElementById('orders-panel');
+            const ordersList = document.getElementById('orders-list');
+            ordersPanel.style.display = 'block';
+            const orderFmtTime = (v) => {
+                const ms = dashCreatedMillis({ createdAt: v });
+                return ms ? new Date(ms).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' }) : '';
+            };
+            onSnapshot(query(collection(db, "tk_orders"), orderBy('createdAt', 'desc'), limit(20)), (snap) => {
+                ordersList.innerHTML = '';
+                if (snap.empty) {
+                    const p = document.createElement('p');
+                    p.className = 'editor-desc';
+                    p.textContent = 'Chưa có đơn VietQR nào.';
+                    ordersList.appendChild(p);
+                    return;
+                }
+                snap.forEach(d => {
+                    const o = d.data() || {};
+                    const paid = o.status === 'paid';
+                    const rowEl = document.createElement('div');
+                    rowEl.className = 'd-user';
+                    const main = document.createElement('div');
+                    main.className = 'd-user-main';
+                    const nameEl = document.createElement('div');
+                    nameEl.className = 'd-user-name';
+                    nameEl.textContent = d.id + (o.memberCode ? ' · ' + o.memberCode : '');
+                    const mailEl = document.createElement('div');
+                    mailEl.className = 'd-user-email';
+                    mailEl.textContent = (o.email || '') + ' · ' + (o.package || '') + ' · ' +
+                        (typeof o.amount === 'number' ? o.amount.toLocaleString('vi-VN') + '₫' : '');
+                    main.appendChild(nameEl); main.appendChild(mailEl);
+                    const side = document.createElement('div');
+                    side.className = 'd-user-side';
+                    const chip = document.createElement('span');
+                    chip.className = 'chip' + (paid ? ' premium' : '');
+                    chip.textContent = paid ? '✅ ĐÃ THANH TOÁN' : '⏳ CHỜ THANH TOÁN';
+                    side.appendChild(chip);
+                    const timeTxt = orderFmtTime(o.createdAt);
+                    if (timeTxt) {
+                        const dt = document.createElement('span');
+                        dt.className = 'd-user-date';
+                        dt.textContent = timeTxt;
+                        side.appendChild(dt);
+                    }
+                    rowEl.appendChild(main); rowEl.appendChild(side);
+                    ordersList.appendChild(rowEl);
+                });
+            }, (err) => {
+                ordersList.innerHTML = '';
+                const p = document.createElement('p');
+                p.className = 'editor-desc';
+                p.textContent = 'Chưa đọc được danh sách đơn (' + (err && err.code ? err.code : 'lỗi') + '). Nếu rules tk_orders chưa được phát hành trên Firebase Console thì đây là bình thường — phát hành rules xong danh sách sẽ hiện.';
+                ordersList.appendChild(p);
             });
 
             // ===== 💬 HỘP THƯ HỖ TRỢ (Firestore chats/{uid} + messages con) =====

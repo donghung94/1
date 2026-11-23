@@ -191,7 +191,13 @@
                     }
 
                     // 2. Xác định trạng thái Premium (Chỉ khai báo 1 lần duy nhất)
-                    const isPremium = data.isPremium === true || isAdmin;
+                    // Premium hiệu lực: isPremium === true VÀ còn hạn — premiumUntil
+                    // do webhook VietQR ghi (null/không có = trọn đời; Timestamp = hạn).
+                    // Nguồn sự thật DUY NHẤT là hồ sơ users/{uid} (web + app dùng chung).
+                    const premiumUntilMs = !data.premiumUntil ? null
+                        : (typeof data.premiumUntil.toMillis === 'function' ? data.premiumUntil.toMillis()
+                        : (typeof data.premiumUntil.seconds === 'number' ? data.premiumUntil.seconds * 1000 : null));
+                    const isPremium = (data.isPremium === true && (premiumUntilMs === null || premiumUntilMs > Date.now())) || isAdmin;
                     const userGroup = savedGroup || "1";
                     // Ghi tầng người dùng cho trang thi (exam.js): 'premium' | 'free' ('guest' ghi ở nhánh chưa đăng nhập)
                     localStorage.setItem('userTier', isPremium ? 'premium' : 'free');
@@ -370,10 +376,10 @@
         <!-- ============================
      code thông báo giá khóa học
 ============================ -->
-        <button onclick="document.getElementById('premium-modal').style.display='flex'"
-                style="background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;" data-i18n="btn_unlock_now">
+        <a href="premium.html"
+                style="display:block; text-align:center; background: #C8102E; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; text-decoration: none; box-sizing: border-box;" data-i18n="btn_unlock_now">
             Mở khóa toàn bộ ngay
-        </button>
+        </a>
         <p style="margin: 10px 0 0 0; font-size: 13px; color: #5A5A55; text-align: center;" data-i18n="free_limit_note">Tài khoản miễn phí: làm được 5 câu mỗi đề. Nâng cấp Premium để làm trọn bộ đề.</p>
     </div>
 </div>
@@ -739,6 +745,11 @@
 </div>
         
         <div style="display: flex; flex-direction: column; gap: 12px;">
+            <!-- Nút chính: mua Premium tự phục vụ bằng VietQR (premium.html) -->
+            <a href="premium.html" data-i18n="btn_buy_vietqr" style="background:#C8102E; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
+                ⭐ Mua Premium — thanh toán VietQR
+            </a>
+
             <a href="#" id="modal-zalo" target="_blank" data-i18n-html="modal_zalo_html" style="background:#0068ff; color:white; padding:12px; border-radius:10px; text-decoration:none; font-weight:bold; display:flex; align-items:center; justify-content:center; gap:12px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="24" height="24" style="border-radius:4px;">
                 Zalo số nhật 07090778422

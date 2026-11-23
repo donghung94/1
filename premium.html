@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title data-i18n-title="premium_title">⭐ Nâng cấp Premium – Toukutei 2</title>
+    <link rel="icon" href="icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
+    <style>
+        :root{
+            --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+            --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+            --red:#C8102E; --red-dark:#A50D26; --red-soft:#FDECEF;
+            --gold-pale:#F5D98A; --bronze:#C9A24B; --brown:#2A2118;
+            --cream:#FFF9EE; --cream-2:#FDEFD2;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: var(--bg); margin: 0; padding: 12px; color: var(--ink); }
+        .container { max-width: 640px; margin: auto; }
+        .g-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 14px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 9px 13px; border-radius: 999px; background: var(--card); border: 1.5px solid var(--bronze); color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .g-title { font-size: 21px; font-weight: 800; margin: 0; }
+        .step { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 18px; padding: 18px 16px; box-shadow: 0 3px 10px rgba(20,16,10,.06); margin-bottom: 14px; }
+        .step h2 { margin: 0 0 8px; font-size: 16.5px; font-weight: 800; color: var(--red-dark); line-height: 1.4; }
+        .step p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+        .step-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+        .step-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 14px; border-radius: 12px; background: var(--red); color: #fff; font-weight: 800; font-size: 14.5px; text-decoration: none; text-align: center; border: none; cursor: pointer; font-family: inherit; width: 100%; }
+        .step-btn:active { transform: translateY(1px); }
+        .step-btn[disabled] { opacity: .6; cursor: wait; }
+        .ghost-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 14px; border-radius: 12px; background: #fff; color: var(--ink-2); font-weight: 700; font-size: 13.5px; border: 1.5px solid var(--line); cursor: pointer; font-family: inherit; width: 100%; }
+        .pkg-card { margin-top: 14px; border: 2px solid var(--bronze); background: linear-gradient(160deg, var(--cream), var(--cream-2)); border-radius: 14px; padding: 18px 14px; text-align: center; }
+        .pkg-name { font-size: 17px; font-weight: 800; color: var(--brown); }
+        .pkg-price { font-size: 34px; font-weight: 800; color: var(--red); margin: 6px 0 2px; line-height: 1.1; }
+        .pkg-desc { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+        .pkg-note { margin-top: 10px; font-size: 12.5px; font-weight: 700; color: var(--ink-2); }
+        .pm-msg { margin-top: 12px; font-size: 13.5px; line-height: 1.55; min-height: 0; }
+        .pm-msg.err { color: var(--red-dark); font-weight: 700; }
+        .pm-msg.ok { color: #047857; font-weight: 700; }
+        .ck-card { border: 1.5px solid var(--line); border-radius: 12px; padding: 6px 12px; margin-top: 10px; }
+        .ck-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--line); font-size: 14px; }
+        .ck-row:first-child { border-top: none; }
+        .ck-k { color: var(--ink-3); font-weight: 700; flex: none; min-width: 92px; }
+        .ck-v { font-weight: 700; word-break: break-word; }
+        .ck-amount { color: var(--red); font-size: 16px; }
+        .ck-head { font-weight: 800; margin: 16px 0 4px; font-size: 14px; color: var(--ink); }
+        .ck-code { display: flex; align-items: center; gap: 10px; background: var(--brown); color: var(--gold-pale); border-radius: 12px; padding: 12px 14px; margin-top: 6px; }
+        .ck-code b { font-size: 16px; letter-spacing: .04em; word-break: break-all; flex: 1; }
+        .ck-copy { flex: none; background: #fff; color: var(--red); border: none; border-radius: 8px; padding: 7px 11px; font-weight: 800; font-size: 12.5px; cursor: pointer; font-family: inherit; }
+        .ck-copy.small { background: var(--red-soft); padding: 5px 9px; }
+        .ck-qr { text-align: center; margin-top: 14px; }
+        .ck-qr img { width: 240px; max-width: 80vw; height: auto; border: 1.5px solid var(--line); border-radius: 14px; background: #fff; }
+        .ck-qr p { margin-top: 8px; font-size: 12.5px; color: var(--ink-3); }
+        .ck-note { margin-top: 14px; background: var(--red-soft); border: 1px dashed var(--red); color: var(--red-dark); border-radius: 12px; padding: 12px 13px; font-size: 13px; line-height: 1.6; }
+        .ck-ok { margin-top: 14px; background: #ECFDF5; border: 1px solid #059669; color: #065F46; border-radius: 12px; padding: 12px 13px; font-size: 13.5px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="g-head">
+        <a class="back-link" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        <h1 class="g-title" data-i18n="premium_heading">⭐ Nâng cấp Premium</h1>
+    </div>
+
+    <!-- 🚫 GATE NATIVE (App Store 3.1.1): trong app bọc Capacitor KHÔNG hiện
+         luồng VietQR — chỉ hiện ghi chú mua trong ứng dụng. Premium gắn với
+         TÀI KHOẢN (users/{uid}.isPremium) nên mua ở web hay app đều mở cả hai. -->
+    <div class="step" id="pm-native" style="display:none">
+        <h2 data-i18n="premium_heading">⭐ Nâng cấp Premium</h2>
+        <p data-i18n="premium_native_note">Bạn đang mở trong ứng dụng — bản app dùng thanh toán trong ứng dụng (In-App Purchase) theo quy định của cửa hàng. Premium gắn với TÀI KHOẢN của bạn: nâng cấp ở bản web hay trong app đều mở khóa cho cả hai.</p>
+        <div class="step-btns">
+            <a class="step-btn" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        </div>
+    </div>
+
+    <div class="step" id="pm-loading">
+        <p>⏳ Đang kiểm tra tài khoản…</p>
+    </div>
+
+    <!-- Khách chưa đăng nhập: mua Premium bắt buộc có tài khoản + email -->
+    <div class="step" id="pm-login" style="display:none">
+        <h2 data-i18n="premium_heading">⭐ Nâng cấp Premium</h2>
+        <p data-i18n="premium_login_needed">Bạn cần đăng nhập để mua Premium — đơn hàng và quyền Premium gắn với tài khoản của bạn.</p>
+        <div class="step-btns">
+            <a class="step-btn" href="login.html" data-i18n="btn_login">Đăng nhập</a>
+        </div>
+    </div>
+
+    <!-- Cửa hàng: 1 gói duy nhất — Trọn đời 499.000₫ -->
+    <div class="step" id="pm-shop" style="display:none">
+        <h2 data-i18n="premium_heading">⭐ Nâng cấp Premium</h2>
+        <p data-i18n="premium_sub">Mở khóa toàn bộ đề thi và tính năng. Thanh toán một lần — dùng trọn đời, gắn với tài khoản của bạn (dùng chung bản web và app).</p>
+        <div class="pkg-card">
+            <div class="pkg-name" data-i18n="premium_pkg_name">Gói Trọn đời</div>
+            <div class="pkg-price" id="pm-price">499.000₫</div>
+            <div class="pkg-desc" data-i18n="premium_pkg_desc">Mở khóa vĩnh viễn · Không giới hạn thời gian · Cho 1 tài khoản</div>
+            <div class="pkg-note" data-i18n="premium_pay_note">Thanh toán bằng VietQR — chuyển khoản ngân hàng (VND)</div>
+        </div>
+        <p class="pm-msg" id="pm-msg"></p>
+        <div class="step-btns">
+            <button class="step-btn" id="pm-buy" type="button">Mua gói Trọn đời</button>
+        </div>
+    </div>
+
+    <!-- Đã Premium (trạng thái đọc TỪ HỒ SƠ users/{uid} — không từ localStorage) -->
+    <div class="step" id="pm-premium" style="display:none">
+        <h2 data-i18n="premium_heading">⭐ Nâng cấp Premium</h2>
+        <p id="pm-premium-text" data-i18n="premium_already">⭐ Bạn đang dùng Premium rồi — toàn bộ đề thi đã mở cho tài khoản của bạn.</p>
+        <div class="step-btns">
+            <a class="step-btn" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        </div>
+    </div>
+
+    <!-- Trang thanh toán của 1 đơn chờ (VietQR) -->
+    <div class="step" id="pm-checkout" style="display:none">
+        <h2 data-i18n="premium_order_title">Đơn hàng của bạn</h2>
+        <p id="pm-pending-note" data-i18n="premium_pending_note" style="display:none">Bạn đang có một đơn chờ thanh toán — hoàn tất chuyển khoản theo thông tin dưới đây:</p>
+        <div id="pm-ck-body"></div>
+    </div>
+</div>
+
+<script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    /* =====================================================================
+       THANH TOÁN VIETQR — TOKUTEI (bản WEB)
+       Sao theo đúng hợp đồng của Sora Kanji (sk_orders):
+         - nút mua -> tạo đơn Firestore tk_orders -> hiện VietQR + thông tin
+           chuyển khoản -> nút "Tôi đã chuyển khoản" CHỈ ghi nhận phía client;
+         - kích hoạt Premium do SePay webhook (backend) làm — CLIENT KHÔNG
+           TỰ MỞ PREMIUM; trang này biết tin qua onSnapshot hồ sơ users/{uid}.
+       ===================================================================== */
+
+    /* ===== HẰNG SỐ GÓI + NGÂN HÀNG — CHỈNH GIÁ/GÓI CHỈ Ở ĐÂY ===== */
+    const TK_PACKAGE_ID = 'lifetime';          // Tokutei chỉ bán 1 gói: Trọn đời
+    const TK_PREMIUM_PRICE_VND = 499000;       // 499.000₫ — giá cố định, không sale
+    const TK_BANK_ID = 'ICB';                  // VietinBank (mã VietQR)
+    const TK_BANK_LABEL = 'VietinBank';
+    const TK_BANK_ACC = '108888811513';        // cùng tài khoản với Sora Kanji
+    const TK_BANK_NAME = 'DONG THANH HUNG';
+    const TK_PENDING_KEY = 'tk_pending_order'; // đơn chờ lưu local (như sk_pending_order)
+
+    /* =====================================================================
+       HỢP ĐỒNG PREMIUM DÙNG CHUNG WEB + APP — KHÔNG ĐƯỢC PHÁ:
+       Premium CHỈ nằm ở hồ sơ Firestore users/{uid}:
+           isPremium: true  +  premiumUntil: null (trọn đời) | Timestamp (có hạn)
+       - Web (VietQR): SePay webhook ghi đúng 2 trường này khi tiền về.
+       - App native (IAP): << ĐIỂM GẮN IAP TƯƠNG LAI >> khi giao dịch trong
+         app thành công, BACKEND ghi ĐÚNG 2 trường này
+         (isPremium: true, premiumUntil: null) — giống hệt nhánh webhook
+         SePay. TUYỆT ĐỐI không tạo trạng thái Premium riêng cho native,
+         không dùng cờ local/localStorage để mở khóa.
+       - Mọi màn hình (web + app) suy ra Premium từ hồ sơ này, nên nâng cấp
+         ở một phía là mở khóa cả hai phía — không bao giờ lệch nhau.
+       Trang này KHÔNG đọc localStorage 'userTier'/'isPremium' (đó chỉ là
+       bản sao tạm do index/exam ghi từ hồ sơ); nguồn sự thật là hồ sơ.
+       ===================================================================== */
+    function tkPremiumUntilMs(data) {
+        const v = data ? data.premiumUntil : null;
+        if (v === null || v === undefined) return null;
+        if (typeof v.toMillis === 'function') { try { return v.toMillis(); } catch (e) { return null; } }
+        if (typeof v.seconds === 'number') return v.seconds * 1000;
+        if (typeof v === 'number') return v;
+        if (typeof v === 'string') { const t = Date.parse(v); return Number.isNaN(t) ? null : t; }
+        return null;
+    }
+    // Premium hiệu lực = isPremium === true VÀ (premiumUntil trống/null =
+    // trọn đời, hoặc còn hạn). Hồ sơ cũ không có premiumUntil -> vẫn Premium.
+    function tkEffectivePremium(data) {
+        if (!data || data.isPremium !== true) return false;
+        const ms = tkPremiumUntilMs(data);
+        return ms === null || ms > Date.now();
+    }
+
+    /* true khi chạy trong app bọc Capacitor (iOS/Android) — KHÔNG phải PWA
+       web. An toàn khi Capacitor vắng mặt (sao từ skIsNativeApp của Sora). */
+    function tkIsNativeApp() {
+        try {
+            return typeof window.Capacitor !== 'undefined' && window.Capacitor &&
+                typeof window.Capacitor.isNativePlatform === 'function' &&
+                !!window.Capacitor.isNativePlatform();
+        } catch (_) { return false; }
+    }
+
+    function tkTransferMemo(code) { return 'SEVQR ' + code; }
+    function tkVietQR(amount, memo) {
+        return 'https://img.vietqr.io/image/' + TK_BANK_ID + '-' + TK_BANK_ACC + '-compact2.png?amount=' + amount +
+            '&addInfo=' + encodeURIComponent(memo) + '&accountName=' + encodeURIComponent(TK_BANK_NAME);
+    }
+    function tkFmtVND(n) { return Number(n).toLocaleString('vi-VN') + '₫'; }
+    function esc(s) {
+        return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    /* Mã đơn: "TK" + 8 ký tự [A-Z0-9] (crypto) — tiền tố TK phân biệt đơn
+       Tokutei với đơn SK của Sora trong cùng tài khoản ngân hàng/SePay. */
+    function tkGenOrderCode() {
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const buf = new Uint8Array(8);
+        if (window.crypto && window.crypto.getRandomValues) window.crypto.getRandomValues(buf);
+        else for (let i = 0; i < 8; i++) buf[i] = Math.floor(Math.random() * 256);
+        let out = 'TK';
+        for (let j = 0; j < 8; j++) out += chars.charAt(buf[j] % 36);
+        return out;
+    }
+
+    function tkPendingLoad() {
+        try {
+            const o = JSON.parse(localStorage.getItem(TK_PENDING_KEY) || 'null');
+            return (o && o.code && o.uid) ? o : null;
+        } catch (_) { return null; }
+    }
+    function tkPendingSave(o) { try { localStorage.setItem(TK_PENDING_KEY, JSON.stringify(o)); } catch (_) {} }
+    function tkPendingClear() { try { localStorage.removeItem(TK_PENDING_KEY); } catch (_) {} }
+
+    function copyText(text, okMsg) {
+        const done = () => showMsg(okMsg, true);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(() => { fallbackCopy(text); done(); });
+        } else { fallbackCopy(text); done(); }
+    }
+    function fallbackCopy(text) {
+        try {
+            const ta = document.createElement('textarea');
+            ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+            document.body.appendChild(ta); ta.select();
+            document.execCommand('copy'); document.body.removeChild(ta);
+        } catch (_) {}
+    }
+
+    /* ==================== TRẠNG THÁI TRANG ==================== */
+    const SECTIONS = ['pm-native', 'pm-loading', 'pm-login', 'pm-shop', 'pm-premium', 'pm-checkout'];
+    function showSection(id) {
+        SECTIONS.forEach(s => { const el = document.getElementById(s); if (el) el.style.display = (s === id) ? 'block' : 'none'; });
+    }
+    function showMsg(text, ok) {
+        const m = document.getElementById('pm-ck-msg') || document.getElementById('pm-msg');
+        if (!m) return;
+        m.textContent = text || '';
+        m.className = 'pm-msg' + (text ? (ok ? ' ok' : ' err') : '');
+    }
+    function shopMsg(text, isErr) {
+        const m = document.getElementById('pm-msg');
+        if (!m) return;
+        m.textContent = text || '';
+        m.className = 'pm-msg' + (text ? (isErr ? ' err' : ' ok') : '');
+    }
+
+    let currentUser = null;      // Firebase Auth user
+    let currentProfile = null;   // users/{uid} (nguồn sự thật cho Premium)
+    let creatingOrder = false;
+
+    function profileEmail() {
+        return (currentProfile && currentProfile.email) || (currentUser && currentUser.email) || '';
+    }
+    function profileName() {
+        return (currentProfile && currentProfile.name) || (currentUser && currentUser.displayName) || 'Học viên';
+    }
+    function isPremiumNow() {
+        // Admin được gộp vào Premium như index/exam (role nằm trong hồ sơ).
+        return tkEffectivePremium(currentProfile) || (currentProfile && currentProfile.role === 'admin');
+    }
+
+    /* Tạo doc tk_orders/{code} theo hợp đồng backend. Rules cấm client ĐỌC
+       tk_orders nên không kiểm tra trùng bằng get() được: set() trùng mã sẽ
+       bị chặn dạng update (permission-denied) -> sinh mã mới, tối đa 3 lần
+       (đúng luật của Sora). Tài khoản chưa có email thì reject 'no-email'. */
+    async function tkCreateOrder(attempt) {
+        attempt = attempt || 1;
+        const email = profileEmail();
+        if (!email) throw new Error('no-email');
+        const code = tkGenOrderCode();
+        const data = {
+            uid: currentUser.uid,
+            email: email,
+            displayName: profileName(),
+            package: TK_PACKAGE_ID,
+            amount: TK_PREMIUM_PRICE_VND,
+            status: 'pending',
+            createdAt: serverTimestamp()
+        };
+        if (currentProfile && currentProfile.memberCode) data.memberCode = currentProfile.memberCode;
+        try {
+            await setDoc(doc(db, 'tk_orders', code), data);
+            return code;
+        } catch (err) {
+            if (attempt < 3 && err && err.code === 'permission-denied') return tkCreateOrder(attempt + 1);
+            throw err;
+        }
+    }
+
+    async function startCheckout() {
+        if (creatingOrder) return;
+        if (isPremiumNow()) { renderPremium(false); return; }
+        if (!profileEmail()) { shopMsg(t('premium_no_email'), true); return; }
+        const pend = tkPendingLoad();
+        if (pend && pend.uid === currentUser.uid) { renderCheckout(pend, true); return; }
+        if (pend) tkPendingClear(); // đơn chờ của tài khoản khác
+        creatingOrder = true;
+        const btn = document.getElementById('pm-buy');
+        if (btn) { btn.disabled = true; btn.textContent = t('premium_creating'); }
+        shopMsg('', false);
+        try {
+            const code = await tkCreateOrder(1);
+            const order = { code: code, amount: TK_PREMIUM_PRICE_VND, uid: currentUser.uid, ack: false };
+            tkPendingSave(order);
+            renderCheckout(order, false);
+        } catch (err) {
+            shopMsg((err && err.message === 'no-email') ? t('premium_no_email')
+                : t('premium_create_err') + (err && err.code ? ' (' + err.code + ')' : ''), true);
+        } finally {
+            creatingOrder = false;
+            if (btn) { btn.disabled = false; btn.textContent = t('premium_buy_btn'); }
+        }
+    }
+
+    function row(labelKey, valueNode) {
+        const r = document.createElement('div'); r.className = 'ck-row';
+        const k = document.createElement('span'); k.className = 'ck-k'; k.textContent = t(labelKey);
+        const v = document.createElement('span'); v.className = 'ck-v';
+        if (typeof valueNode === 'string') v.textContent = valueNode; else v.appendChild(valueNode);
+        r.appendChild(k); r.appendChild(v);
+        return r;
+    }
+    function copyBtn(text, okKey) {
+        const b = document.createElement('button');
+        b.className = 'ck-copy small'; b.type = 'button'; b.textContent = t('premium_copy');
+        b.addEventListener('click', () => copyText(text, t(okKey)));
+        return b;
+    }
+    function withCopy(text, okKey) {
+        const span = document.createElement('span');
+        span.appendChild(document.createTextNode(text + ' '));
+        span.appendChild(copyBtn(text, okKey));
+        return span;
+    }
+
+    /* Vẽ trang thanh toán cho 1 đơn chờ (đơn vừa tạo hoặc mở lại từ
+       localStorage): tóm tắt đơn, mã VietQR, chuyển khoản thủ công, nút
+       "Tôi đã chuyển khoản" / "Kiểm tra lại trạng thái". */
+    function renderCheckout(o, restored) {
+        showSection('pm-checkout');
+        document.getElementById('pm-pending-note').style.display = restored ? 'block' : 'none';
+        const body = document.getElementById('pm-ck-body');
+        body.innerHTML = '';
+        const memo = tkTransferMemo(o.code);
+
+        const card = document.createElement('div'); card.className = 'ck-card';
+        card.appendChild(row('premium_col_package', t('premium_pkg_name')));
+        const amtRow = row('premium_col_amount', tkFmtVND(o.amount));
+        amtRow.querySelector('.ck-v').classList.add('ck-amount');
+        card.appendChild(amtRow);
+        card.appendChild(row('premium_col_account', profileEmail() || profileName()));
+        body.appendChild(card);
+
+        const memoHead = document.createElement('p'); memoHead.className = 'ck-head'; memoHead.textContent = t('premium_memo_head');
+        body.appendChild(memoHead);
+        const codeBox = document.createElement('div'); codeBox.className = 'ck-code';
+        const codeB = document.createElement('b'); codeB.textContent = memo;
+        const codeCopy = document.createElement('button');
+        codeCopy.className = 'ck-copy'; codeCopy.type = 'button'; codeCopy.textContent = t('premium_copy');
+        codeCopy.addEventListener('click', () => copyText(memo, t('premium_copied_memo')));
+        codeBox.appendChild(codeB); codeBox.appendChild(codeCopy);
+        body.appendChild(codeBox);
+
+        const qrWrap = document.createElement('div'); qrWrap.className = 'ck-qr';
+        const img = document.createElement('img');
+        img.src = tkVietQR(o.amount, memo);
+        img.alt = 'VietQR — ' + memo;
+        const qrNote = document.createElement('p'); qrNote.textContent = t('premium_qr_note');
+        qrWrap.appendChild(img); qrWrap.appendChild(qrNote);
+        body.appendChild(qrWrap);
+
+        const manHead = document.createElement('p'); manHead.className = 'ck-head'; manHead.textContent = t('premium_manual_head');
+        body.appendChild(manHead);
+        const man = document.createElement('div'); man.className = 'ck-card';
+        man.appendChild(row('premium_col_bank', TK_BANK_LABEL));
+        man.appendChild(row('premium_col_holder', TK_BANK_NAME));
+        man.appendChild(row('premium_col_accno', withCopy(TK_BANK_ACC, 'premium_copied_acc')));
+        man.appendChild(row('premium_col_amount', withCopy(String(o.amount), 'premium_copied_amt')));
+        man.appendChild(row('premium_col_memo', memo));
+        body.appendChild(man);
+
+        const warn = document.createElement('div'); warn.className = 'ck-note'; warn.textContent = t('premium_warn');
+        body.appendChild(warn);
+
+        const btns = document.createElement('div'); btns.className = 'step-btns';
+        if (o.ack) {
+            const ok = document.createElement('div'); ok.className = 'ck-ok'; ok.textContent = t('premium_ack');
+            body.appendChild(ok);
+            const re = document.createElement('button');
+            re.className = 'ghost-btn'; re.type = 'button'; re.textContent = t('premium_recheck_btn');
+            re.addEventListener('click', async () => {
+                showMsg(t('premium_checking'), true);
+                try {
+                    const snap = await getDoc(doc(db, 'users', currentUser.uid));
+                    currentProfile = snap.exists() ? snap.data() : currentProfile;
+                } catch (e) { /* listener onSnapshot vẫn đang chạy nền */ }
+                if (isPremiumNow()) renderPremium(true);
+                else showMsg(t('premium_not_yet'), true);
+            });
+            btns.appendChild(re);
+        } else {
+            const paid = document.createElement('button');
+            paid.className = 'step-btn'; paid.type = 'button'; paid.textContent = t('premium_paid_btn');
+            paid.addEventListener('click', () => {
+                /* "Tôi đã chuyển khoản" CHỈ ghi nhận phía client — KHÔNG tự mở
+                   Premium; kích hoạt do SePay webhook thực hiện, trang này
+                   biết qua onSnapshot hồ sơ (giống hệt Sora). */
+                o.ack = true;
+                tkPendingSave(o);
+                renderCheckout(o, restored);
+            });
+            btns.appendChild(paid);
+        }
+        const cancel = document.createElement('button');
+        cancel.className = 'ghost-btn'; cancel.type = 'button'; cancel.textContent = t('premium_cancel_order');
+        cancel.addEventListener('click', () => { tkPendingClear(); renderShop(); });
+        btns.appendChild(cancel);
+        body.appendChild(btns);
+
+        const msg = document.createElement('p');
+        msg.className = 'pm-msg'; msg.id = 'pm-ck-msg';
+        body.appendChild(msg);
+    }
+
+    function renderShop() {
+        showSection('pm-shop');
+        document.getElementById('pm-price').textContent = tkFmtVND(TK_PREMIUM_PRICE_VND);
+        document.getElementById('pm-buy').textContent = t('premium_buy_btn');
+        shopMsg('', false);
+    }
+    function renderPremium(justActivated) {
+        tkPendingClear();
+        const txt = document.getElementById('pm-premium-text');
+        if (txt) txt.textContent = t(justActivated ? 'premium_success' : 'premium_already');
+        showSection('pm-premium');
+    }
+
+    /* ==================== KHỞI TẠO ==================== */
+    // GATE NATIVE: ẩn toàn bộ luồng VietQR trong app bọc (xem ghi chú ở đầu trang).
+    if (tkIsNativeApp()) {
+        showSection('pm-native');
+    } else {
+        document.getElementById('pm-buy').addEventListener('click', startCheckout);
+        onAuthStateChanged(auth, (user) => {
+            currentUser = user || null;
+            if (!user) { showSection('pm-login'); return; }
+            showSection('pm-loading');
+            // Premium đọc TRỰC TIẾP từ hồ sơ (realtime): webhook ghi isPremium
+            // là trang này tự lật sang trạng thái thành công, không cần tải lại.
+            onSnapshot(doc(db, 'users', user.uid), (snap) => {
+                currentProfile = snap.exists() ? snap.data() : null;
+                if (isPremiumNow()) {
+                    const pend = tkPendingLoad();
+                    renderPremium(!!(pend && pend.uid === user.uid));
+                    return;
+                }
+                const pend = tkPendingLoad();
+                if (pend && pend.uid === user.uid) renderCheckout(pend, true);
+                else { if (pend) tkPendingClear(); renderShop(); }
+            }, () => { renderShop(); });
+        });
+    }
+</script>
+</body>
+</html>

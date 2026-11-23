@@ -17,8 +17,8 @@
     vi: {
       app_tagline: 'Luyện thi Kỹ năng đặc định số 2',
       /* login */
-      login_title: 'Đăng nhập – Toukutei Gino 2',
-      login_heading: '🔒 Đăng nhập Quiz App',
+      login_title: 'Đăng nhập – Tokutei Kensetsu',
+      login_heading: '🔒 Đăng nhập Tokutei Kensetsu',
       ph_password: 'Mật khẩu',
       btn_login: 'Đăng nhập',
       btn_register: 'Đăng ký tài khoản',
@@ -37,7 +37,7 @@
       forgot_not_found: 'Không tìm thấy tài khoản với email này. Hãy kiểm tra lại địa chỉ email, hoặc thử đăng nhập bằng Google.',
       google_redirect_incomplete: '⚠️ Đăng nhập Google chưa hoàn tất. Vui lòng thử lại — và hãy mở app trong tab trình duyệt trực tiếp (Chrome/Safari), không mở trong trình duyệt của ứng dụng khác (Zalo, Facebook...).',
       /* register */
-      reg_title: 'Đăng ký học viên - Toukutei 2',
+      reg_title: 'Đăng ký học viên - Tokutei Kensetsu',
       reg_heading: 'Đăng Ký Thành Viên',
       label_name: 'Họ và tên',
       ph_name: 'Nhập tên của bạn',
@@ -199,7 +199,7 @@
       /* premium (VietQR) */
       btn_buy_vietqr: '⭐ Mua Premium — thanh toán VietQR',
       btn_upgrade_zalo: '💬 Hỏi Admin qua Zalo',
-      premium_title: '⭐ Nâng cấp Premium – Toukutei 2',
+      premium_title: '⭐ Nâng cấp Premium – Tokutei Kensetsu',
       premium_heading: '⭐ Nâng cấp Premium',
       premium_sub: 'Mở khóa toàn bộ đề thi và tính năng. Thanh toán một lần — dùng trọn đời, gắn với tài khoản của bạn (dùng chung bản web và app).',
       premium_pkg_name: 'Gói Trọn đời',
@@ -239,8 +239,8 @@
     },
     id: {
       app_tagline: 'Latihan ujian Keterampilan Khusus No. 2',
-      login_title: 'Masuk – Toukutei Gino 2',
-      login_heading: '🔒 Masuk ke Quiz App',
+      login_title: 'Masuk – Tokutei Kensetsu',
+      login_heading: '🔒 Masuk ke Tokutei Kensetsu',
       ph_password: 'Kata sandi',
       btn_login: 'Masuk',
       btn_register: 'Daftar akun',
@@ -258,7 +258,7 @@
       forgot_sent: '✅ Email atur ulang kata sandi telah dikirim. Silakan periksa kotak masuk Anda (termasuk folder Spam) dan ikuti petunjuk di email untuk membuat kata sandi baru.',
       forgot_not_found: 'Tidak ditemukan akun dengan email ini. Silakan periksa kembali alamat email Anda, atau coba masuk dengan Google.',
       google_redirect_incomplete: '⚠️ Proses masuk dengan Google belum selesai. Silakan coba lagi — dan buka aplikasi di tab browser langsung (Chrome/Safari), bukan di browser dalam aplikasi lain (Zalo, Facebook...).',
-      reg_title: 'Pendaftaran siswa - Toukutei 2',
+      reg_title: 'Pendaftaran siswa - Tokutei Kensetsu',
       reg_heading: 'Daftar Anggota',
       label_name: 'Nama lengkap',
       ph_name: 'Masukkan nama Anda',
@@ -411,7 +411,7 @@
       /* premium (VietQR) */
       btn_buy_vietqr: '⭐ Beli Premium — bayar dengan VietQR',
       btn_upgrade_zalo: '💬 Tanya Admin via Zalo',
-      premium_title: '⭐ Upgrade Premium – Toukutei 2',
+      premium_title: '⭐ Upgrade Premium – Tokutei Kensetsu',
       premium_heading: '⭐ Upgrade Premium',
       premium_sub: 'Buka semua set soal dan fitur. Sekali bayar — berlaku seumur hidup, terikat pada akun Anda (dipakai bersama versi web dan aplikasi).',
       premium_pkg_name: 'Paket Seumur Hidup',
@@ -451,8 +451,8 @@
     },
     en: {
       app_tagline: 'Specified Skilled Worker No. 2 exam practice',
-      login_title: 'Log in – Toukutei Gino 2',
-      login_heading: '🔒 Log in to Quiz App',
+      login_title: 'Log in – Tokutei Kensetsu',
+      login_heading: '🔒 Log in to Tokutei Kensetsu',
       ph_password: 'Password',
       btn_login: 'Log in',
       btn_register: 'Create account',
@@ -470,7 +470,7 @@
       forgot_sent: '✅ Password reset email sent. Please check your inbox (including the Spam folder) and follow the instructions in the email to set a new password.',
       forgot_not_found: 'No account was found for this email. Please double-check the email address, or try signing in with Google.',
       google_redirect_incomplete: '⚠️ Google sign-in did not complete. Please try again — and open the app in a direct browser tab (Chrome/Safari), not inside another app\'s in-app browser (Zalo, Facebook...).',
-      reg_title: 'Student registration - Toukutei 2',
+      reg_title: 'Student registration - Tokutei Kensetsu',
       reg_heading: 'Member Registration',
       label_name: 'Full name',
       ph_name: 'Enter your name',
@@ -623,7 +623,7 @@
       /* premium (VietQR) */
       btn_buy_vietqr: '⭐ Buy Premium — pay with VietQR',
       btn_upgrade_zalo: '💬 Ask Admin on Zalo',
-      premium_title: '⭐ Upgrade to Premium – Toukutei 2',
+      premium_title: '⭐ Upgrade to Premium – Tokutei Kensetsu',
       premium_heading: '⭐ Upgrade to Premium',
       premium_sub: 'Unlock every exam set and feature. One payment — lifetime use, tied to your account (shared between the web and the app).',
       premium_pkg_name: 'Lifetime plan',

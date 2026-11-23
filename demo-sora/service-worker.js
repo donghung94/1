@@ -1,7 +1,7 @@
 const CACHE_NAME = 'dh-quiz-v3';
 self.addEventListener('install', e=>{
   e.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll([
-    './index.html','./exam.html','./style.css','./exam.js','./questions.js','./manifest.json','./icon-192.png','./icon-512.png','./login.html','./i18n.js','./language.html','./premium.html','./dang-ky.html'
+    './index.html','./exam.html','./style.css','./exam.js','./questions.js','./manifest.json','./icon-192.png','./icon-512.png','./login.html','./i18n.js','./language.html','./premium.html','./dang-ky.html','./tu-vung.html','./vocab-data.js'
   ])).then(()=>self.skipWaiting()));
 });
 self.addEventListener('activate', e=>{

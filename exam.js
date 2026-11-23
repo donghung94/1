@@ -174,6 +174,9 @@
       // Sổ câu sai sống CÙNG object exam_progress (không thêm field Firestore mới):
       // wrong: { <setKey>: { <qid>: { n: số lần sai, at: mốc sai gần nhất } } }
       if (raw.wrong && typeof raw.wrong === 'object') out.wrong = raw.wrong;
+      // Từ vựng đã thuộc (trang tu-vung.html ghi cùng object): giữ lại khi chuẩn hóa,
+      // tránh lần lưu tiến trình bài thi ghi đè mất vocabKnown.
+      if (Array.isArray(raw.vocabKnown)) out.vocabKnown = raw.vocabKnown;
       // Hồ sơ cũ dạng khung {doboku: 0, kenchiku: 0} -> coi như chưa có tiến trình.
     }
     return out;

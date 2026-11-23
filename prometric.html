@@ -296,6 +296,7 @@
             if (raw.sets && typeof raw.sets === 'object') out.sets = raw.sets;
             if (Array.isArray(raw.mockHistory)) out.mockHistory = raw.mockHistory;
             if (raw.wrong && typeof raw.wrong === 'object') out.wrong = raw.wrong;
+            if (Array.isArray(raw.vocabKnown)) out.vocabKnown = raw.vocabKnown; // giữ từ vựng đã thuộc (tu-vung.html)
         }
         return out;
     }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Từ vựng cần nhớ - Tokutei Kensetsu</title>
+    <link rel="icon" href="../icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="i18n.js"></script>
+    <script src="vocab-data.js"></script>
+    <style>
+        :root{
+            --bg:#F4F4F1; --card:#FFFFFF; --line:#E7E7E0;
+            --ink:#191919; --ink-2:#5A5A55; --ink-3:#8B8B84;
+            --red:#C8102E; --red-dark:#A50D26;
+            --bronze:#C9A24B; --cream:#FFF9EE; --cream-2:#FDEFD2;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: var(--bg); margin: 0; padding: 12px; color: var(--ink); }
+        .container { max-width: 640px; margin: auto; }
+        .g-head { display: flex; align-items: center; gap: 12px; margin: 4px 0 10px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; padding: 9px 13px; border-radius: 999px; background: var(--card); border: 1.5px solid var(--bronze); color: var(--red); font-weight: 700; font-size: 13px; text-decoration: none; white-space: nowrap; }
+        .g-title { font-size: 20px; font-weight: 800; margin: 0; line-height: 1.3; }
+        .v-count { margin: 0 2px 12px; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+        .v-progress { margin: 0 2px 12px; font-size: 13.5px; font-weight: 700; color: var(--red-dark); }
+        .v-controls { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 6px 0 10px; }
+        .v-search { width: 100%; padding: 12px 14px; border: 1.5px solid var(--bronze); border-radius: 12px; font: inherit; font-size: 14.5px; background: var(--card); color: var(--ink); }
+        .v-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .v-chip { padding: 8px 13px; border-radius: 999px; border: 1.5px solid var(--bronze); background: var(--card); color: var(--ink); font: inherit; font-weight: 700; font-size: 13px; cursor: pointer; }
+        .v-chip.on { background: var(--red); border-color: var(--red); color: #fff; }
+        .v-modes { display: flex; gap: 8px; margin-top: 10px; }
+        .v-mode { flex: 1; padding: 10px; border-radius: 12px; border: 1.5px solid var(--bronze); background: var(--card); color: var(--ink); font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; }
+        .v-mode.on { background: var(--red); border-color: var(--red); color: #fff; }
+        .v-row { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 16px; padding: 13px 15px; box-shadow: 0 3px 10px rgba(20,16,10,.06); margin-bottom: 10px; }
+        .v-row.known { opacity: .62; }
+        .v-term { font-size: 20px; font-weight: 800; line-height: 1.5; }
+        .v-term rt { color: #191919; font-size: 11.5px; font-weight: 700; }
+        .v-meaning { margin-top: 3px; font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
+        .v-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+        .v-tag { font-size: 11.5px; font-weight: 800; border-radius: 999px; padding: 3px 9px; }
+        .v-tag.ans { background: #E7F6EC; color: #177245; }
+        .v-tag.tip { background: var(--cream-2); color: #8A6414; }
+        .v-src { font-size: 12px; color: var(--ink-3); }
+        .v-known-btn { margin-left: auto; padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--bronze); background: var(--card); font: inherit; font-size: 12.5px; font-weight: 800; color: var(--ink); cursor: pointer; }
+        .v-known-btn.on { background: #177245; border-color: #177245; color: #fff; }
+        .v-empty { text-align: center; color: var(--ink-3); font-size: 14px; padding: 28px 10px; }
+        /* flashcard */
+        .fc-wrap { margin-top: 4px; }
+        .fc-card { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 20px; min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px 18px; box-shadow: 0 3px 10px rgba(20,16,10,.06); cursor: pointer; }
+        .fc-term { font-size: 34px; font-weight: 800; line-height: 1.6; }
+        .fc-term rt { color: #191919; font-size: 15px; font-weight: 700; }
+        .fc-meaning { font-size: 19px; font-weight: 700; line-height: 1.6; color: var(--red-dark); }
+        .fc-hint { margin-top: 12px; font-size: 12.5px; color: var(--ink-3); }
+        .fc-pos { text-align: center; font-size: 13px; font-weight: 700; color: var(--ink-2); margin: 12px 0 10px; }
+        .fc-btns { display: flex; gap: 10px; }
+        .fc-btn { flex: 1; padding: 14px; border-radius: 12px; border: none; font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; color: #fff; }
+        .fc-btn.known { background: #177245; }
+        .fc-btn.unknown { background: var(--red); }
+        .fc-btn:active { transform: translateY(1px); }
+        .v-done { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 16px; padding: 22px 16px; text-align: center; font-size: 15.5px; font-weight: 800; color: #177245; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="g-head">
+        <a class="back-link" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
+        <h1 class="g-title" data-i18n="vocab_title">📚 Từ vựng cần nhớ</h1>
+    </div>
+    <p class="v-count" id="vocab-count"></p>
+    <p class="v-progress" id="vocab-progress"></p>
+
+    <div class="v-controls">
+        <input class="v-search" id="vocab-search" type="search" data-i18n-ph="vocab_search_ph" placeholder="Tìm từ, cách đọc hoặc nghĩa…">
+        <div class="v-chips" id="vocab-chips">
+            <button class="v-chip on" data-filter="all" data-i18n="vocab_filter_all">Tất cả</button>
+            <button class="v-chip" data-filter="answer" data-i18n="vocab_filter_answer">Đáp án đúng</button>
+            <button class="v-chip" data-filter="tip" data-i18n="vocab_filter_tip">Mẹo nhớ</button>
+            <button class="v-chip" data-filter="unknown" data-i18n="vocab_filter_unknown">Chưa thuộc</button>
+        </div>
+        <div class="v-modes">
+            <button class="v-mode on" id="mode-list" data-i18n="vocab_mode_list">☰ Danh sách</button>
+            <button class="v-mode" id="mode-cards" data-i18n="vocab_mode_cards">🃏 Thẻ học</button>
+        </div>
+    </div>
+
+    <div id="vocab-list"></div>
+
+    <div class="fc-wrap" id="vocab-cards" style="display:none">
+        <div class="fc-card" id="fc-card"></div>
+        <div class="fc-pos" id="fc-pos"></div>
+        <div class="fc-btns">
+            <button class="fc-btn unknown" id="fc-unknown" data-i18n="vocab_btn_unknown">↻ Chưa thuộc</button>
+            <button class="fc-btn known" id="fc-known" data-i18n="vocab_btn_known">✓ Đã thuộc</button>
+        </div>
+    </div>
+    <div class="v-done" id="vocab-done" style="display:none" data-i18n="vocab_all_known">🎉 Bạn đã thuộc hết các từ trong mục này!</div>
+</div>
+
+<script>
+// ===== TRANG TỪ VỰNG CẦN NHỚ =====
+// Dữ liệu: vocab-data.js (window.VOCAB) — CHỈ gồm từ gắn với ĐÁP ÁN ĐÚNG hoặc
+// MẸO NHỚ của 730 câu (quy tắc anh chốt 2026-11-23), gloss từ mục "Từ vựng:"
+// trong explain toàn ngân hàng.
+// Tiến độ "đã thuộc": học viên -> Firestore users/{uid}.exam_progress.vocabKnown
+// (module xác thực bên dưới cấp qua window.__vocabAuth); khách -> localStorage
+// 'vocab_known_guest'. Mở cho mọi tầng — không khóa Premium.
+(function () {
+    var VOCAB = Array.isArray(window.VOCAB) ? window.VOCAB : [];
+    var keyOf = function (e) { return e.t + '|' + e.r; };
+    var known = new Set();
+    try { (JSON.parse(localStorage.getItem('vocab_known_guest') || '[]') || []).forEach(function (k) { known.add(k); }); } catch (e) {}
+    var persistMode = 'guest'; // 'guest' | 'local' | 'firestore'
+    var localKey = 'vocab_known_guest';
+    var saveTimer = null;
+    function persist() {
+        if (saveTimer) clearTimeout(saveTimer);
+        saveTimer = setTimeout(function () {
+            var arr = Array.from(known);
+            if (persistMode === 'firestore' && window.__vocabAuthSave) { window.__vocabAuthSave(arr); }
+            else { try { localStorage.setItem(localKey, JSON.stringify(arr)); } catch (e) {} }
+        }, 350);
+    }
+    // Module xác thực gọi khi biết danh tính: nạp danh sách đã thuộc từ kho đúng.
+    window.__vocabAuthLoad = function (mode, arr, key) {
+        persistMode = mode; if (key) localKey = key;
+        known = new Set(Array.isArray(arr) ? arr : []);
+        cardIdx = 0; flipped = false;
+        render();
+    };
+
+    var filter = 'all', query = '', mode = 'list';
+    var cardIdx = 0, flipped = false;
+    var listEl = document.getElementById('vocab-list');
+    var cardsEl = document.getElementById('vocab-cards');
+    var doneEl = document.getElementById('vocab-done');
+    var fcCard = document.getElementById('fc-card');
+    var fcPos = document.getElementById('fc-pos');
+
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+    function termHtml(e) {
+        if (e.r && e.r !== e.t) return '<ruby>' + esc(e.t) + '<rt>' + esc(e.r) + '</rt></ruby>';
+        return esc(e.t);
+    }
+    function tagsHtml(e) {
+        var h = '';
+        if (e.tags.indexOf('answer') >= 0) h += '<span class="v-tag ans">' + esc(t('vocab_tag_answer')) + '</span>';
+        if (e.tags.indexOf('tip') >= 0) h += '<span class="v-tag tip">' + esc(t('vocab_tag_tip')) + '</span>';
+        return h;
+    }
+    function currentSet() {
+        var q = query.trim().toLowerCase();
+        return VOCAB.filter(function (e) {
+            if (filter === 'answer' && e.tags.indexOf('answer') < 0) return false;
+            if (filter === 'tip' && e.tags.indexOf('tip') < 0) return false;
+            if (filter === 'unknown' && known.has(keyOf(e))) return false;
+            if (q && e.t.toLowerCase().indexOf(q) < 0 && e.r.toLowerCase().indexOf(q) < 0 && e.m.toLowerCase().indexOf(q) < 0) return false;
+            return true;
+        });
+    }
+    function renderProgress(set) {
+        document.getElementById('vocab-count').textContent = t('vocab_count', { n: VOCAB.length });
+        var knownInSet = VOCAB.filter(function (e) { return known.has(keyOf(e)); }).length;
+        document.getElementById('vocab-progress').textContent = t('vocab_known_progress', { x: knownInSet, n: VOCAB.length });
+    }
+    function renderList(set) {
+        if (!set.length) { listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; return; }
+        listEl.innerHTML = set.map(function (e) {
+            var k = keyOf(e), isK = known.has(k);
+            return '<div class="v-row' + (isK ? ' known' : '') + '">' +
+                '<div class="v-term">' + termHtml(e) + '</div>' +
+                '<div class="v-meaning">' + esc(e.m) + '</div>' +
+                '<div class="v-meta">' + tagsHtml(e) +
+                (e.src && e.src[0] ? '<span class="v-src">' + esc(t('vocab_src_label')) + ': ' + esc(e.src[0]) + '</span>' : '') +
+                '<button class="v-known-btn' + (isK ? ' on' : '') + '" data-key="' + esc(k) + '">' + (isK ? esc(t('vocab_btn_known')) : esc(t('vocab_btn_unknown'))) + '</button>' +
+                '</div></div>';
+        }).join('');
+    }
+    function renderCards(set) {
+        if (!set.length) { cardsEl.style.display = 'none'; doneEl.style.display = 'none'; listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; return; }
+        if (cardIdx >= set.length) cardIdx = 0;
+        var e = set[cardIdx];
+        fcCard.innerHTML = flipped
+            ? '<div class="fc-meaning">' + esc(e.m) + '</div><div class="v-meta" style="justify-content:center">' + tagsHtml(e) + '</div>' + (e.src && e.src[0] ? '<div class="fc-hint">' + esc(t('vocab_src_label')) + ': ' + esc(e.src[0]) + '</div>' : '')
+            : '<div class="fc-term">' + termHtml(e) + '</div><div class="fc-hint">' + esc(t('vocab_card_hint')) + '</div>';
+        fcPos.textContent = t('vocab_card_pos', { x: cardIdx + 1, n: set.length });
+    }
+    function render() {
+        var set = currentSet();
+        renderProgress(set);
+        var allKnown = VOCAB.length > 0 && set.length > 0 && set.every(function (e) { return known.has(keyOf(e)); });
+        doneEl.style.display = (mode === 'cards' && allKnown && filter !== 'unknown') ? 'block' : 'none';
+        if (mode === 'list') { cardsEl.style.display = 'none'; listEl.style.display = 'block'; renderList(set); }
+        else { listEl.style.display = 'none'; cardsEl.style.display = allKnown && filter !== 'unknown' ? 'none' : 'block'; renderCards(set); }
+    }
+    listEl.addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.v-known-btn'); if (!btn) return;
+        var k = btn.getAttribute('data-key');
+        if (known.has(k)) known.delete(k); else known.add(k);
+        persist(); render();
+    });
+    document.getElementById('vocab-search').addEventListener('input', function (ev) { query = ev.target.value; cardIdx = 0; flipped = false; render(); });
+    document.getElementById('vocab-chips').addEventListener('click', function (ev) {
+        var chip = ev.target.closest('.v-chip'); if (!chip) return;
+        filter = chip.getAttribute('data-filter');
+        document.querySelectorAll('.v-chip').forEach(function (c) { c.classList.toggle('on', c === chip); });
+        cardIdx = 0; flipped = false; render();
+    });
+    document.getElementById('mode-list').addEventListener('click', function () { mode = 'list'; this.classList.add('on'); document.getElementById('mode-cards').classList.remove('on'); render(); });
+    document.getElementById('mode-cards').addEventListener('click', function () { mode = 'cards'; this.classList.add('on'); document.getElementById('mode-list').classList.remove('on'); cardIdx = 0; flipped = false; render(); });
+    fcCard.addEventListener('click', function () { flipped = !flipped; render(); });
+    function mark(isKnown) {
+        var set = currentSet(); if (!set.length) return;
+        var e = set[cardIdx]; if (!e) return;
+        if (isKnown) known.add(keyOf(e)); else known.delete(keyOf(e));
+        persist();
+        flipped = false;
+        if (cardIdx < set.length - 1) cardIdx++;
+        render();
+    }
+    document.getElementById('fc-known').addEventListener('click', function () { mark(true); });
+    document.getElementById('fc-unknown').addEventListener('click', function () { mark(false); });
+    render();
+})();
+</script>
+
+<script type="module">
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+    import { doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+    // Cầu nối tiến độ "đã thuộc từ vựng" cho script chính ở trên:
+    // - Đã đăng nhập + có hồ sơ: Firestore users/{uid}.exam_progress.vocabKnown —
+    //   đọc TOÀN BỘ exam_progress, chỉ thay vocabKnown rồi ghi lại nguyên object
+    //   (merge) như exam.js vẫn làm, không đụng sets/mockHistory/wrong.
+    // - Đã đăng nhập chưa có hồ sơ: localStorage theo uid. Khách: giữ nguyên
+    //   'vocab_known_guest' mà script chính đã nạp sẵn.
+    let fullProg = null;
+    let uid = null;
+    window.__vocabAuthSave = async (arr) => {
+        if (!uid) return;
+        const obj = Object.assign({}, fullProg || {}, { vocabKnown: arr });
+        fullProg = obj;
+        try { await setDoc(doc(db, "users", uid), { exam_progress: obj }, { merge: true }); } catch (e) {}
+    };
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) return;
+        uid = user.uid;
+        try {
+            const snap = await getDoc(doc(db, "users", user.uid));
+            if (snap.exists()) {
+                fullProg = snap.data().exam_progress || {};
+                if (window.__vocabAuthLoad) window.__vocabAuthLoad('firestore', Array.isArray(fullProg.vocabKnown) ? fullProg.vocabKnown : []);
+            } else {
+                const key = 'vocab_known_' + user.uid;
+                let arr = [];
+                try { arr = JSON.parse(localStorage.getItem(key) || '[]') || []; } catch (e) {}
+                if (window.__vocabAuthLoad) window.__vocabAuthLoad('local', arr, key);
+            }
+        } catch (e) { /* lỗi mạng -> giữ tiến độ khách trên máy */ }
+    });
+</script>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}</script>
+</body>
+</html>

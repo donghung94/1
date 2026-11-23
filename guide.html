@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hướng dẫn học - Tokutei Kensetsu</title>
+    <title>Lộ trình học - Tokutei Kensetsu</title>
     <link rel="icon" href="icon-192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,15 +25,33 @@
         .step { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 18px; padding: 18px 16px; box-shadow: 0 3px 10px rgba(20,16,10,.06); margin-bottom: 14px; }
         .step h2 { margin: 0 0 8px; font-size: 16.5px; font-weight: 800; color: var(--red-dark); line-height: 1.4; }
         .step p { margin: 0; font-size: 14px; line-height: 1.65; color: var(--ink-2); }
-        .video-slot { margin-top: 12px; border: 2px dashed var(--bronze); background: linear-gradient(160deg, var(--cream), var(--cream-2)); border-radius: 14px; padding: 22px 14px; text-align: center; font-size: 14px; font-weight: 700; color: var(--ink-2); line-height: 1.6; }
         .step-btns { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
         .step-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 14px; border-radius: 12px; background: var(--red); color: #fff; font-weight: 800; font-size: 14.5px; text-decoration: none; text-align: center; }
         .step-btn:active { transform: translateY(1px); }
+        .step-btn.disabled { opacity: .45; pointer-events: none; }
         .contact-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 14px; border-radius: 12px; font-weight: 800; font-size: 14.5px; text-decoration: none; text-align: center; color: #fff; }
         .contact-btn.zalo { background: #0068ff; }
         .contact-btn.facebook { background: #1877f2; }
         .contact-btn.line { background: #06c755; }
         .contact-btn:active { transform: translateY(1px); }
+        /* ===== LỘ TRÌNH HỌC (roadmap) ===== */
+        .rm-summary-text { font-size: 15px; font-weight: 800; color: var(--ink); }
+        .rm-bar { height: 10px; background: #ECEAE2; border-radius: 999px; overflow: hidden; margin-top: 10px; }
+        .rm-bar-fill { height: 100%; background: var(--red); width: 0%; transition: width .4s ease; }
+        .rm-all-done { margin-top: 10px; font-size: 14px; font-weight: 700; color: var(--red-dark); }
+        .stage-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .stage-head h2 { margin: 0; flex: 1; }
+        .stage-badge { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: #fff; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+        .stage-badge.done { background: #2A2118; color: #F5D98A; }
+        .rm-connector { width: 2px; height: 16px; background: var(--bronze); margin: -8px auto 6px; opacity: .65; }
+        .rm-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; margin-top: 8px; background: #FFFDF7; text-decoration: none; color: var(--ink); }
+        .rm-row:active { transform: translateY(1px); }
+        .rm-name { font-size: 13.5px; font-weight: 600; line-height: 1.45; }
+        .rm-chip { flex: none; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: #F1EFE9; color: var(--ink-2); white-space: nowrap; }
+        .rm-chip.done { background: #2A2118; color: #F5D98A; }
+        .rm-note { margin-top: 10px; font-size: 13.5px; font-weight: 700; color: var(--ink-2); }
+        .video-note { margin-top: 12px; border: 1.5px dashed var(--bronze); background: var(--cream); border-radius: 10px; padding: 10px 12px; text-align: center; font-size: 12.5px; font-weight: 600; color: var(--ink-2); line-height: 1.55; }
+        .rm-ready { margin-top: 12px; background: linear-gradient(160deg, var(--cream), var(--cream-2)); border: 1.5px solid var(--bronze); border-radius: 12px; padding: 12px 14px; text-align: center; font-size: 15px; font-weight: 800; color: var(--red-dark); }
     </style>
 </head>
 <body>
@@ -41,39 +59,81 @@
 <div class="container">
     <div class="g-head">
         <a class="back-link" href="index.html" data-i18n="btn_home">🏠 Trang chủ</a>
-        <h1 class="g-title" data-i18n="guide_title">📖 Hướng dẫn học</h1>
+        <h1 class="g-title" data-i18n="guide_title">🗺️ Lộ trình học</h1>
     </div>
 
-    <!-- BƯỚC 1: VIDEO BÀI GIẢNG -->
+    <!-- TỔNG QUAN LỘ TRÌNH: số chặng đã hoàn thành theo tiến trình THẬT của học viên -->
     <div class="step">
-        <h2 data-i18n="guide_s1_title">Bước 1 — Xem video bài giảng trước</h2>
-        <p data-i18n="guide_s1_body">Trước khi làm bài, hãy xem video bài giảng của từng chủ đề để nắm ý chính. Xem video trước rồi mới luyện câu hỏi sẽ giúp bạn nhớ lâu hơn nhiều.</p>
-        <!-- Ô chờ video: loạt video dạy Tokutei đang sản xuất; khi có link video,
-             chỉ cần thêm thẻ <a>/<iframe> vào khối .video-slot này -->
-        <div class="video-slot" data-i18n="guide_video_soon">🎬 Video đang được cập nhật — video bài giảng sẽ xuất hiện tại đây sau khi sản xuất xong.</div>
+        <div class="rm-summary-text" id="rm-summary-text"></div>
+        <div class="rm-bar"><div class="rm-bar-fill" id="rm-bar-fill"></div></div>
+        <div class="rm-all-done" id="rm-all-done" style="display:none" data-i18n="roadmap_all_done">🎉 Chúc mừng! Bạn đã hoàn thành toàn bộ lộ trình học.</div>
     </div>
 
-    <!-- BƯỚC 2: LÀM BÀI THEO THỨ TỰ -->
-    <div class="step">
-        <h2 data-i18n="guide_s2_title">Bước 2 — Làm bài theo thứ tự từ trên xuống dưới</h2>
-        <p data-i18n="guide_s2_body">Làm các bộ đề theo đúng thứ tự trong danh sách: phần lý thuyết chung trước, rồi tới đề thực hành của nhóm ngành của bạn. Đừng nhảy cóc — các bộ đề được sắp xếp từ nền tảng tới nâng cao.</p>
-    </div>
-
-    <!-- BƯỚC 3: ÔN CÂU HAY RA (bộ lý thuyết 7 + 8 ở trang chủ) -->
-    <div class="step">
-        <h2 data-i18n="guide_s3_title">Bước 3 — Sắp thi: ôn kỹ các câu hay ra</h2>
-        <p data-i18n="guide_s3_body">Gần đến ngày thi, hãy tập trung ôn hai bộ "câu hay ra" dưới đây — đây là những câu xuất hiện thường xuyên nhất trong đề thi thật.</p>
-        <div class="step-btns">
-            <a class="step-btn" href="exam.html?set=7" data-i18n="guide_s3_btn1">👉 Câu hay ra — Phần 1</a>
-            <a class="step-btn" href="exam.html?set=8" data-i18n="guide_s3_btn2">👉 Câu hay ra — Phần 2</a>
+    <!-- CHẶNG 1: LÝ THUYẾT CHUNG (bộ 1 -> 9 theo thứ tự) -->
+    <section class="step stage" id="stage-1">
+        <div class="stage-head">
+            <span class="stage-badge" id="badge-1">1</span>
+            <h2 data-i18n="rm_stage1_title">Chặng 1 — Lý thuyết chung</h2>
+            <span class="rm-chip done" id="state-1" style="display:none"></span>
         </div>
-    </div>
+        <p data-i18n="rm_stage1_body">Học lần lượt 9 bộ lý thuyết chung theo thứ tự — đây là nền tảng của kỳ thi.</p>
+        <div id="rows-1"></div>
+        <!-- Ô chờ video: loạt video dạy Tokutei đang sản xuất; khi có link video,
+             thêm thẻ <a>/<iframe> vào khối .video-note này -->
+        <div class="video-note" data-i18n="guide_video_soon">🎬 Video đang được cập nhật — video bài giảng sẽ xuất hiện tại đây sau khi sản xuất xong.</div>
+        <div class="step-btns" id="action-1"></div>
+    </section>
+    <div class="rm-connector"></div>
 
-    <!-- BƯỚC 4: LIÊN HỆ HỖ TRỢ — link do Admin nhập trong Dashboard (Firestore
-         config/contacts). Kênh nào chưa có link thì nút đó không hiện.
+    <!-- CHẶNG 2: THỰC HÀNH THEO NHÓM NGÀNH của chính học viên -->
+    <section class="step stage" id="stage-2">
+        <div class="stage-head">
+            <span class="stage-badge" id="badge-2">2</span>
+            <h2 data-i18n="rm_stage2_title">Chặng 2 — Thực hành theo nhóm ngành</h2>
+            <span class="rm-chip done" id="state-2" style="display:none"></span>
+        </div>
+        <p data-i18n="rm_stage2_body">Làm các bộ thực hành của đúng nhóm ngành của bạn.</p>
+        <p class="rm-note" id="note-2"></p>
+        <div id="rows-2"></div>
+        <div class="step-btns" id="action-2"></div>
+    </section>
+    <div class="rm-connector"></div>
+
+    <!-- CHẶNG 3: ÔN CÂU SAI + CÂU HAY RA (bộ lý thuyết 7 + 8) -->
+    <section class="step stage" id="stage-3">
+        <div class="stage-head">
+            <span class="stage-badge" id="badge-3">3</span>
+            <h2 data-i18n="rm_stage3_title">Chặng 3 — Ôn câu sai & câu hay ra</h2>
+            <span class="rm-chip done" id="state-3" style="display:none"></span>
+        </div>
+        <p data-i18n="rm_stage3_body">Xóa dần sổ câu sai và ôn kỹ hai bộ câu hay ra thi nhất.</p>
+        <p class="rm-note" id="note-3"></p>
+        <div class="step-btns" id="action-3"></div>
+        <div id="rows-3"></div>
+    </section>
+    <div class="rm-connector"></div>
+
+    <!-- CHẶNG 4: THI THỬ PROMETRIC — đích: từ 60% ở ít nhất 2 lần thi thử -->
+    <section class="step stage" id="stage-4">
+        <div class="stage-head">
+            <span class="stage-badge" id="badge-4">4</span>
+            <h2 data-i18n="rm_stage4_title">Chặng 4 — Thi thử Prometric</h2>
+            <span class="rm-chip done" id="state-4" style="display:none"></span>
+        </div>
+        <p data-i18n="rm_stage4_body">Thi thử mô phỏng kỳ thi thật để kiểm tra độ sẵn sàng của bạn.</p>
+        <p class="rm-note" id="note-4"></p>
+        <p class="rm-note" id="goal-4" style="font-weight:600"></p>
+        <div class="rm-ready" id="ready-4" style="display:none" data-i18n="rm_mock_ready">🎉 Sẵn sàng thi thật!</div>
+        <div class="step-btns">
+            <a class="step-btn" href="prometric.html?set=randomExam" data-i18n="rm_mock_btn">🔥 Thi thử Prometric</a>
+        </div>
+    </section>
+
+    <!-- HỖ TRỢ: link do Admin nhập trong Dashboard (Firestore config/contacts).
+         Kênh nào chưa có link thì nút đó không hiện.
          Zalo chưa được nhập thì dùng link Zalo Admin mặc định của app. -->
     <div class="step">
-        <h2 data-i18n="guide_s4_title">Bước 4 — Thắc mắc? Liên hệ hỗ trợ</h2>
+        <h2 data-i18n="rm_support_title">💬 Hỗ trợ — Liên hệ Admin</h2>
         <p data-i18n="guide_s4_body">Nếu có câu nào chưa hiểu, hoặc cần hỗ trợ về tài khoản và Premium, hãy nhắn cho Admin qua các kênh dưới đây.</p>
         <div class="step-btns">
             <a class="step-btn" href="chat.html" data-i18n="chat_inapp">💬 Chat trong app với Admin</a>
@@ -83,9 +143,219 @@
 </div>
 
 <script type="module">
-    import { db } from "./firebase.js";
+    import { auth, db } from "./firebase.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
     import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
+    const tt = (k, v) => (window.t ? window.t(k, v) : k);
+
+    /* ================= LỘ TRÌNH HỌC =================
+       Nguồn tiến trình (cùng cấu trúc exam.js ghi):
+       - Đã đăng nhập: Firestore users/{uid}.exam_progress.
+       - Khách: localStorage 'exam_progress_guest'.
+       { sets: { <setKey>: {bestScore, bestTotal, completed, ...} },
+         mockHistory: [ {at, score, total, mode} ], wrong: { <setKey>: { <qid>: {...} } } }
+       "Hoàn thành 1 bộ" = bộ đó ĐÃ CÓ bestScore — học viên free/khách chỉ làm
+       5 câu/đề vẫn được tính là đã học xong bộ đó (không khóa lộ trình theo Premium). */
+    const THEORY = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const PRACTICE = {
+        '1': ['g1_1', 'g1_2', 'g1_3', 'g1_4'],
+        '2': ['g2_1', 'g2_2', 'g2_3', 'g2_4'],
+        '3': ['g3_6', 'g3_7']
+    };
+
+    function normalizeProgress(raw) {
+        const out = { sets: {}, mockHistory: [], wrong: {} };
+        if (raw && typeof raw === 'object') {
+            if (raw.sets && typeof raw.sets === 'object') out.sets = raw.sets;
+            if (Array.isArray(raw.mockHistory)) out.mockHistory = raw.mockHistory;
+            if (raw.wrong && typeof raw.wrong === 'object') out.wrong = raw.wrong;
+        }
+        return out;
+    }
+
+    function recState(rec) {
+        if (rec && rec.bestScore !== null && rec.bestScore !== undefined) {
+            return { done: true, label: tt('progress_best', { a: rec.bestScore, b: rec.bestTotal }) };
+        }
+        const answered = rec && rec.answers ? Object.keys(rec.answers).length : 0;
+        if (rec && (answered > 0 || (rec.lastPos || 0) > 0)) {
+            return { done: false, label: tt('progress_in_progress', { x: rec.lastPos || answered, y: rec.totalQ || '?' }) };
+        }
+        return { done: false, label: tt('rm_not_started') };
+    }
+
+    function buildRow(href, nameHtml, rec) {
+        const st = recState(rec);
+        const a = document.createElement('a');
+        a.className = 'rm-row';
+        a.href = href;
+        const nm = document.createElement('span');
+        nm.className = 'rm-name';
+        nm.innerHTML = nameHtml;
+        const chip = document.createElement('span');
+        chip.className = 'rm-chip' + (st.done ? ' done' : '');
+        chip.textContent = st.label;
+        a.appendChild(nm);
+        a.appendChild(chip);
+        return { el: a, done: st.done, started: st.label !== tt('rm_not_started') };
+    }
+
+    function setStageDone(n, done) {
+        const badge = document.getElementById('badge-' + n);
+        const state = document.getElementById('state-' + n);
+        if (badge) {
+            badge.textContent = done ? '✓' : String(n);
+            badge.classList.toggle('done', done);
+        }
+        if (state) {
+            state.textContent = tt('rm_stage_done');
+            state.style.display = done ? '' : 'none';
+        }
+    }
+
+    function actionBtn(wrapId, href, label) {
+        const wrap = document.getElementById(wrapId);
+        if (!wrap) return;
+        wrap.innerHTML = '';
+        if (!href) return;
+        const a = document.createElement('a');
+        a.className = 'step-btn';
+        a.href = href;
+        a.textContent = label;
+        wrap.appendChild(a);
+    }
+
+    function renderRoadmap(rawProgress, group) {
+        const prog = normalizeProgress(rawProgress);
+        const sets = prog.sets;
+        let stagesDone = 0;
+
+        /* ---- Chặng 1: lý thuyết chung 1 -> 9 ---- */
+        const rows1 = document.getElementById('rows-1');
+        rows1.innerHTML = '';
+        let firstTodo1 = null, anyStarted1 = false, doneCount1 = 0;
+        THEORY.forEach(n => {
+            const rec = sets['set_' + n];
+            const r = buildRow('exam.html?set=' + n, tt('set_' + n + '_html'), rec);
+            rows1.appendChild(r.el);
+            if (r.done) doneCount1++;
+            else if (!firstTodo1) firstTodo1 = n;
+            if (r.started) anyStarted1 = true;
+        });
+        const stage1Done = doneCount1 === THEORY.length;
+        if (stage1Done) stagesDone++;
+        setStageDone(1, stage1Done);
+        actionBtn('action-1',
+            stage1Done ? null : 'exam.html?set=' + firstTodo1,
+            anyStarted1 ? tt('rm_continue') : tt('rm_start'));
+
+        /* ---- Chặng 2: thực hành theo nhóm ngành ---- */
+        const note2 = document.getElementById('note-2');
+        const rows2 = document.getElementById('rows-2');
+        rows2.innerHTML = '';
+        const groupSets = group ? PRACTICE[String(group)] : null;
+        let stage2Done = false;
+        if (!groupSets) {
+            note2.textContent = tt('rm_need_group');
+            actionBtn('action-2', 'language.html', tt('rm_choose_group'));
+        } else {
+            note2.textContent = tt('rm_group_label', { g: String(group) });
+            let firstTodo2 = null, anyStarted2 = false, doneCount2 = 0;
+            groupSets.forEach(id => {
+                const rec = sets['practice_' + id];
+                const r = buildRow('exam.html?practice=' + id, tt('prac_' + id.slice(1) + '_html'), rec);
+                rows2.appendChild(r.el);
+                if (r.done) doneCount2++;
+                else if (!firstTodo2) firstTodo2 = id;
+                if (r.started) anyStarted2 = true;
+            });
+            stage2Done = doneCount2 === groupSets.length;
+            actionBtn('action-2',
+                stage2Done ? null : 'exam.html?practice=' + firstTodo2,
+                anyStarted2 ? tt('rm_continue') : tt('rm_start'));
+        }
+        if (stage2Done) stagesDone++;
+        setStageDone(2, stage2Done);
+
+        /* ---- Chặng 3: sổ câu sai + bộ hay ra 7/8 ---- */
+        let wrongCount = 0;
+        Object.keys(prog.wrong).forEach(k => {
+            const bucket = prog.wrong[k];
+            if (bucket && typeof bucket === 'object') wrongCount += Object.keys(bucket).length;
+        });
+        const note3 = document.getElementById('note-3');
+        note3.textContent = wrongCount > 0 ? tt('rm_wrong_count', { n: wrongCount }) : tt('deck_empty');
+        const wrap3 = document.getElementById('action-3');
+        wrap3.innerHTML = '';
+        const btn3 = document.createElement('a');
+        btn3.className = 'step-btn' + (wrongCount > 0 ? '' : ' disabled');
+        btn3.href = 'exam.html?wrong=1';
+        btn3.textContent = tt('rm_review_btn');
+        if (wrongCount === 0) btn3.removeAttribute('href');
+        wrap3.appendChild(btn3);
+        const rows3 = document.getElementById('rows-3');
+        rows3.innerHTML = '';
+        let freqDone = 0;
+        [7, 8].forEach(n => {
+            const rec = sets['set_' + n];
+            const r = buildRow('exam.html?set=' + n, tt('set_' + n + '_html'), rec);
+            rows3.appendChild(r.el);
+            if (r.done) freqDone++;
+        });
+        const stage3Done = wrongCount === 0 && freqDone === 2;
+        if (stage3Done) stagesDone++;
+        setStageDone(3, stage3Done);
+
+        /* ---- Chặng 4: thi thử Prometric ---- */
+        const hist = prog.mockHistory;
+        let bestPct = 0, qualifying = 0;
+        hist.forEach(h => {
+            if (h && h.total > 0) {
+                const pct = Math.round(h.score / h.total * 100);
+                if (pct > bestPct) bestPct = pct;
+                if (h.score / h.total >= 0.6) qualifying++;
+            }
+        });
+        const note4 = document.getElementById('note-4');
+        note4.textContent = hist.length === 0
+            ? tt('rm_mock_none')
+            : tt('rm_mock_stats', { n: hist.length, p: bestPct });
+        document.getElementById('goal-4').textContent = tt('rm_mock_goal', { n: qualifying });
+        const stage4Done = qualifying >= 2;
+        document.getElementById('ready-4').style.display = stage4Done ? '' : 'none';
+        if (stage4Done) stagesDone++;
+        setStageDone(4, stage4Done);
+
+        /* ---- Tổng quan ---- */
+        document.getElementById('rm-summary-text').textContent =
+            tt('roadmap_summary', { x: stagesDone, y: 4 });
+        document.getElementById('rm-bar-fill').style.width = (stagesDone / 4 * 100) + '%';
+        document.getElementById('rm-all-done').style.display = stagesDone === 4 ? '' : 'none';
+    }
+
+    function guestProgress() {
+        try { return JSON.parse(localStorage.getItem('exam_progress_guest') || 'null'); }
+        catch (e) { return null; }
+    }
+
+    // Vẽ ngay bằng dữ liệu trên máy (khách / trong lúc chờ xác thực)
+    renderRoadmap(guestProgress(), localStorage.getItem('app_group'));
+
+    // Đã đăng nhập: tiến trình + nhóm ngành trong Firestore là nguồn sự thật
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) return;
+        try {
+            const snap = await getDoc(doc(db, "users", user.uid));
+            if (snap.exists()) {
+                const data = snap.data();
+                const g = data.group ? String(data.group) : localStorage.getItem('app_group');
+                renderRoadmap(data.exam_progress, g);
+            }
+        } catch (e) { /* Đọc lỗi: giữ bản vẽ từ dữ liệu trên máy */ }
+    });
+
+    /* ================= LIÊN HỆ HỖ TRỢ ================= */
     // Link Zalo Admin mặc định của app — dùng khi Dashboard chưa lưu link Zalo,
     // hoặc khi đọc cấu hình thất bại (khi đó chỉ hiện nút Zalo này).
     const DEFAULT_ZALO = "https://zalo.me/07090778422";

@@ -249,20 +249,44 @@
                         throw new Error(t("err_device_limit_login"));
                     } else {
                         // Chưa có máy nào (do admin reset) -> Cho phép đăng ký máy này.
-                        // Riêng ADMIN: THAY TOÀN BỘ map devices bằng máy hiện tại và
-                        // device_count = 1 — luật Firestore chặn devices.size() > 1,
-                        // cộng dồn thêm máy mới cho admin sẽ bị permission-denied.
+                        // Riêng ADMIN: MIỄN khóa 1 thiết bị (chốt của anh 2026-11-23) —
+                        // CỘNG DỒN máy mới vào map devices, KHÔNG xóa máy cũ,
+                        // device_count = tổng số máy trong map sau khi thêm.
+                        // Luật Firestore chỉ cho UID trong isAdmin() ghi map nhiều máy;
+                        // nếu bị permission-denied (tài khoản có role admin nhưng UID
+                        // chưa nằm trong danh sách isAdmin của luật) thì LÙI về cách cũ
+                        // (thay toàn bộ map bằng máy hiện tại, count = 1) để đăng nhập
+                        // không bao giờ gãy.
                         if (isAdmin) {
-                            await updateDoc(userDocRef, {
-                                devices: {
-                                    [currentDeviceId]: {
-                                        name: currentDeviceName,
-                                        addedAt: serverTimestamp(),
-                                        last_login: serverTimestamp()
-                                    }
-                                },
-                                device_count: 1
-                            });
+                            const accumulatedDevices = {
+                                ...devices,
+                                [currentDeviceId]: {
+                                    name: currentDeviceName,
+                                    addedAt: serverTimestamp(),
+                                    last_login: serverTimestamp()
+                                }
+                            };
+                            try {
+                                await updateDoc(userDocRef, {
+                                    devices: accumulatedDevices,
+                                    device_count: Object.keys(accumulatedDevices).length
+                                });
+                            } catch (e) {
+                                if (e && e.code === 'permission-denied') {
+                                    await updateDoc(userDocRef, {
+                                        devices: {
+                                            [currentDeviceId]: {
+                                                name: currentDeviceName,
+                                                addedAt: serverTimestamp(),
+                                                last_login: serverTimestamp()
+                                            }
+                                        },
+                                        device_count: 1
+                                    });
+                                } else {
+                                    throw e;
+                                }
+                            }
                         } else {
                             await updateDoc(userDocRef, {
                                 [`devices.${currentDeviceId}`]: {

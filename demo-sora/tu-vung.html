@@ -30,6 +30,9 @@
         .v-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
         .v-chip { padding: 8px 13px; border-radius: 999px; border: 1.5px solid var(--bronze); background: var(--card); color: var(--ink); font: inherit; font-weight: 700; font-size: 13px; cursor: pointer; }
         .v-chip.on { background: var(--red); border-color: var(--red); color: #fff; }
+        .v-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .v-tab { padding: 9px 14px; border-radius: 12px; border: 1.5px solid var(--ink-3); background: var(--card); color: var(--ink); font: inherit; font-weight: 800; font-size: 13.5px; cursor: pointer; }
+        .v-tab.on { background: var(--ink); border-color: var(--ink); color: #fff; }
         .v-modes { display: flex; gap: 8px; margin-top: 10px; }
         .v-mode { flex: 1; padding: 10px; border-radius: 12px; border: 1.5px solid var(--bronze); background: var(--card); color: var(--ink); font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; }
         .v-mode.on { background: var(--red); border-color: var(--red); color: #fff; }
@@ -74,6 +77,7 @@
 
     <div class="v-controls">
         <input class="v-search" id="vocab-search" type="search" data-i18n-ph="vocab_search_ph" placeholder="Tìm từ, cách đọc hoặc nghĩa…">
+        <div class="v-tabs" id="vocab-tabs"></div>
         <div class="v-chips" id="vocab-chips">
             <button class="v-chip on" data-filter="all" data-i18n="vocab_filter_all">Tất cả</button>
             <button class="v-chip" data-filter="answer" data-i18n="vocab_filter_answer">Đáp án đúng</button>
@@ -132,6 +136,30 @@
     };
 
     var filter = 'all', query = '', mode = 'list';
+    // ===== Chia nhóm ngành (anh chốt 2026-11-23): từ lý thuyết là CHUNG cho mọi
+    // nhóm, nên bộ học của mỗi nhóm = Lý thuyết chung + từ thực hành của nhóm đó.
+    // Nhóm của học viên: Firestore users/{uid}.group là nguồn sự thật (module
+    // xác thực gọi __vocabSetGroup), localStorage 'app_group' là fallback.
+    // Tab KHÔNG khóa nhóm khác — chỉ để tập trung, xem nhóm nào cũng được.
+    var myGroup = null;
+    try { var lg = localStorage.getItem('app_group'); if (lg === '1' || lg === '2' || lg === '3') myGroup = lg; } catch (e) {}
+    var tab = myGroup ? 'mine' : 'all', tabTouched = false;
+    function hasCat(e, c) { return Array.isArray(e.g) && e.g.indexOf(c) >= 0; }
+    function inTab(e) {
+        if (tab === 'all') return true;
+        if (tab === 'theory') return hasCat(e, 'theory');
+        if (tab === 'mine') { if (!myGroup) return true; return hasCat(e, 'theory') || hasCat(e, 'g' + myGroup); }
+        return hasCat(e, 'theory') || hasCat(e, tab); // g1 | g2 | g3
+    }
+    function baseSet() { return VOCAB.filter(inTab); }
+    window.__vocabSetGroup = function (g) {
+        g = (g === null || g === undefined) ? null : String(g);
+        if (g !== '1' && g !== '2' && g !== '3') return;
+        if (g === myGroup) { renderTabs(); return; }
+        myGroup = g;
+        if (!tabTouched) tab = 'mine';
+        renderTabs(); render();
+    };
     var cardIdx = 0, flipped = false;
     var listEl = document.getElementById('vocab-list');
     var cardsEl = document.getElementById('vocab-cards');
@@ -153,6 +181,7 @@
     function currentSet() {
         var q = query.trim().toLowerCase();
         return VOCAB.filter(function (e) {
+            if (!inTab(e)) return false;
             if (filter === 'answer' && e.tags.indexOf('answer') < 0) return false;
             if (filter === 'tip' && e.tags.indexOf('tip') < 0) return false;
             if (filter === 'unknown' && known.has(keyOf(e))) return false;
@@ -161,9 +190,27 @@
         });
     }
     function renderProgress(set) {
-        document.getElementById('vocab-count').textContent = t('vocab_count', { n: VOCAB.length });
-        var knownInSet = VOCAB.filter(function (e) { return known.has(keyOf(e)); }).length;
-        document.getElementById('vocab-progress').textContent = t('vocab_known_progress', { x: knownInSet, n: VOCAB.length });
+        var base = baseSet();
+        var countEl = document.getElementById('vocab-count');
+        if (tab === 'mine') countEl.textContent = t('vocab_count_mine', { n: base.length });
+        else if (tab === 'theory') countEl.textContent = t('vocab_count_theory', { n: base.length });
+        else if (tab === 'all') countEl.textContent = t('vocab_count', { n: base.length });
+        else countEl.textContent = t('vocab_count_group', { g: t('group_' + tab.slice(1)), n: base.length });
+        var knownInBase = base.filter(function (e) { return known.has(keyOf(e)); }).length;
+        document.getElementById('vocab-progress').textContent = t('vocab_known_progress', { x: knownInBase, n: base.length });
+    }
+    function renderTabs() {
+        var defs = [];
+        if (myGroup) defs.push({ id: 'mine', label: t('vocab_tab_mine') });
+        defs.push({ id: 'theory', label: t('vocab_tab_theory') });
+        defs.push({ id: 'g1', label: t('group_1') });
+        defs.push({ id: 'g2', label: t('group_2') });
+        defs.push({ id: 'g3', label: t('group_3') });
+        defs.push({ id: 'all', label: t('vocab_tab_all') });
+        if (tab === 'mine' && !myGroup) tab = 'all';
+        document.getElementById('vocab-tabs').innerHTML = defs.map(function (d) {
+            return '<button class="v-tab' + (tab === d.id ? ' on' : '') + '" data-tab="' + d.id + '">' + esc(d.label) + '</button>';
+        }).join('');
     }
     function renderList(set) {
         if (!set.length) { listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; return; }
@@ -188,6 +235,7 @@
         fcPos.textContent = t('vocab_card_pos', { x: cardIdx + 1, n: set.length });
     }
     function render() {
+        renderTabs();
         var set = currentSet();
         renderProgress(set);
         var allKnown = VOCAB.length > 0 && set.length > 0 && set.every(function (e) { return known.has(keyOf(e)); });
@@ -207,6 +255,12 @@
         filter = chip.getAttribute('data-filter');
         document.querySelectorAll('.v-chip').forEach(function (c) { c.classList.toggle('on', c === chip); });
         cardIdx = 0; flipped = false; render();
+    });
+    document.getElementById('vocab-tabs').addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.v-tab'); if (!btn) return;
+        tab = btn.getAttribute('data-tab'); tabTouched = true;
+        cardIdx = 0; flipped = false;
+        renderTabs(); render();
     });
     document.getElementById('mode-list').addEventListener('click', function () { mode = 'list'; this.classList.add('on'); document.getElementById('mode-cards').classList.remove('on'); render(); });
     document.getElementById('mode-cards').addEventListener('click', function () { mode = 'cards'; this.classList.add('on'); document.getElementById('mode-list').classList.remove('on'); cardIdx = 0; flipped = false; render(); });
@@ -251,12 +305,16 @@
         try {
             const snap = await getDoc(doc(db, "users", user.uid));
             if (snap.exists()) {
+                const fg = snap.data().group ? String(snap.data().group) : localStorage.getItem('app_group');
+                if (snap.data().group) { try { localStorage.setItem('app_group', String(snap.data().group)); } catch (e) {} }
+                if (window.__vocabSetGroup) window.__vocabSetGroup(fg);
                 fullProg = snap.data().exam_progress || {};
                 if (window.__vocabAuthLoad) window.__vocabAuthLoad('firestore', Array.isArray(fullProg.vocabKnown) ? fullProg.vocabKnown : []);
             } else {
                 const key = 'vocab_known_' + user.uid;
                 let arr = [];
                 try { arr = JSON.parse(localStorage.getItem(key) || '[]') || []; } catch (e) {}
+                if (window.__vocabSetGroup) window.__vocabSetGroup(localStorage.getItem('app_group'));
                 if (window.__vocabAuthLoad) window.__vocabAuthLoad('local', arr, key);
             }
         } catch (e) { /* lỗi mạng -> giữ tiến độ khách trên máy */ }

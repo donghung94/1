@@ -411,6 +411,10 @@
   <!-- 📖 Nút HƯỚNG DẪN HỌC: ai cũng thấy, kể cả khách -->
   <a href="guide.html" class="guide-btn" data-i18n="guide_btn">📖 Hướng dẫn học</a>
 
+  <!-- 📝 Nút HƯỚNG DẪN ĐĂNG KÝ THI: ai cũng thấy, kể cả khách — trang dang-ky.html
+       (tạo Prometric ID + đặt lịch thi Tokutei Gino 2 từng bước bằng ảnh chụp thật) -->
+  <a href="dang-ky.html" class="guide-btn reg-btn" data-i18n="reg_btn">📝 Hướng dẫn đăng ký thi</a>
+
   <!-- 📕 Nút SỔ CÂU SAI: luôn hiện kèm tổng số câu đang có trong sổ (kể cả 0).
        Số đếm do script chính điền từ exam_progress.wrong — khách tính từ
        localStorage của máy, học viên tính từ hồ sơ Firestore của mình.
@@ -620,6 +624,7 @@
     box-shadow: 0 3px 10px rgba(20,16,10,.12);
 }
 .guide-btn:active { transform: translateY(1px); }
+.guide-btn.reg-btn { background: #fff; color: #C8102E; border: 1.5px solid #C8102E; box-shadow: 0 3px 10px rgba(20,16,10,.06); }
 /* Phương án B: hàng trắng gọn, viền trái đỏ, số câu dạng thẻ hồng ở bên phải */
 .deck-btn {
     display: flex;

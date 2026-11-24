@@ -49,6 +49,11 @@
         .v-known-btn { margin-left: auto; padding: 7px 12px; border-radius: 999px; border: 1.5px solid var(--bronze); background: var(--card); font: inherit; font-size: 12.5px; font-weight: 800; color: var(--ink); cursor: pointer; }
         .v-known-btn.on { background: #177245; border-color: #177245; color: #fff; }
         .v-empty { text-align: center; color: var(--ink-3); font-size: 14px; padding: 28px 10px; }
+        .v-pager { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; align-items: center; margin: 16px 0 8px; }
+        .v-page { min-width: 38px; height: 38px; padding: 0 10px; border-radius: 10px; border: 1.5px solid var(--bronze); background: var(--card); font: inherit; font-size: 14px; font-weight: 800; color: var(--ink); cursor: pointer; }
+        .v-page.on { background: #C8102E; border-color: #C8102E; color: #fff; }
+        .v-page:disabled { opacity: .35; cursor: default; }
+        .v-page.dots { border: none; background: none; cursor: default; min-width: 0; padding: 0 2px; }
         /* flashcard */
         .fc-wrap { margin-top: 4px; }
         .fc-card { background: var(--card); border: 1.5px solid var(--bronze); border-radius: 20px; min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px 18px; box-shadow: 0 3px 10px rgba(20,16,10,.06); cursor: pointer; }
@@ -91,6 +96,7 @@
     </div>
 
     <div id="vocab-list"></div>
+    <div class="v-pager" id="vocab-pager" style="display:none"></div>
 
     <div class="fc-wrap" id="vocab-cards" style="display:none">
         <div class="fc-card" id="fc-card"></div>
@@ -131,11 +137,13 @@
     window.__vocabAuthLoad = function (mode, arr, key) {
         persistMode = mode; if (key) localKey = key;
         known = new Set(Array.isArray(arr) ? arr : []);
-        cardIdx = 0; flipped = false;
+        cardIdx = 0; flipped = false; page = 1;
         render();
     };
 
     var filter = 'all', query = '', mode = 'list';
+    // Phân trang danh sách (anh chốt 2026-11-24): mỗi trang 5 từ, nút số trang ở dưới danh sách.
+    var page = 1, PAGE_SIZE = 5;
     // ===== Chia nhóm ngành (anh chốt 2026-11-23): từ lý thuyết là CHUNG cho mọi
     // nhóm, nên bộ học của mỗi nhóm = Lý thuyết chung + từ thực hành của nhóm đó.
     // Nhóm của học viên: Firestore users/{uid}.group là nguồn sự thật (module
@@ -158,6 +166,7 @@
         if (g === myGroup) { renderTabs(); return; }
         myGroup = g;
         if (!tabTouched) tab = 'mine';
+        page = 1;
         renderTabs(); render();
     };
     var cardIdx = 0, flipped = false;
@@ -166,6 +175,7 @@
     var doneEl = document.getElementById('vocab-done');
     var fcCard = document.getElementById('fc-card');
     var fcPos = document.getElementById('fc-pos');
+    var pagerEl = document.getElementById('vocab-pager');
 
     function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
     function termHtml(e) {
@@ -212,9 +222,28 @@
             return '<button class="v-tab' + (tab === d.id ? ' on' : '') + '" data-tab="' + d.id + '">' + esc(d.label) + '</button>';
         }).join('');
     }
+    function renderPager(totalPages) {
+        if (mode !== 'list' || totalPages <= 1) { pagerEl.style.display = 'none'; pagerEl.innerHTML = ''; return; }
+        var nums = [];
+        for (var i = 1; i <= totalPages; i++) { if (i === 1 || i === totalPages || Math.abs(i - page) <= 1) nums.push(i); }
+        var h = '<button class="v-page" data-page="' + (page - 1) + '"' + (page <= 1 ? ' disabled' : '') + '>«</button>';
+        var prev = 0;
+        nums.forEach(function (n) {
+            if (prev && n - prev > 1) h += '<span class="v-page dots">…</span>';
+            h += '<button class="v-page' + (n === page ? ' on' : '') + '" data-page="' + n + '">' + n + '</button>';
+            prev = n;
+        });
+        h += '<button class="v-page" data-page="' + (page + 1) + '"' + (page >= totalPages ? ' disabled' : '') + '>»</button>';
+        pagerEl.innerHTML = h;
+        pagerEl.style.display = 'flex';
+    }
     function renderList(set) {
-        if (!set.length) { listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; return; }
-        listEl.innerHTML = set.map(function (e) {
+        if (!set.length) { listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; pagerEl.style.display = 'none'; return; }
+        var totalPages = Math.ceil(set.length / PAGE_SIZE);
+        if (page > totalPages) page = totalPages;
+        if (page < 1) page = 1;
+        var pageSet = set.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+        listEl.innerHTML = pageSet.map(function (e) {
             var k = keyOf(e), isK = known.has(k);
             return '<div class="v-row' + (isK ? ' known' : '') + '">' +
                 '<div class="v-term">' + termHtml(e) + '</div>' +
@@ -224,6 +253,7 @@
                 '<button class="v-known-btn' + (isK ? ' on' : '') + '" data-key="' + esc(k) + '">' + (isK ? esc(t('vocab_btn_known')) : esc(t('vocab_btn_unknown'))) + '</button>' +
                 '</div></div>';
         }).join('');
+        renderPager(totalPages);
     }
     function renderCards(set) {
         if (!set.length) { cardsEl.style.display = 'none'; doneEl.style.display = 'none'; listEl.innerHTML = '<div class="v-empty">' + esc(t('vocab_no_results')) + '</div>'; return; }
@@ -235,6 +265,7 @@
         fcPos.textContent = t('vocab_card_pos', { x: cardIdx + 1, n: set.length });
     }
     function render() {
+        if (mode !== 'list') { pagerEl.style.display = 'none'; }
         renderTabs();
         var set = currentSet();
         renderProgress(set);
@@ -249,17 +280,25 @@
         if (known.has(k)) known.delete(k); else known.add(k);
         persist(); render();
     });
-    document.getElementById('vocab-search').addEventListener('input', function (ev) { query = ev.target.value; cardIdx = 0; flipped = false; render(); });
+    pagerEl.addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.v-page'); if (!btn || btn.disabled || !btn.getAttribute('data-page')) return;
+        var p = parseInt(btn.getAttribute('data-page'), 10);
+        if (!p || p === page) return;
+        page = p; render();
+        var y = listEl.getBoundingClientRect().top + window.scrollY - 8;
+        window.scrollTo(0, y);
+    });
+    document.getElementById('vocab-search').addEventListener('input', function (ev) { query = ev.target.value; cardIdx = 0; flipped = false; page = 1; render(); });
     document.getElementById('vocab-chips').addEventListener('click', function (ev) {
         var chip = ev.target.closest('.v-chip'); if (!chip) return;
         filter = chip.getAttribute('data-filter');
         document.querySelectorAll('.v-chip').forEach(function (c) { c.classList.toggle('on', c === chip); });
-        cardIdx = 0; flipped = false; render();
+        cardIdx = 0; flipped = false; page = 1; render();
     });
     document.getElementById('vocab-tabs').addEventListener('click', function (ev) {
         var btn = ev.target.closest('.v-tab'); if (!btn) return;
         tab = btn.getAttribute('data-tab'); tabTouched = true;
-        cardIdx = 0; flipped = false;
+        cardIdx = 0; flipped = false; page = 1;
         renderTabs(); render();
     });
     document.getElementById('mode-list').addEventListener('click', function () { mode = 'list'; this.classList.add('on'); document.getElementById('mode-cards').classList.remove('on'); render(); });

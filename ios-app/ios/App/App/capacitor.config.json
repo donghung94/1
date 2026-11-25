@@ -1,0 +1,8 @@
+{
+	"appId": "com.donghung.tokuteikensetsu",
+	"appName": "Tokutei Kensetsu",
+	"webDir": "www",
+	"packageClassList": [
+		"AppPlugin"
+	]
+}

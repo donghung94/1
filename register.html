@@ -1,24 +1,205 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập – Tokutei Kensetsu</title>
-    <!-- Đăng ký bằng email ĐÃ BỎ (2026-11-22): tài khoản mới chỉ tạo qua
-         đăng nhập Google/Apple ở trang login. File này giữ lại để mọi link cũ
-         trỏ tới đây đều tự chuyển sang trang đăng nhập, không bị lỗi 404. -->
-    <meta http-equiv="refresh" content="0; url=login.html">
-    <script>
-        // Chuyển ngay sang trang đăng nhập (replace: không để lại trang này trong lịch sử)
-        location.replace("login.html");
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n-title="reg_title">Đăng ký học viên - Tokutei Kensetsu</title>
+    <link rel="icon" href="icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; background: #F4F4F1; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        p { font-size: 14px; color: #5A5A55; }
-        a { color: #C8102E; font-weight: bold; text-decoration: none; }
+       body { margin: 0; background: #F4F4F1; font-family: "Be Vietnam Pro","Noto Sans JP",sans-serif; }
+    .wrapper { max-width: 420px; margin: 20px auto; padding: 10px; }
+    .login-box { background: #fff; padding: 22px; border: 1px solid #E7E7E0; border-radius: 18px; box-shadow: 0 10px 30px rgba(2,6,23,.12); text-align: center; }
+    .login-box img { width: 80px; border-radius: 18px; border: 1.5px solid #C9A24B; background: linear-gradient(160deg,#FFF9EE,#FDEFD2); padding: 4px; margin-bottom: 10px; }
+    .login-box input { width: 100%; padding: 12px 12px; margin: 4px 0 10px; border: 1.5px solid #E7E7E0; border-radius: 12px; outline: none; box-sizing: border-box; }
+    .login-box button { width: 100%; padding: 10px; border: none; border-radius: 12px; background: #C8102E; color: #fff; font-weight: 600; margin-top: 8px; cursor: pointer; }
+    .login-box button:disabled { opacity: .6; cursor: wait; }
+    .field-label { display: block; text-align: left; font-size: 13px; font-weight: 600; color: #333; margin-top: 6px; }
+    .have-account { margin-top: 15px; font-size: 13px; color: #6b7280; border-top: 1px solid #eee; padding-top: 12px; }
+    .have-account a { color: #C8102E; font-weight: 700; text-decoration: none; }
     </style>
+    <script src="i18n.js"></script>
 </head>
+
 <body>
-    <p>Đang chuyển tới trang đăng nhập… <a href="login.html">Đăng nhập</a></p>
+<div class="wrapper">
+    <div class="login-box">
+    <img src="icon-192.png" alt="Logo" />
+        <h2 style="margin:6px 0 12px;font-size:18px; color: #333;" data-i18n="reg_heading">Đăng Ký Thành Viên</h2>
+        <p style="font-size: 13px; color: #666; margin-bottom: 16px;" data-i18n="app_tagline">Luyện thi Kỹ năng đặc định số 2</p>
+
+        <form id="registerForm" novalidate>
+            <label class="field-label" for="name" data-i18n="label_name">Họ và tên</label>
+            <input type="text" id="name" data-i18n-ph="ph_name" placeholder="Nhập tên của bạn" required />
+
+            <label class="field-label" for="email" data-i18n="label_email">Email</label>
+            <input type="email" id="email" data-i18n-ph="ph_email" placeholder="Nhập email của bạn" required />
+
+            <label class="field-label" for="password" data-i18n="label_password">Mật khẩu</label>
+            <input type="password" id="password" data-i18n-ph="ph_password_min" placeholder="Tối thiểu 6 ký tự" required />
+
+            <label class="field-label" for="password2" data-i18n="label_confirm_password">Nhập lại mật khẩu</label>
+            <input type="password" id="password2" data-i18n-ph="ph_confirm_password" placeholder="Nhập lại mật khẩu" required />
+
+            <button type="submit" id="registerBtn" data-i18n="btn_register_now">Đăng ký ngay</button>
+        </form>
+
+        <p id="message" style="margin-top:12px;font-size:14px;min-height:18px; line-height: 1.4;"></p>
+
+        <div class="have-account">
+            <span data-i18n="have_account">Đã có tài khoản?</span>
+            <a href="login.html" data-i18n="btn_login">Đăng nhập</a>
+        </div>
+    </div>
+</div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+            apiKey: "AIzaSyALblbqW_VrZh2r7sPJ8Q6XT2fGbk0dsFg",
+            authDomain: "donghung-3208d.firebaseapp.com",
+            projectId: "donghung-3208d",
+            storageBucket: "donghung-3208d.firebasestorage.app",
+            messagingSenderId: "753379492663",
+            appId: "1:753379492663:web:baff34f2c0bac00e02d0b2"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // --- Cố định ID thiết bị bằng LocalStorage (GIỐNG HỆT login.html) ---
+        function getDeviceId() {
+            let deviceId = localStorage.getItem('my_device_id');
+            if (!deviceId) {
+                deviceId = 'dev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5);
+                localStorage.setItem('my_device_id', deviceId);
+            }
+            return deviceId;
+        }
+
+        function getDeviceName() {
+            const ua = navigator.userAgent;
+            if (ua.includes("iPhone")) return "iPhone";
+            if (ua.includes("Android")) return "Android";
+            if (ua.includes("Win")) return "Windows PC";
+            return "Mobile/Tablet";
+        }
+
+        // --- Gán mã thành viên TVxxxx (GIỐNG HỆT login.html) ---
+        async function assignMemberCode(uid) {
+            const counterRef = doc(db, "meta", "counters");
+            const userRef = doc(db, "users", uid);
+            let code = null;
+            await runTransaction(db, async (tx) => {
+                const uSnap = await tx.get(userRef);
+                if (uSnap.exists() && uSnap.data().memberCode) { code = uSnap.data().memberCode; return; }
+                const cSnap = await tx.get(counterRef);
+                const next = ((cSnap.exists() && cSnap.data().memberSeq) || 0) + 1;
+                code = "TV" + String(next).padStart(4, "0");
+                tx.set(counterRef, { memberSeq: next }, { merge: true });
+                tx.update(userRef, { memberCode: code });
+            });
+            return code;
+        }
+
+        const nameEl = document.getElementById("name");
+        const emailEl = document.getElementById("email");
+        const passEl  = document.getElementById("password");
+        const pass2El = document.getElementById("password2");
+        const btn      = document.getElementById("registerBtn");
+        const msg      = document.getElementById("message");
+        const registerForm = document.getElementById("registerForm");
+
+        function showError(text) {
+            msg.textContent = "❌ " + text;
+            msg.style.color = "#ef4444";
+            btn.disabled = false;
+        }
+
+        registerForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const name = nameEl.value.trim();
+            const email = emailEl.value.trim();
+            const password = passEl.value;
+            const password2 = pass2El.value;
+
+            // --- Kiểm tra dữ liệu nhập (báo lỗi ngay tại trang) ---
+            if (!name || !email || !password || !password2) {
+                showError(t("err_fill_all"));
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError(t("err_invalid_email"));
+                return;
+            }
+            if (password.length < 6) {
+                showError(t("err_weak_password"));
+                return;
+            }
+            if (password !== password2) {
+                showError(t("err_password_mismatch"));
+                return;
+            }
+
+            msg.textContent = t("msg_checking");
+            msg.style.color = "#C8102E";
+            btn.disabled = true;
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                // Tạo hồ sơ Firestore ĐÚNG MẪU nhánh tạo hồ sơ của completeLogin
+                // trong login.html: name/email/status/isPremium + ghi nhận máy
+                // hiện tại (device_count = 1) + khung exam_progress + mã TVxxxx,
+                // KHÔNG gán sẵn nhóm ngành (bảng gộp ngôn ngữ + nhóm hỏi sau).
+                const currentDeviceId = getDeviceId();
+                const currentDeviceName = getDeviceName();
+                const initialData = {
+                    name: name,
+                    ...(user.email ? { email: user.email } : {}),
+                    status: "active",
+                    isPremium: false,
+                    device_count: 1,
+                    devices: {
+                        [currentDeviceId]: {
+                            name: currentDeviceName,
+                            addedAt: serverTimestamp(),
+                            last_login: serverTimestamp()
+                        }
+                    },
+                    exam_progress: {
+                        doboku: 0,
+                        kenchiku: 0
+                    },
+                    createdAt: serverTimestamp()
+                };
+                await setDoc(doc(db, "users", user.uid), initialData);
+                try { await assignMemberCode(user.uid); } catch (e2) { console.warn("Gán mã thành viên:", e2); }
+
+                msg.textContent = t("reg_done");
+                msg.style.color = "green";
+                setTimeout(() => location.href = "index.html", 600);
+            } catch (err) {
+                if (err.code === 'auth/email-already-in-use') {
+                    showError(t("err_email_in_use_login"));
+                } else if (err.code === 'auth/weak-password') {
+                    showError(t("err_weak_password"));
+                } else if (err.code === 'auth/invalid-email') {
+                    showError(t("err_invalid_email"));
+                } else if (err.code === 'permission-denied' || (err.message && err.message.includes("insufficient permissions"))) {
+                    showError(t("err_permission"));
+                } else {
+                    showError(t("err_unknown"));
+                }
+            }
+        });
+    </script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}</script>
 </body>
 </html>

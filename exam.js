@@ -521,7 +521,14 @@
     if (!ident || !ident.qid || ident.qid.indexOf("id:") !== 0) return "";
     const vid = window.QUESTION_VIDEOS[ident.setKey + "|" + ident.qid.slice(3)];
     if (!vid) return "";
-    return '<div class="q-video"><video controls playsinline preload="metadata" src="https://drive.usercontent.google.com/download?id=' + vid + '&export=download&confirm=t"></video></div>';
+    // Thẻ ảnh + nút phát: bấm vào mở trình phát Drive toàn màn hình.
+    // (Phát inline bằng thẻ <video> bị iOS chặn vì Drive phát file ở chế độ
+    // "tải xuống" (Content-Disposition: attachment) -> hiện nút phát gạch chéo;
+    // khung preview nhúng của Drive thì bung nút điều khiển khổng lồ che đáp án.)
+    return '<a class="q-video q-video-card" href="https://drive.google.com/file/d/' + vid + '/preview" target="_blank" rel="noopener">'
+      + '<img src="https://drive.google.com/thumbnail?id=' + vid + '&sz=w800" alt="" loading="lazy">'
+      + '<span class="q-video-play">&#9654;</span>'
+      + '<span class="q-video-label">Xem video giải thích</span></a>';
   }
 
   // ================== RENDER ================

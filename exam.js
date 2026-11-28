@@ -508,6 +508,22 @@
     });
   }
 
+
+  // ================== VIDEO GIẢI THÍCH (nhúng Drive) ==================
+  // window.QUESTION_VIDEOS (video-map.js): khóa "<setKey>|<bank id>" -> Drive file ID.
+  // Chỉ lý thuyết bộ 1-6 có video. Định danh câu lấy qua deckIdentityOf (dùng chung
+  // cho đề thường / sổ câu sai / đề ngẫu nhiên) nên câu thực hành không bao giờ
+  // dính video dù trùng id. Trang thi thử Prometric là file riêng, không nhúng.
+  function videoEmbedHTML(q) {
+    if (!window.QUESTION_VIDEOS) return "";
+    let ident = null;
+    try { ident = deckIdentityOf(q); } catch (e) { ident = null; }
+    if (!ident || !ident.qid || ident.qid.indexOf("id:") !== 0) return "";
+    const vid = window.QUESTION_VIDEOS[ident.setKey + "|" + ident.qid.slice(3)];
+    if (!vid) return "";
+    return '<div class="q-video"><iframe src="https://drive.google.com/file/d/' + vid + '/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="Video giai thich"></iframe></div>';
+  }
+
   // ================== RENDER ================
   function render() {
     if (!questions.length) {
@@ -543,6 +559,7 @@
     }).join("");
 
     const html = IS_DECK ? `
+      ${videoEmbedHTML(q)}
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}
       ${q.img ? `<div class="q-img"><img src="${q.img}" style="max-width:100%;border:1px solid #ccc;border-radius:8px;margin:8px 0;"></div>`: ""}
@@ -552,6 +569,7 @@
         <button class="btn" id="nextBtn" ${cur===questions.length-1?"disabled":""}>${t("btn_next")}</button>
       </div>
     ` : `
+      ${videoEmbedHTML(q)}
       <div class="q-head"><div class="q-index">${t("q_index", {a: cur+1, b: questions.length})}</div></div>
       <div class="q-text">${q.q}</div>
       ${q.hira ? `<div class="hira">${q.hira}</div>` : ""}

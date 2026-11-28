@@ -521,7 +521,7 @@
     if (!ident || !ident.qid || ident.qid.indexOf("id:") !== 0) return "";
     const vid = window.QUESTION_VIDEOS[ident.setKey + "|" + ident.qid.slice(3)];
     if (!vid) return "";
-    return '<div class="q-video"><iframe src="https://drive.google.com/file/d/' + vid + '/preview" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" title="Video giai thich"></iframe></div>';
+    return '<div class="q-video"><video controls playsinline preload="metadata" src="https://drive.usercontent.google.com/download?id=' + vid + '&export=download&confirm=t"></video></div>';
   }
 
   // ================== RENDER ================
